@@ -4,7 +4,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { analysisPages, handouts, pamphletFields, qualities, spine } from './literature.mjs';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
 const offline = target => pathToFileURL(resolve(root, target)).href;
 
 for (const analysisPage of analysisPages) {

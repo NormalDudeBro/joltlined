@@ -5,6 +5,7 @@ test-results/
 
 # Local exports
 /preview/
+/website/preview/
 
 # Editor and operating-system metadata
 .idea/

@@ -40,16 +40,16 @@ const topics = [
 ];
 assert.deepEqual(units[2].topics, topics, 'all four exact Unit 3 topic titles');
 for (const folder of ['', 'Colored/']) {
-  assert.deepEqual(readdirSync(new URL(`../notes/unit-3/${folder}`, import.meta.url)).filter(file => file.endsWith('.txt')).sort(), topics.map(([file]) => `${file}.txt`), 'exactly four topic sources, no obsolete review');
+  assert.deepEqual(readdirSync(new URL(`../public/notes/unit-3/${folder}`, import.meta.url)).filter(file => file.endsWith('.txt')).sort(), topics.map(([file]) => `${file}.txt`), 'exactly four topic sources, no obsolete review');
 }
-const sheets = topics.map(([file]) => readFileSync(new URL(`../notes/unit-3/${file}.txt`, import.meta.url), 'utf8'));
+const sheets = topics.map(([file]) => readFileSync(new URL(`../public/notes/unit-3/${file}.txt`, import.meta.url), 'utf8'));
 // This page has already been copied by the reader; preserve its exact coloring.
-const completedPage = readFileSync(new URL('../notes/unit-3/Colored/3.1-empires-expand.txt', import.meta.url), 'utf8').split('\n').slice(0, 24).join('\n');
+const completedPage = readFileSync(new URL('../public/notes/unit-3/Colored/3.1-empires-expand.txt', import.meta.url), 'utf8').split('\n').slice(0, 24).join('\n');
 assert.equal(createHash('sha256').update(completedPage).digest('hex'), 'beaea165e9b8c2dd5757e7813a71890855539b53c80f258f3b253516f9ab3318', 'completed 3.1 page 1 coloring stays unchanged');
 const validated = sheets.map(validateUnit3);
 topics.forEach(([file], topic) => {
   if (topic === 0) return;
-  const marked = readFileSync(new URL(`../notes/unit-3/Colored/${file}.txt`, import.meta.url), 'utf8').trimEnd().split('\n');
+  const marked = readFileSync(new URL(`../public/notes/unit-3/Colored/${file}.txt`, import.meta.url), 'utf8').trimEnd().split('\n');
   marked.forEach((line, index) => {
     if (topic === 1 && index < 8) return;
     const text = validated[topic][index];

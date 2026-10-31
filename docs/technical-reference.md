@@ -2,7 +2,7 @@
 
 [Back to the collection README](../README.md) · [Development guide](development.md)
 
-Detailed content specifications, source conventions, presentation decisions, and verification coverage for maintainers. File paths below are relative to the repository root unless otherwise noted.
+Detailed content specifications, source conventions, presentation decisions, and verification coverage for maintainers. Unless a path is explicitly rooted at the repository, site-page paths (such as HTML files, `assets/`, `styles/`, and `notes/`) are relative to `website/public/`. Generator, test, and package paths (such as `scripts/`, `tests/`, and package commands) are relative to `website/`. Documentation paths are relative to the repository root. This convention preserves the detailed reference without repeating the new directory prefix in every existing path.
 
 All eleven site JPEGs are stored in `assets/images/`. Keep the `assets/` directory alongside the HTML files when copying an offline preview; bare image filenames below refer to files within that directory.
 
@@ -75,6 +75,6 @@ Algebra 2 shares the same approved-palette contrast limitation, not a WCAG compl
 
 ## Hosting
 
-GitHub Pages serves the checked-in collection home at `index.html` and its five relative destinations at `www.joltlined.com`; World notes now live at `ap-world.html`. `CNAME` and the existing `Quality` workflow are preserved; CI installs the existing tools and runs `npm test`. No Desktop paths or generation step are required at deployment. Existing Pages configuration is not changed by this work. Keep the current Pages publishing source and enable Enforce HTTPS in repository settings when DNS/certificate provisioning is complete.
+The GitHub Pages artifact is `website/public/`, containing the checked-in collection home and its five relative destinations; the custom domain is `www.joltlined.com`. The `CNAME` file is retained under `website/public/`, and the `Quality` workflow runs checks from `website/` before publishing. Repository Pages Build and deployment is configured with **GitHub Actions** as the publishing source rather than the legacy `main`-branch root. The workflow deploys only after validation succeeds; pull requests do not publish. No Desktop paths, application backend, database, or generation step are required at deployment.
 
 The checked-in JPEGs illustrate the restored literary analysis, and `cover.jpg` is available as the local book cover for Home. Keep the referenced images with both pages for offline previews. The notes pages remain image-free; their print page counts are 36 World, four AP Lang, and twenty-six Algebra 2, with Algebra 2 sheets carrying 29 notes rather than the shared 24. No reuse license is declared; confirm intended terms before adding one.

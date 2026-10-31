@@ -4,7 +4,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { spine as analysisSpine } from './literature.mjs';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
 const subjects = [
   { path: 'index.html', label: 'Home', heading: 'A collection for curious minds.' },
   { path: 'ap-lang.html', label: 'AP Lang Notes', heading: 'AP Lang Unit 1: Rhetorical Analysis' },

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { renderHome } from '../scripts/home.mjs';
 import { analysisPages, entryCount, handouts, interpretationCaveat, locatorCaveat, pamphletFields, plotStages, qualities, scriptedPages, sections, spine, text } from './literature.mjs';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
 const pages = ['index.html', 'ap-lang.html', 'ap-world.html', 'algebra-2.html', 'out-of-my-mind.html', 'of-mice-and-men.html'];
 const labels = ['Home', 'AP Lang Notes', 'AP World History Notes', 'Algebra 2 Notes', 'Out Of My Mind Analysis', 'Of Mice And Men Analysis'];
 const home = readFileSync(resolve(root, 'index.html'), 'utf8');
