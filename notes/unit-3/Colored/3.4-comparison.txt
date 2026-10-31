@@ -3,46 +3,46 @@
 (pen)-> (br)Geography and imperial motives(pen)
 (pen)-> (li)Bureaucratic recruitment(pen)
 (pen)o (y)Expansion and military organization(pen)
-(pen)-> Both (g)Ottomans and Mughals(pen) used (y)cannon(pen)-(y)equipped armies(pen).
-(pen)-> (y)Janissaries(pen) drew (br)pay(pen); (y)mansabdars(pen) often held (br)revenue grants(pen).
-(pen)-> (y)Janissaries were infantry(pen); (y)mansabdars mustered cavalry(pen).
-(pen)-> (y)Qing banners(pen) organized (p)Manchu(pen), (p)Mongol(pen), and (p)Han soldiers(pen).
-(pen)-> (li)Qing banners(pen) were (hp)hereditary(pen); (li)devshirme(pen) (hp)recruited outsiders(pen).
-(pen)-> (y)Ottoman and Mughal firearms(pen) needed (br)taxes(pen) and local allies.
-(pen)-> (y)Cavalry persisted in Ottoman and Mughal armies(pen).
+(pen)-> Both Ottomans and Mughals used (y)cannon(pen)-(y)equipped(pen) armies.
+(pen)-> (y)Janissaries(pen) drew pay; (y)mansabdars(pen) often held revenue grants.
+(pen)-> Janissaries were (y)infantry(pen); mansabdars mustered (y)cavalry(pen).
+(pen)-> Qing (y)banners(pen) organized Manchu, Mongol, and Han soldiers.
+(pen)-> Qing banners were (y)hereditary(pen); (li)devshirme(pen) recruited outsiders.
+(pen)-> Ottoman and Mughal (y)firearms(pen) needed (br)taxes(pen) and local allies.
+(pen)-> (y)Cavalry(pen) persisted in Ottoman and Mughal armies.
 (pen)o (br)Geography and imperial motives(pen)
-(pen)-> Russia sought (br)Siberian furs(pen); Qing sought (y)frontier security(pen).
-(pen)-> Both used (y)forts to secure frontiers(pen) and (br)trade(pen).
-(pen)-> (lb)Siberia(pen)'(lb)s rivers(pen) aided Cossacks; Qing crossed (lb)steppe routes(pen).
-(pen)-> (hp)Unlike(pen) Russia's (br)fur tribute(pen), Mughal (br)wealth relied on farms(pen).
-(pen)-> (br)Agrarian density made land taxes lucrative(pen) for (g)Mughals(pen).
+(pen)-> Russia sought Siberian (br)furs(pen); Qing sought frontier (br)security(pen).
+(pen)-> Both used forts to secure frontiers and (br)trade(pen).
+(pen)-> Siberia's (br)rivers(pen) aided Cossacks; Qing crossed (br)steppe(pen) routes.
+(pen)-> Unlike Russia's fur (br)tribute(pen), Mughal wealth relied on (br)farms(pen).
+(pen)-> (br)Agrarian density(pen) made land taxes lucrative for Mughals.
 (pen)o (li)Bureaucratic recruitment(pen)
-(pen)-> Ottomans (y)coerced devshirme boys(pen); Qing used (li)Confucian exams(pen).
-(pen)-> Both (li)trained officials to serve imperial courts(pen).
-(pen)-> Qing (li)exams favored gentry(pen); devshirme (hp)bypassed birth elites(pen).
-(pen)-> Qing (li)kept exams to enlist Chinese elite cooperation(pen).
-(pen)-> (p)Ottoman converts(pen)' (g)dependence aimed to bind them to sultans(pen).
+(pen)-> Ottomans coerced (li)devshirme(pen) boys; Qing used Confucian (li)exams(pen).
+(pen)-> Both trained (li)officials(pen) to serve imperial courts.
+(pen)-> Qing (li)exams(pen) favored gentry; (li)devshirme(pen) bypassed birth elites.
+(pen)-> Qing kept exams to enlist Chinese (li)elite cooperation(pen).
+(pen)-> Ottoman converts' dependence aimed to bind them to sultans.
 (pen)o Overview
 (pen)-> (br)Revenue and local elites(pen)
 (pen)-> (pu)Religion and monumental authority(pen)
 (pen)-> (p)Governing imperial diversity(pen)
 (pen)o (br)Revenue and local elites(pen)
-(pen)-> Ottoman (li)tax farmers(pen) and Mughal (li)zamindars(pen) (br)collected revenue(pen).
-(pen)-> Both linked (g)imperial demands(pen) to (p)local rural communities(pen).
-(pen)-> (br)Tax farmers bought rights(pen); zamindars held (br)local land claims(pen).
-(pen)-> Both (br)funded armies(pen), but local collectors (hp)retained leverage(pen).
-(pen)-> Distance (li)made both courts depend on intermediaries(pen).
+(pen)-> Ottoman (br)tax farmers(pen) and Mughal zamindars collected revenue.
+(pen)-> Both linked imperial demands to local rural communities.
+(pen)-> Tax farmers bought rights; (br)zamindars(pen) held local land claims.
+(pen)-> Both funded armies, but (br)local collectors(pen) retained leverage.
+(pen)-> Distance made both courts depend on (br)intermediaries(pen).
 (pen)o (pu)Religion and monumental authority(pen)
-(pen)-> (g)Louis XIV(pen) claimed (pu)divine right(pen); Qing used (pu)Heaven(pen)'(pu)s mandate(pen).
-(pen)-> Both justified (g)kingship(pen) through a (pu)sacred political order(pen).
-(pen)-> French (lb)Versailles(pen) and Mughal (lb)Taj Mahal(pen) (g)exalted dynasties(pen).
-(pen)-> (lb)Versailles(pen) (hp)hosted nobles(pen); the (lb)Taj Mahal(pen) was a (hp)royal tomb(pen).
-(pen)-> Both used (li)patronage(pen), but buildings served (hp)different roles(pen).
-(pen)-> Such displays reinforced (g)claims(pen), (hp)not total central control(pen).
+(pen)-> Louis XIV claimed (pu)divine right(pen); Qing used Heaven's mandate.
+(pen)-> Both justified kingship through a (pu)sacred(pen) political order.
+(pen)-> French Versailles and Mughal (pu)Taj Mahal(pen) exalted dynasties.
+(pen)-> (pu)Versailles(pen) hosted nobles; the Taj Mahal was a royal (pu)tomb(pen).
+(pen)-> Both used (pu)patronage(pen), but buildings served different roles.
+(pen)-> Such displays reinforced claims, not total central control.
 (pen)o (p)Governing imperial diversity(pen)
-(pen)-> Ottomans were (pu)Sunni(pen); Safavids promoted (pu)Twelver Shi(pen)'(pu)a(pen).
-(pen)-> Both used (pu)Islam(pen); rival identities (y)sharpened state conflict(pen).
-(pen)-> Ottomans kept (br)jizya(pen); Akbar (hp)abolished it in Mughal lands(pen).
-(pen)-> (li)Akbar recruited(pen) (p)Hindus(pen); Qing (li)retained(pen) (p)Han scholar(pen)-(p)officials(pen).
-(pen)-> Both (li)co(pen)-(li)opted subject elites(pen) rather than (hp)erasing difference(pen).
-(pen)-> Mughal and Qing rulers mixed (li)accommodation(pen) with (y)coercion(pen).
+(pen)-> Ottomans were (p)Sunni(pen); Safavids promoted Twelver (p)Shi(pen)'(p)a(pen).
+(pen)-> Both used (pu)Islam(pen); rival (p)identities(pen) sharpened state conflict.
+(pen)-> Ottomans kept (p)jizya(pen); Akbar (p)abolished(pen) it in Mughal lands.
+(pen)-> Akbar recruited (p)Hindus(pen); Qing retained (p)Han(pen) scholar-officials.
+(pen)-> Both co-opted subject elites rather than erasing (p)difference(pen).
+(pen)-> Mughal and Qing rulers mixed (p)accommodation(pen) with (p)coercion(pen).

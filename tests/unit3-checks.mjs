@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
-import { units } from '../scripts/build.mjs';
+import { spans, units } from '../scripts/build.mjs';
 
 export function validateUnit3(text) {
   assert.doesNotMatch(text, /[^\x00-\x7f]/, 'ASCII note text');
@@ -47,6 +47,19 @@ const sheets = topics.map(([file]) => readFileSync(new URL(`../notes/unit-3/${fi
 const completedPage = readFileSync(new URL('../notes/unit-3/Colored/3.1-empires-expand.txt', import.meta.url), 'utf8').split('\n').slice(0, 24).join('\n');
 assert.equal(createHash('sha256').update(completedPage).digest('hex'), 'beaea165e9b8c2dd5757e7813a71890855539b53c80f258f3b253516f9ab3318', 'completed 3.1 page 1 coloring stays unchanged');
 const validated = sheets.map(validateUnit3);
+topics.forEach(([file], topic) => {
+  if (topic === 0) return;
+  const marked = readFileSync(new URL(`../notes/unit-3/Colored/${file}.txt`, import.meta.url), 'utf8').trimEnd().split('\n');
+  marked.forEach((line, index) => {
+    if (topic === 1 && index < 8) return;
+    const text = validated[topic][index];
+    if (text.startsWith('o ') || validated[topic].includes(`o ${text.slice(3)}`)) return;
+    const colors = spans(line).flatMap(part => Array(part.text.length).fill(part.color));
+    const words = [...text.matchAll(/[A-Za-z]+(?:['-][A-Za-z]+)*/g)];
+    const highlighted = words.filter(word => colors.slice(word.index, word.index + word[0].length).some(color => color !== 'pen'));
+    assert.ok(highlighted.length <= 2, `${file} line ${index + 1}: highlight at most two keyword words, not a clause`);
+  });
+});
 assert.equal(validated.length, 4, 'four independent sheets');
 assert.equal(validated.flat().length, 192, '192 logical note lines');
 assert.equal(validated.flatMap(lines => [lines.slice(0, 24), lines.slice(24)]).length, 8, 'eight 24-line pages');

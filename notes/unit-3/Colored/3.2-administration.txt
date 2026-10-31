@@ -6,43 +6,43 @@
 (pen)-> (y)Qing(pen) rulers retained (pu)Confucian(pen) exams and scholar-officials.
 (pen)-> Exams recruited educated men; wealthy elites dominated office.
 (pen)-> (g)Ottoman(pen) (br)devshirme(pen) coerced Christian boys into state service.
-(pen)-> Converts could become (y)Janissaries(pen) or (li)senior administrators(pen).
-(pen)-> (y)Janissaries formed salaried professional infantry(pen).
-(pen)-> (hp)Janissary recruitment later widened beyond devshirme(pen).
+(pen)-> Converts could become (y)Janissaries(pen) or senior administrators.
+(pen)-> (y)Janissaries(pen) formed salaried professional infantry.
+(pen)-> Janissary (y)recruitment(pen) later widened beyond (br)devshirme(pen).
 (pen)o (g)Taxation and imperial capacity(pen)
-(pen)-> (br)Ottoman tax farmers bid for rights to collect revenue(pen).
-(pen)-> (br)Tax farming raised cash(pen) but (hp)encouraged taxpayer exploitation(pen).
-(pen)-> (g)Mughal(pen) (br)zamindars collected land revenue from peasants(pen).
-(pen)-> (g)Akbar(pen)'s (br)surveys helped assess land taxes(pen).
-(pen)-> (br)Revenue(pen) financed (y)armies(pen), officials, and further expansion.
-(pen)-> (hp)Local bargaining constrained what rulers could extract(pen).
+(pen)-> Ottoman (g)tax farmers(pen) bid for rights to collect revenue.
+(pen)-> (g)Tax farming(pen) raised cash but encouraged taxpayer exploitation.
+(pen)-> Mughal zamindars collected (g)land revenue(pen) from peasants.
+(pen)-> Akbar's surveys helped assess (g)land taxes(pen).
+(pen)-> (g)Revenue(pen) financed (y)armies(pen), officials, and further expansion.
+(pen)-> Local bargaining constrained what rulers could extract.
 (pen)o (p)Central authority and local elites(pen)
-(pen)-> (g)Mughal(pen) mansabdars held ranks and (y)supplied cavalry(pen).
-(pen)-> (br)Rank and revenue assignments(pen) tied nobles to the (g)emperor(pen).
-(pen)-> Qing gentry (li)mediated disputes and helped local officials(pen).
-(pen)-> (li)Officials depended on local knowledge and elite cooperation(pen).
-(pen)-> (g)Such ties extended state power(pen) but (hp)limited direct control(pen).
+(pen)-> Mughal (p)mansabdars(pen) held ranks and supplied cavalry.
+(pen)-> Rank and revenue assignments tied (p)nobles(pen) to the emperor.
+(pen)-> Qing (p)gentry(pen) mediated disputes and helped local officials.
+(pen)-> Officials depended on local knowledge and (p)elite cooperation(pen).
+(pen)-> Such ties extended state power but limited (p)direct control(pen).
 (pen)o Overview
 (pen)-> (pu)Religion and imperial legitimacy(pen)
 (pen)-> (g)Art and monumental architecture(pen)
 (pen)-> (hp)Limits on central power(pen)
 (pen)o (pu)Religion and imperial legitimacy(pen)
-(pen)-> (g)Ottoman(pen) (pu)sultans used Sunni Islam to support their authority(pen).
-(pen)-> (g)Safavids(pen) (pu)promoted Twelver Shi(pen)'(pu)a Islam as a state religion(pen).
-(pen)-> (g)Qing(pen) emperors invoked (pu)Heaven(pen)'(pu)s mandate and Confucian duties(pen).
-(pen)-> France's (g)Louis XIV(pen) (pu)claimed divine right to rule(pen).
-(pen)-> (g)Akbar(pen) (li)built Mughal loyalty through Hindu elite alliances(pen).
-(pen)-> (pu)Religious claims(pen) did not require (hp)identical policies(pen).
+(pen)-> Ottoman sultans used (pu)Sunni Islam(pen) to support their authority.
+(pen)-> Safavids promoted (pu)Twelver Shi(pen)'(pu)a(pen) Islam as a state religion.
+(pen)-> Qing emperors invoked (pu)Heaven(pen)'(pu)s mandate(pen) and Confucian duties.
+(pen)-> France's Louis XIV claimed (pu)divine right(pen) to rule.
+(pen)-> Akbar built Mughal loyalty through (pu)Hindu(pen) elite (p)alliances(pen).
+(pen)-> (pu)Religious claims(pen) did not require identical policies.
 (pen)o (g)Art and monumental architecture(pen)
-(pen)-> (lb)Versailles(pen) displayed (g)royal grandeur(pen) and drew nobles to court.
-(pen)-> (li)Court patronage tied French nobles(pen) to (g)Louis XIV(pen)'(g)s favor(pen).
-(pen)-> Shah Jahan's (lb)Taj Mahal(pen) displayed (br)Mughal wealth(pen) and piety.
-(pen)-> (lb)Qing portraits(pen) depicted ritual and (y)military authority(pen).
-(pen)-> (lb)Ottoman mosque complexes(pen) (pu)linked piety with public charity(pen).
-(pen)-> (lb)Monumental building(pen) displayed command of (br)labor and revenue(pen).
+(pen)-> (g)Versailles(pen) displayed royal grandeur and drew nobles to court.
+(pen)-> (g)Court patronage(pen) tied French nobles to Louis XIV's favor.
+(pen)-> Shah Jahan's (g)Taj Mahal(pen) displayed Mughal wealth and piety.
+(pen)-> Qing (g)portraits(pen) depicted ritual and military authority.
+(pen)-> Ottoman (g)mosque complexes(pen) linked piety with public charity.
+(pen)-> (g)Monumental building(pen) displayed command of labor and revenue.
 (pen)o (hp)Limits on central power(pen)
-(pen)-> (y)Janissaries(pen) gained interests that could (hp)challenge sultans(pen).
-(pen)-> Mughal (br)zamindars bargained over revenue(pen) and (hp)resisted demands(pen).
-(pen)-> (br)Heavy taxes(pen) could fund rule but also (hp)provoke resistance(pen).
-(pen)-> Aztec (br)tribute lists recorded(pen) (p)subject towns(pen)' obligations.
-(pen)-> Before 1521, (br)tribute sustained(pen) (p)Aztec nobles(pen) and armies.
+(pen)-> Janissaries gained interests that could (hp)challenge(pen) sultans.
+(pen)-> Mughal zamindars bargained over revenue and (hp)resisted demands(pen).
+(pen)-> Heavy taxes could fund rule but also provoke (hp)resistance(pen).
+(pen)-> Aztec (g)tribute(pen) lists recorded subject towns' obligations.
+(pen)-> Before 1521, (g)tribute(pen) sustained Aztec (p)nobles(pen) and armies.
