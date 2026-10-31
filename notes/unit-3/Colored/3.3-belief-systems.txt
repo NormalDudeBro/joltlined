@@ -1,48 +1,48 @@
 (pen)o Overview
 (pen)-> (hp)Protestant Reformation(pen)
 (pen)-> (pu)Catholic responses(pen)
-(pen)-> (y)Confessional Europe(pen)
+(pen)-> (hp)Confessional Europe(pen)
 (pen)o (hp)Protestant Reformation(pen)
-(pen)-> (g)Luther(pen) attacked indulgence sales in 1517.
-(pen)-> Luther taught (pu)justification by faith(pen), not works.
-(pen)-> Protestants put (y)scripture(pen) above papal authority.
-(pen)-> (y)Printing(pen) spread Luther's arguments quickly across Europe.
-(pen)-> Some princes protected reform and gained church lands.
-(pen)-> (hp)Lutheranism(pen) and (hp)Calvinism(pen) became Protestant traditions.
-(pen)-> Calvinists stressed (pu)predestination(pen) and discipline.
+(pen)-> (g)Luther(pen) attacked (pu)indulgence sales(pen) in 1517.
+(pen)-> Luther taught (pu)justification by faith(pen), (hp)not works(pen).
+(pen)-> (pu)Protestants put scripture(pen) (hp)above papal authority(pen).
+(pen)-> (li)Printing spread Luther(pen)'(li)s arguments(pen) quickly across (lb)Europe(pen).
+(pen)-> Some (g)princes protected reform(pen) and gained (br)church lands(pen).
+(pen)-> (pu)Lutheranism(pen) and (pu)Calvinism became Protestant traditions(pen).
+(pen)-> Calvinists stressed (pu)predestination and discipline(pen).
 (pen)o (pu)Catholic responses(pen)
-(pen)-> Catholic leaders answered Protestant challenges with reform.
-(pen)-> Trent upheld church tradition alongside scripture.
-(pen)-> Trent also addressed clerical abuses and improved training.
-(pen)-> (br)Jesuits(pen) founded schools and carried Catholic missions abroad.
-(pen)-> Seven sacraments and papal authority endured Catholic reform.
-(pen)o (y)Confessional Europe(pen)
-(pen)-> Religious division fueled Europe's Thirty Years' War.
-(pen)-> Catholic France fought Habsburgs for dynastic power, too.
-(pen)-> France granted Huguenot rights in 1598, revoked them in 1685.
-(pen)-> Vernacular Bibles widened lay access to religious debate.
-(pen)-> Christianity endured while confessional unity fractured.
+(pen)-> (pu)Catholic leaders answered Protestant challenges(pen) with (hp)reform(pen).
+(pen)-> (pu)Trent upheld church tradition alongside scripture(pen).
+(pen)-> Trent also (hp)addressed clerical abuses(pen) and (li)improved training(pen).
+(pen)-> (li)Jesuits founded schools(pen) and carried (pu)Catholic missions(pen) abroad.
+(pen)-> (pu)Seven sacraments and papal authority(pen) (hp)endured Catholic reform(pen).
+(pen)o (hp)Confessional Europe(pen)
+(pen)-> (pu)Religious division(pen) fueled Europe's (y)Thirty Years(pen)' (y)War(pen).
+(pen)-> Catholic (g)France(pen) (y)fought Habsburgs for dynastic power(pen), too.
+(pen)-> France (hp)granted Huguenot rights(pen) in 1598, (hp)revoked them(pen) in 1685.
+(pen)-> (pu)Vernacular Bibles(pen) (li)widened lay access to religious debate(pen).
+(pen)-> (pu)Christianity endured(pen) while (hp)confessional unity fractured(pen).
 (pen)o Overview
-(pen)-> (g)Sunni Ottoman and Shi(pen)'(g)a Safavid identity(pen)
-(pen)-> (y)Sikhism in a diverse Punjab(pen)
-(pen)-> (p)Faith(pen), (p)state(pen), (p)continuity(pen), (p)and change(pen)
-(pen)o (g)Sunni Ottoman and Shi(pen)'(g)a Safavid identity(pen)
-(pen)-> Ottomans were Sunni; Safavids made Twelver Shi'a official.
-(pen)-> This distinguished Safavid Persia from Sunni rivals.
-(pen)-> Ottoman-Safavid rivalry concerned land and political power.
-(pen)-> War intensified a Sunni-Shi'a split rooted in early Islam.
-(pen)-> Both empires used religious identity to support authority.
-(pen)-> Sectarian identity could unite subjects and define rivals.
-(pen)-> Neither empire's policy made its people religiously uniform.
-(pen)o (y)Sikhism in a diverse Punjab(pen)
-(pen)-> Guru (y)Nanak(pen) taught one-God devotion in Punjab.
-(pen)-> Sikhism formed a distinct faith amid Hindu-Muslim interaction.
-(pen)-> Sikh teachings challenged caste and stressed human equality.
-(pen)-> (y)Langar(pen) community meals put Sikh equality into practice.
-(pen)o (p)Faith(pen), (p)state(pen), (p)continuity(pen), (p)and change(pen)
-(pen)-> (p)Akbar(pen) allied with Hindus and encouraged tolerance.
-(pen)-> (br)Aurangzeb(pen) later restored jizya on non-Muslims, a policy shift.
-(pen)-> Hindu traditions persisted under Muslim Mughal rulers.
-(pen)-> Empires used faith to legitimize rule over diverse peoples.
-(pen)-> Policies varied; diversity did not guarantee equality.
-(pen)-> State support shaped faith, but local practice also endured.
+(pen)-> (pu)Sunni Ottoman and Shi(pen)'(pu)a Safavid identity(pen)
+(pen)-> (pu)Sikhism in a diverse Punjab(pen)
+(pen)-> (hp)Faith(pen), (hp)state(pen), (hp)continuity(pen), (hp)and change(pen)
+(pen)o (pu)Sunni Ottoman and Shi(pen)'(pu)a Safavid identity(pen)
+(pen)-> (g)Ottomans(pen) were (pu)Sunni(pen); (g)Safavids(pen) made (pu)Twelver Shi(pen)'(pu)a(pen) official.
+(pen)-> This (hp)distinguished Safavid Persia(pen) from (pu)Sunni rivals(pen).
+(pen)-> (y)Ottoman(pen)-(y)Safavid rivalry(pen) concerned land and (g)political power(pen).
+(pen)-> (y)War intensified(pen) a (pu)Sunni(pen)-(pu)Shi(pen)'(pu)a split rooted in early Islam(pen).
+(pen)-> Both empires used (pu)religious identity(pen) to (g)support authority(pen).
+(pen)-> (pu)Sectarian identity(pen) could (p)unite subjects and define rivals(pen).
+(pen)-> Neither empire's (hp)policy made its people religiously uniform(pen).
+(pen)o (pu)Sikhism in a diverse Punjab(pen)
+(pen)-> (pu)Guru Nanak taught one(pen)-(pu)God devotion(pen) in (lb)Punjab(pen).
+(pen)-> (pu)Sikhism formed a distinct faith(pen) amid (p)Hindu(pen)-(p)Muslim interaction(pen).
+(pen)-> Sikh teachings (hp)challenged caste(pen) and stressed (p)human equality(pen).
+(pen)-> (li)Langar community meals(pen) put (pu)Sikh equality into practice(pen).
+(pen)o (hp)Faith(pen), (hp)state(pen), (hp)continuity(pen), (hp)and change(pen)
+(pen)-> (g)Akbar(pen) (li)allied with Hindus and encouraged tolerance(pen).
+(pen)-> Aurangzeb later (hp)restored(pen) (br)jizya on non(pen)-(br)Muslims(pen), a (hp)policy shift(pen).
+(pen)-> (pu)Hindu traditions persisted(pen) under (g)Muslim Mughal rulers(pen).
+(pen)-> Empires used (pu)faith to legitimize(pen) (g)rule over diverse peoples(pen).
+(pen)-> (hp)Policies varied(pen); (p)diversity(pen) did not (hp)guarantee equality(pen).
+(pen)-> (g)State support(pen) shaped faith, but (pu)local practice also endured(pen).
