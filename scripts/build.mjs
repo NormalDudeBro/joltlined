@@ -306,7 +306,8 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
       copyFileSync(resolve(root, 'styles', 'site.css'), resolve(target, 'styles', 'site.css'));
       copyFileSync(resolve(root, 'out-of-my-mind.html'), resolve(target, 'out-of-my-mind.html'));
       copyFileSync(resolve(root, 'of-mice-and-men.html'), resolve(target, 'of-mice-and-men.html'));
-      ['cover', 'author', 'class', 'talker', 'inclusiveness', 'school', 'home', 'excluded', 'perspective', 'voice', 'meditalker'].forEach(image => copyFileSync(resolve(root, `${image}.jpg`), resolve(target, `${image}.jpg`)));
+      mkdirSync(resolve(target, 'assets', 'images'), { recursive: true });
+      ['cover', 'author', 'class', 'talker', 'inclusiveness', 'school', 'home', 'excluded', 'perspective', 'voice', 'meditalker'].forEach(image => copyFileSync(resolve(root, 'assets', 'images', `${image}.jpg`), resolve(target, 'assets', 'images', `${image}.jpg`)));
       copyFileSync(resolve(root, 'notes', 'ap-lang.txt'), resolve(target, 'notes', 'ap-lang.txt'));
       mkdirSync(resolve(target, 'notes', 'Colored'), { recursive: true });
       copyFileSync(resolve(root, 'notes', 'Colored', 'ap-lang.txt'), resolve(target, 'notes', 'Colored', 'ap-lang.txt'));

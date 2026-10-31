@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title description">
+  <title id="title">Joltlined</title>
+  <desc id="description">Notes, ideas, and close reading. An academic collection on a warm paper background.</desc>
+  <rect width="1200" height="320" rx="16" fill="#f6f3eb"/>
+  <path d="M64 60H1136M64 260H1136" stroke="#c9c8bc"/>
+  <text x="64" y="103" fill="#526b57" font-family="Arial, sans-serif" font-size="14" letter-spacing="4">THE ACADEMIC COLLECTION</text>
+  <text x="60" y="192" fill="#213749" font-family="Georgia, serif" font-size="88">Joltlined</text>
+  <text x="64" y="233" fill="#52616b" font-family="Georgia, serif" font-size="23">Notes, ideas, and close reading.</text>
+  <g transform="translate(950 112)" fill="none" stroke="#526b57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 0Q38-10 70 10Q102-10 140 0V101Q102 91 70 111Q38 91 0 101Z"/>
+    <path d="M70 10V111M16 24Q36 20 53 28M16 44Q36 40 53 48M16 64Q36 60 53 68M87 28Q106 20 124 24M87 48Q106 40 124 44M87 68Q106 60 124 64"/>
+  </g>
+</svg>

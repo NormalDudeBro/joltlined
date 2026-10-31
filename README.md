@@ -1,70 +1,109 @@
-# Joltlined | Notes & Literary Analysis
+<p align="center">
+  <img src="docs/assets/banner.svg" alt="Joltlined — notes, ideas, and close reading" width="900">
+</p>
 
-`index.html` is the offline-ready collection home, linking to **AP Lang Notes** (`ap-lang.html`), **AP World History Notes** (`ap-world.html`), **Algebra 2 Notes** (`algebra-2.html`), the restored **Out Of My Mind Analysis** (`out-of-my-mind.html`), and the **Of Mice And Men Analysis** (`of-mice-and-men.html`). Every page shares the six-link subject navigation with its own current-page state. Home uses local assets and system fonts and needs no JavaScript. The analysis preserves the original literary content about Sharon M. Draper's novel, including author/context, characters, setting, tone, point of view, plot, citations, and optional JavaScript navigation/accessibility controls, presented in the same academic style as Home; it is not a placeholder or a notes page.
+<p align="center">
+  An orderly place to study a subject, follow an argument, or return to a story.
+</p>
 
-World notes at `ap-world.html` cover Unit 1 (The Global Tapestry), Unit 2 (Networks of Exchange), and Unit 3 (Land-Based Empires, c. 1450–1750). Eighteen ordered topics include four Unit 3 sheets: Empires Expand, Empires: Administration, Empires: Belief Systems, and Comparison in Land-Based Empires. Each topic has its own 48 lines on two independent 24-line pages. Unit 3 therefore has eight pages and 192 note lines; the full World collection has 36 physical pages and 864 lines. All notes are present in the HTML, without JavaScript, fetching, external fonts, or runtime dependencies. Native unit/topic anchors work offline, including `file://`. Unit 3 notes are original study summaries aligned to the [official College Board AP World History: Modern Course and Exam Description](https://apcentral.collegeboard.org/media/pdf/ap-world-history-modern-course-and-exam-description.pdf) (effective Fall 2026, topic pages 69–72), not official College Board resources. The four topic sheets replace the earlier single unit-wide review.
+<p align="center">
+  <a href="https://github.com/NormalDudeBro/outofmymind/actions/workflows/quality.yml"><img src="https://github.com/NormalDudeBro/outofmymind/actions/workflows/quality.yml/badge.svg" alt="Quality workflow status"></a>
+  <img src="https://img.shields.io/badge/site-static_HTML-213749" alt="Static HTML site">
+  <img src="https://img.shields.io/badge/reading-offline_ready-168438" alt="Offline-ready reading">
+</p>
 
-The subject navigation opens **AP Lang notes** at `ap-lang.html`, titled **AP Lang Unit 1: Rhetorical Analysis**. The finished Unit 1 page preserves 96 note lines in 12 sections of eight lines each, covering rhetorical situation, Describe, Function, Effect, Justify, a worked connection, framing and diction, evidence and reasoning, credibility and emotion, objections and qualifications, relationships and sequence, and revision. Original notes in `notes/ap-lang.txt` use the World-style `o` header prefix, which the importer supports; `notes/Colored/ap-lang.txt` uses the exact World marker format. Notes remain ASCII, at most 65 characters per stripped line, and exactly four physical printable pages of 24 lines each. Original and colored downloads are named `ap-lang.txt` and `ap-lang-colored.txt` and match their current source files exactly. AP Lang uses the approved palette markers `g` (dark green, `#168438`), `li` (lime green, `#79c900`), `pu` (purple, `#883ac2`), `br` (brown, `#92552f`), `y` (medium blue, `#287db3`), `p` (pink, `#ed8eb4`), `lb` (light blue, `#59b8e7`), `hp` (hot pink, `#ec228c`), and `pen` (neutral): pencil body text with selective keyword highlights in one or two colors per line, neutral prefixes and punctuation, designated reserved non-`lb` section-title colors, and light-blue topic/page headings. The colored sources minimally remap `(r)` to `(hp)` and `(db)` to `(y)`; source plaintext, wording, order, and highlight boundaries are unchanged. The worked connection is explicitly hypothetical, not a quotation from the article; other examples are paraphrases. They illustrate plausible, text-grounded audience responses, not guaranteed reactions or proof that labels alone caused reported outcomes.
+<p align="center">
+  <a href="https://www.joltlined.com"><strong>Explore the collection ↗</strong></a>
+  &nbsp; · &nbsp;
+  <a href="#getting-started">Get started</a>
+  &nbsp; · &nbsp;
+  <a href="docs/development.md">Development guide</a>
+</p>
 
-The **Algebra 2 Notes** link opens `algebra-2.html`, titled **Algebra 2: Functions and Linear Systems**. Thirteen lessons across Modules 1B and 2A cover linear equations and inequalities, piecewise functions, step functions, absolute value, parent functions, translations, dilations, combined transformations, equations of linear functions, solving systems of equations graphically and algebraically, systems of inequalities, and optimization with linear programming. Each lesson has 58 source lines in six sections of 10, 10, 9, 10, 10, and 9 lines, split into two 29-line printable pages: twenty-six physical pages and 754 lines total. The five Module 2A lessons are original study summaries based on the McGraw Hill Module 2A (2.3-2.7) classroom slides, PDF pp. 1-182; examples are practice, not an official answer key, and the PDF is not bundled. These are study-guide notes for the packet, not fabricated reconstructions of unavailable graphs; invented examples are identified, and known worked-answer errors are corrected before publishing. Sources are `notes/algebra-2/<file>.txt` and `notes/algebra-2/Colored/<file>.txt`. Original and colored downloads are named `<file>.txt` and `<file>-colored.txt` and preserve the respective source bytes exactly. Notes use the existing inks and marker style: `o` headers, `->` support lines, initial `(pen)`, neutral prefixes, punctuation, formulas and numbers, selective letter/space highlights with immediate pencil resets and at most two non-pencil colors per line, and uniform non-`lb` section-title ink. Stripped text is ASCII and at most 65 characters per line.
+---
 
-The **Of Mice And Men Analysis** link opens `of-mice-and-men.html`, titled **Of Mice and Men**, a complete companion to John Steinbeck's 1937 novella built around the Active Reading Pamphlet. Its twelve sections - Home, Author, Context, Characters, Plot, Setting, Narration, Attitude, Vocabulary, Theme, Questions, and Works Cited - cover every pamphlet field: the four character qualities (mental, moral, physical, social) for George, Lennie, Candy, Crooks, Curley, Curley's wife, Slim, and the boss; the four setting elements; narration traits with influence on the reader; attitude-versus-mood with the handout's vocabulary and emotion wheel; the Big Ideas and theme-statement template; and prompt questions with example responses. The Home section maps each pamphlet field to its section. Novel scenes and quotations use chapter and short search-phrase locators; readers should record page numbers from their own edition. Short quotations never reproduce the novella's slur. The page shares Home's academic shell, the accessibility controls, and the analysis page pattern of optional JavaScript section navigation with an offline `file://` fallback. It uses no images or remote resources.
+## A collection for curious minds
 
-The **Out Of My Mind Analysis** link opens `out-of-my-mind.html`, now organized on the same twelve-section spine: Home, Author, Context, Characters, Plot, Setting, Point of View, Tone, Vocabulary, Theme, Questions, and Works Cited. Its Home map connects every pamphlet field to the relevant section, including vocabulary, theme/Big Ideas, and questions; character entries pair a key scene with all four character qualities. The companion cites all seven supplied handouts by exact PDF filename. Those PDFs are local course materials supplied in `C:/Users/Kenny/Documents/Active Reading Pamphlet`; they are provenance for the field requirements, not files bundled into the site. Novel evidence uses scene descriptions and search locators rather than edition-specific page numbers, since pagination varies; readers should record page numbers from their own copy. Model interpretations and suggested reactions are prompts, not a substitute for each reader's own evidence, interpretation, or personal response. Like its companion, the page retains the shared shell and works as a complete document without JavaScript.
+**Joltlined** brings course notes, worked examples, and literary analysis together in a quiet, paper-inspired study collection. Originally centered on *Out of My Mind*, it now includes three course-note collections and two reading companions.
 
-## Build and Import
+The site uses local assets and system fonts, with no runtime dependencies. Read every page without JavaScript, keep a copy for offline use, or print the notes for your study binder.
 
-The generator needs Node.js 20 or later; the existing pinned validation tools need Node.js 22.16 or later (Node 24 is recommended). Use npm. All dependency and package versions are unchanged.
+## On the bookshelf
+
+| Collection | What you’ll find | Print notes |
+| --- | --- | --- |
+| [AP English Language](ap-lang.html) | Unit 1: rhetorical situation, a writer’s choices, evidence, and audience | 4 pages |
+| [AP World History](ap-world.html) | Units 1–3: The Global Tapestry, Networks of Exchange, and Land-Based Empires | 36 pages · 18 topics |
+| [Algebra 2](algebra-2.html) | Modules 1B and 2A: functions, transformations, linear systems, and optimization | 26 pages · 13 lessons |
+| [Out of My Mind](out-of-my-mind.html) | A reading companion to Sharon M. Draper’s novel: character, context, perspective, and theme | — |
+| [Of Mice and Men](of-mice-and-men.html) | A reading companion to John Steinbeck’s novella, organized around active-reading prompts | — |
+
+### Made for studying
+
+- **Read anywhere.** Native links and complete HTML documents work over HTTP or directly from your files.
+- **Choose your notes.** Download original or color-marked plaintext sources from each notes page.
+- **Print with intention.** A4 layouts use 24 note lines per page for AP subjects and 29 for Algebra 2.
+- **Stay oriented.** Shared subject navigation, section links, skip links, and visible keyboard focus help you find your place.
+
+## Getting started
+
+### Just want to read?
+
+Visit **[www.joltlined.com](https://www.joltlined.com)**, or [download the repository](https://github.com/NormalDudeBro/outofmymind/archive/refs/heads/main.zip), extract it, and open `index.html` in your browser. Keep the sibling HTML files and the `assets/`, `styles/`, and `notes/` directories together for offline reading. No installation or build is needed.
+
+For printed notes, use **A4 portrait**, disable browser headers and footers, and enable background graphics to preserve the highlight colors.
+
+### Working on the collection?
+
+Use **Node.js 24** and npm. The validation tools require Node.js **22.16 or newer**.
 
 ```sh
+git clone https://github.com/NormalDudeBro/outofmymind.git
+cd outofmymind
 npm ci
-npx playwright install chromium
 npm run build
-npm test
+npm run validate
 ```
 
-The checked-in Node generator imports original and marked `.txt` files byte-for-byte. The `.gitattributes` rule `*.txt text eol=lf` enforces LF checkouts on Windows and Linux, including AP Lang, so embedded downloads preserve the exact source bytes consistently across platforms. The generator does not rewrite source line endings. It validates all eighteen topics before replacing the site; it does not generate, rewrite, or recolor notes. Initial import or reimport after independent source review:
+To run the browser tests as well:
 
 ```sh
-node scripts/build.mjs --unit1 "C:/Users/Kenny/Desktop/Prompts/AP-World-History-Unit-1" --unit2 "C:/Users/Kenny/Desktop/Prompts/AP-World-History-Unit-2" --preview "C:/Users/Kenny/Desktop/Prompts/AP-World-History-Units-1-2/preview.html"
+npx playwright install chromium
+npm run test:e2e -- --workers=1
 ```
 
-Rebuild without Desktop sources using `npm run build`. The default build regenerates Home (`index.html`) through `scripts/home.mjs`, World notes (`ap-world.html`), `ap-lang.html`, and `algebra-2.html`; the restored analysis remains a separately maintained page and is copied, not generated. Preview exports include Home, all three notes pages, the restored analysis and its eleven referenced JPEGs, the shared `styles/site.css`, both AP Lang source files, all thirty-six World source files (including the four Unit 3 originals and colored counterparts), and all twenty-six Algebra 2 source files so styling, navigation and downloads work offline. The requested custom preview filename continues to open World notes; sibling `index.html` opens Home, and `ap-world.html` provides the canonical World navigation destination. Keep all sibling HTML files, images, and the `styles/` and `notes/` directories together when copying the preview. Export a standalone local preview from the checked-in notes using:
+The single-worker example keeps local browser memory use modest. `npm test` runs static validation and the browser suite together.
 
-```sh
-node scripts/build.mjs --preview "C:/Users/Kenny/Desktop/Prompts/AP-World-History-Units-1-2/preview.html"
+See the **[development guide](docs/development.md)** for imports, portable previews, and the editing workflow. The **[technical reference](docs/technical-reference.md)** preserves the detailed content, palette, print-layout, and test specifications.
+
+## Repository map
+
+```text
+.
+├── index.html                 Collection home
+├── ap-*.html                  AP subject notes
+├── algebra-2.html             Algebra notes
+├── out-of-my-mind.html        Draper reading companion
+├── of-mice-and-men.html       Steinbeck reading companion
+├── assets/images/             Local book and analysis images
+├── notes/                     Original and color-marked note sources
+├── styles/                    Shared site styling
+├── scripts/                   Page generators and note importers
+├── tests/                     Content, accessibility, and browser checks
+├── docs/                      Maintainer guides and README artwork
+└── .github/workflows/         Automated quality checks
 ```
 
-Preview export copies `notes/unit-1`, `notes/unit-2`, and `notes/unit-3` beside the exported HTML. Each topic provides two kinds of native links: `Download` original/colored links embed the exact source text bytes as base64 `text/plain` data URLs for one-click downloads with JavaScript disabled over both HTTP and `file://`; `Open original file` and `Open colored file` links use relative paths to `notes/unit-N/file.txt` and `notes/unit-N/Colored/file.txt`. Relative files and embedded downloads preserve the same source bytes; LF line endings are enforced at checkout by `.gitattributes`, not rewritten by the generator. Chromium opens these relative local text links instead of forcing a download. Only the eighteen named originals and their `Colored` counterparts are imported. Source previews, validators, and metadata are not imported. Original and colored files remain in the three unit directories and each unit's `Colored/` directory. Unit 3 downloads use `<file>.txt` and `<file>-colored.txt`; the existing Unit 1 and 2 download names are unchanged. Colored downloads contain `(pen)` and the approved highlight markers. All HTML text is escaped before rendering.
+Generated pages are checked in so GitHub Pages can serve the collection directly. Edit note sources and generators, then rebuild; maintain the two literary-analysis pages directly. The existing custom domain and deployment configuration are unchanged.
 
-## Presentation
+## Accessibility & content notes
 
-`styles/site.css` is the single shared source for all six pages' elegant academic shell. Each page links it once with the exact relative path `styles/site.css`: paper `#f6f3eb`, ink `#213749`, Georgia body typography, the same 1200px maximum wrapper and responsive padding, Joltlined masthead, subject navigation, visible focus and footer styles. Navigation uses 12px system type with transparent backgrounds; the current subject has an accent-colored underline and semibold weight, not a pill. Home's main headline, layout and copy remain unchanged. Analysis pages retain their content, section IDs, citations and controls within the shared literature style system; high-contrast and readable-font toggles intentionally override the default presentation. Content heading sizes need not match across subjects. Approved note inks and light-blue topic/page headings remain intentional exceptions to the base palette; the 36 World/four AP Lang/twenty-six Algebra 2 print pages are unchanged. Sheet density is subject-specific rather than blanket: AP World History and AP Lang print 24 notes per physical page, while Algebra 2 prints 29.
+The collection provides semantic structure, keyboard navigation, and complete no-JavaScript reading. **Some approved pastel highlight colors and light-blue headings do not meet WCAG text-contrast requirements.** This is a known limitation, not a claim of full WCAG compliance. Original pencil-only plaintext downloads offer an alternative for every notes topic or lesson.
 
-The neutral paper and Georgia typography follow the approved Unit 2 preview. The former yellow ink slot (`y`) now renders medium blue (`#287db3`) across World, AP Lang, and Algebra notes, on screen and in print; `(y)` markers remain the same. This blue was darkened from `#369dce` to distinguish it more clearly from the title blue. Colored sources otherwise receive only minimal marker remapping: `(r)` to `(hp)` and `(db)` to `(y)`, without changing source plaintext, wording, order, or highlight boundaries. Topic headings retain their lighter blue (`#59b8e7`), and complete marked section titles have uniform colors in both headings and Overview listings. On small screens pages stack; all topics remain visible. Printing uses A4 portrait with one note sheet per physical page (36 pages), repeating topic titles on each sheet. Browser print headers/footers should be off and background graphics on for the closest match.
+These are independent study resources, not official College Board materials or an official answer key. Literary interpretations and practice examples are starting points for your own evidence and reasoning. Check quotations and page references against your edition. See the [technical reference](docs/technical-reference.md) for provenance and verification limits.
 
-AP Lang and Algebra 2 inherit the shared World print font, but line rows are subject-specific. AP Lang keeps the 8.8mm row height and prints 24 notes per physical page, as does AP World History with 36 pages. Algebra 2 uses a denser 8mm row height so 29 lines fit on an A4 sheet, across twenty-six pages.
+## Feedback & reuse
 
-Unit 3 uses more generous, connected coloring after the devshirme note in 3.2 through the end of 3.4. All of 3.1 and the first eight lines of 3.2 are preserved exactly because the reader has already reached that point; the 3.2 page 1 section headings retain their original colors to match the copied Overview. Dark green links rulers, states, and political authority; lime links institutions, recruitment, and cooperation; brown links revenue, trade, and resources; medium blue links military action and coercion; purple links beliefs and religious legitimacy; light blue links places and monuments; pink links peoples and social groups; hot pink calls out contrasts, policy shifts, resistance, and limits. Related phrases may share one ink across a line, while paired concepts can use two inks. Color follows the idea rather than a forced per-line rotation. Note wording, logical line boundaries, and all other subjects' sources remain unchanged.
+Found a broken link, a confusing explanation, or a content error? [Open an issue](https://github.com/NormalDudeBro/outofmymind/issues) with the page, section, and a source or example where helpful.
 
-## Verification
-
-`npm run validate` runs html-validate and static/content checks, including `tests/unit3-checks.mjs` for the plain Unit 3 source. `tests/home-checks.mjs` checks exact Home regeneration, the five collection links, six-page navigation/current states, one identical shared stylesheet path per page, shared base palette ownership, local assets, unique IDs, and valid fragments. `tests/home.spec.mjs` covers root loading at 375px/1280px, actual destination clicks (including Algebra 2) and Home returns, browser history, keyboard skip/focus, LTR/RTL overflow, HTTP and offline/no-JavaScript navigation, loaded images and JPEG responses, zero Home axe exceptions, and restored analysis sections/citation returns/accessibility controls. `tests/literature.spec.mjs` checks both literary companions' exact twelve-link spine, fragment navigation, pamphlet-field map, all seven handout filenames, vocabulary/theme/questions, character quality and key-scene coverage, citations and no-JavaScript availability. `tests/style.spec.mjs` compares all six pages' computed base paper, ink, body font, wrapper, masthead, normal/current navigation styles and normalized navigation geometry against Home at 375px/1280px. It also checks real `text/css` responses and exact stylesheet bytes, local/offline stylesheet loading, no failed or remote requests, and LTR/forced-RTL overflow including all twelve Out of My Mind and twelve Of Mice and Men analysis sections. `npm run test:e2e` also runs exact note order (including the four two-page Unit 3 topics), all downloads, accessibility, and physical PDF page count (36 World pages). `npm test` runs both. Set `PREVIEW_PATH` to an exported HTML path to include it in the offline browser/download/style checks. Download clicks are paced to stay below Chromium's ten-per-second limit. The PDF is inspected in memory and not written to the repo.
-
-Content validation enforces 18 topics, including four Unit 3 topics, 36 pages, 48 lines per topic, 24 lines per page, a 65-character maximum, exact stripped equality (CRLF normalized only), valid markers, pencil prefixes and punctuation, immediate resets, no more than two highlights per line, complete uniform non-LB section title colors, and matching Overview/header rendering. Generated HTML must match a fresh in-memory build exactly. Structural/color tests do not independently certify historical accuracy or semantic word-family ownership; independent content review remains necessary.
-
-AP Lang checks enforce the exact Unit 1 heading/title, 96 ASCII lines in source order, 12 eight-line sections, four articles of exactly 24 notes, a 65-character maximum, World-style markers and palette assignments, pencil body text and neutral prefixes/punctuation, selective keyword highlights in one or two colors per line, reserved non-`lb` section titles, light-blue topic/page headings, and exact original/colored source download bytes with filenames `ap-lang.txt` and `ap-lang-colored.txt`. Browser checks cover desktop/mobile, both subject links, keyboard navigation, English under forced RTL, HTTP and offline `file://` without JavaScript, accessibility with the approved-palette contrast exception below, printed notes fitting their line heights and lines staying within sheet bottoms (1px tolerance), and exactly four actual PDF pages. These checks do not independently certify the rhetorical interpretations or their hypothetical and paraphrased examples.
-
-Algebra static checks in `tests/algebra-checks.mjs` enforce reproducible HTML, thirteen ordered lessons with 58 source lines each, twenty-six articles with 29 notes each, six sections of 10, 10, 9, 10, 10, and 9 lines per lesson, 754 notes rendered through the shared `renderLine`, shared palette declarations, exact ASCII sources and stripped equality, the 65-character limit, the new lesson anchors, the Modules 1B/2A metadata and Module 2A provenance paragraph, all six navigation links with the current page marked, and twenty-six exact embedded downloads plus twenty-six matching relative source paths. The loader validates marker and title-color rules. Selected arithmetic and content checks cover corrected jersey totals of 825 and 1625, negative floor values, reciprocal horizontal point mapping, the corrected `x - y = -1` standard form, exact system intersections and mixtures, the corrected `(5, 2)` inequality test, dashed-boundary non-closed wording, integer constraints, and the linear-programming proof that the relaxed maximum 220 at integer point `(2, 8)` is optimal; these checks do not replace independent mathematical review.
-
-## Accessibility Limitation
-
-Semantic landmarks/headings, native keyboard-accessible links, a skip link, visible focus, and a complete no-JavaScript document are provided. Both AP World History and AP Lang retain the approved pastel palette: several highlight colors and light-blue topic/page headings fail WCAG text contrast requirements. This is a documented approved-palette contrast exception, not a WCAG compliance claim. Axe still runs its contrast rule; both subject pages permit only `color-contrast` violations on approved ink, topic-title, and page-title elements and reject every other violation. Original pencil-only text downloads are available as an alternative for every AP World History topic and AP Lang. Manual assistive-technology and visual review remains advisable.
-
-Algebra 2 shares the same approved-palette contrast limitation, not a WCAG compliance claim. Each lesson also offers an original pencil-only text download as an alternative.
-
-## Hosting
-
-GitHub Pages serves the checked-in collection home at `index.html` and its five relative destinations at `www.joltlined.com`; World notes now live at `ap-world.html`. `CNAME` and the existing `Quality` workflow are preserved; CI installs the existing tools and runs `npm test`. No Desktop paths or generation step are required at deployment. Existing Pages configuration is not changed by this work. Keep the current Pages publishing source and enable Enforce HTTPS in repository settings when DNS/certificate provisioning is complete.
-
-The checked-in JPEGs illustrate the restored literary analysis, and `cover.jpg` is available as the local book cover for Home. Keep the referenced images with both pages for offline previews. The notes pages remain image-free; their print page counts are 36 World, four AP Lang, and twenty-six Algebra 2, with Algebra 2 sheets carrying 29 notes rather than the shared 24. No reuse license is declared; confirm intended terms before adding one.
+No reuse license is currently declared. Don’t assume the repository’s text or third-party images are freely licensed; confirm permission before redistributing them.
