@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)Millet and communal authority(pen)
-(pen)-> (li)Jizya and protected status(pen)
-(pen)-> (p)Accommodation and its limits(pen)
-(pen)o (g)Millet and communal authority(pen)
-(pen)-> Ottoman (g)millets(pen) denoted religious, not territorial, groups.
-(pen)-> Some (g)religious leaders(pen) managed local communal affairs.
-(pen)-> Christian and Jewish courts could handle (g)marriage(pen) matters.
-(pen)-> Communities supported worship, schools, and charity.
+(pen)-> (g)Millet and jizya distinctions(pen)
+(pen)-> (li)Revenue and service systems(pen)
+(pen)-> (p)Imperial religion and art(pen)
+(pen)o (g)Millet and jizya distinctions(pen)
+(pen)-> Ottoman (g)millet(pen) arrangements recognized religious communities.
+(pen)-> Leaders could oversee (g)marriage(pen), schools, and charity.
 (pen)-> Community authority remained subject to (g)Ottoman rule(pen).
-(pen)-> These were evolving practices, not a (p)uniform(pen) fixed system.
-(pen)o (li)Jizya and protected status(pen)
-(pen)-> (li)Jizya(pen) was a poll tax on eligible adult non-Muslim men.
-(pen)-> Women and children were generally exempt.
-(pen)-> Poverty or disability could also bring (li)exemptions(pen).
-(pen)-> (li)Rates(pen) could differ with wealth and local tax practices.
-(pen)-> (li)Dhimmi status(pen) offered protection with legal inequality.
-(pen)-> (li)Jizya(pen) did not itself grant communal self-government.
-(pen)o (p)Accommodation and its limits(pen)
-(pen)-> Ottoman communities could also use (p)Islamic courts(pen).
-(pen)-> Community (p)autonomy(pen) was limited, not religious equality.
-(pen)-> Non-Muslims faced taxes and (p)legal restrictions(pen).
-(pen)-> Mughal (p)Akbar(pen) abolished (li)jizya(pen) in 1564.
-(pen)-> (p)Aurangzeb(pen) restored Mughal (li)jizya(pen) in 1679; policy varied.
+(pen)-> (g)Millet(pen) practices varied; they were not one fixed system.
+(pen)-> (g)Jizya(pen) was a poll tax on eligible adult non-Muslim men.
+(pen)-> Women and children were (g)exempt(pen); rates could vary by means.
+(pen)-> (g)Dhimmi(pen) protection did not mean equal legal status.
+(pen)-> (g)Jizya(pen) did not itself grant communal self-government.
+(pen)o (li)Revenue and service systems(pen)
+(pen)-> Ming (li)silver(pen) taxes tied peasants to commercial markets.
+(pen)-> Tokugawa (li)samurai(pen) often became salaried officials.
+(pen)-> Inca (li)mit(pen)'(li)a(pen) required labor; Ottoman tax farming raised (li)cash(pen).
+(pen)-> Inca (li)quipu(pen) recorded labor and goods for state administration.
+(pen)-> Mughal (li)jagirs(pen) granted revenue rights, not ownership of land.
+(pen)o (p)Imperial religion and art(pen)
+(pen)-> Inca rulers claimed descent from (p)Inti(pen), the sun god.
+(pen)-> Cuzco's (p)sun temple(pen) made Inca sacred kingship visible.
+(pen)-> Mexica (p)sacrifice(pen) linked rulers to maintaining cosmic order.
+(pen)-> Askia Muhammad promoted (p)Islam(pen) to legitimize Songhai rule.
 (pen)o Overview
-(pen)-> (hp)Gunpowder and interstate rivalry(pen)
-(pen)-> (br)Revenue and military service(pen)
-(pen)-> (pu)Governing imperial elites(pen)
-(pen)o (hp)Gunpowder and interstate rivalry(pen)
+(pen)-> (hp)Conquest and its limits(pen)
+(pen)-> (br)Cultural patronage and authority(pen)
+(pen)-> (pu)Belief and comparative rule(pen)
+(pen)o (hp)Conquest and its limits(pen)
 (pen)-> Morocco defeated Songhai at (hp)Tondibi(pen) in 1591.
-(pen)-> Moroccan (hp)firearms(pen) overcame Songhai's larger forces.
+(pen)-> Moroccan (hp)firearms(pen) helped defeat Songhai forces.
 (pen)-> (hp)Distance(pen) weakened Moroccan control of the Niger valley.
-(pen)-> Shah Abbas I expanded Safavid (hp)musketeers(pen) and (hp)artillery(pen).
-(pen)-> Abbas checked (hp)Qizilbash(pen) tribal warriors with new troops.
-(pen)o (br)Revenue and military service(pen)
-(pen)-> Ottoman (br)timars(pen) assigned tax revenue for cavalry service.
-(pen)-> Mughal (br)jagirs(pen) granted revenue rights, not ownership of land.
-(pen)-> (br)Mansab(pen) ranks set Mughal officers' status and troop duties.
-(pen)-> Ming (br)silver(pen) taxes tied peasants to commercial markets.
-(pen)-> (br)Silver(pen) scarcity could raise the real burden of Ming taxes.
-(pen)-> Ottoman (br)inflation(pen) strained cash pay and military finances.
-(pen)o (pu)Governing imperial elites(pen)
-(pen)-> Tokugawa (pu)alternate attendance(pen) required daimyo stays in Edo.
-(pen)-> Daimyo families stayed in Edo as political (pu)hostages(pen).
-(pen)-> Tokugawa (pu)samurai(pen) often became salaried officials.
-(pen)-> Qing emperors used (pu)Confucian(pen) rites and Tibetan (pu)Buddhism(pen).
+(pen)-> Aztec and Inca empires expanded without (hp)gunpowder(pen).
+(pen)-> Weapons aided conquest; (hp)logistics(pen) helped sustain control.
+(pen)o (br)Cultural patronage and authority(pen)
+(pen)-> Mughal Akbar recruited (br)Rajput(pen) allies to reduce resistance.
+(pen)-> (br)Hindu elites(pen) supplied Mughal revenue and military service.
+(pen)-> Mughal and Rajput (br)painters(pen) exchanged artistic techniques.
+(pen)-> Akbar commissioned the (br)Akbarnama(pen) to glorify his reign.
+(pen)-> Court histories praised dynasties; (br)purpose(pen) shaped portrayal.
+(pen)-> Accommodation could secure (br)loyalty(pen) without legal (br)equality(pen).
+(pen)o (pu)Belief and comparative rule(pen)
+(pen)-> Protestant and Catholic reforms both spread (pu)Christianity(pen).
+(pen)-> Qing rulers used (pu)Confucian(pen) rites and Tibetan (pu)Buddhism(pen).
 (pen)-> Multiple (pu)traditions(pen) helped Qing rulers court diverse elites.
 (pen)-> In theory, Heaven's (pu)mandate(pen) depended on moral rule.
+(pen)-> Tokugawa (pu)alternate attendance(pen) tied daimyo to Edo.
+(pen)-> Like Versailles, it made (pu)regional elites(pen) easier to supervise.
