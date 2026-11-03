@@ -29,7 +29,7 @@
 | Collection | Contents | Print notes |
 | --- | --- | --- |
 | [AP English Language](website/public/ap-lang.html) | Unit 1: rhetorical situation, a writer’s choices, evidence, and audience | 4 pages |
-| [AP World History](website/public/ap-world.html) | Units 1–3: The Global Tapestry, Networks of Exchange, and Land-Based Empires | 36 pages · 18 topics |
+| [AP World History](website/public/ap-world.html) | Units 1–3: The Global Tapestry, Networks of Exchange, and Land-Based Empires | 38 pages · 18 official topics + 1 supplement |
 | [Algebra 2](website/public/algebra-2.html) | Modules 1B and 2A: functions, transformations, linear systems, and optimization | 26 pages · 13 lessons |
 | [Out of My Mind](website/public/out-of-my-mind.html) | A reading companion to Sharon M. Draper’s novel | — |
 | [Of Mice and Men](website/public/of-mice-and-men.html) | A reading companion to John Steinbeck’s novella | — |

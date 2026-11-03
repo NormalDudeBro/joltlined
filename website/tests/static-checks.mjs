@@ -7,14 +7,16 @@ const data = loadNotes();
 const html = readFileSync(resolve(root, 'ap-world.html'), 'utf8');
 assert.equal(html, renderSite(data), 'checked-in HTML exactly matches reproducible build');
 assert.equal(data.length, 3);
-assert.equal(data.flatMap(unit => unit.topics).length, 18);
-assert.equal((html.match(/<article /g) ?? []).length, 36);
-assert.equal((html.match(/class="note"/g) ?? []).length, 864);
+assert.equal(data.flatMap(unit => unit.topics).length, 19);
+assert.equal((html.match(/<article /g) ?? []).length, 38);
+assert.equal((html.match(/class="note"/g) ?? []).length, 912);
 assert.equal(data[2].name, 'Land-Based Empires');
 assert.equal(data[2].period, 'c. 1450–1750');
-assert.deepEqual(data[2].topics.map(topic => [topic.file, topic.title]), [['3.1-empires-expand', 'Empires Expand'], ['3.2-administration', 'Empires: Administration'], ['3.3-belief-systems', 'Empires: Belief Systems'], ['3.4-comparison', 'Comparison in Land-Based Empires']]);
-assert.equal(data[2].topics.reduce((sum, topic) => sum + topic.lines.length, 0), 192);
-assert.equal((html.match(/<article /g) ?? []).length - data.slice(0, 2).flatMap(unit => unit.topics).length * 2, 8);
+assert.deepEqual(data[2].topics.slice(0, 4).map(topic => [topic.file, topic.title]), [['3.1-empires-expand', 'Empires Expand'], ['3.2-administration', 'Empires: Administration'], ['3.3-belief-systems', 'Empires: Belief Systems'], ['3.4-comparison', 'Comparison in Land-Based Empires']]);
+assert.deepEqual(data[2].topics[4] && [data[2].topics[4].file, data[2].topics[4].title, data[2].topics[4].label], ['3-supplement', 'Millet, Jizya, and Key Connections', 'Unit 3 Supplement']);
+assert.doesNotMatch(data[2].topics[4].heading, /3\.5/, 'supplement is not presented as official topic 3.5');
+assert.equal(data[2].topics.reduce((sum, topic) => sum + topic.lines.length, 0), 240);
+assert.equal((html.match(/<article /g) ?? []).length - data.slice(0, 2).flatMap(unit => unit.topics).length * 2, 10);
 for (const topic of data[2].topics) assert.ok(html.includes(`id="topic-${topic.file.replaceAll('.', '-')}"`), `${topic.file}: topic anchor`);
 assert.match(html, /href="#unit-3"/);
 assert.match(html, /Unit 3: Land-Based Empires, c\. 1450–1750/);
@@ -26,13 +28,13 @@ links.forEach(link => {
   if (link === 'styles/site.css') return assert.ok(existsSync(resolve(root, link)), 'local stylesheet exists');
   if (['index.html', 'ap-lang.html', 'ap-world.html', 'algebra-2.html', 'out-of-my-mind.html', 'of-mice-and-men.html'].includes(link)) return assert.ok(existsSync(resolve(root, link)));
   if (link.startsWith('#')) return assert.ok(ids.includes(link.slice(1)), `fragment ${link}`);
-  if (link.startsWith('notes/')) return assert.match(link, /^notes\/unit-[123]\/(Colored\/)?(?:[12]\.[1-7]-[a-z-]+|3\.[1-4]-[a-z-]+)\.txt$/);
+  if (link.startsWith('notes/')) return assert.match(link, /^notes\/unit-[123]\/(Colored\/)?(?:[12]\.[1-7]-[a-z-]+|3\.[1-4]-[a-z-]+|3-supplement)\.txt$/);
   assert.match(link, /^data:text\/plain;charset=utf-8;base64,[A-Za-z0-9+/]+=*$/);
 });
 const downloads = links.filter(link => link.startsWith('data:'));
 const files = links.filter(link => link.startsWith('notes/'));
-assert.equal(downloads.length, 36);
-assert.equal(files.length, 36);
+assert.equal(downloads.length, 38);
+assert.equal(files.length, 38);
 data.flatMap((unit, index) => unit.topics.flatMap(topic => ['', 'Colored'].map(folder => {
   return { href: `notes/unit-${index + 1}/${folder ? `${folder}/` : ''}${topic.file}.txt`, bytes: Buffer.from(folder ? topic.colored : topic.original) };
 }))).forEach((file, index) => {
@@ -56,7 +58,7 @@ assert.throws(() => validateSheet(first.original, first.colored.replace(/\((g|li
 for (const retired of ['r', 'db']) {
   assert.throws(() => validateSheet(first.original, first.colored.replace('(g)', `(${retired})`), 'retired'), /equality/, 'retired inks cannot enter source downloads');
 }
-console.log('PASS: 18 topics, 36 pages, 864 notes, 48 lines per topic, Unit 3 four sheets, exact downloads and relative files, fragments, exact reproducibility, CNAME.');
+console.log('PASS: 18 official topics plus one supplement, 38 pages, 912 notes, Unit 3 five sheets including supplement, exact downloads and relative files, fragments, exact reproducibility, CNAME.');
 const lang = loadLangNotes();
 const langHTML = readFileSync(resolve(root, 'ap-lang.html'), 'utf8');
 assert.equal(langHTML, renderSite([], lang), 'AP Lang reproducible build');

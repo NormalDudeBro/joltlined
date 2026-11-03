@@ -27,12 +27,13 @@ test('native unit navigation, fragments, history and keyboard', async ({ page })
   await expect(page).toHaveURL(/#unit-3$/);
   await page.reload();
   await expect(page.locator('#unit-3')).toBeVisible();
-  await expect(page.locator('.topic')).toHaveCount(18);
+  await expect(page.locator('.topic')).toHaveCount(19);
   for (const [index, topic] of loadNotes()[2].topics.entries()) {
     await page.locator(`.contents a[href="#topic-${topic.file.replaceAll('.', '-')}"]`).click();
     await expect(page).toHaveURL(new RegExp(`#topic-${topic.file.replaceAll('.', '-')}$`));
     const section = page.locator(`#topic-${topic.file.replaceAll('.', '-')}`);
-    await expect(section.locator('.topic-title')).toHaveText(`3.${index + 1} ${topic.title}`);
+    await expect(section.locator('.topic-title')).toHaveText(topic.heading);
+    if (topic.file === '3-supplement') await expect(section.locator('.topic-title')).not.toContainText('3.5');
     await expect(section.locator('.note')).toHaveText(topic.original.replace(/\r\n/g, '\n').replace(/\n$/, '').split('\n'));
     await expect(section.locator('.pages article')).toHaveCount(2);
     await expect(section.locator('.pages article .note')).toHaveCount(48);
@@ -40,6 +41,11 @@ test('native unit navigation, fragments, history and keyboard', async ({ page })
       await expect(article.locator('.note')).toHaveText(topic.original.trimEnd().split('\n').slice(pageIndex * 24, (pageIndex + 1) * 24));
     }
   }
+  const supplement = loadNotes()[2].topics[4];
+  const supplementSection = page.locator('#topic-3-supplement');
+  await expect(page.locator('.contents a[href="#topic-3-supplement"]')).toHaveText(supplement.heading);
+  await expect(supplementSection.locator('.note')).toHaveText(supplement.original.trimEnd().split('\n'));
+  await expect(supplementSection.locator('.pages article').nth(1).locator('.note').first()).toHaveText('o Overview');
 });
 
 for (const width of [375, 1280]) {
@@ -48,8 +54,8 @@ for (const width of [375, 1280]) {
     page.on('request', request => requests.push(request.url()));
     await page.setViewportSize({ width, height: 812 });
     await page.goto('/ap-world.html');
-    await expect(page.locator('article')).toHaveCount(36);
-    await expect(page.locator('.note')).toHaveCount(864);
+    await expect(page.locator('article')).toHaveCount(38);
+    await expect(page.locator('.note')).toHaveCount(912);
     expect(requests).toEqual(['http://127.0.0.1:4173/ap-world.html', 'http://127.0.0.1:4173/styles/site.css']);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
     await expect(page.locator('.topic-title').first()).toHaveCSS('color', 'rgb(89, 184, 231)');
@@ -57,6 +63,10 @@ for (const width of [375, 1280]) {
       expect(await page.evaluate(token => getComputedStyle(document.documentElement).getPropertyValue(`--${token}`).trim(), token)).toBe(hex);
     }
     const topics = loadNotes().flatMap(unit => unit.topics);
+    const supplement = topics.find(topic => topic.file === '3-supplement');
+    const supplementGroup = page.locator('#topic-3-supplement');
+    await expect(supplementGroup.locator('.topic-title')).toHaveText('Unit 3 Supplement: Millet, Jizya, and Key Connections');
+    expect(await supplementGroup.locator('.note').allTextContents()).toEqual(supplement.original.trimEnd().split('\n'));
     for (const [index, topic] of topics.entries()) {
       const group = page.locator('.topic').nth(index);
       await expect(group).toBeVisible();
@@ -78,7 +88,7 @@ for (const width of [375, 1280]) {
     }
     if (process.env.PREVIEW_PATH) {
       await page.goto(pathToFileURL(resolve(process.env.PREVIEW_PATH)).href);
-      await expect(page.locator('article')).toHaveCount(36);
+      await expect(page.locator('article')).toHaveCount(38);
       expect(await page.locator('.note').allTextContents()).toEqual(topics.flatMap(topic => topic.original.replace(/\r\n/g, '\n').replace(/\n$/, '').split('\n')));
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
     }
@@ -123,8 +133,8 @@ test('no JavaScript over HTTP and file:// exposes everything and local downloads
   const page = await context.newPage();
   for (const url of ['http://127.0.0.1:4173/ap-world.html', pathToFileURL(resolve(root, 'ap-world.html')).href, ...(process.env.PREVIEW_PATH ? [pathToFileURL(resolve(process.env.PREVIEW_PATH)).href] : [])]) {
     await page.goto(url);
-    await expect(page.locator('.topic')).toHaveCount(18);
-    await expect(page.locator('article')).toHaveCount(36);
+    await expect(page.locator('.topic')).toHaveCount(19);
+    await expect(page.locator('article')).toHaveCount(38);
     for (const topic of loadNotes()[2].topics) await expect(page.locator(`#topic-${topic.file.replaceAll('.', '-')} .pages article`)).toHaveCount(2);
     for (const article of await page.locator('article').all()) {
       await expect(article).toBeVisible();
@@ -201,7 +211,7 @@ test('accessibility: only the documented approved-palette contrast exception', a
   }
 });
 
-test('print produces exactly 36 physical A4 pages', async ({ page }) => {
+test('print produces exactly 38 physical A4 pages', async ({ page }) => {
   await page.setViewportSize({ width: Math.floor((210 - 24) * 96 / 25.4), height: 1123 });
   for (const url of ['/ap-world.html', ...(process.env.PREVIEW_PATH ? [pathToFileURL(resolve(process.env.PREVIEW_PATH)).href] : [])]) {
     await page.goto(url);
@@ -211,11 +221,11 @@ test('print produces exactly 36 physical A4 pages', async ({ page }) => {
     await expect(page.locator('.wrap')).toHaveCSS('padding-inline-end', '0px');
     await expect(page.locator('.page-title').first()).toBeVisible();
     const pdf = await page.pdf({ preferCSSPageSize: true, printBackground: true });
-    expect((pdf.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(36);
+    expect((pdf.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(38);
     const unit3 = page.locator('#unit-3');
-    await expect(unit3.locator('.topic')).toHaveCount(4);
-    await expect(unit3.locator('article')).toHaveCount(8);
-    await expect(unit3.locator('.note')).toHaveCount(192);
+    await expect(unit3.locator('.topic')).toHaveCount(5);
+    await expect(unit3.locator('article')).toHaveCount(10);
+    await expect(unit3.locator('.note')).toHaveCount(240);
     for (const article of await unit3.locator('article').all()) {
       await expect(article.locator('.note')).toHaveCount(24);
       expect(await article.evaluate(article => {
@@ -230,10 +240,16 @@ test('print produces exactly 36 physical A4 pages', async ({ page }) => {
     }
     await page.locator('#unit-1, #unit-2').evaluateAll(units => units.forEach(unit => unit.remove()));
     const unitPDF = await page.pdf({ preferCSSPageSize: true, printBackground: true });
-    expect((unitPDF.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(8);
+    expect((unitPDF.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(10);
     for (const index of [0, 1, 2, 3]) {
       const topicPDF = await page.pdf({ preferCSSPageSize: true, pageRanges: `${index * 2 + 1}-${index * 2 + 2}` });
       expect((topicPDF.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(2);
     }
+    const supplement = unit3.locator('#topic-3-supplement');
+    await expect(supplement.locator('.line')).toHaveCount(48);
+    await expect(supplement.locator('.pages article')).toHaveCount(2);
+    await expect(supplement.locator('article').nth(1).locator('.note').first()).toHaveText('o Overview');
+    const supplementPDF = await page.pdf({ preferCSSPageSize: true, pageRanges: '9-10' });
+    expect((supplementPDF.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(2);
   }
 });
