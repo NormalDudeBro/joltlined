@@ -6,7 +6,7 @@ import { parseArgs } from 'node:util';
 import { renderHome } from './home.mjs';
 
 export const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
-export const palette = { g: '#168438', li: '#79c900', pu: '#883ac2', br: '#92552f', y: '#287db3', p: '#ed8eb4', lb: '#59b8e7', hp: '#ec228c', pen: '#62615e' };
+export const palette = { g: '#168438', li: '#79c900', pu: '#883ac2', br: '#92552f', or: '#e67e22', y: '#287db3', p: '#ed8eb4', lb: '#59b8e7', hp: '#ec228c', pen: '#62615e' };
 export const units = [
   { name: 'The Global Tapestry', topics: [
     ['1.1-east-asia', 'Developments in East Asia'],
@@ -31,10 +31,11 @@ export const units = [
     ['3.2-administration', 'Empires: Administration'],
     ['3.3-belief-systems', 'Empires: Belief Systems'],
     ['3.4-comparison', 'Comparison in Land-Based Empires'],
-    ['3-supplement', 'Millet, Jizya, and Key Connections', 'Unit 3 Supplement'],
+    ['3-supplement', 'Military and Imperial Government', 'Unit 3 Supplement 1'],
+    ['3-supplement-2', 'Beliefs, Legitimacy, and Comparison', 'Unit 3 Supplement 2'],
   ] },
 ];
-const marker = /\((g|li|pu|br|y|p|lb|hp|pen)\)/g;
+const marker = /\((g|li|pu|br|or|y|p|lb|hp|pen)\)/g;
 const normalize = text => text.replace(/\r\n/g, '\n');
 const lines = text => normalize(text).replace(/\n$/, '').split('\n');
 export const escapeHTML = text => text.replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
@@ -44,7 +45,7 @@ export function spans(line) {
   return matches.map((match, index) => ({ color: match[1], text: line.slice(match.index + match[0].length, matches[index + 1]?.index ?? line.length) }));
 }
 
-export function validateSheet(original, colored, name) {
+export function validateSheet(original, colored, name, pencil = false) {
   const check = (condition, message) => assert.ok(condition, `${name}: ${message}`);
   check(normalize(colored).replace(marker, '') === normalize(original), 'exact stripped equality');
   const source = lines(original);
@@ -55,6 +56,7 @@ export function validateSheet(original, colored, name) {
     const text = source[index];
     check(text.length <= 65 && /^(o |-> )\S/.test(text) && !/\s$/.test(text), `line ${index + 1}: prefix, whitespace and max 65 characters`);
     check(line.startsWith('(pen)') && !/\([a-z]+\)/i.test(text), `line ${index + 1}: valid markers and initial pencil`);
+    if (pencil) check(line === `(pen)${text}`, `line ${index + 1}: pencil-only marked line`);
     const parts = spans(line);
     const colors = parts.flatMap(part => Array(part.text.length).fill(part.color));
     const highlights = new Set(parts.filter(part => part.color !== 'pen').map(part => part.color));
@@ -70,6 +72,13 @@ export function validateSheet(original, colored, name) {
     const title = text.slice(prefix);
     const isTitle = source.some(item => item === `o ${title}` && item !== 'o Overview');
     if (!isTitle) return;
+    if (pencil) {
+      check(highlights.size === 0, `${title}: pencil-only title`);
+      const rendering = colors.slice(prefix).join(',');
+      check(!renderings.has(title) || renderings.get(title) === rendering, `${title}: matching Overview/header rendering`);
+      renderings.set(title, rendering);
+      return;
+    }
     check(highlights.size === 1 && !highlights.has('lb'), `${title}: one reserved non-LB title color`);
     const color = [...highlights][0];
     check([...title].every((char, n) => /[A-Za-z]/.test(char) ? colors[n + prefix] === color : char === ' ' || colors[n + prefix] === 'pen'), `${title}: full uniform title`);
@@ -92,11 +101,11 @@ export function validateSheet(original, colored, name) {
 }
 
 export function loadNotes(paths = units.map((_, index) => resolve(root, 'notes', `unit-${index + 1}`))) {
-  return units.map((unit, index) => ({ ...unit, topics: unit.topics.map(([file, title, displayLabel]) => {
+  return units.map((unit, index) => ({ ...unit, topics: unit.topics.map(([file, title, displayLabel, pencil]) => {
     const original = readFileSync(resolve(paths[index], `${file}.txt`), 'utf8');
     const colored = readFileSync(resolve(paths[index], 'Colored', `${file}.txt`), 'utf8');
     const shortLabel = displayLabel ?? file.slice(0, 3);
-    return { file, title, label: shortLabel, heading: `${shortLabel}${displayLabel ? ':' : ''} ${title}`, original, colored, lines: validateSheet(original, colored, file) };
+    return { file, title, label: shortLabel, heading: `${shortLabel}${displayLabel ? ':' : ''} ${title}`, original, colored, pencil, lines: validateSheet(original, colored, file, pencil) };
   }) }));
 }
 
@@ -168,7 +177,7 @@ export function renderSite(data, lang, algebra) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="${algebra ? 'Algebra 2: Functions and Linear Systems. Thirteen lessons across twenty-six color-coded 29-line pages cover linear graphs, inequalities, piecewise and step functions, absolute value, parent functions, transformations, equations of linear functions, solving systems of equations graphically, solving systems of equations algebraically, systems of inequalities, and linear programming.' : lang ? 'Color-coded AP Lang rhetorical analysis notes: describe, function, effect, justify, and connection-building guidance.' : 'AP World History Units 1–3: eighteen official topics plus a Unit 3 supplement, nineteen study sheets, thirty-eight printable note pages, and original and colored text downloads.'}">
+  <meta name="description" content="${algebra ? 'Algebra 2: Functions and Linear Systems. Thirteen lessons across twenty-six color-coded 29-line pages cover linear graphs, inequalities, piecewise and step functions, absolute value, parent functions, transformations, equations of linear functions, solving systems of equations graphically, solving systems of equations algebraically, systems of inequalities, and linear programming.' : lang ? 'Color-coded AP Lang rhetorical analysis notes: describe, function, effect, justify, and connection-building guidance.' : 'AP World History Units 1–3: eighteen official topics plus two Unit 3 supplements, twenty study sheets, forty printable note pages, and original and marked text downloads.'}">
   <title>${title}</title>
   <link rel="stylesheet" href="styles/site.css">
   <style>
@@ -242,11 +251,11 @@ export function renderSite(data, lang, algebra) {
     <p>Describe the choice, explain its function, trace a possible audience effect, and justify its contribution to the author's purpose.</p>
     <p>Food-labeling examples are paraphrases or clearly marked hypothetical examples, not direct quotations or guaranteed audience responses. Each note line is at most 65 characters.</p>
     <p class="downloads"><a href="data:text/plain;charset=utf-8;base64,${Buffer.from(lang.source).toString('base64')}" download="ap-lang.txt">Download AP Lang original</a> · <a href="data:text/plain;charset=utf-8;base64,${Buffer.from(lang.colored).toString('base64')}" download="ap-lang-colored.txt">Download AP Lang colored</a> · <a href="notes/ap-lang.txt">Open original file</a> · <a href="notes/Colored/ap-lang.txt">Open colored file</a></p>
-    <p>Use your browser's Print command for colored, numbered sheets. The shared World History inks highlight key words; body text and punctuation stay pencil.</p>` : `<p>Units 1–3 · c. 1200–1750 · 18 official topics + 1 Unit 3 supplement · 19 study sheets · 38 note pages</p>
+    <p>Use your browser's Print command for colored, numbered sheets. The shared World History inks highlight key words; body text and punctuation stay pencil.</p>` : `<p>Units 1–3 · c. 1200–1750 · 18 official topics + 2 Unit 3 supplements · 20 study sheets · 40 note pages</p>
     <nav aria-label="Units">${data.map((unit, index) => `<a href="#unit-${index + 1}">Unit ${index + 1}: ${escapeHTML(unit.name)}${unit.period ? `, ${escapeHTML(unit.period)}` : ''}</a>`).join('')}</nav>
     <ol class="contents">${data.flatMap(unit => unit.topics.map(topic => `<li><a href="#topic-${escapeHTML(topic.file.replaceAll('.', '-'))}">${escapeHTML(topic.heading)}</a></li>`)).join('')}</ol>
-    <p>All notes are visible below. Use your browser’s Print command for one sheet per page. Colored text downloads contain the original color markers.</p>`}
-    <div class="legend" role="group" aria-label="Token color legend">${Object.keys(palette).map(token => `<span><i class="swatch ${token}" aria-hidden="true"></i>${token} ${({ g: 'dark green', li: 'lime green', pu: 'purple', br: 'brown', y: 'medium blue', p: 'pink', lb: 'light blue', hp: 'hot pink', pen: 'pencil' })[token]}</span>`).join('')}</div>
+    <p>All notes are visible below. Use your browser’s Print command for one sheet per page. Marked text downloads retain the source markers.</p>`}
+    <div class="legend" role="group" aria-label="Token color legend">${Object.keys(palette).map(token => `<span><i class="swatch ${token}" aria-hidden="true"></i>${token} ${({ g: 'dark green', li: 'lime green', pu: 'purple', br: 'brown', or: 'orange', y: 'medium blue', p: 'pink', lb: 'light blue', hp: 'hot pink', pen: 'pencil' })[token]}</span>`).join('')}</div>
     </div>
   </header>
   <main id="notes" tabindex="-1"${study.length ? ' class="study"' : ''}>${study.length ? study.map(topic => `<section class="topic" id="topic-${escapeHTML(topic.file.replaceAll('.', '-'))}" aria-labelledby="topic-${escapeHTML(topic.file.replaceAll('.', '-'))}-title">
@@ -260,7 +269,7 @@ export function renderSite(data, lang, algebra) {
       <h2 class="unit-title" id="unit-${index + 1}-title">Unit ${index + 1}: ${escapeHTML(unit.name)}${unit.period ? `, ${escapeHTML(unit.period)}` : ''}</h2>
       ${unit.topics.map(topic => `<section class="topic" id="topic-${escapeHTML(topic.file.replaceAll('.', '-'))}" aria-labelledby="topic-${escapeHTML(topic.file.replaceAll('.', '-'))}-title">
         <h3 class="topic-title" id="topic-${escapeHTML(topic.file.replaceAll('.', '-'))}-title">${escapeHTML(topic.heading)}</h3>
-        <p class="downloads"><a href="data:text/plain;charset=utf-8;base64,${Buffer.from(topic.original).toString('base64')}" download="${escapeHTML(topic.file)}.txt">Download ${escapeHTML(topic.label)} original</a> · <a href="data:text/plain;charset=utf-8;base64,${Buffer.from(topic.colored).toString('base64')}" download="${escapeHTML(topic.file)}${index === 2 ? '-colored' : ''}.txt">Download ${escapeHTML(topic.label)} colored</a> · <a href="notes/unit-${index + 1}/${escapeHTML(topic.file)}.txt">Open original file</a> · <a href="notes/unit-${index + 1}/Colored/${escapeHTML(topic.file)}.txt">Open colored file</a></p>
+        <p class="downloads"><a href="data:text/plain;charset=utf-8;base64,${Buffer.from(topic.original).toString('base64')}" download="${escapeHTML(topic.file)}.txt">Download ${escapeHTML(topic.label)} original</a> · <a href="data:text/plain;charset=utf-8;base64,${Buffer.from(topic.colored).toString('base64')}" download="${escapeHTML(topic.file)}${topic.pencil ? '-pencil' : index === 2 ? '-colored' : ''}.txt">Download ${escapeHTML(topic.label)} ${topic.pencil ? 'pencil' : 'colored'}</a> · <a href="notes/unit-${index + 1}/${escapeHTML(topic.file)}.txt">Open original file</a> · <a href="notes/unit-${index + 1}/Colored/${escapeHTML(topic.file)}.txt">Open ${topic.pencil ? 'pencil' : 'colored'} file</a>${topic.pencil ? ' · Color coding pending' : ''}</p>
         <div class="pages">${[0, 1].map(page => `<article aria-label="${escapeHTML(topic.label)} page ${page + 1}">
           <h4 class="page-title">${escapeHTML(topic.heading)}</h4>
           <p class="caption">Page ${page + 1} · Lines ${page * 24 + 1}–${page * 24 + 24}</p>
@@ -317,6 +326,6 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
         copyFileSync(resolve(root, 'notes', 'algebra-2', folder, `${lesson.file}.txt`), resolve(target, 'notes', 'algebra-2', folder, `${lesson.file}.txt`));
       }));
     }
-    console.log(`Built ${target}: Home, World History (38 pages), AP Lang (4 pages), Algebra 2 (26 pages), restored Out of My Mind analysis, and the Of Mice and Men companion; offline downloads and previews preserved.`);
+    console.log(`Built ${target}: Home, World History (40 pages), AP Lang (4 pages), Algebra 2 (26 pages), restored Out of My Mind analysis, and the Of Mice and Men companion; offline downloads and previews preserved.`);
   });
 }

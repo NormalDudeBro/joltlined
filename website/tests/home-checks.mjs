@@ -18,7 +18,7 @@ assert.equal(home, renderHome(), 'Home exactly matches renderHome()');
 assert.match(home, /<title>Joltlined \| Notes &amp; Literary Analysis<\/title>/);
 assert.match(home, /<meta name="description" content="[^"]*Algebra 2: Functions and Linear Systems[^"]*">/, 'Home description names the expanded Algebra 2 collection');
 assert.match(home, /MODULES 1B &amp; 2A &middot; 13 LESSONS &middot; 26 PAGES/, 'Home advertises the 13-lesson, 26-page Algebra collection');
-assert.match(home, /UNITS 1&ndash;3 &middot; 19 STUDY SHEETS &middot; 38 PAGES/, 'Home advertises the 19-sheet, 38-page World collection');
+assert.match(home, /UNITS 1&ndash;3 &middot; 20 STUDY SHEETS &middot; 40 PAGES/, 'Home advertises the 20-sheet, 40-page World collection');
 assert.match(home, /<main\b[^>]*\bid="collection"/);
 const main = home.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1];
 assert.ok(main, 'Home has a main landmark');

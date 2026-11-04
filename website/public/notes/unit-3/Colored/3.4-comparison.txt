@@ -23,15 +23,15 @@
 (pen)-> Qing kept exams to enlist Chinese (li)elite cooperation(pen).
 (pen)-> Ottoman converts' dependence aimed to bind them to sultans.
 (pen)o Overview
-(pen)-> (br)Revenue and local elites(pen)
+(pen)-> (or)Revenue and local elites(pen)
 (pen)-> (pu)Religion and monumental authority(pen)
 (pen)-> (p)Governing imperial diversity(pen)
-(pen)o (br)Revenue and local elites(pen)
-(pen)-> Ottoman (br)tax farmers(pen) and Mughal zamindars collected revenue.
+(pen)o (or)Revenue and local elites(pen)
+(pen)-> Ottoman (or)tax farmers(pen) and Mughal zamindars collected revenue.
 (pen)-> Both linked imperial demands to local rural communities.
-(pen)-> Tax farmers bought rights; (br)zamindars(pen) held local land claims.
-(pen)-> Both funded armies, but (br)local collectors(pen) retained leverage.
-(pen)-> Distance made both courts depend on (br)intermediaries(pen).
+(pen)-> Tax farmers bought rights; (or)zamindars(pen) held local land claims.
+(pen)-> Both funded armies, but (or)local collectors(pen) retained leverage.
+(pen)-> Distance made both courts depend on (or)intermediaries(pen).
 (pen)o (pu)Religion and monumental authority(pen)
 (pen)-> Louis XIV claimed (pu)divine right(pen); Qing used Heaven's mandate.
 (pen)-> Both justified kingship through a (pu)sacred(pen) political order.

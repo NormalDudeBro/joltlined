@@ -27,13 +27,13 @@ test('native unit navigation, fragments, history and keyboard', async ({ page })
   await expect(page).toHaveURL(/#unit-3$/);
   await page.reload();
   await expect(page.locator('#unit-3')).toBeVisible();
-  await expect(page.locator('.topic')).toHaveCount(19);
+  await expect(page.locator('.topic')).toHaveCount(20);
   for (const [index, topic] of loadNotes()[2].topics.entries()) {
     await page.locator(`.contents a[href="#topic-${topic.file.replaceAll('.', '-')}"]`).click();
     await expect(page).toHaveURL(new RegExp(`#topic-${topic.file.replaceAll('.', '-')}$`));
     const section = page.locator(`#topic-${topic.file.replaceAll('.', '-')}`);
     await expect(section.locator('.topic-title')).toHaveText(topic.heading);
-    if (topic.file === '3-supplement') await expect(section.locator('.topic-title')).not.toContainText('3.5');
+    if (index >= 4) await expect(section.locator('.topic-title')).not.toContainText(/3\.[56]/);
     await expect(section.locator('.note')).toHaveText(topic.original.replace(/\r\n/g, '\n').replace(/\n$/, '').split('\n'));
     await expect(section.locator('.pages article')).toHaveCount(2);
     await expect(section.locator('.pages article .note')).toHaveCount(48);
@@ -45,7 +45,14 @@ test('native unit navigation, fragments, history and keyboard', async ({ page })
   const supplementSection = page.locator('#topic-3-supplement');
   await expect(page.locator('.contents a[href="#topic-3-supplement"]')).toHaveText(supplement.heading);
   await expect(supplementSection.locator('.note')).toHaveText(supplement.original.trimEnd().split('\n'));
+  await expect(supplementSection.locator('.note .ink')).not.toHaveCount(0);
   await expect(supplementSection.locator('.pages article').nth(1).locator('.note').first()).toHaveText('o Overview');
+  const secondSupplement = loadNotes()[2].topics[5];
+  const secondSection = page.locator('#topic-3-supplement-2');
+  await expect(page.locator('.contents a[href="#topic-3-supplement-2"]')).toHaveText(secondSupplement.heading);
+  await expect(secondSection.locator('.topic-title')).toHaveText('Unit 3 Supplement 2: Beliefs, Legitimacy, and Comparison');
+  await expect(secondSection.locator('.note')).toHaveText(secondSupplement.original.trimEnd().split('\n'));
+  await expect(secondSection.locator('.note .ink')).not.toHaveCount(0);
 });
 
 for (const width of [375, 1280]) {
@@ -54,8 +61,8 @@ for (const width of [375, 1280]) {
     page.on('request', request => requests.push(request.url()));
     await page.setViewportSize({ width, height: 812 });
     await page.goto('/ap-world.html');
-    await expect(page.locator('article')).toHaveCount(38);
-    await expect(page.locator('.note')).toHaveCount(912);
+    await expect(page.locator('article')).toHaveCount(40);
+    await expect(page.locator('.note')).toHaveCount(960);
     expect(requests).toEqual(['http://127.0.0.1:4173/ap-world.html', 'http://127.0.0.1:4173/styles/site.css']);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
     await expect(page.locator('.topic-title').first()).toHaveCSS('color', 'rgb(89, 184, 231)');
@@ -65,8 +72,11 @@ for (const width of [375, 1280]) {
     const topics = loadNotes().flatMap(unit => unit.topics);
     const supplement = topics.find(topic => topic.file === '3-supplement');
     const supplementGroup = page.locator('#topic-3-supplement');
-    await expect(supplementGroup.locator('.topic-title')).toHaveText('Unit 3 Supplement: Millet, Jizya, and Key Connections');
+    await expect(supplementGroup.locator('.topic-title')).toHaveText('Unit 3 Supplement 1: Military and Imperial Government');
     expect(await supplementGroup.locator('.note').allTextContents()).toEqual(supplement.original.trimEnd().split('\n'));
+    const secondSupplement = topics.find(topic => topic.file === '3-supplement-2');
+    await expect(page.locator('#topic-3-supplement-2 .topic-title')).toHaveText('Unit 3 Supplement 2: Beliefs, Legitimacy, and Comparison');
+    expect(await page.locator('#topic-3-supplement-2 .note').allTextContents()).toEqual(secondSupplement.original.trimEnd().split('\n'));
     for (const [index, topic] of topics.entries()) {
       const group = page.locator('.topic').nth(index);
       await expect(group).toBeVisible();
@@ -74,11 +84,11 @@ for (const width of [375, 1280]) {
       await expect(group.locator('.downloads a[download]')).toHaveCount(2);
       await expect(group.locator('.downloads a[href^="notes/"]')).toHaveCount(2);
       for (const [n, link] of (await group.locator('.downloads a[download]').all()).entries()) {
-        expect(await link.getAttribute('download')).toBe(`${topic.file}${n && index >= 14 ? '-colored' : ''}.txt`);
+        expect(await link.getAttribute('download')).toBe(`${topic.file}${n && topic.pencil ? '-pencil' : n && index >= 14 ? '-colored' : ''}.txt`);
         expect(Buffer.from((await link.getAttribute('href')).split(',')[1], 'base64').toString('utf8')).toBe(n ? topic.colored : topic.original);
       }
       for (const [n, link] of (await group.locator('.downloads a[href^="notes/"]').all()).entries()) {
-        await expect(link).toHaveText(n ? 'Open colored file' : 'Open original file');
+        await expect(link).toHaveText(n ? `Open ${topic.pencil ? 'pencil' : 'colored'} file` : 'Open original file');
         const href = await link.getAttribute('href');
         expect(href).toBe(`notes/unit-${index < 7 ? 1 : index < 14 ? 2 : 3}/${n ? 'Colored/' : ''}${topic.file}.txt`);
         const response = await request.get(href);
@@ -88,7 +98,7 @@ for (const width of [375, 1280]) {
     }
     if (process.env.PREVIEW_PATH) {
       await page.goto(pathToFileURL(resolve(process.env.PREVIEW_PATH)).href);
-      await expect(page.locator('article')).toHaveCount(38);
+      await expect(page.locator('article')).toHaveCount(40);
       expect(await page.locator('.note').allTextContents()).toEqual(topics.flatMap(topic => topic.original.replace(/\r\n/g, '\n').replace(/\n$/, '').split('\n')));
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
     }
@@ -133,8 +143,8 @@ test('no JavaScript over HTTP and file:// exposes everything and local downloads
   const page = await context.newPage();
   for (const url of ['http://127.0.0.1:4173/ap-world.html', pathToFileURL(resolve(root, 'ap-world.html')).href, ...(process.env.PREVIEW_PATH ? [pathToFileURL(resolve(process.env.PREVIEW_PATH)).href] : [])]) {
     await page.goto(url);
-    await expect(page.locator('.topic')).toHaveCount(19);
-    await expect(page.locator('article')).toHaveCount(38);
+    await expect(page.locator('.topic')).toHaveCount(20);
+    await expect(page.locator('article')).toHaveCount(40);
     for (const topic of loadNotes()[2].topics) await expect(page.locator(`#topic-${topic.file.replaceAll('.', '-')} .pages article`)).toHaveCount(2);
     for (const article of await page.locator('article').all()) {
       await expect(article).toBeVisible();
@@ -146,7 +156,7 @@ test('no JavaScript over HTTP and file:// exposes everything and local downloads
       const group = page.locator('.topic').nth(index);
       await expect(group.locator('.downloads a[href^="notes/"]')).toHaveCount(2);
       for (const [n, link] of (await group.locator('.downloads a[href^="notes/"]').all()).entries()) {
-        await expect(link).toHaveText(n ? 'Open colored file' : 'Open original file');
+        await expect(link).toHaveText(n ? `Open ${topic.pencil ? 'pencil' : 'colored'} file` : 'Open original file');
         const href = await link.getAttribute('href');
         expect(href).toBe(`notes/unit-${index < 7 ? 1 : index < 14 ? 2 : 3}/${n ? 'Colored/' : ''}${topic.file}.txt`);
         const target = new URL(href, url);
@@ -165,7 +175,7 @@ test('no JavaScript over HTTP and file:// exposes everything and local downloads
           await link.click();
           const result = await download;
           expect(await result.failure()).toBeNull();
-          expect(result.suggestedFilename()).toBe(`${topic.file}${n && index >= 14 ? '-colored' : ''}.txt`);
+          expect(result.suggestedFilename()).toBe(`${topic.file}${n && topic.pencil ? '-pencil' : n && index >= 14 ? '-colored' : ''}.txt`);
           expect(readFileSync(await result.path(), 'utf8')).toBe(n ? topic.colored : topic.original);
           // Chromium blocks more than ten downloads per second per frame.
           await page.waitForTimeout(250);
@@ -176,11 +186,11 @@ test('no JavaScript over HTTP and file:// exposes everything and local downloads
   await context.close();
 });
 
-test('notes use only the eight available highlight inks, including print', async ({ page }) => {
+test('notes use only the nine available highlight inks, including print', async ({ page }) => {
   for (const path of ['ap-world.html', 'ap-lang.html', 'algebra-2.html']) {
     await page.goto(`/${path}`);
     await expect(page.locator('.ink.r, .ink.db')).toHaveCount(0);
-    await expect(page.locator('.legend .swatch')).toHaveCount(9);
+    await expect(page.locator('.legend .swatch')).toHaveCount(10);
     for (const media of ['screen', 'print']) {
       await page.emulateMedia({ media });
       await expect(page.locator('html')).toHaveCSS('--y', '#287db3');
@@ -189,10 +199,11 @@ test('notes use only the eight available highlight inks, including print', async
       }
       await expect(page.locator('.swatch.y')).toHaveCSS('background-color', 'rgb(40, 125, 179)');
       await expect(page.locator('.topic-title').first()).toHaveCSS('color', 'rgb(89, 184, 231)');
-      const allowed = ['rgb(22, 132, 56)', 'rgb(121, 201, 0)', 'rgb(136, 58, 194)', 'rgb(146, 85, 47)', 'rgb(40, 125, 179)', 'rgb(237, 142, 180)', 'rgb(89, 184, 231)', 'rgb(236, 34, 140)'];
+      const allowed = ['rgb(22, 132, 56)', 'rgb(121, 201, 0)', 'rgb(136, 58, 194)', 'rgb(146, 85, 47)', 'rgb(230, 126, 34)', 'rgb(40, 125, 179)', 'rgb(237, 142, 180)', 'rgb(89, 184, 231)', 'rgb(236, 34, 140)'];
       const colors = await page.locator('.ink').evaluateAll(elements => [...new Set(elements.map(element => getComputedStyle(element).color))]);
       expect(colors.every(color => allowed.includes(color))).toBe(true);
     }
+    await expect(page.locator('.legend')).toContainText('or orange');
     await expect(page.locator('.legend')).toContainText('y medium blue');
     expect(await page.content()).not.toContain('#ebc600');
   }
@@ -211,7 +222,7 @@ test('accessibility: only the documented approved-palette contrast exception', a
   }
 });
 
-test('print produces exactly 38 physical A4 pages', async ({ page }) => {
+test('print produces exactly 40 physical A4 pages', async ({ page }) => {
   await page.setViewportSize({ width: Math.floor((210 - 24) * 96 / 25.4), height: 1123 });
   for (const url of ['/ap-world.html', ...(process.env.PREVIEW_PATH ? [pathToFileURL(resolve(process.env.PREVIEW_PATH)).href] : [])]) {
     await page.goto(url);
@@ -221,11 +232,11 @@ test('print produces exactly 38 physical A4 pages', async ({ page }) => {
     await expect(page.locator('.wrap')).toHaveCSS('padding-inline-end', '0px');
     await expect(page.locator('.page-title').first()).toBeVisible();
     const pdf = await page.pdf({ preferCSSPageSize: true, printBackground: true });
-    expect((pdf.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(38);
+    expect((pdf.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(40);
     const unit3 = page.locator('#unit-3');
-    await expect(unit3.locator('.topic')).toHaveCount(5);
-    await expect(unit3.locator('article')).toHaveCount(10);
-    await expect(unit3.locator('.note')).toHaveCount(240);
+    await expect(unit3.locator('.topic')).toHaveCount(6);
+    await expect(unit3.locator('article')).toHaveCount(12);
+    await expect(unit3.locator('.note')).toHaveCount(288);
     for (const article of await unit3.locator('article').all()) {
       await expect(article.locator('.note')).toHaveCount(24);
       expect(await article.evaluate(article => {
@@ -240,7 +251,7 @@ test('print produces exactly 38 physical A4 pages', async ({ page }) => {
     }
     await page.locator('#unit-1, #unit-2').evaluateAll(units => units.forEach(unit => unit.remove()));
     const unitPDF = await page.pdf({ preferCSSPageSize: true, printBackground: true });
-    expect((unitPDF.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(10);
+    expect((unitPDF.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(12);
     for (const index of [0, 1, 2, 3]) {
       const topicPDF = await page.pdf({ preferCSSPageSize: true, pageRanges: `${index * 2 + 1}-${index * 2 + 2}` });
       expect((topicPDF.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(2);
@@ -251,5 +262,13 @@ test('print produces exactly 38 physical A4 pages', async ({ page }) => {
     await expect(supplement.locator('article').nth(1).locator('.note').first()).toHaveText('o Overview');
     const supplementPDF = await page.pdf({ preferCSSPageSize: true, pageRanges: '9-10' });
     expect((supplementPDF.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(2);
+    for (const file of ['3-supplement', '3-supplement-2']) {
+      const section = unit3.locator(`#topic-${file}`);
+      await expect(section.locator('.note .ink')).not.toHaveCount(0);
+      await expect(section.locator('.downloads')).toContainText('colored');
+      await expect(section.locator('.downloads')).not.toContainText('Color coding pending');
+    }
+    const secondSupplementPDF = await page.pdf({ preferCSSPageSize: true, pageRanges: '11-12' });
+    expect((secondSupplementPDF.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(2);
   }
 });

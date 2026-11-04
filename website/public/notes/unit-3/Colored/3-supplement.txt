@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)Millet and jizya mechanisms(pen)
-(pen)-> (li)Revenue and elite dependence(pen)
-(pen)-> (p)Sacred authority and legitimacy(pen)
-(pen)o (g)Millet and jizya mechanisms(pen)
-(pen)-> (g)Millets(pen) let non-Muslim leaders manage worship and family law.
-(pen)-> (g)Delegation(pen) reduced the need for direct Ottoman administration.
-(pen)-> Community authority remained subject to (g)Ottoman rule(pen).
-(pen)-> (g)Jizya(pen) was a poll tax on eligible adult non-Muslim men.
-(pen)-> (g)Dhimmi(pen) protection allowed worship, not legal equality.
-(pen)-> (g)Jizya(pen) did not itself grant communal self-government.
-(pen)o (li)Revenue and elite dependence(pen)
-(pen)-> (li)Tax farmers(pen) advanced cash for rights to collect state taxes.
-(pen)-> Ottoman tax farming raised cash but empowered (li)collectors(pen).
-(pen)-> Mughal (li)jagirs(pen) assigned tax income, not ownership of land.
-(pen)-> Many jagirs were (li)transferable(pen), keeping nobles dependent.
-(pen)-> Inca (li)mit(pen)'(li)a(pen) required rotating labor rather than cash payments.
-(pen)-> Ming (li)silver(pen) taxes pushed peasants to sell crops for money.
-(pen)o (p)Sacred authority and legitimacy(pen)
-(pen)-> (p)Divine right(pen) held that monarchs received authority from God.
-(pen)-> This cast (p)obedience(pen) to a king as a religious duty.
-(pen)-> Qing rulers claimed Heaven's (p)mandate(pen), conditional on virtue.
-(pen)-> Inca (p)sun temples(pen) displayed rulers' claimed divine ancestry.
-(pen)-> Askia Muhammad promoted (p)Islam(pen) to legitimize Songhai rule.
+(pen)-> (g)Safavid military centralization(pen)
+(pen)-> (li)Ottoman reach and caliphal claims(pen)
+(pen)-> (hp)Gunpowder and limits on conquest(pen)
+(pen)o (g)Safavid military centralization(pen)
+(pen)-> (g)Abbas I(pen) (1588-1629) expanded Safavid royal forces.
+(pen)-> (g)Qizilbash(pen) chiefs held tribal troops, offices, and local power.
+(pen)-> His (g)ghulams(pen) included enslaved Caucasian converts to Islam.
+(pen)-> Royal pay and offices made (g)ghulams(pen) dependent on the shah.
+(pen)-> They checked tribal chiefs; (g)Qizilbash(pen) cavalry remained in use.
+(pen)-> Abbas redirected more (or)taxes(pen) and silk (or)profits(pen) to royal forces.
+(pen)-> (g)Isfahan(pen), Abbas's capital, displayed power through mosques.
+(pen)o (li)Ottoman reach and caliphal claims(pen)
+(pen)-> (li)Ottomans(pen) conquered Mamluk (li)Egypt(pen) in North Africa in 1517.
+(pen)-> Rule spread through much of (li)North Africa(pen), but not Morocco.
+(pen)-> Sultans claimed to be (li)caliphs(pen): heads of the Muslim community.
+(pen)-> Protecting (li)Mecca(pen) and (li)Medina(pen) strengthened religious prestige.
+(pen)-> (li)Caliphal(pen) claims were contested, not accepted by all Muslims.
+(pen)o (hp)Gunpowder and limits on conquest(pen)
+(pen)-> (hp)Morocco(pen) invaded (hp)Songhai(pen) in 1591 for trade and revenue.
+(pen)-> At (hp)Tondibi(pen), Moroccan (hp)firearms(pen) helped defeat Songhai forces.
+(pen)-> Internal (hp)succession disputes(pen) also weakened Songhai.
+(pen)-> At (hp)Chaldiran(pen) (1514), Ottomans defeated Ismail I's army.
+(pen)-> (hp)Supply problems(pen) soon forced their withdrawal from Tabriz.
 (pen)o Overview
-(pen)-> (hp)Reformation and church authority(pen)
-(pen)-> (br)Sunni and Shi(pen)'(br)a leadership(pen)
-(pen)-> (pu)Accommodation and central control(pen)
-(pen)o (hp)Reformation and church authority(pen)
-(pen)-> (hp)Indulgences(pen) remitted punishment for already-forgiven sins.
-(pen)-> Selling indulgences fueled charges of church (hp)corruption(pen).
-(pen)-> Luther taught (hp)justification(pen): acceptance by God through faith.
-(pen)-> The Council of (hp)Trent(pen) defended doctrine and reformed clergy.
-(pen)-> Some (hp)princes(pen) backed Luther to control churches and revenues.
-(pen)-> Both Protestant and Catholic reforms expanded (hp)Christianity(pen).
-(pen)o (br)Sunni and Shi(pen)'(br)a leadership(pen)
-(pen)-> (br)Sunnis(pen) recognized the first four caliphs as rightly guided.
-(pen)-> (br)Shi(pen)'(br)a(pen) saw Ali and his line as Muhammad's rightful successors.
-(pen)-> (br)Twelver Shi(pen)'(br)a(pen) followed twelve Imams as religious authorities.
-(pen)-> Ottomans backed (br)Sunni(pen) clergy; Safavids backed (br)Shi(pen)'(br)a(pen) clergy.
-(pen)o (pu)Accommodation and central control(pen)
-(pen)-> Mughal Akbar recruited (pu)Rajputs(pen), Hindu warrior elites.
-(pen)-> Their (pu)troops(pen) and (pu)support(pen) eased rule over a Hindu majority.
-(pen)-> Akbar commissioned the (pu)Akbarnama(pen) as an official history.
-(pen)-> (pu)Funding(pen) encouraged authors to portray rulers favorably.
-(pen)-> (pu)Daimyo(pen), Tokugawa lords, paid stipends to samurai warriors.
-(pen)-> Alternate (pu)attendance(pen) rotated daimyo stays at Edo's court.
-(pen)-> Like Versailles, court stays made elites easier to (pu)supervise(pen).
+(pen)-> (or)Revenue and dependent service(pen)
+(pen)-> (pu)Religious communities and taxation(pen)
+(pen)o (or)Revenue and dependent service(pen)
+(pen)-> (or)Tax farmers(pen) prepaid rulers for rights to collect state taxes.
+(pen)-> Mughal (or)jagirs(pen) assigned tax income, not land ownership.
+(pen)-> Emperors reassigned many (or)jagirs(pen), limiting nobles' local power.
+(pen)-> Inca (or)mit(pen)'(or)a(pen) required rotating labor for state projects.
+(pen)-> Ming (or)silver(pen) taxes pushed peasants to sell crops for money.
+(pen)-> French (or)intendants(pen) enforced royal policy in the provinces.
+(pen)-> Appointed officials reduced (or)dependence(pen) on hereditary nobles.
+(pen)-> (or)Boyars(pen), Russian nobles, served tsars for control over serfs.
+(pen)-> (or)Serfs(pen) were peasants bound to estates, owing labor or dues.
+(pen)-> Tokugawa (or)samurai(pen), paid warriors, often became officials.
+(pen)o (pu)Religious communities and taxation(pen)
+(pen)-> (pu)Millet(pen) practices varied among Ottoman religious communities.
+(pen)-> Non-Muslim leaders oversaw (pu)worship(pen), (pu)marriage(pen), and schools.
+(pen)-> (pu)Delegation(pen) reduced direct Ottoman administrative burdens.
+(pen)-> Community authority remained subject to (li)Ottoman(pen) rule.
+(pen)-> Communities could also use imperial (pu)Islamic courts(pen).
+(pen)-> (pu)Jizya(pen) was a poll tax on eligible adult non-Muslim men.
+(pen)-> Women and children were exempt; rates could vary by means.
+(pen)-> (pu)Dhimmi(pen) protection allowed worship, not legal equality.
+(pen)-> (pu)Jizya(pen) did not itself grant communal self-government.

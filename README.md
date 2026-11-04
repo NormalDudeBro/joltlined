@@ -29,12 +29,12 @@
 | Collection | Contents | Print notes |
 | --- | --- | --- |
 | [AP English Language](website/public/ap-lang.html) | Unit 1: rhetorical situation, a writer’s choices, evidence, and audience | 4 pages |
-| [AP World History](website/public/ap-world.html) | Units 1–3: The Global Tapestry, Networks of Exchange, and Land-Based Empires | 38 pages · 18 official topics + 1 supplement |
+| [AP World History](website/public/ap-world.html) | Units 1–3: The Global Tapestry, Networks of Exchange, and Land-Based Empires | 40 pages · 18 official topics + 2 supplements |
 | [Algebra 2](website/public/algebra-2.html) | Modules 1B and 2A: functions, transformations, linear systems, and optimization | 26 pages · 13 lessons |
 | [Out of My Mind](website/public/out-of-my-mind.html) | A reading companion to Sharon M. Draper’s novel | — |
 | [Of Mice and Men](website/public/of-mice-and-men.html) | A reading companion to John Steinbeck’s novella | — |
 
-The collection is designed for independent study: native links and complete HTML documents work over HTTP or directly from files; original and color-marked plaintext sources are available from notes pages; and print layouts are designed for A4. Some approved pastel highlight colors and light-blue headings do not meet WCAG text-contrast requirements. This is a known limitation, not a claim of full WCAG compliance. Pencil-only plaintext downloads offer an alternative for every notes topic or lesson.
+The collection is designed for independent study: native links and complete HTML documents work over HTTP or directly from files; original and marked plaintext sources are available from notes pages; and print layouts are designed for A4. Unit 3's supplements are keyword-colored using the shared nine-ink palette. The 3.4 comparison sheet introduces orange for revenue and local elites; the earlier topic colors are unchanged. Some approved pastel highlight colors and light-blue headings do not meet WCAG text-contrast requirements. This is a known limitation, not a claim of full WCAG compliance. Original pencil-text plaintext downloads offer an alternative for every notes topic or lesson.
 
 ## Getting started
 
@@ -53,6 +53,8 @@ npm run test:e2e -- --workers=1
 ```
 
 The single-worker example keeps local browser memory use modest. `npm test` runs static validation and the browser suite together. See the [development guide](docs/development.md) for the editing workflow and portable previews, and the [technical reference](docs/technical-reference.md) for content, palette, print-layout, and verification details.
+
+The reusable [AP World History master prompt](docs/prompts/ap-world-history.txt) defines full-unit and individual-topic generation, source cross-checking, exact page/line validation, and the current keyword-coloring conventions.
 
 ## Repository map
 

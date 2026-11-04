@@ -7,16 +7,25 @@ const data = loadNotes();
 const html = readFileSync(resolve(root, 'ap-world.html'), 'utf8');
 assert.equal(html, renderSite(data), 'checked-in HTML exactly matches reproducible build');
 assert.equal(data.length, 3);
-assert.equal(data.flatMap(unit => unit.topics).length, 19);
-assert.equal((html.match(/<article /g) ?? []).length, 38);
-assert.equal((html.match(/class="note"/g) ?? []).length, 912);
+assert.equal(data.flatMap(unit => unit.topics).length, 20);
+assert.equal((html.match(/<article /g) ?? []).length, 40);
+assert.equal((html.match(/class="note"/g) ?? []).length, 960);
 assert.equal(data[2].name, 'Land-Based Empires');
 assert.equal(data[2].period, 'c. 1450–1750');
 assert.deepEqual(data[2].topics.slice(0, 4).map(topic => [topic.file, topic.title]), [['3.1-empires-expand', 'Empires Expand'], ['3.2-administration', 'Empires: Administration'], ['3.3-belief-systems', 'Empires: Belief Systems'], ['3.4-comparison', 'Comparison in Land-Based Empires']]);
-assert.deepEqual(data[2].topics[4] && [data[2].topics[4].file, data[2].topics[4].title, data[2].topics[4].label], ['3-supplement', 'Millet, Jizya, and Key Connections', 'Unit 3 Supplement']);
-assert.doesNotMatch(data[2].topics[4].heading, /3\.5/, 'supplement is not presented as official topic 3.5');
-assert.equal(data[2].topics.reduce((sum, topic) => sum + topic.lines.length, 0), 240);
-assert.equal((html.match(/<article /g) ?? []).length - data.slice(0, 2).flatMap(unit => unit.topics).length * 2, 10);
+const comparison = data[2].topics[3];
+assert.match(comparison.colored, /\(pen\)-> \(or\)Revenue and local elites\(pen\)/, '3.4 page-two Overview introduces orange');
+assert.match(comparison.colored, /\(pen\)o \(or\)Revenue and local elites\(pen\)/, '3.4 section header matches orange Overview');
+assert.match(html, /\.ink\.or \{ color: var\(--or\); \}/, 'orange has a generated ink rule');
+assert.deepEqual(data[2].topics.slice(4).map(topic => [topic.file, topic.title, topic.label]), [['3-supplement', 'Military and Imperial Government', 'Unit 3 Supplement 1'], ['3-supplement-2', 'Beliefs, Legitimacy, and Comparison', 'Unit 3 Supplement 2']]);
+data[2].topics.slice(4).forEach(topic => assert.doesNotMatch(topic.heading, /3\.[56]/, 'supplement is not presented as official topic 3.5 or 3.6'));
+data[2].topics.slice(4).forEach(topic => {
+  assert.ok(topic.lines.some(line => renderLine(line).includes('<span')), `${topic.file}: colored rendering includes ink spans`);
+  assert.match(html, new RegExp(`download="${topic.file}-colored\\.txt">Download ${topic.label} colored`));
+  assert.doesNotMatch(html, /Color coding pending/);
+});
+assert.equal(data[2].topics.reduce((sum, topic) => sum + topic.lines.length, 0), 288);
+assert.equal((html.match(/<article /g) ?? []).length - data.slice(0, 2).flatMap(unit => unit.topics).length * 2, 12);
 for (const topic of data[2].topics) assert.ok(html.includes(`id="topic-${topic.file.replaceAll('.', '-')}"`), `${topic.file}: topic anchor`);
 assert.match(html, /href="#unit-3"/);
 assert.match(html, /Unit 3: Land-Based Empires, c\. 1450–1750/);
@@ -28,13 +37,13 @@ links.forEach(link => {
   if (link === 'styles/site.css') return assert.ok(existsSync(resolve(root, link)), 'local stylesheet exists');
   if (['index.html', 'ap-lang.html', 'ap-world.html', 'algebra-2.html', 'out-of-my-mind.html', 'of-mice-and-men.html'].includes(link)) return assert.ok(existsSync(resolve(root, link)));
   if (link.startsWith('#')) return assert.ok(ids.includes(link.slice(1)), `fragment ${link}`);
-  if (link.startsWith('notes/')) return assert.match(link, /^notes\/unit-[123]\/(Colored\/)?(?:[12]\.[1-7]-[a-z-]+|3\.[1-4]-[a-z-]+|3-supplement)\.txt$/);
+  if (link.startsWith('notes/')) return assert.match(link, /^notes\/unit-[123]\/(Colored\/)?(?:[12]\.[1-7]-[a-z-]+|3\.[1-4]-[a-z-]+|3-supplement(?:-2)?)\.txt$/);
   assert.match(link, /^data:text\/plain;charset=utf-8;base64,[A-Za-z0-9+/]+=*$/);
 });
 const downloads = links.filter(link => link.startsWith('data:'));
 const files = links.filter(link => link.startsWith('notes/'));
-assert.equal(downloads.length, 38);
-assert.equal(files.length, 38);
+assert.equal(downloads.length, 40);
+assert.equal(files.length, 40);
 data.flatMap((unit, index) => unit.topics.flatMap(topic => ['', 'Colored'].map(folder => {
   return { href: `notes/unit-${index + 1}/${folder ? `${folder}/` : ''}${topic.file}.txt`, bytes: Buffer.from(folder ? topic.colored : topic.original) };
 }))).forEach((file, index) => {
@@ -46,19 +55,25 @@ data.flatMap((unit, index) => unit.topics.flatMap(topic => ['', 'Colored'].map(f
 assert.deepEqual(html.match(/<link\b[^>]*>/gi) ?? [], ['<link rel="stylesheet" href="styles/site.css">'], 'exactly one local stylesheet link');
 assert.doesNotMatch(html, /<(script|iframe|img|object|embed)\b|\son\w+\s*=|@import|url\s*\(/i, 'no executable or remote resources');
 assert.doesNotMatch(readFileSync(resolve(root, 'styles/site.css'), 'utf8'), /@import|url\s*\(/i, 'shared stylesheet has no remote or additional resources');
-assert.deepEqual(palette, { g: '#168438', li: '#79c900', pu: '#883ac2', br: '#92552f', y: '#287db3', p: '#ed8eb4', lb: '#59b8e7', hp: '#ec228c', pen: '#62615e' });
-assert.equal(Object.keys(palette).filter(token => token !== 'pen').length, 8, 'exactly eight available highlight inks');
+assert.deepEqual(palette, { g: '#168438', li: '#79c900', pu: '#883ac2', br: '#92552f', or: '#e67e22', y: '#287db3', p: '#ed8eb4', lb: '#59b8e7', hp: '#ec228c', pen: '#62615e' });
+assert.equal(Object.keys(palette).filter(token => token !== 'pen').length, 9, 'exactly nine available highlight inks');
 Object.entries(palette).forEach(([token, hex]) => assert.ok(html.includes(`--${token}: ${hex};`)));
 assert.equal(escapeHTML('<script>"&\'</script>'), '&lt;script&gt;&quot;&amp;&#39;&lt;/script&gt;');
 assert.equal(renderLine('(pen)<script>alert("&")</script>'), '&lt;script&gt;alert(&quot;&amp;&quot;)&lt;/script&gt;');
 const first = data[0].topics[0];
+assert.throws(() => validateSheet(first.original, first.colored.replace('(g)', '(db)'), 'legacy-db'), /equality/, 'legacy db stays unsupported');
 assert.throws(() => validateSheet(first.original, first.colored.replace('(pen)', '(oops)'), 'bad'), /equality|markers/);
 assert.throws(() => validateSheet(first.original + '\n', first.colored, 'bad'), /equality/);
 assert.throws(() => validateSheet(first.original, first.colored.replace(/\((g|li|p|hp|pu|br|y)\)/, '(lb)'), 'bad'), /title|matching/);
+const pencilTopic = data[2].topics[4];
+const neutralMarked = pencilTopic.original.split('\n').map(line => line ? `(pen)${line}` : line).join('\n');
+assert.doesNotThrow(() => validateSheet(pencilTopic.original, neutralMarked, pencilTopic.file, true), 'generic pencil-only validation remains available');
+assert.throws(() => validateSheet(pencilTopic.original, neutralMarked.replace('(pen)-> Abbas I', '(pen)-> (g)Abbas(pen) I'), pencilTopic.file, true), /pencil-only/);
+assert.throws(() => validateSheet(pencilTopic.original, neutralMarked, pencilTopic.file), /title|matching/);
 for (const retired of ['r', 'db']) {
   assert.throws(() => validateSheet(first.original, first.colored.replace('(g)', `(${retired})`), 'retired'), /equality/, 'retired inks cannot enter source downloads');
 }
-console.log('PASS: 18 official topics plus one supplement, 38 pages, 912 notes, Unit 3 five sheets including supplement, exact downloads and relative files, fragments, exact reproducibility, CNAME.');
+console.log('PASS: 18 official topics plus two supplements, 40 pages, 960 notes, Unit 3 six sheets including supplements, exact downloads and relative files, fragments, exact reproducibility, CNAME.');
 const lang = loadLangNotes();
 const langHTML = readFileSync(resolve(root, 'ap-lang.html'), 'utf8');
 assert.equal(langHTML, renderSite([], lang), 'AP Lang reproducible build');
