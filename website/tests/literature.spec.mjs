@@ -143,7 +143,7 @@ test(`${analysisPage} renders vocabulary, theme, questions and the handout citat
   });
 }
 
-test('both analysis pages stay complete and navigable with JavaScript disabled', async ({ browser }) => {
+test('all analysis pages stay complete and navigable with JavaScript disabled', async ({ browser }) => {
   test.setTimeout(180_000);
   const context = await browser.newContext({ javaScriptEnabled: false, reducedMotion: 'reduce' });
   const page = await context.newPage();
@@ -169,7 +169,7 @@ test('both analysis pages stay complete and navigable with JavaScript disabled',
   await context.close();
 });
 
-test('both complete literary companions have no automated accessibility violations', async ({ page }) => {
+test('all complete literary companions have no automated accessibility violations', async ({ page }) => {
   for (const analysisPage of analysisPages) {
     await page.goto(`http://127.0.0.1:4173/${analysisPage}`);
     // Reveal the complete document while leaving JavaScript available to the axe scanner.

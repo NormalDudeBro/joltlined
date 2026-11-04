@@ -11,7 +11,8 @@ const subjects = [
   { path: 'ap-world.html', label: 'AP World History Notes', heading: 'AP World History Notes' },
   { path: 'algebra-2.html', label: 'Algebra 2 Notes', heading: 'Algebra 2: Functions and Linear Systems' },
   { path: 'out-of-my-mind.html', label: 'Out Of My Mind Analysis', heading: 'Out of My Mind' },
-  { path: 'of-mice-and-men.html', label: 'Of Mice And Men Analysis', heading: 'Of Mice and Men' }
+  { path: 'of-mice-and-men.html', label: 'Of Mice And Men Analysis', heading: 'Of Mice and Men' },
+  { path: 'fahrenheit-451.html', label: 'Fahrenheit 451 Analysis', heading: 'Fahrenheit 451' }
 ];
 
 for (const width of [375, 1280]) {
@@ -119,7 +120,7 @@ for (const width of [375, 1280]) {
   });
 }
 
-test('Home and all five destinations work over HTTP and file:// without JavaScript', async ({ browser }) => {
+test('Home and all six destinations work over HTTP and file:// without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
   for (const url of [

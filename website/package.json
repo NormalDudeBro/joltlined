@@ -6,7 +6,7 @@
   "description": "Offline-ready static notes for AP World History, AP Lang, and Algebra 2",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "validate": "html-validate public/index.html public/ap-world.html public/ap-lang.html public/algebra-2.html public/out-of-my-mind.html public/of-mice-and-men.html && node tests/static-checks.mjs && node tests/unit3-checks.mjs && node tests/algebra-checks.mjs && node tests/home-checks.mjs && node tests/assets-checks.mjs && node tests/structure-checks.mjs",
+    "validate": "html-validate public/index.html public/ap-world.html public/ap-lang.html public/algebra-2.html public/out-of-my-mind.html public/of-mice-and-men.html public/fahrenheit-451.html && node tests/static-checks.mjs && node tests/unit3-checks.mjs && node tests/algebra-checks.mjs && node tests/home-checks.mjs && node tests/assets-checks.mjs && node tests/structure-checks.mjs",
     "test:e2e": "playwright test",
     "test": "npm run validate && npm run test:e2e"
   },

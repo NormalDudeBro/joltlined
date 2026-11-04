@@ -22,7 +22,7 @@
 
 ---
 
-**Joltlined** brings course notes, worked examples, and literary analysis together in a quiet, paper-inspired study collection. It includes three course-note collections and two reading companions. The pages use local assets and system fonts, work without JavaScript, and can be kept for offline reading or printing.
+**Joltlined** brings course notes, worked examples, and literary analysis together in a quiet, paper-inspired study collection. It includes three course-note collections and three reading companions. The pages use local assets and system fonts, work without JavaScript, and can be kept for offline reading or printing.
 
 ## The collection
 
@@ -33,6 +33,7 @@
 | [Algebra 2](website/public/algebra-2.html) | Modules 1B and 2A: functions, transformations, linear systems, and optimization | 26 pages · 13 lessons |
 | [Out of My Mind](website/public/out-of-my-mind.html) | A reading companion to Sharon M. Draper’s novel | — |
 | [Of Mice and Men](website/public/of-mice-and-men.html) | A reading companion to John Steinbeck’s novella | — |
+| [Fahrenheit 451](website/public/fahrenheit-451.html) | A reading companion to Ray Bradbury’s novel | — |
 
 The collection is designed for independent study: native links and complete HTML documents work over HTTP or directly from files; original and marked plaintext sources are available from notes pages; and print layouts are designed for A4. Unit 3's supplements are keyword-colored using the shared nine-ink palette. The 3.4 comparison sheet introduces orange for revenue and local elites; the earlier topic colors are unchanged. Some approved pastel highlight colors and light-blue headings do not meet WCAG text-contrast requirements. This is a known limitation, not a claim of full WCAG compliance. Original pencil-text plaintext downloads offer an alternative for every notes topic or lesson.
 
@@ -64,7 +65,7 @@ The reusable [AP World History master prompt](docs/prompts/ap-world-history.txt)
 ├── docs/                 The reading room: guides, reference, and artwork
 ├── .github/              Quality checks and deployment workflow
 └── website/              Site and its tooling
-    ├── public/           Six HTML pages, assets/images/, styles/, notes/, CNAME
+    ├── public/           Seven HTML pages, assets/images/, styles/, notes/, CNAME
     ├── scripts/          Page generators and note importers
     ├── tests/            Content, accessibility, and browser checks
     ├── package.json      Package scripts and dependencies
@@ -73,7 +74,7 @@ The reusable [AP World History master prompt](docs/prompts/ap-world-history.txt)
     └── .htmlvalidate.json
 ```
 
-Generated pages are checked in under `website/public/`. Edit note sources and generators, then rebuild; maintain the two literary-analysis pages directly. GitHub Pages is configured to use **GitHub Actions**, publishing only `website/public/` after quality checks pass. The custom domain and public page URLs are unchanged; no application backend or database is required.
+Generated pages are checked in under `website/public/`. Edit note sources and generators, then rebuild; maintain the three literary-analysis pages directly. GitHub Pages is configured to use **GitHub Actions**, publishing only `website/public/` after quality checks pass. The custom domain and public page URLs are unchanged; no application backend or database is required.
 
 These are independent study resources, not official College Board materials or an official answer key. Literary interpretations and practice examples are starting points for your own evidence and reasoning. Check quotations and page references against your edition. See the [technical reference](docs/technical-reference.md) for provenance and verification limits.
 

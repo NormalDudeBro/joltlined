@@ -27,8 +27,8 @@ The **Quality** GitHub Actions workflow runs on pushes to `main` and on pull req
 
 - **Course content:** edit original and corresponding `Colored/` sources in `website/public/notes/`, preserving the marker rules and subject-specific line counts. Then, from `website/`, run `npm run build`.
 - **Generated layout:** edit the appropriate generator in `website/scripts/`, not just its generated HTML output.
-- **Literary companions:** edit `website/public/out-of-my-mind.html` and `website/public/of-mice-and-men.html` directly. They are maintained separately, not regenerated from note sources.
-- **Shared presentation:** edit `website/public/styles/site.css`, and check every subject and both companions.
+- **Literary companions:** edit `website/public/out-of-my-mind.html`, `website/public/of-mice-and-men.html`, and `website/public/fahrenheit-451.html` directly. They are maintained separately, not regenerated from note sources.
+- **Shared presentation:** edit `website/public/styles/site.css`, and check every subject and all three companions.
 
 Commit regenerated pages alongside the source changes. Keep source text files in LF format as defined in `.gitattributes`; embedded downloads must preserve the source bytes.
 

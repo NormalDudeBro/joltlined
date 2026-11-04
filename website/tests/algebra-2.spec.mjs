@@ -81,8 +81,8 @@ for (const width of [375, 1280]) {
     await expect(page).toHaveTitle(title);
     await expect(page.getByRole('heading', { name: title, exact: true, level: 1 })).toBeVisible();
     await expect(page.locator('.subjects [aria-current="page"]')).toHaveText('Algebra 2 Notes');
-    expect(await page.locator('.subjects a').allTextContents()).toEqual(['Home', 'AP Lang Notes', 'AP World History Notes', 'Algebra 2 Notes', 'Out Of My Mind Analysis', 'Of Mice And Men Analysis']);
-    expect(await page.locator('.subjects a').evaluateAll(links => links.map(link => link.getAttribute('href')))).toEqual(['index.html', 'ap-lang.html', 'ap-world.html', 'algebra-2.html', 'out-of-my-mind.html', 'of-mice-and-men.html']);
+    expect(await page.locator('.subjects a').allTextContents()).toEqual(['Home', 'AP Lang Notes', 'AP World History Notes', 'Algebra 2 Notes', 'Out Of My Mind Analysis', 'Of Mice And Men Analysis', 'Fahrenheit 451 Analysis']);
+    expect(await page.locator('.subjects a').evaluateAll(links => links.map(link => link.getAttribute('href')))).toEqual(['index.html', 'ap-lang.html', 'ap-world.html', 'algebra-2.html', 'out-of-my-mind.html', 'of-mice-and-men.html', 'fahrenheit-451.html']);
     const notes = loadAlgebraNotes();
     await expect(page.locator('section.topic')).toHaveCount(13);
     await expect(page.locator('article')).toHaveCount(26);

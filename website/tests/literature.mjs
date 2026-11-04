@@ -1,11 +1,11 @@
-// Shared contract for the two literary companion pages.
+// Shared contract for the three literary companion pages.
 //
-// Both are built from the same Active Reading Pamphlet course resource, so they share one
+// All are built from the same Active Reading Pamphlet course resource, so they share one
 // twelve-section spine and must cite the same seven handout PDFs by exact filename.
 // Prose can be rewritten; these section ids, field coverage and caveats are what the
 // static and browser checks enforce.
 
-export const analysisPages = ['out-of-my-mind.html', 'of-mice-and-men.html'];
+export const analysisPages = ['out-of-my-mind.html', 'of-mice-and-men.html', 'fahrenheit-451.html'];
 
 export const spine = ['home', 'author', 'context', 'characters', 'plot', 'setting', 'pov', 'tone', 'vocab', 'theme', 'questions', 'citations'];
 
