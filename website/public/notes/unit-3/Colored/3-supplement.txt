@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)Millet and jizya distinctions(pen)
-(pen)-> (li)Revenue and service systems(pen)
-(pen)-> (p)Imperial religion and art(pen)
-(pen)o (g)Millet and jizya distinctions(pen)
-(pen)-> Ottoman (g)millet(pen) arrangements recognized religious communities.
-(pen)-> Leaders could oversee (g)marriage(pen), schools, and charity.
+(pen)-> (g)Millet and jizya mechanisms(pen)
+(pen)-> (li)Revenue and elite dependence(pen)
+(pen)-> (p)Sacred authority and legitimacy(pen)
+(pen)o (g)Millet and jizya mechanisms(pen)
+(pen)-> (g)Millets(pen) let non-Muslim leaders manage worship and family law.
+(pen)-> (g)Delegation(pen) reduced the need for direct Ottoman administration.
 (pen)-> Community authority remained subject to (g)Ottoman rule(pen).
-(pen)-> (g)Millet(pen) practices varied; they were not one fixed system.
 (pen)-> (g)Jizya(pen) was a poll tax on eligible adult non-Muslim men.
-(pen)-> Women and children were (g)exempt(pen); rates could vary by means.
-(pen)-> (g)Dhimmi(pen) protection did not mean equal legal status.
+(pen)-> (g)Dhimmi(pen) protection allowed worship, not legal equality.
 (pen)-> (g)Jizya(pen) did not itself grant communal self-government.
-(pen)o (li)Revenue and service systems(pen)
-(pen)-> Ming (li)silver(pen) taxes tied peasants to commercial markets.
-(pen)-> Tokugawa (li)samurai(pen) often became salaried officials.
-(pen)-> Inca (li)mit(pen)'(li)a(pen) required labor; Ottoman tax farming raised (li)cash(pen).
-(pen)-> Inca (li)quipu(pen) recorded labor and goods for state administration.
-(pen)-> Mughal (li)jagirs(pen) granted revenue rights, not ownership of land.
-(pen)o (p)Imperial religion and art(pen)
-(pen)-> Inca rulers claimed descent from (p)Inti(pen), the sun god.
-(pen)-> Cuzco's (p)sun temple(pen) made Inca sacred kingship visible.
-(pen)-> Mexica (p)sacrifice(pen) linked rulers to maintaining cosmic order.
+(pen)o (li)Revenue and elite dependence(pen)
+(pen)-> (li)Tax farmers(pen) advanced cash for rights to collect state taxes.
+(pen)-> Ottoman tax farming raised cash but empowered (li)collectors(pen).
+(pen)-> Mughal (li)jagirs(pen) assigned tax income, not ownership of land.
+(pen)-> Many jagirs were (li)transferable(pen), keeping nobles dependent.
+(pen)-> Inca (li)mit(pen)'(li)a(pen) required rotating labor rather than cash payments.
+(pen)-> Ming (li)silver(pen) taxes pushed peasants to sell crops for money.
+(pen)o (p)Sacred authority and legitimacy(pen)
+(pen)-> (p)Divine right(pen) held that monarchs received authority from God.
+(pen)-> This cast (p)obedience(pen) to a king as a religious duty.
+(pen)-> Qing rulers claimed Heaven's (p)mandate(pen), conditional on virtue.
+(pen)-> Inca (p)sun temples(pen) displayed rulers' claimed divine ancestry.
 (pen)-> Askia Muhammad promoted (p)Islam(pen) to legitimize Songhai rule.
 (pen)o Overview
-(pen)-> (hp)Conquest and its limits(pen)
-(pen)-> (br)Cultural patronage and authority(pen)
-(pen)-> (pu)Belief and comparative rule(pen)
-(pen)o (hp)Conquest and its limits(pen)
-(pen)-> Morocco defeated Songhai at (hp)Tondibi(pen) in 1591.
-(pen)-> Moroccan (hp)firearms(pen) helped defeat Songhai forces.
-(pen)-> (hp)Distance(pen) weakened Moroccan control of the Niger valley.
-(pen)-> Aztec and Inca empires expanded without (hp)gunpowder(pen).
-(pen)-> Weapons aided conquest; (hp)logistics(pen) helped sustain control.
-(pen)o (br)Cultural patronage and authority(pen)
-(pen)-> Mughal Akbar recruited (br)Rajput(pen) allies to reduce resistance.
-(pen)-> (br)Hindu elites(pen) supplied Mughal revenue and military service.
-(pen)-> Mughal and Rajput (br)painters(pen) exchanged artistic techniques.
-(pen)-> Akbar commissioned the (br)Akbarnama(pen) to glorify his reign.
-(pen)-> Court histories praised dynasties; (br)purpose(pen) shaped portrayal.
-(pen)-> Accommodation could secure (br)loyalty(pen) without legal (br)equality(pen).
-(pen)o (pu)Belief and comparative rule(pen)
-(pen)-> Protestant and Catholic reforms both spread (pu)Christianity(pen).
-(pen)-> Qing rulers used (pu)Confucian(pen) rites and Tibetan (pu)Buddhism(pen).
-(pen)-> Multiple (pu)traditions(pen) helped Qing rulers court diverse elites.
-(pen)-> In theory, Heaven's (pu)mandate(pen) depended on moral rule.
-(pen)-> Tokugawa (pu)alternate attendance(pen) tied daimyo to Edo.
-(pen)-> Like Versailles, it made (pu)regional elites(pen) easier to supervise.
+(pen)-> (hp)Reformation and church authority(pen)
+(pen)-> (br)Sunni and Shi(pen)'(br)a leadership(pen)
+(pen)-> (pu)Accommodation and central control(pen)
+(pen)o (hp)Reformation and church authority(pen)
+(pen)-> (hp)Indulgences(pen) remitted punishment for already-forgiven sins.
+(pen)-> Selling indulgences fueled charges of church (hp)corruption(pen).
+(pen)-> Luther taught (hp)justification(pen): acceptance by God through faith.
+(pen)-> The Council of (hp)Trent(pen) defended doctrine and reformed clergy.
+(pen)-> Some (hp)princes(pen) backed Luther to control churches and revenues.
+(pen)-> Both Protestant and Catholic reforms expanded (hp)Christianity(pen).
+(pen)o (br)Sunni and Shi(pen)'(br)a leadership(pen)
+(pen)-> (br)Sunnis(pen) recognized the first four caliphs as rightly guided.
+(pen)-> (br)Shi(pen)'(br)a(pen) saw Ali and his line as Muhammad's rightful successors.
+(pen)-> (br)Twelver Shi(pen)'(br)a(pen) followed twelve Imams as religious authorities.
+(pen)-> Ottomans backed (br)Sunni(pen) clergy; Safavids backed (br)Shi(pen)'(br)a(pen) clergy.
+(pen)o (pu)Accommodation and central control(pen)
+(pen)-> Mughal Akbar recruited (pu)Rajputs(pen), Hindu warrior elites.
+(pen)-> Their (pu)troops(pen) and (pu)support(pen) eased rule over a Hindu majority.
+(pen)-> Akbar commissioned the (pu)Akbarnama(pen) as an official history.
+(pen)-> (pu)Funding(pen) encouraged authors to portray rulers favorably.
+(pen)-> (pu)Daimyo(pen), Tokugawa lords, paid stipends to samurai warriors.
+(pen)-> Alternate (pu)attendance(pen) rotated daimyo stays at Edo's court.
+(pen)-> Like Versailles, court stays made elites easier to (pu)supervise(pen).

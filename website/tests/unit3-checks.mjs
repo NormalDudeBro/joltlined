@@ -72,8 +72,8 @@ assert.equal(validated.flat().length, 240, '240 Unit 3 note lines including supp
 assert.equal(validated.flatMap(lines => [lines.slice(0, 24), lines.slice(24)]).length, 10, 'ten Unit 3 pages including supplement');
 assert.match(sheets[4], /Jizya did not itself grant communal self-government\./, 'do not confuse a tax with communal autonomy');
 assert.match(sheets[4], /Community authority remained subject to Ottoman rule\./, 'limited community governance, not independent sovereignty');
-for (const evidence of ["Inca mit'a", 'Inca quipu', 'Inti', 'Mexica sacrifice', 'Askia Muhammad', 'Akbarnama', 'Rajput', 'Protestant and Catholic reforms']) {
-  assert.ok(sheets[4].includes(evidence), `${evidence}: retain evidence selected by the combined-unit gap audit`);
+for (const evidence of ["Inca mit'a", 'jagirs were transferable', 'Indulgences', 'justification', 'twelve Imams', 'Askia Muhammad', 'Akbarnama', 'Rajputs', 'Protestant and Catholic reforms']) {
+  assert.ok(sheets[4].includes(evidence), `${evidence}: retain definitions and mechanisms selected by the explanatory-content audit`);
 }
 const text = sheets[0];
 assert.throws(() => validateUnit3(text.replace('o Gunpowder and expansion', 'o Overview')));
