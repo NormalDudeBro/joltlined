@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="26 Algebra 2 teaching flashcards, two per topic.">
+  <title>Algebra 2 Teaching Flashcards</title>
+  <link rel="stylesheet" href="styles/site.css">
+  <style>
+    .flash-intro { padding-block: 44px 24px; }
+    .flash-intro h1 { font-size: clamp(34px, 4.5vw, 54px); font-weight: normal; }
+    .flash-intro p { color: var(--muted); line-height: 1.7; }
+    .flash-topics { padding-block: 8px 40px; }
+    .flash-topic { border-top: 1px solid var(--rule); padding-block: 20px; scroll-margin-top: 16px; }
+    .flash-topic h2 { font-size: 24px; font-weight: normal; }
+    .topic-nav { display: flex; flex-wrap: wrap; gap: 8px 18px; font: 12px/1.6 system-ui, sans-serif; }
+    .flash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .flash-card { min-width: 0; border: 1px solid var(--rule); background: #fffefb; padding: 14px; }
+    .flash-card h3 { font-size: 18px; font-weight: normal; margin: 0 0 12px; }
+    .flash-card details { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; direction: ltr; text-align: left; }
+    .flash-card summary { cursor: pointer; white-space: nowrap; font-size: 14px; line-height: 1.6; list-style-position: inside; }
+    .flash-card ol { padding-inline-start: 2.2em; margin: 12px 0 0; font-size: 14px; line-height: 1.7; }
+    .flash-card li { white-space: nowrap; }
+    .flash-card li:first-child { font-weight: bold; }
+    .back { margin-top: 10px; font: 12px/1.6 system-ui, sans-serif; }
+    @media (max-width: 960px) { .flash-grid { grid-template-columns: minmax(0, 1fr); } }
+    @media (max-width: 520px) { .flash-card { padding: 10px; } .flash-card summary, .flash-card ol { font-size: clamp(9px, 2.75vw, 13px); } }
+    @media print {
+      header, footer, .skip, .topic-nav, .back { display: none; }
+      .flash-intro { padding: 0; }
+      .flash-grid { display: block; }
+      .flash-topic { break-inside: auto; padding-block: 5mm; }
+      .flash-card { break-inside: avoid; margin-bottom: 6mm; }
+      .flash-card details { display: block; }
+      .flash-card details::details-content { display: block; content-visibility: visible; }
+      .flash-card details:not([open])::details-content { display: block; content-visibility: visible; }
+      .flash-card summary { list-style: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#cards">Skip to flashcards</a>
+  <div class="wrap">
+    <header>
+      <div class="masthead"><p class="wordmark">Joltlined</p><p class="masthead-note">Notes &amp; literary analysis</p></div>
+      <nav class="subjects" aria-label="Subjects"><a href="index.html">Home</a><a href="ap-lang.html">AP Lang Notes</a><a href="ap-world.html">AP World History Notes</a><a href="algebra-2.html">Algebra 2 Notes</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav>
+      <div class="flash-intro">
+        <p class="eyebrow">Algebra 2 / Modules 1B &amp; 2A</p>
+        <h1>Teaching Flashcards</h1>
+        <p>26 cards · two per topic. Read the Teach prompt aloud, answer, then open the card to check the complete explanation.</p>
+        <p><a href="algebra-2.html">Back to Algebra 2 notes</a></p>
+        <nav class="topic-nav" aria-label="Flashcard topics"><a href="#flash-topic-0">1.5 Linear Functions</a><a href="#flash-topic-1">1.6.1 Piecewise Functions</a><a href="#flash-topic-2">1.6.2 Step Functions</a><a href="#flash-topic-3">1.6.3 Absolute Value</a><a href="#flash-topic-4">1.7.1 Parent Functions</a><a href="#flash-topic-5">1.7.2 Translations</a><a href="#flash-topic-6">1.7.3 Dilations</a><a href="#flash-topic-7">1.7.3 Combined Transformations</a><a href="#flash-topic-8">2.3 Linear Equations</a><a href="#flash-topic-9">2.4 Graphing Systems</a><a href="#flash-topic-10">2.5 Algebraic Systems</a><a href="#flash-topic-11">2.6 Inequality Systems</a><a href="#flash-topic-12">2.7 Linear Programming</a></nav>
+      </div>
+    </header>
+    <main class="flash-topics" id="cards">
+      <section class="flash-topic" id="flash-topic-0" aria-labelledby="flash-topic-0-title">
+        <h2 id="flash-topic-0-title">1.5 Linear Functions</h2>
+        <div class="flash-grid">
+        <article class="flash-card">
+          <h3>01. Explain Slope</h3>
+          <details id="card-01">
+            <summary>Teach: What does slope tell us?</summary>
+            <ol><li>Slope describes a line&#39;s steepness.</li><li>It is change in y over change in x.</li><li>Think: rise divided by run.</li><li>In y = 2x + 3, the slope is 2.</li><li>Move right 1, then move up 2.</li><li>A positive slope rises to the right.</li><li>A negative slope falls to the right.</li><li>A horizontal line has slope zero.</li><li>Try: Describe a slope of -3.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-5-linear">Back to 1.5 notes</a></p>
+        </article>
+        <article class="flash-card">
+          <h3>02. Find the Intercepts</h3>
+          <details id="card-02">
+            <summary>Teach: How do we find intercepts?</summary>
+            <ol><li>Intercepts are axis crossings.</li><li>At the x-axis, y equals zero.</li><li>At the y-axis, x equals zero.</li><li>Example: x + y = 6.</li><li>Set y = 0: x = 6.</li><li>The x-intercept is (6, 0).</li><li>Set x = 0: y = 6.</li><li>The y-intercept is (0, 6).</li><li>Try: Find both for x + y = 4.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-5-linear">Back to 1.5 notes</a></p>
+        </article>
+        </div>
+      </section>
+      <section class="flash-topic" id="flash-topic-1" aria-labelledby="flash-topic-1-title">
+        <h2 id="flash-topic-1-title">1.6.1 Piecewise Functions</h2>
+        <div class="flash-grid">
+        <article class="flash-card">
+          <h3>03. Choose the Right Rule</h3>
+          <details id="card-03">
+            <summary>Teach: How does piecewise work?</summary>
+            <ol><li>Different inputs use different rules.</li><li>Read the input condition first.</li><li>Use f(x) = 2x when x &lt; 0.</li><li>Use f(x) = 3 when x &gt;= 0.</li><li>For x = -2, use the first rule.</li><li>So f(-2) = 2(-2) = -4.</li><li>For x = 1, use the second rule.</li><li>So f(1) = 3, not 2.</li><li>Try: Explain why f(0) = 3.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-6-1-piecewise">Back to 1.6.1 notes</a></p>
+        </article>
+        <article class="flash-card">
+          <h3>04. Open and Closed Dots</h3>
+          <details id="card-04">
+            <summary>Teach: What do endpoint dots mean?</summary>
+            <ol><li>An open dot excludes that point.</li><li>A closed dot includes that point.</li><li>Use an open dot for &lt; or &gt;.</li><li>Use a closed dot for &lt;= or &gt;=.</li><li>Graph each rule only where allowed.</li><li>For y = 2x when x &lt; 0:</li><li>Draw only to the left of x = 0.</li><li>Leave an open dot at (0, 0).</li><li>Try: What changes for x &lt;= 0?</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-6-1-piecewise">Back to 1.6.1 notes</a></p>
+        </article>
+        </div>
+      </section>
+      <section class="flash-topic" id="flash-topic-2" aria-labelledby="flash-topic-2-title">
+        <h2 id="flash-topic-2-title">1.6.2 Step Functions</h2>
+        <div class="flash-grid">
+        <article class="flash-card">
+          <h3>05. Explain a Step Function</h3>
+          <details id="card-05">
+            <summary>Teach: Why does the graph have steps?</summary>
+            <ol><li>Each interval has one fixed output.</li><li>That makes each piece horizontal.</li><li>The output can jump at a boundary.</li><li>Think of fees by parking time.</li><li>One time bracket has one price.</li><li>The next bracket may cost more.</li><li>Check which bracket owns an endpoint.</li><li>Open dots exclude; closed include.</li><li>Try: Describe another step model.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-6-2-step">Back to 1.6.2 notes</a></p>
+        </article>
+        <article class="flash-card">
+          <h3>06. Round Down with Floor</h3>
+          <details id="card-06">
+            <summary>Teach: What does floor(x) mean?</summary>
+            <ol><li>Choose the greatest integer &lt;= x.</li><li>This means round down, not to zero.</li><li>floor(3.8) = 3.</li><li>floor(3) = 3.</li><li>floor(-0.2) = -1, not 0.</li><li>floor(-6.35) = -7, not -6.</li><li>On 2 &lt;= x &lt; 3, floor(x) = 2.</li><li>Include 2; exclude 3 on that step.</li><li>Try: Explain floor(-2.4).</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-6-2-step">Back to 1.6.2 notes</a></p>
+        </article>
+        </div>
+      </section>
+      <section class="flash-topic" id="flash-topic-3" aria-labelledby="flash-topic-3-title">
+        <h2 id="flash-topic-3-title">1.6.3 Absolute Value</h2>
+        <div class="flash-grid">
+        <article class="flash-card">
+          <h3>07. Distance Makes a V</h3>
+          <details id="card-07">
+            <summary>Teach: What is absolute value?</summary>
+            <ol><li>It is distance from zero.</li><li>Distance cannot be negative.</li><li>So |-5| = 5 and |5| = 5.</li><li>The graph of y = |x| is a V.</li><li>Its vertex is (0, 0).</li><li>Opposite inputs give equal outputs.</li><li>The domain is all real numbers.</li><li>The range is y &gt;= 0.</li><li>Try: Why is |-8| not -8?</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-6-3-absolute-value">Back to 1.6.3 notes</a></p>
+        </article>
+        <article class="flash-card">
+          <h3>08. Solve Absolute Value</h3>
+          <details id="card-08">
+            <summary>Teach: Why can there be two answers?</summary>
+            <ol><li>Two numbers can share a distance.</li><li>Example: |x - 1| = 4.</li><li>Write x - 1 = 4 or x - 1 = -4.</li><li>Solve to get x = 5 or x = -3.</li><li>Both are 4 units away from 1.</li><li>Check both in the original equation.</li><li>Isolate the absolute value first.</li><li>|x| = -4 has no real solution.</li><li>Try: Solve |x| = 3 and explain.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-6-3-absolute-value">Back to 1.6.3 notes</a></p>
+        </article>
+        </div>
+      </section>
+      <section class="flash-topic" id="flash-topic-4" aria-labelledby="flash-topic-4-title">
+        <h2 id="flash-topic-4-title">1.7.1 Parent Functions</h2>
+        <div class="flash-grid">
+        <article class="flash-card">
+          <h3>09. Recognize Parent Shapes</h3>
+          <details id="card-09">
+            <summary>Teach: What is a parent function?</summary>
+            <ol><li>It is a family&#39;s basic function.</li><li>Transformations build related graphs.</li><li>y = x is a straight diagonal line.</li><li>y = |x| makes a V shape.</li><li>y = x^2 makes a curved parabola.</li><li>y = 3 makes a horizontal line.</li><li>Shape helps you choose a model.</li><li>Do not confuse a V with a curve.</li><li>Try: Sketch y = |x| and y = x^2.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-7-1-parents">Back to 1.7.1 notes</a></p>
+        </article>
+        <article class="flash-card">
+          <h3>10. Domain Versus Range</h3>
+          <details id="card-10">
+            <summary>Teach: Compare domain and range.</summary>
+            <ol><li>Domain means allowed inputs.</li><li>Range means possible outputs.</li><li>For y = x^2, any real x works.</li><li>But squaring never gives a negative.</li><li>Domain: all real numbers.</li><li>Range: y &gt;= 0.</li><li>For y = 3, any real x still works.</li><li>Its range contains only 3.</li><li>Try: Give the range of y = |x|.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-7-1-parents">Back to 1.7.1 notes</a></p>
+        </article>
+        </div>
+      </section>
+      <section class="flash-topic" id="flash-topic-5" aria-labelledby="flash-topic-5-title">
+        <h2 id="flash-topic-5-title">1.7.2 Translations</h2>
+        <div class="flash-grid">
+        <article class="flash-card">
+          <h3>11. Read Graph Shifts</h3>
+          <details id="card-11">
+            <summary>Teach: How do we read a translation?</summary>
+            <ol><li>A translation moves the whole graph.</li><li>It does not change the shape.</li><li>In g(x) = f(x - h) + k:</li><li>h moves right; k moves up.</li><li>Negative h moves left.</li><li>Negative k moves down.</li><li>Example: y = (x - 3)^2 + 2.</li><li>Shift y = x^2 right 3 and up 2.</li><li>Try: Describe y = (x + 4)^2 - 1.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-7-2-translations">Back to 1.7.2 notes</a></p>
+        </article>
+        <article class="flash-card">
+          <h3>12. Move a Known Point</h3>
+          <details id="card-12">
+            <summary>Teach: How do graph points shift?</summary>
+            <ol><li>Move every point the same distance.</li><li>Example: y = |x - 2| + 3.</li><li>Start with parent y = |x|.</li><li>Move right 2 and up 3.</li><li>The vertex (0, 0) becomes (2, 3).</li><li>The point (1, 1) becomes (3, 4).</li><li>Check: |3 - 2| + 3 = 4.</li><li>The V keeps the same shape.</li><li>Try: Where does (-1, 1) move?</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-7-2-translations">Back to 1.7.2 notes</a></p>
+        </article>
+        </div>
+      </section>
+      <section class="flash-topic" id="flash-topic-6" aria-labelledby="flash-topic-6-title">
+        <h2 id="flash-topic-6-title">1.7.3 Dilations</h2>
+        <div class="flash-grid">
+        <article class="flash-card">
+          <h3>13. Stretch Vertically</h3>
+          <details id="card-13">
+            <summary>Teach: What does a*f(x) change?</summary>
+            <ol><li>It multiplies each output by a.</li><li>The x-coordinate stays the same.</li><li>For y = 3x^2, multiply heights by 3.</li><li>(1, 1) becomes (1, 3).</li><li>This is a vertical stretch by 3.</li><li>For y = (1/2)x^2, halve heights.</li><li>That is a vertical compression.</li><li>A negative a also flips over x-axis.</li><li>Try: Describe y = -2x^2.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-7-3-dilations">Back to 1.7.3 notes</a></p>
+        </article>
+        <article class="flash-card">
+          <h3>14. Scale Horizontally</h3>
+          <details id="card-14">
+            <summary>Teach: What does f(b*x) change?</summary>
+            <ol><li>It divides x-coordinates by b.</li><li>For b = 2, widths are halved.</li><li>This is a horizontal compression.</li><li>For b = 1/2, widths are doubled.</li><li>This is a horizontal stretch.</li><li>In y = |2x|, start from y = |x|.</li><li>(2, 2) becomes (1, 2).</li><li>A negative b also flips over y-axis.</li><li>Try: Describe y = |x/3|.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-7-3-dilations">Back to 1.7.3 notes</a></p>
+        </article>
+        </div>
+      </section>
+      <section class="flash-topic" id="flash-topic-7" aria-labelledby="flash-topic-7-title">
+        <h2 id="flash-topic-7-title">1.7.3 Combined Transformations</h2>
+        <div class="flash-grid">
+        <article class="flash-card">
+          <h3>15. Combine Flip and Shift</h3>
+          <details id="card-15">
+            <summary>Teach: How can changes work together?</summary>
+            <ol><li>Start with y = x^2.</li><li>Example: y = -2(x - 1)^2 + 3.</li><li>Stretch vertically by 2.</li><li>Reflect across the x-axis.</li><li>Then shift right 1 and up 3.</li><li>The new vertex is (1, 3).</li><li>The parabola opens downward.</li><li>Its maximum output is 3.</li><li>Try: Why is 3 a maximum here?</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-7-3-combined">Back to 1.7.3 notes</a></p>
+        </article>
+        <article class="flash-card">
+          <h3>16. Factor the Inside First</h3>
+          <details id="card-16">
+            <summary>Teach: Why factor before shifting?</summary>
+            <ol><li>The raw constant can mislead you.</li><li>Example: g(x) = |2x - 6|.</li><li>Factor: g(x) = |2(x - 3)|.</li><li>The horizontal shift is right 3.</li><li>It is not a shift right 6.</li><li>There is also a width factor of 1/2.</li><li>The vertex occurs when 2x - 6 = 0.</li><li>So the vertex is (3, 0).</li><li>Try: Find the vertex of |2x - 4|.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-1-7-3-combined">Back to 1.7.3 notes</a></p>
+        </article>
+        </div>
+      </section>
+      <section class="flash-topic" id="flash-topic-8" aria-labelledby="flash-topic-8-title">
+        <h2 id="flash-topic-8-title">2.3 Linear Equations</h2>
+        <div class="flash-grid">
+        <article class="flash-card">
+          <h3>17. Read Slope-Intercept Form</h3>
+          <details id="card-17">
+            <summary>Teach: What does y = mx + b tell us?</summary>
+            <ol><li>m is the slope, or rate of change.</li><li>b is the y-intercept&#39;s y-value.</li><li>Example: y = 25x + 40.</li><li>A gym charges $40 to join.</li><li>Each month adds another $25.</li><li>Let x be months and y be dollars.</li><li>At x = 0, the total is $40.</li><li>At x = 2, y = 25(2) + 40 = 90.</li><li>Try: Explain the 25 in words.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-2-3-linear-equations">Back to 2.3 notes</a></p>
+        </article>
+        <article class="flash-card">
+          <h3>18. Write a Line from a Point</h3>
+          <details id="card-18">
+            <summary>Teach: What is point-slope form?</summary>
+            <ol><li>Use y - y1 = m(x - x1).</li><li>You need a slope and one point.</li><li>Example: m = 2 through (1, 3).</li><li>Substitute: y - 3 = 2(x - 1).</li><li>Expand: y - 3 = 2x - 2.</li><li>Add 3: y = 2x + 1.</li><li>Check the point by using x = 1.</li><li>Then y = 2(1) + 1 = 3.</li><li>Try: Write a line, m = 3, at (0, 2).</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-2-3-linear-equations">Back to 2.3 notes</a></p>
+        </article>
+        </div>
+      </section>
+      <section class="flash-topic" id="flash-topic-9" aria-labelledby="flash-topic-9-title">
+        <h2 id="flash-topic-9-title">2.4 Graphing Systems</h2>
+        <div class="flash-grid">
+        <article class="flash-card">
+          <h3>19. Explain an Intersection</h3>
+          <details id="card-19">
+            <summary>Teach: What solves a system?</summary>
+            <ol><li>One point must satisfy both rules.</li><li>Graph both lines on the same axes.</li><li>Their intersection is the solution.</li><li>Example: y = 2x - 1.</li><li>Also graph y = -x + 5.</li><li>They meet at (2, 3).</li><li>First check: 3 = 2(2) - 1.</li><li>Second check: 3 = -2 + 5.</li><li>Try: Why must both checks work?</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-2-4-graphing-systems">Back to 2.4 notes</a></p>
+        </article>
+        <article class="flash-card">
+          <h3>20. Count System Solutions</h3>
+          <details id="card-20">
+            <summary>Teach: Can two lines fail to meet?</summary>
+            <ol><li>Yes: distinct parallel lines do not.</li><li>They give a system with no solution.</li><li>Different slopes give one crossing.</li><li>That means exactly one solution.</li><li>Identical lines share every point.</li><li>They give infinitely many solutions.</li><li>Compare y = 2x + 1 and y = 2x - 3.</li><li>Same slope, different intercepts.</li><li>Try: How many solutions? Explain.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-2-4-graphing-systems">Back to 2.4 notes</a></p>
+        </article>
+        </div>
+      </section>
+      <section class="flash-topic" id="flash-topic-10" aria-labelledby="flash-topic-10-title">
+        <h2 id="flash-topic-10-title">2.5 Algebraic Systems</h2>
+        <div class="flash-grid">
+        <article class="flash-card">
+          <h3>21. Solve by Substitution</h3>
+          <details id="card-21">
+            <summary>Teach: What does substitution do?</summary>
+            <ol><li>Replace a variable with its equal.</li><li>Example: y = 2x and x + y = 6.</li><li>Replace y in the second equation.</li><li>Then x + 2x = 6.</li><li>Combine: 3x = 6, so x = 2.</li><li>Use y = 2x to get y = 4.</li><li>The solution is (2, 4).</li><li>Check: 4 = 2(2) and 2 + 4 = 6.</li><li>Try: Explain why we replaced y.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-2-5-algebraic-systems">Back to 2.5 notes</a></p>
+        </article>
+        <article class="flash-card">
+          <h3>22. Solve by Elimination</h3>
+          <details id="card-22">
+            <summary>Teach: What does elimination do?</summary>
+            <ol><li>It cancels one variable&#39;s terms.</li><li>Example: x + y = 5.</li><li>Second equation: x - y = 1.</li><li>Add the equations: 2x = 6.</li><li>The +y and -y cancel each other.</li><li>So x = 3.</li><li>Use 3 + y = 5 to get y = 2.</li><li>Check: 3 + 2 = 5 and 3 - 2 = 1.</li><li>Try: When would subtraction help?</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-2-5-algebraic-systems">Back to 2.5 notes</a></p>
+        </article>
+        </div>
+      </section>
+      <section class="flash-topic" id="flash-topic-11" aria-labelledby="flash-topic-11-title">
+        <h2 id="flash-topic-11-title">2.6 Inequality Systems</h2>
+        <div class="flash-grid">
+        <article class="flash-card">
+          <h3>23. Draw and Shade a Boundary</h3>
+          <details id="card-23">
+            <summary>Teach: How do we graph y &gt; x + 1?</summary>
+            <ol><li>First draw the boundary y = x + 1.</li><li>Use dashes because &gt; excludes =.</li><li>Shade above: y must be larger.</li><li>For &gt;=, use a solid boundary.</li><li>Test a point away from the line.</li><li>Try (0, 3): 3 &gt; 1 is true.</li><li>So its side must be shaded.</li><li>Flip the sign if dividing by -1.</li><li>Try: Graph y &lt;= x + 1 instead.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-2-6-inequality-systems">Back to 2.6 notes</a></p>
+        </article>
+        <article class="flash-card">
+          <h3>24. Keep Only the Overlap</h3>
+          <details id="card-24">
+            <summary>Teach: What solves two inequalities?</summary>
+            <ol><li>A point must satisfy both at once.</li><li>Example: y &gt;= x and y &lt;= 4.</li><li>Shade above or on y = x.</li><li>Shade below or on y = 4.</li><li>Keep only the shared region.</li><li>(1, 3) works: 3 &gt;= 1 and 3 &lt;= 4.</li><li>(5, 2) fails because 2 &lt; 5.</li><li>No overlap means no solution.</li><li>Try: Does (2, 4) satisfy both?</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-2-6-inequality-systems">Back to 2.6 notes</a></p>
+        </article>
+        </div>
+      </section>
+      <section class="flash-topic" id="flash-topic-12" aria-labelledby="flash-topic-12-title">
+        <h2 id="flash-topic-12-title">2.7 Linear Programming</h2>
+        <div class="flash-grid">
+        <article class="flash-card">
+          <h3>25. Goal Versus Limits</h3>
+          <details id="card-25">
+            <summary>Teach: What is linear programming?</summary>
+            <ol><li>It finds a best value within limits.</li><li>The objective states your goal.</li><li>Constraints state the limits.</li><li>Example goal: maximize P = 3x + 2y.</li><li>Require x &gt;= 0 and y &gt;= 0.</li><li>Also require x + y &lt;= 8.</li><li>The feasible region meets all limits.</li><li>Maximize means find the largest P.</li><li>Try: What does minimize mean?</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-2-7-linear-programming">Back to 2.7 notes</a></p>
+        </article>
+        <article class="flash-card">
+          <h3>26. Test the Corners</h3>
+          <details id="card-26">
+            <summary>Teach: How can corners find the best?</summary>
+            <ol><li>Use a closed, bounded polygon.</li><li>For a linear goal, test each vertex.</li><li>Example: x &gt;= 0, y &gt;= 0, x + y &lt;= 4.</li><li>Vertices: (0, 0), (4, 0), (0, 4).</li><li>Maximize P = 3x + 2y.</li><li>The values are 0, 12, and 8.</li><li>The maximum is 12 at (4, 0).</li><li>Check that point meets every limit.</li><li>Try: Find the minimum P here.</li></ol>
+          </details>
+          <p class="back"><a href="algebra-2.html#topic-2-7-linear-programming">Back to 2.7 notes</a></p>
+        </article>
+        </div>
+      </section>
+    </main>
+    <footer><a href="algebra-2.html">Back to Algebra 2 notes</a></footer>
+  </div>
+</body>
+</html>
