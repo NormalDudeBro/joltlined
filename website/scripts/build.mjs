@@ -4,6 +4,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { parseArgs } from 'node:util';
 import { renderHome } from './home.mjs';
+import { renderFlashcards } from './flashcards.mjs';
 
 export const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
 export const palette = { g: '#168438', li: '#79c900', pu: '#883ac2', br: '#92552f', or: '#e67e22', y: '#287db3', p: '#ed8eb4', lb: '#59b8e7', hp: '#ec228c', pen: '#62615e' };
@@ -247,6 +248,7 @@ export function renderSite(data, lang, algebra) {
     <p>Packet-guided rules, worked examples, and checks. Unreadable source graphs are not reconstructed; added examples are labeled.</p>
     <p>The new Module 2A notes are original study summaries based on the McGraw Hill Module 2A (2.3–2.7) classroom slides, PDF pp. 1–182; examples are practice, not an official answer key.</p>
     <p>Notation: R means real numbers; inf means infinity; ^ denotes a power; floor(x) is the greatest integer at most x. Math symbols remain pencil.</p>
+    <p class="flashcard-link"><a href="algebra-2-flashcards.html">Study the Algebra 2 teaching flashcards →</a></p>
     <ol class="contents">${algebra.map(lesson => `<li><a href="#topic-${escapeHTML(lesson.file.replaceAll('.', '-'))}">${escapeHTML(lesson.label)} ${escapeHTML(lesson.title)}</a></li>`).join('')}</ol>` : lang ? `<p>Unit 1 · Building commentary connections · ${lang.sections.length} color-coded sections · 4 pages · 24 lines per page</p>
     <p>Describe the choice, explain its function, trace a possible audience effect, and justify its contribution to the author's purpose.</p>
     <p>Food-labeling examples are paraphrases or clearly marked hypothetical examples, not direct quotations or guaranteed audience responses. Each note line is at most 65 characters.</p>
@@ -311,6 +313,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
     writeFileSync(resolve(target, 'ap-world.html'), html);
     writeFileSync(resolve(target, 'ap-lang.html'), renderSite([], lang));
     writeFileSync(resolve(target, 'algebra-2.html'), renderSite([], undefined, algebra));
+    writeFileSync(resolve(target, 'algebra-2-flashcards.html'), renderFlashcards(escapeHTML, loadAlgebraNotes));
     if (target !== root) {
       mkdirSync(resolve(target, 'styles'), { recursive: true });
       copyFileSync(resolve(root, 'styles', 'site.css'), resolve(target, 'styles', 'site.css'));
