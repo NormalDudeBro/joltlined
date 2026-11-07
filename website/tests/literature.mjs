@@ -9,6 +9,8 @@ export const analysisPages = ['out-of-my-mind.html', 'of-mice-and-men.html', 'fa
 
 export const spine = ['home', 'author', 'context', 'characters', 'plot', 'setting', 'pov', 'tone', 'vocab', 'theme', 'questions', 'citations'];
 
+export const sectionHeadings = ['About This Book', 'Author Information', 'Contextual Information', 'Characters', 'Plot', 'Setting', 'Point of View', 'Tone', 'Close Reading Vocabulary', 'Theme & Big Ideas', 'Questions', 'Works Cited'];
+
 // Exact filenames of the seven supplied handouts, as they appear in the Works Cited entries.
 export const handouts = [
   'Active Reading Pamphlet.pdf',
@@ -110,8 +112,8 @@ function sliceDiv(body, start) {
 
 // The section ids the inline progressive-enhancement script is allowed to activate.
 export function scriptedPages(html) {
-  const declared = html.match(/pageIds\s*=\s*new Set\(\[([^\]]*)\]/)?.[1] ?? '';
-  return [...declared.matchAll(/'([^']+)'/g)].map(match => match[1]);
+  const declared = html.match(/pageIds\s*=\s*new Set\(\s*\[([^\]]*)\]/)?.[1] ?? '';
+  return [...declared.matchAll(/["']([^"']+)["']/g)].map(match => match[1]);
 }
 
 // The largest of the list/definition shapes a section uses, so vocabulary entries can be

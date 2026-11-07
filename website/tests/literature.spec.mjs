@@ -2,12 +2,47 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { analysisPages, handouts, pamphletFields, qualities, spine } from './literature.mjs';
+import { analysisPages, handouts, pamphletFields, qualities, sectionHeadings, spine } from './literature.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
 const offline = target => pathToFileURL(resolve(root, target)).href;
 
 for (const analysisPage of analysisPages) {
+  test(`${analysisPage} uses the shared book-page structure and responsive cover layout`, async ({ page }) => {
+    await page.goto(`/${analysisPage}`);
+    await expect(page.locator('main > .page h2')).toHaveText(sectionHeadings);
+    await expect(page.locator('#home > .hero > .hero-content > h1')).toHaveCount(1);
+    expect(await page.locator('#home > .hero > .hero-content').evaluate(element => [...element.children].map(child => child.tagName))).toEqual(['H1', 'P', 'IMG', 'P', 'A']);
+    await expect(page.locator('#home > .content-card')).toHaveCount(1);
+    await expect(page.locator('main > .last-updated')).toHaveCount(1);
+    await expect(page.locator('footer > p')).toHaveCount(2);
+    for (const id of spine.slice(1)) {
+      await expect(page.locator(`#${id} > ${id === 'citations' ? '.works-cited' : '.content-card'}`)).toHaveCount(1);
+    }
+    await expect(page.locator('#home h3').filter({ hasText: /^How to Use This Page With Your Pamphlet$/ })).toHaveCount(1);
+    await expect(page.locator('#vocab > .content-card > .definition-list').first().locator('dt')).not.toHaveCount(0);
+    await expect(page.locator('#vocab h3').first()).toHaveText('Novel Vocabulary');
+    await expect(page.locator('#theme h3').first()).toHaveText('Big Ideas to Consider');
+    await expect(page.locator('#theme h3').filter({ hasText: /^Finished Theme Statement$/ })).toHaveCount(1);
+    const cover = page.locator('.hero-content > .book-cover');
+    await expect.poll(() => cover.evaluate(image => image.complete && image.naturalWidth > 0)).toBe(true);
+    expect(await cover.evaluate(image => [Number(image.getAttribute('width')), Number(image.getAttribute('height'))])).toEqual(await cover.evaluate(image => [image.naturalWidth, image.naturalHeight]));
+    for (const width of [375, 760, 1280]) {
+      await page.setViewportSize({ width, height: 900 });
+      for (const direction of ['ltr', 'rtl']) {
+        await page.locator('html').evaluate((element, direction) => element.dir = direction, direction);
+        await expect(cover).toBeVisible();
+        expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+        expect(await cover.evaluate(image => Math.abs(image.getBoundingClientRect().width / image.getBoundingClientRect().height - image.naturalWidth / image.naturalHeight))).toBeLessThan(0.01);
+        if (width > 760) {
+          const title = await page.locator('.hero h1').boundingBox();
+          const image = await cover.boundingBox();
+          expect(direction === 'ltr' ? image.x >= title.x + title.width : image.x + image.width <= title.x).toBe(true);
+        }
+      }
+    }
+  });
+
   test(`${analysisPage} deep links, section navigation and pamphlet map work at 375px and 1280px`, async ({ page }) => {
     test.setTimeout(120_000);
     await page.emulateMedia({ reducedMotion: 'reduce' });

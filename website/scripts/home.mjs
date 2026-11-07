@@ -92,12 +92,14 @@ export function renderHome() {
             <div class="reading-action"><span>Read the analysis</span><span class="arrow" aria-hidden="true">&rarr;</span></div>
           </a>
           <a class="reading-link" href="of-mice-and-men.html" aria-labelledby="mice-title">
+            <img class="book-image" src="assets/images/of-mice-and-men-cover.jpg" width="304" height="500" alt="Cover of Of Mice and Men by John Steinbeck.">
             <p class="reading-meta">John Steinbeck &middot; An active reading companion</p>
             <h3 class="reading-title" id="mice-title">Of Mice And Men Analysis</h3>
             <p class="reading-description">Follow George and Lennie through author, context, characters, setting, narration, attitude, theme, and every field of the Active Reading Pamphlet.</p>
             <div class="reading-action"><span>Read the analysis</span><span class="arrow" aria-hidden="true">&rarr;</span></div>
           </a>
           <a class="reading-link" href="fahrenheit-451.html" aria-labelledby="fahrenheit-title">
+            <img class="book-image" src="assets/images/fahrenheit-451-cover.jpg" width="224" height="342" alt="Cover of Fahrenheit 451 by Ray Bradbury.">
             <p class="reading-meta">Ray Bradbury &middot; An active reading companion</p>
             <h3 class="reading-title" id="fahrenheit-title">Fahrenheit 451 Analysis</h3>
             <p class="reading-description">Explore Montag’s journey through the novel’s characters, setting, narration, themes, and questions.</p>

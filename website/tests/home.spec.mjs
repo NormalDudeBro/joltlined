@@ -25,6 +25,12 @@ for (const width of [375, 1280]) {
     await expect(page.locator('main h1')).toHaveText(subjects[0].heading);
     await expect(page.locator('.subjects a')).toHaveText(subjects.map(subject => subject.label));
     await expect(page.locator('.subjects [aria-current="page"]')).toHaveText('Home');
+    await expect(page.locator('.reading-link .book-image')).toHaveCount(3);
+    for (const subject of subjects.slice(4)) {
+      const cover = page.locator(`main a[href="${subject.path}"] .book-image`);
+      await expect(cover).toBeVisible();
+      await expect(cover).toHaveAttribute('alt', new RegExp(subject.heading));
+    }
     for (const subject of subjects.slice(1)) {
       const link = page.locator(`main a[href="${subject.path}"]`);
       await expect(link).toHaveCount(1);
@@ -35,6 +41,12 @@ for (const width of [375, 1280]) {
       await page.locator(`main a[href="${subject.path}"]`).click();
       expect(new URL(page.url()).pathname).toBe(`/${subject.path}`);
       await expect(page.getByRole('heading', { name: subject.heading, level: 1, exact: true })).toBeVisible();
+      if (subjects.indexOf(subject) >= 4) {
+        const cover = page.locator('.hero-content .book-cover');
+        await expect(cover).toBeVisible();
+        await expect(cover).toHaveAttribute('alt', new RegExp(subject.heading));
+        await expect.poll(() => cover.evaluate(image => image.complete && image.naturalWidth > 0)).toBe(true);
+      }
       await expect(page.locator('.subjects [aria-current="page"]')).toHaveCount(1);
       await expect(page.locator('.subjects [aria-current="page"]')).toHaveText(subject.label);
       await page.locator('.subjects').getByRole('link', { name: 'Home', exact: true }).click();
