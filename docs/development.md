@@ -16,7 +16,7 @@ npm run test:e2e -- --workers=1
 
 | Command | Purpose |
 | --- | --- |
-| `npm run build` | Validate note sources and regenerate Home and the three subject pages |
+| `npm run build` | Validate note sources and regenerate Home, subject pages, flashcards, and the FBLA reference page |
 | `npm run validate` | Run HTML validation (`public/*.html`) and static/content checks without launching a browser |
 | `npm run test:e2e -- --workers=1` | Run the Playwright suite with one browser worker |
 | `npm test` | Run static validation, then the browser suite |
@@ -28,6 +28,7 @@ The **Quality** GitHub Actions workflow runs on pushes to `main` and on pull req
 - **Course content:** edit original and corresponding `Colored/` sources in `website/public/notes/`, preserving the marker rules and subject-specific line counts. Then, from `website/`, run `npm run build`.
 - **Generated layout:** edit the appropriate generator in `website/scripts/`, not just its generated HTML output.
 - **Literary companions:** edit `website/public/out-of-my-mind.html`, `website/public/of-mice-and-men.html`, and `website/public/fahrenheit-451.html` directly. They are maintained separately, not regenerated from note sources.
+- **FBLA reference:** edit `website/scripts/fbla.mjs` and `website/public/notes/fbla/ipv4-subnetting.txt`; see the [FBLA content and scope guide](fbla.md). This flowing reference page is intentionally not subject to the AP fixed-line/colored-sheet rules.
 - **Shared presentation:** edit `website/public/styles/site.css`, and check every subject and all three companions.
 
 Commit regenerated pages alongside the source changes. Keep source text files in LF format as defined in `.gitattributes`; embedded downloads must preserve the source bytes.
@@ -42,7 +43,7 @@ node scripts/build.mjs --preview "./preview/preview.html"
 
 This rebuilds the pages in `public/` and exports an offline copy into the ignored `website/preview/` directory. Open `preview/index.html` for Home. The custom `preview/preview.html` filename opens World notes.
 
-The export includes the sibling subject and literature pages, local images in `assets/images/`, stylesheet, and note sources. Copy the entire export directory, not just a single HTML file. Exports are snapshots: rebuild them after editing sources.
+The export includes the sibling subject and literature pages, the FBLA reference and plaintext pilot, local images in `assets/images/`, stylesheet, and note sources. Copy the entire export directory, not just a single HTML file. Exports are snapshots: rebuild them after editing sources.
 
 To include an exported preview in browser checks, set `PREVIEW_PATH` to its HTML path in your shell before running the suite.
 

@@ -1,0 +1,30 @@
+import { expect, test } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+
+test('FBLA pilot supports keyboard retrieval, offline loading, and a narrow mobile viewport', async ({ page, browser }) => {
+  await page.setViewportSize({ width: 375, height: 812 });
+  await page.goto('/fbla.html');
+  await expect(page.getByRole('heading', { name: 'FBLA Study Plan' })).toBeVisible();
+  await page.keyboard.press('Tab');
+  await expect(page.getByRole('link', { name: 'Skip to FBLA study plan' })).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(page.getByRole('link', { name: 'Home' })).toBeFocused();
+  const question = page.getByText('For 198.51.100.139/27', { exact: false });
+  await expect(question).toBeVisible();
+  const answers = page.locator('#pilot-answer-key');
+  await expect(answers).not.toHaveAttribute('open', '');
+  await expect(answers.locator('h3')).not.toBeVisible();
+  await answers.locator('summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(answers.locator('h3')).toBeVisible();
+  await page.keyboard.press('Enter');
+  await expect(answers.locator('h3')).not.toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(375);
+  const accessibility = await new AxeBuilder({ page }).analyze();
+  expect(accessibility.violations).toEqual([]);
+  const offline = await browser.newPage();
+  await offline.goto(`file://${process.cwd().replaceAll('\\', '/')}/public/fbla.html`);
+  await expect(offline.getByRole('heading', { name: 'FBLA Study Plan' })).toBeVisible();
+  await expect(offline.getByRole('link', { name: 'Download printable plain-text note' })).toHaveAttribute('href', /notes\/fbla\/ipv4-subnetting\.txt/);
+  await offline.close();
+});

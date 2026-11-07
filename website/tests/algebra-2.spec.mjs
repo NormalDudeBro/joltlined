@@ -81,8 +81,8 @@ for (const width of [375, 1280]) {
     await expect(page).toHaveTitle(title);
     await expect(page.getByRole('heading', { name: title, exact: true, level: 1 })).toBeVisible();
     await expect(page.locator('.subjects [aria-current="page"]')).toHaveText('Algebra 2 Notes');
-    expect(await page.locator('.subjects a').allTextContents()).toEqual(['Home', 'AP Lang Notes', 'AP World History Notes', 'Algebra 2 Notes', 'Out Of My Mind Analysis', 'Of Mice And Men Analysis', 'Fahrenheit 451 Analysis']);
-    expect(await page.locator('.subjects a').evaluateAll(links => links.map(link => link.getAttribute('href')))).toEqual(['index.html', 'ap-lang.html', 'ap-world.html', 'algebra-2.html', 'out-of-my-mind.html', 'of-mice-and-men.html', 'fahrenheit-451.html']);
+    expect(await page.locator('.subjects a').allTextContents()).toEqual(['Home', 'AP Lang Notes', 'AP World History Notes', 'Algebra 2 Notes', 'FBLA Study Plan', 'Out Of My Mind Analysis', 'Of Mice And Men Analysis', 'Fahrenheit 451 Analysis']);
+    expect(await page.locator('.subjects a').evaluateAll(links => links.map(link => link.getAttribute('href')))).toEqual(['index.html', 'ap-lang.html', 'ap-world.html', 'algebra-2.html', 'fbla.html', 'out-of-my-mind.html', 'of-mice-and-men.html', 'fahrenheit-451.html']);
     const notes = loadAlgebraNotes();
     await expect(page.locator('section.topic')).toHaveCount(13);
     await expect(page.locator('article')).toHaveCount(26);
@@ -129,7 +129,7 @@ for (const width of [375, 1280]) {
   });
 }
 
-test('World, Algebra and Analysis follow AP Lang in keyboard order in LTR/RTL', async ({ page }) => {
+test('World, Algebra, FBLA and Analysis follow AP Lang in keyboard order in LTR/RTL', async ({ page }) => {
   for (const direction of ['ltr', 'rtl']) {
     await page.goto('/ap-lang.html');
     await page.evaluate(direction => document.documentElement.dir = direction, direction);
@@ -143,12 +143,20 @@ test('World, Algebra and Analysis follow AP Lang in keyboard order in LTR/RTL', 
     await page.evaluate(direction => document.documentElement.dir = direction, direction);
     await page.getByRole('link', { name: 'Algebra 2 Notes', exact: true }).focus();
     await page.keyboard.press('Tab');
+    await expect(page.getByRole('link', { name: 'FBLA Study Plan', exact: true })).toBeFocused();
+    await page.keyboard.press('Enter');
+    await expect(page).toHaveURL(/\/fbla.html$/);
+    await page.evaluate(direction => document.documentElement.dir = direction, direction);
+    await page.getByRole('link', { name: 'FBLA Study Plan', exact: true }).focus();
+    await page.keyboard.press('Tab');
     await expect(page.getByRole('link', { name: 'Out Of My Mind Analysis', exact: true })).toBeFocused();
     await page.keyboard.press('Enter');
     await expect(page).toHaveURL(/\/out-of-my-mind.html$/);
     await expect(page.locator('.subjects [aria-current="page"]')).toHaveText('Out Of My Mind Analysis');
     await page.evaluate(direction => document.documentElement.dir = direction, direction);
     await page.getByRole('link', { name: 'Out Of My Mind Analysis', exact: true }).focus();
+    await page.keyboard.press('Shift+Tab');
+    await expect(page.getByRole('link', { name: 'FBLA Study Plan', exact: true })).toBeFocused();
     await page.keyboard.press('Shift+Tab');
     await expect(page.getByRole('link', { name: 'Algebra 2 Notes', exact: true })).toBeFocused();
     await page.keyboard.press('Enter');

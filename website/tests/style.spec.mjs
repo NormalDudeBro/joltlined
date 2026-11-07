@@ -4,7 +4,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
-const pages = ['index.html', 'ap-lang.html', 'ap-world.html', 'algebra-2.html', 'out-of-my-mind.html', 'of-mice-and-men.html', 'fahrenheit-451.html'];
+const pages = ['index.html', 'ap-lang.html', 'ap-world.html', 'algebra-2.html', 'fbla.html', 'out-of-my-mind.html', 'of-mice-and-men.html', 'fahrenheit-451.html'];
 const sectionsPerPage = { 'out-of-my-mind.html': 12, 'of-mice-and-men.html': 12, 'fahrenheit-451.html': 12 };
 
 // Compare the shared shell, not the intentionally different content headings or note inks.
@@ -43,7 +43,7 @@ async function shell(page) {
 }
 
 for (const width of [375, 1280]) {
-  test(`all seven pages share Home's academic shell at ${width}px`, async ({ page }) => {
+  test(`all eight top-level pages share Home's academic shell at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 812 });
     const failures = [];
     const requests = [];

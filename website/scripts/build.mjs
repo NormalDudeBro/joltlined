@@ -5,6 +5,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { parseArgs } from 'node:util';
 import { renderHome } from './home.mjs';
 import { renderFlashcards } from './flashcards.mjs';
+import { renderFbla } from './fbla.mjs';
 
 export const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
 export const palette = { g: '#168438', li: '#79c900', pu: '#883ac2', br: '#92552f', or: '#e67e22', y: '#287db3', p: '#ed8eb4', lb: '#59b8e7', hp: '#ec228c', pen: '#62615e' };
@@ -240,7 +241,7 @@ export function renderSite(data, lang, algebra) {
   <div class="wrap">
   <header>
     <div class="masthead"><p class="wordmark">Joltlined</p><p class="masthead-note">Notes &amp; literary analysis</p></div>
-    <nav class="subjects" aria-label="Subjects"><a href="index.html">Home</a><a href="ap-lang.html"${lang ? ' aria-current="page"' : ''}>AP Lang Notes</a><a href="ap-world.html"${study.length ? '' : ' aria-current="page"'}>AP World History Notes</a><a href="algebra-2.html"${algebra ? ' aria-current="page"' : ''}>Algebra 2 Notes</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav>
+     <nav class="subjects" aria-label="Subjects"><a href="index.html">Home</a><a href="ap-lang.html"${lang ? ' aria-current="page"' : ''}>AP Lang Notes</a><a href="ap-world.html"${study.length ? '' : ' aria-current="page"'}>AP World History Notes</a><a href="algebra-2.html"${algebra ? ' aria-current="page"' : ''}>Algebra 2 Notes</a><a href="fbla.html">FBLA Study Plan</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav>
     <div class="notes-intro">
     <p class="eyebrow">${algebra ? 'Algebra 2 / Modules 1B &amp; 2A' : lang ? 'AP English Language / Unit 1' : 'AP World History / Units 1–3'}</p>
     <h1>${title}</h1>
@@ -314,6 +315,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
     writeFileSync(resolve(target, 'ap-lang.html'), renderSite([], lang));
     writeFileSync(resolve(target, 'algebra-2.html'), renderSite([], undefined, algebra));
     writeFileSync(resolve(target, 'algebra-2-flashcards.html'), renderFlashcards(escapeHTML, loadAlgebraNotes));
+    writeFileSync(resolve(target, 'fbla.html'), renderFbla());
     if (target !== root) {
       mkdirSync(resolve(target, 'styles'), { recursive: true });
       copyFileSync(resolve(root, 'styles', 'site.css'), resolve(target, 'styles', 'site.css'));
@@ -321,15 +323,17 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
       copyFileSync(resolve(root, 'of-mice-and-men.html'), resolve(target, 'of-mice-and-men.html'));
       copyFileSync(resolve(root, 'fahrenheit-451.html'), resolve(target, 'fahrenheit-451.html'));
       mkdirSync(resolve(target, 'assets', 'images'), { recursive: true });
-      ['cover', 'author', 'class', 'talker', 'inclusiveness', 'school', 'home', 'excluded', 'perspective', 'voice', 'meditalker'].forEach(image => copyFileSync(resolve(root, 'assets', 'images', `${image}.jpg`), resolve(target, 'assets', 'images', `${image}.jpg`)));
+      ['cover', 'of-mice-and-men-cover', 'fahrenheit-451-cover', 'author', 'class', 'talker', 'inclusiveness', 'school', 'home', 'excluded', 'perspective', 'voice', 'meditalker'].forEach(image => copyFileSync(resolve(root, 'assets', 'images', `${image}.jpg`), resolve(target, 'assets', 'images', `${image}.jpg`)));
       copyFileSync(resolve(root, 'notes', 'ap-lang.txt'), resolve(target, 'notes', 'ap-lang.txt'));
       mkdirSync(resolve(target, 'notes', 'Colored'), { recursive: true });
       copyFileSync(resolve(root, 'notes', 'Colored', 'ap-lang.txt'), resolve(target, 'notes', 'Colored', 'ap-lang.txt'));
+      mkdirSync(resolve(target, 'notes', 'fbla'), { recursive: true });
+      copyFileSync(resolve(root, 'notes', 'fbla', 'ipv4-subnetting.txt'), resolve(target, 'notes', 'fbla', 'ipv4-subnetting.txt'));
       algebra.forEach(lesson => ['', 'Colored'].forEach(folder => {
         mkdirSync(resolve(target, 'notes', 'algebra-2', folder), { recursive: true });
         copyFileSync(resolve(root, 'notes', 'algebra-2', folder, `${lesson.file}.txt`), resolve(target, 'notes', 'algebra-2', folder, `${lesson.file}.txt`));
       }));
     }
-    console.log(`Built ${target}: Home, World History (40 pages), AP Lang (4 pages), Algebra 2 (26 pages), and three literary companions; offline downloads and previews preserved.`);
+     console.log(`Built ${target}: Home, World History (40 pages), AP Lang (4 pages), Algebra 2 (26 pages), FBLA study plan, and three literary companions; offline downloads and previews preserved.`);
   });
 }

@@ -10,6 +10,7 @@ const subjects = [
   { path: 'ap-lang.html', label: 'AP Lang Notes', heading: 'AP Lang Unit 1: Rhetorical Analysis' },
   { path: 'ap-world.html', label: 'AP World History Notes', heading: 'AP World History Notes' },
   { path: 'algebra-2.html', label: 'Algebra 2 Notes', heading: 'Algebra 2: Functions and Linear Systems' },
+  { path: 'fbla.html', label: 'FBLA Study Plan', heading: 'FBLA Study Plan' },
   { path: 'out-of-my-mind.html', label: 'Out Of My Mind Analysis', heading: 'Out of My Mind' },
   { path: 'of-mice-and-men.html', label: 'Of Mice And Men Analysis', heading: 'Of Mice and Men' },
   { path: 'fahrenheit-451.html', label: 'Fahrenheit 451 Analysis', heading: 'Fahrenheit 451' }
@@ -26,7 +27,7 @@ for (const width of [375, 1280]) {
     await expect(page.locator('.subjects a')).toHaveText(subjects.map(subject => subject.label));
     await expect(page.locator('.subjects [aria-current="page"]')).toHaveText('Home');
     await expect(page.locator('.reading-link .book-image')).toHaveCount(3);
-    for (const subject of subjects.slice(4)) {
+    for (const subject of subjects.slice(5)) {
       const cover = page.locator(`main a[href="${subject.path}"] .book-image`);
       await expect(cover).toBeVisible();
       await expect(cover).toHaveAttribute('alt', new RegExp(subject.heading));
@@ -41,7 +42,7 @@ for (const width of [375, 1280]) {
       await page.locator(`main a[href="${subject.path}"]`).click();
       expect(new URL(page.url()).pathname).toBe(`/${subject.path}`);
       await expect(page.getByRole('heading', { name: subject.heading, level: 1, exact: true })).toBeVisible();
-      if (subjects.indexOf(subject) >= 4) {
+      if (subjects.indexOf(subject) >= 5) {
         const cover = page.locator('.hero-content .book-cover');
         await expect(cover).toBeVisible();
         await expect(cover).toHaveAttribute('alt', new RegExp(subject.heading));
@@ -132,7 +133,7 @@ for (const width of [375, 1280]) {
   });
 }
 
-test('Home and all six destinations work over HTTP and file:// without JavaScript', async ({ browser }) => {
+test('Home and all seven destinations work over HTTP and file:// without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
   for (const url of [

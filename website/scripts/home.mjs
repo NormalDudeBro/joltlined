@@ -56,7 +56,7 @@ export function renderHome() {
   <div class="wrap">
     <header>
       <div class="masthead"><p class="wordmark">Joltlined</p><p class="masthead-note">Notes &amp; literary analysis</p></div>
-      <nav class="subjects" aria-label="Subjects"><a href="index.html" aria-current="page">Home</a><a href="ap-lang.html">AP Lang Notes</a><a href="ap-world.html">AP World History Notes</a><a href="algebra-2.html">Algebra 2 Notes</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav>
+      <nav class="subjects" aria-label="Subjects"><a href="index.html" aria-current="page">Home</a><a href="ap-lang.html">AP Lang Notes</a><a href="ap-world.html">AP World History Notes</a><a href="algebra-2.html">Algebra 2 Notes</a><a href="fbla.html">FBLA Study Plan</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav>
     </header>
     <main id="collection" tabindex="-1">
       <div class="introduction">
@@ -79,6 +79,11 @@ export function renderHome() {
           <a class="note-entry" href="algebra-2.html" aria-labelledby="algebra-title">
             <span class="entry-number" aria-hidden="true">03</span>
             <div><h3 class="entry-title" id="algebra-title">Algebra 2 Notes</h3><p class="entry-description">Work through functions, linear equations, systems, inequalities, and linear programming with clear rules and checked examples.</p><span class="entry-meta">MODULES 1B &amp; 2A &middot; 13 LESSONS &middot; 26 PAGES</span></div>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="note-entry" href="fbla.html" aria-labelledby="fbla-title">
+            <span class="entry-number" aria-hidden="true">04</span>
+            <div><h3 class="entry-title" id="fbla-title">FBLA Study Plan</h3><p class="entry-description">Start a 3–4 month competition plan with honest edition status and an original IPv4 subnetting and VLSM pilot.</p><span class="entry-meta">FOUR EVENTS &middot; FIRST-BATCH PILOT</span></div>
             <span class="arrow" aria-hidden="true">&rarr;</span>
           </a>
         </section>

@@ -1,0 +1,66 @@
+# IPv4 subnetting and VLSM — first pilot
+Purpose: practice the subnetting portions of Networking Infrastructures NI-NB-07 and Network Design ND-NIC-07. These are locally assigned study IDs, not official FBLA identifiers. This is an original note, not an official guide or a complete treatment of either objective.
+
+## Edition and scope
+The accessible Networking Infrastructures and Network Design references are 2025–26 documents, not confirmed current-year requirements. Their study-guide headings establish the objective scope used here. Confirm the applicable edition with your adviser. This pilot covers a topic, not an entire event; existing flashcards still need an objective-by-objective audit.
+
+## IPv4 foundations
+An IPv4 address is 32 bits. A subnet mask marks the network prefix with 1 bits and the host portion with 0 bits. CIDR /n means n leading network bits; the dotted mask is a readable form of those bits. Example: /26 = 255.255.255.192 because the final octet mask is 11000000.
+
+Classful networking divided historical address ranges into fixed Class A/B/C network sizes. Modern routing uses classless CIDR prefixes: the prefix length, not an address's first octet class, defines the network boundary. Do not infer a subnet mask from an address's old class.
+
+For an ordinary subnet, network address has all host bits zero; directed broadcast has all host bits one. Usable host range lies between them. Conventional usable count is 2^(32-prefix)-2, except special cases such as /31 point-to-point links (RFC 3021) and /32 host routes.
+
+## Worked example: /26
+Given 192.0.2.77/26, mask is 255.255.255.192. Block size in final octet = 256 - 192 = 64. Blocks start 0, 64, 128, 192; 77 belongs to block 64. Network 192.0.2.64; broadcast 192.0.2.127; usable hosts 192.0.2.65–192.0.2.126 (62 conventional hosts). Check: bitwise IP address AND mask gives the network address; setting all host bits to one gives the broadcast address.
+
+## Worked VLSM plan
+Allocate from 192.0.2.0/24, largest host requirement first. Need 100, 50, and 20 hosts. A /25 has 126 conventional hosts; assign 192.0.2.0/25 (usable .1–.126, broadcast .127). A /26 has 62; assign 192.0.2.128/26 (usable .129–.190, broadcast .191). A /27 has 30; assign 192.0.2.192/27 (usable .193–.222, broadcast .223). Remainder is 192.0.2.224/27. No ranges overlap; each start aligns to its block size. VLSM uses different prefix lengths within the parent block.
+
+## Special cases and traps
+/31 is valid for a two-endpoint point-to-point link under RFC 3021: both addresses are endpoints, with no separate network/broadcast address convention. Do not apply the ordinary minus-two rule there. /32 denotes one exact IPv4 address, commonly a host route; it is not an ordinary multi-host LAN. Confirm platform and context before applying special cases.
+Common traps: subtracting two for every prefix; choosing blocks in small-to-large order; confusing mask value with block size; forgetting boundary alignment; including network/broadcast as ordinary host assignments; calling CIDR “classful”; allowing VLSM overlaps; and using public-looking real addresses in examples. 192.0.2.0/24 is TEST-NET-1 documentation space (RFC 5737), not a deployable public allocation.
+
+## Retrieval practice — answer before opening answers
+1. For 198.51.100.139/27, find mask, network, broadcast, usable range, and conventional host count.
+2. Why does /26 use a block size of 64 in the final octet?
+3. Allocate requirements 60, 25, and 10 hosts from 203.0.113.0/24 using VLSM; show prefix, range, and broadcast.
+4. Explain why a /31 point-to-point link is not handled by the normal minus-two rule.
+5. What does /32 represent, and why is it not a normal LAN subnet?
+
+## Application questions
+A small office has a lab allocation of 192.0.2.0/24. Segments need 90, 40, 12, and 2 assigned addresses, including any gateway/router interfaces. Propose a largest-first VLSM allocation, state assumptions about the two-address link, and prove there is no overlap or out-of-parent allocation.
+An engineer says 198.51.100.139 historically falls in Class C and therefore must use /24. Correct the reasoning and explain what information actually determines the subnet.
+
+## Answer key
+1. /27 mask 255.255.255.224, block 32. Network 198.51.100.128; broadcast .159; usable .129–.158; 30 hosts.
+2. 256 minus the final-octet mask value 192 equals 64 addresses per subnet.
+3. 60: 203.0.113.0/26 (hosts .1–.62, broadcast .63); 25: .64/27 (hosts .65–.94, broadcast .95); 10: .96/28 (hosts .97–.110, broadcast .111). Remaining .112–.255 is unallocated.
+4. RFC 3021 assigns both /31 addresses to the two link endpoints; no network or directed-broadcast address is reserved for that link convention.
+5. /32 has zero host bits and identifies one address, often used for a route to one host.
+Office: 90 needs /25 at .0–.127; 40 needs /26 at .128–.191; 12 needs /28 at .192–.207; two endpoint addresses can use .208/31 only if a point-to-point link and supporting equipment are intended. Otherwise allocate /30 (.208–.211), leaving .212–.255. All are aligned, disjoint, and within /24.
+Classful reasoning is obsolete for modern subnet selection. The configured/advertised CIDR prefix determines the boundary; 10.4.8.9 alone does not.
+
+## Packet Tracer lab
+1. Represent three LANs sized for 100, 50, and 20 assigned addresses from the worked 192.0.2.0/24 block. Use one PC and switch per LAN; you do not need to place 170 devices. Add a router with three usable Ethernet interfaces, or an equivalent routed-VLAN design. Keep this documentation-only lab disconnected from public networks.
+2. Use .1/25, .129/26, and .193/27 as the router's LAN gateways. Use .2/25, .130/26, and .194/27 on the respective PCs, each with its matching gateway. The required address counts include gateway interfaces.
+3. Verify each PC can ping its local gateway, then ping PCs across LANs. In the router CLI inspect interfaces and routes; use Simulation mode to observe ARP and ICMP.
+4. Deliberately configure one host with a wrong mask, then wrong gateway. Record the distinct symptom, restore settings, and retest. Verify no host uses a network or broadcast address and no subnet overlaps.
+5. Save the .pkt locally. This learning note does not ask you to publish personal progress or lab files.
+
+## Local Anki route — checked prompt mapping
+The prompts below were checked in the accompanying local FBLA package against their answers. They support only the listed subnetting subskills of local study IDs NI-NB-07 and ND-NIC-07; they do not complete either objective. In Anki Browse, use the named event section and locate the exact prompt. The /31 and /32 cards are additions in the pilot package update.
+
+- Networking Infrastructures: "What does an IP prefix length distinguish within an address?" — prefix versus host bits.
+- Networking Infrastructures: "How many conventional usable host addresses are in 192.0.2.0/26?" — ordinary host-count arithmetic.
+- Networking Infrastructures: "What is the network address of 192.0.2.77/26?" — block alignment and network address.
+- Networking Infrastructures: "The dotted-decimal subnet mask equivalent to /27 is ____." — prefix-to-mask conversion.
+- Networking Infrastructures: "On a supporting two-endpoint IPv4 point-to-point link, how many usable endpoint addresses does a /31 provide?" — scoped /31 exception.
+- Networking Infrastructures: "How many exact IPv4 addresses does 198.51.100.7/32 identify?" — single-address /32 prefix.
+- Network Design: "Why put largest subnets first when planning a VLSM allocation?" — aligned, non-overlapping allocation reasoning.
+
+After recall, solve retrieval questions with new values and complete the lab. Record mistakes privately, then revisit the relevant prompt. Matching a card to a subskill does not certify full guide coverage, technical performance in a lab, or personal mastery.
+
+## Sources and verification
+Primary standards: RFC 4632, Classless Inter-domain Routing (CIDR), https://www.rfc-editor.org/rfc/rfc4632; RFC 3021, Using 31-Bit Prefixes on IPv4 Point-to-Point Links, https://www.rfc-editor.org/rfc/rfc3021; RFC 5737, IPv4 Address Blocks Reserved for Documentation, https://www.rfc-editor.org/rfc/rfc5737. Cisco, Subnetting a Class C Network (legacy class terminology; use its arithmetic examples, not classful assumptions): https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html
+The 192.0.2.0/24, 198.51.100.0/24, and 203.0.113.0/24 examples are documentation-only TEST-NET ranges. This is a printable reference-page format, not the AP subjects’ fixed-length colored-sheet format. For an existing local FBLA package, search Anki for tag:Networking_Infrastructures or tag:Network_Design tag:Test, then review subnet/prefix questions. These tags are navigation aids, not proof that the cards cover every objective. Full deck audit remains pending.

@@ -65,7 +65,7 @@ The reusable [AP World History master prompt](docs/prompts/ap-world-history.txt)
 ├── docs/                 The reading room: guides, reference, and artwork
 ├── .github/              Quality checks and deployment workflow
 └── website/              Site and its tooling
-    ├── public/           Seven HTML pages, assets/images/, styles/, notes/, CNAME
+    ├── public/           Nine HTML pages, assets/images/, styles/, notes/, CNAME
     ├── scripts/          Page generators and note importers
     ├── tests/            Content, accessibility, and browser checks
     ├── package.json      Package scripts and dependencies
@@ -76,7 +76,9 @@ The reusable [AP World History master prompt](docs/prompts/ap-world-history.txt)
 
 Generated pages are checked in under `website/public/`. Edit note sources and generators, then rebuild; maintain the three literary-analysis pages directly. GitHub Pages is configured to use **GitHub Actions**, publishing only `website/public/` after quality checks pass. The custom domain and public page URLs are unchanged; no application backend or database is required.
 
-These are independent study resources, not official College Board materials or an official answer key. Literary interpretations and practice examples are starting points for your own evidence and reasoning. Check quotations and page references against your edition. See the [technical reference](docs/technical-reference.md) for provenance and verification limits.
+The [FBLA study pilot](website/public/fbla.html) adds four event references and a source-backed IPv4 subnetting/VLSM note with recall prompts, an answer key, an Anki prompt map, and a lab. Read the [FBLA content guide](docs/fbla.md) for edition caveats and its flowing reference-page format.
+
+These are independent study resources, not official College Board or FBLA materials or an official answer key. Literary interpretations and practice examples are starting points for your own evidence and reasoning. Check quotations and page references against your edition. See the [technical reference](docs/technical-reference.md) for provenance and verification limits.
 
 Found a broken link, confusing explanation, or content error? [Open an issue](https://github.com/NormalDudeBro/outofmymind/issues) with the page, section, and a source or example where helpful.
 
