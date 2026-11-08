@@ -2,7 +2,7 @@
 Purpose: practice the subnetting portions of Networking Infrastructures NI-NB-07 and Network Design ND-NIC-07. These are locally assigned study IDs, not official FBLA identifiers. This is an original note, not an official guide or a complete treatment of either objective.
 
 ## Edition and scope
-The Networking Infrastructures and Network Design scope follows the National 2026–27 CONNECT guidelines. This worked example covers only subnetting portions of locally assigned study objectives, not either entire event. The companion deck was reviewed separately; that review does not establish individual mastery or complete coverage of every event objective. Confirm division-specific requirements with your adviser.
+The Networking Infrastructures and Network Design scope follows the National 2026–27 CONNECT guidelines. This worked example covers subnetting portions of the study objectives, not either entire event. Use the event courses for broader preparation and confirm division-specific requirements with an adviser.
 
 ## IPv4 foundations
 An IPv4 address is 32 bits. A subnet mask marks the network prefix with 1 bits and the host portion with 0 bits. CIDR /n means n leading network bits; the dotted mask is a readable form of those bits. Example: /26 = 255.255.255.192 because the final octet mask is 11000000.
@@ -48,8 +48,8 @@ Classful reasoning is obsolete for modern subnet selection. The configured/adver
 4. Deliberately configure one host with a wrong mask, then wrong gateway. Record the distinct symptom, restore settings, and retest. Verify no host uses a network or broadcast address and no subnet overlaps.
 5. Save the .pkt locally. This learning note does not ask you to publish personal progress or lab files.
 
-## Local Anki route — checked prompt mapping
-The prompts below were checked in the accompanying local FBLA package against their answers. They support only the listed subnetting subskills of local study IDs NI-NB-07 and ND-NIC-07; they do not complete either objective. In Anki Browse, use the named event section and locate the exact prompt. The /31 and /32 cards are included in the companion package.
+## Companion Anki prompts
+The following prompts support subnetting practice for study references NI-NB-07 and ND-NIC-07. If using the companion FBLA package, locate the exact prompt in the named event subdeck through Anki Browse. Without the package, use these as additional recall questions. They address parts of the two objectives, not their full scope.
 
 - Networking Infrastructures: "What does an IP prefix length distinguish within an address?" — prefix versus host bits.
 - Networking Infrastructures: "How many conventional usable host addresses are in 192.0.2.0/26?" — ordinary host-count arithmetic.
@@ -63,4 +63,4 @@ After recall, solve retrieval questions with new values and complete the lab. Re
 
 ## Sources and verification
 Primary standards: RFC 4632, Classless Inter-domain Routing (CIDR), https://www.rfc-editor.org/rfc/rfc4632; RFC 3021, Using 31-Bit Prefixes on IPv4 Point-to-Point Links, https://www.rfc-editor.org/rfc/rfc3021; RFC 5737, IPv4 Address Blocks Reserved for Documentation, https://www.rfc-editor.org/rfc/rfc5737. Cisco, Subnetting a Class C Network (legacy class terminology; use its arithmetic examples, not classful assumptions): https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html
-The 192.0.2.0/24, 198.51.100.0/24, and 203.0.113.0/24 examples are documentation-only TEST-NET ranges. This is a printable reference-page format, not the AP subjects’ fixed-length colored-sheet format. For an existing local FBLA package, search Anki for tag:Networking_Infrastructures or tag:Network_Design tag:Test, then review subnet/prefix questions. These tags are navigation aids, not proof of personal mastery or complete event-objective coverage. Companion deck review is complete as a separate workstream; this pilot's technical-source coverage does not claim exhaustive or independently normative verification of every fact.
+The 192.0.2.0/24, 198.51.100.0/24, and 203.0.113.0/24 examples are documentation-only TEST-NET ranges. This flowing worked example differs from the event courses' fixed-length colored sheets. In the companion Anki package, search for tag:Networking_Infrastructures or tag:Network_Design tag:Test to locate subnet and prefix questions. Tags help navigation; they do not measure mastery or establish complete objective coverage. The linked references explain the technical background and should be consulted for their full scope and qualifications.

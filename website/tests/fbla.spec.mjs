@@ -29,10 +29,13 @@ test('FBLA pilot supports keyboard retrieval, offline loading, and a narrow mobi
   await offline.close();
 });
 
-test('FBLA hub explains the study loop and all 17 rehearsal flags without mobile overflow', async ({ page }) => {
+test('FBLA hub explains a general-audience study loop and 17 practice skills without mobile overflow', async ({ page }) => {
   await page.goto('/fbla.html');
   await expect(page.locator('#start-here')).toContainText('card order is not a lesson sequence');
-  await expect(page.locator('#rehearsal')).toContainText('not 17 missing lessons');
+  await expect(page.locator('#rehearsal')).toContainText('not 17 additional official requirements');
+  await expect(page.locator('#rehearsal')).not.toContainText(/\bour\b|\breview\b|\baudit\b/i);
+  await expect(page.locator('#start-here')).toContainText('Without the package, use the practice questions for recall');
+  await expect(page.getByRole('heading', { name: 'Build a study schedule' })).toBeVisible();
   await expect(page.locator('[data-objective]')).toHaveCount(17);
   await expect(page.locator('.rehearsal-group').nth(0).locator('[data-objective]')).toHaveCount(8);
   await expect(page.locator('.rehearsal-group').nth(1).locator('[data-objective]')).toHaveCount(9);

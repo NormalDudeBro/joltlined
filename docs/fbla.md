@@ -14,13 +14,15 @@ FBLA event pages use the same `.notes-site`, `.pages` and `.sheet` presentation 
 
 The hub leads with a repeatable study loop: choose an event and sheet, open its **Sources, practice, lab and scope notes**, attempt practice before revealing answers, use the matching event subdeck for recall, then apply the idea in a lab or spoken rehearsal. Card order is not a lesson sequence. The same module lab can appear under several sheets; it is not a new assignment each time. The IPv4 example is an optional demonstration, not the mandatory starting lesson. Experienced students can attempt practice first and use the notes to close gaps.
 
-The five-month route is suggested pacing, not an official schedule. Earlier regional deadlines and entry rules take priority. The website does not track personal scores or synchronize Anki. The 654-card package stays in the private delivery channel, not the public site.
+The scheduling guidance uses flexible stages rather than assuming a fixed preparation period, state or prior qualification. Regional deadlines and entry rules take priority. The website works without the optional Anki package and does not track personal scores or synchronize Anki. The 654-card package stays in the private delivery channel, not the public site; public copy must not imply that every visitor has received it.
 
 ### What the 17 rehearsal flags mean
 
 `website/scripts/fbla-rehearsal.json` records the instructional subset of the completed private audit marked for external rehearsal: **8 Network Design items** (`ND-NSR-02` plus `ND-RP-01` through `ND-RP-07`) and **9 Sales items** (`SP-R-01` through `SP-R-04`, and `SP-R-06` through `SP-R-10`). These are local review categories, not missing lessons, official extra tasks, learner scores, or a prescription for 17 sessions. One run-through can exercise multiple criteria. Other skills still need practice even when they are not in this category.
 
 Each item links to an existing related sheet and names a concrete practice action. The build verifies the event, sheet and objective mapping. Do not publish private card GUIDs, candidate reviews or personal performance evidence with this list. The full source ledger is reference material, not the learning sequence.
+
+Present this section to learners as **17 practice skills**, not as a conversation-specific question about “requirements” or a report of an internal review. Use “study reference” for IDs. Keep development/audit history in maintainer documentation; the landing page should stand alone for a new visitor, including someone without Anki or networking experience.
 
 ## Review limits
 
