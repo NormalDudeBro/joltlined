@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Network(pen) (g)Scale(pen) (g)and(pen) (g)Work(pen) (g)Models(pen)
+(pen)-> (pu)Devices(pen) (pu)and(pen) (pu)Trust(pen) (pu)Boundaries(pen)
+(pen)o (g)Network(pen) (g)Scale(pen) (g)and(pen) (g)Work(pen) (g)Models(pen)
+(pen)-> A LAN links (pu)devices(pen) within a limited local site.
+(pen)-> A WAN connects distant LANs over carrier or private links.
+(pen)-> WAN reach adds provider, latency, recurring-cost tradeoffs.
+(pen)-> Peer-to-peer hosts share directly; control is distributed.
+(pen)-> P2P can suit small groups but complicates consistent policy.
+(pen)-> Client-server centralizes services, identity, administration.
+(pen)-> Central services simplify control but become dependencies.
+(pen)-> Thin clients rely on remote compute/apps; outages impair use.
+(pen)-> Servers provide services; clients request services.
+(pen)o (pu)Devices(pen) (pu)and(pen) (pu)Trust(pen) (pu)Boundaries(pen)
+(pen)-> A modem adapts a carrier access signal; products vary.
+(pen)-> A router forwards IP packets between networks using routes.
+(pen)-> A switch forwards local frames using learned MAC addresses.
+(pen)-> Servers attach to switches; clients reach services over links.
+(pen)-> An access point bridges Wi-Fi clients to a wired LAN.
+(pen)-> A gateway joins networks or systems; roles may be combined.
+(pen)-> A switch is not automatically a router or policy firewall.
+(pen)-> Authentication checks an identity claim or credential control.
+(pen)-> Authorization decides permitted actions after identity checks.
+(pen)-> Encryption protects confidentiality when keys are secure.
+(pen)o Overview
+(pen)-> (br)Connectivity(pen) (br)and(pen) (br)Attack(pen) (br)Patterns(pen)
+(pen)-> (or)VPN(pen) (or)and(pen) (or)Authorized(pen) (or)Capture(pen)
+(pen)o (br)Connectivity(pen) (br)and(pen) (br)Attack(pen) (br)Patterns(pen)
+(pen)-> Ethernet (IEEE 802.3) commonly carries wired LAN frames.
+(pen)-> Wi-Fi (802.11) uses radio; walls and noise affect links.
+(pen)-> Wi-Fi reach and rate depend on band, load, and equipment.
+(pen)-> Bluetooth is short-range personal-area radio, not WAN access.
+(pen)-> Phishing tricks people into unsafe disclosure or actions.
+(pen)-> Spoofing falsifies an address or identity signal to mislead.
+(pen)-> Poisoning corrupts trusted data, e.g. name-resolution answers.
+(pen)-> (br)Attack(pen) labels overlap; identify the mechanism and target.
+(pen)-> Verify requests; use MFA, filtering, and updates.
+(pen)o (or)VPN(pen) (or)and(pen) (or)Authorized(pen) (or)Capture(pen)
+(pen)-> A (or)VPN(pen) creates a logical tunnel across an underlying (g)network(pen).
+(pen)-> Configured VPNs can authenticate peers and encrypt traffic.
+(pen)-> Tunneling does not secure endpoints or grant user permissions.
+(pen)-> Packet (or)capture(pen) records traffic visible at the (or)capture(pen) point.
+(pen)-> Encryption hides payload; metadata may remain visible.
+(pen)-> (or)Capture(pen) only with explicit authorization and approved scope.
+(pen)-> Minimize collection; protect files; follow retention policy.
+(pen)-> Authentication checks identity; authorization grants access.
+(pen)-> VPNs do not replace endpoint, account, or (g)network(pen) controls.
+(pen)-> Never inspect others' traffic without authorization.

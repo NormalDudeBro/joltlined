@@ -1,0 +1,48 @@
+o Overview
+-> LAN scale and purpose
+-> SOHO, enterprise and datacenter
+o LAN scale and purpose
+-> A LAN connects devices within a limited local site.
+-> It lets endpoints share links, services and local resources.
+-> A switch forwards Ethernet frames using learned MAC locations.
+-> A router forwards IP packets between separate IP networks.
+-> Layer 2 means link-local framing; Layer 3 means IP routing.
+-> An ordinary Layer 2 switch forwards within its VLAN.
+-> A Layer 3 switch can also route between configured networks.
+-> VLANs do not encrypt traffic or prevent all access.
+-> LAN ownership and management depend on the organization.
+o SOHO, enterprise and datacenter
+-> SOHO means small office/home office, usually few users.
+-> An integrated gateway may combine router, Wi-Fi and switching.
+-> Integration saves cost but limits capacity and redundancy.
+-> Enterprise LANs use managed access across campuses.
+-> VLANs and routed boundaries organize traffic and policy.
+-> Central management spreads both settings and errors.
+-> Datacenter LANs connect dense server and storage systems.
+-> Redundant links can improve availability but add complexity.
+-> No LAN guarantees speed, security or uninterrupted service.
+-> Select scale by users, traffic, growth, support and budget.
+o Overview
+-> Encapsulation across a connection
+-> Switch and router forwarding
+o Encapsulation across a connection
+-> An application creates data for another host or service.
+-> Transport adds headers to form segments or datagrams.
+-> IP adds source and destination addresses in a packet.
+-> The link layer wraps that packet in a local-link frame.
+-> The physical layer transmits frame bits as signals.
+-> The receiver processes headers in reverse order.
+-> Each hop uses link delivery for the next local destination.
+-> A router removes incoming frame and forwards the IP packet.
+-> It builds a new frame appropriate to the outgoing link.
+o Switch and router forwarding
+-> A Layer 2 switch consults its MAC forwarding table.
+-> Unknown unicast may be flooded within the eligible VLAN.
+-> A router examines IP destination and selects a next hop.
+-> Routers separate broadcast domains by default.
+-> A Layer 3 switch can perform routing when configured to do so.
+-> Only ordinary Layer 2 switch operation does not route.
+-> A next hop may be another router, not the destination.
+-> Link rate is not payload throughput because of overhead.
+-> Filtering policy is separate from basic forwarding.
+-> Congestion, link failures and bad routes can cause loss.

@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Policies(pen) (g)and(pen) (g)recovery(pen) (g)plans(pen)
+(pen)-> (pu)Recovery(pen) (pu)targets(pen) (pu)and(pen) (pu)exercise(pen)
+(pen)o (g)Policies(pen) (g)and(pen) (g)recovery(pen) (g)plans(pen)
+(pen)-> AUP states permitted use of organizational systems.
+(pen)-> InfoSec policy sets security duties and requirements.
+(pen)-> Policy sets what; procedures describe how to do it.
+(pen)-> BCP sustains priority business processes through disruption.
+(pen)-> DRP restores systems and (or)data(pen) after a disaster.
+(pen)-> DRP supports BCP; neither plan is itself a backup.
+(pen)-> BIA ranks processes, systems, and dependency priorities.
+(pen)-> Preventive controls reduce likelihood or disruption impact.
+(pen)-> (g)Plans(pen) name activation triggers, teams, contacts, and roles.
+(pen)o (pu)Recovery(pen) (pu)targets(pen) (pu)and(pen) (pu)exercise(pen)
+(pen)-> RTO is the target time to restore a service.
+(pen)-> RPO is the acceptable age of restored (or)data(pen).
+(pen)-> RTO limits outage duration; RPO limits (or)data(pen) loss.
+(pen)-> (g)Recovery(pen) strategy follows impact and criticality analysis.
+(pen)-> Define (g)recovery(pen) sequence, resources, locations, and contacts.
+(pen)-> Test, train, and (pu)exercise(pen); testing validates (g)recovery(pen) ability.
+(pen)-> Tabletops test decisions; restores test usable recovered (or)data(pen).
+(pen)-> Compare actual restore time and (or)data(pen) age with (pu)targets(pen).
+(pen)-> Record gaps, corrective owners, and retest evidence.
+(pen)-> Update (g)plans(pen) when systems, risks, or roles (or)change(pen).
+(pen)o Overview
+(pen)-> (br)Secure(pen) (br)messaging(pen) (br)and(pen) (br)email(pen)
+(pen)-> (or)Data(pen) (or)minimization(pen) (or)and(pen) (or)change(pen) (or)control(pen)
+(pen)o (br)Secure(pen) (br)messaging(pen) (br)and(pen) (br)email(pen)
+(pen)-> Verify recipients and addresses before sending sensitive (or)data(pen).
+(pen)-> Use approved protected channels for sensitive communications.
+(pen)-> TLS protects a connection; it does not protect every copy.
+(pen)-> HTTPS is HTTP protected by TLS, not a separate cipher.
+(pen)-> Certificate validation helps authenticate the server endpoint.
+(pen)-> (br)Email(pen) encryption depends on keys and recipient configuration.
+(pen)-> Unexpected urgency, links, or files can signal phishing.
+(pen)-> Verify unusual payment requests on a separate known channel.
+(pen)-> Report suspicious messages through approved response channels.
+(pen)o (or)Data(pen) (or)minimization(pen) (or)and(pen) (or)change(pen) (or)control(pen)
+(pen)-> Collect only (or)data(pen) needed for a defined business purpose.
+(pen)-> Less stored (or)data(pen) reduces exposure after unauthorized access.
+(pen)-> Classify (or)data(pen); follow access, retention, and disposal rules.
+(pen)-> Share only necessary fields with authorized recipients.
+(pen)-> Masking replaces or removes fields, reducing analytic utility.
+(pen)-> Masked (or)data(pen) can still identify via other attributes.
+(pen)-> Tokens substitute values; (br)secure(pen) any identity mapping.
+(pen)-> (or)Change(pen) requests need recording and security impact review.
+(pen)-> Test and approve changes before deployment; then verify them.
+(pen)-> Archive prior baselines for traceability and rollback.

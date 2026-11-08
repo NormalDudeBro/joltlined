@@ -1,0 +1,48 @@
+o Overview
+-> Cloud definition and service models
+-> Service model use and responsibility
+o Cloud definition and service models
+-> Cloud offers on-demand access to shared computing resources.
+-> Resources include networks, servers, storage and applications.
+-> Cloud resources can be rapidly provisioned and released.
+-> IaaS provides configurable compute, storage and networking.
+-> IaaS customers usually manage guest systems and applications.
+-> PaaS supplies a platform for customers to deploy applications.
+-> PaaS provider manages more underlying runtime infrastructure.
+-> SaaS delivers a provider-operated application to its users.
+-> Service models distinguish provider and customer control.
+o Service model use and responsibility
+-> IaaS suits teams needing control of virtual machines.
+-> PaaS runs customer code on a provider-managed platform.
+-> SaaS suits organizations using a finished hosted application.
+-> Provider duties differ by service and contract.
+-> Customers still manage identities, access and data use.
+-> Shared responsibility does not remove customer duties.
+-> A hosted service depends on its provider and network path.
+-> Clarify backup, retention and recovery terms before adoption.
+-> Cloud describes a delivery model, not one physical location.
+-> Service boundaries vary, so verify the actual offer terms.
+o Overview
+-> Radio frequency and attenuation
+-> Wireless speed and reliability
+o Radio frequency and attenuation
+-> Radio frequency (RF) carries wireless signals through space.
+-> Distance generally weakens received signal strength.
+-> Walls and building materials absorb or reflect radio energy.
+-> Metal and reinforced concrete can obstruct or reflect signals.
+-> Interference and noise can corrupt reception or cut capacity.
+-> A client and access point both need adequate signal quality.
+-> A strong signal does not guarantee a fast Internet connection.
+-> Range depends on frequency, antenna, power and environment.
+-> No single indoor Wi-Fi range applies to every building.
+o Wireless speed and reliability
+-> Wi-Fi PHY rate is a signaling maximum, not app throughput.
+-> Overhead and retransmissions reduce usable throughput.
+-> Congestion shares airtime among nearby clients.
+-> Channel width and modulation affect capacity and reach.
+-> Client capability can limit an AP's advertised link rate.
+-> Backhaul capacity can bottleneck otherwise strong Wi-Fi.
+-> Roaming, power and configuration affect reliability.
+-> Survey at actual user locations and test representative load.
+-> Higher AP power may not strengthen a client's return signal.
+-> Band, regulation and hardware determine available channels.

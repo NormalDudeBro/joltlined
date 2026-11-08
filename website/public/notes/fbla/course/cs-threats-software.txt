@@ -1,0 +1,48 @@
+o Overview
+-> Threat Actors and Motives
+-> Virus Varieties and Other Malware
+o Threat Actors and Motives
+-> Insiders have organizational access; outsiders do not.
+-> Either may act deliberately or cause harm through error.
+-> Financial gain can motivate theft, extortion, or fraud.
+-> Espionage seeks protected information for strategic advantage.
+-> Data theft may support resale, fraud, or later intrusion.
+-> Disruption or ideology may motivate service or data attacks.
+-> Assess capability, access, opportunity, and target as well.
+-> Motive is a hypothesis, not proof of actor identity.
+-> Controls should address behavior and access, not stereotypes.
+o Virus Varieties and Other Malware
+-> Malware is software used to harm, spy, extort, or control.
+-> A virus attaches to a host file or boot area to spread.
+-> File virus infects executable files when they run.
+-> Boot-sector virus targets startup records or boot media.
+-> Polymorphic viruses vary code/signature during replication.
+-> Variation may evade simple signatures; behavior checks help.
+-> Trojan masquerades as benign software to induce execution.
+-> A worm self-propagates across systems or networks.
+-> Logic bomb activates when a time/event condition is met.
+-> One malware sample may combine more than one behavior.
+o Overview
+-> Vulnerabilities and Exploit Classes
+-> Reduce Exposure
+o Vulnerabilities and Exploit Classes
+-> Vulnerability is a weakness; exploit is a way to use it.
+-> Injection treats input as command/query syntax, not data.
+-> Parameterized SQL separates values from query structure.
+-> Buffer overflow writes beyond allocated memory bounds.
+-> Race occurs when timing changes shared state unexpectedly.
+-> Atomic operations/locks can prevent unsafe check-use races.
+-> Jailbreaking weakens platform restrictions or sandboxing.
+-> Backdoor is hidden access; zero-day has no effective fix yet.
+-> Known unpatched flaws may have fixes; test and apply patches.
+o Reduce Exposure
+-> Bind untrusted data; do not concatenate into SQL syntax.
+-> Allowlist identifiers and sort choices from fixed options.
+-> Least database privilege limits damage, not injection itself.
+-> Use bounds-safe code and safe shared-state access.
+-> Apply security updates after risk-appropriate testing.
+-> Remove unused services and reduce exposed attack surface.
+-> Limit user/service rights to reduce malware blast radius.
+-> Backups support recovery but do not prevent infection.
+-> Signatures can miss new or altered malware.
+-> Use layered controls; no single tool guarantees prevention.

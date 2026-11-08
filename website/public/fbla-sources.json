@@ -1,0 +1,4071 @@
+{
+  "edition": "National 2026–27",
+  "objectiveIds": [
+    "CS-CTV-01",
+    "CS-CTV-02",
+    "CS-CTV-03",
+    "CS-CTV-04",
+    "CS-CTV-05",
+    "CS-CTV-06",
+    "CS-CTV-07",
+    "CS-CTV-08",
+    "CS-CTV-09",
+    "CS-NDS-01",
+    "CS-NDS-02",
+    "CS-NDS-03",
+    "CS-NDS-04",
+    "CS-NDS-05",
+    "CS-NDS-06",
+    "CS-NDS-07",
+    "CS-SD-01",
+    "CS-SD-02",
+    "CS-SD-03",
+    "CS-SD-04",
+    "CS-SD-05",
+    "CS-SD-06",
+    "CS-SD-07",
+    "CS-SD-08",
+    "CS-SF-01",
+    "CS-SF-02",
+    "CS-SF-03",
+    "CS-SF-04",
+    "CS-SF-05",
+    "CS-SF-06",
+    "CS-SF-07",
+    "CS-SOM-01",
+    "CS-SOM-02",
+    "CS-SOM-03",
+    "CS-SOM-04",
+    "CS-SOM-05",
+    "CS-SOM-06",
+    "CS-SPM-01",
+    "CS-SPM-02",
+    "CS-SPM-03",
+    "CS-SPM-04",
+    "CS-SPM-05",
+    "CS-SPM-06",
+    "CS-SPM-07",
+    "CS-SPM-08",
+    "ND-NA-01",
+    "ND-NA-02",
+    "ND-NA-03",
+    "ND-NA-04",
+    "ND-NA-05",
+    "ND-NA-06",
+    "ND-NA-07",
+    "ND-NA-08",
+    "ND-NA-09",
+    "ND-NA-10",
+    "ND-NIC-01",
+    "ND-NIC-02",
+    "ND-NIC-03",
+    "ND-NIC-04",
+    "ND-NIC-05",
+    "ND-NIC-06",
+    "ND-NIC-07",
+    "ND-NIC-08",
+    "ND-NIC-09",
+    "ND-NIC-10",
+    "ND-NIC-11",
+    "ND-NIC-12",
+    "ND-NP-01",
+    "ND-NP-02",
+    "ND-NP-03",
+    "ND-NP-04",
+    "ND-NP-05",
+    "ND-NP-06",
+    "ND-NP-07",
+    "ND-NP-08",
+    "ND-NP-09",
+    "ND-NPSA-01",
+    "ND-NPSA-02",
+    "ND-NPSA-03",
+    "ND-NPSA-04",
+    "ND-NPSA-05",
+    "ND-NPSA-06",
+    "ND-NPSA-07",
+    "ND-NPSA-08",
+    "ND-NPSA-09",
+    "ND-NPSA-10",
+    "ND-NPSA-11",
+    "ND-NSR-01",
+    "ND-NSR-02",
+    "ND-NSR-03",
+    "ND-NSR-04",
+    "ND-NSR-05",
+    "ND-NSR-06",
+    "ND-NSR-07",
+    "ND-NSR-08",
+    "ND-NSR-09",
+    "ND-NSR-10",
+    "ND-NSR-11",
+    "ND-RP-01",
+    "ND-RP-02",
+    "ND-RP-03",
+    "ND-RP-04",
+    "ND-RP-05",
+    "ND-RP-06",
+    "ND-RP-07",
+    "NI-NB-01",
+    "NI-NB-02",
+    "NI-NB-03",
+    "NI-NB-04",
+    "NI-NB-05",
+    "NI-NB-06",
+    "NI-NB-07",
+    "NI-NB-08",
+    "NI-NB-09",
+    "NI-NHC-01",
+    "NI-NHC-02",
+    "NI-NHC-03",
+    "NI-NHC-04",
+    "NI-NHC-05",
+    "NI-NHC-06",
+    "NI-NHC-07",
+    "NI-NPS-01",
+    "NI-NPS-02",
+    "NI-NPS-03",
+    "NI-NPS-04",
+    "NI-NPS-05",
+    "NI-NPS-06",
+    "NI-NPS-07",
+    "NI-NPS-08",
+    "NI-NPS-09",
+    "NI-NS-01",
+    "NI-NS-02",
+    "NI-NS-03",
+    "NI-NS-04",
+    "NI-NS-05",
+    "NI-NS-06",
+    "NI-NS-07",
+    "NI-NS-08",
+    "NI-NS-09",
+    "NI-NS-10",
+    "NI-NTA-01",
+    "NI-NTA-02",
+    "NI-NTA-03",
+    "NI-NTA-04",
+    "NI-NTA-05",
+    "NI-NTA-06",
+    "NI-NTA-07",
+    "NI-NTA-08",
+    "NI-NTA-09",
+    "SP-P-01",
+    "SP-R-01",
+    "SP-R-02",
+    "SP-R-03",
+    "SP-R-04",
+    "SP-R-05",
+    "SP-R-06",
+    "SP-R-07",
+    "SP-R-08",
+    "SP-R-09",
+    "SP-R-10"
+  ],
+  "coverage": [
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-basics-models",
+      "section": "LAN scale and purpose",
+      "objectives": [
+        "NI-NB-01"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-basics-models",
+      "section": "SOHO, enterprise and datacenter",
+      "objectives": [
+        "NI-NB-01"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-basics-models",
+      "section": "Encapsulation across a connection",
+      "objectives": [
+        "NI-NB-05"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/",
+        "https://www.rfc-editor.org/rfc/rfc791"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-basics-models",
+      "section": "Switch and router forwarding",
+      "objectives": [
+        "NI-NB-05"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/",
+        "https://www.rfc-editor.org/rfc/rfc791"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-basics-forwarding",
+      "section": "OSI: physical and data link",
+      "objectives": [
+        "NI-NB-02"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-basics-forwarding",
+      "section": "OSI: network through application",
+      "objectives": [
+        "NI-NB-03",
+        "NI-NB-04"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/",
+        "https://www.rfc-editor.org/rfc/rfc791"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-basics-forwarding",
+      "section": "Network troubleshooting model",
+      "objectives": [
+        "NI-NB-02",
+        "NI-NB-03",
+        "NI-NB-04"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-basics-forwarding",
+      "section": "LAN design in context",
+      "objectives": [
+        "NI-NB-01",
+        "NI-NB-05"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-basics-addressing",
+      "section": "From device to ISP",
+      "objectives": [
+        "NI-NB-06"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc791"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-basics-addressing",
+      "section": "ISP chain and local limits",
+      "objectives": [
+        "NI-NB-06"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc791"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-basics-addressing",
+      "section": "IPv4 and IPv6 formats",
+      "objectives": [
+        "NI-NB-08"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc791",
+        "https://www.rfc-editor.org/rfc/rfc8200"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-basics-addressing",
+      "section": "Subnet calculation example",
+      "objectives": [
+        "NI-NB-07"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc4632",
+        "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-addressing-calculations",
+      "section": "IP and MAC addressing",
+      "objectives": [
+        "NI-NB-07"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc791",
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-addressing-calculations",
+      "section": "Subnet purpose and CIDR",
+      "objectives": [
+        "NI-NB-07",
+        "NI-NB-09"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc4632",
+        "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-addressing-calculations",
+      "section": "Historical IPv4 address classes",
+      "objectives": [
+        "NI-NB-09"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+        "https://www.rfc-editor.org/rfc/rfc4632"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-addressing-calculations",
+      "section": "Addressing and planning limits",
+      "objectives": [
+        "NI-NB-07",
+        "NI-NB-08"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc4632",
+        "https://www.rfc-editor.org/rfc/rfc8200"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-topologies",
+      "section": "Peer-to-peer and client-server",
+      "objectives": [
+        "NI-NTA-01"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-topologies",
+      "section": "Choose a service architecture",
+      "objectives": [
+        "NI-NTA-01"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-topologies",
+      "section": "Star and bus topologies",
+      "objectives": [
+        "NI-NTA-03",
+        "NI-NTA-04"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-topologies",
+      "section": "Ring and mesh topologies",
+      "objectives": [
+        "NI-NTA-03",
+        "NI-NTA-04"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-topology-choices",
+      "section": "LAN, MAN and WAN scope",
+      "objectives": [
+        "NI-NTA-02"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/",
+        "https://www.rfc-editor.org/rfc/rfc791"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-topology-choices",
+      "section": "WAN implications and scale",
+      "objectives": [
+        "NI-NTA-02"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc791",
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-topology-choices",
+      "section": "Choose topology for requirements",
+      "objectives": [
+        "NI-NTA-03",
+        "NI-NTA-04"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-topology-choices",
+      "section": "Wireless network size options",
+      "objectives": [
+        "NI-NTA-05"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.ieee802.org/11/",
+        "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-wireless-cloud",
+      "section": "Cloud definition and service models",
+      "objectives": [
+        "NI-NTA-06"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.nist.gov/publications/nist-definition-cloud-computing"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-wireless-cloud",
+      "section": "Service model use and responsibility",
+      "objectives": [
+        "NI-NTA-06"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.nist.gov/publications/nist-definition-cloud-computing"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-wireless-cloud",
+      "section": "Radio frequency and attenuation",
+      "objectives": [
+        "NI-NTA-08"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.ieee802.org/11/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-wireless-cloud",
+      "section": "Wireless speed and reliability",
+      "objectives": [
+        "NI-NTA-08"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.ieee802.org/11/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-wireless-performance",
+      "section": "Cloud benefits and operating costs",
+      "objectives": [
+        "NI-NTA-07"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.nist.gov/publications/nist-definition-cloud-computing"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-wireless-performance",
+      "section": "Cloud risks and planning",
+      "objectives": [
+        "NI-NTA-07"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.nist.gov/publications/nist-definition-cloud-computing"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-wireless-performance",
+      "section": "Wireless LAN and cellular options",
+      "objectives": [
+        "NI-NTA-05",
+        "NI-NTA-08"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.ieee802.org/11/"
+      ]
+    },
+    {
+      "module": "ni-foundations",
+      "sheet": "ni-wireless-performance",
+      "section": "5G system and service families",
+      "objectives": [
+        "NI-NTA-09"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.3gpp.org/technologies/5g-system-overview"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-security-controls",
+      "section": "Risk and Security Goals",
+      "objectives": [
+        "NI-NS-01",
+        "NI-NS-02",
+        "NI-NS-07"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.cisa.gov/news-events/news/understanding-denial-service-attacks",
+        "https://csrc.nist.gov/pubs/sp/800/63/4/final"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-security-controls",
+      "section": "Controls and Malware Defense",
+      "objectives": [
+        "NI-NS-03",
+        "NI-NS-04",
+        "NI-NS-08"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/63/4/final",
+        "https://www.cisa.gov/news-events/news/understanding-denial-service-attacks"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-security-controls",
+      "section": "Availability and Attack Paths",
+      "objectives": [
+        "NI-NS-05",
+        "NI-NS-06"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.cisa.gov/news-events/news/understanding-denial-service-attacks"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-security-controls",
+      "section": "Integrity, Identity, and Recovery",
+      "objectives": [
+        "NI-NS-07",
+        "NI-NS-09",
+        "NI-NS-10"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/fips/180-4/upd1/final",
+        "https://csrc.nist.gov/pubs/sp/800/63/4/final",
+        "https://www.rfc-editor.org/rfc/rfc8446.html",
+        "https://www.rfc-editor.org/rfc/rfc2865",
+        "https://www.rfc-editor.org/rfc/rfc8907"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-security-threats",
+      "section": "Malware and Social Engineering",
+      "objectives": [
+        "NI-NS-02",
+        "NI-NS-04",
+        "NI-NS-06"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.cisa.gov/news-events/news/understanding-denial-service-attacks"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-security-threats",
+      "section": "Resilient Defensive Layers",
+      "objectives": [
+        "NI-NS-03",
+        "NI-NS-04",
+        "NI-NS-08"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.cisa.gov/news-events/news/understanding-denial-service-attacks",
+        "https://csrc.nist.gov/pubs/sp/800/63/4/final"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-security-threats",
+      "section": "DoS Mechanics",
+      "objectives": [
+        "NI-NS-05"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.cisa.gov/news-events/news/understanding-denial-service-attacks"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-security-threats",
+      "section": "Mitigation and Residual Risk",
+      "objectives": [
+        "NI-NS-05",
+        "NI-NS-06",
+        "NI-NS-08"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.cisa.gov/news-events/news/understanding-denial-service-attacks"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-protocols-services",
+      "section": "File and Mail Protocols",
+      "objectives": [
+        "NI-NPS-01",
+        "NI-NPS-07"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc959.html",
+        "https://www.rfc-editor.org/rfc/rfc4217.html",
+        "https://www.rfc-editor.org/rfc/rfc5321.html"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-protocols-services",
+      "section": "DNS, DHCP, and IP",
+      "objectives": [
+        "NI-NPS-02",
+        "NI-NPS-07"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc1035.html",
+        "https://www.rfc-editor.org/rfc/rfc2131.html"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-protocols-services",
+      "section": "Transport and Port Defaults",
+      "objectives": [
+        "NI-NPS-05",
+        "NI-NPS-07"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/info/rfc9293/",
+        "https://www.rfc-editor.org/rfc/rfc768.html"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-protocols-services",
+      "section": "NAT and Secure Service Use",
+      "objectives": [
+        "NI-NPS-01",
+        "NI-NPS-08"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc3022.html",
+        "https://www.rfc-editor.org/rfc/rfc8446.html",
+        "https://www.rfc-editor.org/rfc/rfc4217.html"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-protocols-routing-media",
+      "section": "Wireless Generations and Bands",
+      "objectives": [
+        "NI-NPS-03"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/technical-reference/wireless-rf-reference-guide.pdf"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-protocols-routing-media",
+      "section": "Wireless Range and Throughput",
+      "objectives": [
+        "NI-NPS-03"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/technical-reference/wireless-rf-reference-guide.pdf"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-protocols-routing-media",
+      "section": "Ethernet PHY and Medium",
+      "objectives": [
+        "NI-NPS-04"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.cisco.com/c/en/us/support/docs/routers/10000-series-routers/46792-ethbase.html",
+        "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/hw/nexus7000/installation/guide/n7k_hig_book/n7k_connect_specs.html",
+        "https://www.commscope.com/product-type/cables/twisted-pair-cables/category-6a-cables/"
+      ]
+    },
+    {
+      "module": "ni-security-protocols",
+      "sheet": "ni-protocols-routing-media",
+      "section": "Routing and Wireless Protection",
+      "objectives": [
+        "NI-NPS-06",
+        "NI-NPS-09"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc4271.html",
+        "https://www.rfc-editor.org/rfc/rfc2328.html",
+        "https://www.rfc-editor.org/rfc/rfc7868.html",
+        "https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/17-15/config-guide/b_wl_17_15_cg/m_wpa3.html"
+      ]
+    },
+    {
+      "module": "ni-hardware",
+      "sheet": "ni-hardware-links",
+      "section": "From provider to host",
+      "objectives": [
+        "NI-NHC-01",
+        "NI-NHC-06"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-ethernet.html"
+      ]
+    },
+    {
+      "module": "ni-hardware",
+      "sheet": "ni-hardware-links",
+      "section": "Network adapters and local traffic",
+      "objectives": [
+        "NI-NHC-01",
+        "NI-NHC-02",
+        "NI-NHC-06"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-ethernet.html"
+      ]
+    },
+    {
+      "module": "ni-hardware",
+      "sheet": "ni-hardware-links",
+      "section": "Copper media",
+      "objectives": [
+        "NI-NHC-03"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-ethernet.html"
+      ]
+    },
+    {
+      "module": "ni-hardware",
+      "sheet": "ni-hardware-links",
+      "section": "Fiber and link compatibility",
+      "objectives": [
+        "NI-NHC-03",
+        "NI-NHC-04"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-ethernet.html",
+        "https://ecatalog.corning.com/optical-communications/US/en/Fiber-Optic-Connectivity/Connectors/Heat-Cure-Epoxy-Polish/Heat-Cure-Connector%2C-LC/p/heat-cure-connector-lc"
+      ]
+    },
+    {
+      "module": "ni-hardware",
+      "sheet": "ni-hardware-infrastructure",
+      "section": "Rack and blade server forms",
+      "objectives": [
+        "NI-NHC-05"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-5100-series-blade-server-chassis/data_sheet_c78-526830.html"
+      ]
+    },
+    {
+      "module": "ni-hardware",
+      "sheet": "ni-hardware-infrastructure",
+      "section": "Chassis power and connectivity",
+      "objectives": [
+        "NI-NHC-05",
+        "NI-NHC-06"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-5100-series-blade-server-chassis/data_sheet_c78-526830.html",
+        "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-ethernet.html"
+      ]
+    },
+    {
+      "module": "ni-hardware",
+      "sheet": "ni-hardware-infrastructure",
+      "section": "File and block storage",
+      "objectives": [
+        "NI-NHC-07"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://learn.microsoft.com/en-us/windows-server/storage/storage-spaces/fault-tolerance"
+      ]
+    },
+    {
+      "module": "ni-hardware",
+      "sheet": "ni-hardware-infrastructure",
+      "section": "RAID and fault tolerance",
+      "objectives": [
+        "NI-NHC-07"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/managing_storage_devices/managing-raid_managing-storage-devices",
+        "https://learn.microsoft.com/en-us/windows-server/storage/storage-spaces/fault-tolerance"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-fundamentals-trust",
+      "section": "CIA and Zero Trust",
+      "objectives": [
+        "CS-SF-01",
+        "CS-SF-04",
+        "CS-SF-07"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/207/final",
+        "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-fundamentals-trust",
+      "section": "Identity, Attestation, and AAA",
+      "objectives": [
+        "CS-SF-02",
+        "CS-SF-03"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://pages.nist.gov/800-63-4/sp800-63a.html",
+        "https://pages.nist.gov/800-63-4/sp800-63b.html",
+        "https://csrc.nist.gov/glossary/term/attestation"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-fundamentals-trust",
+      "section": "Nonrepudiation and Least Privilege",
+      "objectives": [
+        "CS-SF-02",
+        "CS-SF-07"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://pages.nist.gov/800-63-4/sp800-63a.html",
+        "https://pages.nist.gov/800-63-4/sp800-63b.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-fundamentals-trust",
+      "section": "Binary, Decimal, and Hex",
+      "objectives": [
+        "CS-SF-06"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc6962.html"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-fundamentals-controls",
+      "section": "Proofing, Factors, and Device Trust",
+      "objectives": [
+        "CS-SF-02",
+        "CS-SF-03"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://pages.nist.gov/800-63-4/sp800-63a.html",
+        "https://pages.nist.gov/800-63-4/sp800-63b.html",
+        "https://csrc.nist.gov/glossary/term/attestation"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-fundamentals-controls",
+      "section": "AAA, MFA, and Zero Trust",
+      "objectives": [
+        "CS-SF-03",
+        "CS-SF-04"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://pages.nist.gov/800-63-4/sp800-63b.html",
+        "https://csrc.nist.gov/pubs/sp/800/207/final"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-fundamentals-controls",
+      "section": "Least Privilege",
+      "objectives": [
+        "CS-SF-07"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-fundamentals-controls",
+      "section": "Honeypots, Honeynets, and Honeyfiles",
+      "objectives": [
+        "CS-SF-05"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://csrc.nist.gov/glossary/term/honeypot"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-threats-software",
+      "section": "Threat Actors and Motives",
+      "objectives": [
+        "CS-CTV-02"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.pafbla.org/wp-content/uploads/2026/08/Cybersecurity.pdf"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-threats-software",
+      "section": "Virus Varieties and Other Malware",
+      "objectives": [
+        "CS-CTV-03",
+        "CS-CTV-07"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.pafbla.org/wp-content/uploads/2026/08/Cybersecurity.pdf"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-threats-software",
+      "section": "Vulnerabilities and Exploit Classes",
+      "objectives": [
+        "CS-CTV-01",
+        "CS-CTV-04"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.pafbla.org/wp-content/uploads/2026/08/Cybersecurity.pdf",
+        "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-threats-software",
+      "section": "Reduce Exposure",
+      "objectives": [
+        "CS-CTV-01",
+        "CS-CTV-04",
+        "CS-CTV-07"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+        "https://www.pafbla.org/wp-content/uploads/2026/08/Cybersecurity.pdf"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-threats-human-crypto",
+      "section": "Social Engineering",
+      "objectives": [
+        "CS-CTV-05",
+        "CS-CTV-02"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.pafbla.org/wp-content/uploads/2026/08/Cybersecurity.pdf",
+        "https://pages.nist.gov/800-63-4/sp800-63b.html"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-threats-human-crypto",
+      "section": "DoS and DDoS Mechanics",
+      "objectives": [
+        "CS-CTV-06"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.cisa.gov/news-events/news/understanding-denial-service-attacks"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-threats-human-crypto",
+      "section": "Hash Collisions and Birthday Effect",
+      "objectives": [
+        "CS-CTV-08"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc6962.html"
+      ]
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "sheet": "cs-threats-human-crypto",
+      "section": "Downgrades and Wireless Weaknesses",
+      "objectives": [
+        "CS-CTV-08",
+        "CS-CTV-09"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc9325.html",
+        "https://www.pafbla.org/wp-content/uploads/2026/08/Cybersecurity.pdf"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-design-platforms",
+      "section": "Cloud responsibility and service models",
+      "objectives": [
+        "CS-SD-01"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/security-and-compliance.html"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-design-platforms",
+      "section": "Cloud choices, effects, and shared duties",
+      "objectives": [
+        "CS-SD-01"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/security-and-compliance.html"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-design-platforms",
+      "section": "Microservices and API security",
+      "objectives": [
+        "CS-SD-02"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204.pdf"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-design-platforms",
+      "section": "Distributed policy and complexity",
+      "objectives": [
+        "CS-SD-02"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204.pdf"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-design-isolation",
+      "section": "Segmentation and trust boundaries",
+      "objectives": [
+        "CS-SD-03"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/207/final"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-design-isolation",
+      "section": "Test segment policy and verify boundaries",
+      "objectives": [
+        "CS-SD-03"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/207/final"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-design-isolation",
+      "section": "Virtual machines and containers",
+      "objectives": [
+        "CS-SD-04"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-design-isolation",
+      "section": "IoT risks and safer deployment",
+      "objectives": [
+        "CS-SD-04",
+        "CS-SD-05"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/",
+        "https://csrc.nist.gov/pubs/ir/8259/a/final"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-design-resilience",
+      "section": "Backup methods and recovery",
+      "objectives": [
+        "CS-SD-06"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-design-resilience",
+      "section": "RAID, UPS, and CIA design cases",
+      "objectives": [
+        "CS-SD-06",
+        "CS-SD-07"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-design-resilience",
+      "section": "Security testing and architecture",
+      "objectives": [
+        "CS-SD-08"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204.pdf"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-design-resilience",
+      "section": "Evidence, remediation, and retesting",
+      "objectives": [
+        "CS-SD-08",
+        "CS-SD-06"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204.pdf",
+        "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-data-cryptography",
+      "section": "Symmetric and public-key cryptography",
+      "objectives": [
+        "CS-NDS-01",
+        "CS-NDS-02"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-data-cryptography",
+      "section": "Signatures, exchange, and key limits",
+      "objectives": [
+        "CS-NDS-01",
+        "CS-NDS-02"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-data-cryptography",
+      "section": "Caesar and substitution ciphers",
+      "objectives": [
+        "CS-NDS-03"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://cs50.harvard.edu/x/2026/psets/2/caesar/"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-data-cryptography",
+      "section": "Hashing, blockchain, and trust limits",
+      "objectives": [
+        "CS-NDS-07",
+        "CS-NDS-01"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://csrc.nist.gov/projects/hash-functions",
+        "https://www.nist.gov/blockchain",
+        "https://www.rfc-editor.org/rfc/rfc9162"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-data-access",
+      "section": "Three states of data",
+      "objectives": [
+        "CS-NDS-04"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-data-access",
+      "section": "MAC, DAC, and RBAC models",
+      "objectives": [
+        "CS-NDS-05"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://csrc.nist.gov/glossary/term/mandatory_access_control",
+        "https://csrc.nist.gov/glossary/term/discretionary_access_control",
+        "https://csrc.nist.gov/glossary/term/role_based_access_control"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-data-access",
+      "section": "Authentication and MFA",
+      "objectives": [
+        "CS-NDS-06"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/63/4/final"
+      ]
+    },
+    {
+      "module": "cs-design-data",
+      "sheet": "cs-data-access",
+      "section": "Certificates, tokens, and policy",
+      "objectives": [
+        "CS-NDS-06",
+        "CS-SD-02"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/63/4/final",
+        "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204.pdf"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-operations-policy",
+      "section": "Policies and recovery plans",
+      "objectives": [
+        "CS-SOM-01",
+        "CS-SOM-02"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-34r1.pdf",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-operations-policy",
+      "section": "Recovery targets and exercise",
+      "objectives": [
+        "CS-SOM-02"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-34r1.pdf"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-operations-policy",
+      "section": "Secure messaging and email",
+      "objectives": [
+        "CS-SOM-05"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc8446",
+        "https://www.cisa.gov/sites/default/files/2025-03/Phishing%20Guidance%20-%20Stopping%20the%20Attack%20Cycle%20at%20Phase%20One%20508.pdf",
+        "https://www.nccoe.nist.gov/publication/1800-16/VolB/index.html"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-operations-policy",
+      "section": "Data minimization and change control",
+      "objectives": [
+        "CS-SOM-05",
+        "CS-SOM-06"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.nist.gov/publications/de-identifying-government-datasets-techniques-and-governance",
+        "https://csrc.nist.gov/glossary/term/masking",
+        "https://www.nccoe.nist.gov/publication/1800-16/VolB/index.html",
+        "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-128.pdf"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-operations-firewalls",
+      "section": "Firewall inspection models",
+      "objectives": [
+        "CS-SOM-03"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-operations-firewalls",
+      "section": "NGFW, WAF, and limits",
+      "objectives": [
+        "CS-SOM-03"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-operations-firewalls",
+      "section": "ACL rules and least privilege",
+      "objectives": [
+        "CS-SOM-04"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-operations-firewalls",
+      "section": "Segmentation, tests, and operation",
+      "objectives": [
+        "CS-SOM-04"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-mitigation-protocols",
+      "section": "SSH, HTTPS, TLS, and WPA2",
+      "objectives": [
+        "CS-SPM-01"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc4251",
+        "https://www.rfc-editor.org/rfc/rfc8446",
+        "https://www.nccoe.nist.gov/publication/1800-16/VolB/index.html"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-mitigation-protocols",
+      "section": "Certificates and trust",
+      "objectives": [
+        "CS-SPM-06"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc5280",
+        "https://www.nccoe.nist.gov/publication/1800-16/VolB/index.html",
+        "https://www.rfc-editor.org/rfc/rfc8446"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-mitigation-protocols",
+      "section": "IDS and IPS mechanisms",
+      "objectives": [
+        "CS-SPM-02"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-94.pdf"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-mitigation-protocols",
+      "section": "Malware, phishing, and data transformation",
+      "objectives": [
+        "CS-SPM-03",
+        "CS-SPM-04"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.cisa.gov/sites/default/files/2025-03/Phishing%20Guidance%20-%20Stopping%20the%20Attack%20Cycle%20at%20Phase%20One%20508.pdf",
+        "https://csrc.nist.gov/glossary/term/masking",
+        "https://www.nist.gov/publications/de-identifying-government-datasets-techniques-and-governance",
+        "https://splashkit.io/guides/beyond-splashkit/cryptography/steganography/"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-mitigation-practice",
+      "section": "Current password requirements",
+      "objectives": [
+        "CS-SPM-05"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://pages.nist.gov/800-63-4/sp800-63b.html"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-mitigation-practice",
+      "section": "Password use and protection",
+      "objectives": [
+        "CS-SPM-05"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://pages.nist.gov/800-63-4/sp800-63b.html",
+        "https://www.cisa.gov/secure-our-world/use-strong-passwords"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-mitigation-practice",
+      "section": "Patches and secure change",
+      "objectives": [
+        "CS-SPM-07"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-128.pdf",
+        "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf"
+      ]
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "sheet": "cs-mitigation-practice",
+      "section": "Version control and pen testing",
+      "objectives": [
+        "CS-SPM-07",
+        "CS-SPM-08"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-128.pdf",
+        "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-installation-soho-links",
+      "section": "SOHO edge and traffic controls",
+      "objectives": [
+        "ND-NIC-01",
+        "ND-NIC-02",
+        "ND-NIC-03"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-ethernet.html",
+        "https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-installation-soho-links",
+      "section": "Firewall rules and ACL behavior",
+      "objectives": [
+        "ND-NIC-03",
+        "ND-NSR-05",
+        "ND-NSR-06"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-installation-soho-links",
+      "section": "Wireless setup and physical media",
+      "objectives": [
+        "ND-NIC-04",
+        "ND-NIC-05",
+        "ND-NIC-06",
+        "ND-NIC-08",
+        "ND-NIC-12",
+        "ND-NSR-11"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-ethernet.html",
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-installation-soho-links",
+      "section": "Subnet masks and loopback",
+      "objectives": [
+        "ND-NIC-07",
+        "ND-NIC-08"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc3021"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-installation-physical-services",
+      "section": "Fiber and copper selection",
+      "objectives": [
+        "ND-NIC-04",
+        "ND-NIC-05"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-ethernet.html",
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-installation-physical-services",
+      "section": "Rack and blade installation",
+      "objectives": [
+        "ND-NIC-09"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-installation-physical-services",
+      "section": "Power, temperature, and UPS",
+      "objectives": [
+        "ND-NIC-10",
+        "ND-NSR-02"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-installation-physical-services",
+      "section": "Direct, shared, and server printing",
+      "objectives": [
+        "ND-NIC-11"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134171(v=ws.11)"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-security-access-platforms",
+      "section": "Threat defenses and least privilege",
+      "objectives": [
+        "ND-NSR-04",
+        "ND-NSR-05",
+        "ND-NSR-06"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html",
+        "https://www.cisa.gov/zero-trust-maturity-model"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-security-access-platforms",
+      "section": "Zero Trust and network admission",
+      "objectives": [
+        "ND-NSR-06",
+        "ND-NSR-07",
+        "ND-NSR-08"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.cisa.gov/zero-trust-maturity-model"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-security-access-platforms",
+      "section": "BitLocker and directory identity",
+      "objectives": [
+        "ND-NSR-06",
+        "ND-NSR-09"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/",
+        "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-security-access-platforms",
+      "section": "SELinux mandatory access control",
+      "objectives": [
+        "ND-NSR-09"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/using_selinux/index"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-security-recovery",
+      "section": "Disaster recovery planning",
+      "objectives": [
+        "ND-NSR-01",
+        "ND-NSR-02"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-security-recovery",
+      "section": "Backup types and restore assurance",
+      "objectives": [
+        "ND-NSR-02",
+        "ND-NSR-03"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-security-recovery",
+      "section": "IDS, IPS, updates, and response",
+      "objectives": [
+        "ND-NSR-04",
+        "ND-NSR-05",
+        "ND-NSR-10"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html",
+        "https://www.cisa.gov/zero-trust-maturity-model"
+      ]
+    },
+    {
+      "module": "nd-installation-security",
+      "sheet": "nd-security-recovery",
+      "section": "Wireless authentication and ACLs",
+      "objectives": [
+        "ND-NSR-06",
+        "ND-NSR-08",
+        "ND-NSR-11"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.cisa.gov/zero-trust-maturity-model",
+        "https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-administration-maintenance",
+      "section": "Maintenance and recovery",
+      "objectives": [
+        "ND-NA-01",
+        "ND-NA-06"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://ubuntu.com/server/docs/"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-administration-maintenance",
+      "section": "Accounts and permissions",
+      "objectives": [
+        "ND-NA-02",
+        "ND-NA-10"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://learn.microsoft.com/en-us/windows-server/get-started/overview",
+        "https://ubuntu.com/server/docs/",
+        "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/print",
+        "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-administration-maintenance",
+      "section": "SNMP and management data",
+      "objectives": [
+        "ND-NA-03",
+        "ND-NA-08"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.rfc-editor.org/rfc/rfc3411",
+        "https://www.rfc-editor.org/rfc/rfc3414",
+        "https://www.rfc-editor.org/rfc/rfc3418",
+        "https://www.rfc-editor.org/rfc/rfc1901",
+        "https://www.cisa.gov/news-events/alerts/2017/06/05/reducing-risk-snmp-abuse"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-administration-maintenance",
+      "section": "Traffic baselines and alerts",
+      "objectives": [
+        "ND-NA-07",
+        "ND-NA-08",
+        "ND-NA-09"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://www.rfc-editor.org/rfc/rfc3418",
+        "https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview",
+        "https://learn.microsoft.com/en-us/azure/load-balancer/distribution-mode-concepts",
+        "https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-custom-probe-overview"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-administration-troubleshooting",
+      "section": "Fault isolation and symptoms",
+      "objectives": [
+        "ND-NA-04",
+        "ND-NA-07"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ping",
+        "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig",
+        "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-administration-troubleshooting",
+      "section": "Read local configuration",
+      "objectives": [
+        "ND-NA-04",
+        "ND-NA-05"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig",
+        "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ping"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-administration-troubleshooting",
+      "section": "Path tools and limits",
+      "objectives": [
+        "ND-NA-05",
+        "ND-NA-04"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ping",
+        "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tracert"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-administration-troubleshooting",
+      "section": "Evidence and asset records",
+      "objectives": [
+        "ND-NA-07",
+        "ND-NA-10",
+        "ND-NA-08"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://www.rfc-editor.org/rfc/rfc3418",
+        "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/print"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-planning-requirements",
+      "section": "Translate business requirements",
+      "objectives": [
+        "ND-NP-01",
+        "ND-NP-08"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+        "https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-planning-requirements",
+      "section": "Network scope and physical scale",
+      "objectives": [
+        "ND-NP-01",
+        "ND-NP-02"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-planning-requirements",
+      "section": "Topology and failure domains",
+      "objectives": [
+        "ND-NP-03",
+        "ND-NP-04",
+        "ND-NP-09"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+        "https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-planning-requirements",
+      "section": "Windows Server or Linux",
+      "objectives": [
+        "ND-NP-05"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://learn.microsoft.com/en-us/windows-server/get-started/overview",
+        "https://ubuntu.com/server/docs/",
+        "https://www.redhat.com/en/topics/linux/what-is-linux"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-planning-tradeoffs",
+      "section": "Peer-to-peer or client-server",
+      "objectives": [
+        "ND-NP-06"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://learn.microsoft.com/en-us/windows-server/get-started/overview",
+        "https://ubuntu.com/server/docs/"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-planning-tradeoffs",
+      "section": "Cloud service benefits and costs",
+      "objectives": [
+        "ND-NP-07",
+        "ND-NP-08"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://learn.microsoft.com/en-us/windows-server/get-started/overview",
+        "https://ubuntu.com/server/docs/",
+        "https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview",
+        "https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-planning-tradeoffs",
+      "section": "Cost, throughput, and availability",
+      "objectives": [
+        "ND-NP-08",
+        "ND-NP-09"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview",
+        "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
+      ]
+    },
+    {
+      "module": "nd-administration-planning",
+      "sheet": "nd-planning-tradeoffs",
+      "section": "Service targets and design choice",
+      "objectives": [
+        "ND-NP-01",
+        "ND-NP-07",
+        "ND-NP-08",
+        "ND-NP-09"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview",
+        "https://learn.microsoft.com/en-us/windows-server/get-started/overview",
+        "https://ubuntu.com/server/docs/"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-protocols-environments",
+      "section": "Network Scale and Work Models",
+      "objectives": [
+        "ND-NPSA-01",
+        "ND-NPSA-06",
+        "ND-NPSA-07"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-protocols-environments",
+      "section": "Devices and Trust Boundaries",
+      "objectives": [
+        "ND-NPSA-02",
+        "ND-NPSA-05",
+        "ND-NPSA-07"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-protocols-environments",
+      "section": "Connectivity and Attack Patterns",
+      "objectives": [
+        "ND-NPSA-03",
+        "ND-NPSA-04"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-protocols-environments",
+      "section": "VPN and Authorized Capture",
+      "objectives": [
+        "ND-NPSA-02"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-protocols-troubleshooting",
+      "section": "Layers and Addressing Roles",
+      "objectives": [
+        "ND-NPSA-08",
+        "ND-NPSA-09"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+        "https://www.rfc-editor.org/rfc/rfc2131.html"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-protocols-troubleshooting",
+      "section": "TCP, UDP, DHCP, and Printed SMP",
+      "objectives": [
+        "ND-NPSA-09"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://www.rfc-editor.org/rfc/rfc9293.html",
+        "https://www.rfc-editor.org/rfc/rfc2131.html"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-protocols-troubleshooting",
+      "section": "Topology and Reachability Tests",
+      "objectives": [
+        "ND-NPSA-10",
+        "ND-NPSA-11"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-protocols-troubleshooting",
+      "section": "Layered Physical Diagnosis",
+      "objectives": [
+        "ND-NPSA-11"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+        "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+        "https://www.rfc-editor.org/rfc/rfc2131.html"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-roleplay-analysis",
+      "section": "Define the Problem and Criteria",
+      "objectives": [
+        "ND-RP-01",
+        "ND-RP-04"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-roleplay-analysis",
+      "section": "Compare Real Alternatives",
+      "objectives": [
+        "ND-RP-02",
+        "ND-RP-04"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-roleplay-analysis",
+      "section": "Plan Feasible Implementation",
+      "objectives": [
+        "ND-RP-03",
+        "ND-RP-04"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-roleplay-analysis",
+      "section": "Connect Design to Business Value",
+      "objectives": [
+        "ND-RP-03",
+        "ND-RP-04"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-roleplay-delivery",
+      "section": "Organize a Decision Briefing",
+      "objectives": [
+        "ND-RP-05",
+        "ND-RP-01",
+        "ND-RP-02",
+        "ND-RP-03"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-roleplay-delivery",
+      "section": "Communicate with Confidence",
+      "objectives": [
+        "ND-RP-06",
+        "ND-RP-05",
+        "ND-RP-04"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-roleplay-delivery",
+      "section": "Answer Judges Completely",
+      "objectives": [
+        "ND-RP-07",
+        "ND-RP-04"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf"
+      ]
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "sheet": "nd-roleplay-delivery",
+      "section": "Rubric and Practice Boundaries",
+      "objectives": [
+        "ND-RP-01",
+        "ND-RP-02",
+        "ND-RP-03",
+        "ND-RP-04",
+        "ND-RP-05",
+        "ND-RP-06",
+        "ND-RP-07"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-discovery-opening",
+      "section": "Open with relevance",
+      "objectives": [
+        "SP-R-01"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Presentation%20Events/Sales-Presentation.pdf",
+        "https://academy.hubspot.com/courses/inbound-sales"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-discovery-opening",
+      "section": "Find the need",
+      "objectives": [
+        "SP-R-02"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://academy.hubspot.com/courses/inbound-sales"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-discovery-opening",
+      "section": "Map people and priorities",
+      "objectives": [
+        "SP-R-02"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://academy.hubspot.com/courses/inbound-sales"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-discovery-opening",
+      "section": "Confirm before advising",
+      "objectives": [
+        "SP-R-02"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://academy.hubspot.com/courses/inbound-sales"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-product-value-evidence",
+      "section": "Explain product fit",
+      "objectives": [
+        "SP-R-03"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Presentation%20Events/Sales-Presentation.pdf",
+        "https://academy.hubspot.com/courses/inbound-sales"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-product-value-evidence",
+      "section": "Demonstrate accurately",
+      "objectives": [
+        "SP-R-03"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Presentation%20Events/Sales-Presentation.pdf"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-product-value-evidence",
+      "section": "Substantiate claims",
+      "objectives": [
+        "SP-R-03"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-product-value-evidence",
+      "section": "Calculate cost and return",
+      "objectives": [
+        "SP-R-03"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-objections-suggestion-close",
+      "section": "Listen and clarify",
+      "objectives": [
+        "SP-R-04"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://academy.hubspot.com/courses/inbound-sales"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-objections-suggestion-close",
+      "section": "Respond and check",
+      "objectives": [
+        "SP-R-04"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://academy.hubspot.com/courses/inbound-sales",
+        "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-objections-suggestion-close",
+      "section": "Suggest related value",
+      "objectives": [
+        "SP-R-05"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Presentation%20Events/Sales-Presentation.pdf",
+        "https://academy.hubspot.com/courses/inbound-sales"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-objections-suggestion-close",
+      "section": "Close as a clear choice",
+      "objectives": [
+        "SP-R-06"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://academy.hubspot.com/courses/inbound-sales",
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Presentation%20Events/Sales-Presentation.pdf"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-relationships-organization",
+      "section": "Build a reliable relationship",
+      "objectives": [
+        "SP-R-07"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://academy.hubspot.com/courses/inbound-sales"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-relationships-organization",
+      "section": "Organize buyer-centered content",
+      "objectives": [
+        "SP-R-08"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://www.toastmasters.org/resources/public-speaking-tips/how-to-overcome-your-fear-of-public-speaking",
+        "https://academy.hubspot.com/courses/inbound-sales"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-relationships-organization",
+      "section": "Manage time and transitions",
+      "objectives": [
+        "SP-R-08"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Presentation%20Events/Sales-Presentation.pdf",
+        "https://www.toastmasters.org/resources/public-speaking-tips/how-to-overcome-your-fear-of-public-speaking"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-relationships-organization",
+      "section": "Coordinate team handoffs",
+      "objectives": [
+        "SP-R-08"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Presentation%20Events/Sales-Presentation.pdf",
+        "https://www.toastmasters.org/resources/public-speaking-tips/how-to-overcome-your-fear-of-public-speaking"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-delivery-protocols",
+      "section": "Deliver clearly and responsively",
+      "objectives": [
+        "SP-R-09"
+      ],
+      "lines": [
+        5,
+        13
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Presentation%20Events/Sales-Presentation.pdf",
+        "https://www.toastmasters.org/resources/public-speaking-tips/how-to-overcome-your-fear-of-public-speaking"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-delivery-protocols",
+      "section": "Answer questions completely",
+      "objectives": [
+        "SP-R-10"
+      ],
+      "lines": [
+        15,
+        24
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Presentation%20Events/Sales-Presentation.pdf",
+        "https://academy.hubspot.com/courses/inbound-sales"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-delivery-protocols",
+      "section": "Know the spoken rating sheet",
+      "objectives": [
+        "SP-R-09",
+        "SP-R-10",
+        "SP-P-01"
+      ],
+      "lines": [
+        29,
+        37
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Presentation%20Events/Sales-Presentation.pdf"
+      ]
+    },
+    {
+      "module": "sales-course",
+      "sheet": "sp-delivery-protocols",
+      "section": "Follow event rules and ownership",
+      "objectives": [
+        "SP-P-01"
+      ],
+      "lines": [
+        39,
+        48
+      ],
+      "sources": [
+        "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Presentation%20Events/Sales-Presentation.pdf"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "module": "ni-foundations",
+      "id": "osi",
+      "title": "The OSI Model",
+      "url": "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/",
+      "reading": "fetched",
+      "scope": "Read overview and layer descriptions: seven-layer conceptual troubleshooting model, including functions of application through physical layers; modern Internet does not strictly map to OSI."
+    },
+    {
+      "module": "ni-foundations",
+      "id": "rfc791",
+      "title": "RFC 791: Internet Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc791",
+      "reading": "fetched",
+      "scope": "Read abstract and introductory IP operation material on connectionless datagrams, addressing, routing and gateways."
+    },
+    {
+      "module": "ni-foundations",
+      "id": "rfc8200",
+      "title": "RFC 8200: IPv6 Specification",
+      "url": "https://www.rfc-editor.org/rfc/rfc8200",
+      "reading": "fetched",
+      "scope": "Read specification overview and IPv6 addressing/header material; grounds IPv6 protocol facts."
+    },
+    {
+      "module": "ni-foundations",
+      "id": "rfc4632",
+      "title": "RFC 4632: Classless Inter-domain Routing",
+      "url": "https://www.rfc-editor.org/rfc/rfc4632",
+      "reading": "fetched",
+      "scope": "Read abstract and prefix notation sections: explicit prefix lengths and classless address assignment/aggregation."
+    },
+    {
+      "module": "ni-foundations",
+      "id": "cisco-subnet",
+      "title": "Configure IP Addresses and Unique Subnets",
+      "url": "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+      "reading": "fetched",
+      "scope": "Read IP/subnet definitions, dotted decimal explanation and subnet examples; older tutorial, classful assumptions are historical only."
+    },
+    {
+      "module": "ni-foundations",
+      "id": "nist-cloud",
+      "title": "NIST Definition of Cloud Computing",
+      "url": "https://www.nist.gov/publications/nist-definition-cloud-computing",
+      "reading": "fetched",
+      "scope": "Read NIST SP 800-145 abstract and definition: on-demand shared configurable resources, rapid provisioning/release, measured service and IaaS/PaaS/SaaS models."
+    },
+    {
+      "module": "ni-foundations",
+      "id": "3gpp-5g",
+      "title": "5G System Overview",
+      "url": "https://www.3gpp.org/technologies/5g-system-overview",
+      "reading": "fetched",
+      "scope": "Read 3GPP introduction, system architecture and service descriptions: UE, radio access network and core; eMBB, massive IoT and critical/URLLC goals. Goals are not universal service guarantees."
+    },
+    {
+      "module": "ni-foundations",
+      "id": "ieee-80211",
+      "title": "IEEE 802.11 Working Group",
+      "url": "https://www.ieee802.org/11/",
+      "reading": "fetched",
+      "scope": "Read working-group scope describing WLAN MAC and PHY standardization; this does not support universal range or throughput figures."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "commscope6a",
+      "title": "CommScope Category 6A Cables",
+      "url": "https://www.commscope.com/product-type/cables/twisted-pair-cables/category-6a-cables/",
+      "reading": "fetched",
+      "scope": "Read the manufacturer explanation that Cat 6A structured cabling supports 10 Gigabit Ethernet channels up to 100 m. This is conditional channel capability, not a guarantee for every device, optic, or installation."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "cisa",
+      "title": "CISA phishing and DoS guidance",
+      "url": "https://www.cisa.gov/news-events/news/understanding-denial-service-attacks",
+      "reading": "fetched",
+      "scope": "DoS flooding, overload, botnet/distributed effects; phishing page also fetched for warning signs."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "nist63",
+      "title": "NIST SP 800-63-4 Digital Identity Guidelines",
+      "url": "https://csrc.nist.gov/pubs/sp/800/63/4/final",
+      "reading": "fetched",
+      "scope": "Publication scope describes proofing, authentication, authenticators, federation and assertions; technical detail here limited to those concepts."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "fips180",
+      "title": "NIST FIPS 180-4 Secure Hash Standard",
+      "url": "https://csrc.nist.gov/pubs/fips/180-4/upd1/final",
+      "reading": "fetched",
+      "scope": "Digests detect changed messages; hash standard publication overview."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc4271",
+      "title": "RFC 4271 BGP-4",
+      "url": "https://www.rfc-editor.org/rfc/rfc4271.html",
+      "reading": "fetched",
+      "scope": "Abstract and status: inter-AS reachability, AS paths, policy, CIDR; Standards Track."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc2328",
+      "title": "RFC 2328 OSPFv2",
+      "url": "https://www.rfc-editor.org/rfc/rfc2328.html",
+      "reading": "fetched",
+      "scope": "Abstract: link-state, intra-AS topology database, shortest-path tree, areas and equal-cost paths."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc7868",
+      "title": "RFC 7868 EIGRP",
+      "url": "https://www.rfc-editor.org/rfc/rfc7868.html",
+      "reading": "fetched",
+      "scope": "Abstract/status: distance-vector basis, DUAL, informational not Standards Track."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc959",
+      "title": "RFC 959 FTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc959.html",
+      "reading": "fetched",
+      "scope": "FTP purpose and control/data transfer model."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc4217",
+      "title": "RFC 4217 Securing FTP with TLS",
+      "url": "https://www.rfc-editor.org/rfc/rfc4217.html",
+      "reading": "fetched",
+      "scope": "FTP TLS extension and security/authentication mechanisms; distinguishes FTPS from SFTP."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc5321",
+      "title": "RFC 5321 SMTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc5321.html",
+      "reading": "fetched",
+      "scope": "SMTP electronic mail transport and submission role."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc1035",
+      "title": "RFC 1035 DNS",
+      "url": "https://www.rfc-editor.org/rfc/rfc1035.html",
+      "reading": "fetched",
+      "scope": "DNS query/response and record formats."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc2131",
+      "title": "RFC 2131 DHCP",
+      "url": "https://www.rfc-editor.org/rfc/rfc2131.html",
+      "reading": "fetched",
+      "scope": "DHCP address allocation and host configuration framework."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc9293",
+      "title": "RFC 9293 TCP",
+      "url": "https://www.rfc-editor.org/info/rfc9293/",
+      "reading": "fetched",
+      "scope": "TCP transport protocol specification."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc768",
+      "title": "RFC 768 UDP",
+      "url": "https://www.rfc-editor.org/rfc/rfc768.html",
+      "reading": "fetched",
+      "scope": "Datagram service; delivery and duplicate protection not guaranteed."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc3022",
+      "title": "RFC 3022 Traditional NAT",
+      "url": "https://www.rfc-editor.org/rfc/rfc3022.html",
+      "reading": "fetched",
+      "scope": "Address translation and NAPT address/port mapping; informational RFC."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc8446",
+      "title": "RFC 8446 TLS 1.3",
+      "url": "https://www.rfc-editor.org/rfc/rfc8446.html",
+      "reading": "fetched",
+      "scope": "TLS channel design goal against eavesdropping, tampering and message forgery."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc2865",
+      "title": "RFC 2865 RADIUS",
+      "url": "https://www.rfc-editor.org/rfc/rfc2865",
+      "reading": "fetched",
+      "scope": "Read abstract and operation: NAS exchanges authentication, authorization and configuration with shared server; assigned UDP port 1812; limitations noted."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "rfc8907",
+      "title": "RFC 8907 TACACS+",
+      "url": "https://www.rfc-editor.org/rfc/rfc8907",
+      "reading": "fetched",
+      "scope": "Read introduction: centralized device administration; authentication, authorization and accounting are separate; TCP port 49; informational status and deployment cautions."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "iana-ports",
+      "title": "IANA Service Name and Port Number Registry",
+      "url": "https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.csv",
+      "reading": "fetched",
+      "scope": "Read the CSV rows for TCP 21 FTP control, 22 SSH, 25 SMTP, TCP/UDP 53 domain, UDP 67 bootps and 68 bootpc, TCP 80 HTTP, UDP 123 NTP, TCP 443 HTTPS, TCP 465 submissions, and TCP 587 submission. Registry reservations do not imply every service uses all registered transports or that a port guarantees security."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "ciscoeth-old",
+      "title": "Cisco Ethernet Auto-Negotiation Guide",
+      "url": "https://www.cisco.com/c/en/us/support/docs/lan-switching/ethernet/10561-3.html",
+      "reading": "fetched",
+      "scope": "Operational 10/100/1000 Ethernet negotiation and NIC/switch compatibility; not a normative distance table."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "ciscorf",
+      "title": "Cisco Wireless RF Reference Guide",
+      "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/technical-reference/wireless-rf-reference-guide.pdf",
+      "reading": "fetched",
+      "scope": "Read Wi-Fi generations table, band discussions, RF fundamentals; table maximum link rates are conditional and not throughput promises."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "ciscoeth",
+      "title": "Cisco Ethernet Auto-Negotiation Guide",
+      "url": "https://www.cisco.com/c/en/us/support/docs/lan-switching/ethernet/10561-3.html",
+      "reading": "fetched",
+      "scope": "Read operational Ethernet speed/duplex negotiation and compatibility tables; this source does not establish PHY distances."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "ciscowpa",
+      "title": "Cisco Catalyst 9800 WPA3 Configuration Guide",
+      "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/17-15/config-guide/b_wl_17_15_cg/m_wpa3.html",
+      "reading": "fetched",
+      "scope": "WPA3 SAE exchange, online/offline guessing resistance, AP/client compatibility and supported configurations."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "ciscoether",
+      "title": "Cisco Ethernet 10BaseT and 100BaseTX Cable Specs",
+      "url": "https://www.cisco.com/c/en/us/support/docs/routers/10000-series-routers/46792-ethbase.html",
+      "reading": "fetched",
+      "scope": "Read tables showing Ethernet PHY media, 10BaseT 100m and 100BaseTX 100m segment; legacy guide, use only for named variants."
+    },
+    {
+      "module": "ni-security-protocols",
+      "id": "ciscotrans",
+      "title": "Cisco Nexus 7000 Transceiver Specifications",
+      "url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/hw/nexus7000/installation/guide/n7k_hig_book/n7k_connect_specs.html",
+      "reading": "fetched",
+      "scope": "Read transceiver tables; optical reach varies with model, fiber grade, wavelength and loss budget."
+    },
+    {
+      "module": "ni-hardware",
+      "id": "redhat-raid",
+      "title": "Red Hat Enterprise Linux 9: Managing RAID",
+      "url": "https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/managing_storage_devices/managing-raid_managing-storage-devices",
+      "reading": "fetched",
+      "scope": "Read overview and section 18.3 definitions for striping, mirroring, parity, RAID 6 recovery after any two drive losses, and Linux MD RAID 10 variants. The notes qualify the conventional four-disk mirrored-pair RAID 10 layout; Linux MD can support other layouts, including three drives."
+    },
+    {
+      "module": "ni-hardware",
+      "id": "fbla-scope",
+      "title": "FBLA Networking Infrastructures 2026-27, pp. 5-6",
+      "url": "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Objective%20Tests/Networking-Infrastructures.pdf",
+      "reading": "fetched",
+      "scope": "Read the current Network Hardware and Connectivity objectives; establishes assignment scope, not the technical explanations."
+    },
+    {
+      "module": "ni-hardware",
+      "id": "cisco-ethernet",
+      "title": "Cisco: What Is Ethernet?",
+      "url": "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-ethernet.html",
+      "reading": "fetched",
+      "scope": "Read Ethernet media, IEEE 802.3, Layer 1/2, MAC frames and switching, router packet forwarding between networks, Ethernet cabling and power. Cisco learning explanation; not a universal reach or product compatibility specification."
+    },
+    {
+      "module": "ni-hardware",
+      "id": "cisco-ucs-blade",
+      "title": "Cisco UCS 5100 Series Blade Server Chassis Data Sheet",
+      "url": "https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-5100-series-blade-server-chassis/data_sheet_c78-526830.html",
+      "reading": "fetched",
+      "scope": "Read chassis capacity, shared power supplies, hot-swappable fans, fabric/midplane, redundancy options and integrated management details; this is one specific blade implementation, not a universal blade design."
+    },
+    {
+      "module": "ni-hardware",
+      "id": "corning-lc",
+      "title": "Corning: Heat-Cure Connector, LC",
+      "url": "https://ecatalog.corning.com/optical-communications/US/en/Fiber-Optic-Connectivity/Connectors/Heat-Cure-Epoxy-Polish/Heat-Cure-Connector%2C-LC/p/heat-cure-connector-lc",
+      "reading": "fetched",
+      "scope": "Read manufacturer product description and variants: LC connectors offered for single-mode and multimode fiber, with distinct fiber categories and UPC/APC options. Illustrates that connector family alone does not establish optics compatibility."
+    },
+    {
+      "module": "ni-hardware",
+      "id": "ms-storage-fault",
+      "title": "Microsoft Learn: Storage Spaces Direct fault tolerance",
+      "url": "https://learn.microsoft.com/en-us/windows-server/storage/storage-spaces/fault-tolerance",
+      "reading": "fetched",
+      "scope": "Read mirror and parity mechanisms, single/dual parity tradeoffs and failure tolerance tables. Storage Spaces Direct is a software-defined clustered implementation; used only to explain mirror/parity concepts, not as a claim that its server counts equal disk counts for RAID."
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "id": "fbla-cyber",
+      "title": "2026-2027 FBLA Cybersecurity Guidelines",
+      "url": "https://www.pafbla.org/wp-content/uploads/2026/08/Cybersecurity.pdf",
+      "reading": "fetched",
+      "scope": "Read study guide pages 5-6 for current scope and wording of assigned Security Fundamentals and Cyber Threats and Vulnerabilities objectives; used only to establish scope, not technical mechanisms."
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "id": "nist-63a",
+      "title": "NIST SP 800-63A-4: Identity Proofing and Enrollment",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63a.html",
+      "reading": "fetched",
+      "scope": "Read identity proofing overview and passages on resolution, evidence/attribute validation, verification of rightful owner, enrollment, and assurance limits."
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "id": "nist-63b",
+      "title": "NIST SP 800-63B-4: Authentication and Authenticator Management",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "reading": "fetched",
+      "scope": "Read authentication definition, AAL summaries, distinct-factor MFA, authenticator control, phishing resistance, OTP and out-of-band limitations."
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "id": "nist-attest",
+      "title": "NIST CSRC Glossary: Attestation",
+      "url": "https://csrc.nist.gov/glossary/term/attestation",
+      "reading": "fetched",
+      "scope": "Read definition: digitally sign hardware-secured measurements and have requester validate signature and measurements; glossary term context is SP 1800-19B."
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "id": "nist-honeypot",
+      "title": "NIST CSRC Glossary: Honeypot",
+      "url": "https://csrc.nist.gov/glossary/term/honeypot",
+      "reading": "fetched",
+      "scope": "Read definition of an attractive system/resource for potential intruders. NIST glossary term identifies resource examples, not a complete taxonomy of honeynet or honeyfile."
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "id": "nist-207",
+      "title": "NIST SP 800-207: Zero Trust Architecture",
+      "url": "https://csrc.nist.gov/pubs/sp/800/207/final",
+      "reading": "fetched",
+      "scope": "Read official abstract: no implicit trust based solely on physical/network location; ZTA focuses on users, assets, and resources. Full publication not read."
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "id": "owasp-sqli",
+      "title": "OWASP SQL Injection Prevention Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+      "reading": "fetched",
+      "scope": "Read SQL injection mechanism, parameterized query, allow-list structural choices, and least-privilege passages."
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "id": "cisa-dos",
+      "title": "CISA: Understanding Denial-of-Service Attacks",
+      "url": "https://www.cisa.gov/news-events/news/understanding-denial-service-attacks",
+      "reading": "fetched",
+      "scope": "Read DoS flood and SYN-flood mechanics, botnet-based DDoS, compromised devices as victims, monitoring, and response. Page is explicitly archived/outdated; use for basic mechanism only."
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "id": "rfc9325",
+      "title": "RFC 9325: Recommendations for Secure Use of TLS/DTLS",
+      "url": "https://www.rfc-editor.org/rfc/rfc9325.html",
+      "reading": "fetched",
+      "scope": "Read TLS version/fallback guidance: TLS 1.2 clients must not fall back to earlier deprecated versions; document recommends modern secure deployment and notes guidance is point-in-time."
+    },
+    {
+      "module": "cs-fundamentals-threats",
+      "id": "rfc6962",
+      "title": "RFC 6962: Certificate Transparency",
+      "url": "https://www.rfc-editor.org/rfc/rfc6962.html",
+      "reading": "fetched",
+      "scope": "Read hash-tree definitions: SHA-256 digests, distinct leaf/node prefixes for second-preimage resistance, and proof construction. Does not state birthday bound; used for hash/digest context only."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "nist204",
+      "title": "NIST SP 800-204, Security Strategies for Microservices-based Application Systems",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204.pdf",
+      "reading": "fetched",
+      "scope": "Read pp. 1, 6-8, 15-16, 17-19, 21-24, 25-30, 33-36. Microservice API security features, identity/access management, discovery, secure communications, monitoring, gateway/service mesh, disadvantages, threats and strategies."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "aws",
+      "title": "AWS Security and Compliance: Shared Responsibility",
+      "url": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/security-and-compliance.html",
+      "reading": "fetched",
+      "scope": "Read shared responsibility passages: AWS security of the cloud and customer security in the cloud; AWS manages facilities/hardware while customer retains control of content, platforms, applications, systems, and networks."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "docker",
+      "title": "Docker Docs: What is a container?",
+      "url": "https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/",
+      "reading": "fetched",
+      "scope": "Read explanation and Containers versus VMs: containers are isolated processes sharing a kernel; a VM includes an operating system and its own kernel; VMs and containers may be used together."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "nist-hash",
+      "title": "NIST CSRC Hash Functions",
+      "url": "https://csrc.nist.gov/projects/hash-functions",
+      "reading": "fetched",
+      "scope": "Read hash definition mapping arbitrary-length messages to fixed-length digests, approved FIPS hash families, stated expected hash properties, and collision-resistance strength table."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "nist-blockchain",
+      "title": "NIST: Blockchain",
+      "url": "https://www.nist.gov/blockchain",
+      "reading": "fetched",
+      "scope": "Read NIST description of shared tamper-evident/tamper-resistant ledgers, blocks cryptographically linked to prior blocks, replicated nodes, validation and consensus; NIST notes different implementations and research into security guarantees."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "rfc9162",
+      "title": "RFC 9162: Certificate Transparency Version 2.0",
+      "url": "https://www.rfc-editor.org/rfc/rfc9162",
+      "reading": "fetched",
+      "scope": "Read Merkle-tree passages: efficient inclusion and consistency proofs, append-only log property, and detecting log misbehavior. This is a concrete hash-tree integrity mechanism, not evidence that ledger inputs are true."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "nist57",
+      "title": "NIST SP 800-57 Part 1 Rev. 5, Key Management",
+      "url": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final",
+      "reading": "fetched",
+      "scope": "Read publication description on key types, security services, cryptographic keying material protection and key-management practices. Landing metadata is used only for those stated scopes."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "nist63",
+      "title": "NIST SP 800-63-4, Digital Identity Guidelines",
+      "url": "https://csrc.nist.gov/pubs/sp/800/63/4/final",
+      "reading": "fetched",
+      "scope": "Read publication description identifying identity proofing, authentication, enrollment, authenticators, management, authentication protocols, federation, and assertions; use only for these scope distinctions."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "nist207",
+      "title": "NIST SP 800-207, Zero Trust Architecture",
+      "url": "https://csrc.nist.gov/pubs/sp/800/207/final",
+      "reading": "fetched",
+      "scope": "Read NIST summary: no implicit trust based solely on network location or asset ownership; supports explicit per-resource access framing and segmentation discussion."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "nist34",
+      "title": "NIST SP 800-34 Rev. 1, Contingency Planning Guide",
+      "url": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
+      "reading": "fetched",
+      "scope": "Read publication overview describing contingency planning process, plan development, organizational resiliency, and relationship to incident/emergency plans; not used as evidence for backup copy mechanics."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "nistir8259a",
+      "title": "NISTIR 8259A IoT Device Cybersecurity Capability Core Baseline",
+      "url": "https://csrc.nist.gov/pubs/ir/8259/a/final",
+      "reading": "fetched",
+      "scope": "Read NIST abstract: baseline device capabilities support common controls protecting devices, device data, systems, and ecosystems; detailed capability descriptions not retrieved."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "nist-mac",
+      "title": "NIST CSRC Glossary: Mandatory Access Control",
+      "url": "https://csrc.nist.gov/glossary/term/mandatory_access_control",
+      "reading": "fetched",
+      "scope": "Read glossary definition: uniform policy across subjects/objects constrains information passing, privilege delegation, security-attribute changes, and access-rule changes, with trusted-subject exceptions."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "nist-dac",
+      "title": "NIST CSRC Glossary: Discretionary Access Control",
+      "url": "https://csrc.nist.gov/glossary/term/discretionary_access_control",
+      "reading": "fetched",
+      "scope": "Read glossary definition: object owner or authorized controller decides which subjects receive which object access rights."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "nist-rbac",
+      "title": "NIST CSRC Glossary: Role-Based Access Control",
+      "url": "https://csrc.nist.gov/glossary/term/role_based_access_control",
+      "reading": "fetched",
+      "scope": "Read glossary definition: user access follows role-linked authorizations typically reflecting organizational functions; role hierarchies may inherit permissions."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "rfc20",
+      "title": "RFC 20: ASCII format for Network Interchange",
+      "url": "https://www.rfc-editor.org/rfc/rfc20",
+      "reading": "fetched",
+      "scope": "Read for ASCII character encoding context only; not evidence for substitution-cipher security."
+    },
+    {
+      "module": "cs-design-data",
+      "id": "cs50-caesar",
+      "title": "Harvard CS50x: Caesar",
+      "url": "https://cs50.harvard.edu/x/2026/psets/2/caesar/",
+      "reading": "fetched",
+      "scope": "Read Problem to Solve and the rotation formula (p+k) modulo 26, wraparound and reverse-shift examples, plus the explicit warning that this is not secure by modern standards. The ATTACK example is original arithmetic independently checked from that rule."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "nist34",
+      "title": "NIST SP 800-34 Rev. 1 Contingency Planning Guide",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-34r1.pdf",
+      "reading": "fetched",
+      "scope": "Read Executive Summary and Ch. 1-2 (PDF pp. 13-26): plan distinctions, contingency process, BCP/DRP, resilience. Also inspected Ch. 3 TOC; detailed RTO/RPO passages not separately retrieved."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "nist41",
+      "title": "NIST SP 800-41 Rev. 1 Firewall Guidelines",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf",
+      "reading": "fetched",
+      "scope": "Read PDF pp. 1-18: firewall policy, packet filtering, stateful inspection, application firewalls, proxy and WAF overview; allowed traffic, specific rules, testing and management."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "nist128",
+      "title": "NIST SP 800-128 Security-Focused Configuration Management",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-128.pdf",
+      "reading": "fetched",
+      "scope": "Read PDF pp. 48-53, Sec. 3.3: access restrictions, requested/evaluated/tested/approved changes, verify deployment, emergency change, impact analysis, retain old baseline for rollback."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "nist63b",
+      "title": "NIST SP 800-63B-4 Authentication and Authenticator Management",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "reading": "fetched",
+      "scope": "Read normative password and authenticator requirements, Sec. 3.1.1 and AAL summary: 15-character single-factor and 8-character MFA-only minimums, blocklist, composition, manager, rate limiting."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "rfc8446",
+      "title": "RFC 8446 TLS 1.3",
+      "url": "https://www.rfc-editor.org/rfc/rfc8446",
+      "reading": "fetched",
+      "scope": "Read Sections 1-2: secure-channel goals, handshake negotiation and authentication, record protection, and weaker replay/forward-secrecy properties of 0-RTT."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "rfc4251",
+      "title": "RFC 4251 SSH Protocol Architecture",
+      "url": "https://www.rfc-editor.org/rfc/rfc4251",
+      "reading": "fetched",
+      "scope": "Read Sections 1, 4.1, 4.4 and 9: SSH transport properties, host-key verification, client authentication, and configuration policy."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "rfc5280",
+      "title": "RFC 5280 X.509 Certificate and CRL Profile",
+      "url": "https://www.rfc-editor.org/rfc/rfc5280",
+      "reading": "fetched",
+      "scope": "Read Sections 3.1-3.3: CA-signed key-to-subject binding, certification paths, trust, CRLs and revocation limits."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "nist180016",
+      "title": "NIST SP 1800-16 TLS Server Certificate Management",
+      "url": "https://www.nccoe.nist.gov/publication/1800-16/VolB/index.html",
+      "reading": "fetched",
+      "scope": "Read certificate background and issuance process: server identity, key-pair CSR, RA review, CA issuance, chain validation, expiry, private-key risks."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "nist94",
+      "title": "NIST SP 800-94 IDPS Guide",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-94.pdf",
+      "reading": "fetched",
+      "scope": "Read Executive Summary and Ch. 2: IDS/IPS purposes and signature, anomaly, and stateful protocol detection methodologies. Document dates from 2007; platform-neutral concepts only."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "nist115",
+      "title": "NIST SP 800-115 Technical Guide to Security Testing",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf",
+      "reading": "fetched",
+      "scope": "Read Executive Summary, Ch. 1-2, and targeted Ch. 5-7 passages: assessment planning, risk, scope, execution/data handling, pen-test phases/logistics, reporting, and ROE appendix identified in TOC."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "nistmask",
+      "title": "NIST CSRC Glossary: Masking",
+      "url": "https://csrc.nist.gov/glossary/term/masking",
+      "reading": "fetched",
+      "scope": "Read definition: removing/replacing a field in a way that does not preserve analytic utility; examples include asterisks or random pseudonyms."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "nistdeid",
+      "title": "NIST SP 800-188 De-Identifying Government Datasets",
+      "url": "https://www.nist.gov/publications/de-identifying-government-datasets-techniques-and-governance",
+      "reading": "fetched",
+      "scope": "Read summary of de-identification goals, risk evaluation, removing identifiers, transforming quasi-identifiers, synthetic data, and warning that simple masking may not suffice."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "cisa-phish",
+      "title": "CISA et al. Phishing Guidance: Phase One",
+      "url": "https://www.cisa.gov/sites/default/files/2025-03/Phishing%20Guidance%20-%20Stopping%20the%20Attack%20Cycle%20at%20Phase%20One%20508.pdf",
+      "reading": "fetched",
+      "scope": "Read pp. 3-12: phishing definitions, email/link/attachment lures, filtering, least privilege, patching, training, incident response, and reporting."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "cisa-password",
+      "title": "CISA Use Strong Passwords",
+      "url": "https://www.cisa.gov/secure-our-world/use-strong-passwords",
+      "reading": "fetched",
+      "scope": "Read guidance on unique passwords, password managers, long/random passwords, and MFA."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "nistsp80053",
+      "title": "NIST SP 800-53 Rev. 5 Controls Catalog",
+      "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+      "reading": "fetched",
+      "scope": "Read publication overview and control families. Catalog scope supports governance context; no individual control text claimed."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "steg-guide",
+      "title": "SplashKit Steganography Guide",
+      "url": "https://splashkit.io/guides/beyond-splashkit/cryptography/steganography/",
+      "reading": "fetched",
+      "scope": "Read guide explaining carrier media and image LSB embedding; explicitly distinguishes hiding message existence from encryption and says combine with encryption for sensitive content."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "cisa-wifi",
+      "title": "CISA Securing Wireless Networks",
+      "url": "https://www.cisa.gov/secure-our-world/secure-your-wireless-network",
+      "reading": "recommended",
+      "scope": "Not fetched; no claim depends on this route."
+    },
+    {
+      "module": "cs-operations-mitigation",
+      "id": "fbla-scope",
+      "title": "FBLA 2026-27 Cybersecurity objectives inventory",
+      "url": "https://www.pafbla.org/wp-content/uploads/2026/08/Cybersecurity.pdf",
+      "reading": "recommended",
+      "scope": "Local objective inventory read; official PDF not fetched in this pass. Establishes assigned objective scope only, not technical evidence."
+    },
+    {
+      "module": "nd-installation-security",
+      "id": "fbla-nd",
+      "title": "FBLA Network Design 2026-27 Guidelines, study guide p. 6",
+      "url": "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+      "reading": "fetched",
+      "scope": "Read the current study-guide objective descriptions for installation/configuration and network security/recovery; establishes scope, not mechanisms."
+    },
+    {
+      "module": "nd-installation-security",
+      "id": "cisco-acl",
+      "title": "Cisco: Configure IP Access Lists",
+      "url": "https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html",
+      "reading": "fetched",
+      "scope": "Read ACL matching, ordered evaluation, implicit deny, direction/application, traffic criteria, and stateful inspection discussion. Platform-specific examples; not a universal firewall configuration recipe."
+    },
+    {
+      "module": "nd-installation-security",
+      "id": "rfc3021",
+      "title": "RFC 3021: Using 31-Bit Prefixes on IPv4 Point-to-Point Links",
+      "url": "https://www.rfc-editor.org/rfc/rfc3021",
+      "reading": "fetched",
+      "scope": "Read sections 1-3 and deployment notes: /31 uses both addresses as hosts only on point-to-point links; both endpoints must support it."
+    },
+    {
+      "module": "nd-installation-security",
+      "id": "microsoft-bitlocker",
+      "title": "Microsoft Learn: BitLocker Overview",
+      "url": "https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/",
+      "reading": "fetched",
+      "scope": "Read volume-encryption purpose, TPM/offline integrity role, startup protection, and recovery-key backup behavior; warns encryption without protected keys is insufficient."
+    },
+    {
+      "module": "nd-installation-security",
+      "id": "microsoft-adds",
+      "title": "Microsoft Learn: Active Directory Domain Services overview",
+      "url": "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
+      "reading": "fetched",
+      "scope": "Read directory objects, centralized account access, authentication, access control, policy administration, and replication. Distinguishes directory function from DNS naming."
+    },
+    {
+      "module": "nd-installation-security",
+      "id": "redhat-selinux",
+      "title": "Red Hat Enterprise Linux 9: Using SELinux",
+      "url": "https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/using_selinux/index",
+      "reading": "fetched",
+      "scope": "Read guide introduction: SELinux implements MAC; policy constrains how users/processes interact with files and devices. Platform-specific Linux control, not antivirus."
+    },
+    {
+      "module": "nd-installation-security",
+      "id": "cisa-zero-trust",
+      "title": "CISA Zero Trust Maturity Model",
+      "url": "https://www.cisa.gov/zero-trust-maturity-model",
+      "reading": "fetched",
+      "scope": "Read current model overview: per-request least-privilege decisions, location-centric to data-centric shift, visibility and granular enforcement."
+    },
+    {
+      "module": "nd-installation-security",
+      "id": "ms-printing",
+      "title": "Microsoft Learn: Print and Document Services Architecture",
+      "url": "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134171(v=ws.11)",
+      "reading": "fetched",
+      "scope": "Read print queue, client/server sharing, driver and spooler architecture. Windows Server 2012-era source; used only for durable queue/host dependency concepts, not current driver deployment advice."
+    },
+    {
+      "module": "nd-installation-security",
+      "id": "nist-contingency",
+      "title": "NIST SP 800-34 Rev. 1, Contingency Planning Guide",
+      "url": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
+      "reading": "fetched",
+      "scope": "Read publication overview and planning purpose/process metadata. Detailed operational claims below are kept to general plan, backup, recovery-test concepts; document is 2010 guidance, not current vendor prescription."
+    },
+    {
+      "module": "nd-installation-security",
+      "id": "cisco-ethernet",
+      "title": "Cisco: What Is Ethernet?",
+      "url": "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-ethernet.html",
+      "reading": "fetched",
+      "scope": "Read Ethernet/IEEE 802.3, frame switching and MAC learning versus router IP forwarding, and physical media overview; not used for universal cable reach."
+    },
+    {
+      "module": "nd-installation-security",
+      "id": "ieee-80211",
+      "title": "IEEE 802.11 Working Group and amendments",
+      "url": "https://standards.ieee.org/ieee/802.11/1164/",
+      "reading": "fetched",
+      "scope": "Verified IEEE 802.11 is the Wireless LAN Working Group standard family; IEEE-SA amendment pages identify 802.11ax-2021 and 802.11be-2024. No universal device rate or range inferred."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "guideline",
+      "title": "FBLA 2026-27 Network Design Guidelines",
+      "url": "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+      "reading": "fetched",
+      "scope": "Read study guide pp. 6-7 to verify Network Administration and Network Planning objective scope."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "rfc3411",
+      "title": "RFC 3411: SNMP Management Framework Architecture",
+      "url": "https://www.rfc-editor.org/rfc/rfc3411",
+      "reading": "fetched",
+      "scope": "Read §§1-2 and 3.1-3.2: manager and agent applications, managed objects/MIB, operations, notifications, and the distinction between message security and access control."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "rfc3414",
+      "title": "RFC 3414: SNMPv3 User-based Security Model",
+      "url": "https://www.rfc-editor.org/rfc/rfc3414",
+      "reading": "fetched",
+      "scope": "Read §§1.1-1.4 and 2: authentication provides integrity and user authentication, privacy protects payload disclosure and requires authentication, and timeliness limits replay. The document's example MD5/DES algorithms are historic, not current recommendations."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "rfc3418",
+      "title": "RFC 3418: SNMP Management Information Base",
+      "url": "https://www.rfc-editor.org/rfc/rfc3418",
+      "reading": "fetched",
+      "scope": "Read §§1-2, including system identity/location objects, SNMP counters, and notifications; used to explain management data and monitoring evidence."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "rfc1901",
+      "title": "RFC 1901: Community-based SNMPv2",
+      "url": "https://www.rfc-editor.org/rfc/rfc1901",
+      "reading": "fetched",
+      "scope": "Read §§2-3: agents, managers, MIB objects, and SNMPv2c's community-based administrative framework. Historic experimental RFC; used only for community model context."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "cisa-snmp",
+      "title": "CISA: Reducing the Risk of SNMP Abuse",
+      "url": "https://www.cisa.gov/news-events/alerts/2017/06/05/reducing-risk-snmp-abuse",
+      "reading": "fetched",
+      "scope": "Read community-string exposure, SNMPv3 authPriv, MIB-view/ACL and least-privilege guidance. Dated 2017; confirm current device and cryptographic support."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "ms-ping",
+      "title": "Microsoft ping command reference",
+      "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ping",
+      "reading": "fetched",
+      "scope": "Read command description, examples, and parameters: ICMP Echo testing, name-versus-address comparison, and timeout behavior."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "ms-tracert",
+      "title": "Microsoft tracert command reference",
+      "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tracert",
+      "reading": "fetched",
+      "scope": "Read TTL-based path discovery and examples; intermediate routers can omit Time Exceeded responses, producing asterisks without proving a forwarding failure."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "ms-ipconfig",
+      "title": "Microsoft ipconfig command reference",
+      "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig",
+      "reading": "fetched",
+      "scope": "Read /all, /renew, /flushdns, and remarks: adapter configuration, DHCP renewal conditions, and local DNS-cache scope."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "azure-lb",
+      "title": "Microsoft Azure Load Balancer overview",
+      "url": "https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview",
+      "reading": "fetched",
+      "scope": "Read Layer 4 flow distribution, backend pools, rules, health probes, monitoring, and availability overview. These are Azure implementation examples, not universal behavior for every load balancer."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "azure-lb-modes",
+      "title": "Azure Load Balancer distribution modes",
+      "url": "https://learn.microsoft.com/en-us/azure/load-balancer/distribution-mode-concepts",
+      "reading": "fetched",
+      "scope": "Read five-tuple hash distribution and two-/three-tuple client-IP affinity modes; same-client affinity can skew distribution, particularly where flow diversity is limited. Azure-specific implementation."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "azure-lb-probes",
+      "title": "Azure Load Balancer health probes",
+      "url": "https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-custom-probe-overview",
+      "reading": "fetched",
+      "scope": "Read TCP/HTTP probe operations, configured response/threshold behavior, unhealthy backend handling, and health-signal design guidance; implementation details vary by SKU and product."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "ms-shared",
+      "title": "Shared responsibility in the cloud",
+      "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility",
+      "reading": "fetched",
+      "scope": "Read service-model responsibility matrix and retained customer duties for data, accounts, and access; Microsoft-specific guidance and contract terms govern."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "ms-server",
+      "title": "What is Windows Server?",
+      "url": "https://learn.microsoft.com/en-us/windows-server/get-started/overview",
+      "reading": "fetched",
+      "scope": "Read platform roles, deployment, management, integration, and licensing overview; used as vendor-specific evidence, not a neutral comparison or price quote."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "ubuntu-server",
+      "title": "Ubuntu Server documentation",
+      "url": "https://ubuntu.com/server/docs/",
+      "reading": "fetched",
+      "scope": "Read overview sections for networking, security, software updates, storage, virtualisation, performance, and high availability."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "redhat-linux",
+      "title": "What is Linux?",
+      "url": "https://www.redhat.com/en/topics/linux/what-is-linux",
+      "reading": "fetched",
+      "scope": "Read operating-system and distribution explanations: kernel, user space, packages, and different distribution choices. Vendor educational material; not used to claim universal superiority."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "ms-print",
+      "title": "Microsoft print command reference",
+      "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/print",
+      "reading": "fetched",
+      "scope": "Read command syntax and examples showing local port printing and a named shared network queue."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "ms-ad-ds",
+      "title": "Active Directory Domain Services overview",
+      "url": "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
+      "reading": "fetched",
+      "scope": "Read directory purpose and security sections: AD DS stores network objects and supports authentication, access control, and policy-based administration."
+    },
+    {
+      "module": "nd-administration-planning",
+      "id": "cisco-subnet",
+      "title": "Configure IP Addresses and Unique Subnets for New Users",
+      "url": "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+      "reading": "fetched",
+      "scope": "Read subnet/address examples and topology context. This older tutorial contains classful-era simplifications; notes do not treat them as modern routing practice."
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "id": "fbla-nd-2026",
+      "title": "FBLA Network Design 2026-27 Individual Guidelines",
+      "url": "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+      "reading": "fetched",
+      "scope": "Read study guide pp. 6-7 for ND-NPSA objectives; pp. 2-4 for equipment and timing; p. 8 for the seven spoken rating criteria and maxima. The document leaves SMP unexplained and conflicts on flipchart/visuals."
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "id": "rfc9293",
+      "title": "IETF RFC 9293: Transmission Control Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+      "reading": "fetched",
+      "scope": "Read the abstract and TCP service description: TCP is connection-oriented and provides reliable in-order byte-stream service; segments use IP datagrams and ports identify services."
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "id": "rfc2131",
+      "title": "IETF RFC 2131: Dynamic Host Configuration Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc2131.html",
+      "reading": "fetched",
+      "scope": "Read DHCP overview and address-allocation/client-server sections: DHCP delivers host configuration and allocates addresses through client-server exchanges and leases; relay agents can pass requests across subnets."
+    },
+    {
+      "module": "nd-protocols-roleplay",
+      "id": "cisco-ip-subnets",
+      "title": "Cisco: Configure IP Addresses and Unique Subnets",
+      "url": "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+      "reading": "fetched",
+      "scope": "Read network-mask/subnet sections and device terminology for IP addressing, router interfaces, and gateway relationships. Its classful framing is older; these notes do not teach classful masks as current practice."
+    },
+    {
+      "module": "sales-course",
+      "id": "fbla",
+      "title": "FBLA 2026-27 Sales Presentation Guidelines",
+      "url": "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Presentation%20Events/Sales-Presentation.pdf",
+      "reading": "fetched",
+      "scope": "Read current PDF pp. 1-8 including event instructions, technology restrictions and pp. 7-8 rubric; verified 2026-27 edition. p.4 electricity contradiction recorded below."
+    },
+    {
+      "module": "sales-course",
+      "id": "ftc",
+      "title": "FTC Advertising FAQ: A Guide for Small Business",
+      "url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business",
+      "reading": "fetched",
+      "scope": "Read deception, express/implied claims, materiality, reasonable basis, testimonial, guarantee and disclosure passages; advertising guidance, not sales rubric or legal advice."
+    },
+    {
+      "module": "sales-course",
+      "id": "hubspot",
+      "title": "HubSpot Academy Inbound Sales Certification Course",
+      "url": "https://academy.hubspot.com/courses/inbound-sales",
+      "reading": "fetched",
+      "scope": "Read course description and curriculum: identify, connect, explore, advise; buyer context and personalized sales presentations. Commercial course; used as learning framework, not authority for claims or rules."
+    },
+    {
+      "module": "sales-course",
+      "id": "toastmasters",
+      "title": "Toastmasters: How to Overcome Your Fear of Public Speaking",
+      "url": "https://www.toastmasters.org/resources/public-speaking-tips/how-to-overcome-your-fear-of-public-speaking",
+      "reading": "fetched",
+      "scope": "Read organize/practice, audience focus, mistake recovery and pause/recovery-line passages; supports concrete rehearsal/structure methods, not FBLA scoring."
+    }
+  ],
+  "limitations": [
+    "OSI is a conceptual model; real Internet protocols do not map perfectly to seven discrete layers.",
+    "Historical IPv4 class ranges are simplified and must not be used to infer modern CIDR prefixes.",
+    "Wireless range and 5G performance depend on local environment, hardware, regulation and deployment.",
+    "Cisco RF guide (2024) includes generation/link-rate table, but table cites secondary material and its maxima are not guarantees. Cisco Ethernet cable guide is older and supports only listed PHY/cable cases; validate other media/reaches against exact transceiver datasheets. WPA3 notes use Cisco 17.15 configuration guide and apply only to supported combinations.",
+    "Cisco UCS 5108 details describe one blade platform, not every chassis.",
+    "Exact STP, UTP and coax performance varies by cable construction and PHY; no universal reach is asserted.",
+    "RAID level tolerance describes conventional layouts; controller, implementation and failure scenario matter. Microsoft Storage Spaces Direct is related parity/mirroring evidence, not an identical RAID implementation.",
+    "Cisco Networking Academy course page was not readable when fetched and is not claimed as read.",
+    "NIST CSRC glossary provided a direct honeypot definition; separate authoritative NIST entries for honeynet and honeyfile were not found. Those common instructional distinctions are explicitly qualified.",
+    "CISA DoS article is archived and may not reflect current policy; it is used only for basic attack mechanics, while mitigation is described cautiously.",
+    "RFC 6962 supports hash/digest and Merkle-tree mechanics but not the birthday bound itself; the generic birthday estimate is standard probability analysis and is labeled as an idealized bound.",
+    "CS-SD-01 cloud responsibility varies by provider, service model, contract, and configuration; AWS is an illustrative provider source.",
+    "NIST SP 800-34 publication overview was read, but not its detailed backup-method sections; full/incremental/differential mechanics are basic explanatory notes, not attributed to that overview.",
+    "NIST SP 800-57 and SP 800-63 fetched pages expose publication scope/metadata; they do not establish every algorithm or authenticator detail stated here.",
+    "The requested NIST hash and blockchain passages were fetched and read. Blockchain security depends on implementation, governance, consensus, keys, and participants; it does not establish truth or guaranteed immutability.",
+    "Classical Caesar example is a toy arithmetic illustration, not a modern cryptographic recommendation.",
+    "NIST SP 800-94 is a 2007 guide; detection mechanisms are taught conceptually, not as current product recommendations.",
+    "Tokenization mechanism is summarized at concept level; no dedicated standard on token-vault architecture was fetched.",
+    "WPA2 is identified as a secure protocol in the current objective list; the NIST wireless guide retrieved is marked technologically outdated, so no detailed WPA2 configuration advice is given.",
+    "NIST SP 800-34 introductory chapters were read, but detailed numeric RTO/RPO guidance was not independently fetched; notes give conceptual definitions, not mandated values.",
+    "FBLA official guideline PDF was not fetched in this pass; objective scope comes from the local 2026-27 inventory.",
+    "Cisco ACL behavior cited is IOS-specific; other firewall products can differ in rule order, defaults and state handling.",
+    "Microsoft print architecture reference describes Windows Server 2012; queue and host dependency concepts are used, not current driver deployment instructions.",
+    "Fiber reach and exact PHY rates require the actual cable, optics, standard and vendor specifications; no universal distance/rate is asserted.",
+    "NIST SP 800-34 Rev. 1 is older guidance; organization-specific recovery requirements and current policy govern implementation.",
+    "RFC 3414 is foundational but dates from 2002 and specifies historic MD5/DES examples; deployed SNMPv3 algorithm support must be checked against current vendor guidance and policy.",
+    "Azure Load Balancer describes one Layer 4 product; algorithms, probe semantics, affinity, and failure handling vary by implementation.",
+    "LAN/WAN are geographic scope labels, not fixed throughput classes. Actual performance needs measurement of media, topology, load, and endpoints.",
+    "Windows Server and Ubuntu/Linux sources are platform owners; they document their own capabilities, not a neutral performance or security ranking. Licensing and support terms change and must be checked for the proposed deployment.",
+    "The Cisco subnet tutorial is older and includes classful simplifications; no classful assumptions are used for current network planning.",
+    "The National guide prints SMP as an example but does not define it. This module preserves the ambiguity and does not substitute SMTP, SNMP, or another protocol; seek adviser clarification on expected scope.",
+    "Network Design guideline p.2 lists flipchart/easel while p.4 prohibits visuals and props. The conflict is unresolved here; ask the adviser and do not assume equipment permission.",
+    "FBLA 2026-27 PDF p.4 lists power access for a conference-room final and also says electricity will not be available. No resolution inferred; confirm with event adviser/organizer. Plan without power unless clarified.",
+    "These notes and fictional examples teach concepts; they are not a ready-to-submit competition pitch. National rules reserve planning, research, preparation, and setup of an actual entry to registered competitors.",
+    "FTC FAQ is general US advertising guidance; product-specific legal requirements may differ. This module is educational, not legal advice."
+  ]
+}

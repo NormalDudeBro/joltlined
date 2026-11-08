@@ -1,0 +1,48 @@
+o Overview
+-> Translate business requirements
+-> Network scope and physical scale
+o Translate business requirements
+-> Start with workflows, sites, users, services, and devices.
+-> Estimate concurrent users and peak traffic, not headcount.
+-> Map apps needing low delay, steady rates, or reliable access.
+-> Physical size sets cable paths, closets, links, and coverage.
+-> Growth affects port, address, capacity, and space needs.
+-> Throughput is delivered rate, not the PHY link rate.
+-> Contention, signal, servers, and uplinks affect throughput.
+-> Availability needs set acceptable outage and recovery targets.
+-> Budget includes licenses, staff, support, and replacement.
+o Network scope and physical scale
+-> A local area network (LAN) connects devices in a limited site.
+-> A wide area network (WAN) links networks across distance.
+-> LAN and WAN name scope, not speed or technology.
+-> A WAN often depends on carrier links and service contracts.
+-> Long links may add latency, cost, and provider dependence.
+-> Geography shapes routing, addressing, and support needs.
+-> Separate user, server, guest needs before choosing equipment.
+-> Redundancy improves resilience but adds links and operations.
+-> Measure workload; labels alone do not size a network.
+-> Carrier diversity helps only if routes avoid shared risks.
+o Overview
+-> Topology and failure domains
+-> Windows Server or Linux
+o Topology and failure domains
+-> Star connects endpoints to a central switch or access point.
+-> Edge link failure affects one; central failure affects many.
+-> Mesh adds alternate paths but increases link cost.
+-> Full mesh of n nodes needs n(n-1)/2 point-to-point links.
+-> Bus attaches devices along a shared backbone cable.
+-> A bus backbone break can disrupt service and hinder diagnosis.
+-> Physical topology maps cables; logical topology maps paths.
+-> Topology weighs fault impact, scale, cost, and staff skills.
+-> Redundancy helps when failure domains are independent.
+o Windows Server or Linux
+-> A network operating system (NOS) runs shared network services.
+-> Windows Server provides roles for Microsoft environments.
+-> Linux server features vary by distribution and packages.
+-> Check applications, drivers, identity, and hardware support.
+-> Check staff expertise, training, and vendor support coverage.
+-> Include licensing, subscriptions, upkeep, and migration costs.
+-> Compare security controls and patching for this configuration.
+-> Pilot service, access, backup, monitoring, and recovery needs.
+-> Choose for compatibility and support, not stereotypes.
+-> Licensing varies by edition, cores, and deployment terms.

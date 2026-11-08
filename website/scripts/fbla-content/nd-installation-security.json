@@ -1,0 +1,258 @@
+{
+  "id": "nd-installation-security",
+  "event": "network-design",
+  "title": "Network Installation, Security, and Recovery",
+  "sources": [
+    {"id":"fbla-nd","title":"FBLA Network Design 2026-27 Guidelines, study guide p. 6","url":"https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf","reading":"fetched","scope":"Read the current study-guide objective descriptions for installation/configuration and network security/recovery; establishes scope, not mechanisms."},
+    {"id":"cisco-acl","title":"Cisco: Configure IP Access Lists","url":"https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html","reading":"fetched","scope":"Read ACL matching, ordered evaluation, implicit deny, direction/application, traffic criteria, and stateful inspection discussion. Platform-specific examples; not a universal firewall configuration recipe."},
+    {"id":"rfc3021","title":"RFC 3021: Using 31-Bit Prefixes on IPv4 Point-to-Point Links","url":"https://www.rfc-editor.org/rfc/rfc3021","reading":"fetched","scope":"Read sections 1-3 and deployment notes: /31 uses both addresses as hosts only on point-to-point links; both endpoints must support it."},
+    {"id":"microsoft-bitlocker","title":"Microsoft Learn: BitLocker Overview","url":"https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/","reading":"fetched","scope":"Read volume-encryption purpose, TPM/offline integrity role, startup protection, and recovery-key backup behavior; warns encryption without protected keys is insufficient."},
+    {"id":"microsoft-adds","title":"Microsoft Learn: Active Directory Domain Services overview","url":"https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview","reading":"fetched","scope":"Read directory objects, centralized account access, authentication, access control, policy administration, and replication. Distinguishes directory function from DNS naming."},
+    {"id":"redhat-selinux","title":"Red Hat Enterprise Linux 9: Using SELinux","url":"https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/using_selinux/index","reading":"fetched","scope":"Read guide introduction: SELinux implements MAC; policy constrains how users/processes interact with files and devices. Platform-specific Linux control, not antivirus."},
+    {"id":"cisa-zero-trust","title":"CISA Zero Trust Maturity Model","url":"https://www.cisa.gov/zero-trust-maturity-model","reading":"fetched","scope":"Read current model overview: per-request least-privilege decisions, location-centric to data-centric shift, visibility and granular enforcement."},
+    {"id":"ms-printing","title":"Microsoft Learn: Print and Document Services Architecture","url":"https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134171(v=ws.11)","reading":"fetched","scope":"Read print queue, client/server sharing, driver and spooler architecture. Windows Server 2012-era source; used only for durable queue/host dependency concepts, not current driver deployment advice."},
+    {"id":"nist-contingency","title":"NIST SP 800-34 Rev. 1, Contingency Planning Guide","url":"https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final","reading":"fetched","scope":"Read publication overview and planning purpose/process metadata. Detailed operational claims below are kept to general plan, backup, recovery-test concepts; document is 2010 guidance, not current vendor prescription."},
+    {"id":"cisco-ethernet","title":"Cisco: What Is Ethernet?","url":"https://www.cisco.com/site/us/en/learn/topics/networking/what-is-ethernet.html","reading":"fetched","scope":"Read Ethernet/IEEE 802.3, frame switching and MAC learning versus router IP forwarding, and physical media overview; not used for universal cable reach."},
+    {"id":"ieee-80211","title":"IEEE 802.11 Working Group and amendments","url":"https://standards.ieee.org/ieee/802.11/1164/","reading":"fetched","scope":"Verified IEEE 802.11 is the Wireless LAN Working Group standard family; IEEE-SA amendment pages identify 802.11ax-2021 and 802.11be-2024. No universal device rate or range inferred."}
+  ],
+  "sheets": [
+    {
+      "id":"nd-installation-soho-links","title":"SOHO Links, Wireless, and Addressing","domain":"Network Installation and Configuration",
+      "pages":[
+        [
+          {"title":"SOHO edge and traffic controls","objectives":["ND-NIC-01","ND-NIC-02","ND-NIC-03"],"sources":["cisco-ethernet","cisco-acl"],"notes":[
+            "A modem terminates an ISP access link; an ONT serves fiber.",
+            "A router forwards IP packets between distinct networks.",
+            "A switch forwards LAN frames using learned MAC addresses.",
+            "A SOHO gateway may combine router, switch, AP and firewall.",
+            "DHCP leases addresses and options such as gateway and DNS.",
+            "DNS resolves names; it does not assign a host its address.",
+            "NAT rewrites address or port fields between address realms.",
+            "NAT is not a firewall rule or a security guarantee.",
+            "Place an edge firewall to enforce permitted traffic flows."
+          ]},
+          {"title":"Firewall rules and ACL behavior","objectives":["ND-NIC-03","ND-NSR-05","ND-NSR-06"],"sources":["cisco-acl"],"notes":[
+            "A hardware firewall is a dedicated appliance or function.",
+            "A software firewall filters traffic on a host or gateway.",
+            "An ACL matches fields such as direction, IP, protocol, port.",
+            "Ordered rules evaluate until a match; order changes outcome.",
+            "Cisco IOS ACLs have implicit deny after listed entries.",
+            "A rule has no effect until applied at an interface or policy.",
+            "Stateful inspection tracks sessions for return traffic.",
+            "Allow only required flows; close unused services and ports.",
+            "Test intended and denied traffic; narrow rules limit exposure.",
+            "ACL syntax and default behavior vary by product and context."
+          ]}
+        ],
+        [
+          {"title":"Wireless setup and physical media","objectives":["ND-NIC-04","ND-NIC-05","ND-NIC-06","ND-NIC-08","ND-NIC-12","ND-NSR-11"],"sources":["cisco-ethernet","fbla-nd"],"notes":[
+            "An AP bridges 802.11 clients to a LAN; a router routes.",
+            "A gateway joins networks; default gateway is off-subnet hop.",
+            "Twisted pairs reduce interference; shielding adds protection.",
+            "Ethernet rate and reach depend on specified PHY and cable.",
+            "Fiber uses light; mode, optics, wavelength and loss set reach.",
+            "LC connector shape alone cannot establish fiber compatibility.",
+            "802.11ax/be are WLAN amendments; bands vary.",
+            "RF range varies with walls, interference, band and antennas.",
+            "PHY headline rate is not application throughput or a promise."
+          ]},
+          {"title":"Subnet masks and loopback","objectives":["ND-NIC-07","ND-NIC-08"],"sources":["rfc3021"],"notes":[
+            "IPv4 prefix counts contiguous network bits in the mask.",
+            "A /24 mask is 255.255.255.0; do not infer from old classes.",
+            "Address AND mask yields network; aligned blocks avoid overlap.",
+            "In 192.168.8.34/24, network is 192.168.8.0/24.",
+            "Ordinary LAN subnet reserves network and broadcast addresses.",
+            "RFC 3021 uses both /31 addresses as point-to-point hosts.",
+            "Both ends must support /31; not a usual multi-host LAN.",
+            "IPv4 127.0.0.1 loopback tests this host, not a remote path.",
+            "Connect modem/ONT to WAN; set LAN, DHCP, unique admin secret.",
+            "Use WPA3 or WPA2-AES; avoid WEP and weak passphrases."
+          ]}
+        ]
+      ],
+      "practice":[
+        {"prompt":"A PC has a valid LAN address but cannot reach an off-subnet server. Which SOHO settings and devices would you check first, and why?","answer":"Check mask, DHCP-provided default gateway, router WAN/ISP handoff, then name resolution separately. The router forwards off-subnet traffic; DNS only resolves names. Integrated gateways may combine modem, router and AP roles.","objectives":["ND-NIC-01","ND-NIC-02","ND-NIC-08","ND-NIC-12"],"kind":"application"},
+        {"prompt":"Why can a permit ACL above a deny rule change results, and when is /31 appropriate?","answer":"Cisco IOS ACLs evaluate in order to first match, then implicit deny applies if none match. /31 uses its two addresses as hosts only on a point-to-point link whose endpoints support it, not a normal shared LAN.","objectives":["ND-NIC-03","ND-NIC-07"],"kind":"retrieval"}
+      ]
+    },
+    {
+      "id":"nd-installation-physical-services","title":"Physical Infrastructure and Printing","domain":"Network Installation and Configuration",
+      "pages":[
+        [
+          {"title":"Fiber and copper selection","objectives":["ND-NIC-04","ND-NIC-05"],"sources":["cisco-ethernet","fbla-nd"],"notes":[
+            "Copper Ethernet sends signals over twisted pairs.",
+            "UTP lacks metallic shielding; STP includes shielding.",
+            "Shield installation and grounding must follow cable design.",
+            "Cable category, endpoints and PHY constrain rate and channel.",
+            "Coax has a central conductor and shield; some ISPs use it.",
+            "Fiber carries light and resists electromagnetic interference.",
+            "Multimode commonly serves shorter links with matching optics.",
+            "Single-mode with compatible optics can serve longer links.",
+            "Reach depends on PHY, optics, wavelength, loss and connectors."
+          ]},
+          {"title":"Rack and blade installation","objectives":["ND-NIC-09"],"sources":["fbla-nd"],"notes":[
+            "Rack servers mount as units in a cabinet with service access.",
+            "Check rail fit, equipment depth, weight and rack capacity.",
+            "Plan labeled power, network ports, cable paths and airflow.",
+            "Blade servers fit a shared chassis with common interconnects.",
+            "Chassis can improve density and centralized management.",
+            "Chassis adds cost and shared failure dependencies.",
+            "Inventory assets, firmware, NICs, storage and switch ports.",
+            "Follow vendor install, grounding and safety procedures.",
+            "After install, verify links, management, alarms and logs.",
+            "Redundant PSUs help only with adequate independent feeds."
+          ]}
+        ],
+        [
+          {"title":"Power, temperature, and UPS","objectives":["ND-NIC-10","ND-NSR-02"],"sources":["fbla-nd","nist-contingency"],"notes":[
+            "Excess heat can throttle equipment, age it or shut it down.",
+            "Keep vents clear; monitor inlet temperature and airflow.",
+            "Cooling capacity and airflow must suit the installed load.",
+            "A UPS supplies temporary battery power during an interruption.",
+            "Size runtime to load; test batteries and controlled shutdown.",
+            "A UPS is not a generator, backup, or independent power feed.",
+            "Power redundancy fails if upstream circuits share one failure.",
+            "Define recovery priorities and dependencies before controls.",
+            "Tabletop power loss; predict effects; do not unplug live gear."
+          ]},
+          {"title":"Direct, shared, and server printing","objectives":["ND-NIC-11"],"sources":["ms-printing"],"notes":[
+            "Direct USB printing connects a client to one printer.",
+            "A network printer can accept jobs directly over the LAN.",
+            "Host-shared printing exposes a host queue to other clients.",
+            "The host and its print service must stay available for jobs.",
+            "A print server centralizes queues and printer administration.",
+            "Clients submit jobs to a queue; spooler manages pending work.",
+            "A server outage or queue fault can interrupt shared printing.",
+            "Restrict queue management and printing to authorized users.",
+            "Keep printer firmware and drivers supported and maintained.",
+            "Protect confidential output; use secure release if available."
+          ]}
+        ]
+      ],
+      "practice":[
+        {"prompt":"An office has 40 users, two printers, and rotating staff. Compare a host-shared printer with a print server.","answer":"Host sharing is simple but jobs depend on that host's uptime and controls. A print server can centrally manage queues and permissions, but introduces a service to maintain and secure; choose based on support and availability needs.","objectives":["ND-NIC-11"],"kind":"application"},
+        {"prompt":"Why does a blade chassis improve density but not automatically improve resilience?","answer":"Blades share chassis infrastructure such as power, cooling and interconnects, increasing density and management convenience while creating common failure dependencies. Validate independent feeds and capacity; redundancy labels alone do not prove independence.","objectives":["ND-NIC-09","ND-NIC-10"],"kind":"retrieval"}
+      ]
+    },
+    {
+      "id":"nd-security-access-platforms","title":"Security, Access, and Platform Controls","domain":"Network Security and Recovery",
+      "pages":[
+        [
+          {"title":"Threat defenses and least privilege","objectives":["ND-NSR-04","ND-NSR-05","ND-NSR-06"],"sources":["cisco-acl","cisa-zero-trust"],"notes":[
+            "DoS exhausts a service resource; DDoS distributes that load.",
+            "Capacity, filtering and provider aid may mitigate DoS.",
+            "Phishing deceives users into disclosing data or taking action.",
+            "Verify requests via known channels; report suspicious mail.",
+            "Insider risk may be intentional or accidental.",
+            "Least privilege limits access to needed tasks and time.",
+            "Remove unused services; close ports and patch systems.",
+            "Antivirus detects some threats; it cannot assure safety.",
+            "Third-party access needs scope, oversight and revocation."
+          ]},
+          {"title":"Zero Trust and network admission","objectives":["ND-NSR-06","ND-NSR-07","ND-NSR-08"],"sources":["cisa-zero-trust"],"notes":[
+            "Zero Trust grants no automatic trust merely from LAN location.",
+            "Evaluate each access request using identity and context.",
+            "Grant granular least-privilege access to data and services.",
+            "Reassess decisions as users, devices and risk context change.",
+            "MFA combines factor types; two passwords are one type.",
+            "Authentication checks identity; authorization grants actions.",
+            "NAC checks device or identity at network admission.",
+            "NAC may quarantine a device pending remediation or compliance.",
+            "VLAN segmentation needs policy controls on inter-VLAN traffic.",
+            "NAC complements endpoint, identity controls and monitoring."
+          ]}
+        ],
+        [
+          {"title":"BitLocker and directory identity","objectives":["ND-NSR-06","ND-NSR-09"],"sources":["microsoft-bitlocker","microsoft-adds"],"notes":[
+            "BitLocker encrypts Windows volumes against offline exposure.",
+            "TPM can protect startup keys and check offline integrity.",
+            "Startup PIN or key can add preboot access protection.",
+            "Encryption does not protect data in an open session.",
+            "Protect and back up recovery keys for legitimate recovery.",
+            "AD DS stores directory objects such as accounts and groups.",
+            "Domain identity centralizes authentication and access control.",
+            "Policy-based administration manages settings across systems.",
+            "DNS locates services; a DNS name is not AD identity."
+          ]},
+          {"title":"SELinux mandatory access control","objectives":["ND-NSR-09"],"sources":["redhat-selinux"],"notes":[
+            "SELinux is Linux Security-Enhanced Linux access control.",
+            "It implements mandatory access control (MAC) through policy.",
+            "Policy constrains user and process interaction with objects.",
+            "File and process labels provide context for policy decisions.",
+            "Rules can restrict services beyond ordinary file permissions.",
+            "This can limit damage if a process is compromised.",
+            "Investigate denials; fix policy, do not blindly disable it.",
+            "SELinux is not antivirus; updates and backups still matter.",
+            "MAC policy differs from discretionary owner/group permissions.",
+            "Use platform docs for modes and safe policy administration."
+          ]}
+        ]
+      ],
+      "practice":[
+        {"prompt":"A compliant school laptop connects to a guest VLAN but cannot reach an internal file server. Explain a Zero Trust/NAC design reason.","answer":"NAC may admit the device only to a restricted segment; authorization can still deny the file-server resource. Verify identity, posture and the specific permitted flow rather than assuming LAN presence grants trust.","objectives":["ND-NSR-07","ND-NSR-08","ND-NSR-06"],"kind":"application"},
+        {"prompt":"Contrast BitLocker, AD DS, and SELinux; which one is a volume-encryption feature?","answer":"BitLocker encrypts Windows volumes to reduce offline exposure; AD DS centrally stores identities and administers authentication/access; SELinux applies Linux MAC policy to process/object interactions. None alone replaces layered controls.","objectives":["ND-NSR-09"],"kind":"retrieval"}
+      ]
+    },
+    {
+      "id":"nd-security-recovery","title":"Recovery, Monitoring, and Wireless Security","domain":"Network Security and Recovery",
+      "pages":[
+        [
+          {"title":"Disaster recovery planning","objectives":["ND-NSR-01","ND-NSR-02"],"sources":["nist-contingency"],"notes":[
+            "Disaster recovery restores systems and data after disruption.",
+            "Business continuity sustains priority work during disruption.",
+            "A plan defines scope, roles, contacts and dependencies.",
+            "Include recovery order, communication, resources and checks.",
+            "Risk assessment compares events and business impacts.",
+            "Recovery time objective (RTO) is target restoration time.",
+            "Recovery point objective (RPO) is tolerable data-loss time.",
+            "Select controls to meet business targets and resource limits.",
+            "Test plans; revise after exercises, incidents or changes."
+          ]},
+          {"title":"Backup types and restore assurance","objectives":["ND-NSR-02","ND-NSR-03"],"sources":["nist-contingency"],"notes":[
+            "Cloud backup is offsite but depends on provider and account.",
+            "NAS backup is convenient but shares site and access risks.",
+            "External drives can be disconnected; rotate them securely.",
+            "Use 3-2-1: three copies, two media, one copy offsite.",
+            "Keep an offline or immutable copy to resist ransomware.",
+            "Versioned copies allow selection of an earlier restore point.",
+            "Separate backup credentials from admin accounts.",
+            "RAID may sustain disk failure, not deletion or corruption.",
+            "A backup is an independent copy; RAID is not a backup.",
+            "Test isolated restores; validate data, rights and service."
+          ]}
+        ],
+        [
+          {"title":"IDS, IPS, updates, and response","objectives":["ND-NSR-04","ND-NSR-05","ND-NSR-10"],"sources":["cisco-acl","cisa-zero-trust"],"notes":[
+            "An IDS observes host or network activity and raises alerts.",
+            "An IPS can block or drop traffic inline when policy triggers.",
+            "Inline false positives may disrupt legitimate service.",
+            "Detection depends on visibility, tuning and known indicators.",
+            "An alert is a lead to investigate, not proof of compromise.",
+            "Preserve evidence, contain, remediate, then validate recovery.",
+            "Patch supported systems and apps to fix known flaws.",
+            "Test updates and plan rollback; delay prolongs exposure.",
+            "Firewalls and endpoint protection work at different points."
+          ]},
+          {"title":"Wireless authentication and ACLs","objectives":["ND-NSR-06","ND-NSR-08","ND-NSR-11"],"sources":["cisa-zero-trust","cisco-acl"],"notes":[
+            "WPA2/WPA3 protect Wi-Fi links; choose supported secure modes.",
+            "WPA2-Personal uses shared passphrase; protect it if exposed.",
+            "Enterprise Wi-Fi can use 802.1X/EAP user or device identity.",
+            "A backend validates credentials; protect its server and keys.",
+            "Use a unique secret, current firmware and secure admin access.",
+            "WPA3 compatibility depends on AP and client support.",
+            "Wireless ACLs filter traffic by rules and attributes.",
+            "MAC addresses can be spoofed; ACLs are not identity proof.",
+            "Isolate guest clients and restrict paths with network policy.",
+            "Revoke lost credentials; hidden SSID is not security."
+          ]}
+        ]
+      ],
+      "practice":[
+        {"prompt":"A ransomware scenario has a recent encrypted NAS copy and a week-old offline copy. Which restore choice should the team investigate?","answer":"Investigate the offline version as a potentially cleaner restore point, while validating age against the RPO and checking integrity in an isolated environment. NAS proximity alone does not make it safe; RAID and online copies may share compromise.","objectives":["ND-NSR-01","ND-NSR-02","ND-NSR-03"],"kind":"application"},
+        {"prompt":"An IPS blocked a legitimate file-transfer flow. What differs from IDS behavior, and what should operators do?","answer":"IDS primarily detects and alerts; IPS can enforce a block inline, so a false positive can interrupt service. Review evidence and rule scope, safely tune with change control, then validate both desired and prohibited flows.","objectives":["ND-NSR-10","ND-NSR-05"],"kind":"retrieval"}
+      ]
+    }
+  ],
+  "lab":{"title":"Offline network and recovery tabletop","steps":["Draw a fictional ISP-to-SOHO path and label modem, router, switch, AP, DHCP, DNS and firewall roles.","On paper, evaluate ordered allow/deny rules and identify an unintended flow; make no device changes.","Use a sample subnet card to find network and gateway; explain why /31 is point-to-point only.","Sort fictional backup copies by location, medium and version; select a restore candidate against stated RTO/RPO.","For a mock access request, decide NAC admission and Zero Trust authorization separately.","Review sample IDS/IPS alert cards and state what evidence is needed before declaring an incident."],"expected":["Learner distinguishes NAT, routing, DHCP/DNS, ACL policy and stateful filtering.","Learner explains fiber/copper/WLAN limits and accurate subnet/loopback purposes.","Learner compares direct/shared/server printing and rack/blade power dependencies.","Learner selects a tested, versioned restore approach and explains RAID is not backup.","Learner distinguishes BitLocker encryption, AD DS identity/policy and SELinux MAC.","Learner explains IDS alert versus IPS inline blocking and WPA/ACL limits."]},
+  "limitations":["Cisco ACL behavior cited is IOS-specific; other firewall products can differ in rule order, defaults and state handling.","Microsoft print architecture reference describes Windows Server 2012; queue and host dependency concepts are used, not current driver deployment instructions.","Fiber reach and exact PHY rates require the actual cable, optics, standard and vendor specifications; no universal distance/rate is asserted.","NIST SP 800-34 Rev. 1 is older guidance; organization-specific recovery requirements and current policy govern implementation."]
+}

@@ -12,6 +12,10 @@
 }
 
 * { box-sizing: border-box; }
+.course-sheet > h2, .course-pages h3 { color: var(--lb); }
+@media print {
+  .course-sheet:last-child .course-pages article:last-child { break-after: auto; }
+}
 body { margin: 0; color: var(--ink); background: var(--paper); font-family: inherit; font-weight: normal; }
 a { color: inherit; text-underline-offset: 5px; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }

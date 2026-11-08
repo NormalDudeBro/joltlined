@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Rack(pen) (g)and(pen) (g)blade(pen) (g)server(pen) (g)forms(pen)
+(pen)-> (pu)Chassis(pen) (pu)power(pen) (pu)and(pen) (pu)connectivity(pen)
+(pen)o (g)Rack(pen) (g)and(pen) (g)blade(pen) (g)server(pen) (g)forms(pen)
+(pen)-> A (g)rack(pen) (g)server(pen) is an individual server mounted in a rack.
+(pen)-> It generally has its own (pu)power(pen) and cooling components.
+(pen)-> Racks allow mixed systems and incremental installation.
+(pen)-> They require (g)rack(pen) space, cabling and room-level cooling.
+(pen)-> A (g)blade(pen) is a (g)server(pen) module fitted into a shared chassis.
+(pen)-> The (pu)chassis(pen) can provide (pu)power(pen), fans, fabric and management.
+(pen)-> Shared infrastructure can reduce cabling and increase density.
+(pen)-> (pu)Chassis(pen) cost and (g)blade(pen) compatibility constrain choice.
+(pen)-> Shared (pu)power(pen), cooling or midplane can form failure domains.
+(pen)o (pu)Chassis(pen) (pu)power(pen) (pu)and(pen) (pu)connectivity(pen)
+(pen)-> Cisco UCS 5108 holds up to eight half-width (g)blade(pen) servers.
+(pen)-> Its (pu)chassis(pen) has hot-swappable (pu)power(pen) supplies and fans.
+(pen)-> Its fabric connects blades to network interfaces and uplinks.
+(pen)-> That design reduces separate (pu)chassis(pen) switches and cabling.
+(pen)-> Redundant supplies or fans reduce, but do not erase, risk.
+(pen)-> (pu)Power(pen) redundancy mode determines tolerated supply loss.
+(pen)-> PoE supplies data and (pu)power(pen) over supported Ethernet links.
+(pen)-> Check the switch's total PoE budget and each port limit.
+(pen)-> Also verify device demand and the exact equipment datasheet.
+(pen)-> Internet needs ISP, handoff hardware, router and host link.
+(pen)o Overview
+(pen)-> (br)File(pen) (br)and(pen) (br)block(pen) (br)storage(pen)
+(pen)-> (or)RAID(pen) (or)and(pen) (or)fault(pen) (or)tolerance(pen)
+(pen)o (br)File(pen) (br)and(pen) (br)block(pen) (br)storage(pen)
+(pen)-> NAS means network-attached (br)storage(pen), typically shared files.
+(pen)-> Clients request named files and folders over LAN protocols.
+(pen)-> SAN commonly presents (br)block(pen) volumes to connected hosts.
+(pen)-> A host formats and manages a (br)block(pen) volume as a disk.
+(pen)-> NAS suits shared files; SAN can serve host-managed blocks.
+(pen)-> Choice depends on workload, protocol, administration and cost.
+(pen)-> Neither guarantees a particular speed or availability.
+(pen)-> A (br)storage(pen) network does not itself provide backup copies.
+(pen)-> Protect data separately against deletion and site loss.
+(pen)o (or)RAID(pen) (or)and(pen) (or)fault(pen) (or)tolerance(pen)
+(pen)-> (or)RAID(pen) combines disks for speed, redundancy, or both.
+(pen)-> (or)RAID(pen) 0 stripes data; 2+ disks, no disk-failure (or)tolerance(pen).
+(pen)-> Two-disk (or)RAID(pen) 1 mirrors data; survives one member failure.
+(pen)-> (or)RAID(pen) 5 uses single parity; 3+ disks, tolerates one disk loss.
+(pen)-> (or)RAID(pen) 6 uses dual parity; 4+ disks, tolerates two disk losses.
+(pen)-> Conventional (or)RAID(pen) 10 stripes mirrored pairs; minimum 4 disks.
+(pen)-> (or)RAID(pen) 10 tolerates one loss per pair, not both in one pair.
+(pen)-> (or)RAID(pen) limits assume supported layouts and healthy members.
+(pen)-> Rebuilds take time; extra failures can exceed level limits.
+(pen)-> (or)RAID(pen) is not backup; keep separate copies and test restores.

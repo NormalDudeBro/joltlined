@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Open(pen) (g)with(pen) (g)relevance(pen)
+(pen)-> (pu)Find(pen) (pu)the(pen) (pu)need(pen)
+(pen)o (g)Open(pen) (g)with(pen) (g)relevance(pen)
+(pen)-> A greeting starts a buyer conversation respectfully.
+(pen)-> Use context, introduce yourself, and ask permission.
+(pen)-> A relevant opener leads naturally to a discovery question.
+(pen)-> Example: ask what a new-hire welcome must accomplish.
+(pen)-> The example is a prompt, not a memorized contest script.
+(pen)-> Match formality to setting; do not presume familiarity.
+(pen)-> A greeting is not a feature list or forced joke.
+(pen)-> Then invite the customer's perspective and listen.
+(pen)-> FBLA top band rewards an original smooth transition.
+(pen)o (pu)Find(pen) (pu)the(pen) (pu)need(pen)
+(pen)-> (pu)Need(pen): outcome, task, or constraint the buyer must address.
+(pen)-> Want: preferred attribute; it may matter, but verify why.
+(pen)-> Ask (g)open(pen) questions about goals and current process.
+(pen)-> Probe frequency, friction, impact, and desired outcome.
+(pen)-> Follow up: what happens when the step is delayed?
+(pen)-> Closed questions (or)confirm(pen) facts; they rarely reveal context.
+(pen)-> Listen fully; paraphrase and invite correction.
+(pen)-> Separate what was said from your interpretation.
+(pen)-> Do not manufacture needs or lead the buyer to agree.
+(pen)-> Follow-up questions test context, not just product interest.
+(pen)o Overview
+(pen)-> (br)Map(pen) (br)people(pen) (br)and(pen) (br)priorities(pen)
+(pen)-> (or)Confirm(pen) (or)before(pen) (or)advising(pen)
+(pen)o (br)Map(pen) (br)people(pen) (br)and(pen) (br)priorities(pen)
+(pen)-> User, buyer, payer, approver, and reviewer can differ.
+(pen)-> Ask who uses, funds, approves, or checks compatibility.
+(pen)-> One stakeholder's preference may not represent the group.
+(pen)-> Discover budget, timing, workflow, and decision process.
+(pen)-> Ask permission (or)before(pen) recording contact preferences.
+(pen)-> Example: manager funds; staff use; IT checks access.
+(pen)-> (or)Confirm(pen) each role's relevant outcome and constraint.
+(pen)-> Do not collect unrelated personal information.
+(pen)-> Stakeholder map helps test fit, not force consensus.
+(pen)o (or)Confirm(pen) (or)before(pen) (or)advising(pen)
+(pen)-> Summarize the priority and ask if you understood correctly.
+(pen)-> Resolve conflicting (br)priorities(pen) (or)before(pen) recommending.
+(pen)-> Connect a recommendation only to a confirmed (pu)need(pen).
+(pen)-> A colorful dashboard is a want until purpose is clear.
+(pen)-> It may become relevant if it improves needed readability.
+(pen)-> Stop discovery when enough is known to assess fit.
+(pen)-> If the offer mismatches, qualify or recommend no sale.
+(pen)-> Ask permission to move from discovery to recommendation.
+(pen)-> An accurate summary reduces mistaken assumptions.
+(pen)-> (or)Confirm(pen) buyer context again if new facts change the fit.

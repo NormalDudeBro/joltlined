@@ -1,0 +1,48 @@
+o Overview
+-> Wireless Generations and Bands
+-> Wireless Range and Throughput
+o Wireless Generations and Bands
+-> 802.11b uses 2.4 GHz DSSS; max PHY rate is 11 Mb/s.
+-> 802.11a uses 5 GHz OFDM; max PHY rate is 54 Mb/s.
+-> 802.11g uses 2.4 GHz OFDM; max PHY rate is 54 Mb/s.
+-> 802.11n (Wi-Fi 4) supports 2.4/5 GHz and MIMO.
+-> 802.11ac (Wi-Fi 5) operates in 5 GHz bands.
+-> 802.11ax (Wi-Fi 6) supports 2.4 and 5 GHz operation.
+-> Wi-Fi 6E adds 6 GHz where permitted and supported.
+-> 802.11be (Wi-Fi 7) adds multi-link in capable devices.
+-> Max PHY rates require matching channel and radio capability.
+o Wireless Range and Throughput
+-> There is no single universal indoor Wi-Fi range figure.
+-> Band, walls, antennas, power, and receivers affect reach.
+-> 2.4 GHz often travels farther through walls than 5/6 GHz.
+-> 2.4 GHz is often more congested; local spectrum matters.
+-> Channel width, streams, and interference affect PHY rate.
+-> App throughput is below PHY rate due to overhead/contention.
+-> Clients share airtime; slow stations reduce capacity.
+-> Regulatory domain limits channels and transmit power.
+-> Survey user locations and load before estimating coverage.
+-> A repeater can extend reach but consumes airtime or adds hops.
+o Overview
+-> Ethernet PHY and Medium
+-> Routing and Wireless Protection
+o Ethernet PHY and Medium
+-> 10BASE-T is 10 Mb/s over twisted-pair copper, up to 100 m.
+-> 100BASE-TX is 100 Mb/s copper, up to 100 m channel.
+-> 1000BASE-T carries 1 Gb/s over four pairs, up to 100 m.
+-> 10GBASE-T can reach 100 m on Cat 6A compliant channel.
+-> Cat 6 10GBASE-T reach depends on channel and alien crosstalk.
+-> 1000BASE-SX uses multimode fiber; reach varies by grade.
+-> 1000BASE-LX reach depends on optics and fiber type.
+-> 10GBASE-SR uses multimode fiber; distance depends on fiber.
+-> IEEE PHY, optics, connectors, and loss set fiber reach.
+o Routing and Wireless Protection
+-> OSPF is link-state routing within an autonomous system.
+-> OSPF routers build topology databases and calculate paths.
+-> BGP exchanges inter-AS prefixes and paths for policy.
+-> BGP is an IETF Standards Track protocol.
+-> EIGRP uses DUAL, a distance-vector-based routing algorithm.
+-> RFC 7868 is Informational, not an IETF Standards Track spec.
+-> WPA2 deployments can use AES-CCMP; avoid legacy TKIP.
+-> WPA3-Personal SAE strengthens resistance to offline guessing.
+-> WPA3 connections require Protected Management Frames.
+-> Negotiated security depends on AP/client configuration.

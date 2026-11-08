@@ -1,0 +1,48 @@
+o Overview
+-> Symmetric and public-key cryptography
+-> Signatures, exchange, and key limits
+o Symmetric and public-key cryptography
+-> Cryptography uses algorithms and keys to protect information.
+-> Encryption transforms readable plaintext into ciphertext.
+-> Decryption with the right key recovers the plaintext.
+-> Symmetric cryptography uses one shared secret key both ways.
+-> It is efficient; parties must protect and share the secret.
+-> Public-key cryptography uses a related key pair.
+-> Public key may be shared; private key must remain protected.
+-> Encrypt to recipient's public key; private key decrypts.
+-> This provides confidentiality, not sender proof alone.
+o Signatures, exchange, and key limits
+-> Signer uses private key; others verify with public key.
+-> Signatures can support integrity and key-possession checks.
+-> A signature does not make the signed statement true.
+-> Key exchange establishes a shared secret over a channel.
+-> Unauthenticated exchange risks an active intermediary attack.
+-> Certificates can bind a public key to a named identity.
+-> Validate certificate chain, name, dates, and intended use.
+-> Protect, rotate, revoke, and recover keys by policy.
+-> Hybrid TLS pairs key agreement with symmetric data encryption.
+-> Key loss blocks decryption; compromise threatens protection.
+o Overview
+-> Caesar and substitution ciphers
+-> Hashing, blockchain, and trust limits
+o Caesar and substitution ciphers
+-> A shift cipher moves each alphabet letter by a fixed amount.
+-> Caesar is a shift cipher, often shown with shift three.
+-> Using +3: A becomes D, B becomes E, and X becomes A.
+-> Wrap after Z: Y becomes B and Z becomes C.
+-> ATTACK with +3 becomes DWWDFN; reverse shift recovers it.
+-> Substitution replaces letters using a fixed alphabet mapping.
+-> Caesar is one simple special case of substitution.
+-> Repeated patterns and frequencies reveal toy ciphers.
+-> Small keyspaces are searchable; these ciphers are not secure.
+o Hashing, blockchain, and trust limits
+-> Hash maps arbitrary-length input to a fixed-length digest.
+-> Hashing is not encryption; there is no decryption key.
+-> Collision: two distinct inputs have the same digest.
+-> Collision resistance makes finding one hard in practice.
+-> It is not a promise that collisions are impossible.
+-> A trusted digest can help detect changed data.
+-> A hash alone does not prove who created the data.
+-> Blockchain links blocks by hash and consensus rules.
+-> NIST: shared ledgers are tamper-evident, not truth-proof.
+-> RFC 9162 Merkle proofs check log inclusion and consistency.

@@ -1,0 +1,48 @@
+o Overview
+-> Peer-to-peer or client-server
+-> Cloud service benefits and costs
+o Peer-to-peer or client-server
+-> Peer-to-peer (P2P) lets endpoints share resources directly.
+-> P2P avoids dedicated server cost for small, simple groups.
+-> Each peer may manage users, rights, and copies separately.
+-> Shared resource availability depends on its host being online.
+-> Decentralized rights and backups hinder oversight and restore.
+-> Compromised peer or account can expose shared resources.
+-> Client-server centralizes shared services and administration.
+-> Central policy is consistent but adds server dependencies.
+-> Size capacity, backup, and failover for critical server roles.
+o Cloud service benefits and costs
+-> Cloud services provide computing or management over a network.
+-> Elastic capacity meets demand without local hardware buying.
+-> IaaS leaves OS to customer; PaaS and SaaS shift more layers.
+-> Customer owns data and identities; contract terms govern.
+-> Usage, storage, support, and transfer create recurring costs.
+-> Connectivity failure interrupts dependent workflows.
+-> Review identity, access, data protection, recovery, export.
+-> Local systems need staff and facilities but may work offline.
+-> Compare lifecycle costs and ownership, not hardware price.
+-> Portability depends on formats, contracts, and dependencies.
+o Overview
+-> Cost, throughput, and availability
+-> Service targets and design choice
+o Cost, throughput, and availability
+-> Constraints include budget, space, and compatibility.
+-> Business drivers include capacity, growth, and recovery.
+-> Measure busy-hour throughput and identify bottlenecks.
+-> Bandwidth costs money and may not fix server or app delay.
+-> Independent redundant links and devices improve availability.
+-> Extra paths need routes, tests, monitoring, and skilled staff.
+-> Star's central device can fail without redundancy.
+-> Mesh increases path choices and cabling/management complexity.
+-> Topology labels alone do not guarantee performance or uptime.
+o Service targets and design choice
+-> A service level agreement (SLA) states measurable promises.
+-> Define service, measurement window, exclusions, and reporting.
+-> Provider uptime is not end-to-end application uptime.
+-> Map power, DNS, identity, carrier, and storage dependencies.
+-> Health probes can remove unhealthy backends from flows.
+-> A probe may miss an untested dependency failure.
+-> Session persistence keeps client affinity but can skew load.
+-> Model options against cost, throughput, recovery, and staff.
+-> Record assumptions, options, owners, and review triggers.
+-> Review targets when business impact or dependencies change.

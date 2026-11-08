@@ -1,0 +1,48 @@
+o Overview
+-> Maintenance and recovery
+-> Accounts and permissions
+o Maintenance and recovery
+-> Maintenance keeps services supported, secure, and recoverable.
+-> An audit compares actual assets and settings with policy.
+-> Record audit scope, evidence, owner, risk, and due action.
+-> Updates add fixes or features; patches address known defects.
+-> Test compatibility, stage deployment, then verify outcomes.
+-> A rollback plan limits harm if an update breaks a service.
+-> A backup is a separate copy intended for later recovery.
+-> RAID may tolerate disk failure; it does not replace backup.
+-> A restore test checks usable data and recovery procedure.
+o Accounts and permissions
+-> An account identifies a user or service to a system.
+-> Authentication checks identity; authorization grants actions.
+-> Groups collect accounts with similar job-based access needs.
+-> Grant needed rights; avoid routine shared administrator use.
+-> Review rights after role changes; disable accounts at exit.
+-> Transfer ownership of files, queues, and scheduled work.
+-> An asset record links item, owner, site, and support contact.
+-> Track printer model, address, queue, host, and team.
+-> A shared queue centralizes jobs, not printer uptime.
+-> Remove obsolete group membership when duties end.
+o Overview
+-> SNMP and management data
+-> Traffic baselines and alerts
+o SNMP and management data
+-> Simple Network Management Protocol (SNMP) exchanges status.
+-> Managers query agents that expose managed device objects.
+-> A Management Information Base (MIB) names managed objects.
+-> Poll counters; notifications report events but may be lost.
+-> Counters need time intervals to show rates or changing errors.
+-> SNMPv2c names are unencrypted; traffic can expose them.
+-> SNMPv3 USM supports authentication and optional privacy.
+-> Auth checks integrity and user; privacy encrypts data.
+-> Use authPriv; limit MIB views and manager ACLs.
+o Traffic baselines and alerts
+-> Time counters; baseline latency, loss, errors, and demand.
+-> Compare like periods; peak and average load differ.
+-> An alert triggers investigation, not proof of cause.
+-> A load balancer distributes eligible traffic across backends.
+-> Azure defaults to hashing five flow fields for backend choice.
+-> Client-IP affinity sends that client to the same backend.
+-> Affinity may skew load when few distinct client flows exist.
+-> Configured probes can stop new flows to unhealthy backends.
+-> Map links, gateways, dependencies; log checks and recovery.
+-> Restrict log access and retention to protect sensitive data.

@@ -1,0 +1,48 @@
+o Overview
+-> CIA and Zero Trust
+-> Identity, Attestation, and AAA
+o CIA and Zero Trust
+-> Confidentiality limits data reading to authorized parties.
+-> Integrity resists unauthorized change or destruction.
+-> Availability gives authorized users timely access.
+-> Encryption supports confidentiality, not data truth.
+-> Audit controls can expose changes; logs need protection.
+-> Tested backups support recovery and availability.
+-> Zero Trust gives no trust from location alone.
+-> Evaluate user, device, resource, and context per request.
+-> Example: verify worker and device before payroll access.
+o Identity, Attestation, and AAA
+-> Proofing links a claimed identity to a real person.
+-> Resolution finds a unique identity in the served population.
+-> Validation checks evidence and attribute facts.
+-> Verification checks applicant is rightful evidence owner.
+-> Authentication later checks control of a bound authenticator.
+-> Attestation signs hardware-secured measurements for review.
+-> Attestation describes device measurements, not human identity.
+-> Trust depends on keys, measurements, and verifier policy.
+-> AAA: authentication, authorization, and accounting.
+-> Authorization permits actions; accounting records activity.
+o Overview
+-> Nonrepudiation and Least Privilege
+-> Binary, Decimal, and Hex
+o Nonrepudiation and Least Privilege
+-> Nonrepudiation seeks evidence resisting denial of an action.
+-> A signature alone cannot prove who controlled its key.
+-> Identity binding, key custody, intent, and time matter.
+-> Legal and system assumptions bound attribution claims.
+-> Least privilege grants only necessary resource/action rights.
+-> Use narrow roles and time-bound elevation where feasible.
+-> Review grants; revoke access when duties or roles change.
+-> It limits blast radius, not all misuse or compromise.
+-> OWASP says least DB privilege limits injection damage.
+o Binary, Decimal, and Hex
+-> Binary is base 2; decimal is base 10; hex is base 16.
+-> Hex digits are 0-9 and A-F; A-F represent values 10-15.
+-> Place values are powers of the base, right to left.
+-> Binary 1011 equals decimal 8+2+1, or 11.
+-> Hex 2F equals decimal 2*16+15, or 47.
+-> Four binary bits form one hex digit: 1011 becomes B.
+-> Pad on left: 11010 becomes 0001 1010, or hex 1A.
+-> A byte is 8 bits; two hex digits display one byte.
+-> Hex displays bits compactly; it does not encrypt them.
+-> Hashes output fixed-length digests; encoding adds no strength.

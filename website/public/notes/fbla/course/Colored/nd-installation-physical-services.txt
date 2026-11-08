@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Fiber(pen) (g)and(pen) (g)copper(pen) (g)selection(pen)
+(pen)-> (pu)Rack(pen) (pu)and(pen) (pu)blade(pen) (pu)installation(pen)
+(pen)o (g)Fiber(pen) (g)and(pen) (g)copper(pen) (g)selection(pen)
+(pen)-> (g)Copper(pen) Ethernet sends signals over twisted pairs.
+(pen)-> UTP lacks metallic shielding; STP includes shielding.
+(pen)-> Shield (pu)installation(pen) and grounding must follow cable design.
+(pen)-> Cable category, endpoints and PHY constrain rate and channel.
+(pen)-> Coax has a central conductor and shield; some ISPs use it.
+(pen)-> (g)Fiber(pen) carries light and resists electromagnetic interference.
+(pen)-> Multimode commonly serves shorter links with matching optics.
+(pen)-> Single-mode with compatible optics can serve longer links.
+(pen)-> Reach depends on PHY, optics, wavelength, loss and connectors.
+(pen)o (pu)Rack(pen) (pu)and(pen) (pu)blade(pen) (pu)installation(pen)
+(pen)-> (pu)Rack(pen) servers mount as units in a cabinet with service access.
+(pen)-> Check rail fit, equipment depth, weight and (pu)rack(pen) capacity.
+(pen)-> Plan labeled (br)power(pen), network ports, cable paths and airflow.
+(pen)-> (pu)Blade(pen) servers fit a (or)shared(pen) chassis with common interconnects.
+(pen)-> Chassis can improve density and centralized management.
+(pen)-> Chassis adds cost and (or)shared(pen) failure dependencies.
+(pen)-> Inventory assets, firmware, NICs, storage and switch ports.
+(pen)-> Follow vendor install, grounding and safety procedures.
+(pen)-> After install, verify links, management, alarms and logs.
+(pen)-> Redundant PSUs help only with adequate independent feeds.
+(pen)o Overview
+(pen)-> (br)Power(pen), (br)temperature(pen), (br)and(pen) (br)UPS(pen)
+(pen)-> (or)Direct(pen), (or)shared(pen), (or)and(pen) (or)server(pen) (or)printing(pen)
+(pen)o (br)Power(pen), (br)temperature(pen), (br)and(pen) (br)UPS(pen)
+(pen)-> Excess heat can throttle equipment, age it or shut it down.
+(pen)-> Keep vents clear; monitor inlet (br)temperature(pen) and airflow.
+(pen)-> Cooling capacity and airflow must suit the installed load.
+(pen)-> A (br)UPS(pen) supplies temporary battery (br)power(pen) during an interruption.
+(pen)-> Size runtime to load; test batteries and controlled shutdown.
+(pen)-> A (br)UPS(pen) is not a generator, backup, or independent (br)power(pen) feed.
+(pen)-> (br)Power(pen) redundancy fails if upstream circuits share one failure.
+(pen)-> Define recovery priorities and dependencies before controls.
+(pen)-> Tabletop (br)power(pen) loss; predict effects; do not unplug live gear.
+(pen)o (or)Direct(pen), (or)shared(pen), (or)and(pen) (or)server(pen) (or)printing(pen)
+(pen)-> (or)Direct(pen) USB (or)printing(pen) connects a client to one printer.
+(pen)-> A network printer can accept jobs directly over the LAN.
+(pen)-> Host-shared (or)printing(pen) exposes a host queue to other clients.
+(pen)-> The host and its print service must stay available for jobs.
+(pen)-> A print (or)server(pen) centralizes queues and printer administration.
+(pen)-> Clients submit jobs to a queue; spooler manages pending work.
+(pen)-> A (or)server(pen) outage or queue fault can interrupt (or)shared(pen) printing.
+(pen)-> Restrict queue management and (or)printing(pen) to authorized users.
+(pen)-> Keep printer firmware and drivers supported and maintained.
+(pen)-> Protect confidential output; use secure release if available.

@@ -1,0 +1,48 @@
+o Overview
+-> Peer-to-peer and client-server
+-> Choose a service architecture
+o Peer-to-peer and client-server
+-> Peer-to-peer devices share resources directly with peers.
+-> Two home computers sharing files are a simple P2P example.
+-> Each peer manages its own resources and access decisions.
+-> P2P avoids a dedicated server but peer availability varies.
+-> Client-server assigns a service role to a server system.
+-> Clients request service, such as files, from that server.
+-> A file server can centralize permissions, storage and backup.
+-> Central services need adequate capacity and recovery plans.
+-> Both models need appropriate access and security controls.
+o Choose a service architecture
+-> Small trusted groups may value P2P simplicity and low cost.
+-> Growing organizations may need centrally managed services.
+-> Server failure can affect many clients at once.
+-> Replicated services may reduce but not eliminate dependencies.
+-> P2P users can make inconsistent copies and permissions.
+-> Server administration needs staffing, patching and monitoring.
+-> Client-server describes service roles, not physical layout.
+-> A server may be virtual or hosted outside the local LAN.
+-> Select based on scale, access control, continuity and budget.
+-> A central server still needs backup and restore testing.
+o Overview
+-> Star and bus topologies
+-> Ring and mesh topologies
+o Star and bus topologies
+-> Star connects endpoints to a central switch or access point.
+-> Adding a star endpoint is usually straightforward.
+-> A central switch or uplink fault can disconnect many users.
+-> Bus topology shares a common backbone among connected devices.
+-> Legacy coax Ethernet used bus-like shared media.
+-> A backbone break can interrupt service for many bus devices.
+-> Shared medium can create contention as traffic grows.
+-> Modern switched Ethernet generally uses physical star cabling.
+-> Physical wiring layout and logical forwarding can differ.
+o Ring and mesh topologies
+-> A ring links nodes in a closed path for traffic circulation.
+-> A ring break can interrupt service without alternate paths.
+-> A mesh provides multiple paths between selected network nodes.
+-> Full mesh links every pair; partial mesh links chosen pairs.
+-> Alternative paths can support resilience after a link failure.
+-> More mesh links increase installation and routing complexity.
+-> Wireless mesh relays traffic and consumes shared airtime.
+-> Redundancy helps only when alternate paths are independent.
+-> Loops require controls to prevent repeated frame circulation.
+-> Capacity must support rerouted traffic after a failure.

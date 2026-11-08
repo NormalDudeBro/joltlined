@@ -1,0 +1,48 @@
+o Overview
+-> Proofing, Factors, and Device Trust
+-> AAA, MFA, and Zero Trust
+o Proofing, Factors, and Device Trust
+-> Proofing links a person identity at stated assurance.
+-> It resolves, validates evidence, then verifies owner.
+-> Authentication checks control of an account authenticator.
+-> A device report is not user proof; login is not device proof.
+-> Attestation signs hardware-secured measurements for review.
+-> It depends on trusted measurement, signing key, and verifier.
+-> Authentication shows account control, not real-world identity.
+-> Assurance reduces risk; it does not promise certainty.
+-> Enrollment and recovery also need secure proofing controls.
+o AAA, MFA, and Zero Trust
+-> Authentication verifies control; authorization permits use.
+-> Accounting: record relevant use for review and investigation.
+-> MFA uses distinct types: know, have, or are.
+-> Two passwords are both know factors, not MFA by themselves.
+-> Password plus registered security key combines know and have.
+-> SMS codes can be intercepted/phished; not phishing-resistant.
+-> Zero Trust checks identity/context for each resource request.
+-> Managed device and verified worker get payroll read access.
+-> Network location or VPN alone does not grant implicit trust.
+-> Device posture is a signal; it does not identify the user.
+o Overview
+-> Least Privilege
+-> Honeypots, Honeynets, and Honeyfiles
+o Least Privilege
+-> Grant only resources/actions needed for assigned work.
+-> Separate routine accounts from administrative elevation.
+-> A reporting service may read a view, not own the database.
+-> Use role scopes and expire temporary permissions.
+-> Review access after job, project, or status changes.
+-> Remove stale rights; protect service/database accounts too.
+-> Least privilege limits harm from bugs or stolen accounts.
+-> It does not stop every authorized misuse or compromise.
+-> OWASP treats it as damage reduction, not injection prevention.
+o Honeypots, Honeynets, and Honeyfiles
+-> NIST calls honeypot an attractive resource for intruders.
+-> A decoy service/file can make unexpected access observable.
+-> Honeynet commonly means connected decoy systems.
+-> Honeyfile commonly means monitored decoy document/artifact.
+-> No separate NIST glossary entries for these labels were found.
+-> Access can alert defenders; decoys do not block attacks.
+-> Isolate decoys from production; restrict outbound connections.
+-> Use synthetic content, monitor alerts, assign response owner.
+-> Never place real credentials or sensitive records in decoys.
+-> Containment and safe isolation are separate design controls.

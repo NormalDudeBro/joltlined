@@ -1,0 +1,999 @@
+{
+  "id": "ni-foundations",
+  "event": "networking",
+  "title": "Networking foundations",
+  "sources": [
+    {
+      "id": "osi",
+      "title": "The OSI Model",
+      "url": "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/",
+      "reading": "fetched",
+      "scope": "Read overview and layer descriptions: seven-layer conceptual troubleshooting model, including functions of application through physical layers; modern Internet does not strictly map to OSI."
+    },
+    {
+      "id": "rfc791",
+      "title": "RFC 791: Internet Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc791",
+      "reading": "fetched",
+      "scope": "Read abstract and introductory IP operation material on connectionless datagrams, addressing, routing and gateways."
+    },
+    {
+      "id": "rfc8200",
+      "title": "RFC 8200: IPv6 Specification",
+      "url": "https://www.rfc-editor.org/rfc/rfc8200",
+      "reading": "fetched",
+      "scope": "Read specification overview and IPv6 addressing/header material; grounds IPv6 protocol facts."
+    },
+    {
+      "id": "rfc4632",
+      "title": "RFC 4632: Classless Inter-domain Routing",
+      "url": "https://www.rfc-editor.org/rfc/rfc4632",
+      "reading": "fetched",
+      "scope": "Read abstract and prefix notation sections: explicit prefix lengths and classless address assignment/aggregation."
+    },
+    {
+      "id": "cisco-subnet",
+      "title": "Configure IP Addresses and Unique Subnets",
+      "url": "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+      "reading": "fetched",
+      "scope": "Read IP/subnet definitions, dotted decimal explanation and subnet examples; older tutorial, classful assumptions are historical only."
+    },
+    {
+      "id": "nist-cloud",
+      "title": "NIST Definition of Cloud Computing",
+      "url": "https://www.nist.gov/publications/nist-definition-cloud-computing",
+      "reading": "fetched",
+      "scope": "Read NIST SP 800-145 abstract and definition: on-demand shared configurable resources, rapid provisioning/release, measured service and IaaS/PaaS/SaaS models."
+    },
+    {
+      "id": "3gpp-5g",
+      "title": "5G System Overview",
+      "url": "https://www.3gpp.org/technologies/5g-system-overview",
+      "reading": "fetched",
+      "scope": "Read 3GPP introduction, system architecture and service descriptions: UE, radio access network and core; eMBB, massive IoT and critical/URLLC goals. Goals are not universal service guarantees."
+    },
+    {
+      "id": "ieee-80211",
+      "title": "IEEE 802.11 Working Group",
+      "url": "https://www.ieee802.org/11/",
+      "reading": "fetched",
+      "scope": "Read working-group scope describing WLAN MAC and PHY standardization; this does not support universal range or throughput figures."
+    }
+  ],
+  "sheets": [
+    {
+      "id": "ni-basics-models",
+      "title": "Network models and LANs",
+      "domain": "Networking Basics",
+      "pages": [
+        [
+          {
+            "title": "LAN scale and purpose",
+            "objectives": [
+              "NI-NB-01"
+            ],
+            "sources": [
+              "osi"
+            ],
+            "notes": [
+              "A LAN connects devices within a limited local site.",
+              "It lets endpoints share links, services and local resources.",
+              "A switch forwards Ethernet frames using learned MAC locations.",
+              "A router forwards IP packets between separate IP networks.",
+              "Layer 2 means link-local framing; Layer 3 means IP routing.",
+              "An ordinary Layer 2 switch forwards within its VLAN.",
+              "A Layer 3 switch can also route between configured networks.",
+              "VLANs do not encrypt traffic or prevent all access.",
+              "LAN ownership and management depend on the organization."
+            ]
+          },
+          {
+            "title": "SOHO, enterprise and datacenter",
+            "objectives": [
+              "NI-NB-01"
+            ],
+            "sources": [
+              "osi"
+            ],
+            "notes": [
+              "SOHO means small office/home office, usually few users.",
+              "An integrated gateway may combine router, Wi-Fi and switching.",
+              "Integration saves cost but limits capacity and redundancy.",
+              "Enterprise LANs use managed access across campuses.",
+              "VLANs and routed boundaries organize traffic and policy.",
+              "Central management spreads both settings and errors.",
+              "Datacenter LANs connect dense server and storage systems.",
+              "Redundant links can improve availability but add complexity.",
+              "No LAN guarantees speed, security or uninterrupted service.",
+              "Select scale by users, traffic, growth, support and budget."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Encapsulation across a connection",
+            "objectives": [
+              "NI-NB-05"
+            ],
+            "sources": [
+              "osi",
+              "rfc791"
+            ],
+            "notes": [
+              "An application creates data for another host or service.",
+              "Transport adds headers to form segments or datagrams.",
+              "IP adds source and destination addresses in a packet.",
+              "The link layer wraps that packet in a local-link frame.",
+              "The physical layer transmits frame bits as signals.",
+              "The receiver processes headers in reverse order.",
+              "Each hop uses link delivery for the next local destination.",
+              "A router removes incoming frame and forwards the IP packet.",
+              "It builds a new frame appropriate to the outgoing link."
+            ]
+          },
+          {
+            "title": "Switch and router forwarding",
+            "objectives": [
+              "NI-NB-05"
+            ],
+            "sources": [
+              "osi",
+              "rfc791"
+            ],
+            "notes": [
+              "A Layer 2 switch consults its MAC forwarding table.",
+              "Unknown unicast may be flooded within the eligible VLAN.",
+              "A router examines IP destination and selects a next hop.",
+              "Routers separate broadcast domains by default.",
+              "A Layer 3 switch can perform routing when configured to do so.",
+              "Only ordinary Layer 2 switch operation does not route.",
+              "A next hop may be another router, not the destination.",
+              "Link rate is not payload throughput because of overhead.",
+              "Filtering policy is separate from basic forwarding.",
+              "Congestion, link failures and bad routes can cause loss."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "Trace a browser request to a remote server and explain what a router changes.",
+          "answer": "Transport and IP headers are carried inside a local-link frame. The router removes the incoming link framing, chooses a next hop by IP routing, and sends the packet in a new outgoing-link frame; link MAC delivery changes hop by hop.",
+          "objectives": [
+            "NI-NB-02",
+            "NI-NB-03",
+            "NI-NB-05"
+          ],
+          "kind": "application"
+        },
+        {
+          "prompt": "Does a switch always mean it cannot route between subnets?",
+          "answer": "No. An ordinary Layer 2 switch forwards frames within its VLAN, but a Layer 3 switch can route between configured networks. The device label alone does not specify enabled functions.",
+          "objectives": [
+            "NI-NB-05"
+          ],
+          "kind": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "ni-basics-forwarding",
+      "title": "OSI layers and packet forwarding",
+      "domain": "Networking Basics",
+      "pages": [
+        [
+          {
+            "title": "OSI: physical and data link",
+            "objectives": [
+              "NI-NB-02"
+            ],
+            "sources": [
+              "osi"
+            ],
+            "notes": [
+              "OSI is a seven-layer model, not a product blueprint.",
+              "Layer 1 sends bits as electrical, optical or radio signals.",
+              "It defines media, signaling and connection properties.",
+              "Copper, fiber and radio differ in reach and noise limits.",
+              "Layer 2 data link groups bits into frames on a local link.",
+              "Ethernet and Wi-Fi link delivery use link-layer addressing.",
+              "Switches learn source MAC locations and forward frames.",
+              "Frames are link-local; routers reframe packets for each link.",
+              "Errors, shared-media collisions or loops disrupt delivery."
+            ]
+          },
+          {
+            "title": "OSI: network through application",
+            "objectives": [
+              "NI-NB-03",
+              "NI-NB-04"
+            ],
+            "sources": [
+              "osi",
+              "rfc791"
+            ],
+            "notes": [
+              "Layer 3 network moves packets between networks using IP.",
+              "Routers choose next hops using destination and routing data.",
+              "Layer 4 carries process traffic using ports and protocols.",
+              "TCP offers ordered delivery and retransmits lost data.",
+              "UDP provides datagrams without TCP's delivery guarantees.",
+              "Layer 5 organizes dialogs between communicating systems.",
+              "Layer 6 presentation represents, encodes or transforms data.",
+              "Layer 7 protocols support tasks such as web requests.",
+              "Internet protocols do not always fit one OSI layer exactly.",
+              "OSI aids troubleshooting; it is not a wire-level recipe."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Network troubleshooting model",
+            "objectives": [
+              "NI-NB-02",
+              "NI-NB-03",
+              "NI-NB-04"
+            ],
+            "sources": [
+              "osi"
+            ],
+            "notes": [
+              "OSI layers provide a shared vocabulary for fault isolation.",
+              "No link signal suggests checking power, cable or interface.",
+              "A local link can work while IP addressing or routing is wrong.",
+              "Transport failure may affect a particular service or port.",
+              "Application failure may persist despite working lower layers.",
+              "Layer symptoms are clues, not proof of a single cause.",
+              "Modern protocol stacks combine functions differently from OSI.",
+              "Check end-to-end behavior after repairing a local symptom.",
+              "Do not infer security from a device's OSI layer alone."
+            ]
+          },
+          {
+            "title": "LAN design in context",
+            "objectives": [
+              "NI-NB-01",
+              "NI-NB-05"
+            ],
+            "sources": [
+              "osi"
+            ],
+            "notes": [
+              "A small shop may use a compact gateway and switched LAN.",
+              "A campus commonly uses managed access and routed boundaries.",
+              "Datacenter design focuses on server and storage traffic paths.",
+              "Capacity planning considers concurrent users and traffic.",
+              "Redundant equipment may share power or cable risks.",
+              "Segmentation constrains traffic only with correct policy.",
+              "More bandwidth cannot fix a wrong route or weak Wi-Fi.",
+              "Skills and maintenance matter alongside equipment cost.",
+              "Choose components for the site's actual availability needs.",
+              "Document dependencies so outages can be diagnosed efficiently."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "How does encapsulation change at a router?",
+          "answer": "A router removes incoming link framing, forwards the IP packet by destination, and creates new framing for the outgoing link.",
+          "objectives": [
+            "NI-NB-05"
+          ],
+          "kind": "application"
+        },
+        {
+          "prompt": "Can any switch route between subnets?",
+          "answer": "No. Ordinary Layer 2 switches forward frames within a VLAN; Layer 3 switches can route when configured.",
+          "objectives": [
+            "NI-NB-05"
+          ],
+          "kind": "application"
+        }
+      ]
+    },
+    {
+      "id": "ni-basics-addressing",
+      "title": "Internet access and addressing",
+      "domain": "Networking Basics",
+      "pages": [
+        [
+          {
+            "title": "From device to ISP",
+            "objectives": [
+              "NI-NB-06"
+            ],
+            "sources": [
+              "rfc791"
+            ],
+            "notes": [
+              "A network adapter connects a device to a wired or radio link.",
+              "A switch or access point joins devices to the local LAN.",
+              "A router joins IP networks and selects a route toward the ISP.",
+              "A modem adapts signaling for a provider medium such as coax.",
+              "An optical network terminal adapts a fiber access connection.",
+              "A gateway may combine modem, routing, switching and Wi-Fi.",
+              "The ISP aggregates access and routes to other networks.",
+              "Operators interconnect through peering or paid transit.",
+              "Available access media depend on the local provider."
+            ]
+          },
+          {
+            "title": "ISP chain and local limits",
+            "objectives": [
+              "NI-NB-06"
+            ],
+            "sources": [
+              "rfc791"
+            ],
+            "notes": [
+              "A home link does not directly cable to every Internet host.",
+              "Traffic crosses local gear, then provider networks.",
+              "Fiber, coax, DSL and cellular differ in signaling and reach.",
+              "The provider medium and plan constrain the access link rate.",
+              "A live physical link does not prove DNS or routing is working.",
+              "A reachable router does not prove remote service works.",
+              "Power or ISP faults can interrupt a correctly addressed LAN.",
+              "Speed tests include remote path and server limitations.",
+              "Check link, route, DNS and remote service separately.",
+              "One device may combine modem and router functions."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "IPv4 and IPv6 formats",
+            "objectives": [
+              "NI-NB-08"
+            ],
+            "sources": [
+              "rfc791",
+              "rfc8200"
+            ],
+            "notes": [
+              "IPv4 addresses are 32 bits, commonly shown as four octets.",
+              "Each dotted-decimal octet ranges from 0 through 255.",
+              "IPv6 addresses are 128 bits, written as hexadecimal groups.",
+              "IPv6 uses colons; :: can compress one run of zero groups.",
+              "IPv6 greatly expands available address space over IPv4.",
+              "IPv6 has a different header and uses Neighbor Discovery.",
+              "IPv4 commonly uses ARP on Ethernet links for local resolution.",
+              "Dual stack runs IPv4 and IPv6 together during transition.",
+              "IPv6 still needs suitable access policy and configuration."
+            ]
+          },
+          {
+            "title": "Subnet calculation example",
+            "objectives": [
+              "NI-NB-07"
+            ],
+            "sources": [
+              "rfc4632",
+              "cisco-subnet"
+            ],
+            "notes": [
+              "For 192.0.2.70/26, six bits remain for host positions.",
+              "A /26 block has 64 total addresses.",
+              "The aligned block containing .70 starts at 192.0.2.64.",
+              "The dotted mask is 255.255.255.192.",
+              "Under ordinary LAN convention, .64 is the network address.",
+              "The corresponding broadcast address is 192.0.2.127.",
+              "Ordinary assignable range is 192.0.2.65 through .126.",
+              "State the address-use convention when describing host range.",
+              "A /32 denotes one IPv4 address route, not a LAN subnet.",
+              "A /31 is a point-to-point exception to ordinary host rules."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "Calculate the network and ordinary LAN usable range for 192.0.2.70/26.",
+          "answer": "The block has 64 addresses and begins at .64. Mask is 255.255.255.192; ordinary LAN convention treats .64 as network and .127 as broadcast, leaving .65-.126. A /31 point-to-point link is a defined exception.",
+          "objectives": [
+            "NI-NB-07"
+          ],
+          "kind": "application"
+        },
+        {
+          "prompt": "Why are Class A/B/C masks not used to determine a modern prefix?",
+          "answer": "CIDR uses an explicitly configured prefix length and classless allocation. Historical classes are useful as history, but the address's first octet does not determine its current subnet mask.",
+          "objectives": [
+            "NI-NB-09"
+          ],
+          "kind": "retrieval"
+        }
+      ]
+    },
+    {
+      "id": "ni-addressing-calculations",
+      "title": "IP formats, CIDR and subnet calculation",
+      "domain": "Networking Basics",
+      "pages": [
+        [
+          {
+            "title": "IP and MAC addressing",
+            "objectives": [
+              "NI-NB-07"
+            ],
+            "sources": [
+              "rfc791",
+              "osi"
+            ],
+            "notes": [
+              "IP addresses identify interfaces for logical packet delivery.",
+              "Routers compare destination IP with network prefixes to route.",
+              "MAC addresses identify link-layer interfaces on a local link.",
+              "Switches learn source MAC locations to forward local frames.",
+              "A router uses a new link frame at each routed hop.",
+              "MAC is not the end-to-end Internet destination address.",
+              "Address resolution finds a local link address for a next hop.",
+              "IP and MAC values alone do not prove identity or permission.",
+              "Addresses may be assigned manually or by network services."
+            ]
+          },
+          {
+            "title": "Subnet purpose and CIDR",
+            "objectives": [
+              "NI-NB-07",
+              "NI-NB-09"
+            ],
+            "sources": [
+              "rfc4632",
+              "cisco-subnet"
+            ],
+            "notes": [
+              "A subnet groups addresses sharing a common network prefix.",
+              "Subnetting divides blocks for routing and administration.",
+              "CIDR writes a prefix length, such as IPv4 /24.",
+              "A /24 means 24 leading bits identify the IPv4 prefix.",
+              "Its dotted mask is 255.255.255.0; mask bits are contiguous.",
+              "IPv4 block size is 2^(32 minus prefix length) addresses.",
+              "Network boundaries align to the block size.",
+              "CIDR uses explicit prefixes, not inferred address classes.",
+              "Subnet design balances growth, address use and broadcasts.",
+              "A /31 can assign both addresses on a point-to-point link."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Historical IPv4 address classes",
+            "objectives": [
+              "NI-NB-09"
+            ],
+            "sources": [
+              "cisco-subnet",
+              "rfc4632"
+            ],
+            "notes": [
+              "Class A historically had first octet 1 through 126.",
+              "Class B historically had first octet 128 through 191.",
+              "Class C historically had first octet 192 through 223.",
+              "Class D: first octet 224-239; multicast addresses.",
+              "Class E: first octet 240-255; historically experimental.",
+              "Special-use values limit these simplified historical ranges.",
+              "Classful networks once implied default network masks.",
+              "Classless CIDR replaced class-based routing and allocation.",
+              "Modern configuration specifies a prefix or mask explicitly."
+            ]
+          },
+          {
+            "title": "Addressing and planning limits",
+            "objectives": [
+              "NI-NB-07",
+              "NI-NB-08"
+            ],
+            "sources": [
+              "rfc4632",
+              "rfc8200"
+            ],
+            "notes": [
+              "Size subnets for planned growth without needless waste.",
+              "Separate prefixes can simplify routing and management.",
+              "Subnetting alone does not block all inter-host traffic.",
+              "Routing policy determines which networks can exchange packets.",
+              "Plan IPv4 and IPv6 addresses and firewall rules separately.",
+              "Special-use ranges are not ordinary public host allocations.",
+              "Allocation and reachability depend on provider and setup.",
+              "Do not infer a modern prefix from historical class labels.",
+              "Verify mask, boundary and host rules for the specific link.",
+              "Legacy subnet tutorials may use simplified classful examples."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "Calculate 192.0.2.70/26 network and usable LAN range.",
+          "answer": "The aligned block is .64-.127 with mask 255.255.255.192; ordinary LAN hosts are .65-.126. /31 point-to-point is an exception.",
+          "objectives": [
+            "NI-NB-07"
+          ],
+          "kind": "application"
+        },
+        {
+          "prompt": "What replaced classful prefix inference?",
+          "answer": "CIDR uses an explicit prefix length; class labels do not determine modern masks.",
+          "objectives": [
+            "NI-NB-09"
+          ],
+          "kind": "application"
+        }
+      ]
+    },
+    {
+      "id": "ni-topologies",
+      "title": "Network scope and topologies",
+      "domain": "Network Topologies and Architecture",
+      "pages": [
+        [
+          {
+            "title": "Peer-to-peer and client-server",
+            "objectives": [
+              "NI-NTA-01"
+            ],
+            "sources": [
+              "osi"
+            ],
+            "notes": [
+              "Peer-to-peer devices share resources directly with peers.",
+              "Two home computers sharing files are a simple P2P example.",
+              "Each peer manages its own resources and access decisions.",
+              "P2P avoids a dedicated server but peer availability varies.",
+              "Client-server assigns a service role to a server system.",
+              "Clients request service, such as files, from that server.",
+              "A file server can centralize permissions, storage and backup.",
+              "Central services need adequate capacity and recovery plans.",
+              "Both models need appropriate access and security controls."
+            ]
+          },
+          {
+            "title": "Choose a service architecture",
+            "objectives": [
+              "NI-NTA-01"
+            ],
+            "sources": [
+              "osi"
+            ],
+            "notes": [
+              "Small trusted groups may value P2P simplicity and low cost.",
+              "Growing organizations may need centrally managed services.",
+              "Server failure can affect many clients at once.",
+              "Replicated services may reduce but not eliminate dependencies.",
+              "P2P users can make inconsistent copies and permissions.",
+              "Server administration needs staffing, patching and monitoring.",
+              "Client-server describes service roles, not physical layout.",
+              "A server may be virtual or hosted outside the local LAN.",
+              "Select based on scale, access control, continuity and budget.",
+              "A central server still needs backup and restore testing."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Star and bus topologies",
+            "objectives": [
+              "NI-NTA-03",
+              "NI-NTA-04"
+            ],
+            "sources": [
+              "osi"
+            ],
+            "notes": [
+              "Star connects endpoints to a central switch or access point.",
+              "Adding a star endpoint is usually straightforward.",
+              "A central switch or uplink fault can disconnect many users.",
+              "Bus topology shares a common backbone among connected devices.",
+              "Legacy coax Ethernet used bus-like shared media.",
+              "A backbone break can interrupt service for many bus devices.",
+              "Shared medium can create contention as traffic grows.",
+              "Modern switched Ethernet generally uses physical star cabling.",
+              "Physical wiring layout and logical forwarding can differ."
+            ]
+          },
+          {
+            "title": "Ring and mesh topologies",
+            "objectives": [
+              "NI-NTA-03",
+              "NI-NTA-04"
+            ],
+            "sources": [
+              "osi"
+            ],
+            "notes": [
+              "A ring links nodes in a closed path for traffic circulation.",
+              "A ring break can interrupt service without alternate paths.",
+              "A mesh provides multiple paths between selected network nodes.",
+              "Full mesh links every pair; partial mesh links chosen pairs.",
+              "Alternative paths can support resilience after a link failure.",
+              "More mesh links increase installation and routing complexity.",
+              "Wireless mesh relays traffic and consumes shared airtime.",
+              "Redundancy helps only when alternate paths are independent.",
+              "Loops require controls to prevent repeated frame circulation.",
+              "Capacity must support rerouted traffic after a failure."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "A clinic needs easy growth but less dependence on one uplink. What topology change could help?",
+          "answer": "A switched star is manageable but its central uplink is a failure point. Add an independently routed second uplink or selected mesh path if the cost and operations justify it; redundant paths sharing one conduit are not independent.",
+          "objectives": [
+            "NI-NTA-03",
+            "NI-NTA-04"
+          ],
+          "kind": "application"
+        },
+        {
+          "prompt": "Contrast P2P file sharing with a client-server file service for multiple branches.",
+          "answer": "P2P is decentralized with variable availability and separate permission management. Client-server centralizes access and backup, but depends on server capacity and WAN reachability for branches.",
+          "objectives": [
+            "NI-NTA-01",
+            "NI-NTA-02"
+          ],
+          "kind": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "ni-topology-choices",
+      "title": "Topology selection and wireless LANs",
+      "domain": "Network Topologies and Architecture",
+      "pages": [
+        [
+          {
+            "title": "LAN, MAN and WAN scope",
+            "objectives": [
+              "NI-NTA-02"
+            ],
+            "sources": [
+              "osi",
+              "rfc791"
+            ],
+            "notes": [
+              "LAN means local area network across a limited site or campus.",
+              "A MAN spans a metropolitan or city region.",
+              "A WAN joins distant sites across larger geographic areas.",
+              "WAN links often depend on telecom or Internet providers.",
+              "Routers connect local networks across inter-site links.",
+              "Geographic scope does not specify ownership or a fixed speed.",
+              "WAN distance often increases latency and service cost.",
+              "Provider outages can affect several connected locations.",
+              "A VPN protects a path; it cannot prevent provider outages."
+            ]
+          },
+          {
+            "title": "WAN implications and scale",
+            "objectives": [
+              "NI-NTA-02"
+            ],
+            "sources": [
+              "rfc791",
+              "osi"
+            ],
+            "notes": [
+              "A company WAN may link branches, headquarters and datacenters.",
+              "Applications sensitive to delay need realistic WAN testing.",
+              "Bandwidth and latency are distinct performance properties.",
+              "A MAN may be provider-operated or organization-managed.",
+              "LAN typically supports local switching and local services.",
+              "WAN agreements specify capacity and availability terms.",
+              "Backup circuits help only if routes and infrastructure differ.",
+              "A remote site still relies on its local LAN and gateway.",
+              "Choose scope from users, geography and application needs.",
+              "No topology name guarantees a particular reliability level."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Choose topology for requirements",
+            "objectives": [
+              "NI-NTA-03",
+              "NI-NTA-04"
+            ],
+            "sources": [
+              "osi"
+            ],
+            "notes": [
+              "A small office often uses a switched star for easy management.",
+              "A critical site may add diverse uplinks for availability.",
+              "A partial mesh trades extra paths against cost and complexity.",
+              "Legacy bus is rarely a new Ethernet installation choice.",
+              "Compare failure impact, growth, traffic and operator skills.",
+              "A central star switch is a possible single point of failure.",
+              "Separate power and physical routes improve path independence.",
+              "No topology is best for every business requirement.",
+              "Physical cabling choices also constrain speed and distance."
+            ]
+          },
+          {
+            "title": "Wireless network size options",
+            "objectives": [
+              "NI-NTA-05"
+            ],
+            "sources": [
+              "ieee-80211",
+              "osi"
+            ],
+            "notes": [
+              "A small LAN may use an integrated Wi-Fi router or one AP.",
+              "An access point bridges wireless clients to a wired LAN.",
+              "Large campuses deploy multiple managed access points.",
+              "AP placement should account for coverage and client density.",
+              "Wired backhaul avoids radio retransmission at every hop.",
+              "Managed systems coordinate settings and may support roaming.",
+              "Cloud management adds provider and Internet dependencies.",
+              "Survey results vary with walls, interference and location.",
+              "More APs do not automatically create better coverage.",
+              "All network sizes need secure settings and monitoring."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "How can a clinic reduce a star uplink failure risk?",
+          "answer": "Add an independent uplink or partial mesh if cost and operations justify it; shared pathways are not independent.",
+          "objectives": [
+            "NI-NTA-03"
+          ],
+          "kind": "application"
+        },
+        {
+          "prompt": "Why might campuses deploy managed access points?",
+          "answer": "Multiple managed APs provide planned coverage and capacity, but need backhaul, configuration and ongoing management.",
+          "objectives": [
+            "NI-NTA-05"
+          ],
+          "kind": "application"
+        }
+      ]
+    },
+    {
+      "id": "ni-wireless-cloud",
+      "title": "Cloud models and trade-offs",
+      "domain": "Network Topologies and Architecture",
+      "pages": [
+        [
+          {
+            "title": "Cloud definition and service models",
+            "objectives": [
+              "NI-NTA-06"
+            ],
+            "sources": [
+              "nist-cloud"
+            ],
+            "notes": [
+              "Cloud offers on-demand access to shared computing resources.",
+              "Resources include networks, servers, storage and applications.",
+              "Cloud resources can be rapidly provisioned and released.",
+              "IaaS provides configurable compute, storage and networking.",
+              "IaaS customers usually manage guest systems and applications.",
+              "PaaS supplies a platform for customers to deploy applications.",
+              "PaaS provider manages more underlying runtime infrastructure.",
+              "SaaS delivers a provider-operated application to its users.",
+              "Service models distinguish provider and customer control."
+            ]
+          },
+          {
+            "title": "Service model use and responsibility",
+            "objectives": [
+              "NI-NTA-06"
+            ],
+            "sources": [
+              "nist-cloud"
+            ],
+            "notes": [
+              "IaaS suits teams needing control of virtual machines.",
+              "PaaS runs customer code on a provider-managed platform.",
+              "SaaS suits organizations using a finished hosted application.",
+              "Provider duties differ by service and contract.",
+              "Customers still manage identities, access and data use.",
+              "Shared responsibility does not remove customer duties.",
+              "A hosted service depends on its provider and network path.",
+              "Clarify backup, retention and recovery terms before adoption.",
+              "Cloud describes a delivery model, not one physical location.",
+              "Service boundaries vary, so verify the actual offer terms."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Radio frequency and attenuation",
+            "objectives": [
+              "NI-NTA-08"
+            ],
+            "sources": [
+              "ieee-80211"
+            ],
+            "notes": [
+              "Radio frequency (RF) carries wireless signals through space.",
+              "Distance generally weakens received signal strength.",
+              "Walls and building materials absorb or reflect radio energy.",
+              "Metal and reinforced concrete can obstruct or reflect signals.",
+              "Interference and noise can corrupt reception or cut capacity.",
+              "A client and access point both need adequate signal quality.",
+              "A strong signal does not guarantee a fast Internet connection.",
+              "Range depends on frequency, antenna, power and environment.",
+              "No single indoor Wi-Fi range applies to every building."
+            ]
+          },
+          {
+            "title": "Wireless speed and reliability",
+            "objectives": [
+              "NI-NTA-08"
+            ],
+            "sources": [
+              "ieee-80211"
+            ],
+            "notes": [
+              "Wi-Fi PHY rate is a signaling maximum, not app throughput.",
+              "Overhead and retransmissions reduce usable throughput.",
+              "Congestion shares airtime among nearby clients.",
+              "Channel width and modulation affect capacity and reach.",
+              "Client capability can limit an AP's advertised link rate.",
+              "Backhaul capacity can bottleneck otherwise strong Wi-Fi.",
+              "Roaming, power and configuration affect reliability.",
+              "Survey at actual user locations and test representative load.",
+              "Higher AP power may not strengthen a client's return signal.",
+              "Band, regulation and hardware determine available channels."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "A company selects hosted email. Identify the cloud model and two retained concerns.",
+          "answer": "Hosted email is SaaS because the provider delivers the application. The customer still manages user access and data decisions, and should confirm recovery and retention responsibilities; service terms define the boundary.",
+          "objectives": [
+            "NI-NTA-06",
+            "NI-NTA-07"
+          ],
+          "kind": "application"
+        },
+        {
+          "prompt": "Why might a 5G user near a window have different service than indoors?",
+          "answer": "Radio band, distance, building attenuation, spectrum and local cell deployment affect reception. 5G service categories describe system goals, not guaranteed end-to-end performance at every location.",
+          "objectives": [
+            "NI-NTA-08",
+            "NI-NTA-09"
+          ],
+          "kind": "application"
+        }
+      ]
+    },
+    {
+      "id": "ni-wireless-performance",
+      "title": "Wireless performance and 5G",
+      "domain": "Network Topologies and Architecture",
+      "pages": [
+        [
+          {
+            "title": "Cloud benefits and operating costs",
+            "objectives": [
+              "NI-NTA-07"
+            ],
+            "sources": [
+              "nist-cloud"
+            ],
+            "notes": [
+              "On-demand provisioning can shorten deployment time.",
+              "Elastic resources can scale with changing workload demand.",
+              "Measured service ties some costs to consumption.",
+              "Less local hardware can reduce some maintenance work.",
+              "Usage charges, licenses and support create ongoing costs.",
+              "Data transfer and storage can add to monthly bills.",
+              "Migration and staff learning require time and resources.",
+              "Variable demand can make costs difficult to forecast.",
+              "Cloud is not automatically cheaper than local infrastructure."
+            ]
+          },
+          {
+            "title": "Cloud risks and planning",
+            "objectives": [
+              "NI-NTA-07"
+            ],
+            "sources": [
+              "nist-cloud"
+            ],
+            "notes": [
+              "Provider outages can make hosted services unavailable.",
+              "Misconfigured permissions can expose data or resources.",
+              "Provider dependence can make migration or exit difficult.",
+              "Location and retention of data affect compliance obligations.",
+              "Plan access controls and recovery responsibilities in advance.",
+              "Assess portability and export options before committing.",
+              "Use budgets and alerts to monitor measured consumption.",
+              "Provider safeguards do not replace correct customer setup.",
+              "Availability depends on app, network and provider systems.",
+              "Compare risks and costs with the business continuity need."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Wireless LAN and cellular options",
+            "objectives": [
+              "NI-NTA-05",
+              "NI-NTA-08"
+            ],
+            "sources": [
+              "ieee-80211"
+            ],
+            "notes": [
+              "IEEE 802.11 defines WLAN medium access and physical layers.",
+              "Wi-Fi commonly links local devices through access points.",
+              "Cellular networks provide operator-managed wide-area mobility.",
+              "Wi-Fi generally uses local access points and backhaul.",
+              "Unlicensed Wi-Fi bands can be crowded by neighboring networks.",
+              "Cellular coverage depends on operator deployment and spectrum.",
+              "Large campus Wi-Fi requires placement and capacity planning.",
+              "Small networks may use a single integrated wireless gateway.",
+              "Neither Wi-Fi nor cellular has one universal speed or range."
+            ]
+          },
+          {
+            "title": "5G system and service families",
+            "objectives": [
+              "NI-NTA-09"
+            ],
+            "sources": [
+              "3gpp-5g"
+            ],
+            "notes": [
+              "5G is a 3GPP mobile system, not a single radio frequency.",
+              "A 5G system includes user equipment, radio access and core.",
+              "5G New Radio (NR) is the radio interface family.",
+              "Enhanced mobile broadband targets high data-rate services.",
+              "Massive IoT targets communication for many connected devices.",
+              "Critical communications target reliability and low latency.",
+              "Network slicing can tailor logical network capabilities.",
+              "Service goals depend on deployment and end-to-end path.",
+              "Low latency is not guaranteed for every 5G application.",
+              "Spectrum, obstacles and distance affect coverage and capacity."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "Why can Wi-Fi signal be strong but throughput poor?",
+          "answer": "Congestion, protocol overhead, client limits or backhaul bottlenecks can reduce throughput despite signal strength.",
+          "objectives": [
+            "NI-NTA-08"
+          ],
+          "kind": "application"
+        },
+        {
+          "prompt": "What are 5G service families intended to support?",
+          "answer": "eMBB targets data rates, massive IoT many devices, and critical/URLLC services reliability and latency goals; these are not guarantees.",
+          "objectives": [
+            "NI-NTA-09"
+          ],
+          "kind": "application"
+        }
+      ]
+    }
+  ],
+  "lab": {
+    "title": "Safe local Wi-Fi observation",
+    "steps": [
+      "Predict which of two authorized indoor locations has weaker Wi-Fi and explain why.",
+      "Using only a network you are authorized to use, record the signal indicator and one ordinary download result at each location.",
+      "Repeat at a different time and discuss walls, congestion, device limits and Internet path as possible causes."
+    ],
+    "expected": [
+      "Results may show a location difference but cannot isolate its cause.",
+      "Signal bars and a single speed test do not establish universal range or throughput.",
+      "No traffic capture, credential collection or network configuration change is needed."
+    ]
+  },
+  "limitations": [
+    "OSI is a conceptual model; real Internet protocols do not map perfectly to seven discrete layers.",
+    "Historical IPv4 class ranges are simplified and must not be used to infer modern CIDR prefixes.",
+    "Wireless range and 5G performance depend on local environment, hardware, regulation and deployment."
+  ]
+}

@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Fault(pen) (g)isolation(pen) (g)and(pen) (g)symptoms(pen)
+(pen)-> (pu)Read(pen) (pu)local(pen) (pu)configuration(pen)
+(pen)o (g)Fault(pen) (g)isolation(pen) (g)and(pen) (g)symptoms(pen)
+(pen)-> Define service, users, location, onset, and impact first.
+(pen)-> Scope separates client faults from segment outages.
+(pen)-> Compare (g)symptoms(pen) with baseline, peers, logs, and changes.
+(pen)-> Check power, cable, link, adapter, and Wi-Fi association.
+(pen)-> Slow service may reflect congestion, loss, or host load.
+(pen)-> Measure latency and throughput at the same place and time.
+(pen)-> Connection faults occur at link, address, route, or service.
+(pen)-> An IP conflict means devices share one address on a link.
+(pen)-> Check DHCP leases and static assignments against plan.
+(pen)o (pu)Read(pen) (pu)local(pen) (pu)configuration(pen)
+(pen)-> Windows `ipconfig /all` shows adapter and gateway settings.
+(pen)-> Compare IP, mask, gateway, DNS with network (or)records(pen).
+(pen)-> `ipconfig /renew` requests DHCP renewal on auto adapters.
+(pen)-> Renewal does not fix a manually configured static address.
+(pen)-> `ipconfig /flushdns` clears the (pu)local(pen) resolver cache only.
+(pen)-> Ping an address and then its name to distinguish DNS (g)symptoms(pen).
+(pen)-> IP reply but name failure suggests a name lookup problem.
+(pen)-> A wrong mask or duplicate address disrupts (pu)local(pen) delivery.
+(pen)-> Verify command clues against server logs and another host.
+(pen)-> A DHCP lease shows assignment, not connectivity.
+(pen)o Overview
+(pen)-> (br)Path(pen) (br)tools(pen) (br)and(pen) (br)limits(pen)
+(pen)-> (or)Evidence(pen) (or)and(pen) (or)asset(pen) (or)records(pen)
+(pen)o (br)Path(pen) (br)tools(pen) (br)and(pen) (br)limits(pen)
+(pen)-> Ping sends Internet Control Message Protocol (ICMP) probes.
+(pen)-> Reply shows ICMP worked then; it does not test app ports.
+(pen)-> No reply may mean filtering, loss, routing, or host policy.
+(pen)-> ICMP silence alone never proves a destination is down.
+(pen)-> `tracert` raises time-to-live (TTL) to reveal responding hops.
+(pen)-> Routers may omit TTL replies; asterisks do not prove failure.
+(pen)-> Paths may be asymmetric; traces show only responding hops.
+(pen)-> Unix `traceroute` may use UDP, ICMP, or TCP by implementation.
+(pen)-> Use approved probes; firewalls and rate (br)limits(pen) shape results.
+(pen)o (or)Evidence(pen) (or)and(pen) (or)asset(pen) (or)records(pen)
+(pen)-> Counters expose errors, discards, and traffic volume.
+(pen)-> Packet captures show timing, retransmits, and resets.
+(pen)-> Captures may expose private data; authorize and protect them.
+(pen)-> Record test time, device, symptom, output, and interpretation.
+(pen)-> Document cause confidence, repair, verification, and owner.
+(pen)-> Track device, model, address, site, port, and support owner.
+(pen)-> Track user and group ownership plus access review dates.
+(pen)-> Printer (or)records(pen) include queue, location, and maintainer.
+(pen)-> Retest the affected service with its user after repair.
+(pen)-> Printer queues can fail at client, server, network, or device.

@@ -1,0 +1,48 @@
+o Overview
+-> Cloud responsibility and service models
+-> Cloud choices, effects, and shared duties
+o Cloud responsibility and service models
+-> Cloud moves workloads; it does not remove customer duties.
+-> Provider secures cloud facilities, hardware, managed layers.
+-> Customer secures data, identities, settings, and lawful use.
+-> Exact responsibility depends on service and configuration.
+-> IaaS rents compute, storage, and network infrastructure.
+-> IaaS customer normally manages guest OS and applications.
+-> PaaS provider manages platform/runtime; customer manages app.
+-> SaaS vendor runs app; customer manages users and data.
+-> More abstraction reduces customer control and admin work.
+o Cloud choices, effects, and shared duties
+-> Example: IaaS customer patches guest; provider patches host.
+-> SaaS customer controls account access and sharing settings.
+-> Provider controls do not correct customer misconfiguration.
+-> Public cloud can scale quickly without owning facilities.
+-> Costs shift toward usage; careless usage can raise bills.
+-> Cloud dependence adds provider, network, and outage risks.
+-> Classify data before selecting cloud storage or region.
+-> Review contract, duties, audit, and recovery options.
+-> AWS calls this security of the cloud versus in the cloud.
+-> A cloud service is not automatically safer than local hosting.
+o Overview
+-> Microservices and API security
+-> Distributed policy and complexity
+o Microservices and API security
+-> Microservices are small components communicating over APIs.
+-> An API endpoint accepts requests for a defined operation.
+-> Each reachable endpoint adds code and attack surface.
+-> Authenticate the caller; separately authorize each action.
+-> A valid login does not grant every endpoint permission.
+-> Service-to-service calls also need identity and access rules.
+-> NIST lists authentication and access management as core needs.
+-> Secure channels help protect service communications.
+-> Mutually authenticate services; authorize each API operation.
+o Distributed policy and complexity
+-> Many services multiply routes, keys, versions, and policies.
+-> Service discovery locates changing service instances.
+-> Incorrect discovery can direct requests to hostile endpoints.
+-> Gateways centralize some edge checks and traffic controls.
+-> Internal services still require correct authorization checks.
+-> A service mesh can package communication/security functions.
+-> Frameworks reduce repetition but add configuration complexity.
+-> Monitoring and rate limits help detect or constrain abuse.
+-> Microservices scale independently, not securely by default.
+-> Review boundaries; test denied and allowed API calls.

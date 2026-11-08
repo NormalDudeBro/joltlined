@@ -22,7 +22,7 @@
 
 ---
 
-**Joltlined** brings course notes, worked examples, and literary analysis together in a quiet, paper-inspired study collection. It includes three course-note collections and three reading companions. The pages use local assets and system fonts, work without JavaScript, and can be kept for offline reading or printing.
+**Joltlined** brings course notes, worked examples, and literary analysis together in a quiet, paper-inspired study collection. It includes four course-note collections, three reading companions, and four FBLA event courses. The pages use local assets and system fonts, work without JavaScript, and can be kept for offline reading or printing.
 
 ## The collection
 
@@ -31,6 +31,7 @@
 | [AP English Language](website/public/ap-lang.html) | Unit 1: rhetorical situation, a writer’s choices, evidence, and audience | 4 pages |
 | [AP World History](website/public/ap-world.html) | Units 1–3: The Global Tapestry, Networks of Exchange, and Land-Based Empires | 40 pages · 18 official topics + 2 supplements |
 | [Algebra 2](website/public/algebra-2.html) | Modules 1B and 2A: functions, transformations, linear systems, and optimization | 26 pages · 13 lessons |
+| [FBLA Study Hub](website/public/fbla.html) | National 2026–27 event study courses, linked source ledger, and retained IPv4 pilot | 44 sheets · 88 pages |
 | [Out of My Mind](website/public/out-of-my-mind.html) | A reading companion to Sharon M. Draper’s novel | — |
 | [Of Mice and Men](website/public/of-mice-and-men.html) | A reading companion to John Steinbeck’s novella | — |
 | [Fahrenheit 451](website/public/fahrenheit-451.html) | A reading companion to Ray Bradbury’s novel | — |
@@ -65,7 +66,7 @@ The reusable [AP World History master prompt](docs/prompts/ap-world-history.txt)
 ├── docs/                 The reading room: guides, reference, and artwork
 ├── .github/              Quality checks and deployment workflow
 └── website/              Site and its tooling
-    ├── public/           Nine HTML pages, assets/images/, styles/, notes/, CNAME
+    ├── public/           Thirteen HTML pages, assets/images/, styles/, notes/, CNAME
     ├── scripts/          Page generators and note importers
     ├── tests/            Content, accessibility, and browser checks
     ├── package.json      Package scripts and dependencies
@@ -76,7 +77,7 @@ The reusable [AP World History master prompt](docs/prompts/ap-world-history.txt)
 
 Generated pages are checked in under `website/public/`. Edit note sources and generators, then rebuild; maintain the three literary-analysis pages directly. GitHub Pages is configured to use **GitHub Actions**, publishing only `website/public/` after quality checks pass. The custom domain and public page URLs are unchanged; no application backend or database is required.
 
-The [FBLA study pilot](website/public/fbla.html) adds four event references and a source-backed IPv4 subnetting/VLSM note with recall prompts, an answer key, an Anki prompt map, and a lab. Read the [FBLA content guide](docs/fbla.md) for edition caveats and its flowing reference-page format.
+The [FBLA study hub](website/public/fbla.html) links [Networking Infrastructures](website/public/fbla-networking.html), [Cybersecurity](website/public/fbla-cybersecurity.html), [Network Design](website/public/fbla-network-design.html), and [Sales Presentation](website/public/fbla-sales.html), with an HTML objective/source ledger and a [JSON ledger](website/public/fbla-sources.json). The four courses provide 44 two-page sheets mapped to 160 local learning/rubric IDs. Content review and a separate companion-deck audit are complete; source-reading limits, official ambiguities, and rehearsal needs remain explicit rather than a readiness certification. The original IPv4 pilot is retained. Read the [FBLA content guide](docs/fbla.md) for scope and limits.
 
 These are independent study resources, not official College Board or FBLA materials or an official answer key. Literary interpretations and practice examples are starting points for your own evidence and reasoning. Check quotations and page references against your edition. See the [technical reference](docs/technical-reference.md) for provenance and verification limits.
 

@@ -1,0 +1,48 @@
+o Overview
+-> Current password requirements
+-> Password use and protection
+o Current password requirements
+-> NIST minimum is 15 characters for single-factor passwords.
+-> MFA-only password minimum is 8 characters under NIST.
+-> Use the correct context; 15 is not universal to MFA.
+-> NIST rejects extra composition rules for these passwords.
+-> Block commonly used, expected, and compromised passwords.
+-> Allow password managers, autofill, and paste functionality.
+-> Rate limiting helps reduce online guessing attempts.
+-> Do not require arbitrary periodic changes absent compromise.
+-> Change passwords promptly when compromise evidence exists.
+o Password use and protection
+-> Use a unique password for each account or service.
+-> Long unique secrets reduce reuse and guessing risks.
+-> A manager can generate and store distinct passwords.
+-> MFA adds a separate factor beyond the password.
+-> Password plus another password is not two factor types.
+-> Passwords alone are not phishing-resistant authentication.
+-> NIST recommends blocklisting weak or breached candidates.
+-> Verifiers hash passwords with salt and high work factor.
+-> A salt is not secret; it prevents identical hash reuse.
+-> Account recovery needs protection too.
+o Overview
+-> Patches and secure change
+-> Version control and pen testing
+o Patches and secure change
+-> Updates repair flaws and may change software behavior.
+-> Inventory systems to identify exposed, affected versions.
+-> Prioritize patches by risk, exposure, and business impact.
+-> Obtain updates through authenticated vendor distribution.
+-> Test security and function before production deployment.
+-> Approve changes after security-impact assessment and testing.
+-> Verify deployment and update affected system documentation.
+-> Emergency changes still need later documented review.
+-> Patch firewall software to address vendor security flaws.
+o Version control and pen testing
+-> Version control tracks change history and prior baselines.
+-> Review diffs to find unexpected or unsafe configuration edits.
+-> Keep passwords, tokens, keys, and private data out of commits.
+-> Retain prior known-good versions for tested rollback.
+-> Pen testing validates weaknesses under agreed conditions.
+-> Obtain explicit written authorization before any testing.
+-> Scope lists targets, exclusions, dates, and permitted methods.
+-> Rules of engagement set contacts and stop conditions.
+-> Protect evidence; report findings for remediation and retest.
+-> Out-of-scope discovery means stop and contact the owner.

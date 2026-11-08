@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Firewall(pen) (g)inspection(pen) (g)models(pen)
+(pen)-> (pu)NGFW(pen), (pu)WAF(pen), (pu)and(pen) (pu)limits(pen)
+(pen)o (g)Firewall(pen) (g)inspection(pen) (g)models(pen)
+(pen)-> A (g)firewall(pen) controls flows across different security postures.
+(pen)-> Network (g)firewall(pen) filters traffic crossing network boundaries.
+(pen)-> Host (g)firewall(pen) filters traffic to and from its endpoint.
+(pen)-> Stateless filter checks each packet without session tracking.
+(pen)-> Fields include addresses, protocol, ports, and direction.
+(pen)-> Stateful (g)inspection(pen) tracks flows in a connection state table.
+(pen)-> Stateful filters compare packets with expected session state.
+(pen)-> Return traffic may pass when linked to an allowed session.
+(pen)-> State tracking does not inspect all application meaning.
+(pen)o (pu)NGFW(pen), (pu)WAF(pen), (pu)and(pen) (pu)limits(pen)
+(pen)-> Application (g)firewall(pen) inspects protocol content and behavior.
+(pen)-> (pu)NGFW(pen) commonly combines network controls and added (g)inspection(pen).
+(pen)-> (pu)NGFW(pen) capabilities differ across vendors and configurations.
+(pen)-> (pu)WAF(pen) focuses on HTTP requests to web applications.
+(pen)-> (pu)WAF(pen) can filter web-specific inputs and request patterns.
+(pen)-> (pu)WAF(pen) supplements; it does not replace network firewalls.
+(pen)-> Encrypted traffic can limit (g)inspection(pen) without termination.
+(pen)-> NAT translates addresses; translation alone is not a (g)firewall(pen).
+(pen)-> Firewalls cannot stop every attack or internal misuse.
+(pen)-> Use endpoint, identity, and monitoring controls in depth.
+(pen)o Overview
+(pen)-> (br)ACL(pen) (br)rules(pen) (br)and(pen) (br)least(pen) (br)privilege(pen)
+(pen)-> (or)Segmentation(pen), (or)tests(pen), (or)and(pen) (or)operation(pen)
+(pen)o (br)ACL(pen) (br)rules(pen) (br)and(pen) (br)least(pen) (br)privilege(pen)
+(pen)-> (br)ACL(pen) is an ordered set of permit and deny conditions.
+(pen)-> (br)Rules(pen) match source, destination, protocol, port, direction.
+(pen)-> Permit only traffic required by documented business need.
+(pen)-> Narrow addresses and services rather than broad any-any (br)rules(pen).
+(pen)-> Rule order matters when the first matching rule decides.
+(pen)-> Default-deny blocks traffic not explicitly permitted.
+(pen)-> Apply policy to both inbound and outbound flows.
+(pen)-> Use logs and alerts to observe rule effects and threats.
+(pen)-> Review stale (br)rules(pen) and exceptions through change control.
+(pen)o (or)Segmentation(pen), (or)tests(pen), (or)and(pen) (or)operation(pen)
+(pen)-> Separate public web, application, and data trust zones.
+(pen)-> Allow web tier to reach only required database service.
+(pen)-> Block direct public access to internal database systems.
+(pen)-> Restrict administration to approved hosts and accounts.
+(pen)-> Test permitted flows and expected denials before rollout.
+(pen)-> Deploy changes in stages and monitor service impact.
+(pen)-> Rollback plan reduces outage risk from incorrect (br)rules(pen).
+(pen)-> Broad (br)rules(pen) permit excess access and lateral movement.
+(pen)-> Overly strict (br)rules(pen) can block legitimate business traffic.
+(pen)-> Review (br)rules(pen) periodically and after topology changes.

@@ -1,0 +1,48 @@
+o Overview
+-> LAN, MAN and WAN scope
+-> WAN implications and scale
+o LAN, MAN and WAN scope
+-> LAN means local area network across a limited site or campus.
+-> A MAN spans a metropolitan or city region.
+-> A WAN joins distant sites across larger geographic areas.
+-> WAN links often depend on telecom or Internet providers.
+-> Routers connect local networks across inter-site links.
+-> Geographic scope does not specify ownership or a fixed speed.
+-> WAN distance often increases latency and service cost.
+-> Provider outages can affect several connected locations.
+-> A VPN protects a path; it cannot prevent provider outages.
+o WAN implications and scale
+-> A company WAN may link branches, headquarters and datacenters.
+-> Applications sensitive to delay need realistic WAN testing.
+-> Bandwidth and latency are distinct performance properties.
+-> A MAN may be provider-operated or organization-managed.
+-> LAN typically supports local switching and local services.
+-> WAN agreements specify capacity and availability terms.
+-> Backup circuits help only if routes and infrastructure differ.
+-> A remote site still relies on its local LAN and gateway.
+-> Choose scope from users, geography and application needs.
+-> No topology name guarantees a particular reliability level.
+o Overview
+-> Choose topology for requirements
+-> Wireless network size options
+o Choose topology for requirements
+-> A small office often uses a switched star for easy management.
+-> A critical site may add diverse uplinks for availability.
+-> A partial mesh trades extra paths against cost and complexity.
+-> Legacy bus is rarely a new Ethernet installation choice.
+-> Compare failure impact, growth, traffic and operator skills.
+-> A central star switch is a possible single point of failure.
+-> Separate power and physical routes improve path independence.
+-> No topology is best for every business requirement.
+-> Physical cabling choices also constrain speed and distance.
+o Wireless network size options
+-> A small LAN may use an integrated Wi-Fi router or one AP.
+-> An access point bridges wireless clients to a wired LAN.
+-> Large campuses deploy multiple managed access points.
+-> AP placement should account for coverage and client density.
+-> Wired backhaul avoids radio retransmission at every hop.
+-> Managed systems coordinate settings and may support roaming.
+-> Cloud management adds provider and Internet dependencies.
+-> Survey results vary with walls, interference and location.
+-> More APs do not automatically create better coverage.
+-> All network sizes need secure settings and monitoring.

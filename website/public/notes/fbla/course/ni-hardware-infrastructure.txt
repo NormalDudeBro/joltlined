@@ -1,0 +1,48 @@
+o Overview
+-> Rack and blade server forms
+-> Chassis power and connectivity
+o Rack and blade server forms
+-> A rack server is an individual server mounted in a rack.
+-> It generally has its own power and cooling components.
+-> Racks allow mixed systems and incremental installation.
+-> They require rack space, cabling and room-level cooling.
+-> A blade is a server module fitted into a shared chassis.
+-> The chassis can provide power, fans, fabric and management.
+-> Shared infrastructure can reduce cabling and increase density.
+-> Chassis cost and blade compatibility constrain choice.
+-> Shared power, cooling or midplane can form failure domains.
+o Chassis power and connectivity
+-> Cisco UCS 5108 holds up to eight half-width blade servers.
+-> Its chassis has hot-swappable power supplies and fans.
+-> Its fabric connects blades to network interfaces and uplinks.
+-> That design reduces separate chassis switches and cabling.
+-> Redundant supplies or fans reduce, but do not erase, risk.
+-> Power redundancy mode determines tolerated supply loss.
+-> PoE supplies data and power over supported Ethernet links.
+-> Check the switch's total PoE budget and each port limit.
+-> Also verify device demand and the exact equipment datasheet.
+-> Internet needs ISP, handoff hardware, router and host link.
+o Overview
+-> File and block storage
+-> RAID and fault tolerance
+o File and block storage
+-> NAS means network-attached storage, typically shared files.
+-> Clients request named files and folders over LAN protocols.
+-> SAN commonly presents block volumes to connected hosts.
+-> A host formats and manages a block volume as a disk.
+-> NAS suits shared files; SAN can serve host-managed blocks.
+-> Choice depends on workload, protocol, administration and cost.
+-> Neither guarantees a particular speed or availability.
+-> A storage network does not itself provide backup copies.
+-> Protect data separately against deletion and site loss.
+o RAID and fault tolerance
+-> RAID combines disks for speed, redundancy, or both.
+-> RAID 0 stripes data; 2+ disks, no disk-failure tolerance.
+-> Two-disk RAID 1 mirrors data; survives one member failure.
+-> RAID 5 uses single parity; 3+ disks, tolerates one disk loss.
+-> RAID 6 uses dual parity; 4+ disks, tolerates two disk losses.
+-> Conventional RAID 10 stripes mirrored pairs; minimum 4 disks.
+-> RAID 10 tolerates one loss per pair, not both in one pair.
+-> RAID limits assume supported layouts and healthy members.
+-> Rebuilds take time; extra failures can exceed level limits.
+-> RAID is not backup; keep separate copies and test restores.

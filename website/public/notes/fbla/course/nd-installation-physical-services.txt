@@ -1,0 +1,48 @@
+o Overview
+-> Fiber and copper selection
+-> Rack and blade installation
+o Fiber and copper selection
+-> Copper Ethernet sends signals over twisted pairs.
+-> UTP lacks metallic shielding; STP includes shielding.
+-> Shield installation and grounding must follow cable design.
+-> Cable category, endpoints and PHY constrain rate and channel.
+-> Coax has a central conductor and shield; some ISPs use it.
+-> Fiber carries light and resists electromagnetic interference.
+-> Multimode commonly serves shorter links with matching optics.
+-> Single-mode with compatible optics can serve longer links.
+-> Reach depends on PHY, optics, wavelength, loss and connectors.
+o Rack and blade installation
+-> Rack servers mount as units in a cabinet with service access.
+-> Check rail fit, equipment depth, weight and rack capacity.
+-> Plan labeled power, network ports, cable paths and airflow.
+-> Blade servers fit a shared chassis with common interconnects.
+-> Chassis can improve density and centralized management.
+-> Chassis adds cost and shared failure dependencies.
+-> Inventory assets, firmware, NICs, storage and switch ports.
+-> Follow vendor install, grounding and safety procedures.
+-> After install, verify links, management, alarms and logs.
+-> Redundant PSUs help only with adequate independent feeds.
+o Overview
+-> Power, temperature, and UPS
+-> Direct, shared, and server printing
+o Power, temperature, and UPS
+-> Excess heat can throttle equipment, age it or shut it down.
+-> Keep vents clear; monitor inlet temperature and airflow.
+-> Cooling capacity and airflow must suit the installed load.
+-> A UPS supplies temporary battery power during an interruption.
+-> Size runtime to load; test batteries and controlled shutdown.
+-> A UPS is not a generator, backup, or independent power feed.
+-> Power redundancy fails if upstream circuits share one failure.
+-> Define recovery priorities and dependencies before controls.
+-> Tabletop power loss; predict effects; do not unplug live gear.
+o Direct, shared, and server printing
+-> Direct USB printing connects a client to one printer.
+-> A network printer can accept jobs directly over the LAN.
+-> Host-shared printing exposes a host queue to other clients.
+-> The host and its print service must stay available for jobs.
+-> A print server centralizes queues and printer administration.
+-> Clients submit jobs to a queue; spooler manages pending work.
+-> A server outage or queue fault can interrupt shared printing.
+-> Restrict queue management and printing to authorized users.
+-> Keep printer firmware and drivers supported and maintained.
+-> Protect confidential output; use secure release if available.

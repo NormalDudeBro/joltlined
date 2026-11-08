@@ -1,0 +1,48 @@
+o Overview
+-> Risk and Security Goals
+-> Controls and Malware Defense
+o Risk and Security Goals
+-> Asset value and exposure shape security risk.
+-> Threat is a possible harmful actor or event.
+-> Vulnerability is a weakness that can be exploited.
+-> Exploit is a method or code using that weakness.
+-> Risk combines likelihood and impact in context.
+-> Unpatched public software raises exposure, not certainty.
+-> Insiders, mistakes, suppliers, and outsiders create risk.
+-> Zero-day is unknown to responsible defenders or vendors.
+-> Confidentiality limits disclosure to authorized parties.
+o Controls and Malware Defense
+-> Integrity means preserving data accuracy and completeness.
+-> Availability means timely access to authorized users.
+-> Account lifecycle removes stale users and excess access.
+-> Authentication verifies a claimed identity or authenticator.
+-> Authorization decides allowed actions; permissions enforce it.
+-> Encryption obscures content without the required key.
+-> Antivirus detects known or suspicious patterns; misses occur.
+-> Mail and web filters reduce risky links and attachments.
+-> Patching removes known flaws after suitable testing.
+-> Disable unused services; verify needed network flows first.
+o Overview
+-> Availability and Attack Paths
+-> Integrity, Identity, and Recovery
+o Availability and Attack Paths
+-> DoS denies service by exhausting a constrained resource.
+-> Floods may saturate links or consume server request capacity.
+-> Protocol attacks can exhaust connection or state tables.
+-> Application floods consume workers, memory, or CPU.
+-> DDoS distributes traffic across many compromised devices.
+-> Botnets coordinate infected devices for distributed attacks.
+-> Distributed sources complicate filtering and attribution.
+-> Phishing impersonates trusted senders to prompt unsafe action.
+-> Spoofing forges apparent sender, address, or device identity.
+o Integrity, Identity, and Recovery
+-> Poisoning corrupts trusted lookup data, such as DNS cache.
+-> Hash maps data to a fixed-size digest; it is not encryption.
+-> A trusted digest comparison can reveal changed file contents.
+-> An unauthenticated hash does not prove who supplied the file.
+-> Digital signature uses private key; public key verifies it.
+-> Signatures prove integrity/key origin, not secrecy.
+-> Certificate binds identity and public key under issuer policy.
+-> Validate certificate chain, name, validity, and trust.
+-> MFA uses distinct factors; RADIUS supports remote access.
+-> SSO reuses login; TACACS+ separates device AAA functions.

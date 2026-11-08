@@ -1,0 +1,48 @@
+o Overview
+-> Three states of data
+-> MAC, DAC, and RBAC models
+o Three states of data
+-> Data at rest is stored on disk, device, backup, or database.
+-> Protect stored data with encryption and account permissions.
+-> Data in transit moves between devices or services.
+-> Use protected channels and verify communicating endpoints.
+-> Data in use is actively processed by an application.
+-> Limit process, memory, screen, and log exposure.
+-> Encryption at rest may not protect data after unlock.
+-> Transit encryption does not protect a compromised endpoint.
+-> Select controls based on sensitivity and threat model.
+o MAC, DAC, and RBAC models
+-> MAC means mandatory access control under central policy.
+-> Labels and clearance can govern classified document access.
+-> Ordinary users cannot freely override mandatory policy.
+-> DAC means discretionary access control assigned by owner.
+-> Example: file owner shares a document with colleagues.
+-> Sharing can propagate access; review inherited permissions.
+-> RBAC means role-based access control tied to job duties.
+-> Payroll role reads pay data; approver role authorizes pay.
+-> Assign needed roles; remove stale role membership.
+-> Models can coexist; choose for risk and workflow.
+o Overview
+-> Authentication and MFA
+-> Certificates, tokens, and policy
+o Authentication and MFA
+-> Authentication checks control of an identity's authenticator.
+-> Authorization decides which resource action is permitted.
+-> Accounting records access and actions for review.
+-> MFA combines distinct types: know, have, or are.
+-> Two passwords are both knowledge, not two factors.
+-> A password plus authenticator token is two different factors.
+-> MFA reduces password-only risk but does not stop every attack.
+-> Phishing-resistant authenticators reduce credential relay.
+-> Protect enrollment, recovery, and authenticator revocation.
+o Certificates, tokens, and policy
+-> Certificate binds a public key to an identity under CA trust.
+-> Validate chain, service name, dates, and certificate purpose.
+-> Certificate authentication does not authorize every action.
+-> Token carries an assertion or credential to a resource.
+-> Check token issuer, signature, audience, expiry, and scope.
+-> Bearer token may be used by whoever steals it; protect it.
+-> Short expiry limits exposure but does not prevent theft.
+-> Authorize each API action using identity and least privilege.
+-> Revoke compromised credentials and review resulting access.
+-> NIST 800-63-4 covers proofing, authenticators, and federation.

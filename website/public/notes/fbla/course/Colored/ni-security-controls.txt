@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Risk(pen) (g)and(pen) (g)Security(pen) (g)Goals(pen)
+(pen)-> (pu)Controls(pen) (pu)and(pen) (pu)Malware(pen) (pu)Defense(pen)
+(pen)o (g)Risk(pen) (g)and(pen) (g)Security(pen) (g)Goals(pen)
+(pen)-> Asset value and exposure shape (g)security(pen) (g)risk(pen).
+(pen)-> Threat is a possible harmful actor or event.
+(pen)-> Vulnerability is a weakness that can be exploited.
+(pen)-> Exploit is a method or code using that weakness.
+(pen)-> (g)Risk(pen) combines likelihood and impact in context.
+(pen)-> Unpatched public software raises exposure, not certainty.
+(pen)-> Insiders, mistakes, suppliers, and outsiders create (g)risk(pen).
+(pen)-> Zero-day is unknown to responsible defenders or vendors.
+(pen)-> Confidentiality limits disclosure to authorized parties.
+(pen)o (pu)Controls(pen) (pu)and(pen) (pu)Malware(pen) (pu)Defense(pen)
+(pen)-> (or)Integrity(pen) means preserving data accuracy and completeness.
+(pen)-> (br)Availability(pen) means timely access to authorized users.
+(pen)-> Account lifecycle removes stale users and excess access.
+(pen)-> Authentication verifies a claimed (or)identity(pen) or authenticator.
+(pen)-> Authorization decides allowed actions; permissions enforce it.
+(pen)-> Encryption obscures content without the required key.
+(pen)-> Antivirus detects known or suspicious patterns; misses occur.
+(pen)-> Mail and web filters reduce risky links and attachments.
+(pen)-> Patching removes known flaws after suitable testing.
+(pen)-> Disable unused services; verify needed network flows first.
+(pen)o Overview
+(pen)-> (br)Availability(pen) (br)and(pen) (br)Attack(pen) (br)Paths(pen)
+(pen)-> (or)Integrity(pen), (or)Identity(pen), (or)and(pen) (or)Recovery(pen)
+(pen)o (br)Availability(pen) (br)and(pen) (br)Attack(pen) (br)Paths(pen)
+(pen)-> DoS denies service by exhausting a constrained resource.
+(pen)-> Floods may saturate links or consume server request capacity.
+(pen)-> Protocol attacks can exhaust connection or state tables.
+(pen)-> Application floods consume workers, memory, or CPU.
+(pen)-> DDoS distributes traffic across many compromised devices.
+(pen)-> Botnets coordinate infected devices for distributed attacks.
+(pen)-> Distributed sources complicate filtering and attribution.
+(pen)-> Phishing impersonates trusted senders to prompt unsafe action.
+(pen)-> Spoofing forges apparent sender, address, or device (or)identity(pen).
+(pen)o (or)Integrity(pen), (or)Identity(pen), (or)and(pen) (or)Recovery(pen)
+(pen)-> Poisoning corrupts trusted lookup data, such as DNS cache.
+(pen)-> Hash maps data to a fixed-size digest; it is not encryption.
+(pen)-> A trusted digest comparison can reveal changed file contents.
+(pen)-> An unauthenticated hash does not prove who supplied the file.
+(pen)-> Digital signature uses private key; public key verifies it.
+(pen)-> Signatures prove (or)integrity(pen)/key origin, not secrecy.
+(pen)-> Certificate binds (or)identity(pen) and public key under issuer policy.
+(pen)-> Validate certificate chain, name, validity, and trust.
+(pen)-> MFA uses distinct factors; RADIUS supports remote access.
+(pen)-> SSO reuses login; TACACS+ separates device AAA functions.

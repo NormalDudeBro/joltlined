@@ -1,0 +1,48 @@
+o Overview
+-> Threat defenses and least privilege
+-> Zero Trust and network admission
+o Threat defenses and least privilege
+-> DoS exhausts a service resource; DDoS distributes that load.
+-> Capacity, filtering and provider aid may mitigate DoS.
+-> Phishing deceives users into disclosing data or taking action.
+-> Verify requests via known channels; report suspicious mail.
+-> Insider risk may be intentional or accidental.
+-> Least privilege limits access to needed tasks and time.
+-> Remove unused services; close ports and patch systems.
+-> Antivirus detects some threats; it cannot assure safety.
+-> Third-party access needs scope, oversight and revocation.
+o Zero Trust and network admission
+-> Zero Trust grants no automatic trust merely from LAN location.
+-> Evaluate each access request using identity and context.
+-> Grant granular least-privilege access to data and services.
+-> Reassess decisions as users, devices and risk context change.
+-> MFA combines factor types; two passwords are one type.
+-> Authentication checks identity; authorization grants actions.
+-> NAC checks device or identity at network admission.
+-> NAC may quarantine a device pending remediation or compliance.
+-> VLAN segmentation needs policy controls on inter-VLAN traffic.
+-> NAC complements endpoint, identity controls and monitoring.
+o Overview
+-> BitLocker and directory identity
+-> SELinux mandatory access control
+o BitLocker and directory identity
+-> BitLocker encrypts Windows volumes against offline exposure.
+-> TPM can protect startup keys and check offline integrity.
+-> Startup PIN or key can add preboot access protection.
+-> Encryption does not protect data in an open session.
+-> Protect and back up recovery keys for legitimate recovery.
+-> AD DS stores directory objects such as accounts and groups.
+-> Domain identity centralizes authentication and access control.
+-> Policy-based administration manages settings across systems.
+-> DNS locates services; a DNS name is not AD identity.
+o SELinux mandatory access control
+-> SELinux is Linux Security-Enhanced Linux access control.
+-> It implements mandatory access control (MAC) through policy.
+-> Policy constrains user and process interaction with objects.
+-> File and process labels provide context for policy decisions.
+-> Rules can restrict services beyond ordinary file permissions.
+-> This can limit damage if a process is compromised.
+-> Investigate denials; fix policy, do not blindly disable it.
+-> SELinux is not antivirus; updates and backups still matter.
+-> MAC policy differs from discretionary owner/group permissions.
+-> Use platform docs for modes and safe policy administration.

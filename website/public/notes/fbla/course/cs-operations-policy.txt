@@ -1,0 +1,48 @@
+o Overview
+-> Policies and recovery plans
+-> Recovery targets and exercise
+o Policies and recovery plans
+-> AUP states permitted use of organizational systems.
+-> InfoSec policy sets security duties and requirements.
+-> Policy sets what; procedures describe how to do it.
+-> BCP sustains priority business processes through disruption.
+-> DRP restores systems and data after a disaster.
+-> DRP supports BCP; neither plan is itself a backup.
+-> BIA ranks processes, systems, and dependency priorities.
+-> Preventive controls reduce likelihood or disruption impact.
+-> Plans name activation triggers, teams, contacts, and roles.
+o Recovery targets and exercise
+-> RTO is the target time to restore a service.
+-> RPO is the acceptable age of restored data.
+-> RTO limits outage duration; RPO limits data loss.
+-> Recovery strategy follows impact and criticality analysis.
+-> Define recovery sequence, resources, locations, and contacts.
+-> Test, train, and exercise; testing validates recovery ability.
+-> Tabletops test decisions; restores test usable recovered data.
+-> Compare actual restore time and data age with targets.
+-> Record gaps, corrective owners, and retest evidence.
+-> Update plans when systems, risks, or roles change.
+o Overview
+-> Secure messaging and email
+-> Data minimization and change control
+o Secure messaging and email
+-> Verify recipients and addresses before sending sensitive data.
+-> Use approved protected channels for sensitive communications.
+-> TLS protects a connection; it does not protect every copy.
+-> HTTPS is HTTP protected by TLS, not a separate cipher.
+-> Certificate validation helps authenticate the server endpoint.
+-> Email encryption depends on keys and recipient configuration.
+-> Unexpected urgency, links, or files can signal phishing.
+-> Verify unusual payment requests on a separate known channel.
+-> Report suspicious messages through approved response channels.
+o Data minimization and change control
+-> Collect only data needed for a defined business purpose.
+-> Less stored data reduces exposure after unauthorized access.
+-> Classify data; follow access, retention, and disposal rules.
+-> Share only necessary fields with authorized recipients.
+-> Masking replaces or removes fields, reducing analytic utility.
+-> Masked data can still identify via other attributes.
+-> Tokens substitute values; secure any identity mapping.
+-> Change requests need recording and security impact review.
+-> Test and approve changes before deployment; then verify them.
+-> Archive prior baselines for traceability and rollback.

@@ -1,0 +1,48 @@
+o Overview
+-> Network Scale and Work Models
+-> Devices and Trust Boundaries
+o Network Scale and Work Models
+-> A LAN links devices within a limited local site.
+-> A WAN connects distant LANs over carrier or private links.
+-> WAN reach adds provider, latency, recurring-cost tradeoffs.
+-> Peer-to-peer hosts share directly; control is distributed.
+-> P2P can suit small groups but complicates consistent policy.
+-> Client-server centralizes services, identity, administration.
+-> Central services simplify control but become dependencies.
+-> Thin clients rely on remote compute/apps; outages impair use.
+-> Servers provide services; clients request services.
+o Devices and Trust Boundaries
+-> A modem adapts a carrier access signal; products vary.
+-> A router forwards IP packets between networks using routes.
+-> A switch forwards local frames using learned MAC addresses.
+-> Servers attach to switches; clients reach services over links.
+-> An access point bridges Wi-Fi clients to a wired LAN.
+-> A gateway joins networks or systems; roles may be combined.
+-> A switch is not automatically a router or policy firewall.
+-> Authentication checks an identity claim or credential control.
+-> Authorization decides permitted actions after identity checks.
+-> Encryption protects confidentiality when keys are secure.
+o Overview
+-> Connectivity and Attack Patterns
+-> VPN and Authorized Capture
+o Connectivity and Attack Patterns
+-> Ethernet (IEEE 802.3) commonly carries wired LAN frames.
+-> Wi-Fi (802.11) uses radio; walls and noise affect links.
+-> Wi-Fi reach and rate depend on band, load, and equipment.
+-> Bluetooth is short-range personal-area radio, not WAN access.
+-> Phishing tricks people into unsafe disclosure or actions.
+-> Spoofing falsifies an address or identity signal to mislead.
+-> Poisoning corrupts trusted data, e.g. name-resolution answers.
+-> Attack labels overlap; identify the mechanism and target.
+-> Verify requests; use MFA, filtering, and updates.
+o VPN and Authorized Capture
+-> A VPN creates a logical tunnel across an underlying network.
+-> Configured VPNs can authenticate peers and encrypt traffic.
+-> Tunneling does not secure endpoints or grant user permissions.
+-> Packet capture records traffic visible at the capture point.
+-> Encryption hides payload; metadata may remain visible.
+-> Capture only with explicit authorization and approved scope.
+-> Minimize collection; protect files; follow retention policy.
+-> Authentication checks identity; authorization grants access.
+-> VPNs do not replace endpoint, account, or network controls.
+-> Never inspect others' traffic without authorization.

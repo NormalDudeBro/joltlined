@@ -83,7 +83,7 @@ export function renderHome() {
           </a>
           <a class="note-entry" href="fbla.html" aria-labelledby="fbla-title">
             <span class="entry-number" aria-hidden="true">04</span>
-            <div><h3 class="entry-title" id="fbla-title">FBLA Study Plan</h3><p class="entry-description">Start a 3–4 month competition plan with honest edition status and an original IPv4 subnetting and VLSM pilot.</p><span class="entry-meta">FOUR EVENTS &middot; FIRST-BATCH PILOT</span></div>
+            <div><h3 class="entry-title" id="fbla-title">FBLA Study Plan</h3><p class="entry-description">Explore four complete National 2026–27 study courses, an objective-mapped source ledger, and the original IPv4 subnetting pilot.</p><span class="entry-meta">FOUR EVENTS &middot; 44 STUDY SHEETS</span></div>
             <span class="arrow" aria-hidden="true">&rarr;</span>
           </a>
         </section>

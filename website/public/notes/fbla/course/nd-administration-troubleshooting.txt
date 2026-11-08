@@ -1,0 +1,48 @@
+o Overview
+-> Fault isolation and symptoms
+-> Read local configuration
+o Fault isolation and symptoms
+-> Define service, users, location, onset, and impact first.
+-> Scope separates client faults from segment outages.
+-> Compare symptoms with baseline, peers, logs, and changes.
+-> Check power, cable, link, adapter, and Wi-Fi association.
+-> Slow service may reflect congestion, loss, or host load.
+-> Measure latency and throughput at the same place and time.
+-> Connection faults occur at link, address, route, or service.
+-> An IP conflict means devices share one address on a link.
+-> Check DHCP leases and static assignments against plan.
+o Read local configuration
+-> Windows `ipconfig /all` shows adapter and gateway settings.
+-> Compare IP, mask, gateway, DNS with network records.
+-> `ipconfig /renew` requests DHCP renewal on auto adapters.
+-> Renewal does not fix a manually configured static address.
+-> `ipconfig /flushdns` clears the local resolver cache only.
+-> Ping an address and then its name to distinguish DNS symptoms.
+-> IP reply but name failure suggests a name lookup problem.
+-> A wrong mask or duplicate address disrupts local delivery.
+-> Verify command clues against server logs and another host.
+-> A DHCP lease shows assignment, not connectivity.
+o Overview
+-> Path tools and limits
+-> Evidence and asset records
+o Path tools and limits
+-> Ping sends Internet Control Message Protocol (ICMP) probes.
+-> Reply shows ICMP worked then; it does not test app ports.
+-> No reply may mean filtering, loss, routing, or host policy.
+-> ICMP silence alone never proves a destination is down.
+-> `tracert` raises time-to-live (TTL) to reveal responding hops.
+-> Routers may omit TTL replies; asterisks do not prove failure.
+-> Paths may be asymmetric; traces show only responding hops.
+-> Unix `traceroute` may use UDP, ICMP, or TCP by implementation.
+-> Use approved probes; firewalls and rate limits shape results.
+o Evidence and asset records
+-> Counters expose errors, discards, and traffic volume.
+-> Packet captures show timing, retransmits, and resets.
+-> Captures may expose private data; authorize and protect them.
+-> Record test time, device, symptom, output, and interpretation.
+-> Document cause confidence, repair, verification, and owner.
+-> Track device, model, address, site, port, and support owner.
+-> Track user and group ownership plus access review dates.
+-> Printer records include queue, location, and maintainer.
+-> Retest the affected service with its user after repair.
+-> Printer queues can fail at client, server, network, or device.

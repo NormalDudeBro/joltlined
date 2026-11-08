@@ -1,0 +1,529 @@
+{
+  "id": "nd-administration-planning",
+  "event": "network-design",
+  "title": "Network administration and planning",
+  "sources": [
+    {
+      "id": "guideline",
+      "title": "FBLA 2026-27 Network Design Guidelines",
+      "url": "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+      "reading": "fetched",
+      "scope": "Read study guide pp. 6-7 to verify Network Administration and Network Planning objective scope."
+    },
+    {
+      "id": "rfc3411",
+      "title": "RFC 3411: SNMP Management Framework Architecture",
+      "url": "https://www.rfc-editor.org/rfc/rfc3411",
+      "reading": "fetched",
+      "scope": "Read §§1-2 and 3.1-3.2: manager and agent applications, managed objects/MIB, operations, notifications, and the distinction between message security and access control."
+    },
+    {
+      "id": "rfc3414",
+      "title": "RFC 3414: SNMPv3 User-based Security Model",
+      "url": "https://www.rfc-editor.org/rfc/rfc3414",
+      "reading": "fetched",
+      "scope": "Read §§1.1-1.4 and 2: authentication provides integrity and user authentication, privacy protects payload disclosure and requires authentication, and timeliness limits replay. The document's example MD5/DES algorithms are historic, not current recommendations."
+    },
+    {
+      "id": "rfc3418",
+      "title": "RFC 3418: SNMP Management Information Base",
+      "url": "https://www.rfc-editor.org/rfc/rfc3418",
+      "reading": "fetched",
+      "scope": "Read §§1-2, including system identity/location objects, SNMP counters, and notifications; used to explain management data and monitoring evidence."
+    },
+    {
+      "id": "rfc1901",
+      "title": "RFC 1901: Community-based SNMPv2",
+      "url": "https://www.rfc-editor.org/rfc/rfc1901",
+      "reading": "fetched",
+      "scope": "Read §§2-3: agents, managers, MIB objects, and SNMPv2c's community-based administrative framework. Historic experimental RFC; used only for community model context."
+    },
+    {
+      "id": "cisa-snmp",
+      "title": "CISA: Reducing the Risk of SNMP Abuse",
+      "url": "https://www.cisa.gov/news-events/alerts/2017/06/05/reducing-risk-snmp-abuse",
+      "reading": "fetched",
+      "scope": "Read community-string exposure, SNMPv3 authPriv, MIB-view/ACL and least-privilege guidance. Dated 2017; confirm current device and cryptographic support."
+    },
+    {
+      "id": "ms-ping",
+      "title": "Microsoft ping command reference",
+      "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ping",
+      "reading": "fetched",
+      "scope": "Read command description, examples, and parameters: ICMP Echo testing, name-versus-address comparison, and timeout behavior."
+    },
+    {
+      "id": "ms-tracert",
+      "title": "Microsoft tracert command reference",
+      "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tracert",
+      "reading": "fetched",
+      "scope": "Read TTL-based path discovery and examples; intermediate routers can omit Time Exceeded responses, producing asterisks without proving a forwarding failure."
+    },
+    {
+      "id": "ms-ipconfig",
+      "title": "Microsoft ipconfig command reference",
+      "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig",
+      "reading": "fetched",
+      "scope": "Read /all, /renew, /flushdns, and remarks: adapter configuration, DHCP renewal conditions, and local DNS-cache scope."
+    },
+    {
+      "id": "azure-lb",
+      "title": "Microsoft Azure Load Balancer overview",
+      "url": "https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview",
+      "reading": "fetched",
+      "scope": "Read Layer 4 flow distribution, backend pools, rules, health probes, monitoring, and availability overview. These are Azure implementation examples, not universal behavior for every load balancer."
+    },
+    {
+      "id": "azure-lb-modes",
+      "title": "Azure Load Balancer distribution modes",
+      "url": "https://learn.microsoft.com/en-us/azure/load-balancer/distribution-mode-concepts",
+      "reading": "fetched",
+      "scope": "Read five-tuple hash distribution and two-/three-tuple client-IP affinity modes; same-client affinity can skew distribution, particularly where flow diversity is limited. Azure-specific implementation."
+    },
+    {
+      "id": "azure-lb-probes",
+      "title": "Azure Load Balancer health probes",
+      "url": "https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-custom-probe-overview",
+      "reading": "fetched",
+      "scope": "Read TCP/HTTP probe operations, configured response/threshold behavior, unhealthy backend handling, and health-signal design guidance; implementation details vary by SKU and product."
+    },
+    {
+      "id": "ms-shared",
+      "title": "Shared responsibility in the cloud",
+      "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility",
+      "reading": "fetched",
+      "scope": "Read service-model responsibility matrix and retained customer duties for data, accounts, and access; Microsoft-specific guidance and contract terms govern."
+    },
+    {
+      "id": "ms-server",
+      "title": "What is Windows Server?",
+      "url": "https://learn.microsoft.com/en-us/windows-server/get-started/overview",
+      "reading": "fetched",
+      "scope": "Read platform roles, deployment, management, integration, and licensing overview; used as vendor-specific evidence, not a neutral comparison or price quote."
+    },
+    {
+      "id": "ubuntu-server",
+      "title": "Ubuntu Server documentation",
+      "url": "https://ubuntu.com/server/docs/",
+      "reading": "fetched",
+      "scope": "Read overview sections for networking, security, software updates, storage, virtualisation, performance, and high availability."
+    },
+    {
+      "id": "redhat-linux",
+      "title": "What is Linux?",
+      "url": "https://www.redhat.com/en/topics/linux/what-is-linux",
+      "reading": "fetched",
+      "scope": "Read operating-system and distribution explanations: kernel, user space, packages, and different distribution choices. Vendor educational material; not used to claim universal superiority."
+    },
+    {
+      "id": "ms-print",
+      "title": "Microsoft print command reference",
+      "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/print",
+      "reading": "fetched",
+      "scope": "Read command syntax and examples showing local port printing and a named shared network queue."
+    },
+    {
+      "id": "ms-ad-ds",
+      "title": "Active Directory Domain Services overview",
+      "url": "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
+      "reading": "fetched",
+      "scope": "Read directory purpose and security sections: AD DS stores network objects and supports authentication, access control, and policy-based administration."
+    },
+    {
+      "id": "cisco-subnet",
+      "title": "Configure IP Addresses and Unique Subnets for New Users",
+      "url": "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+      "reading": "fetched",
+      "scope": "Read subnet/address examples and topology context. This older tutorial contains classful-era simplifications; notes do not treat them as modern routing practice."
+    }
+  ],
+  "sheets": [
+    {
+      "id": "nd-administration-maintenance",
+      "title": "Network administration: maintenance and monitoring",
+      "domain": "Network Administration",
+      "pages": [
+        [
+          {
+            "title": "Maintenance and recovery",
+            "objectives": ["ND-NA-01", "ND-NA-06"],
+            "sources": ["guideline", "ubuntu-server"],
+            "notes": [
+              "Maintenance keeps services supported, secure, and recoverable.",
+              "An audit compares actual assets and settings with policy.",
+              "Record audit scope, evidence, owner, risk, and due action.",
+              "Updates add fixes or features; patches address known defects.",
+              "Test compatibility, stage deployment, then verify outcomes.",
+              "A rollback plan limits harm if an update breaks a service.",
+              "A backup is a separate copy intended for later recovery.",
+              "RAID may tolerate disk failure; it does not replace backup.",
+              "A restore test checks usable data and recovery procedure."
+            ]
+          },
+          {
+            "title": "Accounts and permissions",
+            "objectives": ["ND-NA-02", "ND-NA-10"],
+            "sources": ["guideline", "ms-server", "ubuntu-server", "ms-print", "ms-ad-ds"],
+            "notes": [
+              "An account identifies a user or service to a system.",
+              "Authentication checks identity; authorization grants actions.",
+              "Groups collect accounts with similar job-based access needs.",
+              "Grant needed rights; avoid routine shared administrator use.",
+              "Review rights after role changes; disable accounts at exit.",
+              "Transfer ownership of files, queues, and scheduled work.",
+              "An asset record links item, owner, site, and support contact.",
+              "Track printer model, address, queue, host, and team.",
+              "A shared queue centralizes jobs, not printer uptime.",
+              "Remove obsolete group membership when duties end."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "SNMP and management data",
+            "objectives": ["ND-NA-03", "ND-NA-08"],
+            "sources": ["rfc3411", "rfc3414", "rfc3418", "rfc1901", "cisa-snmp"],
+            "notes": [
+              "Simple Network Management Protocol (SNMP) exchanges status.",
+              "Managers query agents that expose managed device objects.",
+              "A Management Information Base (MIB) names managed objects.",
+              "Poll counters; notifications report events but may be lost.",
+              "Counters need time intervals to show rates or changing errors.",
+              "SNMPv2c names are unencrypted; traffic can expose them.",
+              "SNMPv3 USM supports authentication and optional privacy.",
+              "Auth checks integrity and user; privacy encrypts data.",
+              "Use authPriv; limit MIB views and manager ACLs."
+            ]
+          },
+          {
+            "title": "Traffic baselines and alerts",
+            "objectives": ["ND-NA-07", "ND-NA-08", "ND-NA-09"],
+            "sources": ["guideline", "rfc3418", "azure-lb", "azure-lb-modes", "azure-lb-probes"],
+            "notes": [
+              "Time counters; baseline latency, loss, errors, and demand.",
+              "Compare like periods; peak and average load differ.",
+              "An alert triggers investigation, not proof of cause.",
+              "A load balancer distributes eligible traffic across backends.",
+              "Azure defaults to hashing five flow fields for backend choice.",
+              "Client-IP affinity sends that client to the same backend.",
+              "Affinity may skew load when few distinct client flows exist.",
+              "Configured probes can stop new flows to unhealthy backends.",
+              "Map links, gateways, dependencies; log checks and recovery.",
+              "Restrict log access and retention to protect sensitive data."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "A patch causes an application outage. What maintenance evidence helps recovery?",
+          "answer": "Use the approved change record, compatibility test, deployment time, service logs, and rollback steps. A verified restore or rollback should be tested against recovery needs; the mere existence of a backup does not prove it will work.",
+          "objectives": ["ND-NA-01", "ND-NA-06", "ND-NA-07"],
+          "kind": "application"
+        },
+        {
+          "prompt": "What does SNMPv3 privacy add beyond authentication?",
+          "answer": "Authentication checks message integrity and the configured user identity. Privacy encrypts the management payload against disclosure and is used with authentication. It does not by itself prevent denial of service or replace access control; use currently supported algorithms, not the historical examples in RFC 3414.",
+          "objectives": ["ND-NA-03", "ND-NA-08"],
+          "kind": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "nd-administration-troubleshooting",
+      "title": "Network administration: diagnostics and assets",
+      "domain": "Network Administration",
+      "pages": [
+        [
+          {
+            "title": "Fault isolation and symptoms",
+            "objectives": ["ND-NA-04", "ND-NA-07"],
+            "sources": ["guideline", "ms-ping", "ms-ipconfig", "cisco-subnet"],
+            "notes": [
+              "Define service, users, location, onset, and impact first.",
+              "Scope separates client faults from segment outages.",
+              "Compare symptoms with baseline, peers, logs, and changes.",
+              "Check power, cable, link, adapter, and Wi-Fi association.",
+              "Slow service may reflect congestion, loss, or host load.",
+              "Measure latency and throughput at the same place and time.",
+              "Connection faults occur at link, address, route, or service.",
+              "An IP conflict means devices share one address on a link.",
+              "Check DHCP leases and static assignments against plan."
+            ]
+          },
+          {
+            "title": "Read local configuration",
+            "objectives": ["ND-NA-04", "ND-NA-05"],
+            "sources": ["ms-ipconfig", "ms-ping"],
+            "notes": [
+              "Windows `ipconfig /all` shows adapter and gateway settings.",
+              "Compare IP, mask, gateway, DNS with network records.",
+              "`ipconfig /renew` requests DHCP renewal on auto adapters.",
+              "Renewal does not fix a manually configured static address.",
+              "`ipconfig /flushdns` clears the local resolver cache only.",
+              "Ping an address and then its name to distinguish DNS symptoms.",
+              "IP reply but name failure suggests a name lookup problem.",
+              "A wrong mask or duplicate address disrupts local delivery.",
+              "Verify command clues against server logs and another host.",
+              "A DHCP lease shows assignment, not connectivity."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Path tools and limits",
+            "objectives": ["ND-NA-05", "ND-NA-04"],
+            "sources": ["ms-ping", "ms-tracert"],
+            "notes": [
+              "Ping sends Internet Control Message Protocol (ICMP) probes.",
+              "Reply shows ICMP worked then; it does not test app ports.",
+              "No reply may mean filtering, loss, routing, or host policy.",
+              "ICMP silence alone never proves a destination is down.",
+              "`tracert` raises time-to-live (TTL) to reveal responding hops.",
+              "Routers may omit TTL replies; asterisks do not prove failure.",
+              "Paths may be asymmetric; traces show only responding hops.",
+              "Unix `traceroute` may use UDP, ICMP, or TCP by implementation.",
+              "Use approved probes; firewalls and rate limits shape results."
+            ]
+          },
+          {
+            "title": "Evidence and asset records",
+            "objectives": ["ND-NA-07", "ND-NA-10", "ND-NA-08"],
+            "sources": ["guideline", "rfc3418", "ms-print"],
+            "notes": [
+              "Counters expose errors, discards, and traffic volume.",
+              "Packet captures show timing, retransmits, and resets.",
+              "Captures may expose private data; authorize and protect them.",
+              "Record test time, device, symptom, output, and interpretation.",
+              "Document cause confidence, repair, verification, and owner.",
+              "Track device, model, address, site, port, and support owner.",
+              "Track user and group ownership plus access review dates.",
+              "Printer records include queue, location, and maintainer.",
+              "Retest the affected service with its user after repair.",
+              "Printer queues can fail at client, server, network, or device."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "A host misses ping but its web page loads. Is the host down?",
+          "answer": "No. The application response is evidence that the web service is reachable while ICMP may be filtered or lost. Ping tests ICMP Echo, not all protocols; compare service checks and logs before diagnosing an outage.",
+          "objectives": ["ND-NA-04", "ND-NA-05"],
+          "kind": "application"
+        },
+        {
+          "prompt": "A user can ping a server IP but not its hostname. What next?",
+          "answer": "Compare name resolution and configured DNS with the correct service name; `ipconfig /all` shows resolver settings. A local cache flush clears client cache but not server records, so verify DNS data and other clients before concluding.",
+          "objectives": ["ND-NA-05", "ND-NA-07"],
+          "kind": "application"
+        }
+      ]
+    },
+    {
+      "id": "nd-planning-requirements",
+      "title": "Network planning: requirements and scale",
+      "domain": "Network Planning",
+      "pages": [
+        [
+          {
+            "title": "Translate business requirements",
+            "objectives": ["ND-NP-01", "ND-NP-08"],
+            "sources": ["guideline", "cisco-subnet", "azure-lb"],
+            "notes": [
+              "Start with workflows, sites, users, services, and devices.",
+              "Estimate concurrent users and peak traffic, not headcount.",
+              "Map apps needing low delay, steady rates, or reliable access.",
+              "Physical size sets cable paths, closets, links, and coverage.",
+              "Growth affects port, address, capacity, and space needs.",
+              "Throughput is delivered rate, not the PHY link rate.",
+              "Contention, signal, servers, and uplinks affect throughput.",
+              "Availability needs set acceptable outage and recovery targets.",
+              "Budget includes licenses, staff, support, and replacement."
+            ]
+          },
+          {
+            "title": "Network scope and physical scale",
+            "objectives": ["ND-NP-01", "ND-NP-02"],
+            "sources": ["guideline", "cisco-subnet"],
+            "notes": [
+              "A local area network (LAN) connects devices in a limited site.",
+              "A wide area network (WAN) links networks across distance.",
+              "LAN and WAN name scope, not speed or technology.",
+              "A WAN often depends on carrier links and service contracts.",
+              "Long links may add latency, cost, and provider dependence.",
+              "Geography shapes routing, addressing, and support needs.",
+              "Separate user, server, guest needs before choosing equipment.",
+              "Redundancy improves resilience but adds links and operations.",
+              "Measure workload; labels alone do not size a network.",
+              "Carrier diversity helps only if routes avoid shared risks."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Topology and failure domains",
+            "objectives": ["ND-NP-03", "ND-NP-04", "ND-NP-09"],
+            "sources": ["guideline", "cisco-subnet", "azure-lb"],
+            "notes": [
+              "Star connects endpoints to a central switch or access point.",
+              "Edge link failure affects one; central failure affects many.",
+              "Mesh adds alternate paths but increases link cost.",
+              "Full mesh of n nodes needs n(n-1)/2 point-to-point links.",
+              "Bus attaches devices along a shared backbone cable.",
+              "A bus backbone break can disrupt service and hinder diagnosis.",
+              "Physical topology maps cables; logical topology maps paths.",
+              "Topology weighs fault impact, scale, cost, and staff skills.",
+              "Redundancy helps when failure domains are independent."
+            ]
+          },
+          {
+            "title": "Windows Server or Linux",
+            "objectives": ["ND-NP-05"],
+            "sources": ["guideline", "ms-server", "ubuntu-server", "redhat-linux"],
+            "notes": [
+              "A network operating system (NOS) runs shared network services.",
+              "Windows Server provides roles for Microsoft environments.",
+              "Linux server features vary by distribution and packages.",
+              "Check applications, drivers, identity, and hardware support.",
+              "Check staff expertise, training, and vendor support coverage.",
+              "Include licensing, subscriptions, upkeep, and migration costs.",
+              "Compare security controls and patching for this configuration.",
+              "Pilot service, access, backup, monitoring, and recovery needs.",
+              "Choose for compatibility and support, not stereotypes.",
+              "Licensing varies by edition, cores, and deployment terms."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "A growing firm has two sites and hosted voice. What requirements drive design?",
+          "answer": "Count concurrent users and peak voice/data flows at each site, measure delay tolerance, map geography and provider options, and set outage/recovery targets. LAN/WAN names do not promise capacity; compare measured demand, link cost, support, and redundancy.",
+          "objectives": ["ND-NP-01", "ND-NP-02", "ND-NP-08"],
+          "kind": "application"
+        },
+        {
+          "prompt": "What tradeoff distinguishes star, mesh, and bus layouts?",
+          "answer": "Star is easy to expand but concentrates risk in central equipment. Mesh provides alternate paths at greater link and operating cost. Bus shares one backbone and can be inexpensive but a backbone fault affects many devices. Select by scale, outage impact, and maintainability.",
+          "objectives": ["ND-NP-03", "ND-NP-04", "ND-NP-09"],
+          "kind": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "nd-planning-tradeoffs",
+      "title": "Network planning: tradeoffs and services",
+      "domain": "Network Planning",
+      "pages": [
+        [
+          {
+            "title": "Peer-to-peer or client-server",
+            "objectives": ["ND-NP-06"],
+            "sources": ["guideline", "ms-server", "ubuntu-server"],
+            "notes": [
+              "Peer-to-peer (P2P) lets endpoints share resources directly.",
+              "P2P avoids dedicated server cost for small, simple groups.",
+              "Each peer may manage users, rights, and copies separately.",
+              "Shared resource availability depends on its host being online.",
+              "Decentralized rights and backups hinder oversight and restore.",
+              "Compromised peer or account can expose shared resources.",
+              "Client-server centralizes shared services and administration.",
+              "Central policy is consistent but adds server dependencies.",
+              "Size capacity, backup, and failover for critical server roles."
+            ]
+          },
+          {
+            "title": "Cloud service benefits and costs",
+            "objectives": ["ND-NP-07", "ND-NP-08"],
+            "sources": ["guideline", "ms-server", "ubuntu-server", "azure-lb", "ms-shared"],
+            "notes": [
+              "Cloud services provide computing or management over a network.",
+              "Elastic capacity meets demand without local hardware buying.",
+              "IaaS leaves OS to customer; PaaS and SaaS shift more layers.",
+              "Customer owns data and identities; contract terms govern.",
+              "Usage, storage, support, and transfer create recurring costs.",
+              "Connectivity failure interrupts dependent workflows.",
+              "Review identity, access, data protection, recovery, export.",
+              "Local systems need staff and facilities but may work offline.",
+              "Compare lifecycle costs and ownership, not hardware price.",
+              "Portability depends on formats, contracts, and dependencies."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Cost, throughput, and availability",
+            "objectives": ["ND-NP-08", "ND-NP-09"],
+            "sources": ["guideline", "azure-lb", "cisco-subnet"],
+            "notes": [
+              "Constraints include budget, space, and compatibility.",
+              "Business drivers include capacity, growth, and recovery.",
+              "Measure busy-hour throughput and identify bottlenecks.",
+              "Bandwidth costs money and may not fix server or app delay.",
+              "Independent redundant links and devices improve availability.",
+              "Extra paths need routes, tests, monitoring, and skilled staff.",
+              "Star's central device can fail without redundancy.",
+              "Mesh increases path choices and cabling/management complexity.",
+              "Topology labels alone do not guarantee performance or uptime."
+            ]
+          },
+          {
+            "title": "Service targets and design choice",
+            "objectives": ["ND-NP-01", "ND-NP-07", "ND-NP-08", "ND-NP-09"],
+            "sources": ["guideline", "azure-lb", "ms-server", "ubuntu-server"],
+            "notes": [
+              "A service level agreement (SLA) states measurable promises.",
+              "Define service, measurement window, exclusions, and reporting.",
+              "Provider uptime is not end-to-end application uptime.",
+              "Map power, DNS, identity, carrier, and storage dependencies.",
+              "Health probes can remove unhealthy backends from flows.",
+              "A probe may miss an untested dependency failure.",
+              "Session persistence keeps client affinity but can skew load.",
+              "Model options against cost, throughput, recovery, and staff.",
+              "Record assumptions, options, owners, and review triggers.",
+              "Review targets when business impact or dependencies change."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "A small office wants shared files without a server. What should it weigh?",
+          "answer": "P2P reduces dedicated-server purchase and administration for simple sharing, but peers may be offline, backups and permissions vary, and ownership is decentralized. If consistent access, central policy, and recovery matter, compare a managed client-server or cloud service including full operating cost.",
+          "objectives": ["ND-NP-06", "ND-NP-07", "ND-NP-08"],
+          "kind": "application"
+        },
+        {
+          "prompt": "Does a successful load-balancer health probe prove the whole app is healthy?",
+          "answer": "No. A probe checks its configured signal and can direct flows away from a backend that fails that check. It may not test downstream identity, database, or a complete user transaction. Define probes around meaningful service health and monitor dependencies separately.",
+          "objectives": ["ND-NP-08", "ND-NP-09"],
+          "kind": "application"
+        }
+      ]
+    }
+  ],
+  "lab": {
+    "title": "Controlled network design tabletop",
+    "steps": [
+      "Use a fictional 30-user office, two rooms, fixed budget, and a stated outage limit.",
+      "Draw star, partial mesh, and bus alternatives; mark links and shared failure points.",
+      "Estimate peak users and identify a critical application and its dependencies.",
+      "Compare P2P, local server, and cloud options for cost, skills, access, and recovery.",
+      "Select one design, define a measurable service target, and name a test for it."
+    ],
+    "expected": [
+      "The diagram identifies central equipment, paths, and failure consequences.",
+      "The recommendation ties topology and platform to stated business constraints.",
+      "The group distinguishes provider commitments from end-to-end availability.",
+      "No live network, real credentials, or production settings are used."
+    ]
+  },
+  "limitations": [
+    "RFC 3414 is foundational but dates from 2002 and specifies historic MD5/DES examples; deployed SNMPv3 algorithm support must be checked against current vendor guidance and policy.",
+    "Azure Load Balancer describes one Layer 4 product; algorithms, probe semantics, affinity, and failure handling vary by implementation.",
+    "LAN/WAN are geographic scope labels, not fixed throughput classes. Actual performance needs measurement of media, topology, load, and endpoints.",
+    "Windows Server and Ubuntu/Linux sources are platform owners; they document their own capabilities, not a neutral performance or security ranking. Licensing and support terms change and must be checked for the proposed deployment.",
+    "The Cisco subnet tutorial is older and includes classful simplifications; no classful assumptions are used for current network planning."
+  ]
+}

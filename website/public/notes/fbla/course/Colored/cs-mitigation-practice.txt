@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Current(pen) (g)password(pen) (g)requirements(pen)
+(pen)-> (pu)Password(pen) (pu)use(pen) (pu)and(pen) (pu)protection(pen)
+(pen)o (g)Current(pen) (g)password(pen) (g)requirements(pen)
+(pen)-> NIST minimum is 15 characters for single-factor passwords.
+(pen)-> MFA-only (g)password(pen) minimum is 8 characters under NIST.
+(pen)-> Use the correct context; 15 is not universal to MFA.
+(pen)-> NIST rejects extra composition rules for these passwords.
+(pen)-> Block commonly used, expected, and compromised passwords.
+(pen)-> Allow (g)password(pen) managers, autofill, and paste functionality.
+(pen)-> Rate limiting helps reduce online guessing attempts.
+(pen)-> Do not require arbitrary periodic changes absent compromise.
+(pen)-> (br)Change(pen) passwords promptly when compromise evidence exists.
+(pen)o (pu)Password(pen) (pu)use(pen) (pu)and(pen) (pu)protection(pen)
+(pen)-> Use a unique (g)password(pen) for each account or service.
+(pen)-> Long unique secrets reduce reuse and guessing risks.
+(pen)-> A manager can generate and store distinct passwords.
+(pen)-> MFA adds a separate factor beyond the (g)password(pen).
+(pen)-> (g)Password(pen) plus another (g)password(pen) is not two factor types.
+(pen)-> Passwords alone are not phishing-resistant authentication.
+(pen)-> NIST recommends blocklisting weak or breached candidates.
+(pen)-> Verifiers hash passwords with salt and high work factor.
+(pen)-> A salt is not secret; it prevents identical hash reuse.
+(pen)-> Account recovery needs (pu)protection(pen) too.
+(pen)o Overview
+(pen)-> (br)Patches(pen) (br)and(pen) (br)secure(pen) (br)change(pen)
+(pen)-> (or)Version(pen) (or)control(pen) (or)and(pen) (or)pen(pen) (or)testing(pen)
+(pen)o (br)Patches(pen) (br)and(pen) (br)secure(pen) (br)change(pen)
+(pen)-> Updates repair flaws and may (br)change(pen) software behavior.
+(pen)-> Inventory systems to identify exposed, affected versions.
+(pen)-> Prioritize (br)patches(pen) by risk, exposure, and business impact.
+(pen)-> Obtain updates through authenticated vendor distribution.
+(pen)-> Test security and function before production deployment.
+(pen)-> Approve changes after security-impact assessment and (or)testing(pen).
+(pen)-> Verify deployment and update affected system documentation.
+(pen)-> Emergency changes still need later documented review.
+(pen)-> Patch firewall software to address vendor security flaws.
+(pen)o (or)Version(pen) (or)control(pen) (or)and(pen) (or)pen(pen) (or)testing(pen)
+(pen)-> (or)Version(pen) (or)control(pen) tracks change history and prior baselines.
+(pen)-> Review diffs to find unexpected or unsafe configuration edits.
+(pen)-> Keep passwords, tokens, keys, and private data out of commits.
+(pen)-> Retain prior known-good versions for tested rollback.
+(pen)-> Pen (or)testing(pen) validates weaknesses under agreed conditions.
+(pen)-> Obtain explicit written authorization before any (or)testing(pen).
+(pen)-> Scope lists targets, exclusions, dates, and permitted methods.
+(pen)-> Rules of engagement set contacts and stop conditions.
+(pen)-> Protect evidence; report findings for remediation and retest.
+(pen)-> Out-of-scope discovery means stop and contact the owner.

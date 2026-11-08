@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)From(pen) (g)provider(pen) (g)to(pen) (g)host(pen)
+(pen)-> (pu)Network(pen) (pu)adapters(pen) (pu)and(pen) (pu)local(pen) (pu)traffic(pen)
+(pen)o (g)From(pen) (g)provider(pen) (g)to(pen) (g)host(pen)
+(pen)-> An ISP supplies service over a (g)provider(pen) (pu)network(pen).
+(pen)-> A modem terminates a provider-specific signal.
+(pen)-> An ONT terminates a (or)fiber(pen) access service handoff.
+(pen)-> Either handoff can present Ethernet to a router.
+(pen)-> Some gateways combine modem or ONT and router.
+(pen)-> A router forwards IP packets between networks.
+(pen)-> Its WAN side faces service; LAN serves (pu)local(pen) hosts.
+(pen)-> A Layer 2 switch forwards LAN frames using MACs.
+(pen)-> A switch does not replace the WAN router function.
+(pen)o (pu)Network(pen) (pu)adapters(pen) (pu)and(pen) (pu)local(pen) (pu)traffic(pen)
+(pen)-> A NIC joins a (g)host(pen) to a wired or wireless (or)link(pen).
+(pen)-> It sends and receives link-layer frames.
+(pen)-> A PCIe NIC is a physical card fitted to a slot.
+(pen)-> A virtual NIC is a software interface for a VM.
+(pen)-> The host's virtual switch can connect virtual NICs.
+(pen)-> Path: (g)provider(pen), modem/ONT, router, LAN switch, (g)host(pen).
+(pen)-> One appliance may implement several path functions.
+(pen)-> The ISP service and working (g)provider(pen) (pu)network(pen) are also needed.
+(pen)-> Without Internet, (pu)local(pen) switched communication may still work.
+(pen)-> Ethernet frames use MAC addressing on the (pu)local(pen) (or)link(pen).
+(pen)o Overview
+(pen)-> (br)Copper(pen) (br)media(pen)
+(pen)-> (or)Fiber(pen) (or)and(pen) (or)link(pen) (or)compatibility(pen)
+(pen)o (br)Copper(pen) (br)media(pen)
+(pen)-> Twisted-pair (br)copper(pen) carries signals on paired conductors.
+(pen)-> Twisting helps reduce crosstalk between wire pairs.
+(pen)-> UTP means unshielded twisted pair; it lacks cable shielding.
+(pen)-> STP means shielded twisted pair; foil or braid screens pairs.
+(pen)-> Shield benefit depends on correct bonding and installation.
+(pen)-> Coax has a central conductor, dielectric and outer shield.
+(pen)-> Coax carries cable broadband and some legacy Ethernet.
+(pen)-> Twisted pair often uses an 8P8C modular plug.
+(pen)-> Coax commonly uses F-type or BNC connectors.
+(pen)o (or)Fiber(pen) (or)and(pen) (or)link(pen) (or)compatibility(pen)
+(pen)-> Single-mode (or)fiber(pen) has a small core for one light mode.
+(pen)-> Multimode (or)fiber(pen) has a larger core carrying multiple modes.
+(pen)-> LC and SC name connector form factors, not (or)fiber(pen) modes.
+(pen)-> Corning lists LC products for both single and multimode (or)fiber(pen).
+(pen)-> Connector fit alone does not make transceivers compatible.
+(pen)-> Match mode, wavelength, optics, connector and Ethernet PHY.
+(pen)-> Check both endpoint datasheets and the optical loss budget.
+(pen)-> (or)Fiber(pen) reach depends on PHY, optics, (or)fiber(pen) grade and loss.
+(pen)-> 100 m (br)copper(pen) channels are common, not a universal PHY limit.
+(pen)-> Never look into (or)fiber(pen) ends; use disconnected samples only.

@@ -1,0 +1,48 @@
+o Overview
+-> Layers and Addressing Roles
+-> TCP, UDP, DHCP, and Printed SMP
+o Layers and Addressing Roles
+-> OSI 1 physical: signaling, media, connectors, and bits.
+-> OSI 2 data link: local frames and link-layer addressing.
+-> OSI 3 network: IP addressing and routing between networks.
+-> OSI 4 transport: process delivery, ports, and TCP or UDP.
+-> OSI 5 session: coordinates dialogues between apps.
+-> OSI 6 presentation: data representation and transformations.
+-> OSI 7 application: network services used by applications.
+-> OSI is a learning model; implementations may span layers.
+-> TCP/IP names a protocol suite, not one individual protocol.
+o TCP, UDP, DHCP, and Printed SMP
+-> TCP provides reliable, ordered byte-stream service.
+-> TCP sequence numbers and ACKs support ordered recovery.
+-> UDP has no TCP delivery or ordering guarantees.
+-> Applications select transport to fit their requirements.
+-> DHCP client-server exchanges configure hosts.
+-> DHCP leases assign addresses temporarily; clients renew them.
+-> DHCP relays pass requests to servers on other subnets.
+-> DHCP does not establish that a device is trusted.
+-> The guide prints SMP but leaves its meaning undefined.
+-> Keep SMP unresolved; do not silently replace the term.
+o Overview
+-> Topology and Reachability Tests
+-> Layered Physical Diagnosis
+o Topology and Reachability Tests
+-> Star links devices through a center; its failure affects many.
+-> A star cable fault usually isolates its attached endpoint.
+-> Bus shares a backbone; a break may affect many devices.
+-> Ring forwards around a loop; recovery depends on protection.
+-> Physical cabling shape may differ from logical topology.
+-> Ping tests ICMP echo; loss is evidence, not a cause.
+-> Firewalls may block echo even when application service works.
+-> Tracert shows responding hops; filtering can hide responses.
+-> A hop timeout alone does not prove destination failure.
+o Layered Physical Diagnosis
+-> First scope impact: one device, site, service, or all users?
+-> Check power, cables, link lights, and Wi-Fi association.
+-> Confirm correct SSID, enabled adapter, signal, and wired port.
+-> Check VLAN, IP address, mask, gateway, and DNS next.
+-> Compare gateway, permitted remote IP, then a DNS name.
+-> IP works but names fail? Check the resolver path.
+-> No lease suggests DHCP checks, not a proven cause.
+-> Change one safe variable; preserve before/after evidence.
+-> Repeat the test; document cause and outcome.
+-> Only test cables or capture traffic when authorized and safe.

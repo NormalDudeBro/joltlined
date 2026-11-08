@@ -1,0 +1,48 @@
+o Overview
+-> Malware and Social Engineering
+-> Resilient Defensive Layers
+o Malware and Social Engineering
+-> Virus attaches to host content and runs when executed.
+-> Worm self-propagates; it need not attach to a host file.
+-> Trojan disguises harmful code as useful software.
+-> Logic bomb triggers when a time or condition is met.
+-> Ransomware blocks or encrypts data for extortion.
+-> Phishing arrives through email, text, call, or fake site.
+-> Urgency and unexpected credential requests are warning signs.
+-> Spoofing falsifies identity; verify sender independently.
+-> Poisoning alters trusted data so later lookups mislead users.
+o Resilient Defensive Layers
+-> Filter risky links/files; scanners cannot catch every sample.
+-> Verify payment or password requests through known channels.
+-> Patch exposed systems and retire unsupported software.
+-> Least privilege limits damage from stolen accounts or malware.
+-> Segmentation restricts paths to critical systems.
+-> Backups aid recovery; isolate copies from normal admin access.
+-> Test restores because untested copies may be incomplete.
+-> Close unused ports only after checking service dependencies.
+-> Firewall rules filter traffic; they cannot stop all attacks.
+-> Monitor logs and alerts; sensors require review and response.
+o Overview
+-> DoS Mechanics
+-> Mitigation and Residual Risk
+o DoS Mechanics
+-> A volumetric flood consumes available link bandwidth.
+-> A protocol flood consumes connection or device state.
+-> An application flood forces costly valid-looking work.
+-> Reflection sends third-party replies to a victim.
+-> Amplification makes replies larger than triggering requests.
+-> Forged source addresses can obscure origins in some floods.
+-> Botnet DDoS adds traffic from many compromised endpoints.
+-> A firewall cannot restore a saturated upstream link.
+-> Outages deny service to legitimate users.
+o Mitigation and Residual Risk
+-> Upstream filtering or scrubbing can remove attack traffic.
+-> Rate limits reduce abusive request rates but need tuning.
+-> Redundancy and capacity help only within design limits.
+-> Broad filters may block legitimate clients too.
+-> Coordinate with providers when circuit capacity is exceeded.
+-> Report phishing; do not click, reply, or share approval codes.
+-> Antivirus and filters complement user verification.
+-> Preserve logs and follow incident response procedures.
+-> No single control guarantees service or prevents compromise.
+-> Review residual risk as systems and attacker methods change.

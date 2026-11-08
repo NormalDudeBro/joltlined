@@ -1,0 +1,48 @@
+o Overview
+-> Firewall inspection models
+-> NGFW, WAF, and limits
+o Firewall inspection models
+-> A firewall controls flows across different security postures.
+-> Network firewall filters traffic crossing network boundaries.
+-> Host firewall filters traffic to and from its endpoint.
+-> Stateless filter checks each packet without session tracking.
+-> Fields include addresses, protocol, ports, and direction.
+-> Stateful inspection tracks flows in a connection state table.
+-> Stateful filters compare packets with expected session state.
+-> Return traffic may pass when linked to an allowed session.
+-> State tracking does not inspect all application meaning.
+o NGFW, WAF, and limits
+-> Application firewall inspects protocol content and behavior.
+-> NGFW commonly combines network controls and added inspection.
+-> NGFW capabilities differ across vendors and configurations.
+-> WAF focuses on HTTP requests to web applications.
+-> WAF can filter web-specific inputs and request patterns.
+-> WAF supplements; it does not replace network firewalls.
+-> Encrypted traffic can limit inspection without termination.
+-> NAT translates addresses; translation alone is not a firewall.
+-> Firewalls cannot stop every attack or internal misuse.
+-> Use endpoint, identity, and monitoring controls in depth.
+o Overview
+-> ACL rules and least privilege
+-> Segmentation, tests, and operation
+o ACL rules and least privilege
+-> ACL is an ordered set of permit and deny conditions.
+-> Rules match source, destination, protocol, port, direction.
+-> Permit only traffic required by documented business need.
+-> Narrow addresses and services rather than broad any-any rules.
+-> Rule order matters when the first matching rule decides.
+-> Default-deny blocks traffic not explicitly permitted.
+-> Apply policy to both inbound and outbound flows.
+-> Use logs and alerts to observe rule effects and threats.
+-> Review stale rules and exceptions through change control.
+o Segmentation, tests, and operation
+-> Separate public web, application, and data trust zones.
+-> Allow web tier to reach only required database service.
+-> Block direct public access to internal database systems.
+-> Restrict administration to approved hosts and accounts.
+-> Test permitted flows and expected denials before rollout.
+-> Deploy changes in stages and monitor service impact.
+-> Rollback plan reduces outage risk from incorrect rules.
+-> Broad rules permit excess access and lateral movement.
+-> Overly strict rules can block legitimate business traffic.
+-> Review rules periodically and after topology changes.

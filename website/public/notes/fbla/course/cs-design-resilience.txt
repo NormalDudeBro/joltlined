@@ -1,0 +1,48 @@
+o Overview
+-> Backup methods and recovery
+-> RAID, UPS, and CIA design cases
+o Backup methods and recovery
+-> A backup is a separate recoverable copy of selected data.
+-> Full copies selected data; restore is straightforward.
+-> Incremental copies changes since the most recent backup.
+-> Restore a full backup, then each incremental in sequence.
+-> Differential copies changes since the last full backup.
+-> Restore a full backup and the latest differential copy.
+-> Differentials grow until another full backup is made.
+-> Test restores; unreadable copies do not protect.
+-> Keep isolated or offline copies to resist ransomware.
+o RAID, UPS, and CIA design cases
+-> RAID combines disks for performance or fault tolerance.
+-> RAID 1 mirrors; RAID 5 tolerates one disk failure.
+-> RAID 6 tolerates two disk failures; RAID 0 has no redundancy.
+-> RAID cannot protect from deletion, malware, theft, or fire.
+-> RAID is not backup; keep independent, versioned copies.
+-> UPS battery bridges brief outages and enables safe shutdown.
+-> Confidentiality: encrypt backups and restrict key access.
+-> Integrity: detect changes with trusted hashes or signatures.
+-> Availability: UPS and restores limit outage impact.
+-> No single safeguard guarantees all three CIA goals.
+o Overview
+-> Security testing and architecture
+-> Evidence, remediation, and retesting
+o Security testing and architecture
+-> Testing checks controls against stated needs and threats.
+-> Design review traces assets, identities, flows, boundaries.
+-> Configuration review finds excess access and weak settings.
+-> Scanners find known issues; validate findings and rank risk.
+-> Static analysis examines code without executing it.
+-> Dynamic tests exercise a running application or service.
+-> Pen tests simulate scoped attacks with authorization.
+-> Methods have blind spots; combine them according to risk.
+-> Test staging systems with written scope and stop conditions.
+o Evidence, remediation, and retesting
+-> Record affected asset, evidence, impact, owner, priority.
+-> Fix underlying cause rather than only hiding an alert.
+-> Retest the original path and nearby paths after a fix.
+-> Track exceptions, residual risk, deadlines, and approvals.
+-> Recovery plans assign roles, priorities, and restore order.
+-> Set recovery time and acceptable data-loss targets.
+-> Exercise recovery without risking live data or systems.
+-> Use fictional scenario; check backup chain completeness.
+-> Expected: team identifies restore order, keys, dependencies.
+-> A passed scan or tabletop is not proof of total security.

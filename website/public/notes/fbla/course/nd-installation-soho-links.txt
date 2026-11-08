@@ -1,0 +1,48 @@
+o Overview
+-> SOHO edge and traffic controls
+-> Firewall rules and ACL behavior
+o SOHO edge and traffic controls
+-> A modem terminates an ISP access link; an ONT serves fiber.
+-> A router forwards IP packets between distinct networks.
+-> A switch forwards LAN frames using learned MAC addresses.
+-> A SOHO gateway may combine router, switch, AP and firewall.
+-> DHCP leases addresses and options such as gateway and DNS.
+-> DNS resolves names; it does not assign a host its address.
+-> NAT rewrites address or port fields between address realms.
+-> NAT is not a firewall rule or a security guarantee.
+-> Place an edge firewall to enforce permitted traffic flows.
+o Firewall rules and ACL behavior
+-> A hardware firewall is a dedicated appliance or function.
+-> A software firewall filters traffic on a host or gateway.
+-> An ACL matches fields such as direction, IP, protocol, port.
+-> Ordered rules evaluate until a match; order changes outcome.
+-> Cisco IOS ACLs have implicit deny after listed entries.
+-> A rule has no effect until applied at an interface or policy.
+-> Stateful inspection tracks sessions for return traffic.
+-> Allow only required flows; close unused services and ports.
+-> Test intended and denied traffic; narrow rules limit exposure.
+-> ACL syntax and default behavior vary by product and context.
+o Overview
+-> Wireless setup and physical media
+-> Subnet masks and loopback
+o Wireless setup and physical media
+-> An AP bridges 802.11 clients to a LAN; a router routes.
+-> A gateway joins networks; default gateway is off-subnet hop.
+-> Twisted pairs reduce interference; shielding adds protection.
+-> Ethernet rate and reach depend on specified PHY and cable.
+-> Fiber uses light; mode, optics, wavelength and loss set reach.
+-> LC connector shape alone cannot establish fiber compatibility.
+-> 802.11ax/be are WLAN amendments; bands vary.
+-> RF range varies with walls, interference, band and antennas.
+-> PHY headline rate is not application throughput or a promise.
+o Subnet masks and loopback
+-> IPv4 prefix counts contiguous network bits in the mask.
+-> A /24 mask is 255.255.255.0; do not infer from old classes.
+-> Address AND mask yields network; aligned blocks avoid overlap.
+-> In 192.168.8.34/24, network is 192.168.8.0/24.
+-> Ordinary LAN subnet reserves network and broadcast addresses.
+-> RFC 3021 uses both /31 addresses as point-to-point hosts.
+-> Both ends must support /31; not a usual multi-host LAN.
+-> IPv4 127.0.0.1 loopback tests this host, not a remote path.
+-> Connect modem/ONT to WAN; set LAN, DHCP, unique admin secret.
+-> Use WPA3 or WPA2-AES; avoid WEP and weak passphrases.

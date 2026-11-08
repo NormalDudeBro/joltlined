@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)LAN(pen), (g)MAN(pen) (g)and(pen) (g)WAN(pen) (g)scope(pen)
+(pen)-> (pu)WAN(pen) (pu)implications(pen) (pu)and(pen) (pu)scale(pen)
+(pen)o (g)LAN(pen), (g)MAN(pen) (g)and(pen) (g)WAN(pen) (g)scope(pen)
+(pen)-> (g)LAN(pen) means local area (or)network(pen) across a limited site or campus.
+(pen)-> A (g)MAN(pen) spans a metropolitan or city region.
+(pen)-> A (g)WAN(pen) joins distant sites across larger geographic areas.
+(pen)-> (g)WAN(pen) links often depend on telecom or Internet providers.
+(pen)-> Routers connect local networks across inter-site links.
+(pen)-> Geographic (g)scope(pen) does not specify ownership or a fixed speed.
+(pen)-> (g)WAN(pen) distance often increases latency and service cost.
+(pen)-> Provider outages can affect several connected locations.
+(pen)-> A VPN protects a path; it cannot prevent provider outages.
+(pen)o (pu)WAN(pen) (pu)implications(pen) (pu)and(pen) (pu)scale(pen)
+(pen)-> A company (g)WAN(pen) may link branches, headquarters and datacenters.
+(pen)-> Applications sensitive to delay need realistic (g)WAN(pen) testing.
+(pen)-> Bandwidth and latency are distinct performance properties.
+(pen)-> A (g)MAN(pen) may be provider-operated or organization-managed.
+(pen)-> (g)LAN(pen) typically supports local switching and local services.
+(pen)-> (g)WAN(pen) agreements specify capacity and availability terms.
+(pen)-> Backup circuits help only if routes and infrastructure differ.
+(pen)-> A remote site still relies on its local (g)LAN(pen) and gateway.
+(pen)-> (br)Choose(pen) (g)scope(pen) from users, geography and application needs.
+(pen)-> No (br)topology(pen) name guarantees a particular reliability level.
+(pen)o Overview
+(pen)-> (br)Choose(pen) (br)topology(pen) (br)for(pen) (br)requirements(pen)
+(pen)-> (or)Wireless(pen) (or)network(pen) (or)size(pen) (or)options(pen)
+(pen)o (br)Choose(pen) (br)topology(pen) (br)for(pen) (br)requirements(pen)
+(pen)-> A small office often uses a switched star for easy management.
+(pen)-> A critical site may add diverse uplinks for availability.
+(pen)-> A partial mesh trades extra paths against cost and complexity.
+(pen)-> Legacy bus is rarely a new Ethernet installation choice.
+(pen)-> Compare failure impact, growth, traffic and operator skills.
+(pen)-> A central star switch is a possible single point of failure.
+(pen)-> Separate power and physical routes improve path independence.
+(pen)-> No (br)topology(pen) is best for every business requirement.
+(pen)-> Physical cabling choices also constrain speed and distance.
+(pen)o (or)Wireless(pen) (or)network(pen) (or)size(pen) (or)options(pen)
+(pen)-> A small (g)LAN(pen) may use an integrated Wi-Fi router or one AP.
+(pen)-> An access point bridges (or)wireless(pen) clients to a wired (g)LAN(pen).
+(pen)-> Large campuses deploy multiple managed access points.
+(pen)-> AP placement should account for coverage and client density.
+(pen)-> Wired backhaul avoids radio retransmission at every hop.
+(pen)-> Managed systems coordinate settings and may support roaming.
+(pen)-> Cloud management adds provider and Internet dependencies.
+(pen)-> Survey results vary with walls, interference and location.
+(pen)-> More APs do not automatically create better coverage.
+(pen)-> All (or)network(pen) sizes need secure settings and monitoring.

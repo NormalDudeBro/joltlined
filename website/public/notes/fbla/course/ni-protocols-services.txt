@@ -1,0 +1,48 @@
+o Overview
+-> File and Mail Protocols
+-> DNS, DHCP, and IP
+o File and Mail Protocols
+-> FTP transfers files through control and data connections.
+-> FTP control commonly listens on TCP port 21 by default.
+-> FTP active/passive modes change data connection ports.
+-> Plain FTP does not protect credentials or contents in transit.
+-> FTPS adds TLS to FTP; SFTP is file transfer over SSH.
+-> SFTP commonly uses TCP port 22, the SSH default.
+-> SMTP transfers mail between systems and supports submission.
+-> SMTP relay commonly uses TCP 25; submission often uses 587.
+-> TCP 465 often means implicit-TLS submission; configs vary.
+o DNS, DHCP, and IP
+-> DNS answers name queries with records such as IP addresses.
+-> DNS commonly uses UDP 53; TCP 53 is also required.
+-> DHCP supplies leases and network settings to hosts.
+-> DHCPv4 commonly uses UDP 67 server and 68 client.
+-> A lease may include address, mask, router, and DNS server.
+-> DHCP relay can carry client requests across routed subnets.
+-> DHCP address is host configuration, not permanent identity.
+-> DNS name resolution does not itself route packets to a host.
+-> Gateway forwards traffic beyond the local IP subnet.
+-> Stale or poisoned DNS data can direct clients incorrectly.
+o Overview
+-> Transport and Port Defaults
+-> NAT and Secure Service Use
+o Transport and Port Defaults
+-> TCP provides an ordered byte stream with retransmission.
+-> TCP setup and recovery add overhead; delivery is not instant.
+-> UDP sends datagrams without TCP delivery/order guarantees.
+-> Applications may add reliability above UDP when needed.
+-> IP carries packets; TCP/UDP ports identify endpoints.
+-> HTTP commonly uses TCP 80; HTTPS commonly TCP 443.
+-> SSH commonly uses TCP 22; service ports can be changed.
+-> DNS uses UDP or TCP 53; blocking TCP can break functions.
+-> NTP commonly uses UDP 123; defaults are not exclusive rules.
+o NAT and Secure Service Use
+-> NAT maps IP addresses between address realms.
+-> NAPT also maps transport ports for multiple inside hosts.
+-> Home gateways commonly share one public IPv4 address.
+-> Translation conserves addresses; it does not encrypt packets.
+-> NAT is not a firewall policy or authentication mechanism.
+-> A stateful firewall separately permits or denies flows.
+-> Inbound reachability may need mapping and explicit policy.
+-> TLS aims to protect channels from eavesdropping and tampering.
+-> Use secure transfer; configure TLS and verify peer identity.
+-> Service configuration, not port number, determines exposure.

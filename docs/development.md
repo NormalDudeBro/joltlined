@@ -28,7 +28,7 @@ The **Quality** GitHub Actions workflow runs on pushes to `main` and on pull req
 - **Course content:** edit original and corresponding `Colored/` sources in `website/public/notes/`, preserving the marker rules and subject-specific line counts. Then, from `website/`, run `npm run build`.
 - **Generated layout:** edit the appropriate generator in `website/scripts/`, not just its generated HTML output.
 - **Literary companions:** edit `website/public/out-of-my-mind.html`, `website/public/of-mice-and-men.html`, and `website/public/fahrenheit-451.html` directly. They are maintained separately, not regenerated from note sources.
-- **FBLA reference:** edit `website/scripts/fbla.mjs` and `website/public/notes/fbla/ipv4-subnetting.txt`; see the [FBLA content and scope guide](fbla.md). This flowing reference page is intentionally not subject to the AP fixed-line/colored-sheet rules.
+- **FBLA:** edit structured modules in `website/scripts/fbla-content/` and the generator `website/scripts/fbla.mjs`; the build produces 44 fixed 48-line original/colored sheets and four event pages. The retained IPv4 pilot at `website/public/notes/fbla/ipv4-subnetting.txt` is a separate flowing reference. See the [FBLA content and scope guide](fbla.md).
 - **Shared presentation:** edit `website/public/styles/site.css`, and check every subject and all three companions.
 
 Commit regenerated pages alongside the source changes. Keep source text files in LF format as defined in `.gitattributes`; embedded downloads must preserve the source bytes.

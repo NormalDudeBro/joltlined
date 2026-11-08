@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Proofing(pen), (g)Factors(pen), (g)and(pen) (g)Device(pen) (g)Trust(pen)
+(pen)-> (pu)AAA(pen), (pu)MFA(pen), (pu)and(pen) (pu)Zero(pen) (pu)Trust(pen)
+(pen)o (g)Proofing(pen), (g)Factors(pen), (g)and(pen) (g)Device(pen) (g)Trust(pen)
+(pen)-> (g)Proofing(pen) links a person identity at stated assurance.
+(pen)-> It resolves, validates evidence, then verifies owner.
+(pen)-> Authentication checks control of an account authenticator.
+(pen)-> A (g)device(pen) report is not user proof; login is not (g)device(pen) proof.
+(pen)-> Attestation signs hardware-secured measurements for review.
+(pen)-> It depends on trusted measurement, signing key, and verifier.
+(pen)-> Authentication shows account control, not real-world identity.
+(pen)-> Assurance reduces risk; it does not promise certainty.
+(pen)-> Enrollment and recovery also need secure (g)proofing(pen) controls.
+(pen)o (pu)AAA(pen), (pu)MFA(pen), (pu)and(pen) (pu)Zero(pen) (pu)Trust(pen)
+(pen)-> Authentication verifies control; authorization permits use.
+(pen)-> Accounting: record relevant use for review and investigation.
+(pen)-> (pu)MFA(pen) uses distinct types: know, have, or are.
+(pen)-> Two passwords are both know (g)factors(pen), not (pu)MFA(pen) by themselves.
+(pen)-> Password plus registered security key combines know and have.
+(pen)-> SMS codes can be intercepted/phished; not phishing-resistant.
+(pen)-> (pu)Zero(pen) (g)Trust(pen) checks identity/context for each resource request.
+(pen)-> Managed (g)device(pen) and verified worker get payroll read access.
+(pen)-> Network location or VPN alone does not grant implicit (g)trust(pen).
+(pen)-> (g)Device(pen) posture is a signal; it does not identify the user.
+(pen)o Overview
+(pen)-> (br)Least(pen) (br)Privilege(pen)
+(pen)-> (or)Honeypots(pen), (or)Honeynets(pen), (or)and(pen) (or)Honeyfiles(pen)
+(pen)o (br)Least(pen) (br)Privilege(pen)
+(pen)-> Grant only resources/actions needed for assigned work.
+(pen)-> Separate routine accounts from administrative elevation.
+(pen)-> A reporting service may read a view, not own the database.
+(pen)-> Use role scopes and expire temporary permissions.
+(pen)-> Review access after job, project, or status changes.
+(pen)-> Remove stale rights; protect service/database accounts too.
+(pen)-> (br)Least(pen) (br)privilege(pen) limits harm from bugs or stolen accounts.
+(pen)-> It does not stop every authorized misuse or compromise.
+(pen)-> OWASP treats it as damage reduction, not injection prevention.
+(pen)o (or)Honeypots(pen), (or)Honeynets(pen), (or)and(pen) (or)Honeyfiles(pen)
+(pen)-> NIST calls honeypot an attractive resource for intruders.
+(pen)-> A decoy service/file can make unexpected access observable.
+(pen)-> Honeynet commonly means connected decoy systems.
+(pen)-> Honeyfile commonly means monitored decoy document/artifact.
+(pen)-> No separate NIST glossary entries for these labels were found.
+(pen)-> Access can alert defenders; decoys do not block attacks.
+(pen)-> Isolate decoys from production; restrict outbound connections.
+(pen)-> Use synthetic content, monitor alerts, assign response owner.
+(pen)-> Never place real credentials or sensitive records in decoys.
+(pen)-> Containment and safe isolation are separate design controls.

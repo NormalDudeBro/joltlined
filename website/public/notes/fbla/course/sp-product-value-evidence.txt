@@ -1,0 +1,48 @@
+o Overview
+-> Explain product fit
+-> Demonstrate accurately
+o Explain product fit
+-> Define offer, intended user, included scope, and conditions.
+-> Feature describes what a product has or does.
+-> Benefit describes why that feature may help a buyer.
+-> Link each feature-benefit claim to discovered need.
+-> Example: reminders may help users remember appointments.
+-> Benefit depends on delivery, access, and user response.
+-> Separate included functions from optional paid services.
+-> Check workflow, accessibility, compatibility, and capacity.
+-> A mismatch limits fit; product knowledge includes limits.
+o Demonstrate accurately
+-> Demonstrate a representative workflow, not every outcome.
+-> Use fictional sample data; protect real customer information.
+-> Explain what is shown and what is only illustrative.
+-> Use offline-ready materials; internet is not provided.
+-> Preliminary device use has no electricity or projector.
+-> A demo cannot prove broad performance or savings claims.
+-> Show relevant setup/support needs and limitations.
+-> Keep a non-device fallback if technology fails.
+-> Do not ask judges to click links or scan displayed QR codes.
+-> Use a pretested demo that does not expose live customer data.
+o Overview
+-> Substantiate claims
+-> Calculate cost and return
+o Substantiate claims
+-> FTC says express and implied ad claims need evidence.
+-> Assess the full impression, including omitted material facts.
+-> Performance, price, safety, and effectiveness can be material.
+-> Have a reasonable basis before making objective claims.
+-> Evidence strength should fit claim and circumstances.
+-> A testimonial alone does not prove typical objective results.
+-> A guarantee does not replace evidence for the claim.
+-> Disclose important conditions clearly near the claim.
+-> Label verified facts, estimates, and hypothetical examples.
+o Calculate cost and return
+-> Total cost of ownership (TCO) totals costs over a stated term.
+-> Count setup, purchase, subscription, labor, upkeep, exit fees.
+-> Example assumption: $120 setup plus $20 monthly for 12 months.
+-> TCO = $120 + ($20 x 12) = $360 before excluded costs.
+-> ROI = net gain divided by investment, times 100 percent.
+-> Assume $500 measured benefit less $200 cost = $300 net.
+-> ROI = $300 / $200 x 100% = 150%, if realized.
+-> Illustrative inputs are not a quote or guaranteed forecast.
+-> State term, baseline, exclusions; avoid double counting.
+-> If benefit were $100, net is -$100 and ROI is -50%.

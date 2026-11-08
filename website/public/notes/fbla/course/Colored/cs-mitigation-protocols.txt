@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)SSH(pen), (g)HTTPS(pen), (g)TLS(pen), (g)and(pen) (g)WPA(pen)2
+(pen)-> (pu)Certificates(pen) (pu)and(pen) (pu)trust(pen)
+(pen)o (g)SSH(pen), (g)HTTPS(pen), (g)TLS(pen), (g)and(pen) (g)WPA(pen)2
+(pen)-> (g)SSH(pen) supports secure remote login over an insecure network.
+(pen)-> (g)SSH(pen) authenticates its server and protects (or)data(pen) integrity.
+(pen)-> Verify (g)SSH(pen) host keys to detect server impersonation.
+(pen)-> (g)HTTPS(pen) is HTTP over (g)TLS(pen); TLS is the security protocol.
+(pen)-> (g)TLS(pen) handshake negotiates keys and protocol parameters.
+(pen)-> (g)TLS(pen) server identity is checked against its certificate.
+(pen)-> (g)TLS(pen) record layer protects application (or)data(pen) in transit.
+(pen)-> (g)WPA(pen)2 protects a wireless link; use secure configuration.
+(pen)-> Secure protocol use does not secure a compromised endpoint.
+(pen)o (pu)Certificates(pen) (pu)and(pen) (pu)trust(pen)
+(pen)-> Certificate binds a public key to a named subject.
+(pen)-> A trusted CA signs the binding under its issuance policy.
+(pen)-> A chain links the server certificate to a trusted root key.
+(pen)-> Client validates signatures, name, validity, and intended use.
+(pen)-> (pu)Trust(pen) depends on local (pu)trust(pen) anchors and validation policy.
+(pen)-> A certificate does not guarantee benign site content.
+(pen)-> CA issues certificate after request and identity checks.
+(pen)-> Keep the matching private key secret and access restricted.
+(pen)-> Track expiry; expired (pu)certificates(pen) may break service.
+(pen)-> CRLs list revoked (pu)certificates(pen); updates introduce time lag.
+(pen)o Overview
+(pen)-> (br)IDS(pen) (br)and(pen) (br)IPS(pen) (br)mechanisms(pen)
+(pen)-> (or)Malware(pen), (or)phishing(pen), (or)and(pen) (or)data(pen) (or)transformation(pen)
+(pen)o (br)IDS(pen) (br)and(pen) (br)IPS(pen) (br)mechanisms(pen)
+(pen)-> (br)IDS(pen) monitors events and analyzes them for possible incidents.
+(pen)-> (br)IPS(pen) detects and attempts to stop possible incidents.
+(pen)-> An (br)IPS(pen) can block traffic or change a security control.
+(pen)-> Signature detection compares events with known patterns.
+(pen)-> Anomaly detection compares activity with expected behavior.
+(pen)-> Stateful analysis checks protocol activity against profiles.
+(pen)-> False positives report benign events as suspicious.
+(pen)-> False negatives fail to detect a real incident.
+(pen)-> Tune detections and validate alerts using event context.
+(pen)o (or)Malware(pen), (or)phishing(pen), (or)and(pen) (or)data(pen) (or)transformation(pen)
+(pen)-> Filter risky links and attachments at email gateways.
+(pen)-> Least privilege limits (or)malware(pen) damage after execution.
+(pen)-> Check unexpected sender, destination, and request context.
+(pen)-> Report suspicious email; avoid opening unexpected attachments.
+(pen)-> Tokenization substitutes a token for a sensitive value.
+(pen)-> Token mapping, if retained, needs separate access protection.
+(pen)-> Masking removes or replaces fields and can lose analytic use.
+(pen)-> Steganography conceals a message within a carrier medium.
+(pen)-> Steganography hides presence; it is not encryption.
+(pen)-> Obfuscation is not encryption; each method has limits.

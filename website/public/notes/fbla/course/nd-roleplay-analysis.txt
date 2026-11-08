@@ -1,0 +1,48 @@
+o Overview
+-> Define the Problem and Criteria
+-> Compare Real Alternatives
+o Define the Problem and Criteria
+-> Restate the scenario accurately before proposing technology.
+-> Separate observed symptoms from business problems and impact.
+-> Identify stakeholders, sites, users, data, and deadlines.
+-> Separate stated facts, assumptions, unknowns, and risks.
+-> Measure goals: uptime, latency, cost, or security.
+-> Rank mandatory constraints above preferences and explain why.
+-> Map clients, switches, servers, gateways, and WAN links.
+-> Identify trust boundaries and single points of failure.
+-> Use network knowledge to explain impact and constraints.
+o Compare Real Alternatives
+-> Offer at least two credible options that meet the stated need.
+-> Compare options against the same weighted decision criteria.
+-> Assess capital, recurring cost, labor, and support effort.
+-> Assess speed, resilience, security, complexity, and growth.
+-> Name each option's concrete advantage and material drawback.
+-> VPN offers control; managed WAN may simplify support.
+-> VPN also needs endpoint, identity, and failover management.
+-> Reject options against constraints, not straw-man comparisons.
+-> Label estimates; avoid invented vendor guarantees.
+-> Choose an option and acknowledge its residual risks.
+o Overview
+-> Plan Feasible Implementation
+-> Connect Design to Business Value
+o Plan Feasible Implementation
+-> Phase work: discover, design, pilot, migrate, verify, review.
+-> Name owner, sequence, dependencies, and approval path.
+-> List labor, equipment, licenses, circuits, and training.
+-> Schedule maintenance and notify affected stakeholders.
+-> Export configs and protect backups before production changes.
+-> Set rollback trigger, owner, and tested recovery procedure.
+-> Use least privilege, authentication, updates, and encryption.
+-> Test access, service performance, recovery, and failover.
+-> Compare test results with scenario success criteria.
+o Connect Design to Business Value
+-> VLANs separate teams; verify routing and access rules.
+-> Switch ACLs limit flows; test allowed and denied paths.
+-> A second link helps only with sufficiently independent paths.
+-> Redundancy costs more and cannot ensure app recovery.
+-> A pilot limits impact and reveals compatibility problems.
+-> Monitoring checks health; assign a response owner.
+-> Document topology, configs, dependencies, and support handoff.
+-> State decision, next action, owner, and review date.
+-> Tie technical choices to business needs or constraints.
+-> If key facts are unknown, propose discovery before commitment.

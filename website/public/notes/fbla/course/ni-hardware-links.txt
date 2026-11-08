@@ -1,0 +1,48 @@
+o Overview
+-> From provider to host
+-> Network adapters and local traffic
+o From provider to host
+-> An ISP supplies service over a provider network.
+-> A modem terminates a provider-specific signal.
+-> An ONT terminates a fiber access service handoff.
+-> Either handoff can present Ethernet to a router.
+-> Some gateways combine modem or ONT and router.
+-> A router forwards IP packets between networks.
+-> Its WAN side faces service; LAN serves local hosts.
+-> A Layer 2 switch forwards LAN frames using MACs.
+-> A switch does not replace the WAN router function.
+o Network adapters and local traffic
+-> A NIC joins a host to a wired or wireless link.
+-> It sends and receives link-layer frames.
+-> A PCIe NIC is a physical card fitted to a slot.
+-> A virtual NIC is a software interface for a VM.
+-> The host's virtual switch can connect virtual NICs.
+-> Path: provider, modem/ONT, router, LAN switch, host.
+-> One appliance may implement several path functions.
+-> The ISP service and working provider network are also needed.
+-> Without Internet, local switched communication may still work.
+-> Ethernet frames use MAC addressing on the local link.
+o Overview
+-> Copper media
+-> Fiber and link compatibility
+o Copper media
+-> Twisted-pair copper carries signals on paired conductors.
+-> Twisting helps reduce crosstalk between wire pairs.
+-> UTP means unshielded twisted pair; it lacks cable shielding.
+-> STP means shielded twisted pair; foil or braid screens pairs.
+-> Shield benefit depends on correct bonding and installation.
+-> Coax has a central conductor, dielectric and outer shield.
+-> Coax carries cable broadband and some legacy Ethernet.
+-> Twisted pair often uses an 8P8C modular plug.
+-> Coax commonly uses F-type or BNC connectors.
+o Fiber and link compatibility
+-> Single-mode fiber has a small core for one light mode.
+-> Multimode fiber has a larger core carrying multiple modes.
+-> LC and SC name connector form factors, not fiber modes.
+-> Corning lists LC products for both single and multimode fiber.
+-> Connector fit alone does not make transceivers compatible.
+-> Match mode, wavelength, optics, connector and Ethernet PHY.
+-> Check both endpoint datasheets and the optical loss budget.
+-> Fiber reach depends on PHY, optics, fiber grade and loss.
+-> 100 m copper channels are common, not a universal PHY limit.
+-> Never look into fiber ends; use disconnected samples only.

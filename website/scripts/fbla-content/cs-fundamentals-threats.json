@@ -1,0 +1,282 @@
+{
+  "id": "cs-fundamentals-threats",
+  "event": "cybersecurity",
+  "title": "Cybersecurity Fundamentals and Threats",
+  "sources": [
+    {"id":"fbla-cyber","title":"2026-2027 FBLA Cybersecurity Guidelines","url":"https://www.pafbla.org/wp-content/uploads/2026/08/Cybersecurity.pdf","reading":"fetched","scope":"Read study guide pages 5-6 for current scope and wording of assigned Security Fundamentals and Cyber Threats and Vulnerabilities objectives; used only to establish scope, not technical mechanisms."},
+    {"id":"nist-63a","title":"NIST SP 800-63A-4: Identity Proofing and Enrollment","url":"https://pages.nist.gov/800-63-4/sp800-63a.html","reading":"fetched","scope":"Read identity proofing overview and passages on resolution, evidence/attribute validation, verification of rightful owner, enrollment, and assurance limits."},
+    {"id":"nist-63b","title":"NIST SP 800-63B-4: Authentication and Authenticator Management","url":"https://pages.nist.gov/800-63-4/sp800-63b.html","reading":"fetched","scope":"Read authentication definition, AAL summaries, distinct-factor MFA, authenticator control, phishing resistance, OTP and out-of-band limitations."},
+    {"id":"nist-attest","title":"NIST CSRC Glossary: Attestation","url":"https://csrc.nist.gov/glossary/term/attestation","reading":"fetched","scope":"Read definition: digitally sign hardware-secured measurements and have requester validate signature and measurements; glossary term context is SP 1800-19B."},
+    {"id":"nist-honeypot","title":"NIST CSRC Glossary: Honeypot","url":"https://csrc.nist.gov/glossary/term/honeypot","reading":"fetched","scope":"Read definition of an attractive system/resource for potential intruders. NIST glossary term identifies resource examples, not a complete taxonomy of honeynet or honeyfile."},
+    {"id":"nist-207","title":"NIST SP 800-207: Zero Trust Architecture","url":"https://csrc.nist.gov/pubs/sp/800/207/final","reading":"fetched","scope":"Read official abstract: no implicit trust based solely on physical/network location; ZTA focuses on users, assets, and resources. Full publication not read."},
+    {"id":"owasp-sqli","title":"OWASP SQL Injection Prevention Cheat Sheet","url":"https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html","reading":"fetched","scope":"Read SQL injection mechanism, parameterized query, allow-list structural choices, and least-privilege passages."},
+    {"id":"cisa-dos","title":"CISA: Understanding Denial-of-Service Attacks","url":"https://www.cisa.gov/news-events/news/understanding-denial-service-attacks","reading":"fetched","scope":"Read DoS flood and SYN-flood mechanics, botnet-based DDoS, compromised devices as victims, monitoring, and response. Page is explicitly archived/outdated; use for basic mechanism only."},
+    {"id":"rfc9325","title":"RFC 9325: Recommendations for Secure Use of TLS/DTLS","url":"https://www.rfc-editor.org/rfc/rfc9325.html","reading":"fetched","scope":"Read TLS version/fallback guidance: TLS 1.2 clients must not fall back to earlier deprecated versions; document recommends modern secure deployment and notes guidance is point-in-time."},
+    {"id":"rfc6962","title":"RFC 6962: Certificate Transparency","url":"https://www.rfc-editor.org/rfc/rfc6962.html","reading":"fetched","scope":"Read hash-tree definitions: SHA-256 digests, distinct leaf/node prefixes for second-preimage resistance, and proof construction. Does not state birthday bound; used for hash/digest context only."}
+  ],
+  "sheets": [
+    {
+      "id":"cs-fundamentals-trust",
+      "title":"Security Goals, Trust, and Number Bases",
+      "domain":"Security Fundamentals",
+      "pages":[
+        [
+          {"title":"CIA and Zero Trust","objectives":["CS-SF-01","CS-SF-04","CS-SF-07"],"sources":["nist-207","owasp-sqli"],"notes":[
+            "Confidentiality limits data reading to authorized parties.",
+            "Integrity resists unauthorized change or destruction.",
+            "Availability gives authorized users timely access.",
+            "Encryption supports confidentiality, not data truth.",
+            "Audit controls can expose changes; logs need protection.",
+            "Tested backups support recovery and availability.",
+            "Zero Trust gives no trust from location alone.",
+            "Evaluate user, device, resource, and context per request.",
+            "Example: verify worker and device before payroll access."
+          ]},
+          {"title":"Identity, Attestation, and AAA","objectives":["CS-SF-02","CS-SF-03"],"sources":["nist-63a","nist-63b","nist-attest"],"notes":[
+            "Proofing links a claimed identity to a real person.",
+            "Resolution finds a unique identity in the served population.",
+            "Validation checks evidence and attribute facts.",
+            "Verification checks applicant is rightful evidence owner.",
+            "Authentication later checks control of a bound authenticator.",
+            "Attestation signs hardware-secured measurements for review.",
+            "Attestation describes device measurements, not human identity.",
+            "Trust depends on keys, measurements, and verifier policy.",
+            "AAA: authentication, authorization, and accounting.",
+            "Authorization permits actions; accounting records activity."
+          ]}
+        ],
+        [
+          {"title":"Nonrepudiation and Least Privilege","objectives":["CS-SF-02","CS-SF-07"],"sources":["nist-63a","nist-63b","owasp-sqli"],"notes":[
+            "Nonrepudiation seeks evidence resisting denial of an action.",
+            "A signature alone cannot prove who controlled its key.",
+            "Identity binding, key custody, intent, and time matter.",
+            "Legal and system assumptions bound attribution claims.",
+            "Least privilege grants only necessary resource/action rights.",
+            "Use narrow roles and time-bound elevation where feasible.",
+            "Review grants; revoke access when duties or roles change.",
+            "It limits blast radius, not all misuse or compromise.",
+            "OWASP says least DB privilege limits injection damage."
+          ]},
+          {"title":"Binary, Decimal, and Hex","objectives":["CS-SF-06"],"sources":["rfc6962"],"notes":[
+            "Binary is base 2; decimal is base 10; hex is base 16.",
+            "Hex digits are 0-9 and A-F; A-F represent values 10-15.",
+            "Place values are powers of the base, right to left.",
+            "Binary 1011 equals decimal 8+2+1, or 11.",
+            "Hex 2F equals decimal 2*16+15, or 47.",
+            "Four binary bits form one hex digit: 1011 becomes B.",
+            "Pad on left: 11010 becomes 0001 1010, or hex 1A.",
+            "A byte is 8 bits; two hex digits display one byte.",
+            "Hex displays bits compactly; it does not encrypt them.",
+            "Hashes output fixed-length digests; encoding adds no strength."
+          ]}
+        ]
+      ],
+      "practice":[
+        {"prompt":"A compliant laptop requests payroll access. Give a Zero Trust decision.","answer":"Verify user, device, and resource-specific policy; allow only the required payroll action for an appropriate session. LAN/VPN presence alone is not authorization.","objectives":["CS-SF-04"],"kind":"application"},
+        {"prompt":"Convert binary 1101 to decimal and one hex digit.","answer":"8+4+1=13 decimal; four bits map to hex D. Hex is a representation of the same bits, not encryption.","objectives":["CS-SF-06"],"kind":"retrieval"}
+      ]
+    },
+    {
+      "id":"cs-fundamentals-controls",
+      "title":"Access, Factors, and Defensive Decoys",
+      "domain":"Security Fundamentals",
+      "pages":[
+        [
+          {"title":"Proofing, Factors, and Device Trust","objectives":["CS-SF-02","CS-SF-03"],"sources":["nist-63a","nist-63b","nist-attest"],"notes":[
+            "Proofing links a person identity at stated assurance.",
+            "It resolves, validates evidence, then verifies owner.",
+            "Authentication checks control of an account authenticator.",
+            "A device report is not user proof; login is not device proof.",
+            "Attestation signs hardware-secured measurements for review.",
+            "It depends on trusted measurement, signing key, and verifier.",
+            "Authentication shows account control, not real-world identity.",
+            "Assurance reduces risk; it does not promise certainty.",
+            "Enrollment and recovery also need secure proofing controls."
+          ]},
+          {"title":"AAA, MFA, and Zero Trust","objectives":["CS-SF-03","CS-SF-04"],"sources":["nist-63b","nist-207"],"notes":[
+            "Authentication verifies control; authorization permits use.",
+            "Accounting: record relevant use for review and investigation.",
+            "MFA uses distinct types: know, have, or are.",
+            "Two passwords are both know factors, not MFA by themselves.",
+            "Password plus registered security key combines know and have.",
+            "SMS codes can be intercepted/phished; not phishing-resistant.",
+            "Zero Trust checks identity/context for each resource request.",
+            "Managed device and verified worker get payroll read access.",
+            "Network location or VPN alone does not grant implicit trust.",
+            "Device posture is a signal; it does not identify the user."
+          ]}
+        ],
+        [
+          {"title":"Least Privilege","objectives":["CS-SF-07"],"sources":["owasp-sqli"],"notes":[
+            "Grant only resources/actions needed for assigned work.",
+            "Separate routine accounts from administrative elevation.",
+            "A reporting service may read a view, not own the database.",
+            "Use role scopes and expire temporary permissions.",
+            "Review access after job, project, or status changes.",
+            "Remove stale rights; protect service/database accounts too.",
+            "Least privilege limits harm from bugs or stolen accounts.",
+            "It does not stop every authorized misuse or compromise.",
+            "OWASP treats it as damage reduction, not injection prevention."
+          ]},
+          {"title":"Honeypots, Honeynets, and Honeyfiles","objectives":["CS-SF-05"],"sources":["nist-honeypot"],"notes":[
+            "NIST calls honeypot an attractive resource for intruders.",
+            "A decoy service/file can make unexpected access observable.",
+            "Honeynet commonly means connected decoy systems.",
+            "Honeyfile commonly means monitored decoy document/artifact.",
+            "No separate NIST glossary entries for these labels were found.",
+            "Access can alert defenders; decoys do not block attacks.",
+            "Isolate decoys from production; restrict outbound connections.",
+            "Use synthetic content, monitor alerts, assign response owner.",
+            "Never place real credentials or sensitive records in decoys.",
+            "Containment and safe isolation are separate design controls."
+          ]}
+        ]
+      ],
+      "practice":[
+        {"prompt":"Why do device attestation and identity proofing establish different facts?","answer":"Attestation lets a requester validate signed hardware measurements; proofing links a human claim to a real person. Keys, measurement trust, and proofing evidence each have limits.","objectives":["CS-SF-02"],"kind":"application"},
+        {"prompt":"A finance analyst needs one report. Name a least-privilege grant.","answer":"Grant read access only to that report/view, log its use, and review or revoke when duties change; broad database administration is unnecessary risk.","objectives":["CS-SF-07"],"kind":"application"}
+      ]
+    },
+    {
+      "id":"cs-threats-software",
+      "title":"Actors, Malware, and Software Weaknesses",
+      "domain":"Cyber Threats and Vulnerabilities",
+      "pages":[
+        [
+          {"title":"Threat Actors and Motives","objectives":["CS-CTV-02"],"sources":["fbla-cyber"],"notes":[
+            "Insiders have organizational access; outsiders do not.",
+            "Either may act deliberately or cause harm through error.",
+            "Financial gain can motivate theft, extortion, or fraud.",
+            "Espionage seeks protected information for strategic advantage.",
+            "Data theft may support resale, fraud, or later intrusion.",
+            "Disruption or ideology may motivate service or data attacks.",
+            "Assess capability, access, opportunity, and target as well.",
+            "Motive is a hypothesis, not proof of actor identity.",
+            "Controls should address behavior and access, not stereotypes."
+          ]},
+          {"title":"Virus Varieties and Other Malware","objectives":["CS-CTV-03","CS-CTV-07"],"sources":["fbla-cyber"],"notes":[
+            "Malware is software used to harm, spy, extort, or control.",
+            "A virus attaches to a host file or boot area to spread.",
+            "File virus infects executable files when they run.",
+            "Boot-sector virus targets startup records or boot media.",
+            "Polymorphic viruses vary code/signature during replication.",
+            "Variation may evade simple signatures; behavior checks help.",
+            "Trojan masquerades as benign software to induce execution.",
+            "A worm self-propagates across systems or networks.",
+            "Logic bomb activates when a time/event condition is met.",
+            "One malware sample may combine more than one behavior."
+          ]}
+        ],
+        [
+          {"title":"Vulnerabilities and Exploit Classes","objectives":["CS-CTV-01","CS-CTV-04"],"sources":["fbla-cyber","owasp-sqli"],"notes":[
+            "Vulnerability is a weakness; exploit is a way to use it.",
+            "Injection treats input as command/query syntax, not data.",
+            "Parameterized SQL separates values from query structure.",
+            "Buffer overflow writes beyond allocated memory bounds.",
+            "Race occurs when timing changes shared state unexpectedly.",
+            "Atomic operations/locks can prevent unsafe check-use races.",
+            "Jailbreaking weakens platform restrictions or sandboxing.",
+            "Backdoor is hidden access; zero-day has no effective fix yet.",
+            "Known unpatched flaws may have fixes; test and apply patches."
+          ]},
+          {"title":"Reduce Exposure","objectives":["CS-CTV-01","CS-CTV-04","CS-CTV-07"],"sources":["owasp-sqli","fbla-cyber"],"notes":[
+            "Bind untrusted data; do not concatenate into SQL syntax.",
+            "Allowlist identifiers and sort choices from fixed options.",
+            "Least database privilege limits damage, not injection itself.",
+            "Use bounds-safe code and safe shared-state access.",
+            "Apply security updates after risk-appropriate testing.",
+            "Remove unused services and reduce exposed attack surface.",
+            "Limit user/service rights to reduce malware blast radius.",
+            "Backups support recovery but do not prevent infection.",
+            "Signatures can miss new or altered malware.",
+            "Use layered controls; no single tool guarantees prevention."
+          ]}
+        ]
+      ],
+      "practice":[
+        {"prompt":"Contrast a file virus, worm, Trojan, and logic bomb.","answer":"Virus attaches to a host; worm self-propagates; Trojan masquerades as legitimate; logic bomb waits for a trigger. A sample can combine behaviors.","objectives":["CS-CTV-03","CS-CTV-07"],"kind":"retrieval"},
+        {"prompt":"A query concatenates a submitted name into SQL. What flaw and fix?","answer":"This creates injection risk because input can become SQL syntax. Bind the value as a parameter; use fixed allowlists for structural choices. Binding does not grant authorization.","objectives":["CS-CTV-01"],"kind":"application"}
+      ]
+    },
+    {
+      "id":"cs-threats-human-crypto",
+      "title":"Social, Service, Cryptographic, and Wireless Threats",
+      "domain":"Cyber Threats and Vulnerabilities",
+      "pages":[
+        [
+          {"title":"Social Engineering","objectives":["CS-CTV-05","CS-CTV-02"],"sources":["fbla-cyber","nist-63b"],"notes":[
+            "Phishing deceives users into revealing data or unsafe action.",
+            "Spear-phishing tailors lures to a person or group.",
+            "Smishing uses SMS/text; vishing uses voice or phone calls.",
+            "Scammers impersonate banks, vendors, coworkers, or help desks.",
+            "Urgency, secrecy, payment changes, code requests warn users.",
+            "Sender display and caller ID can be spoofed.",
+            "Verify through a known independent number or contact path.",
+            "Never disclose passwords or one-time login codes to callers.",
+            "Report suspicious messages through the approved route."
+          ]},
+          {"title":"DoS and DDoS Mechanics","objectives":["CS-CTV-06"],"sources":["cisa-dos"],"notes":[
+            "DoS makes a service unavailable to legitimate users.",
+            "Flooding can exhaust link capacity or server request handling.",
+            "SYN flood leaves TCP handshakes incomplete, holding state.",
+            "Application requests consume CPU, memory, or worker slots.",
+            "DDoS coordinates many machines against one target.",
+            "Botnet is compromised devices under remote control.",
+            "Compromised devices are victims as well as traffic sources.",
+            "Distributed sources complicate attribution and filtering.",
+            "Traffic spikes and maintenance can mimic attack symptoms.",
+            "Monitor traffic; coordinate with admin and provider."
+          ]}
+        ],
+        [
+          {"title":"Hash Collisions and Birthday Effect","objectives":["CS-CTV-08"],"sources":["rfc6962"],"notes":[
+            "A hash maps input data to a fixed-length digest.",
+            "Collision means distinct inputs share a finite digest.",
+            "Preimage seeks input for a chosen digest: a different goal.",
+            "For ideal n-bit hash, generic collision work is about 2^(n/2).",
+            "Birthday effect finds any pair sooner than target preimage.",
+            "This is a probability/work estimate, not an exact threshold.",
+            "Collision is not decryption or original-message recovery.",
+            "Hashing differs from reversible, key-based encryption.",
+            "RFC 6962 uses domain-separated SHA-256 Merkle-tree hashes."
+          ]},
+          {"title":"Downgrades and Wireless Weaknesses","objectives":["CS-CTV-08","CS-CTV-09"],"sources":["rfc9325","fbla-cyber"],"notes":[
+            "Downgrade induces peers to use weaker protocol/options.",
+            "Fallback to obsolete versions can expose known weaknesses.",
+            "RFC 9325 says TLS 1.2 clients must not fall back earlier.",
+            "Use maintained protocols; compatibility can limit versions.",
+            "Evil twin imitates a trusted Wi-Fi name to lure users.",
+            "SSID display alone does not authenticate the access point.",
+            "WEP's weak IV/key design lets traffic aid key recovery.",
+            "WEP is obsolete; use modern WPA2/WPA3 configuration instead.",
+            "Hidden SSID and MAC filtering do not replace encryption.",
+            "HTTPS/VPN have limits; rogue access-point risk remains."
+          ]}
+        ]
+      ],
+      "practice":[
+        {"prompt":"A caller demands an SMS code and urgent payment change. Respond safely.","answer":"Treat as possible vishing: do not share the code or alter payment. Verify using a known contact number and report. Caller ID can be forged.","objectives":["CS-CTV-05"],"kind":"application"},
+        {"prompt":"Does a birthday collision attack decrypt a hashed message?","answer":"No. It seeks any colliding pair; ideal n-bit hash generic collision work is about 2^(n/2). It neither decrypts nor finds a chosen message's preimage.","objectives":["CS-CTV-08"],"kind":"retrieval"}
+      ]
+    }
+  ],
+  "lab": {
+    "title":"Safe fictional phishing and availability tabletop",
+    "steps":[
+      "Read a fictional payroll voice-call scenario asking for an SMS code and bank change.",
+      "Identify vishing cues; choose independent verification and approved reporting path.",
+      "Discuss fictional service slowdown: identify resource/provider, preserve event notes, notify response lead.",
+      "Name approved mitigation options; do not generate traffic, scan, click links, or contact real numbers."
+    ],
+    "expected":[
+      "No code or payment change is disclosed; callback uses a known contact route.",
+      "Participants distinguish DoS capacity exhaustion from ordinary outages and identify provider/response coordination.",
+      "No live systems, credentials, traffic, or personal logs are used."
+    ]
+  },
+  "limitations":[
+    "NIST CSRC glossary provided a direct honeypot definition; separate authoritative NIST entries for honeynet and honeyfile were not found. Those common instructional distinctions are explicitly qualified.",
+    "CISA DoS article is archived and may not reflect current policy; it is used only for basic attack mechanics, while mitigation is described cautiously.",
+    "RFC 6962 supports hash/digest and Merkle-tree mechanics but not the birthday bound itself; the generic birthday estimate is standard probability analysis and is labeled as an idealized bound."
+  ]
+}

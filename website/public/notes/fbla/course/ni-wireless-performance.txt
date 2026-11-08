@@ -1,0 +1,48 @@
+o Overview
+-> Cloud benefits and operating costs
+-> Cloud risks and planning
+o Cloud benefits and operating costs
+-> On-demand provisioning can shorten deployment time.
+-> Elastic resources can scale with changing workload demand.
+-> Measured service ties some costs to consumption.
+-> Less local hardware can reduce some maintenance work.
+-> Usage charges, licenses and support create ongoing costs.
+-> Data transfer and storage can add to monthly bills.
+-> Migration and staff learning require time and resources.
+-> Variable demand can make costs difficult to forecast.
+-> Cloud is not automatically cheaper than local infrastructure.
+o Cloud risks and planning
+-> Provider outages can make hosted services unavailable.
+-> Misconfigured permissions can expose data or resources.
+-> Provider dependence can make migration or exit difficult.
+-> Location and retention of data affect compliance obligations.
+-> Plan access controls and recovery responsibilities in advance.
+-> Assess portability and export options before committing.
+-> Use budgets and alerts to monitor measured consumption.
+-> Provider safeguards do not replace correct customer setup.
+-> Availability depends on app, network and provider systems.
+-> Compare risks and costs with the business continuity need.
+o Overview
+-> Wireless LAN and cellular options
+-> 5G system and service families
+o Wireless LAN and cellular options
+-> IEEE 802.11 defines WLAN medium access and physical layers.
+-> Wi-Fi commonly links local devices through access points.
+-> Cellular networks provide operator-managed wide-area mobility.
+-> Wi-Fi generally uses local access points and backhaul.
+-> Unlicensed Wi-Fi bands can be crowded by neighboring networks.
+-> Cellular coverage depends on operator deployment and spectrum.
+-> Large campus Wi-Fi requires placement and capacity planning.
+-> Small networks may use a single integrated wireless gateway.
+-> Neither Wi-Fi nor cellular has one universal speed or range.
+o 5G system and service families
+-> 5G is a 3GPP mobile system, not a single radio frequency.
+-> A 5G system includes user equipment, radio access and core.
+-> 5G New Radio (NR) is the radio interface family.
+-> Enhanced mobile broadband targets high data-rate services.
+-> Massive IoT targets communication for many connected devices.
+-> Critical communications target reliability and low latency.
+-> Network slicing can tailor logical network capabilities.
+-> Service goals depend on deployment and end-to-end path.
+-> Low latency is not guaranteed for every 5G application.
+-> Spectrum, obstacles and distance affect coverage and capacity.

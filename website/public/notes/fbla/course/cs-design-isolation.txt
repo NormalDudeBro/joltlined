@@ -1,0 +1,48 @@
+o Overview
+-> Segmentation and trust boundaries
+-> Test segment policy and verify boundaries
+o Segmentation and trust boundaries
+-> Physical segmentation separates equipment, cabling, or sites.
+-> Logical segmentation partitions shared gear with rules.
+-> VLANs separate layer-two broadcast domains on shared switches.
+-> ACLs and firewalls govern traffic across segment boundaries.
+-> Segmentation can limit lateral movement after compromise.
+-> A VLAN alone is not encryption or identity authentication.
+-> Rules must allow required paths and block unauthorized paths.
+-> NIST zero trust rejects trust based only on network location.
+-> Segmentation complements, not replaces, access checks.
+o Test segment policy and verify boundaries
+-> Identify assets, owners, data flows, boundaries first.
+-> Permit only needed source, destination, protocol, service.
+-> Test intended communication after policy changes.
+-> Test forbidden communication from each relevant segment.
+-> Monitor boundary traffic for unexpected communication.
+-> Physical separation may share unsafe administration.
+-> Logical separation may fail through bad rules or trunking.
+-> Document exceptions, owners, and review dates.
+-> Choose controls from threat and cost needs.
+-> A subnet or VLAN is not a complete security boundary.
+o Overview
+-> Virtual machines and containers
+-> IoT risks and safer deployment
+o Virtual machines and containers
+-> A hypervisor allocates host resources to virtual machines.
+-> A VM typically runs a guest OS with its own kernel.
+-> Containers isolate processes and package dependencies.
+-> Containers commonly share the host operating-system kernel.
+-> VMs add guest OS overhead; containers can be lighter.
+-> VM isolation can fail through hypervisor flaws or settings.
+-> A container kernel escape may threaten other host containers.
+-> Patch hosts, hypervisors, guest systems, images, libraries.
+-> Limit privileges, mounts, capabilities, and network access.
+o IoT risks and safer deployment
+-> VMs and containers may be combined on one host.
+-> Isolation reduces some risks; it is not an absolute guarantee.
+-> IoT means networked sensors, cameras, appliances, and devices.
+-> Default passwords and open services expose IoT devices.
+-> Old firmware and weak updates leave known flaws unpatched.
+-> Constrained power or memory can limit security monitoring.
+-> Excess device data collection creates privacy risk.
+-> Inventory device, owner, firmware, network, support end date.
+-> Change defaults; disable unused features; patch and isolate.
+-> NIST baseline groups device capabilities supporting controls.

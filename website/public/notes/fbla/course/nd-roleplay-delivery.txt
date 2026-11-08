@@ -1,0 +1,48 @@
+o Overview
+-> Organize a Decision Briefing
+-> Communicate with Confidence
+o Organize a Decision Briefing
+-> National format: 20 minutes prep, 7 minutes delivery.
+-> No separate Q&A; judges may interrupt during delivery.
+-> Sequence: problem, criteria, options, choice, implementation.
+-> Summarize facts and prioritized problems before solutions.
+-> Compare options' pros and cons against common criteria.
+-> Explain how the choice meets ranked requirements.
+-> State phases, resources, owners, tests, and rollback triggers.
+-> Use signposts and transitions to clarify the reasoning.
+-> Close with success measure, requested decision, and next step.
+o Communicate with Confidence
+-> Project voice at a measured pace; pause after key decisions.
+-> Use poised posture, purposeful gestures, and eye contact.
+-> Define acronyms; connect technical terms to business impact.
+-> Avoid jargon lists; explain mechanisms behind your choice.
+-> Split speaking roles only when transitions stay coherent.
+-> Every teammate should know the recommendation and risks.
+-> Label assumptions and estimates; do not invent scenario facts.
+-> Do not bluff when uncertain; describe safe verification steps.
+-> Keep material explanations usable without visual aids.
+-> Pause after key points; do not rush the conclusion.
+o Overview
+-> Answer Judges Completely
+-> Rubric and Practice Boundaries
+o Answer Judges Completely
+-> Listen through the full question before answering.
+-> Clarify scope if needed, then answer the question directly.
+-> Support the answer with reasoning and scenario evidence.
+-> Address each part; state limits and residual risk honestly.
+-> For unknown facts, name what to verify and how to verify it.
+-> If a judge challenges an assumption, reassess it calmly.
+-> Correct factual errors plainly; return to decision logic.
+-> Acknowledge interruption; return to your planned sequence.
+-> Complete interaction requires reasoning, not memorized lines.
+o Rubric and Practice Boundaries
+-> Maxima: problem 10; alternatives 20; solution 20.
+-> Knowledge 20; organization, delivery, answers 10 each.
+-> Spoken rubric totals 100 points before penalties.
+-> Judges ask during presentation; no separate Q&A is scheduled.
+-> Guide p.2 lists easel; p.4 prohibits visuals and props.
+-> Conflict unresolved; ask adviser for clarification.
+-> Do not assume permission; prepare a verbal explanation.
+-> Practice cases are hypothetical, not official prompts.
+-> Competitors author their own competition response.
+-> Score rehearsal against each criterion's actual point maximum.

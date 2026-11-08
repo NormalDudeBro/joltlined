@@ -1,0 +1,48 @@
+o Overview
+-> IP and MAC addressing
+-> Subnet purpose and CIDR
+o IP and MAC addressing
+-> IP addresses identify interfaces for logical packet delivery.
+-> Routers compare destination IP with network prefixes to route.
+-> MAC addresses identify link-layer interfaces on a local link.
+-> Switches learn source MAC locations to forward local frames.
+-> A router uses a new link frame at each routed hop.
+-> MAC is not the end-to-end Internet destination address.
+-> Address resolution finds a local link address for a next hop.
+-> IP and MAC values alone do not prove identity or permission.
+-> Addresses may be assigned manually or by network services.
+o Subnet purpose and CIDR
+-> A subnet groups addresses sharing a common network prefix.
+-> Subnetting divides blocks for routing and administration.
+-> CIDR writes a prefix length, such as IPv4 /24.
+-> A /24 means 24 leading bits identify the IPv4 prefix.
+-> Its dotted mask is 255.255.255.0; mask bits are contiguous.
+-> IPv4 block size is 2^(32 minus prefix length) addresses.
+-> Network boundaries align to the block size.
+-> CIDR uses explicit prefixes, not inferred address classes.
+-> Subnet design balances growth, address use and broadcasts.
+-> A /31 can assign both addresses on a point-to-point link.
+o Overview
+-> Historical IPv4 address classes
+-> Addressing and planning limits
+o Historical IPv4 address classes
+-> Class A historically had first octet 1 through 126.
+-> Class B historically had first octet 128 through 191.
+-> Class C historically had first octet 192 through 223.
+-> Class D: first octet 224-239; multicast addresses.
+-> Class E: first octet 240-255; historically experimental.
+-> Special-use values limit these simplified historical ranges.
+-> Classful networks once implied default network masks.
+-> Classless CIDR replaced class-based routing and allocation.
+-> Modern configuration specifies a prefix or mask explicitly.
+o Addressing and planning limits
+-> Size subnets for planned growth without needless waste.
+-> Separate prefixes can simplify routing and management.
+-> Subnetting alone does not block all inter-host traffic.
+-> Routing policy determines which networks can exchange packets.
+-> Plan IPv4 and IPv6 addresses and firewall rules separately.
+-> Special-use ranges are not ordinary public host allocations.
+-> Allocation and reachability depend on provider and setup.
+-> Do not infer a modern prefix from historical class labels.
+-> Verify mask, boundary and host rules for the specific link.
+-> Legacy subnet tutorials may use simplified classful examples.

@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Wireless(pen) (g)Generations(pen) (g)and(pen) (g)Bands(pen)
+(pen)-> (pu)Wireless(pen) (pu)Range(pen) (pu)and(pen) (pu)Throughput(pen)
+(pen)o (g)Wireless(pen) (g)Generations(pen) (g)and(pen) (g)Bands(pen)
+(pen)-> 802.11b uses 2.4 GHz DSSS; max (br)PHY(pen) rate is 11 Mb/s.
+(pen)-> 802.11a uses 5 GHz OFDM; max (br)PHY(pen) rate is 54 Mb/s.
+(pen)-> 802.11g uses 2.4 GHz OFDM; max (br)PHY(pen) rate is 54 Mb/s.
+(pen)-> 802.11n (Wi-Fi 4) supports 2.4/5 GHz and MIMO.
+(pen)-> 802.11ac (Wi-Fi 5) operates in 5 GHz (g)bands(pen).
+(pen)-> 802.11ax (Wi-Fi 6) supports 2.4 and 5 GHz operation.
+(pen)-> Wi-Fi 6E adds 6 GHz where permitted and supported.
+(pen)-> 802.11be (Wi-Fi 7) adds multi-link in capable devices.
+(pen)-> Max (br)PHY(pen) rates require matching channel and radio capability.
+(pen)o (pu)Wireless(pen) (pu)Range(pen) (pu)and(pen) (pu)Throughput(pen)
+(pen)-> There is no single universal indoor Wi-Fi (pu)range(pen) figure.
+(pen)-> Band, walls, antennas, power, and receivers affect reach.
+(pen)-> 2.4 GHz often travels farther through walls than 5/6 GHz.
+(pen)-> 2.4 GHz is often more congested; local spectrum matters.
+(pen)-> Channel width, streams, and interference affect (br)PHY(pen) rate.
+(pen)-> App (pu)throughput(pen) is below (br)PHY(pen) rate due to overhead/contention.
+(pen)-> Clients share airtime; slow stations reduce capacity.
+(pen)-> Regulatory domain limits channels and transmit power.
+(pen)-> Survey user locations and load before estimating coverage.
+(pen)-> A repeater can extend reach but consumes airtime or adds hops.
+(pen)o Overview
+(pen)-> (br)Ethernet(pen) (br)PHY(pen) (br)and(pen) (br)Medium(pen)
+(pen)-> (or)Routing(pen) (or)and(pen) (or)Wireless(pen) (or)Protection(pen)
+(pen)o (br)Ethernet(pen) (br)PHY(pen) (br)and(pen) (br)Medium(pen)
+(pen)-> 10BASE-T is 10 Mb/s over twisted-pair copper, up to 100 m.
+(pen)-> 100BASE-TX is 100 Mb/s copper, up to 100 m channel.
+(pen)-> 1000BASE-T carries 1 Gb/s over four pairs, up to 100 m.
+(pen)-> 10GBASE-T can reach 100 m on Cat 6A compliant channel.
+(pen)-> Cat 6 10GBASE-T reach depends on channel and alien crosstalk.
+(pen)-> 1000BASE-SX uses multimode fiber; reach varies by grade.
+(pen)-> 1000BASE-LX reach depends on optics and fiber type.
+(pen)-> 10GBASE-SR uses multimode fiber; distance depends on fiber.
+(pen)-> IEEE (br)PHY(pen), optics, connectors, and loss set fiber reach.
+(pen)o (or)Routing(pen) (or)and(pen) (or)Wireless(pen) (or)Protection(pen)
+(pen)-> OSPF is link-state (or)routing(pen) within an autonomous system.
+(pen)-> OSPF routers build topology databases and calculate paths.
+(pen)-> BGP exchanges inter-AS prefixes and paths for policy.
+(pen)-> BGP is an IETF Standards Track protocol.
+(pen)-> EIGRP uses DUAL, a distance-vector-based (or)routing(pen) algorithm.
+(pen)-> RFC 7868 is Informational, not an IETF Standards Track spec.
+(pen)-> WPA2 deployments can use AES-CCMP; avoid legacy TKIP.
+(pen)-> WPA3-Personal SAE strengthens resistance to offline guessing.
+(pen)-> WPA3 connections require Protected Management Frames.
+(pen)-> Negotiated security depends on AP/client configuration.

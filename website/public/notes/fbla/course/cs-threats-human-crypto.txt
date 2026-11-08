@@ -1,0 +1,48 @@
+o Overview
+-> Social Engineering
+-> DoS and DDoS Mechanics
+o Social Engineering
+-> Phishing deceives users into revealing data or unsafe action.
+-> Spear-phishing tailors lures to a person or group.
+-> Smishing uses SMS/text; vishing uses voice or phone calls.
+-> Scammers impersonate banks, vendors, coworkers, or help desks.
+-> Urgency, secrecy, payment changes, code requests warn users.
+-> Sender display and caller ID can be spoofed.
+-> Verify through a known independent number or contact path.
+-> Never disclose passwords or one-time login codes to callers.
+-> Report suspicious messages through the approved route.
+o DoS and DDoS Mechanics
+-> DoS makes a service unavailable to legitimate users.
+-> Flooding can exhaust link capacity or server request handling.
+-> SYN flood leaves TCP handshakes incomplete, holding state.
+-> Application requests consume CPU, memory, or worker slots.
+-> DDoS coordinates many machines against one target.
+-> Botnet is compromised devices under remote control.
+-> Compromised devices are victims as well as traffic sources.
+-> Distributed sources complicate attribution and filtering.
+-> Traffic spikes and maintenance can mimic attack symptoms.
+-> Monitor traffic; coordinate with admin and provider.
+o Overview
+-> Hash Collisions and Birthday Effect
+-> Downgrades and Wireless Weaknesses
+o Hash Collisions and Birthday Effect
+-> A hash maps input data to a fixed-length digest.
+-> Collision means distinct inputs share a finite digest.
+-> Preimage seeks input for a chosen digest: a different goal.
+-> For ideal n-bit hash, generic collision work is about 2^(n/2).
+-> Birthday effect finds any pair sooner than target preimage.
+-> This is a probability/work estimate, not an exact threshold.
+-> Collision is not decryption or original-message recovery.
+-> Hashing differs from reversible, key-based encryption.
+-> RFC 6962 uses domain-separated SHA-256 Merkle-tree hashes.
+o Downgrades and Wireless Weaknesses
+-> Downgrade induces peers to use weaker protocol/options.
+-> Fallback to obsolete versions can expose known weaknesses.
+-> RFC 9325 says TLS 1.2 clients must not fall back earlier.
+-> Use maintained protocols; compatibility can limit versions.
+-> Evil twin imitates a trusted Wi-Fi name to lure users.
+-> SSID display alone does not authenticate the access point.
+-> WEP's weak IV/key design lets traffic aid key recovery.
+-> WEP is obsolete; use modern WPA2/WPA3 configuration instead.
+-> Hidden SSID and MAC filtering do not replace encryption.
+-> HTTPS/VPN have limits; rogue access-point risk remains.

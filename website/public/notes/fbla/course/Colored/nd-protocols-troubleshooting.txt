@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Layers(pen) (g)and(pen) (g)Addressing(pen) (g)Roles(pen)
+(pen)-> (pu)TCP(pen), (pu)UDP(pen), (pu)DHCP(pen), (pu)and(pen) (pu)Printed(pen) (pu)SMP(pen)
+(pen)o (g)Layers(pen) (g)and(pen) (g)Addressing(pen) (g)Roles(pen)
+(pen)-> OSI 1 (or)physical(pen): signaling, media, connectors, and bits.
+(pen)-> OSI 2 data link: local frames and link-layer (g)addressing(pen).
+(pen)-> OSI 3 network: IP (g)addressing(pen) and routing between networks.
+(pen)-> OSI 4 transport: process delivery, ports, and (pu)TCP(pen) or (pu)UDP(pen).
+(pen)-> OSI 5 session: coordinates dialogues between apps.
+(pen)-> OSI 6 presentation: data representation and transformations.
+(pen)-> OSI 7 application: network services used by applications.
+(pen)-> OSI is a learning model; implementations may span (g)layers(pen).
+(pen)-> (pu)TCP(pen)/IP names a protocol suite, not one individual protocol.
+(pen)o (pu)TCP(pen), (pu)UDP(pen), (pu)DHCP(pen), (pu)and(pen) (pu)Printed(pen) (pu)SMP(pen)
+(pen)-> (pu)TCP(pen) provides reliable, ordered byte-stream service.
+(pen)-> (pu)TCP(pen) sequence numbers and ACKs support ordered recovery.
+(pen)-> (pu)UDP(pen) has no (pu)TCP(pen) delivery or ordering guarantees.
+(pen)-> Applications select transport to fit their requirements.
+(pen)-> (pu)DHCP(pen) client-server exchanges configure hosts.
+(pen)-> (pu)DHCP(pen) leases assign addresses temporarily; clients renew them.
+(pen)-> (pu)DHCP(pen) relays pass requests to servers on other subnets.
+(pen)-> (pu)DHCP(pen) does not establish that a device is trusted.
+(pen)-> The guide prints (pu)SMP(pen) but leaves its meaning undefined.
+(pen)-> Keep (pu)SMP(pen) unresolved; do not silently replace the term.
+(pen)o Overview
+(pen)-> (br)Topology(pen) (br)and(pen) (br)Reachability(pen) (br)Tests(pen)
+(pen)-> (or)Layered(pen) (or)Physical(pen) (or)Diagnosis(pen)
+(pen)o (br)Topology(pen) (br)and(pen) (br)Reachability(pen) (br)Tests(pen)
+(pen)-> Star links devices through a center; its failure affects many.
+(pen)-> A star cable fault usually isolates its attached endpoint.
+(pen)-> Bus shares a backbone; a break may affect many devices.
+(pen)-> Ring forwards around a loop; recovery depends on protection.
+(pen)-> (or)Physical(pen) cabling shape may differ from logical (br)topology(pen).
+(pen)-> Ping (br)tests(pen) ICMP echo; loss is evidence, not a cause.
+(pen)-> Firewalls may block echo even when application service works.
+(pen)-> Tracert shows responding hops; filtering can hide responses.
+(pen)-> A hop timeout alone does not prove destination failure.
+(pen)o (or)Layered(pen) (or)Physical(pen) (or)Diagnosis(pen)
+(pen)-> First scope impact: one device, site, service, or all users?
+(pen)-> Check power, cables, link lights, and Wi-Fi association.
+(pen)-> Confirm correct SSID, enabled adapter, signal, and wired port.
+(pen)-> Check VLAN, IP address, mask, gateway, and DNS next.
+(pen)-> Compare gateway, permitted remote IP, then a DNS name.
+(pen)-> IP works but names fail? Check the resolver path.
+(pen)-> No lease suggests (pu)DHCP(pen) checks, not a proven cause.
+(pen)-> Change one safe variable; preserve before/after evidence.
+(pen)-> Repeat the test; document cause and outcome.
+(pen)-> Only test cables or capture traffic when authorized and safe.

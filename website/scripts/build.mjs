@@ -5,7 +5,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { parseArgs } from 'node:util';
 import { renderHome } from './home.mjs';
 import { renderFlashcards } from './flashcards.mjs';
-import { renderFbla } from './fbla.mjs';
+import { renderFbla, renderCourseSheets, renderEvent, renderCourseHub, colorSheet } from './fbla.mjs';
 
 export const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
 export const palette = { g: '#168438', li: '#79c900', pu: '#883ac2', br: '#92552f', or: '#e67e22', y: '#287db3', p: '#ed8eb4', lb: '#59b8e7', hp: '#ec228c', pen: '#62615e' };
@@ -293,6 +293,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
   const paths = units.map((_, index) => resolve(values[`unit${index + 1}`] ?? resolve(root, 'notes', `unit-${index + 1}`)));
   // Validate every source before importing anything or replacing the current site.
   const data = loadNotes(paths);
+  const course = renderCourseSheets(undefined, palette);
   const lang = loadLangNotes();
   const algebra = loadAlgebraNotes();
   const html = renderSite(data);
@@ -315,7 +316,22 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
     writeFileSync(resolve(target, 'ap-lang.html'), renderSite([], lang));
     writeFileSync(resolve(target, 'algebra-2.html'), renderSite([], undefined, algebra));
     writeFileSync(resolve(target, 'algebra-2-flashcards.html'), renderFlashcards(escapeHTML, loadAlgebraNotes));
-    writeFileSync(resolve(target, 'fbla.html'), renderFbla());
+    writeFileSync(resolve(target, 'fbla.html'), renderFbla(undefined, renderCourseHub(course)));
+    for (const event of ['networking', 'cybersecurity', 'network-design', 'sales']) writeFileSync(resolve(target, `fbla-${event}.html`), renderEvent(event, course, palette));
+    const coverage = course.sheets.flatMap(({ module, sheet }) => sheet.pages.flatMap((page, pageIndex) => page.map((section, sectionIndex) => {
+      const start = pageIndex * 24 + (sectionIndex === 0 ? 5 : 15);
+      return { module: module.id, sheet: sheet.id, section: section.title, objectives: section.objectives, lines: [start, start + section.notes.length - 1], sources: section.sources.map(id => module.sources.find(source => source.id === id).url) };
+    })));
+    const ledger = { edition: 'National 2026–27', objectiveIds: course.objectiveList, coverage, sources: [...new Map(course.sheets.flatMap(({ module }) => module.sources.map(source => [`${module.id}:${source.id}`, { module: module.id, ...source }]))).values()], limitations: [...new Set(course.sheets.flatMap(({ module }) => module.limitations))] };
+    writeFileSync(resolve(target, 'fbla-sources.json'), JSON.stringify(ledger, null, 2) + '\n');
+    writeFileSync(resolve(target, 'fbla-course-manifest.json'), JSON.stringify({ modules: course.sheets.reduce((result, item) => result.includes(item.module.id) ? result : [...result, item.module.id], []), sheets: course.sheets.map(item => item.sheet.id), objectives: course.objectiveList }, null, 2) + '\n');
+    course.sheets.forEach(({ sheet, plain }) => {
+      for (const [folder, content] of [['', plain], ['Colored', colorSheet(plain, palette, sheet.id)]]) {
+        const output = resolve(target, 'notes', 'fbla', 'course', folder, `${sheet.id}.txt`);
+        mkdirSync(dirname(output), { recursive: true });
+        writeFileSync(output, content);
+      }
+    });
     if (target !== root) {
       mkdirSync(resolve(target, 'styles'), { recursive: true });
       copyFileSync(resolve(root, 'styles', 'site.css'), resolve(target, 'styles', 'site.css'));

@@ -1,0 +1,422 @@
+{
+  "id": "nd-protocols-roleplay",
+  "event": "network-design",
+  "title": "Network Protocols and Role-Play Analysis",
+  "sources": [
+    {
+      "id": "fbla-nd-2026",
+      "title": "FBLA Network Design 2026-27 Individual Guidelines",
+      "url": "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Role%20Play%20Events/Network-Design.pdf",
+      "reading": "fetched",
+      "scope": "Read study guide pp. 6-7 for ND-NPSA objectives; pp. 2-4 for equipment and timing; p. 8 for the seven spoken rating criteria and maxima. The document leaves SMP unexplained and conflicts on flipchart/visuals."
+    },
+    {
+      "id": "rfc9293",
+      "title": "IETF RFC 9293: Transmission Control Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+      "reading": "fetched",
+      "scope": "Read the abstract and TCP service description: TCP is connection-oriented and provides reliable in-order byte-stream service; segments use IP datagrams and ports identify services."
+    },
+    {
+      "id": "rfc2131",
+      "title": "IETF RFC 2131: Dynamic Host Configuration Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc2131.html",
+      "reading": "fetched",
+      "scope": "Read DHCP overview and address-allocation/client-server sections: DHCP delivers host configuration and allocates addresses through client-server exchanges and leases; relay agents can pass requests across subnets."
+    },
+    {
+      "id": "cisco-ip-subnets",
+      "title": "Cisco: Configure IP Addresses and Unique Subnets",
+      "url": "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+      "reading": "fetched",
+      "scope": "Read network-mask/subnet sections and device terminology for IP addressing, router interfaces, and gateway relationships. Its classful framing is older; these notes do not teach classful masks as current practice."
+    }
+  ],
+  "sheets": [
+    {
+      "id": "nd-protocols-environments",
+      "title": "Network Environments and Security",
+      "domain": "Network Protocols, Services, and Access",
+      "pages": [
+        [
+          {
+            "title": "Network Scale and Work Models",
+            "objectives": ["ND-NPSA-01", "ND-NPSA-06", "ND-NPSA-07"],
+            "sources": ["fbla-nd-2026", "cisco-ip-subnets"],
+            "notes": [
+              "A LAN links devices within a limited local site.",
+              "A WAN connects distant LANs over carrier or private links.",
+              "WAN reach adds provider, latency, recurring-cost tradeoffs.",
+              "Peer-to-peer hosts share directly; control is distributed.",
+              "P2P can suit small groups but complicates consistent policy.",
+              "Client-server centralizes services, identity, administration.",
+              "Central services simplify control but become dependencies.",
+              "Thin clients rely on remote compute/apps; outages impair use.",
+              "Servers provide services; clients request services."
+            ]
+          },
+          {
+            "title": "Devices and Trust Boundaries",
+            "objectives": ["ND-NPSA-02", "ND-NPSA-05", "ND-NPSA-07"],
+            "sources": ["fbla-nd-2026", "cisco-ip-subnets"],
+            "notes": [
+              "A modem adapts a carrier access signal; products vary.",
+              "A router forwards IP packets between networks using routes.",
+              "A switch forwards local frames using learned MAC addresses.",
+              "Servers attach to switches; clients reach services over links.",
+              "An access point bridges Wi-Fi clients to a wired LAN.",
+              "A gateway joins networks or systems; roles may be combined.",
+              "A switch is not automatically a router or policy firewall.",
+              "Authentication checks an identity claim or credential control.",
+              "Authorization decides permitted actions after identity checks.",
+              "Encryption protects confidentiality when keys are secure."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Connectivity and Attack Patterns",
+            "objectives": ["ND-NPSA-03", "ND-NPSA-04"],
+            "sources": ["fbla-nd-2026"],
+            "notes": [
+              "Ethernet (IEEE 802.3) commonly carries wired LAN frames.",
+              "Wi-Fi (802.11) uses radio; walls and noise affect links.",
+              "Wi-Fi reach and rate depend on band, load, and equipment.",
+              "Bluetooth is short-range personal-area radio, not WAN access.",
+              "Phishing tricks people into unsafe disclosure or actions.",
+              "Spoofing falsifies an address or identity signal to mislead.",
+              "Poisoning corrupts trusted data, e.g. name-resolution answers.",
+              "Attack labels overlap; identify the mechanism and target.",
+              "Verify requests; use MFA, filtering, and updates."
+            ]
+          },
+          {
+            "title": "VPN and Authorized Capture",
+            "objectives": ["ND-NPSA-02"],
+            "sources": ["fbla-nd-2026"],
+            "notes": [
+              "A VPN creates a logical tunnel across an underlying network.",
+              "Configured VPNs can authenticate peers and encrypt traffic.",
+              "Tunneling does not secure endpoints or grant user permissions.",
+              "Packet capture records traffic visible at the capture point.",
+              "Encryption hides payload; metadata may remain visible.",
+              "Capture only with explicit authorization and approved scope.",
+              "Minimize collection; protect files; follow retention policy.",
+              "Authentication checks identity; authorization grants access.",
+              "VPNs do not replace endpoint, account, or network controls.",
+              "Never inspect others' traffic without authorization."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "A small firm has two distant offices. What makes a WAN useful, and what tradeoffs should be compared?",
+          "answer": "A WAN connects the offices' LANs over distance. Compare provider cost, latency, service availability, security controls, and support needs; do not assume a WAN is one specific technology.",
+          "objectives": ["ND-NPSA-01"],
+          "kind": "application"
+        },
+        {
+          "prompt": "Why does an encrypted VPN not by itself authorize every connected user?",
+          "answer": "Encryption protects traffic in transit and peer authentication checks a tunnel endpoint; user authorization separately determines which actions/resources an identity may access.",
+          "objectives": ["ND-NPSA-02"],
+          "kind": "retrieval"
+        }
+      ]
+    },
+    {
+      "id": "nd-protocols-troubleshooting",
+      "title": "Protocols and Troubleshooting",
+      "domain": "Network Protocols, Services, and Access",
+      "pages": [
+        [
+          {
+            "title": "Layers and Addressing Roles",
+            "objectives": ["ND-NPSA-08", "ND-NPSA-09"],
+            "sources": ["fbla-nd-2026", "cisco-ip-subnets", "rfc2131"],
+            "notes": [
+              "OSI 1 physical: signaling, media, connectors, and bits.",
+              "OSI 2 data link: local frames and link-layer addressing.",
+              "OSI 3 network: IP addressing and routing between networks.",
+              "OSI 4 transport: process delivery, ports, and TCP or UDP.",
+              "OSI 5 session: coordinates dialogues between apps.",
+              "OSI 6 presentation: data representation and transformations.",
+              "OSI 7 application: network services used by applications.",
+              "OSI is a learning model; implementations may span layers.",
+              "TCP/IP names a protocol suite, not one individual protocol."
+            ]
+          },
+          {
+            "title": "TCP, UDP, DHCP, and Printed SMP",
+            "objectives": ["ND-NPSA-09"],
+            "sources": ["fbla-nd-2026", "rfc9293", "rfc2131"],
+            "notes": [
+              "TCP provides reliable, ordered byte-stream service.",
+              "TCP sequence numbers and ACKs support ordered recovery.",
+              "UDP has no TCP delivery or ordering guarantees.",
+              "Applications select transport to fit their requirements.",
+              "DHCP client-server exchanges configure hosts.",
+              "DHCP leases assign addresses temporarily; clients renew them.",
+              "DHCP relays pass requests to servers on other subnets.",
+              "DHCP does not establish that a device is trusted.",
+              "The guide prints SMP but leaves its meaning undefined.",
+              "Keep SMP unresolved; do not silently replace the term."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Topology and Reachability Tests",
+            "objectives": ["ND-NPSA-10", "ND-NPSA-11"],
+            "sources": ["fbla-nd-2026", "cisco-ip-subnets"],
+            "notes": [
+              "Star links devices through a center; its failure affects many.",
+              "A star cable fault usually isolates its attached endpoint.",
+              "Bus shares a backbone; a break may affect many devices.",
+              "Ring forwards around a loop; recovery depends on protection.",
+              "Physical cabling shape may differ from logical topology.",
+              "Ping tests ICMP echo; loss is evidence, not a cause.",
+              "Firewalls may block echo even when application service works.",
+              "Tracert shows responding hops; filtering can hide responses.",
+              "A hop timeout alone does not prove destination failure."
+            ]
+          },
+          {
+            "title": "Layered Physical Diagnosis",
+            "objectives": ["ND-NPSA-11"],
+            "sources": ["fbla-nd-2026", "cisco-ip-subnets", "rfc2131"],
+            "notes": [
+              "First scope impact: one device, site, service, or all users?",
+              "Check power, cables, link lights, and Wi-Fi association.",
+              "Confirm correct SSID, enabled adapter, signal, and wired port.",
+              "Check VLAN, IP address, mask, gateway, and DNS next.",
+              "Compare gateway, permitted remote IP, then a DNS name.",
+              "IP works but names fail? Check the resolver path.",
+              "No lease suggests DHCP checks, not a proven cause.",
+              "Change one safe variable; preserve before/after evidence.",
+              "Repeat the test; document cause and outcome.",
+              "Only test cables or capture traffic when authorized and safe."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "A device has a valid IP and can reach a server by address but not by name. What would you test next?",
+          "answer": "Check configured DNS resolver and name lookup path, since IP reachability works while name resolution fails. Confirm with permitted lookup tests; this is evidence for a DNS issue, not proof until verified.",
+          "objectives": ["ND-NPSA-09", "ND-NPSA-11"],
+          "kind": "application"
+        },
+        {
+          "prompt": "Contrast a ping failure with a traceroute hop timeout. Does either prove an outage?",
+          "answer": "No. Ping can be filtered, and intermediate traceroute hops may not respond while forwarding traffic. Corroborate with authorized end-to-end service tests and local physical checks.",
+          "objectives": ["ND-NPSA-11"],
+          "kind": "retrieval"
+        }
+      ]
+    },
+    {
+      "id": "nd-roleplay-analysis",
+      "title": "Analyze and Recommend a Network Design",
+      "domain": "Network Design Role-Play Performance",
+      "pages": [
+        [
+          {
+            "title": "Define the Problem and Criteria",
+            "objectives": ["ND-RP-01", "ND-RP-04"],
+            "sources": ["fbla-nd-2026"],
+            "notes": [
+              "Restate the scenario accurately before proposing technology.",
+              "Separate observed symptoms from business problems and impact.",
+              "Identify stakeholders, sites, users, data, and deadlines.",
+              "Separate stated facts, assumptions, unknowns, and risks.",
+              "Measure goals: uptime, latency, cost, or security.",
+              "Rank mandatory constraints above preferences and explain why.",
+              "Map clients, switches, servers, gateways, and WAN links.",
+              "Identify trust boundaries and single points of failure.",
+              "Use network knowledge to explain impact and constraints."
+            ]
+          },
+          {
+            "title": "Compare Real Alternatives",
+            "objectives": ["ND-RP-02", "ND-RP-04"],
+            "sources": ["fbla-nd-2026"],
+            "notes": [
+              "Offer at least two credible options that meet the stated need.",
+              "Compare options against the same weighted decision criteria.",
+              "Assess capital, recurring cost, labor, and support effort.",
+              "Assess speed, resilience, security, complexity, and growth.",
+              "Name each option's concrete advantage and material drawback.",
+              "VPN offers control; managed WAN may simplify support.",
+              "VPN also needs endpoint, identity, and failover management.",
+              "Reject options against constraints, not straw-man comparisons.",
+              "Label estimates; avoid invented vendor guarantees.",
+              "Choose an option and acknowledge its residual risks."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Plan Feasible Implementation",
+            "objectives": ["ND-RP-03", "ND-RP-04"],
+            "sources": ["fbla-nd-2026"],
+            "notes": [
+              "Phase work: discover, design, pilot, migrate, verify, review.",
+              "Name owner, sequence, dependencies, and approval path.",
+              "List labor, equipment, licenses, circuits, and training.",
+              "Schedule maintenance and notify affected stakeholders.",
+              "Export configs and protect backups before production changes.",
+              "Set rollback trigger, owner, and tested recovery procedure.",
+              "Use least privilege, authentication, updates, and encryption.",
+              "Test access, service performance, recovery, and failover.",
+              "Compare test results with scenario success criteria."
+            ]
+          },
+          {
+            "title": "Connect Design to Business Value",
+            "objectives": ["ND-RP-03", "ND-RP-04"],
+            "sources": ["fbla-nd-2026"],
+            "notes": [
+              "VLANs separate teams; verify routing and access rules.",
+              "Switch ACLs limit flows; test allowed and denied paths.",
+              "A second link helps only with sufficiently independent paths.",
+              "Redundancy costs more and cannot ensure app recovery.",
+              "A pilot limits impact and reveals compatibility problems.",
+              "Monitoring checks health; assign a response owner.",
+              "Document topology, configs, dependencies, and support handoff.",
+              "State decision, next action, owner, and review date.",
+              "Tie technical choices to business needs or constraints.",
+              "If key facts are unknown, propose discovery before commitment."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "A two-site firm needs resilient access to a central app. Compare two approaches and give a decision criterion.",
+          "answer": "Compare site-to-site VPN over Internet with a managed WAN. VPN may lower circuit cost but requires tunnel, endpoint, and failover management; managed WAN may simplify operations but costs more and depends on provider terms. Compare measured availability, cost, latency, and support capacity before selecting.",
+          "objectives": ["ND-RP-02", "ND-RP-04"],
+          "kind": "application"
+        },
+        {
+          "prompt": "What makes a network implementation plan feasible rather than just a preferred design?",
+          "answer": "It assigns owners and sequence, identifies labor/equipment/licenses, approvals and outage window, protects configuration backups, defines acceptance tests and rollback triggers, and accounts for operational support.",
+          "objectives": ["ND-RP-03"],
+          "kind": "retrieval"
+        }
+      ]
+    },
+    {
+      "id": "nd-roleplay-delivery",
+      "title": "Deliver and Defend the Recommendation",
+      "domain": "Network Design Role-Play Performance",
+      "pages": [
+        [
+          {
+            "title": "Organize a Decision Briefing",
+            "objectives": ["ND-RP-05", "ND-RP-01", "ND-RP-02", "ND-RP-03"],
+            "sources": ["fbla-nd-2026"],
+            "notes": [
+              "National format: 20 minutes prep, 7 minutes delivery.",
+              "No separate Q&A; judges may interrupt during delivery.",
+              "Sequence: problem, criteria, options, choice, implementation.",
+              "Summarize facts and prioritized problems before solutions.",
+              "Compare options' pros and cons against common criteria.",
+              "Explain how the choice meets ranked requirements.",
+              "State phases, resources, owners, tests, and rollback triggers.",
+              "Use signposts and transitions to clarify the reasoning.",
+              "Close with success measure, requested decision, and next step."
+            ]
+          },
+          {
+            "title": "Communicate with Confidence",
+            "objectives": ["ND-RP-06", "ND-RP-05", "ND-RP-04"],
+            "sources": ["fbla-nd-2026"],
+            "notes": [
+              "Project voice at a measured pace; pause after key decisions.",
+              "Use poised posture, purposeful gestures, and eye contact.",
+              "Define acronyms; connect technical terms to business impact.",
+              "Avoid jargon lists; explain mechanisms behind your choice.",
+              "Split speaking roles only when transitions stay coherent.",
+              "Every teammate should know the recommendation and risks.",
+              "Label assumptions and estimates; do not invent scenario facts.",
+              "Do not bluff when uncertain; describe safe verification steps.",
+              "Keep material explanations usable without visual aids.",
+              "Pause after key points; do not rush the conclusion."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Answer Judges Completely",
+            "objectives": ["ND-RP-07", "ND-RP-04"],
+            "sources": ["fbla-nd-2026"],
+            "notes": [
+              "Listen through the full question before answering.",
+              "Clarify scope if needed, then answer the question directly.",
+              "Support the answer with reasoning and scenario evidence.",
+              "Address each part; state limits and residual risk honestly.",
+              "For unknown facts, name what to verify and how to verify it.",
+              "If a judge challenges an assumption, reassess it calmly.",
+              "Correct factual errors plainly; return to decision logic.",
+              "Acknowledge interruption; return to your planned sequence.",
+              "Complete interaction requires reasoning, not memorized lines."
+            ]
+          },
+          {
+            "title": "Rubric and Practice Boundaries",
+            "objectives": ["ND-RP-01", "ND-RP-02", "ND-RP-03", "ND-RP-04", "ND-RP-05", "ND-RP-06", "ND-RP-07"],
+            "sources": ["fbla-nd-2026"],
+            "notes": [
+              "Maxima: problem 10; alternatives 20; solution 20.",
+              "Knowledge 20; organization, delivery, answers 10 each.",
+              "Spoken rubric totals 100 points before penalties.",
+              "Judges ask during presentation; no separate Q&A is scheduled.",
+              "Guide p.2 lists easel; p.4 prohibits visuals and props.",
+              "Conflict unresolved; ask adviser for clarification.",
+              "Do not assume permission; prepare a verbal explanation.",
+              "Practice cases are hypothetical, not official prompts.",
+              "Competitors author their own competition response.",
+              "Score rehearsal against each criterion's actual point maximum."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "During a hypothetical clinic Wi-Fi case, a judge asks how you know access-point placement is the cause. Respond completely.",
+          "answer": "It is not yet established. I would compare coverage and interference measurements in affected and unaffected rooms at peak times, review client association and wired backhaul, then pilot a placement change and repeat the same tests. I would retain rollback if performance or security worsens.",
+          "objectives": ["ND-RP-04", "ND-RP-07"],
+          "kind": "application"
+        },
+        {
+          "prompt": "Name all seven role-play criteria and their current maximum points.",
+          "answer": "Problem definition 10, alternatives and pros/cons 20, solution and implementation 20, event knowledge 20, organization 10, delivery 10, and judge interaction/answers 10; total 100.",
+          "objectives": ["ND-RP-01", "ND-RP-02", "ND-RP-03", "ND-RP-04", "ND-RP-05", "ND-RP-06", "ND-RP-07"],
+          "kind": "retrieval"
+        }
+      ]
+    }
+  ],
+  "lab": {
+    "title": "Authorized tabletop and timed decision rehearsal",
+    "steps": [
+      "On paper, map a hypothetical two-site LAN/WAN with clients, switches, router, and server; predict the path to an application.",
+      "For a fictional intermittent link, state observations, assumptions, and a safe sequence of physical, IP, and service checks. Do not capture live traffic.",
+      "Compare two hypothetical connectivity designs using cost, availability, security, support, and latency; label all invented figures as exercise assumptions.",
+      "Run a 20-minute preparation and 7-minute presentation rehearsal; have a teammate interrupt with questions about evidence, rollback, cost, and security.",
+      "Score the response on all seven current rubric criteria and revise the weakest reasoning area."
+    ],
+    "expected": [
+      "Learner distinguishes LAN/WAN scope and correctly traces client, switch, router, and server roles.",
+      "Learner separates facts from hypotheses and chooses non-destructive, authorized checks.",
+      "Learner explains concrete tradeoffs and a feasible phased recommendation with resources and rollback.",
+      "Learner answers each judge question with a direct claim, reason, evidence, and limitation or verification step.",
+      "Learner identifies all rubric maxima accurately and treats practice as hypothetical, not a confidential prompt."
+    ]
+  },
+  "limitations": [
+    "The National guide prints SMP as an example but does not define it. This module preserves the ambiguity and does not substitute SMTP, SNMP, or another protocol; seek adviser clarification on expected scope.",
+    "Network Design guideline p.2 lists flipchart/easel while p.4 prohibits visuals and props. The conflict is unresolved here; ask the adviser and do not assume equipment permission."
+  ]
+}

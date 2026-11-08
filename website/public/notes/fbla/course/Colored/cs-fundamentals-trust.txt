@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)CIA(pen) (g)and(pen) (g)Zero(pen) (g)Trust(pen)
+(pen)-> (pu)Identity(pen), (pu)Attestation(pen), (pu)and(pen) (pu)AAA(pen)
+(pen)o (g)CIA(pen) (g)and(pen) (g)Zero(pen) (g)Trust(pen)
+(pen)-> Confidentiality limits data reading to authorized parties.
+(pen)-> Integrity resists unauthorized change or destruction.
+(pen)-> Availability gives authorized users timely access.
+(pen)-> Encryption supports confidentiality, not data truth.
+(pen)-> Audit controls can expose changes; logs need protection.
+(pen)-> Tested backups support recovery and availability.
+(pen)-> (g)Zero(pen) (g)Trust(pen) gives no trust from location alone.
+(pen)-> Evaluate user, device, resource, and context per request.
+(pen)-> Example: verify worker and device before payroll access.
+(pen)o (pu)Identity(pen), (pu)Attestation(pen), (pu)and(pen) (pu)AAA(pen)
+(pen)-> Proofing links a claimed (pu)identity(pen) to a real person.
+(pen)-> Resolution finds a unique (pu)identity(pen) in the served population.
+(pen)-> Validation checks evidence and attribute facts.
+(pen)-> Verification checks applicant is rightful evidence owner.
+(pen)-> Authentication later checks control of a bound authenticator.
+(pen)-> (pu)Attestation(pen) signs hardware-secured measurements for review.
+(pen)-> (pu)Attestation(pen) describes device measurements, not human (pu)identity(pen).
+(pen)-> (g)Trust(pen) depends on keys, measurements, and verifier policy.
+(pen)-> (pu)AAA(pen): authentication, authorization, and accounting.
+(pen)-> Authorization permits actions; accounting records activity.
+(pen)o Overview
+(pen)-> (br)Nonrepudiation(pen) (br)and(pen) (br)Least(pen) (br)Privilege(pen)
+(pen)-> (or)Binary(pen), (or)Decimal(pen), (or)and(pen) (or)Hex(pen)
+(pen)o (br)Nonrepudiation(pen) (br)and(pen) (br)Least(pen) (br)Privilege(pen)
+(pen)-> (br)Nonrepudiation(pen) seeks evidence resisting denial of an action.
+(pen)-> A signature alone cannot prove who controlled its key.
+(pen)-> (pu)Identity(pen) binding, key custody, intent, and time matter.
+(pen)-> Legal and system assumptions bound attribution claims.
+(pen)-> (br)Least(pen) (br)privilege(pen) grants only necessary resource/action rights.
+(pen)-> Use narrow roles and time-bound elevation where feasible.
+(pen)-> Review grants; revoke access when duties or roles change.
+(pen)-> It limits blast radius, not all misuse or compromise.
+(pen)-> OWASP says (br)least(pen) DB (br)privilege(pen) limits injection damage.
+(pen)o (or)Binary(pen), (or)Decimal(pen), (or)and(pen) (or)Hex(pen)
+(pen)-> (or)Binary(pen) is base 2; (or)decimal(pen) is base 10; hex is base 16.
+(pen)-> Hex digits are 0-9 and A-F; A-F represent values 10-15.
+(pen)-> Place values are powers of the base, right to left.
+(pen)-> (or)Binary(pen) 1011 equals (or)decimal(pen) 8+2+1, or 11.
+(pen)-> Hex 2F equals (or)decimal(pen) 2*16+15, or 47.
+(pen)-> Four (or)binary(pen) bits form one hex digit: 1011 becomes B.
+(pen)-> Pad on left: 11010 becomes 0001 1010, or hex 1A.
+(pen)-> A byte is 8 bits; two hex digits display one byte.
+(pen)-> Hex displays bits compactly; it does not encrypt them.
+(pen)-> Hashes output fixed-length digests; encoding adds no strength.

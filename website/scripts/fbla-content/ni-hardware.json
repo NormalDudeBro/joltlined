@@ -1,0 +1,248 @@
+{
+  "id": "ni-hardware",
+  "event": "networking",
+  "title": "Network Hardware and Connectivity",
+  "sources": [
+    {"id":"redhat-raid","title":"Red Hat Enterprise Linux 9: Managing RAID","url":"https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/managing_storage_devices/managing-raid_managing-storage-devices","reading":"fetched","scope":"Read overview and section 18.3 definitions for striping, mirroring, parity, RAID 6 recovery after any two drive losses, and Linux MD RAID 10 variants. The notes qualify the conventional four-disk mirrored-pair RAID 10 layout; Linux MD can support other layouts, including three drives."},
+    {
+      "id": "fbla-scope",
+      "title": "FBLA Networking Infrastructures 2026-27, pp. 5-6",
+      "url": "https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Objective%20Tests/Networking-Infrastructures.pdf",
+      "reading": "fetched",
+      "scope": "Read the current Network Hardware and Connectivity objectives; establishes assignment scope, not the technical explanations."
+    },
+    {
+      "id": "cisco-ethernet",
+      "title": "Cisco: What Is Ethernet?",
+      "url": "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-ethernet.html",
+      "reading": "fetched",
+      "scope": "Read Ethernet media, IEEE 802.3, Layer 1/2, MAC frames and switching, router packet forwarding between networks, Ethernet cabling and power. Cisco learning explanation; not a universal reach or product compatibility specification."
+    },
+    {
+      "id": "cisco-ucs-blade",
+      "title": "Cisco UCS 5100 Series Blade Server Chassis Data Sheet",
+      "url": "https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-5100-series-blade-server-chassis/data_sheet_c78-526830.html",
+      "reading": "fetched",
+      "scope": "Read chassis capacity, shared power supplies, hot-swappable fans, fabric/midplane, redundancy options and integrated management details; this is one specific blade implementation, not a universal blade design."
+    },
+    {
+      "id": "corning-lc",
+      "title": "Corning: Heat-Cure Connector, LC",
+      "url": "https://ecatalog.corning.com/optical-communications/US/en/Fiber-Optic-Connectivity/Connectors/Heat-Cure-Epoxy-Polish/Heat-Cure-Connector%2C-LC/p/heat-cure-connector-lc",
+      "reading": "fetched",
+      "scope": "Read manufacturer product description and variants: LC connectors offered for single-mode and multimode fiber, with distinct fiber categories and UPC/APC options. Illustrates that connector family alone does not establish optics compatibility."
+    },
+    {
+      "id": "ms-storage-fault",
+      "title": "Microsoft Learn: Storage Spaces Direct fault tolerance",
+      "url": "https://learn.microsoft.com/en-us/windows-server/storage/storage-spaces/fault-tolerance",
+      "reading": "fetched",
+      "scope": "Read mirror and parity mechanisms, single/dual parity tradeoffs and failure tolerance tables. Storage Spaces Direct is a software-defined clustered implementation; used only to explain mirror/parity concepts, not as a claim that its server counts equal disk counts for RAID."
+    }
+  ],
+  "sheets": [
+    {
+      "id": "ni-hardware-links",
+      "title": "Network Hardware Links and Media",
+      "domain": "Network Hardware and Connectivity",
+      "pages": [
+        [
+          {
+            "title": "From provider to host",
+            "objectives": ["NI-NHC-01", "NI-NHC-06"],
+            "sources": ["cisco-ethernet"],
+            "notes": [
+              "An ISP supplies service over a provider network.",
+              "A modem terminates a provider-specific signal.",
+              "An ONT terminates a fiber access service handoff.",
+              "Either handoff can present Ethernet to a router.",
+              "Some gateways combine modem or ONT and router.",
+              "A router forwards IP packets between networks.",
+              "Its WAN side faces service; LAN serves local hosts.",
+              "A Layer 2 switch forwards LAN frames using MACs.",
+              "A switch does not replace the WAN router function."
+            ]
+          },
+          {
+            "title": "Network adapters and local traffic",
+            "objectives": ["NI-NHC-01", "NI-NHC-02", "NI-NHC-06"],
+            "sources": ["cisco-ethernet"],
+            "notes": [
+              "A NIC joins a host to a wired or wireless link.",
+              "It sends and receives link-layer frames.",
+              "A PCIe NIC is a physical card fitted to a slot.",
+              "A virtual NIC is a software interface for a VM.",
+              "The host's virtual switch can connect virtual NICs.",
+              "Path: provider, modem/ONT, router, LAN switch, host.",
+              "One appliance may implement several path functions.",
+              "The ISP service and working provider network are also needed.",
+              "Without Internet, local switched communication may still work.",
+              "Ethernet frames use MAC addressing on the local link."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "Copper media",
+            "objectives": ["NI-NHC-03"],
+            "sources": ["cisco-ethernet"],
+            "notes": [
+              "Twisted-pair copper carries signals on paired conductors.",
+              "Twisting helps reduce crosstalk between wire pairs.",
+              "UTP means unshielded twisted pair; it lacks cable shielding.",
+              "STP means shielded twisted pair; foil or braid screens pairs.",
+              "Shield benefit depends on correct bonding and installation.",
+              "Coax has a central conductor, dielectric and outer shield.",
+              "Coax carries cable broadband and some legacy Ethernet.",
+              "Twisted pair often uses an 8P8C modular plug.",
+              "Coax commonly uses F-type or BNC connectors."
+            ]
+          },
+          {
+            "title": "Fiber and link compatibility",
+            "objectives": ["NI-NHC-03", "NI-NHC-04"],
+            "sources": ["cisco-ethernet", "corning-lc"],
+            "notes": [
+              "Single-mode fiber has a small core for one light mode.",
+              "Multimode fiber has a larger core carrying multiple modes.",
+              "LC and SC name connector form factors, not fiber modes.",
+              "Corning lists LC products for both single and multimode fiber.",
+              "Connector fit alone does not make transceivers compatible.",
+              "Match mode, wavelength, optics, connector and Ethernet PHY.",
+              "Check both endpoint datasheets and the optical loss budget.",
+              "Fiber reach depends on PHY, optics, fiber grade and loss.",
+              "100 m copper channels are common, not a universal PHY limit.",
+              "Never look into fiber ends; use disconnected samples only."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "Trace a PC's link to the ISP and state what routes off the LAN.",
+          "answer": "The NIC links to the switch, which forwards local frames. The router forwards packets between LAN and ISP handoff; modem or ONT terminates the provider medium. Integrated devices may combine roles.",
+          "objectives": ["NI-NHC-01", "NI-NHC-02", "NI-NHC-06"],
+          "kind": "application"
+        },
+        {
+          "prompt": "Why does an LC plug not prove an optical link will work?",
+          "answer": "LC identifies connector form, but fiber mode, wavelength, transceiver and Ethernet PHY must also match; validate endpoint specifications and loss budget.",
+          "objectives": ["NI-NHC-03", "NI-NHC-04"],
+          "kind": "retrieval"
+        }
+      ]
+    },
+    {
+      "id": "ni-hardware-infrastructure",
+      "title": "Server and Storage Infrastructure",
+      "domain": "Network Hardware and Connectivity",
+      "pages": [
+        [
+          {
+            "title": "Rack and blade server forms",
+            "objectives": ["NI-NHC-05"],
+            "sources": ["cisco-ucs-blade"],
+            "notes": [
+              "A rack server is an individual server mounted in a rack.",
+              "It generally has its own power and cooling components.",
+              "Racks allow mixed systems and incremental installation.",
+              "They require rack space, cabling and room-level cooling.",
+              "A blade is a server module fitted into a shared chassis.",
+              "The chassis can provide power, fans, fabric and management.",
+              "Shared infrastructure can reduce cabling and increase density.",
+              "Chassis cost and blade compatibility constrain choice.",
+              "Shared power, cooling or midplane can form failure domains."
+            ]
+          },
+          {
+            "title": "Chassis power and connectivity",
+            "objectives": ["NI-NHC-05", "NI-NHC-06"],
+            "sources": ["cisco-ucs-blade", "cisco-ethernet"],
+            "notes": [
+              "Cisco UCS 5108 holds up to eight half-width blade servers.",
+              "Its chassis has hot-swappable power supplies and fans.",
+              "Its fabric connects blades to network interfaces and uplinks.",
+              "That design reduces separate chassis switches and cabling.",
+              "Redundant supplies or fans reduce, but do not erase, risk.",
+              "Power redundancy mode determines tolerated supply loss.",
+              "PoE supplies data and power over supported Ethernet links.",
+              "Check the switch's total PoE budget and each port limit.",
+              "Also verify device demand and the exact equipment datasheet.",
+              "Internet needs ISP, handoff hardware, router and host link."
+            ]
+          }
+        ],
+        [
+          {
+            "title": "File and block storage",
+            "objectives": ["NI-NHC-07"],
+            "sources": ["ms-storage-fault"],
+            "notes": [
+              "NAS means network-attached storage, typically shared files.",
+              "Clients request named files and folders over LAN protocols.",
+              "SAN commonly presents block volumes to connected hosts.",
+              "A host formats and manages a block volume as a disk.",
+              "NAS suits shared files; SAN can serve host-managed blocks.",
+              "Choice depends on workload, protocol, administration and cost.",
+              "Neither guarantees a particular speed or availability.",
+              "A storage network does not itself provide backup copies.",
+              "Protect data separately against deletion and site loss."
+            ]
+          },
+          {
+            "title": "RAID and fault tolerance",
+            "objectives": ["NI-NHC-07"],
+            "sources": ["redhat-raid", "ms-storage-fault"],
+            "notes": [
+              "RAID combines disks for speed, redundancy, or both.",
+              "RAID 0 stripes data; 2+ disks, no disk-failure tolerance.",
+              "Two-disk RAID 1 mirrors data; survives one member failure.",
+              "RAID 5 uses single parity; 3+ disks, tolerates one disk loss.",
+              "RAID 6 uses dual parity; 4+ disks, tolerates two disk losses.",
+              "Conventional RAID 10 stripes mirrored pairs; minimum 4 disks.",
+              "RAID 10 tolerates one loss per pair, not both in one pair.",
+              "RAID limits assume supported layouts and healthy members.",
+              "Rebuilds take time; extra failures can exceed level limits.",
+              "RAID is not backup; keep separate copies and test restores."
+            ]
+          }
+        ]
+      ],
+      "practice": [
+        {
+          "prompt": "Compare a blade chassis with individual rack servers for a growing site.",
+          "answer": "Blades can raise density and centralize power, cooling and fabric, but depend on chassis capacity, compatibility and shared components. Rack servers are more individually replaceable and flexible but use rack space and separate cabling. Compare site power/cooling, service model and failure domains.",
+          "objectives": ["NI-NHC-05"],
+          "kind": "application"
+        },
+        {
+          "prompt": "Which level has dual parity, and why can it not replace a backup?",
+          "answer": "RAID 6 uses dual parity, needs at least four disks in the standard level, and tolerates up to two disk losses under its assumptions. RAID cannot recover independent copies after deletion, malware or site loss; keep tested separate backups.",
+          "objectives": ["NI-NHC-07"],
+          "kind": "retrieval"
+        }
+      ]
+    }
+  ],
+  "lab": {
+    "title": "Offline hardware and storage tabletop",
+    "steps": [
+      "Draw provider, handoff, router, switch and host; label each role.",
+      "On paper, compare NAS files with SAN block volumes and RAID layouts.",
+      "Use disconnected cable samples or photographs; do not inspect live fiber.",
+      "Check a sample switch datasheet for total and per-port PoE limits."
+    ],
+    "expected": [
+      "Learner distinguishes WAN routing from local frame switching.",
+      "Learner identifies fiber mode and optic compatibility checks.",
+      "Learner distinguishes file access, block access and backup copies.",
+      "Learner states both PoE constraints must meet device demand."
+    ]
+  },
+  "limitations": [
+    "Cisco UCS 5108 details describe one blade platform, not every chassis.",
+    "Exact STP, UTP and coax performance varies by cable construction and PHY; no universal reach is asserted.",
+    "RAID level tolerance describes conventional layouts; controller, implementation and failure scenario matter. Microsoft Storage Spaces Direct is related parity/mirroring evidence, not an identical RAID implementation.",
+    "Cisco Networking Academy course page was not readable when fetched and is not claimed as read."
+  ]
+}

@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Cloud(pen) (g)responsibility(pen) (g)and(pen) (g)service(pen) (g)models(pen)
+(pen)-> (pu)Cloud(pen) (pu)choices(pen), (pu)effects(pen), (pu)and(pen) (pu)shared(pen) (pu)duties(pen)
+(pen)o (g)Cloud(pen) (g)responsibility(pen) (g)and(pen) (g)service(pen) (g)models(pen)
+(pen)-> (g)Cloud(pen) moves workloads; it does not remove customer (pu)duties(pen).
+(pen)-> Provider secures (g)cloud(pen) facilities, hardware, managed layers.
+(pen)-> Customer secures data, identities, settings, and lawful use.
+(pen)-> Exact (g)responsibility(pen) depends on (g)service(pen) and configuration.
+(pen)-> IaaS rents compute, storage, and network infrastructure.
+(pen)-> IaaS customer normally manages guest OS and applications.
+(pen)-> PaaS provider manages platform/runtime; customer manages app.
+(pen)-> SaaS vendor runs app; customer manages users and data.
+(pen)-> More abstraction reduces customer control and admin work.
+(pen)o (pu)Cloud(pen) (pu)choices(pen), (pu)effects(pen), (pu)and(pen) (pu)shared(pen) (pu)duties(pen)
+(pen)-> Example: IaaS customer patches guest; provider patches host.
+(pen)-> SaaS customer controls account access and sharing settings.
+(pen)-> Provider controls do not correct customer misconfiguration.
+(pen)-> Public (g)cloud(pen) can scale quickly without owning facilities.
+(pen)-> Costs shift toward usage; careless usage can raise bills.
+(pen)-> (g)Cloud(pen) dependence adds provider, network, and outage risks.
+(pen)-> Classify data before selecting (g)cloud(pen) storage or region.
+(pen)-> Review contract, (pu)duties(pen), audit, and recovery options.
+(pen)-> AWS calls this (br)security(pen) of the (g)cloud(pen) versus in the cloud.
+(pen)-> A (g)cloud(pen) (g)service(pen) is not automatically safer than local hosting.
+(pen)o Overview
+(pen)-> (br)Microservices(pen) (br)and(pen) (br)API(pen) (br)security(pen)
+(pen)-> (or)Distributed(pen) (or)policy(pen) (or)and(pen) (or)complexity(pen)
+(pen)o (br)Microservices(pen) (br)and(pen) (br)API(pen) (br)security(pen)
+(pen)-> (br)Microservices(pen) are small components communicating over APIs.
+(pen)-> An (br)API(pen) endpoint accepts requests for a defined operation.
+(pen)-> Each reachable endpoint adds code and attack surface.
+(pen)-> Authenticate the caller; separately authorize each action.
+(pen)-> A valid login does not grant every endpoint permission.
+(pen)-> Service-to-service calls also need identity and access rules.
+(pen)-> NIST lists authentication and access management as core needs.
+(pen)-> Secure channels help protect (g)service(pen) communications.
+(pen)-> Mutually authenticate services; authorize each (br)API(pen) operation.
+(pen)o (or)Distributed(pen) (or)policy(pen) (or)and(pen) (or)complexity(pen)
+(pen)-> Many services multiply routes, keys, versions, and policies.
+(pen)-> (g)Service(pen) discovery locates changing (g)service(pen) instances.
+(pen)-> Incorrect discovery can direct requests to hostile endpoints.
+(pen)-> Gateways centralize some edge checks and traffic controls.
+(pen)-> Internal services still require correct authorization checks.
+(pen)-> A (g)service(pen) mesh can package communication/(br)security(pen) functions.
+(pen)-> Frameworks reduce repetition but add configuration (or)complexity(pen).
+(pen)-> Monitoring and rate limits help detect or constrain abuse.
+(pen)-> (br)Microservices(pen) scale independently, not securely by default.
+(pen)-> Review boundaries; test denied and allowed (br)API(pen) calls.

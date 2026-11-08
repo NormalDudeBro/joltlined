@@ -1,0 +1,48 @@
+o Overview
+-> SSH, HTTPS, TLS, and WPA2
+-> Certificates and trust
+o SSH, HTTPS, TLS, and WPA2
+-> SSH supports secure remote login over an insecure network.
+-> SSH authenticates its server and protects data integrity.
+-> Verify SSH host keys to detect server impersonation.
+-> HTTPS is HTTP over TLS; TLS is the security protocol.
+-> TLS handshake negotiates keys and protocol parameters.
+-> TLS server identity is checked against its certificate.
+-> TLS record layer protects application data in transit.
+-> WPA2 protects a wireless link; use secure configuration.
+-> Secure protocol use does not secure a compromised endpoint.
+o Certificates and trust
+-> Certificate binds a public key to a named subject.
+-> A trusted CA signs the binding under its issuance policy.
+-> A chain links the server certificate to a trusted root key.
+-> Client validates signatures, name, validity, and intended use.
+-> Trust depends on local trust anchors and validation policy.
+-> A certificate does not guarantee benign site content.
+-> CA issues certificate after request and identity checks.
+-> Keep the matching private key secret and access restricted.
+-> Track expiry; expired certificates may break service.
+-> CRLs list revoked certificates; updates introduce time lag.
+o Overview
+-> IDS and IPS mechanisms
+-> Malware, phishing, and data transformation
+o IDS and IPS mechanisms
+-> IDS monitors events and analyzes them for possible incidents.
+-> IPS detects and attempts to stop possible incidents.
+-> An IPS can block traffic or change a security control.
+-> Signature detection compares events with known patterns.
+-> Anomaly detection compares activity with expected behavior.
+-> Stateful analysis checks protocol activity against profiles.
+-> False positives report benign events as suspicious.
+-> False negatives fail to detect a real incident.
+-> Tune detections and validate alerts using event context.
+o Malware, phishing, and data transformation
+-> Filter risky links and attachments at email gateways.
+-> Least privilege limits malware damage after execution.
+-> Check unexpected sender, destination, and request context.
+-> Report suspicious email; avoid opening unexpected attachments.
+-> Tokenization substitutes a token for a sensitive value.
+-> Token mapping, if retained, needs separate access protection.
+-> Masking removes or replaces fields and can lose analytic use.
+-> Steganography conceals a message within a carrier medium.
+-> Steganography hides presence; it is not encryption.
+-> Obfuscation is not encryption; each method has limits.

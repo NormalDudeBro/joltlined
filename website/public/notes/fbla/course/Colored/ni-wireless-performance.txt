@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Cloud(pen) (g)benefits(pen) (g)and(pen) (g)operating(pen) (g)costs(pen)
+(pen)-> (pu)Cloud(pen) (pu)risks(pen) (pu)and(pen) (pu)planning(pen)
+(pen)o (g)Cloud(pen) (g)benefits(pen) (g)and(pen) (g)operating(pen) (g)costs(pen)
+(pen)-> On-demand provisioning can shorten deployment time.
+(pen)-> Elastic resources can scale with changing workload demand.
+(pen)-> Measured (or)service(pen) ties some (g)costs(pen) to consumption.
+(pen)-> Less local hardware can reduce some maintenance work.
+(pen)-> Usage charges, licenses and support create ongoing (g)costs(pen).
+(pen)-> Data transfer and storage can add to monthly bills.
+(pen)-> Migration and staff learning require time and resources.
+(pen)-> Variable demand can make (g)costs(pen) difficult to forecast.
+(pen)-> (g)Cloud(pen) is not automatically cheaper than local infrastructure.
+(pen)o (pu)Cloud(pen) (pu)risks(pen) (pu)and(pen) (pu)planning(pen)
+(pen)-> Provider outages can make hosted services unavailable.
+(pen)-> Misconfigured permissions can expose data or resources.
+(pen)-> Provider dependence can make migration or exit difficult.
+(pen)-> Location and retention of data affect compliance obligations.
+(pen)-> Plan access controls and recovery responsibilities in advance.
+(pen)-> Assess portability and export (br)options(pen) before committing.
+(pen)-> Use budgets and alerts to monitor measured consumption.
+(pen)-> Provider safeguards do not replace correct customer setup.
+(pen)-> Availability depends on app, network and provider systems.
+(pen)-> Compare (pu)risks(pen) and (g)costs(pen) with the business continuity need.
+(pen)o Overview
+(pen)-> (br)Wireless(pen) (br)LAN(pen) (br)and(pen) (br)cellular(pen) (br)options(pen)
+(pen)-> 5(or)G(pen) (or)system(pen) (or)and(pen) (or)service(pen) (or)families(pen)
+(pen)o (br)Wireless(pen) (br)LAN(pen) (br)and(pen) (br)cellular(pen) (br)options(pen)
+(pen)-> IEEE 802.11 defines WLAN medium access and physical layers.
+(pen)-> Wi-Fi commonly links local devices through access points.
+(pen)-> (br)Cellular(pen) networks provide operator-managed wide-area mobility.
+(pen)-> Wi-Fi generally uses local access points and backhaul.
+(pen)-> Unlicensed Wi-Fi bands can be crowded by neighboring networks.
+(pen)-> (br)Cellular(pen) coverage depends on operator deployment and spectrum.
+(pen)-> Large campus Wi-Fi requires placement and capacity (pu)planning(pen).
+(pen)-> Small networks may use a single integrated (br)wireless(pen) gateway.
+(pen)-> Neither Wi-Fi nor (br)cellular(pen) has one universal speed or range.
+(pen)o 5(or)G(pen) (or)system(pen) (or)and(pen) (or)service(pen) (or)families(pen)
+(pen)-> 5G is a 3GPP mobile (or)system(pen), not a single radio frequency.
+(pen)-> A 5G (or)system(pen) includes user equipment, radio access and core.
+(pen)-> 5G New Radio (NR) is the radio interface family.
+(pen)-> Enhanced mobile broadband targets high data-rate services.
+(pen)-> Massive IoT targets communication for many connected devices.
+(pen)-> Critical communications target reliability and low latency.
+(pen)-> Network slicing can tailor logical network capabilities.
+(pen)-> (or)Service(pen) goals depend on deployment and end-to-end path.
+(pen)-> Low latency is not guaranteed for every 5G application.
+(pen)-> Spectrum, obstacles and distance affect coverage and capacity.

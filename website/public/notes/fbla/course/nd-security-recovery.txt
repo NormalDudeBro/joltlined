@@ -1,0 +1,48 @@
+o Overview
+-> Disaster recovery planning
+-> Backup types and restore assurance
+o Disaster recovery planning
+-> Disaster recovery restores systems and data after disruption.
+-> Business continuity sustains priority work during disruption.
+-> A plan defines scope, roles, contacts and dependencies.
+-> Include recovery order, communication, resources and checks.
+-> Risk assessment compares events and business impacts.
+-> Recovery time objective (RTO) is target restoration time.
+-> Recovery point objective (RPO) is tolerable data-loss time.
+-> Select controls to meet business targets and resource limits.
+-> Test plans; revise after exercises, incidents or changes.
+o Backup types and restore assurance
+-> Cloud backup is offsite but depends on provider and account.
+-> NAS backup is convenient but shares site and access risks.
+-> External drives can be disconnected; rotate them securely.
+-> Use 3-2-1: three copies, two media, one copy offsite.
+-> Keep an offline or immutable copy to resist ransomware.
+-> Versioned copies allow selection of an earlier restore point.
+-> Separate backup credentials from admin accounts.
+-> RAID may sustain disk failure, not deletion or corruption.
+-> A backup is an independent copy; RAID is not a backup.
+-> Test isolated restores; validate data, rights and service.
+o Overview
+-> IDS, IPS, updates, and response
+-> Wireless authentication and ACLs
+o IDS, IPS, updates, and response
+-> An IDS observes host or network activity and raises alerts.
+-> An IPS can block or drop traffic inline when policy triggers.
+-> Inline false positives may disrupt legitimate service.
+-> Detection depends on visibility, tuning and known indicators.
+-> An alert is a lead to investigate, not proof of compromise.
+-> Preserve evidence, contain, remediate, then validate recovery.
+-> Patch supported systems and apps to fix known flaws.
+-> Test updates and plan rollback; delay prolongs exposure.
+-> Firewalls and endpoint protection work at different points.
+o Wireless authentication and ACLs
+-> WPA2/WPA3 protect Wi-Fi links; choose supported secure modes.
+-> WPA2-Personal uses shared passphrase; protect it if exposed.
+-> Enterprise Wi-Fi can use 802.1X/EAP user or device identity.
+-> A backend validates credentials; protect its server and keys.
+-> Use a unique secret, current firmware and secure admin access.
+-> WPA3 compatibility depends on AP and client support.
+-> Wireless ACLs filter traffic by rules and attributes.
+-> MAC addresses can be spoofed; ACLs are not identity proof.
+-> Isolate guest clients and restrict paths with network policy.
+-> Revoke lost credentials; hidden SSID is not security.

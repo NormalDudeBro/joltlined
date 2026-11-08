@@ -1,0 +1,48 @@
+o Overview
+-> OSI: physical and data link
+-> OSI: network through application
+o OSI: physical and data link
+-> OSI is a seven-layer model, not a product blueprint.
+-> Layer 1 sends bits as electrical, optical or radio signals.
+-> It defines media, signaling and connection properties.
+-> Copper, fiber and radio differ in reach and noise limits.
+-> Layer 2 data link groups bits into frames on a local link.
+-> Ethernet and Wi-Fi link delivery use link-layer addressing.
+-> Switches learn source MAC locations and forward frames.
+-> Frames are link-local; routers reframe packets for each link.
+-> Errors, shared-media collisions or loops disrupt delivery.
+o OSI: network through application
+-> Layer 3 network moves packets between networks using IP.
+-> Routers choose next hops using destination and routing data.
+-> Layer 4 carries process traffic using ports and protocols.
+-> TCP offers ordered delivery and retransmits lost data.
+-> UDP provides datagrams without TCP's delivery guarantees.
+-> Layer 5 organizes dialogs between communicating systems.
+-> Layer 6 presentation represents, encodes or transforms data.
+-> Layer 7 protocols support tasks such as web requests.
+-> Internet protocols do not always fit one OSI layer exactly.
+-> OSI aids troubleshooting; it is not a wire-level recipe.
+o Overview
+-> Network troubleshooting model
+-> LAN design in context
+o Network troubleshooting model
+-> OSI layers provide a shared vocabulary for fault isolation.
+-> No link signal suggests checking power, cable or interface.
+-> A local link can work while IP addressing or routing is wrong.
+-> Transport failure may affect a particular service or port.
+-> Application failure may persist despite working lower layers.
+-> Layer symptoms are clues, not proof of a single cause.
+-> Modern protocol stacks combine functions differently from OSI.
+-> Check end-to-end behavior after repairing a local symptom.
+-> Do not infer security from a device's OSI layer alone.
+o LAN design in context
+-> A small shop may use a compact gateway and switched LAN.
+-> A campus commonly uses managed access and routed boundaries.
+-> Datacenter design focuses on server and storage traffic paths.
+-> Capacity planning considers concurrent users and traffic.
+-> Redundant equipment may share power or cable risks.
+-> Segmentation constrains traffic only with correct policy.
+-> More bandwidth cannot fix a wrong route or weak Wi-Fi.
+-> Skills and maintenance matter alongside equipment cost.
+-> Choose components for the site's actual availability needs.
+-> Document dependencies so outages can be diagnosed efficiently.

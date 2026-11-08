@@ -1,0 +1,48 @@
+(pen)o Overview
+(pen)-> (g)Social(pen) (g)Engineering(pen)
+(pen)-> (pu)DoS(pen) (pu)and(pen) (pu)DDoS(pen) (pu)Mechanics(pen)
+(pen)o (g)Social(pen) (g)Engineering(pen)
+(pen)-> Phishing deceives users into revealing data or unsafe action.
+(pen)-> Spear-phishing tailors lures to a person or group.
+(pen)-> Smishing uses SMS/text; vishing uses voice or phone calls.
+(pen)-> Scammers impersonate banks, vendors, coworkers, or help desks.
+(pen)-> Urgency, secrecy, payment changes, code requests warn users.
+(pen)-> Sender display and caller ID can be spoofed.
+(pen)-> Verify through a known independent number or contact path.
+(pen)-> Never disclose passwords or one-time login codes to callers.
+(pen)-> Report suspicious messages through the approved route.
+(pen)o (pu)DoS(pen) (pu)and(pen) (pu)DDoS(pen) (pu)Mechanics(pen)
+(pen)-> DoS makes a service unavailable to legitimate users.
+(pen)-> Flooding can exhaust link capacity or server request handling.
+(pen)-> SYN flood leaves TCP handshakes incomplete, holding state.
+(pen)-> Application requests consume CPU, memory, or worker slots.
+(pen)-> (pu)DDoS(pen) coordinates many machines against one target.
+(pen)-> Botnet is compromised devices under remote control.
+(pen)-> Compromised devices are victims as well as traffic sources.
+(pen)-> Distributed sources complicate attribution and filtering.
+(pen)-> Traffic spikes and maintenance can mimic attack symptoms.
+(pen)-> Monitor traffic; coordinate with admin and provider.
+(pen)o Overview
+(pen)-> (br)Hash(pen) (br)Collisions(pen) (br)and(pen) (br)Birthday(pen) (br)Effect(pen)
+(pen)-> (or)Downgrades(pen) (or)and(pen) (or)Wireless(pen) (or)Weaknesses(pen)
+(pen)o (br)Hash(pen) (br)Collisions(pen) (br)and(pen) (br)Birthday(pen) (br)Effect(pen)
+(pen)-> A (br)hash(pen) maps input data to a fixed-length digest.
+(pen)-> Collision means distinct inputs share a finite digest.
+(pen)-> Preimage seeks input for a chosen digest: a different goal.
+(pen)-> For ideal n-bit (br)hash(pen), generic collision work is about 2^(n/2).
+(pen)-> (br)Birthday(pen) (br)effect(pen) finds any pair sooner than target preimage.
+(pen)-> This is a probability/work estimate, not an exact threshold.
+(pen)-> Collision is not decryption or original-message recovery.
+(pen)-> Hashing differs from reversible, key-based encryption.
+(pen)-> RFC 6962 uses domain-separated SHA-256 Merkle-tree hashes.
+(pen)o (or)Downgrades(pen) (or)and(pen) (or)Wireless(pen) (or)Weaknesses(pen)
+(pen)-> Downgrade induces peers to use weaker protocol/options.
+(pen)-> Fallback to obsolete versions can expose known (or)weaknesses(pen).
+(pen)-> RFC 9325 says TLS 1.2 clients must not fall back earlier.
+(pen)-> Use maintained protocols; compatibility can limit versions.
+(pen)-> Evil twin imitates a trusted Wi-Fi name to lure users.
+(pen)-> SSID display alone does not authenticate the access point.
+(pen)-> WEP's weak IV/key design lets traffic aid key recovery.
+(pen)-> WEP is obsolete; use modern WPA2/WPA3 configuration instead.
+(pen)-> Hidden SSID and MAC filtering do not replace encryption.
+(pen)-> HTTPS/VPN have limits; rogue access-point risk remains.
