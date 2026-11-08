@@ -46,6 +46,51 @@ footer a { color: var(--accent); font: 12px/1.6 system-ui, sans-serif; }
   .wrap { max-width: none; padding-inline: 0; }
 }
 
+/* The same paper, ruling and type scale serve every numbered notes course. */
+.notes-site .notes-intro { padding-block: 44px 30px; }
+.notes-site .notes-intro h1 { max-width: 26ch; margin: 0 0 18px; font-size: clamp(34px, 4.5vw, 54px); font-weight: normal; line-height: 1.12; letter-spacing: -1px; }
+.notes-site .notes-intro > p:not(.eyebrow) { max-width: 85ch; color: var(--muted); font-size: 15px; line-height: 1.75; }
+.notes-site .notes-intro h1 + p { font: 12px/1.7 system-ui, sans-serif; letter-spacing: 0.04em; }
+.notes-site .notes-intro nav { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-block: 24px 16px; font: 12px/1.7 system-ui, sans-serif; }
+.notes-site .contents { columns: 2; padding-inline-start: 24px; margin-block: 22px; font-size: 14px; line-height: 1.8; }
+.notes-site .contents li { break-inside: avoid; }
+.notes-site .topic { margin-block-end: 28px; scroll-margin-block-start: 12px; }
+.notes-site .pages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 22px; align-items: start; }
+.notes-site .pages > article { min-inline-size: 0; }
+.notes-site .topic-title, .notes-site .page-title { color: var(--lb); font-size: 22px; line-height: 1.25; font-weight: normal; margin: 0 0 7px; }
+.notes-site .page-title { display: none; }
+.notes-site .caption, .notes-site .downloads { margin: 0 0 12px; font: 11px/1.5 system-ui, sans-serif; color: var(--muted); }
+.notes-site .sheet { background: #fffefb; border: 1px solid var(--rule); padding-block: 18px; padding-inline: 14px 18px; }
+.notes-site .line { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; min-height: 37px; }
+.notes-site .number { padding-block-start: 7px; color: var(--muted); font: 9px/1.5 system-ui, sans-serif; text-align: end; user-select: none; }
+.notes-site .note { white-space: pre-wrap; overflow-wrap: anywhere; color: var(--pen); border-block-end: 1px solid #efede7; padding-block: 5px; font-size: 14px; line-height: 26px; }
+@media (max-width: 960px) {
+  .notes-site .pages { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  .notes-site .notes-intro { padding-block: 32px 24px; }
+  .notes-site .contents { columns: 1; }
+  .notes-site .sheet { padding-block: 12px; padding-inline: 5px 10px; }
+  .notes-site .line { grid-template-columns: 17px minmax(0, 1fr); gap: 6px; }
+  .notes-site .note { font-size: 13px; line-height: 23px; }
+  .notes-site .topic-title { font-size: 21px; }
+}
+@page notes { size: A4 portrait; margin: 12mm; }
+@media print {
+  .notes-site { page: notes; padding: 0; background: white; }
+  .notes-site header, .notes-site footer, .notes-site .skip, .notes-site .topic-title, .notes-site .downloads { display: none; }
+  .notes-site main, .notes-site .pages { display: block; }
+  .notes-site .topic { margin: 0; }
+  .notes-site .pages > article { break-after: page; break-inside: avoid; }
+  .notes-site .page-title { display: block; font-size: 20px; }
+  .notes-site .caption { margin-block-end: 3mm; }
+  .notes-site .sheet { box-shadow: none; padding: 4mm; }
+  .notes-site .line { grid-template-columns: 22px minmax(0, 1fr); gap: 8px; height: var(--note-row-height, 8.8mm); min-height: 0; }
+  .notes-site .number { padding-block-start: 0.6mm; }
+  .notes-site .note { font-size: 12px; line-height: 3.8mm; padding-block: 0.6mm; }
+  .notes-site * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
 .analysis-site {
   --body-font: Georgia, "Times New Roman", serif;
   --heading-font: var(--body-font);

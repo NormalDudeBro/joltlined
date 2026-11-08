@@ -1,0 +1,121 @@
+[
+  {
+    "id": "ND-NSR-02",
+    "event": "network-design",
+    "title": "Choose a recovery plan for the situation",
+    "practice": "Given an outage or disaster scenario, choose prevention, continuity and recovery measures. Explain the likely data loss, downtime and how you would test recovery.",
+    "sheet": "nd-security-recovery"
+  },
+  {
+    "id": "ND-RP-01",
+    "event": "network-design",
+    "title": "Identify the real problems",
+    "practice": "Summarize an unfamiliar case in your own words. Separate stated facts from assumptions and prioritize the problems you need to solve.",
+    "sheet": "nd-roleplay-analysis"
+  },
+  {
+    "id": "ND-RP-02",
+    "event": "network-design",
+    "title": "Compare feasible alternatives",
+    "practice": "Compare at least two plausible approaches against the same requirements. Explain their costs, advantages, risks and limitations rather than listing products.",
+    "sheet": "nd-roleplay-analysis"
+  },
+  {
+    "id": "ND-RP-03",
+    "event": "network-design",
+    "title": "Defend a solution and implementation plan",
+    "practice": "Recommend an approach and explain the implementation order, people and resources needed, validation checks and rollback plan.",
+    "sheet": "nd-roleplay-analysis"
+  },
+  {
+    "id": "ND-RP-04",
+    "event": "network-design",
+    "title": "Apply technical knowledge to the case",
+    "practice": "Explain why the networking and security choices fit this case. Check the addressing, access, capacity and recovery assumptions relevant to your proposal.",
+    "sheet": "nd-roleplay-analysis"
+  },
+  {
+    "id": "ND-RP-05",
+    "event": "network-design",
+    "title": "Organize the spoken recommendation",
+    "practice": "Give a clear briefing that moves from the problem to alternatives, your recommendation, implementation and verification. Ask a listener to summarize your recommendation.",
+    "sheet": "nd-roleplay-delivery"
+  },
+  {
+    "id": "ND-RP-06",
+    "event": "network-design",
+    "title": "Deliver it clearly and confidently",
+    "practice": "Record a run-through or ask someone to observe your pace, projection, posture and audience engagement. Identify one specific change for the next attempt.",
+    "sheet": "nd-roleplay-delivery"
+  },
+  {
+    "id": "ND-RP-07",
+    "event": "network-design",
+    "title": "Handle judge questions during delivery",
+    "practice": "Have a partner interrupt with unfamiliar questions. Listen, clarify when needed, explain your reasoning and acknowledge uncertainty before returning to the briefing.",
+    "sheet": "nd-roleplay-delivery"
+  },
+  {
+    "id": "SP-R-01",
+    "event": "sales",
+    "title": "Open naturally",
+    "practice": "Create your own greeting and opening, then move smoothly into discovering the customer's needs rather than reciting a generic script.",
+    "sheet": "sp-discovery-opening"
+  },
+  {
+    "id": "SP-R-02",
+    "event": "sales",
+    "title": "Discover needs and listen",
+    "practice": "Role-play with someone whose answers you do not know in advance. Ask open questions, follow up and confirm what matters before recommending an offer.",
+    "sheet": "sp-discovery-opening"
+  },
+  {
+    "id": "SP-R-03",
+    "event": "sales",
+    "title": "Explain and demonstrate the offer",
+    "practice": "Use your actual product or service to explain relevant benefits, evidence, costs and limits. Verify the claims and practise the demonstration with an offline fallback.",
+    "sheet": "sp-product-value-evidence"
+  },
+  {
+    "id": "SP-R-04",
+    "event": "sales",
+    "title": "Respond to objections",
+    "practice": "Ask a partner to vary concerns about price, suitability or risk. Clarify the concern, answer honestly and check whether your response addressed it.",
+    "sheet": "sp-objections-suggestion-close"
+  },
+  {
+    "id": "SP-R-06",
+    "event": "sales",
+    "title": "Make an appropriate close",
+    "practice": "Make a clear, timely request for the sale or an appropriate next step. Respond to the customer's answer without pressure or invented promises.",
+    "sheet": "sp-objections-suggestion-close"
+  },
+  {
+    "id": "SP-R-07",
+    "event": "sales",
+    "title": "Build the relationship and follow through",
+    "practice": "Practise a useful recap and follow-up agreement with a partner. Confirm responsibilities, timing and permission to contact them; do not promise customer loyalty.",
+    "sheet": "sp-relationships-organization"
+  },
+  {
+    "id": "SP-R-08",
+    "event": "sales",
+    "title": "Keep the presentation organized and on time",
+    "practice": "Run your actual presentation aloud, including team handoffs if applicable. Check that a listener can follow the offer, costs and next step within the event timing.",
+    "sheet": "sp-relationships-organization"
+  },
+  {
+    "id": "SP-R-09",
+    "event": "sales",
+    "title": "Deliver with confidence and clarity",
+    "practice": "Record a complete run-through and get feedback on pace, projection, posture and audience engagement. Practise recovering from a missed line or a demonstration problem.",
+    "sheet": "sp-delivery-protocols"
+  },
+  {
+    "id": "SP-R-10",
+    "event": "sales",
+    "title": "Answer interactive questions",
+    "practice": "Have a partner ask unpredictable questions during the pitch. Listen fully, answer the actual question, state factual limits and return naturally to the conversation.",
+    "sheet": "sp-delivery-protocols"
+  }
+]

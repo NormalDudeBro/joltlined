@@ -4,7 +4,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
-const pages = ['index.html', 'ap-lang.html', 'ap-world.html', 'algebra-2.html', 'fbla.html', 'out-of-my-mind.html', 'of-mice-and-men.html', 'fahrenheit-451.html'];
+const pages = ['index.html', 'ap-lang.html', 'ap-world.html', 'algebra-2.html', 'fbla.html', 'fbla-networking.html', 'fbla-cybersecurity.html', 'fbla-network-design.html', 'fbla-sales.html', 'out-of-my-mind.html', 'of-mice-and-men.html', 'fahrenheit-451.html'];
 const sectionsPerPage = { 'out-of-my-mind.html': 12, 'of-mice-and-men.html': 12, 'fahrenheit-451.html': 12 };
 
 // Compare the shared shell, not the intentionally different content headings or note inks.
@@ -43,7 +43,7 @@ async function shell(page) {
 }
 
 for (const width of [375, 1280]) {
-  test(`all eight top-level pages share Home's academic shell at ${width}px`, async ({ page }) => {
+  test(`all collection and FBLA event pages share Home's academic shell at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 812 });
     const failures = [];
     const requests = [];
@@ -92,6 +92,61 @@ for (const width of [375, 1280]) {
     expect(requests.every(url => new URL(url).origin === 'http://127.0.0.1:4173')).toBe(true);
   });
 }
+
+for (const width of [320, 768, 1280]) {
+  test(`FBLA sheets match the existing ruled-paper notes at ${width}px in both directions`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    for (const direction of ['ltr', 'rtl']) {
+      await page.goto('/ap-world.html');
+      await page.locator('html').evaluate((element, direction) => element.dir = direction, direction);
+      const reference = await sheetPresentation(page);
+      expect(reference.sheet['background-color']).toBe('rgb(255, 254, 251)');
+      expect(reference.number['font-size']).toBe('9px');
+      expect(reference.note['border-bottom-width']).toBe('1px');
+      for (const event of ['networking', 'cybersecurity', 'network-design', 'sales']) {
+        await page.goto(`/fbla-${event}.html`);
+        await page.locator('html').evaluate((element, direction) => element.dir = direction, direction);
+        expect(await sheetPresentation(page), `${event} ${direction}: same paper, ruling, typography and spacing`).toEqual(reference);
+        expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+        const number = page.locator('.sheet .number').first();
+        const note = page.locator('.sheet .note').first();
+        expect(await number.evaluate(element => element.getBoundingClientRect().width)).toBeLessThan(await note.evaluate(element => element.getBoundingClientRect().width));
+      }
+    }
+  });
+}
+
+async function sheetPresentation(page) {
+  return page.evaluate(() => {
+    const styles = (selector, properties) => {
+      const element = document.querySelector(selector);
+      if (!element) return null;
+      const computed = getComputedStyle(element);
+      return Object.fromEntries(properties.map(property => [property, computed.getPropertyValue(property).trim()]));
+    };
+    return {
+      sheet: styles('.sheet', ['background-color', 'border-top-color', 'border-top-style', 'border-top-width', 'padding-block-start', 'padding-block-end', 'padding-inline-start', 'padding-inline-end']),
+      pages: styles('.pages', ['grid-template-columns', 'row-gap', 'column-gap', 'align-items']),
+      row: styles('.sheet .line', ['display', 'grid-template-columns', 'column-gap', 'min-height']),
+      number: styles('.sheet .number', ['font-family', 'font-size', 'line-height', 'font-weight', 'color', 'padding-block-start', 'text-align']),
+      note: styles('.sheet .note', ['font-family', 'font-size', 'line-height', 'font-weight', 'color', 'white-space', 'overflow-wrap', 'border-bottom-color', 'border-bottom-style', 'border-bottom-width', 'padding-block-start', 'padding-inline-start']),
+      caption: styles('.caption', ['font-family', 'font-size', 'line-height', 'color', 'margin-block-end']),
+    };
+  });
+}
+
+test('FBLA printed paper and note typography match AP World History', async ({ page }) => {
+  await page.setViewportSize({ width: 703, height: 1123 });
+  await page.emulateMedia({ media: 'print' });
+  await page.goto('/ap-world.html');
+  const reference = await sheetPresentation(page);
+  for (const event of ['networking', 'cybersecurity', 'network-design', 'sales']) {
+    await page.goto(`/fbla-${event}.html`);
+    expect(await sheetPresentation(page), `${event}: same printed paper, ruling, numbers and notes`).toEqual(reference);
+    await expect(page.locator('.page-title').first()).toBeVisible();
+    await expect(page.locator('header')).not.toBeVisible();
+  }
+});
 
 test('shared stylesheet loads from local files, including exported previews', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });

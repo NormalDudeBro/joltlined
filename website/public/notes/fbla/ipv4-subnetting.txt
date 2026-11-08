@@ -1,8 +1,8 @@
-# IPv4 subnetting and VLSM — first pilot
+# IPv4 subnetting and VLSM — optional worked example
 Purpose: practice the subnetting portions of Networking Infrastructures NI-NB-07 and Network Design ND-NIC-07. These are locally assigned study IDs, not official FBLA identifiers. This is an original note, not an official guide or a complete treatment of either objective.
 
 ## Edition and scope
-The Networking Infrastructures and Network Design scope now follows the National 2026–27 CONNECT guidelines. This pilot covers only subnetting portions of locally assigned study objectives, not either entire event. The companion deck was reviewed separately; that review does not establish individual mastery or complete coverage of every event objective. Confirm division-specific requirements with your adviser.
+The Networking Infrastructures and Network Design scope follows the National 2026–27 CONNECT guidelines. This worked example covers only subnetting portions of locally assigned study objectives, not either entire event. The companion deck was reviewed separately; that review does not establish individual mastery or complete coverage of every event objective. Confirm division-specific requirements with your adviser.
 
 ## IPv4 foundations
 An IPv4 address is 32 bits. A subnet mask marks the network prefix with 1 bits and the host portion with 0 bits. CIDR /n means n leading network bits; the dotted mask is a readable form of those bits. Example: /26 = 255.255.255.192 because the final octet mask is 11000000.
@@ -49,7 +49,7 @@ Classful reasoning is obsolete for modern subnet selection. The configured/adver
 5. Save the .pkt locally. This learning note does not ask you to publish personal progress or lab files.
 
 ## Local Anki route — checked prompt mapping
-The prompts below were checked in the accompanying local FBLA package against their answers. They support only the listed subnetting subskills of local study IDs NI-NB-07 and ND-NIC-07; they do not complete either objective. In Anki Browse, use the named event section and locate the exact prompt. The /31 and /32 cards are additions in the pilot package update.
+The prompts below were checked in the accompanying local FBLA package against their answers. They support only the listed subnetting subskills of local study IDs NI-NB-07 and ND-NIC-07; they do not complete either objective. In Anki Browse, use the named event section and locate the exact prompt. The /31 and /32 cards are included in the companion package.
 
 - Networking Infrastructures: "What does an IP prefix length distinguish within an address?" — prefix versus host bits.
 - Networking Infrastructures: "How many conventional usable host addresses are in 192.0.2.0/26?" — ordinary host-count arithmetic.

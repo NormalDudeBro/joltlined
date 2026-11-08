@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { fblaModules, renderFbla, renderCourseSheets, renderCourseHub, renderEvent, colorSheet } from '../scripts/fbla.mjs';
+import { fblaModules, rehearsalItems, renderFbla, renderCourseSheets, renderCourseHub, renderEvent, colorSheet } from '../scripts/fbla.mjs';
 import { palette } from '../scripts/build.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
@@ -89,6 +89,29 @@ for (const item of course.sheets) {
   assert.equal(readFileSync(resolve(root, `notes/fbla/course/Colored/${item.sheet.id}.txt`), 'utf8'), colored);
 }
 assert.match(html, /Complete event study courses/);
+assert.match(html, /Start here: one topic, one practice attempt/);
+assert.match(html, /Sources, practice, lab and scope notes/);
+assert.match(html, /card order is not a lesson sequence/);
+assert.match(html, /654-card Anki package/);
+assert.match(html, /not 17 missing lessons, 17 extra official tasks or 17 separate rehearsals/);
+assert.match(html, /8 in Network Design and 9 in Sales Presentation/);
+assert.match(html, /not the required first lesson/);
+assert.match(html, /notes have been content-reviewed and the companion deck review is complete/i);
+assert.doesNotMatch(html, /audit remains a separate next phase/);
+assert.deepEqual(rehearsalItems.map(item => item.id), [
+  'ND-NSR-02', ...Array.from({ length: 7 }, (_, index) => `ND-RP-0${index + 1}`),
+  'SP-R-01', 'SP-R-02', 'SP-R-03', 'SP-R-04', 'SP-R-06', 'SP-R-07', 'SP-R-08', 'SP-R-09', 'SP-R-10',
+]);
+assert.equal(new Set(rehearsalItems.map(item => item.id)).size, 17);
+for (const item of rehearsalItems) {
+  assert.match(html, new RegExp(`data-objective="${item.id}"`));
+  assert.ok(html.includes(`href="fbla-${item.event}.html#${item.sheet}"`));
+  assert.ok(item.title && item.practice);
+}
+assert.match(html, /192 Anki cards/);
+assert.match(html, /194 Anki cards/);
+assert.match(html, /180 Anki cards/);
+assert.match(html, /88 Anki cards/);
 assert.match(html, /Networking Infrastructures/);
 assert.match(html, /Protocols and threat mitigation: 20 of 100/);
 assert.match(html, /Installation and configuration: 25 of 100/);
@@ -116,6 +139,10 @@ for (const event of ['networking', 'cybersecurity', 'network-design', 'sales']) 
   assert.match(page, /National 2026–27/);
   assert.match(page, /aria-label="Subjects"/);
   assert.match(page, /Source/);
+  assert.match(page, /class="notes-site"/);
+  assert.match(page, /class="course-pages pages"/);
+  assert.match(page, /class="sheet"/);
+  assert.doesNotMatch(page, /audit remains pending/i);
   assert.doesNotMatch(page, /<script\b/i);
 }
 for (const url of [

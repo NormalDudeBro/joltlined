@@ -7,30 +7,13 @@
   <title>Algebra 2: Functions and Linear Systems</title>
   <link rel="stylesheet" href="styles/site.css">
   <style>
-    :root { --g: #168438; --li: #79c900; --pu: #883ac2; --br: #92552f; --or: #e67e22; --y: #287db3; --p: #ed8eb4; --lb: #59b8e7; --hp: #ec228c; --pen: #62615e; }
-    .notes-intro { padding-block: 44px 30px; }
-    .notes-intro h1 { max-width: 26ch; margin: 0 0 18px; font-size: clamp(34px, 4.5vw, 54px); font-weight: normal; line-height: 1.12; letter-spacing: -1px; }
-    .notes-intro > p:not(.eyebrow) { max-width: 85ch; color: var(--muted); font-size: 15px; line-height: 1.75; }
-    .notes-intro h1 + p { font: 12px/1.7 system-ui, sans-serif; letter-spacing: 0.04em; }
-    .notes-intro nav { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-block: 24px 16px; font: 12px/1.7 system-ui, sans-serif; }
+    :root { --g: #168438; --li: #79c900; --pu: #883ac2; --br: #92552f; --or: #e67e22; --y: #287db3; --p: #ed8eb4; --lb: #59b8e7; --hp: #ec228c; --pen: #62615e; --note-row-height: 8mm; }
     #notes { padding-block: 6px 40px; }
     #notes:focus { outline: none; }
-    .contents { columns: 2; padding-inline-start: 24px; margin-block: 22px; font-size: 14px; line-height: 1.8; }
-    .contents li { break-inside: avoid; }
     .legend { display: flex; flex-wrap: wrap; gap: 7px 15px; font: 12px/1.5 system-ui, sans-serif; }
     .legend span { display: inline-flex; align-items: center; gap: 5px; }
     .swatch { width: 9px; height: 9px; border-radius: 50%; }
     .unit-title { font-size: 30px; font-weight: normal; border-block-start: 1px solid var(--ink); padding-block-start: 22px; }
-    .topic { margin-bottom: 28px; scroll-margin-top: 12px; }
-    .pages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 22px; align-items: start; }
-    article { min-width: 0; }
-    .topic-title, .page-title { color: var(--lb); font-size: 22px; line-height: 1.25; font-weight: normal; margin: 0 0 7px; }
-    .page-title { display: none; }
-    .caption, .downloads { margin: 0 0 12px; font: 11px/1.5 system-ui, sans-serif; color: var(--muted); }
-    .sheet { background: #fffefb; border: 1px solid var(--rule); padding: 18px 18px 18px 14px; }
-    .line { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; min-height: 37px; }
-    .number { padding-block-start: 7px; color: var(--muted); font: 9px/1.5 system-ui, sans-serif; text-align: end; user-select: none; }
-    .note { white-space: pre-wrap; overflow-wrap: anywhere; color: var(--pen); border-bottom: 1px solid #efede7; padding: 5px 0; font-size: 14px; line-height: 26px; }
     .ink.g { color: var(--g); } .swatch.g { background: var(--g); }
     .ink.li { color: var(--li); } .swatch.li { background: var(--li); }
     .ink.pu { color: var(--pu); } .swatch.pu { background: var(--pu); }
@@ -41,35 +24,15 @@
     .ink.lb { color: var(--lb); } .swatch.lb { background: var(--lb); }
     .ink.hp { color: var(--hp); } .swatch.hp { background: var(--hp); }
     .ink.pen { color: var(--pen); } .swatch.pen { background: var(--pen); }
-    @media (max-width: 960px) { .pages { grid-template-columns: minmax(0, 1fr); } }
-    @media (max-width: 480px) {
-      .notes-intro { padding-block: 32px 24px; } .contents { columns: 1; }
-      .sheet { padding: 12px 10px 12px 5px; }
-      .line { grid-template-columns: 17px minmax(0, 1fr); gap: 6px; }
-      .note { font-size: 13px; line-height: 23px; }
-      .topic-title { font-size: 21px; }
-    }
-    @page { size: A4 portrait; margin: 12mm; }
     @media print {
-      body { padding: 0; background: white; }
       #notes { padding: 0; }
-      header, footer, .skip, .unit-title, .topic-title, .downloads { display: none; }
-      main, .pages { display: block; }
-      .topic { margin: 0; }
-      article { break-after: page; break-inside: avoid; }
+      .unit-title { display: none; }
       .unit:last-child .topic:last-child article:last-child { break-after: auto; }
-      .page-title { display: block; font-size: 20px; }
-      .caption { margin-bottom: 3mm; }
-      .sheet { box-shadow: none; padding: 4mm; }
-      .line { grid-template-columns: 22px minmax(0, 1fr); gap: 8px; height: 8mm; min-height: 0; }
-      .number { padding-top: 0.6mm; }
-      .note { font-size: 12px; line-height: 3.8mm; padding: 0.6mm 0; }
       .study .topic:last-child article:last-child { break-after: auto; }
-      * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
     }
   </style>
 </head>
-<body>
+<body class="notes-site">
   <a class="skip" href="#notes">Skip to notes</a>
   <div class="wrap">
   <header>

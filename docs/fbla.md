@@ -8,7 +8,21 @@
 
 Each structured course sheet renders to 48 ASCII lines in two 24-line pages. The plain and marked text files are generated from the same data; section sources, objective mappings, practice answers, lab instructions and limitations remain available outside the finite printable bodies. Downloads are embedded for offline use, and the preview build includes all four event pages and note encodings.
 
-## Evidence and scope
+FBLA event pages use the same `.notes-site`, `.pages` and `.sheet` presentation as AP World, AP Lang and Algebra: warm-white paper, ruled rows, 9px line numbers, Georgia notes, shared captions and responsive spacing. Maintain the common component in `website/public/styles/site.css`, not a separate set of FBLA typography rules. The shared named print page preserves A4 sheets while keeping pagination rules away from the other site sections.
+
+## How the curriculum works
+
+The hub leads with a repeatable study loop: choose an event and sheet, open its **Sources, practice, lab and scope notes**, attempt practice before revealing answers, use the matching event subdeck for recall, then apply the idea in a lab or spoken rehearsal. Card order is not a lesson sequence. The same module lab can appear under several sheets; it is not a new assignment each time. The IPv4 example is an optional demonstration, not the mandatory starting lesson. Experienced students can attempt practice first and use the notes to close gaps.
+
+The five-month route is suggested pacing, not an official schedule. Earlier regional deadlines and entry rules take priority. The website does not track personal scores or synchronize Anki. The 654-card package stays in the private delivery channel, not the public site.
+
+### What the 17 rehearsal flags mean
+
+`website/scripts/fbla-rehearsal.json` records the instructional subset of the completed private audit marked for external rehearsal: **8 Network Design items** (`ND-NSR-02` plus `ND-RP-01` through `ND-RP-07`) and **9 Sales items** (`SP-R-01` through `SP-R-04`, and `SP-R-06` through `SP-R-10`). These are local review categories, not missing lessons, official extra tasks, learner scores, or a prescription for 17 sessions. One run-through can exercise multiple criteria. Other skills still need practice even when they are not in this category.
+
+Each item links to an existing related sheet and names a concrete practice action. The build verifies the event, sheet and objective mapping. Do not publish private card GUIDs, candidate reviews or personal performance evidence with this list. The full source ledger is reference material, not the learning sequence.
+
+## Review limits
 
 All four event pages link the National 2026–27 CONNECT guideline PDFs. All 160 objective entries have been content-reviewed and mapped; their IDs are local study mappings, not official FBLA identifiers. The source ledger records objective coverage ranges, reading scopes, source links, and unresolved guideline ambiguities. Technical readings are not claimed as exhaustive or independently normative verification of every fact, and the site does not certify exam readiness. Companion deck review is complete as a separate workstream; neither review certifies individual mastery or exam readiness.
 
@@ -24,4 +38,4 @@ The companion Anki deck was reviewed and revised in a separate private workstrea
 
 ## Checks
 
-Run the documented `npm run build`, `npm run validate`, and browser suite. FBLA checks cover fixed counts, generated notes, source-ledger mappings, event navigation, local downloads, responsive keyboard disclosure, offline file loading, accessibility outside the already-documented palette contrast exception, and physical PDF page totals. Changes must preserve the existing subjects and custom domain.
+Run the documented `npm run build`, `npm run validate`, and browser suite. FBLA checks cover fixed counts, generated notes, source-ledger mappings, event navigation, local downloads, responsive keyboard disclosure, offline file loading, accessibility outside the already-documented palette contrast exception, and physical PDF page totals. Hub regressions cover the exact 8/9 rehearsal split, working related-sheet anchors, 320px expanded-ledger layout in both directions, consistent audit status and printed answers/rehearsal content while disclosures remain closed. Expand the reference ledger before printing if its full records are wanted. Changes must preserve the existing subjects and custom domain.
