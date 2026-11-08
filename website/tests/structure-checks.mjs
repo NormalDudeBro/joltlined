@@ -22,6 +22,13 @@ assert.match(workflow, /cache-dependency-path: website\/package-lock.json/);
 assert.match(workflow, /path: website\/public/);
 assert.match(workflow, /needs: validate/);
 assert.match(workflow, /actions\/deploy-pages@/);
+assert.deepEqual([...workflow.matchAll(/runs-on:\s*(\S+)/g)].map(match => match[1]), ['ubuntu-24.04', 'ubuntu-24.04'], 'both CI jobs pin Ubuntu 24.04 instead of following ubuntu-latest migrations');
+assert.deepEqual([...workflow.matchAll(/uses:\s*(actions\/[^\s]+)/g)].map(match => match[1]), [
+  'actions/checkout@v7',
+  'actions/setup-node@v7',
+  'actions/upload-pages-artifact@v5',
+  'actions/deploy-pages@v5',
+], 'use Node.js 24 actions, including the Pages uploader that bundles upload-artifact v7');
 assert.equal(readFileSync(resolve(website, 'public/CNAME'), 'utf8').trim(), 'www.joltlined.com');
 for (const file of ['README.md', 'docs/development.md', 'docs/technical-reference.md']) {
   const markdown = readFileSync(resolve(root, file), 'utf8');
