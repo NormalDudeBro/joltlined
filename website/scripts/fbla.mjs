@@ -328,14 +328,14 @@ export function renderFbla(note = readFileSync(source, 'utf8'), courseHTML = '')
           <li><strong>Choose an event below.</strong> On its course page, select one sheet from the contents. Read its two pages, or try the practice first if the topic is already familiar.</li>
           <li><strong>Open “Sources, practice, lab and scope notes” beneath that sheet.</strong> Attempt the questions before expanding their answers. The same module lab can appear under several related sheets; you do not need to repeat an identical lab for each sheet.</li>
           <li><strong>Check recall without the notes.</strong> Explain the idea aloud or answer a practice question. If using the companion Anki package, select the matching event subdeck and use Browse to find topic words. The card order is not a lesson sequence, and cards are not mapped one-to-one to sheets.</li>
-          <li><strong>Apply the idea without the answer in view.</strong> Complete the suggested lab or scenario. For Network Design and Sales, also practise aloud using the rehearsal guidance below.</li>
+          <li><strong>Apply the idea without the answer in view.</strong> Complete the suggested lab or scenario. For Network Design and Sales, also practice aloud using the rehearsal guidance below.</li>
           <li><strong>Write down what went wrong privately.</strong> Revisit that explanation, then try a different question or scenario later. Remembering the original answer is not the same as solving a new problem.</li>
         </ol>
         <p><strong>New to a topic?</strong> Read the sheet and work through its examples before attempting practice. <strong>Already familiar with it?</strong> Try practice first, skim material you can explain and apply, and focus on gaps. Choose a starting point that fits current knowledge rather than a fixed order.</p>
         <div class="fbla-materials">
           <div><h3>Website: understand and apply</h3><p>The event pages contain concise reference sheets, expandable practice answers and lab instructions. Plain and colored downloads contain the same notes; choose whichever is easier to read.</p></div>
           <div><h3>Optional Anki: remember</h3><p>If a copy of the companion <bdi dir="ltr"><code>FBLA.apkg</code></bdi> is available, import it into Anki. The 654 cards are not embedded in this website. Without the package, use the practice questions for recall. When updating an existing deck, preserve its learning progress.</p></div>
-          <div><h3>Rehearsal: perform</h3><p>Use unfamiliar cases, your own presentation and audience feedback to practise decisions and delivery. The website does not track your scores or synchronize your Anki progress.</p></div>
+          <div><h3>Rehearsal: perform</h3><p>Use unfamiliar cases, your own presentation and audience feedback to practice decisions and delivery. The website does not track your scores or synchronize your Anki progress.</p></div>
         </div>
       </section>
       <section class="fbla-section" id="event-courses">
@@ -347,24 +347,24 @@ export function renderFbla(note = readFileSync(source, 'utf8'), courseHTML = '')
       </section>
       <section class="fbla-section" id="practice-plan">
         <h2>Build a study schedule</h2>
-        <p>Adapt these stages to the time available, current knowledge and chosen events. They can span weeks or months; they are not an official schedule. Check regional competition, registration and submission deadlines before planning backwards from a target event.</p>
+        <p>Adapt these stages to the time available, current knowledge and chosen events. They can span weeks or months; they are not an official schedule. Check regional competition, registration and submission deadlines before planning backward from a target event.</p>
         <ol>
           <li><strong>Find gaps.</strong> Sample practice across the chosen events, identify unfamiliar topics and begin spoken practice early. Use the sheets to repair weaknesses rather than rereading everything equally.</li>
           <li><strong>Connect and apply.</strong> Work through weak areas, use recall practice regularly, and complete relevant labs or tabletop exercises.</li>
-          <li><strong>Add time pressure.</strong> Mix topics, change the numbers or scenario, and practise cases and presentations without reading the model answer.</li>
+          <li><strong>Add time pressure.</strong> Mix topics, change the numbers or scenario, and practice cases and presentations without reading the model answer.</li>
           <li><strong>Run full simulations.</strong> Use the applicable official timing and rating sheet. Ask a partner or adviser for specific feedback, especially on reasoning and questions.</li>
           <li><strong>Build consistency.</strong> Retest recurring weaknesses with new tasks, rehearse interruptions and equipment failures, and confirm logistics.</li>
         </ol>
         <p><strong>A useful weekly rhythm:</strong> several short recall sessions, focused work on weak topics, an application or lab, and a spoken rehearsal for each performance event you are preparing. Adjust the workload to your actual results; finishing a card count is not the goal.</p>
       </section>
       <section class="fbla-section" id="rehearsal">
-        <h2>17 skills to practise through scenarios and presentations</h2>
-        <p><strong>Use this checklist to practise 8 Network Design skills and 9 Sales Presentation skills.</strong> These involve applying knowledge, explaining decisions and interacting with an audience. They are not 17 additional official requirements or 17 separate assignments; several skills can be practised in one session.</p>
+        <h2>17 skills to practice through scenarios and presentations</h2>
+        <p><strong>Use this checklist to practice 8 Network Design skills and 9 Sales Presentation skills.</strong> These involve applying knowledge, explaining decisions and interacting with an audience. They are not 17 additional official requirements or 17 separate assignments; several skills can be practiced in one session.</p>
         <p>A full Network Design role-play can exercise its seven presentation criteria together, and a Sales run-through can cover several sales skills. Choosing a recovery plan is a scenario-based technical skill, not an eighth role-play rubric criterion. The reference IDs connect each skill to the course material; they do not need to be memorized.</p>
-        ${['network-design', 'sales'].map(event => `<details class="rehearsal-group"><summary>${eventInfo[event].name}: ${rehearsalItems.filter(item => item.event === event).length} skills to practise</summary><ol>${rehearsalItems.filter(item => item.event === event).map(item => `<li data-objective="${escapeHTML(item.id)}"><strong>${escapeHTML(item.title)}</strong><p>${escapeHTML(item.practice)}</p><p><a href="fbla-${event}.html#${escapeHTML(item.sheet)}">Open the related study sheet</a> · <span class="fbla-local-id">Study reference: <bdi dir="ltr">${escapeHTML(item.id)}</bdi></span></p></li>`).join('')}</ol></details>`).join('\n        ')}
-        <p><strong>How to rehearse:</strong> read the related sheet, attempt the task without the model answer, and have a partner note what you explained well, what you missed and how you handled questions. If practising alone, record a first attempt; later use a partner for unpredictable interaction. Repeat the weak part, then try a new scenario.</p>
+        ${['network-design', 'sales'].map(event => `<details class="rehearsal-group"><summary>${eventInfo[event].name}: ${rehearsalItems.filter(item => item.event === event).length} skills to practice</summary><ol>${rehearsalItems.filter(item => item.event === event).map(item => `<li data-objective="${escapeHTML(item.id)}"><strong>${escapeHTML(item.title)}</strong><p>${escapeHTML(item.practice)}</p><p><a href="fbla-${event}.html#${escapeHTML(item.sheet)}">Open the related study sheet</a> · <span class="fbla-local-id">Study reference: <bdi dir="ltr">${escapeHTML(item.id)}</bdi></span></p></li>`).join('')}</ol></details>`).join('\n        ')}
+        <p><strong>How to rehearse:</strong> read the related sheet, attempt the task without the model answer, and have a partner note what you explained well, what you missed and how you handled questions. If practicing alone, record a first attempt; later use a partner for unpredictable interaction. Repeat the weak part, then try a new scenario.</p>
         <p><strong>Timing in the National 2026–27 guides:</strong> Network Design uses 20 minutes of preparation and a 7-minute presentation. Sales uses 3 minutes of setup and a 7-minute presentation. Questions can occur during either presentation; there is no separate Q&amp;A segment. Confirm the format used at your competition.</p>
-        <p><strong>Practise beyond this checklist.</strong> Related-product suggestions, event protocols and technical troubleshooting also need application. Use the event courses and official guidelines to plan broader preparation; this list is a set of practice prompts, not a complete measure of readiness.</p>
+        <p><strong>Practice beyond this checklist.</strong> Related-product suggestions, event protocols and technical troubleshooting also need application. Use the event courses and official guidelines to plan broader preparation; this list is a set of practice prompts, not a complete measure of readiness.</p>
       </section>
       <section class="fbla-section" id="competition-rules">
         <h2>Before competition: confirm the rules</h2>

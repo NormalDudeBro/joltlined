@@ -24,6 +24,8 @@ Each item links to an existing related sheet and names a concrete practice actio
 
 Present this section to learners as **17 practice skills**, not as a conversation-specific question about “requirements” or a report of an internal review. Use “study reference” for IDs. Keep development/audit history in maintainer documentation; the landing page should stand alone for a new visitor, including someone without Anki or networking experience.
 
+Use American English in instructional copy, including **practice**, **practiced**, and **practicing** for both the noun and verb forms.
+
 ## Review limits
 
 All four event pages link the National 2026–27 CONNECT guideline PDFs. All 160 objective entries have been content-reviewed and mapped; their IDs are local study mappings, not official FBLA identifiers. The source ledger records objective coverage ranges, reading scopes, source links, and unresolved guideline ambiguities. Technical readings are not claimed as exhaustive or independently normative verification of every fact, and the site does not certify exam readiness. Companion deck review is complete as a separate workstream; neither review certifies individual mastery or exam readiness.
