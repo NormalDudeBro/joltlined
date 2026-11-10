@@ -1,31 +1,31 @@
 (pen)o Overview
-(pen)-> (g)Fault isolation and symptoms(pen)
-(pen)-> (li)Read local configuration(pen)
-(pen)o (g)Fault isolation and symptoms(pen)
+(pen)-> (p)Fault isolation and symptoms(pen)
+(pen)-> (hp)Read local configuration(pen)
+(pen)o (p)Fault isolation and symptoms(pen)
 (pen)-> Define service, users, location, onset, and impact first.
 (pen)-> Scope separates client faults from segment outages.
-(pen)-> Compare (g)symptoms(pen) with baseline, peers, logs, and changes.
+(pen)-> Compare (p)symptoms(pen) with baseline, peers, logs, and changes.
 (pen)-> Check power, cable, link, adapter, and Wi-Fi association.
 (pen)-> Slow service may reflect congestion, loss, or host load.
 (pen)-> Measure latency and throughput at the same place and time.
 (pen)-> Connection faults occur at link, address, route, or service.
 (pen)-> An (db)IP(pen) conflict means devices share one address on a link.
-(pen)-> Check (r)DHCP(pen) leases and static assignments against plan.
-(pen)o (li)Read local configuration(pen)
+(pen)-> Check (y)DHCP(pen) leases and static assignments against plan.
+(pen)o (hp)Read local configuration(pen)
 (pen)-> Windows `ipconfig /all` shows adapter and gateway settings.
-(pen)-> Compare (db)IP(pen), mask, gateway, DNS with network (hp)records(pen).
-(pen)-> `ipconfig /renew` requests (r)DHCP(pen) renewal on auto adapters.
+(pen)-> Compare (db)IP(pen), mask, gateway, DNS with network (pu)records(pen).
+(pen)-> `ipconfig /renew` requests (y)DHCP(pen) renewal on auto adapters.
 (pen)-> Renewal does not fix a manually configured static address.
-(pen)-> `ipconfig /flushdns` clears the (li)local(pen) resolver cache only.
-(pen)-> Ping an address and then its name to distinguish (y)DNS(pen) (g)symptoms(pen).
+(pen)-> `ipconfig /flushdns` clears the (hp)local(pen) resolver cache only.
+(pen)-> Ping an address and then its name to distinguish (br)DNS(pen) (p)symptoms(pen).
 (pen)-> (db)IP(pen) reply but name failure suggests a name lookup problem.
-(pen)-> A wrong mask or duplicate address disrupts (li)local(pen) delivery.
+(pen)-> A wrong mask or duplicate address disrupts (hp)local(pen) delivery.
 (pen)-> Verify command clues against server logs and another host.
-(pen)-> A (r)DHCP(pen) lease shows assignment, not connectivity.
+(pen)-> A (y)DHCP(pen) lease shows assignment, not connectivity.
 (pen)o Overview
-(pen)-> (p)Path tools and limits(pen)
-(pen)-> (hp)Evidence and asset records(pen)
-(pen)o (p)Path tools and limits(pen)
+(pen)-> (r)Path tools and limits(pen)
+(pen)-> (pu)Evidence and asset records(pen)
+(pen)o (r)Path tools and limits(pen)
 (pen)-> Ping sends Internet Control Message Protocol (ICMP) probes.
 (pen)-> Reply shows ICMP worked then; it does not test app ports.
 (pen)-> No reply may mean filtering, loss, routing, or host policy.
@@ -34,8 +34,8 @@
 (pen)-> Routers may omit TTL replies; asterisks do not prove failure.
 (pen)-> Paths may be asymmetric; traces show only responding hops.
 (pen)-> Unix `traceroute` may use UDP, ICMP, or TCP by implementation.
-(pen)-> Use approved probes; firewalls and rate (p)limits(pen) shape results.
-(pen)o (hp)Evidence and asset records(pen)
+(pen)-> Use approved probes; firewalls and rate (r)limits(pen) shape results.
+(pen)o (pu)Evidence and asset records(pen)
 (pen)-> Counters expose errors, discards, and traffic volume.
 (pen)-> Packet captures show timing, retransmits, and resets.
 (pen)-> Captures may expose private data; authorize and protect them.
@@ -43,6 +43,6 @@
 (pen)-> Document cause confidence, repair, verification, and owner.
 (pen)-> Track device, model, address, site, port, and support owner.
 (pen)-> Track user and group ownership plus access review dates.
-(pen)-> Printer (hp)records(pen) include queue, location, and maintainer.
+(pen)-> Printer (pu)records(pen) include queue, location, and maintainer.
 (pen)-> Retest the affected service with its user after repair.
 (pen)-> Printer queues can fail at client, server, network, or device.

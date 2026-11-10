@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)CIA and Zero Trust(pen)
-(pen)-> (li)Identity(pen), (li)Attestation(pen), (li)and AAA(pen)
-(pen)o (g)CIA and Zero Trust(pen)
+(pen)-> (p)CIA and Zero Trust(pen)
+(pen)-> (hp)Identity(pen), (hp)Attestation(pen), (hp)and AAA(pen)
+(pen)o (p)CIA and Zero Trust(pen)
 (pen)-> Confidentiality limits data reading to authorized parties.
 (pen)-> Integrity resists unauthorized change or destruction.
 (pen)-> Availability gives authorized users timely access.
 (pen)-> Encryption supports confidentiality, not data truth.
 (pen)-> Audit controls can expose changes; logs need protection.
 (pen)-> Tested backups support recovery and availability.
-(pen)-> (g)Zero(pen) (g)Trust(pen) gives no (g)trust(pen) from location alone.
+(pen)-> (p)Zero(pen) (p)Trust(pen) gives no (p)trust(pen) from location alone.
 (pen)-> Evaluate user, device, resource, and context per request.
 (pen)-> Example: verify worker and device before payroll access.
-(pen)o (li)Identity(pen), (li)Attestation(pen), (li)and AAA(pen)
-(pen)-> Proofing links a claimed (li)identity(pen) to a real person.
-(pen)-> Resolution finds a unique (li)identity(pen) in the served population.
+(pen)o (hp)Identity(pen), (hp)Attestation(pen), (hp)and AAA(pen)
+(pen)-> Proofing links a claimed (hp)identity(pen) to a real person.
+(pen)-> Resolution finds a unique (hp)identity(pen) in the served population.
 (pen)-> Validation checks evidence and attribute facts.
 (pen)-> Verification checks applicant is rightful evidence owner.
 (pen)-> Authentication later checks control of a bound authenticator.
-(pen)-> (li)Attestation(pen) signs hardware-secured measurements for review.
-(pen)-> (li)Attestation(pen) describes device measurements, not human (li)identity(pen).
-(pen)-> (g)Trust(pen) depends on keys, measurements, and verifier policy.
-(pen)-> (li)AAA(pen): authentication, authorization, and accounting.
+(pen)-> (hp)Attestation(pen) signs hardware-secured measurements for review.
+(pen)-> (hp)Attestation(pen) describes device measurements, not human (hp)identity(pen).
+(pen)-> (p)Trust(pen) depends on keys, measurements, and verifier policy.
+(pen)-> (hp)AAA(pen): authentication, authorization, and accounting.
 (pen)-> Authorization permits actions; accounting records activity.
 (pen)o Overview
-(pen)-> (p)Nonrepudiation and Least Privilege(pen)
-(pen)-> (hp)Binary(pen), (hp)Decimal(pen), (hp)and Hex(pen)
-(pen)o (p)Nonrepudiation and Least Privilege(pen)
-(pen)-> (p)Nonrepudiation(pen) seeks evidence resisting denial of an action.
+(pen)-> (r)Nonrepudiation and Least Privilege(pen)
+(pen)-> (pu)Binary(pen), (pu)Decimal(pen), (pu)and Hex(pen)
+(pen)o (r)Nonrepudiation and Least Privilege(pen)
+(pen)-> (r)Nonrepudiation(pen) seeks evidence resisting denial of an action.
 (pen)-> A signature alone cannot prove who controlled its key.
-(pen)-> (li)Identity(pen) binding, key custody, intent, and time matter.
+(pen)-> (hp)Identity(pen) binding, key custody, intent, and time matter.
 (pen)-> Legal and system assumptions bound attribution claims.
-(pen)-> (p)Least(pen) (p)privilege(pen) grants only necessary resource/action rights.
+(pen)-> (r)Least(pen) (r)privilege(pen) grants only necessary resource/action rights.
 (pen)-> Use narrow roles and time-bound elevation where feasible.
 (pen)-> Review grants; revoke access when duties or roles change.
 (pen)-> It limits blast radius, not all misuse or compromise.
-(pen)-> (db)OWASP(pen) says (p)least(pen) DB (p)privilege(pen) limits injection damage.
-(pen)o (hp)Binary(pen), (hp)Decimal(pen), (hp)and Hex(pen)
-(pen)-> (hp)Binary(pen) is base 2; (hp)decimal(pen) is base 10; (hp)hex(pen) is base 16.
-(pen)-> (hp)Hex(pen) digits are 0-9 and A-F; A-F represent values 10-15.
+(pen)-> (db)OWASP(pen) says (r)least(pen) DB (r)privilege(pen) limits injection damage.
+(pen)o (pu)Binary(pen), (pu)Decimal(pen), (pu)and Hex(pen)
+(pen)-> (pu)Binary(pen) is base 2; (pu)decimal(pen) is base 10; (pu)hex(pen) is base 16.
+(pen)-> (pu)Hex(pen) digits are 0-9 and A-F; A-F represent values 10-15.
 (pen)-> Place values are powers of the base, right to left.
-(pen)-> (hp)Binary(pen) 1011 equals (hp)decimal(pen) 8+2+1, or 11.
-(pen)-> (hp)Hex(pen) 2F equals (hp)decimal(pen) 2*16+15, or 47.
-(pen)-> Four (hp)binary(pen) bits form one (hp)hex(pen) digit: 1011 becomes B.
-(pen)-> Pad on left: 11010 becomes 0001 1010, or (hp)hex(pen) 1A.
-(pen)-> A byte is 8 bits; two (hp)hex(pen) digits display one byte.
-(pen)-> (hp)Hex(pen) displays bits compactly; it does not encrypt them.
+(pen)-> (pu)Binary(pen) 1011 equals (pu)decimal(pen) 8+2+1, or 11.
+(pen)-> (pu)Hex(pen) 2F equals (pu)decimal(pen) 2*16+15, or 47.
+(pen)-> Four (pu)binary(pen) bits form one (pu)hex(pen) digit: 1011 becomes B.
+(pen)-> Pad on left: 11010 becomes 0001 1010, or (pu)hex(pen) 1A.
+(pen)-> A byte is 8 bits; two (pu)hex(pen) digits display one byte.
+(pen)-> (pu)Hex(pen) displays bits compactly; it does not encrypt them.
 (pen)-> Hashes output fixed-length digests; encoding adds no strength.

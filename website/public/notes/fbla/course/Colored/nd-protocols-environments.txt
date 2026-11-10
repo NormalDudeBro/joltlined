@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)Network Scale and Work Models(pen)
-(pen)-> (li)Devices and Trust Boundaries(pen)
-(pen)o (g)Network Scale and Work Models(pen)
-(pen)-> A (db)LAN(pen) links (li)devices(pen) within a limited local site.
-(pen)-> A (r)WAN(pen) connects distant LANs over carrier or private links.
-(pen)-> (r)WAN(pen) reach adds provider, latency, recurring-cost tradeoffs.
+(pen)-> (pu)Network Scale and Work Models(pen)
+(pen)-> (db)Devices and Trust Boundaries(pen)
+(pen)o (pu)Network Scale and Work Models(pen)
+(pen)-> A (r)LAN(pen) links (db)devices(pen) within a limited local site.
+(pen)-> A (li)WAN(pen) connects distant LANs over carrier or private links.
+(pen)-> (li)WAN(pen) reach adds provider, latency, recurring-cost tradeoffs.
 (pen)-> Peer-to-peer hosts share directly; control is distributed.
 (pen)-> P2P can suit small groups but complicates consistent policy.
 (pen)-> Client-server centralizes services, identity, administration.
 (pen)-> Central services simplify control but become dependencies.
 (pen)-> Thin clients rely on remote compute/apps; outages impair use.
 (pen)-> Servers provide services; clients request services.
-(pen)o (li)Devices and Trust Boundaries(pen)
+(pen)o (db)Devices and Trust Boundaries(pen)
 (pen)-> A modem adapts a carrier access signal; products vary.
 (pen)-> A router forwards IP packets between networks using routes.
 (pen)-> A switch forwards local frames using learned MAC addresses.
 (pen)-> Servers attach to switches; clients reach services over links.
-(pen)-> An access point bridges (y)Wi(pen)-(y)Fi(pen) clients to a wired (db)LAN(pen).
+(pen)-> An access point bridges (g)Wi(pen)-(g)Fi(pen) clients to a wired (r)LAN(pen).
 (pen)-> A gateway joins networks or systems; roles may be combined.
 (pen)-> A switch is not automatically a router or policy firewall.
 (pen)-> Authentication checks an identity claim or credential control.
 (pen)-> Authorization decides permitted actions after identity checks.
 (pen)-> Encryption protects confidentiality when keys are secure.
 (pen)o Overview
-(pen)-> (p)Connectivity and Attack Patterns(pen)
-(pen)-> (hp)VPN and Authorized Capture(pen)
-(pen)o (p)Connectivity and Attack Patterns(pen)
-(pen)-> Ethernet (IEEE 802.3) commonly carries wired (db)LAN(pen) frames.
-(pen)-> (y)Wi(pen)-(y)Fi(pen) (802.11) uses radio; walls and noise affect links.
+(pen)-> (br)Connectivity and Attack Patterns(pen)
+(pen)-> (y)VPN and Authorized Capture(pen)
+(pen)o (br)Connectivity and Attack Patterns(pen)
+(pen)-> Ethernet (IEEE 802.3) commonly carries wired (r)LAN(pen) frames.
+(pen)-> (g)Wi(pen)-(g)Fi(pen) (802.11) uses radio; walls and noise affect links.
 (pen)-> Wi-Fi reach and rate depend on band, load, and equipment.
-(pen)-> Bluetooth is short-range personal-area radio, not (r)WAN(pen) access.
+(pen)-> Bluetooth is short-range personal-area radio, not (li)WAN(pen) access.
 (pen)-> Phishing tricks people into unsafe disclosure or actions.
 (pen)-> Spoofing falsifies an address or identity signal to mislead.
 (pen)-> Poisoning corrupts trusted data, e.g. name-resolution answers.
-(pen)-> (p)Attack(pen) labels overlap; identify the mechanism and target.
+(pen)-> (br)Attack(pen) labels overlap; identify the mechanism and target.
 (pen)-> Verify requests; use MFA, filtering, and updates.
-(pen)o (hp)VPN and Authorized Capture(pen)
-(pen)-> A (hp)VPN(pen) creates a logical tunnel across an underlying (g)network(pen).
+(pen)o (y)VPN and Authorized Capture(pen)
+(pen)-> A (y)VPN(pen) creates a logical tunnel across an underlying (pu)network(pen).
 (pen)-> Configured VPNs can authenticate peers and encrypt traffic.
 (pen)-> Tunneling does not secure endpoints or grant user permissions.
-(pen)-> Packet (hp)capture(pen) records traffic visible at the (hp)capture(pen) point.
+(pen)-> Packet (y)capture(pen) records traffic visible at the (y)capture(pen) point.
 (pen)-> Encryption hides payload; metadata may remain visible.
-(pen)-> (hp)Capture(pen) only with explicit authorization and approved scope.
+(pen)-> (y)Capture(pen) only with explicit authorization and approved scope.
 (pen)-> Minimize collection; protect files; follow retention policy.
 (pen)-> Authentication checks identity; authorization grants access.
-(pen)-> VPNs do not replace endpoint, account, or (g)network(pen) controls.
+(pen)-> VPNs do not replace endpoint, account, or (pu)network(pen) controls.
 (pen)-> Never inspect others' traffic without authorization.

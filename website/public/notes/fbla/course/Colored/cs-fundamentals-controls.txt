@@ -1,46 +1,46 @@
 (pen)o Overview
-(pen)-> (g)Proofing(pen), (g)Factors(pen), (g)and Device Trust(pen)
-(pen)-> (li)AAA(pen), (li)MFA(pen), (li)and Zero Trust(pen)
-(pen)o (g)Proofing(pen), (g)Factors(pen), (g)and Device Trust(pen)
-(pen)-> (g)Proofing(pen) links a person identity at stated assurance.
+(pen)-> (db)Proofing(pen), (db)Factors(pen), (db)and Device Trust(pen)
+(pen)-> (br)AAA(pen), (br)MFA(pen), (br)and Zero Trust(pen)
+(pen)o (db)Proofing(pen), (db)Factors(pen), (db)and Device Trust(pen)
+(pen)-> (db)Proofing(pen) links a person identity at stated assurance.
 (pen)-> It resolves, validates evidence, then verifies owner.
 (pen)-> Authentication checks control of an account authenticator.
-(pen)-> A (g)device(pen) report is not user proof; login is not (g)device(pen) proof.
+(pen)-> A (db)device(pen) report is not user proof; login is not (db)device(pen) proof.
 (pen)-> Attestation signs hardware-secured measurements for review.
 (pen)-> It depends on trusted measurement, signing key, and verifier.
 (pen)-> Authentication shows account control, not real-world identity.
 (pen)-> Assurance reduces risk; it does not promise certainty.
-(pen)-> Enrollment and recovery also need secure (g)proofing(pen) controls.
-(pen)o (li)AAA(pen), (li)MFA(pen), (li)and Zero Trust(pen)
+(pen)-> Enrollment and recovery also need secure (db)proofing(pen) controls.
+(pen)o (br)AAA(pen), (br)MFA(pen), (br)and Zero Trust(pen)
 (pen)-> Authentication verifies control; authorization permits use.
 (pen)-> Accounting: record relevant use for review and investigation.
-(pen)-> (li)MFA(pen) uses distinct types: know, have, or are.
-(pen)-> Two passwords are both know (g)factors(pen), not (li)MFA(pen) by themselves.
+(pen)-> (br)MFA(pen) uses distinct types: know, have, or are.
+(pen)-> Two passwords are both know (db)factors(pen), not (br)MFA(pen) by themselves.
 (pen)-> Password plus registered security key combines know and have.
 (pen)-> SMS codes can be intercepted/phished; not phishing-resistant.
-(pen)-> (li)Zero(pen) (g)Trust(pen) checks identity/context for each resource request.
-(pen)-> Managed (g)device(pen) and verified worker get payroll read access.
-(pen)-> Network location or VPN alone does not grant implicit (g)trust(pen).
-(pen)-> (g)Device(pen) posture is a signal; it does not identify the user.
+(pen)-> (br)Zero(pen) (db)Trust(pen) checks identity/context for each resource request.
+(pen)-> Managed (db)device(pen) and verified worker get payroll read access.
+(pen)-> Network location or VPN alone does not grant implicit (db)trust(pen).
+(pen)-> (db)Device(pen) posture is a signal; it does not identify the user.
 (pen)o Overview
-(pen)-> (p)Least Privilege(pen)
-(pen)-> (hp)Honeypots(pen), (hp)Honeynets(pen), (hp)and Honeyfiles(pen)
-(pen)o (p)Least Privilege(pen)
+(pen)-> (y)Least Privilege(pen)
+(pen)-> (g)Honeypots(pen), (g)Honeynets(pen), (g)and Honeyfiles(pen)
+(pen)o (y)Least Privilege(pen)
 (pen)-> Grant only resources/actions needed for assigned work.
 (pen)-> Separate routine accounts from administrative elevation.
 (pen)-> A reporting service may read a view, not own the database.
 (pen)-> Use role scopes and expire temporary permissions.
 (pen)-> Review access after job, project, or status changes.
 (pen)-> Remove stale rights; protect service/database accounts too.
-(pen)-> (p)Least(pen) (p)privilege(pen) limits harm from bugs or stolen accounts.
+(pen)-> (y)Least(pen) (y)privilege(pen) limits harm from bugs or stolen accounts.
 (pen)-> It does not stop every authorized misuse or compromise.
-(pen)-> (db)OWASP(pen) treats it as damage reduction, not injection prevention.
-(pen)o (hp)Honeypots(pen), (hp)Honeynets(pen), (hp)and Honeyfiles(pen)
-(pen)-> (r)NIST(pen) calls honeypot an attractive resource for intruders.
+(pen)-> (r)OWASP(pen) treats it as damage reduction, not injection prevention.
+(pen)o (g)Honeypots(pen), (g)Honeynets(pen), (g)and Honeyfiles(pen)
+(pen)-> (pu)NIST(pen) calls honeypot an attractive resource for intruders.
 (pen)-> A decoy service/file can make unexpected access observable.
 (pen)-> Honeynet commonly means connected decoy systems.
 (pen)-> Honeyfile commonly means monitored decoy document/artifact.
-(pen)-> No separate (r)NIST(pen) glossary entries for these labels were found.
+(pen)-> No separate (pu)NIST(pen) glossary entries for these labels were found.
 (pen)-> Access can alert defenders; decoys do not block attacks.
 (pen)-> Isolate decoys from production; restrict outbound connections.
 (pen)-> Use synthetic content, monitor alerts, assign response owner.

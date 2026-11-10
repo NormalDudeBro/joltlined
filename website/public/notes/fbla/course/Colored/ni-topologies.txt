@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)Peer(pen)-(g)to(pen)-(g)peer and client(pen)-(g)server(pen)
-(pen)-> (li)Choose a service architecture(pen)
-(pen)o (g)Peer(pen)-(g)to(pen)-(g)peer and client(pen)-(g)server(pen)
-(pen)-> (g)Peer(pen)-(g)to(pen)-(g)peer(pen) devices share resources directly with peers.
+(pen)-> (br)Peer(pen)-(br)to(pen)-(br)peer and client(pen)-(br)server(pen)
+(pen)-> (y)Choose a service architecture(pen)
+(pen)o (br)Peer(pen)-(br)to(pen)-(br)peer and client(pen)-(br)server(pen)
+(pen)-> (br)Peer(pen)-(br)to(pen)-(br)peer(pen) devices share resources directly with peers.
 (pen)-> Two home computers sharing files are a simple (db)P(pen)2(db)P(pen) example.
 (pen)-> Each peer manages its own resources and access decisions.
 (pen)-> (db)P(pen)2(db)P(pen) avoids a dedicated server but peer availability varies.
-(pen)-> (g)Client(pen)-(g)server(pen) assigns a (li)service(pen) role to a server system.
-(pen)-> Clients request (li)service(pen), such as files, from that server.
+(pen)-> (br)Client(pen)-(br)server(pen) assigns a (y)service(pen) role to a server system.
+(pen)-> Clients request (y)service(pen), such as files, from that server.
 (pen)-> A file server can centralize permissions, storage and backup.
 (pen)-> Central services need adequate capacity and recovery plans.
 (pen)-> Both models need appropriate access and security controls.
-(pen)o (li)Choose a service architecture(pen)
+(pen)o (y)Choose a service architecture(pen)
 (pen)-> Small trusted groups may value (db)P(pen)2(db)P(pen) simplicity and low cost.
 (pen)-> Growing organizations may need centrally managed services.
 (pen)-> Server failure can affect many clients at once.
 (pen)-> Replicated services may reduce but not eliminate dependencies.
 (pen)-> P2P users can make inconsistent copies and permissions.
 (pen)-> Server administration needs staffing, patching and monitoring.
-(pen)-> (g)Client(pen)-(g)server(pen) describes (li)service(pen) roles, not physical layout.
+(pen)-> (br)Client(pen)-(br)server(pen) describes (y)service(pen) roles, not physical layout.
 (pen)-> A server may be virtual or hosted outside the local LAN.
 (pen)-> Select based on scale, access control, continuity and budget.
 (pen)-> A central server still needs backup and restore testing.
 (pen)o Overview
-(pen)-> (p)Star and bus topologies(pen)
-(pen)-> (hp)Ring and mesh topologies(pen)
-(pen)o (p)Star and bus topologies(pen)
-(pen)-> (p)Star(pen) connects endpoints to a central switch or access point.
-(pen)-> Adding a (p)star(pen) endpoint is usually straightforward.
+(pen)-> (g)Star and bus topologies(pen)
+(pen)-> (li)Ring and mesh topologies(pen)
+(pen)o (g)Star and bus topologies(pen)
+(pen)-> (g)Star(pen) connects endpoints to a central switch or access point.
+(pen)-> Adding a (g)star(pen) endpoint is usually straightforward.
 (pen)-> A central switch or uplink fault can disconnect many users.
-(pen)-> (p)Bus(pen) topology shares a common backbone among connected devices.
+(pen)-> (g)Bus(pen) topology shares a common backbone among connected devices.
 (pen)-> Legacy coax Ethernet used bus-like shared media.
-(pen)-> A backbone break can interrupt (li)service(pen) for many (p)bus(pen) devices.
+(pen)-> A backbone break can interrupt (y)service(pen) for many (g)bus(pen) devices.
 (pen)-> Shared medium can create contention as traffic grows.
-(pen)-> Modern switched Ethernet generally uses physical (p)star(pen) cabling.
+(pen)-> Modern switched Ethernet generally uses physical (g)star(pen) cabling.
 (pen)-> Physical wiring layout and logical forwarding can differ.
-(pen)o (hp)Ring and mesh topologies(pen)
-(pen)-> A (hp)ring(pen) links nodes in a closed path for traffic circulation.
-(pen)-> A (hp)ring(pen) break can interrupt (li)service(pen) without alternate paths.
-(pen)-> A (hp)mesh(pen) provides multiple paths between selected network nodes.
-(pen)-> Full (hp)mesh(pen) links every pair; partial (hp)mesh(pen) links chosen pairs.
+(pen)o (li)Ring and mesh topologies(pen)
+(pen)-> A (li)ring(pen) links nodes in a closed path for traffic circulation.
+(pen)-> A (li)ring(pen) break can interrupt (y)service(pen) without alternate paths.
+(pen)-> A (li)mesh(pen) provides multiple paths between selected network nodes.
+(pen)-> Full (li)mesh(pen) links every pair; partial (li)mesh(pen) links chosen pairs.
 (pen)-> Alternative paths can support resilience after a link failure.
-(pen)-> More (hp)mesh(pen) links increase installation and routing complexity.
-(pen)-> Wireless (hp)mesh(pen) relays traffic and consumes shared airtime.
+(pen)-> More (li)mesh(pen) links increase installation and routing complexity.
+(pen)-> Wireless (li)mesh(pen) relays traffic and consumes shared airtime.
 (pen)-> Redundancy helps only when alternate paths are independent.
 (pen)-> Loops require controls to prevent repeated frame circulation.
 (pen)-> Capacity must support rerouted traffic after a failure.

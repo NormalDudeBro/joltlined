@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)Symmetric and public(pen)-(g)key cryptography(pen)
-(pen)-> (li)Signatures(pen), (li)exchange(pen), (li)and key limits(pen)
-(pen)o (g)Symmetric and public(pen)-(g)key cryptography(pen)
-(pen)-> (g)Cryptography(pen) uses algorithms and keys to protect information.
+(pen)-> (hp)Symmetric and public(pen)-(hp)key cryptography(pen)
+(pen)-> (r)Signatures(pen), (r)exchange(pen), (r)and key limits(pen)
+(pen)o (hp)Symmetric and public(pen)-(hp)key cryptography(pen)
+(pen)-> (hp)Cryptography(pen) uses algorithms and keys to protect information.
 (pen)-> Encryption transforms readable plaintext into ciphertext.
-(pen)-> Decryption with the right (li)key(pen) recovers the plaintext.
-(pen)-> (g)Symmetric(pen) (g)cryptography(pen) uses one shared secret (li)key(pen) both ways.
+(pen)-> Decryption with the right (r)key(pen) recovers the plaintext.
+(pen)-> (hp)Symmetric(pen) (hp)cryptography(pen) uses one shared secret (r)key(pen) both ways.
 (pen)-> It is efficient; parties must protect and share the secret.
-(pen)-> (g)Public(pen)-(g)key(pen) (g)cryptography(pen) uses a related (li)key(pen) pair.
-(pen)-> Public (li)key(pen) may be shared; private (li)key(pen) must remain protected.
-(pen)-> Encrypt to recipient's public (li)key(pen); private (li)key(pen) decrypts.
+(pen)-> (hp)Public(pen)-(hp)key(pen) (hp)cryptography(pen) uses a related (r)key(pen) pair.
+(pen)-> Public (r)key(pen) may be shared; private (r)key(pen) must remain protected.
+(pen)-> Encrypt to recipient's public (r)key(pen); private (r)key(pen) decrypts.
 (pen)-> This provides confidentiality, not sender proof alone.
-(pen)o (li)Signatures(pen), (li)exchange(pen), (li)and key limits(pen)
-(pen)-> Signer uses private (li)key(pen); others verify with public (li)key(pen).
-(pen)-> (li)Signatures(pen) can support integrity and key-possession checks.
+(pen)o (r)Signatures(pen), (r)exchange(pen), (r)and key limits(pen)
+(pen)-> Signer uses private (r)key(pen); others verify with public (r)key(pen).
+(pen)-> (r)Signatures(pen) can support integrity and key-possession checks.
 (pen)-> A signature does not make the signed statement true.
-(pen)-> (li)Key(pen) (li)exchange(pen) establishes a shared secret over a channel.
-(pen)-> Unauthenticated (li)exchange(pen) risks an active intermediary attack.
-(pen)-> Certificates can bind a public (li)key(pen) to a named identity.
+(pen)-> (r)Key(pen) (r)exchange(pen) establishes a shared secret over a channel.
+(pen)-> Unauthenticated (r)exchange(pen) risks an active intermediary attack.
+(pen)-> Certificates can bind a public (r)key(pen) to a named identity.
 (pen)-> Validate certificate chain, name, dates, and intended use.
 (pen)-> Protect, rotate, revoke, and recover keys by policy.
-(pen)-> Hybrid TLS pairs (li)key(pen) agreement with (g)symmetric(pen) data encryption.
-(pen)-> (li)Key(pen) loss blocks decryption; compromise threatens protection.
+(pen)-> Hybrid TLS pairs (r)key(pen) agreement with (hp)symmetric(pen) data encryption.
+(pen)-> (r)Key(pen) loss blocks decryption; compromise threatens protection.
 (pen)o Overview
-(pen)-> (p)Caesar and substitution ciphers(pen)
-(pen)-> (hp)Hashing(pen), (hp)blockchain(pen), (hp)and trust limits(pen)
-(pen)o (p)Caesar and substitution ciphers(pen)
+(pen)-> (pu)Caesar and substitution ciphers(pen)
+(pen)-> (db)Hashing(pen), (db)blockchain(pen), (db)and trust limits(pen)
+(pen)o (pu)Caesar and substitution ciphers(pen)
 (pen)-> A shift cipher moves each alphabet letter by a fixed amount.
-(pen)-> (p)Caesar(pen) is a shift cipher, often shown with shift three.
+(pen)-> (pu)Caesar(pen) is a shift cipher, often shown with shift three.
 (pen)-> Using +3: A becomes D, B becomes E, and X becomes A.
 (pen)-> Wrap after Z: Y becomes B and Z becomes C.
 (pen)-> ATTACK with +3 becomes DWWDFN; reverse shift recovers it.
-(pen)-> (p)Substitution(pen) replaces letters using a fixed alphabet mapping.
-(pen)-> (p)Caesar(pen) is one simple special case of (p)substitution(pen).
-(pen)-> Repeated patterns and frequencies reveal toy (p)ciphers(pen).
-(pen)-> Small keyspaces are searchable; these (p)ciphers(pen) are not secure.
-(pen)o (hp)Hashing(pen), (hp)blockchain(pen), (hp)and trust limits(pen)
+(pen)-> (pu)Substitution(pen) replaces letters using a fixed alphabet mapping.
+(pen)-> (pu)Caesar(pen) is one simple special case of (pu)substitution(pen).
+(pen)-> Repeated patterns and frequencies reveal toy (pu)ciphers(pen).
+(pen)-> Small keyspaces are searchable; these (pu)ciphers(pen) are not secure.
+(pen)o (db)Hashing(pen), (db)blockchain(pen), (db)and trust limits(pen)
 (pen)-> Hash maps arbitrary-length input to a fixed-length digest.
-(pen)-> (hp)Hashing(pen) is not encryption; there is no decryption (li)key(pen).
+(pen)-> (db)Hashing(pen) is not encryption; there is no decryption (r)key(pen).
 (pen)-> Collision: two distinct inputs have the same digest.
 (pen)-> Collision resistance makes finding one hard in practice.
 (pen)-> It is not a promise that collisions are impossible.
 (pen)-> A trusted digest can help detect changed data.
 (pen)-> A hash alone does not prove who created the data.
-(pen)-> (hp)Blockchain(pen) links blocks by hash and consensus rules.
+(pen)-> (db)Blockchain(pen) links blocks by hash and consensus rules.
 (pen)-> NIST: shared ledgers are tamper-evident, not truth-proof.
 (pen)-> RFC 9162 Merkle proofs check log inclusion and consistency.

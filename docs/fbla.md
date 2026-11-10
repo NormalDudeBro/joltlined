@@ -18,9 +18,12 @@ true yellow `#ebc600`. The shared `(y)` remains medium blue for other subjects.
 These are foreground inks, not background highlights; the documented pastel
 contrast limitation and plain-text alternatives still apply.
 
-`website/scripts/fbla-colors.mjs` assigns section colors in header order
-`g, li, p, hp, r, pu, db, br, y`. A section's full title and Overview listing
-match, with neutral prefixes, punctuation, and digits. Body accents follow
+`website/scripts/fbla-heading-palettes.json` explicitly assigns one of nine
+four-heading palettes to each sheet. Palette selection spans the collection,
+rather than resetting every sheet to green/lime and pink/hot pink. All nine
+inks appear as heading colors in each event, and adjacent sheets have distinct
+heading sequences. A section's full title and Overview listing match, with
+neutral prefixes, punctuation, and digits. Body accents follow
 exact whole title words/identifiers across both pages, not inferred semantic
 categories. Shared words belong to the title with the most distinct
 non-stopword tokens, then the longest title, then the first header. Stopwords
@@ -28,8 +31,10 @@ do not create body matches. Hyphenated names are matched as complete tokens;
 no substring matching or automatic inflection/alias expansion is performed.
 
 `website/scripts/fbla-color-plan.json` records reviewed optional named families
-and their selected 1-based source lines for all 44 sheets. Their inks are
-unreserved within that sheet. Required title-family matches take precedence;
+and their selected 1-based source lines for all 44 sheets. The heading palette
+maps their preferred inks to unreserved colors, keeping optional named
+families separate from title families when headings use red, dark blue, or
+yellow. Required title-family matches take precedence;
 body lines use at most two distinct highlight colors. Omitted matches remain
 pencil rather than receiving another family's color. The reviewed composite
 sheet subjects have no separately approved body light-blue aliases; page

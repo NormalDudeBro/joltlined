@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)Rack and blade server forms(pen)
-(pen)-> (li)Chassis power and connectivity(pen)
-(pen)o (g)Rack and blade server forms(pen)
-(pen)-> A (g)rack(pen) (g)server(pen) is an individual (g)server(pen) mounted in a (g)rack(pen).
-(pen)-> It generally has its own (li)power(pen) and cooling components.
+(pen)-> (br)Rack and blade server forms(pen)
+(pen)-> (y)Chassis power and connectivity(pen)
+(pen)o (br)Rack and blade server forms(pen)
+(pen)-> A (br)rack(pen) (br)server(pen) is an individual (br)server(pen) mounted in a (br)rack(pen).
+(pen)-> It generally has its own (y)power(pen) and cooling components.
 (pen)-> Racks allow mixed systems and incremental installation.
-(pen)-> They require (g)rack(pen) space, cabling and room-level cooling.
-(pen)-> A (g)blade(pen) is a (g)server(pen) module fitted into a shared (li)chassis(pen).
-(pen)-> The (li)chassis(pen) can provide (li)power(pen), fans, fabric and management.
+(pen)-> They require (br)rack(pen) space, cabling and room-level cooling.
+(pen)-> A (br)blade(pen) is a (br)server(pen) module fitted into a shared (y)chassis(pen).
+(pen)-> The (y)chassis(pen) can provide (y)power(pen), fans, fabric and management.
 (pen)-> Shared infrastructure can reduce cabling and increase density.
-(pen)-> (li)Chassis(pen) cost and (g)blade(pen) compatibility constrain choice.
-(pen)-> Shared (li)power(pen), cooling or midplane can form failure domains.
-(pen)o (li)Chassis power and connectivity(pen)
-(pen)-> Cisco UCS 5108 holds up to eight half-width (g)blade(pen) servers.
-(pen)-> Its (li)chassis(pen) has hot-swappable (li)power(pen) supplies and fans.
+(pen)-> (y)Chassis(pen) cost and (br)blade(pen) compatibility constrain choice.
+(pen)-> Shared (y)power(pen), cooling or midplane can form failure domains.
+(pen)o (y)Chassis power and connectivity(pen)
+(pen)-> Cisco UCS 5108 holds up to eight half-width (br)blade(pen) servers.
+(pen)-> Its (y)chassis(pen) has hot-swappable (y)power(pen) supplies and fans.
 (pen)-> Its fabric connects blades to network interfaces and uplinks.
-(pen)-> That design reduces separate (li)chassis(pen) switches and cabling.
+(pen)-> That design reduces separate (y)chassis(pen) switches and cabling.
 (pen)-> Redundant supplies or fans reduce, but do not erase, risk.
-(pen)-> (li)Power(pen) redundancy mode determines tolerated supply loss.
-(pen)-> (db)PoE(pen) supplies data and (li)power(pen) over supported Ethernet links.
+(pen)-> (y)Power(pen) redundancy mode determines tolerated supply loss.
+(pen)-> (db)PoE(pen) supplies data and (y)power(pen) over supported Ethernet links.
 (pen)-> Check the switch's total (db)PoE(pen) budget and each port limit.
 (pen)-> Also verify device demand and the exact equipment datasheet.
 (pen)-> Internet needs ISP, handoff hardware, router and host link.
 (pen)o Overview
-(pen)-> (p)File and block storage(pen)
-(pen)-> (hp)RAID and fault tolerance(pen)
-(pen)o (p)File and block storage(pen)
-(pen)-> (r)NAS(pen) means network-attached (p)storage(pen), typically shared files.
+(pen)-> (g)File and block storage(pen)
+(pen)-> (li)RAID and fault tolerance(pen)
+(pen)o (g)File and block storage(pen)
+(pen)-> (r)NAS(pen) means network-attached (g)storage(pen), typically shared files.
 (pen)-> Clients request named files and folders over LAN protocols.
-(pen)-> (y)SAN(pen) commonly presents (p)block(pen) volumes to connected hosts.
-(pen)-> A host formats and manages a (p)block(pen) volume as a disk.
-(pen)-> (r)NAS(pen) suits shared files; (y)SAN(pen) can serve host-managed blocks.
+(pen)-> (pu)SAN(pen) commonly presents (g)block(pen) volumes to connected hosts.
+(pen)-> A host formats and manages a (g)block(pen) volume as a disk.
+(pen)-> (r)NAS(pen) suits shared files; (pu)SAN(pen) can serve host-managed blocks.
 (pen)-> Choice depends on workload, protocol, administration and cost.
 (pen)-> Neither guarantees a particular speed or availability.
-(pen)-> A (p)storage(pen) network does not itself provide backup copies.
+(pen)-> A (g)storage(pen) network does not itself provide backup copies.
 (pen)-> Protect data separately against deletion and site loss.
-(pen)o (hp)RAID and fault tolerance(pen)
-(pen)-> (hp)RAID(pen) combines disks for speed, redundancy, or both.
-(pen)-> (hp)RAID(pen) 0 stripes data; 2+ disks, no disk-failure (hp)tolerance(pen).
-(pen)-> Two-disk (hp)RAID(pen) 1 mirrors data; survives one member failure.
-(pen)-> (hp)RAID(pen) 5 uses single parity; 3+ disks, tolerates one disk loss.
-(pen)-> (hp)RAID(pen) 6 uses dual parity; 4+ disks, tolerates two disk losses.
-(pen)-> Conventional (hp)RAID(pen) 10 stripes mirrored pairs; minimum 4 disks.
-(pen)-> (hp)RAID(pen) 10 tolerates one loss per pair, not both in one pair.
-(pen)-> (hp)RAID(pen) limits assume supported layouts and healthy members.
+(pen)o (li)RAID and fault tolerance(pen)
+(pen)-> (li)RAID(pen) combines disks for speed, redundancy, or both.
+(pen)-> (li)RAID(pen) 0 stripes data; 2+ disks, no disk-failure (li)tolerance(pen).
+(pen)-> Two-disk (li)RAID(pen) 1 mirrors data; survives one member failure.
+(pen)-> (li)RAID(pen) 5 uses single parity; 3+ disks, tolerates one disk loss.
+(pen)-> (li)RAID(pen) 6 uses dual parity; 4+ disks, tolerates two disk losses.
+(pen)-> Conventional (li)RAID(pen) 10 stripes mirrored pairs; minimum 4 disks.
+(pen)-> (li)RAID(pen) 10 tolerates one loss per pair, not both in one pair.
+(pen)-> (li)RAID(pen) limits assume supported layouts and healthy members.
 (pen)-> Rebuilds take time; extra failures can exceed level limits.
-(pen)-> (hp)RAID(pen) is not backup; keep separate copies and test restores.
+(pen)-> (li)RAID(pen) is not backup; keep separate copies and test restores.

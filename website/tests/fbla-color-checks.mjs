@@ -10,6 +10,7 @@ import { palette } from '../scripts/build.mjs';
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..', 'public');
 const config = JSON.parse(readFileSync(resolve(here, '../scripts/fbla-color-plan.json'), 'utf8'));
+const headingPlan = JSON.parse(readFileSync(resolve(here, '../scripts/fbla-heading-palettes.json'), 'utf8'));
 const sheets = renderCourseSheets();
 const marker = /\((pen|g|li|pu|br|or|y|r|db|p|lb|hp)\)/g;
 const strip = value => value.replace(marker, '');
@@ -36,6 +37,15 @@ assert.deepEqual(Object.keys(fblaInks).sort(), ['db', 'r', 'y']);
 assert.deepEqual(fblaInks, { r: '#df3034', db: '#173f88', y: '#ebc600' });
 assert.equal(Object.keys(config.sheets).length, 44);
 assert.equal(Object.keys(config.sheets).length * 2, 88, 'local source plan covers both pages of all 44 sheets');
+
+for (const event of ['networking', 'cybersecurity', 'network-design', 'sales']) {
+  const eventSheets = sheets.sheets.filter(item => item.module.event === event);
+  const sequences = eventSheets.map(item => parse(colorSheet(item.plain, palette, item.sheet.id))
+    .filter(line => line.text.startsWith('o ') && line.text !== 'o Overview')
+    .map(line => line.spans.find(span => span.ink !== 'pen' && span.text)?.ink).join(','));
+  assert.ok(new Set(sequences).size >= Math.min(9, eventSheets.length), `${event}: heading palettes must vary across sheets; got ${[...new Set(sequences)]}`);
+  assert.equal(new Set(sequences.flatMap(sequence => sequence.split(','))).size, 9, `${event}: headings use the full nine-ink palette across the course`);
+}
 
 for (const item of sheets.sheets) {
   const sheetPlan = config.sheets[item.sheet.id];
@@ -90,6 +100,9 @@ for (const item of sheets.sheets) {
 
   for (const accent of sheetPlan.accents ?? []) {
     assert.ok(['r', 'db', 'y'].includes(accent.color), `${item.sheet.id}: optional accents use approved optional inks`);
+    const headingPalette = headingPlan.palettes[headingPlan.sheets[item.sheet.id]];
+    const color = headingPalette.accents[accent.color];
+    assert.ok(!headingPalette.titles.includes(color), `${item.sheet.id}: optional family never borrows a reserved heading color`);
     for (const lineNo of accent.lines) {
       const line = lines[lineNo - 1];
       assert.ok(line, `${item.sheet.id}:${lineNo}: configured anchor is within source`);
@@ -99,8 +112,8 @@ for (const item of sheets.sheets) {
         const match = expression.exec(line.text);
         if (!match) return false;
         const firstLetter = match[0].search(/[A-Za-z]/);
-        return firstLetter >= 0 && colorAt(line, match.index + firstLetter) === accent.color;
-      }), `${item.sheet.id}:${lineNo}: one configured accent alternative is present and uses ${accent.color}`);
+        return firstLetter >= 0 && colorAt(line, match.index + firstLetter) === color;
+      }), `${item.sheet.id}:${lineNo}: one configured accent alternative is present and uses ${color}`);
     }
   }
 }
@@ -127,16 +140,16 @@ assert.equal(atLine(exampleLines[6], 'MAC', 'optional MAC accent'), 'db');
 
 const cloud = sheets.sheets.find(item => item.sheet.id === 'ni-wireless-cloud');
 const cloudLines = parse(colorSheet(cloud.plain, palette, cloud.sheet.id));
-assert.equal(atLine(cloudLines[12], 'service', 'cloud second-title ownership'), 'li');
-assert.equal(atLine(cloudLines[22], 'cloud', 'cloud cross-page ownership'), 'g');
+assert.equal(atLine(cloudLines[12], 'service', 'cloud second-title ownership'), 'br');
+assert.equal(atLine(cloudLines[22], 'cloud', 'cloud cross-page ownership'), 'db');
 assert.equal(colorAt(cloudLines[12], cloudLines[12].text.lastIndexOf('and')), 'pen', 'title connective stopword does not create a body family');
 
 const password = sheets.sheets.find(item => item.sheet.id === 'cs-mitigation-practice');
 const passwordLines = parse(colorSheet(password.plain, palette, password.sheet.id));
-assert.equal(atLine(passwordLines[17], 'password', 'longest-title password ownership'), 'g', 'equal-specificity password titles resolve to the longer title');
+assert.equal(atLine(passwordLines[17], 'password', 'longest-title password ownership'), 'pu', 'equal-specificity password titles resolve to the longer title');
 
 const priorities = sheets.sheets.find(item => item.sheet.id === 'sp-discovery-opening');
 const prioritiesLines = parse(colorSheet(priorities.plain, palette, priorities.sheet.id));
-assert.equal(atLine(prioritiesLines[39], 'priorities', 'priorities title ownership'), 'p');
+assert.equal(atLine(prioritiesLines[39], 'priorities', 'priorities title ownership'), 'pu');
 
 console.log('PASS: FBLA lexical title ownership, exact line preservation, optional anchor plan, neutral syntax, two-color limit and drift guards.');

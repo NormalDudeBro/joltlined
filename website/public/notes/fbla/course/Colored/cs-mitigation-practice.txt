@@ -1,47 +1,47 @@
 (pen)o Overview
-(pen)-> (g)Current password requirements(pen)
-(pen)-> (li)Password use and protection(pen)
-(pen)o (g)Current password requirements(pen)
-(pen)-> (db)NIST(pen) minimum is 15 characters for single-factor passwords.
-(pen)-> MFA-only (g)password(pen) minimum is 8 characters under (db)NIST(pen).
-(pen)-> (li)Use(pen) the correct context; 15 is not universal to (r)MFA(pen).
-(pen)-> (db)NIST(pen) rejects extra composition rules for these passwords.
+(pen)-> (pu)Current password requirements(pen)
+(pen)-> (db)Password use and protection(pen)
+(pen)o (pu)Current password requirements(pen)
+(pen)-> (r)NIST(pen) minimum is 15 characters for single-factor passwords.
+(pen)-> MFA-only (pu)password(pen) minimum is 8 characters under (r)NIST(pen).
+(pen)-> (db)Use(pen) the correct context; 15 is not universal to (li)MFA(pen).
+(pen)-> (r)NIST(pen) rejects extra composition rules for these passwords.
 (pen)-> Block commonly used, expected, and compromised passwords.
-(pen)-> Allow (g)password(pen) managers, autofill, and paste functionality.
+(pen)-> Allow (pu)password(pen) managers, autofill, and paste functionality.
 (pen)-> Rate limiting helps reduce online guessing attempts.
 (pen)-> Do not require arbitrary periodic changes absent compromise.
-(pen)-> (p)Change(pen) passwords promptly when compromise evidence exists.
-(pen)o (li)Password use and protection(pen)
-(pen)-> (li)Use(pen) a unique (g)password(pen) for each account or service.
+(pen)-> (br)Change(pen) passwords promptly when compromise evidence exists.
+(pen)o (db)Password use and protection(pen)
+(pen)-> (db)Use(pen) a unique (pu)password(pen) for each account or service.
 (pen)-> Long unique secrets reduce reuse and guessing risks.
 (pen)-> A manager can generate and store distinct passwords.
-(pen)-> (r)MFA(pen) adds a separate factor beyond the (g)password(pen).
-(pen)-> (g)Password(pen) plus another (g)password(pen) is not two factor types.
+(pen)-> (li)MFA(pen) adds a separate factor beyond the (pu)password(pen).
+(pen)-> (pu)Password(pen) plus another (pu)password(pen) is not two factor types.
 (pen)-> Passwords alone are not phishing-resistant authentication.
 (pen)-> NIST recommends blocklisting weak or breached candidates.
 (pen)-> Verifiers hash passwords with salt and high work factor.
 (pen)-> A salt is not secret; it prevents identical hash reuse.
-(pen)-> Account recovery needs (li)protection(pen) too.
+(pen)-> Account recovery needs (db)protection(pen) too.
 (pen)o Overview
-(pen)-> (p)Patches and secure change(pen)
-(pen)-> (hp)Version control and pen testing(pen)
-(pen)o (p)Patches and secure change(pen)
-(pen)-> Updates repair flaws and may (p)change(pen) software behavior.
+(pen)-> (br)Patches and secure change(pen)
+(pen)-> (y)Version control and pen testing(pen)
+(pen)o (br)Patches and secure change(pen)
+(pen)-> Updates repair flaws and may (br)change(pen) software behavior.
 (pen)-> Inventory systems to identify exposed, affected versions.
-(pen)-> Prioritize (p)patches(pen) by risk, exposure, and business impact.
+(pen)-> Prioritize (br)patches(pen) by risk, exposure, and business impact.
 (pen)-> Obtain updates through authenticated vendor distribution.
 (pen)-> Test security and function before production deployment.
-(pen)-> Approve changes after security-impact assessment and (hp)testing(pen).
+(pen)-> Approve changes after security-impact assessment and (y)testing(pen).
 (pen)-> Verify deployment and update affected system documentation.
 (pen)-> Emergency changes still need later documented review.
 (pen)-> Patch firewall software to address vendor security flaws.
-(pen)o (hp)Version control and pen testing(pen)
-(pen)-> (hp)Version(pen) (hp)control(pen) tracks (p)change(pen) history and prior baselines.
+(pen)o (y)Version control and pen testing(pen)
+(pen)-> (y)Version(pen) (y)control(pen) tracks (br)change(pen) history and prior baselines.
 (pen)-> Review diffs to find unexpected or unsafe configuration edits.
 (pen)-> Keep passwords, tokens, keys, and private data out of commits.
 (pen)-> Retain prior known-good versions for tested rollback.
-(pen)-> (hp)Pen(pen) (hp)testing(pen) validates weaknesses under agreed conditions.
-(pen)-> Obtain explicit written authorization before any (hp)testing(pen).
+(pen)-> (y)Pen(pen) (y)testing(pen) validates weaknesses under agreed conditions.
+(pen)-> Obtain explicit written authorization before any (y)testing(pen).
 (pen)-> Scope lists targets, exclusions, dates, and permitted methods.
 (pen)-> Rules of engagement set contacts and stop conditions.
 (pen)-> Protect evidence; report findings for remediation and retest.

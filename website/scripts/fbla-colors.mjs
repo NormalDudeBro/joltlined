@@ -4,8 +4,9 @@ import { readFileSync } from 'node:fs';
 
 export const fblaInks = Object.freeze({ r: '#df3034', db: '#173f88', y: '#ebc600' });
 const plan = JSON.parse(readFileSync(new URL('./fbla-color-plan.json', import.meta.url), 'utf8'));
+const headingPlan = JSON.parse(readFileSync(new URL('./fbla-heading-palettes.json', import.meta.url), 'utf8'));
 assert.equal(plan.version, 1, 'supported FBLA color-plan version');
-const titleInks = ['g', 'li', 'p', 'hp', 'r', 'pu', 'db', 'br', 'y'];
+assert.deepEqual(Object.keys(headingPlan.sheets).sort(), Object.keys(plan.sheets).sort(), 'every sheet needs an explicit heading palette');
 const stopwords = new Set('overview need to know understand do identify takeaway developments and of in the a an for with'.split(' '));
 const tokens = text => [...text.matchAll(/(?<![A-Za-z0-9'-])[A-Za-z0-9]+(?:['-][A-Za-z0-9]+)*(?![A-Za-z0-9'-])/g)];
 const distinctive = title => [...new Set(tokens(title).map(match => match[0].toLowerCase()).filter(word => !stopwords.has(word)))];
@@ -15,6 +16,10 @@ const paint = (text, ink) => text.replace(/[A-Za-z]+(?: [A-Za-z]+)*/g, words => 
 export function colorSheet(plain, palette, sheetId) {
   assert.ok(Object.hasOwn(plan.sheets, sheetId), `unknown sheet in FBLA color plan: ${sheetId}`);
   const sheet = plan.sheets[sheetId];
+  const headingPalette = headingPlan.palettes[headingPlan.sheets[sheetId]];
+  assert.ok(headingPalette, `${sheetId}: unknown heading palette`);
+  const titleInks = headingPalette.titles;
+  assert.equal(new Set(titleInks).size, titleInks.length, `${sheetId}: distinct section colors`);
   assert.equal(createHash('sha256').update(plain).digest('hex'), sheet.sourceSha256, `${sheetId}: source fingerprint changed; review the color plan before rebuilding`);
   const inks = { ...palette, ...fblaInks };
   const rows = plain.split('\n');
@@ -31,8 +36,10 @@ export function colorSheet(plain, palette, sheetId) {
     }
   }
   const accents = new Map();
-  for (const accent of sheet.accents) {
-    assert.ok(Object.hasOwn(fblaInks, accent.color) && !headers.some(header => header.color === accent.color), `${sheetId}: optional ink must be unreserved`);
+  for (const selectedAccent of sheet.accents) {
+    // Keep optional families separate when their preferred ink is used by a heading.
+    const accent = { ...selectedAccent, color: headingPalette.accents[selectedAccent.color] };
+    assert.ok(inks[accent.color] && accent.color !== 'pen' && accent.color !== 'lb' && !headers.some(header => header.color === accent.color), `${sheetId}: optional ink must be unreserved`);
     assert.ok(accent.terms.length && accent.lines.length, `${sheetId}: empty optional family`);
     assert.ok(accent.terms.every(term => !owners.has(term.toLowerCase())), `${sheetId}: optional family conflicts with title ownership`);
     for (const number of accent.lines) {

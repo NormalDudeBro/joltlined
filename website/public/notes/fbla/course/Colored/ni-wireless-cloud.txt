@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)Cloud definition and service models(pen)
-(pen)-> (li)Service model use and responsibility(pen)
-(pen)o (g)Cloud definition and service models(pen)
-(pen)-> (g)Cloud(pen) offers on-demand access to shared computing resources.
+(pen)-> (db)Cloud definition and service models(pen)
+(pen)-> (br)Service model use and responsibility(pen)
+(pen)o (db)Cloud definition and service models(pen)
+(pen)-> (db)Cloud(pen) offers on-demand access to shared computing resources.
 (pen)-> Resources include networks, servers, storage and applications.
-(pen)-> (g)Cloud(pen) resources can be rapidly provisioned and released.
-(pen)-> (db)IaaS(pen) provides configurable compute, storage and networking.
-(pen)-> (db)IaaS(pen) customers usually manage guest systems and applications.
-(pen)-> (r)PaaS(pen) supplies a platform for customers to deploy applications.
-(pen)-> (r)PaaS(pen) provider manages more underlying runtime infrastructure.
-(pen)-> (y)SaaS(pen) delivers a provider-operated application to its users.
-(pen)-> (li)Service(pen) (g)models(pen) distinguish provider and customer control.
-(pen)o (li)Service model use and responsibility(pen)
-(pen)-> (db)IaaS(pen) suits teams needing control of virtual machines.
-(pen)-> (r)PaaS(pen) runs customer code on a provider-managed platform.
-(pen)-> (y)SaaS(pen) suits organizations using a finished hosted application.
-(pen)-> Provider duties differ by (li)service(pen) and contract.
-(pen)-> Customers still manage identities, access and data (li)use(pen).
-(pen)-> Shared (li)responsibility(pen) does not remove customer duties.
-(pen)-> A hosted (li)service(pen) depends on its provider and network path.
+(pen)-> (db)Cloud(pen) resources can be rapidly provisioned and released.
+(pen)-> (r)IaaS(pen) provides configurable compute, storage and networking.
+(pen)-> (r)IaaS(pen) customers usually manage guest systems and applications.
+(pen)-> (pu)PaaS(pen) supplies a platform for customers to deploy applications.
+(pen)-> (pu)PaaS(pen) provider manages more underlying runtime infrastructure.
+(pen)-> (li)SaaS(pen) delivers a provider-operated application to its users.
+(pen)-> (br)Service(pen) (db)models(pen) distinguish provider and customer control.
+(pen)o (br)Service model use and responsibility(pen)
+(pen)-> (r)IaaS(pen) suits teams needing control of virtual machines.
+(pen)-> (pu)PaaS(pen) runs customer code on a provider-managed platform.
+(pen)-> (li)SaaS(pen) suits organizations using a finished hosted application.
+(pen)-> Provider duties differ by (br)service(pen) and contract.
+(pen)-> Customers still manage identities, access and data (br)use(pen).
+(pen)-> Shared (br)responsibility(pen) does not remove customer duties.
+(pen)-> A hosted (br)service(pen) depends on its provider and network path.
 (pen)-> Clarify backup, retention and recovery terms before adoption.
-(pen)-> (g)Cloud(pen) describes a delivery (li)model(pen), not one physical location.
-(pen)-> (li)Service(pen) boundaries vary, so verify the actual offer terms.
+(pen)-> (db)Cloud(pen) describes a delivery (br)model(pen), not one physical location.
+(pen)-> (br)Service(pen) boundaries vary, so verify the actual offer terms.
 (pen)o Overview
-(pen)-> (p)Radio frequency and attenuation(pen)
-(pen)-> (hp)Wireless speed and reliability(pen)
-(pen)o (p)Radio frequency and attenuation(pen)
-(pen)-> (p)Radio(pen) (p)frequency(pen) (RF) carries (hp)wireless(pen) signals through space.
+(pen)-> (y)Radio frequency and attenuation(pen)
+(pen)-> (g)Wireless speed and reliability(pen)
+(pen)o (y)Radio frequency and attenuation(pen)
+(pen)-> (y)Radio(pen) (y)frequency(pen) (RF) carries (g)wireless(pen) signals through space.
 (pen)-> Distance generally weakens received signal strength.
-(pen)-> Walls and building materials absorb or reflect (p)radio(pen) energy.
+(pen)-> Walls and building materials absorb or reflect (y)radio(pen) energy.
 (pen)-> Metal and reinforced concrete can obstruct or reflect signals.
 (pen)-> Interference and noise can corrupt reception or cut capacity.
 (pen)-> A client and access point both need adequate signal quality.
 (pen)-> A strong signal does not guarantee a fast Internet connection.
-(pen)-> Range depends on (p)frequency(pen), antenna, power and environment.
+(pen)-> Range depends on (y)frequency(pen), antenna, power and environment.
 (pen)-> No single indoor Wi-Fi range applies to every building.
-(pen)o (hp)Wireless speed and reliability(pen)
+(pen)o (g)Wireless speed and reliability(pen)
 (pen)-> Wi-Fi PHY rate is a signaling maximum, not app throughput.
 (pen)-> Overhead and retransmissions reduce usable throughput.
 (pen)-> Congestion shares airtime among nearby clients.
 (pen)-> Channel width and modulation affect capacity and reach.
 (pen)-> Client capability can limit an AP's advertised link rate.
 (pen)-> Backhaul capacity can bottleneck otherwise strong Wi-Fi.
-(pen)-> Roaming, power and configuration affect (hp)reliability(pen).
+(pen)-> Roaming, power and configuration affect (g)reliability(pen).
 (pen)-> Survey at actual user locations and test representative load.
 (pen)-> Higher AP power may not strengthen a client's return signal.
 (pen)-> Band, regulation and hardware determine available channels.

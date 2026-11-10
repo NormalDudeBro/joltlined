@@ -1,17 +1,17 @@
 (pen)o Overview
-(pen)-> (g)Listen and clarify(pen)
-(pen)-> (li)Respond and check(pen)
-(pen)o (g)Listen and clarify(pen)
+(pen)-> (p)Listen and clarify(pen)
+(pen)-> (hp)Respond and check(pen)
+(pen)o (p)Listen and clarify(pen)
 (pen)-> An objection signals concern; it is information to understand.
-(pen)-> (g)Listen(pen) without interruption or a defensive rebuttal.
+(pen)-> (p)Listen(pen) without interruption or a defensive rebuttal.
 (pen)-> Acknowledge the concern without falsely agreeing.
-(pen)-> (g)Clarify(pen): compared with which option, price, or scope?
+(pen)-> (p)Clarify(pen): compared with which option, price, or scope?
 (pen)-> Distinguish price, timing, fit, trust, or authority concern.
 (pen)-> Ask whether another issue remains before responding.
-(pen)-> Do not treat objection (hp)as(pen) consent to pressure.
+(pen)-> Do not treat objection (pu)as(pen) consent to pressure.
 (pen)-> Do not manufacture urgency or shame hesitation.
 (pen)-> Restate concern briefly and invite correction.
-(pen)o (li)Respond and check(pen)
+(pen)o (hp)Respond and check(pen)
 (pen)-> Answer the concern using verified offer facts.
 (pen)-> Compare options on the same scope and time period.
 (pen)-> For price, explain included scope and actual alternatives.
@@ -23,26 +23,26 @@
 (pen)-> A concession changes terms; disclose its real conditions.
 (pen)-> Do not hide terms or make unsupported counterclaims.
 (pen)o Overview
-(pen)-> (p)Suggest related value(pen)
-(pen)-> (hp)Close as a clear choice(pen)
-(pen)o (p)Suggest related value(pen)
-(pen)-> Suggestion selling offers an additional (p)related(pen) item/service.
+(pen)-> (r)Suggest related value(pen)
+(pen)-> (pu)Close as a clear choice(pen)
+(pen)o (r)Suggest related value(pen)
+(pen)-> Suggestion selling offers an additional (r)related(pen) item/service.
 (pen)-> Offer only when it supports a confirmed customer need.
 (pen)-> Example: training may help a team new to the workflow.
 (pen)-> Explain distinct scope, price, and optional status.
 (pen)-> Ask permission; accept refusal without changing core terms.
 (pen)-> An add-on should strengthen use or outcome, not ticket size.
 (pen)-> Do not bundle unrelated goods or obscure material conditions.
-(pen)-> (li)Check(pen) added cost against buyer's priorities and constraints.
+(pen)-> (hp)Check(pen) added cost against buyer's priorities and constraints.
 (pen)-> More products are not automatically better fit.
-(pen)o (hp)Close as a clear choice(pen)
-(pen)-> A (hp)close(pen) requests a decision or concrete next action.
+(pen)o (pu)Close as a clear choice(pen)
+(pen)-> A (pu)close(pen) requests a decision or concrete next action.
 (pen)-> Confirm fit, terms, unresolved objections, and authority.
 (pen)-> If ready, ask for the stated plan and quantity.
 (pen)-> If not ready, agree on information or follow-up by consent.
 (pen)-> Name owner, action, and date for a service next step.
-(pen)-> (hp)Clear(pen) intent comes from buyer's stated (hp)choice(pen), not guesswork.
+(pen)-> (pu)Clear(pen) intent comes from buyer's stated (pu)choice(pen), not guesswork.
 (pen)-> Silence or hesitation is not consent to buy.
 (pen)-> Accept no or delay without repeated pressure.
 (pen)-> Record agreed scope and price before confirming commitment.
-(pen)-> (db)FBLA(pen) top (hp)close(pen) band reflects evident buyer intent.
+(pen)-> (db)FBLA(pen) top (pu)close(pen) band reflects evident buyer intent.

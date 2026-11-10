@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)File and Mail Protocols(pen)
-(pen)-> (li)DNS(pen), (li)DHCP(pen), (li)and IP(pen)
-(pen)o (g)File and Mail Protocols(pen)
+(pen)-> (r)File and Mail Protocols(pen)
+(pen)-> (pu)DNS(pen), (pu)DHCP(pen), (pu)and IP(pen)
+(pen)o (r)File and Mail Protocols(pen)
 (pen)-> FTP transfers files through control and data connections.
-(pen)-> FTP control commonly listens on (db)TCP(pen) (p)port(pen) 21 by default.
+(pen)-> FTP control commonly listens on (y)TCP(pen) (db)port(pen) 21 by default.
 (pen)-> FTP active/passive modes change data connection ports.
 (pen)-> Plain FTP does not protect credentials or contents in transit.
-(pen)-> FTPS adds TLS to FTP; SFTP is (g)file(pen) transfer over (r)SSH(pen).
-(pen)-> SFTP commonly uses (db)TCP(pen) (p)port(pen) 22, the SSH default.
-(pen)-> SMTP transfers (g)mail(pen) between systems and supports submission.
-(pen)-> SMTP relay commonly uses (db)TCP(pen) 25; submission often uses 587.
+(pen)-> FTPS adds TLS to FTP; SFTP is (r)file(pen) transfer over (li)SSH(pen).
+(pen)-> SFTP commonly uses (y)TCP(pen) (db)port(pen) 22, the SSH default.
+(pen)-> SMTP transfers (r)mail(pen) between systems and supports submission.
+(pen)-> SMTP relay commonly uses (y)TCP(pen) 25; submission often uses 587.
 (pen)-> TCP 465 often means implicit-TLS submission; configs vary.
-(pen)o (li)DNS(pen), (li)DHCP(pen), (li)and IP(pen)
-(pen)-> (li)DNS(pen) answers name queries with records such as (li)IP(pen) addresses.
-(pen)-> (li)DNS(pen) commonly uses UDP 53; TCP 53 is also required.
-(pen)-> (li)DHCP(pen) supplies leases and network settings to hosts.
+(pen)o (pu)DNS(pen), (pu)DHCP(pen), (pu)and IP(pen)
+(pen)-> (pu)DNS(pen) answers name queries with records such as (pu)IP(pen) addresses.
+(pen)-> (pu)DNS(pen) commonly uses UDP 53; TCP 53 is also required.
+(pen)-> (pu)DHCP(pen) supplies leases and network settings to hosts.
 (pen)-> DHCPv4 commonly uses UDP 67 server and 68 client.
-(pen)-> A lease may include address, mask, router, and (li)DNS(pen) server.
-(pen)-> (li)DHCP(pen) relay can carry client requests across routed subnets.
-(pen)-> (li)DHCP(pen) address is host configuration, not permanent identity.
-(pen)-> (li)DNS(pen) name resolution does not itself route packets to a host.
-(pen)-> Gateway forwards traffic beyond the local (li)IP(pen) subnet.
-(pen)-> Stale or poisoned (li)DNS(pen) data can direct clients incorrectly.
+(pen)-> A lease may include address, mask, router, and (pu)DNS(pen) server.
+(pen)-> (pu)DHCP(pen) relay can carry client requests across routed subnets.
+(pen)-> (pu)DHCP(pen) address is host configuration, not permanent identity.
+(pen)-> (pu)DNS(pen) name resolution does not itself route packets to a host.
+(pen)-> Gateway forwards traffic beyond the local (pu)IP(pen) subnet.
+(pen)-> Stale or poisoned (pu)DNS(pen) data can direct clients incorrectly.
 (pen)o Overview
-(pen)-> (p)Transport and Port Defaults(pen)
-(pen)-> (hp)NAT and Secure Service Use(pen)
-(pen)o (p)Transport and Port Defaults(pen)
+(pen)-> (db)Transport and Port Defaults(pen)
+(pen)-> (br)NAT and Secure Service Use(pen)
+(pen)o (db)Transport and Port Defaults(pen)
 (pen)-> TCP provides an ordered byte stream with retransmission.
 (pen)-> TCP setup and recovery add overhead; delivery is not instant.
 (pen)-> UDP sends datagrams without TCP delivery/order guarantees.
 (pen)-> Applications may add reliability above UDP when needed.
-(pen)-> (li)IP(pen) carries packets; TCP/UDP ports identify endpoints.
+(pen)-> (pu)IP(pen) carries packets; TCP/UDP ports identify endpoints.
 (pen)-> HTTP commonly uses TCP 80; HTTPS commonly TCP 443.
-(pen)-> (r)SSH(pen) commonly uses TCP 22; (hp)service(pen) ports can be changed.
-(pen)-> (li)DNS(pen) uses UDP or TCP 53; blocking TCP can break functions.
-(pen)-> NTP commonly uses UDP 123; (p)defaults(pen) are not exclusive rules.
-(pen)o (hp)NAT and Secure Service Use(pen)
-(pen)-> (hp)NAT(pen) maps (li)IP(pen) addresses between address realms.
-(pen)-> NAPT also maps (p)transport(pen) ports for multiple inside hosts.
+(pen)-> (li)SSH(pen) commonly uses TCP 22; (br)service(pen) ports can be changed.
+(pen)-> (pu)DNS(pen) uses UDP or TCP 53; blocking TCP can break functions.
+(pen)-> NTP commonly uses UDP 123; (db)defaults(pen) are not exclusive rules.
+(pen)o (br)NAT and Secure Service Use(pen)
+(pen)-> (br)NAT(pen) maps (pu)IP(pen) addresses between address realms.
+(pen)-> NAPT also maps (db)transport(pen) ports for multiple inside hosts.
 (pen)-> Home gateways commonly share one public IPv4 address.
 (pen)-> Translation conserves addresses; it does not encrypt packets.
-(pen)-> (hp)NAT(pen) is not a firewall policy or authentication mechanism.
+(pen)-> (br)NAT(pen) is not a firewall policy or authentication mechanism.
 (pen)-> A stateful firewall separately permits or denies flows.
 (pen)-> Inbound reachability may need mapping and explicit policy.
-(pen)-> (y)TLS(pen) aims to protect channels from eavesdropping and tampering.
-(pen)-> (hp)Use(pen) (hp)secure(pen) transfer; configure (y)TLS(pen) and verify peer identity.
-(pen)-> (hp)Service(pen) configuration, not (p)port(pen) number, determines exposure.
+(pen)-> (g)TLS(pen) aims to protect channels from eavesdropping and tampering.
+(pen)-> (br)Use(pen) (br)secure(pen) transfer; configure (g)TLS(pen) and verify peer identity.
+(pen)-> (br)Service(pen) configuration, not (db)port(pen) number, determines exposure.

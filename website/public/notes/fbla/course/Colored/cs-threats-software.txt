@@ -1,7 +1,7 @@
 (pen)o Overview
-(pen)-> (g)Threat Actors and Motives(pen)
-(pen)-> (li)Virus Varieties and Other Malware(pen)
-(pen)o (g)Threat Actors and Motives(pen)
+(pen)-> (li)Threat Actors and Motives(pen)
+(pen)-> (p)Virus Varieties and Other Malware(pen)
+(pen)o (li)Threat Actors and Motives(pen)
 (pen)-> Insiders have organizational access; outsiders do not.
 (pen)-> Either may act deliberately or cause harm through error.
 (pen)-> Financial gain can motivate theft, extortion, or fraud.
@@ -11,22 +11,22 @@
 (pen)-> Assess capability, access, opportunity, and target as well.
 (pen)-> Motive is a hypothesis, not proof of actor identity.
 (pen)-> Controls should address behavior and access, not stereotypes.
-(pen)o (li)Virus Varieties and Other Malware(pen)
-(pen)-> (li)Malware(pen) is software used to harm, spy, extort, or control.
-(pen)-> A (li)virus(pen) attaches to a host file or boot area to spread.
-(pen)-> File (li)virus(pen) infects executable files when they run.
-(pen)-> Boot-sector (li)virus(pen) targets startup records or boot media.
+(pen)o (p)Virus Varieties and Other Malware(pen)
+(pen)-> (p)Malware(pen) is software used to harm, spy, extort, or control.
+(pen)-> A (p)virus(pen) attaches to a host file or boot area to spread.
+(pen)-> File (p)virus(pen) infects executable files when they run.
+(pen)-> Boot-sector (p)virus(pen) targets startup records or boot media.
 (pen)-> Polymorphic viruses vary code/signature during replication.
 (pen)-> Variation may evade simple signatures; behavior checks help.
 (pen)-> Trojan masquerades as benign software to induce execution.
 (pen)-> A worm self-propagates across systems or networks.
 (pen)-> Logic bomb activates when a time/event condition is met.
-(pen)-> One (li)malware(pen) sample may combine more than one behavior.
+(pen)-> One (p)malware(pen) sample may combine more than one behavior.
 (pen)o Overview
-(pen)-> (p)Vulnerabilities and Exploit Classes(pen)
-(pen)-> (hp)Reduce Exposure(pen)
-(pen)o (p)Vulnerabilities and Exploit Classes(pen)
-(pen)-> Vulnerability is a weakness; (p)exploit(pen) is a way to use it.
+(pen)-> (hp)Vulnerabilities and Exploit Classes(pen)
+(pen)-> (r)Reduce Exposure(pen)
+(pen)o (hp)Vulnerabilities and Exploit Classes(pen)
+(pen)-> Vulnerability is a weakness; (hp)exploit(pen) is a way to use it.
 (pen)-> Injection treats input as command/query syntax, not data.
 (pen)-> Parameterized (db)SQL(pen) separates values from query structure.
 (pen)-> Buffer overflow writes beyond allocated memory bounds.
@@ -35,14 +35,14 @@
 (pen)-> Jailbreaking weakens platform restrictions or sandboxing.
 (pen)-> Backdoor is hidden access; zero-day has no effective fix yet.
 (pen)-> Known unpatched flaws may have fixes; test and apply patches.
-(pen)o (hp)Reduce Exposure(pen)
+(pen)o (r)Reduce Exposure(pen)
 (pen)-> Bind untrusted data; do not concatenate into (db)SQL(pen) syntax.
 (pen)-> Allowlist identifiers and sort choices from fixed options.
 (pen)-> Least database privilege limits damage, not injection itself.
 (pen)-> Use bounds-safe code and safe shared-state access.
 (pen)-> Apply security updates after risk-appropriate testing.
-(pen)-> Remove unused services and (hp)reduce(pen) exposed attack surface.
-(pen)-> Limit user/service rights to (hp)reduce(pen) (li)malware(pen) blast radius.
+(pen)-> Remove unused services and (r)reduce(pen) exposed attack surface.
+(pen)-> Limit user/service rights to (r)reduce(pen) (p)malware(pen) blast radius.
 (pen)-> Backups support recovery but do not prevent infection.
-(pen)-> Signatures can miss new or altered (li)malware(pen).
+(pen)-> Signatures can miss new or altered (p)malware(pen).
 (pen)-> Use layered controls; no single tool guarantees prevention.

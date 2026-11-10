@@ -73,6 +73,18 @@ test('FBLA hub prints answers and rehearsal skills without opening disclosures f
 });
 
 const courses = [['networking', 14], ['cybersecurity', 13], ['network-design', 12], ['sales', 5]];
+test('FBLA heading palettes vary between sheets instead of resetting on each two-page sheet', async ({ page }) => {
+  for (const [event, count] of courses) {
+    await page.goto(`/fbla-${event}.html`);
+    const palettes = await page.locator('.course-sheet').evaluateAll(sheets => sheets.map(sheet => [...sheet.querySelectorAll('.note')]
+      .filter(note => note.textContent.startsWith('o ') && note.textContent !== 'o Overview')
+      .map(note => getComputedStyle(note.querySelector('[class^="ink-"]')).color)));
+    expect(new Set(palettes.map(colors => colors.join('|'))).size).toBe(Math.min(9, count));
+    expect(new Set(palettes.flat()).size).toBe(9);
+    palettes.slice(1).forEach((colors, index) => expect(colors).not.toEqual(palettes[index]));
+  }
+});
+
 test('FBLA added inks render online and offline without remapping World History blue', async ({ page }) => {
   for (const [event] of courses) {
     for (const url of [`/fbla-${event}.html`, `file://${process.cwd().replaceAll('\\', '/')}/public/fbla-${event}.html`]) {
