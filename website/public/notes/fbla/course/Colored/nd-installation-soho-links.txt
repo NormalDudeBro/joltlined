@@ -1,32 +1,32 @@
 (pen)o Overview
-(pen)-> (g)SOHO(pen) (g)edge(pen) (g)and(pen) (g)traffic(pen) (g)controls(pen)
-(pen)-> (pu)Firewall(pen) (pu)rules(pen) (pu)and(pen) (pu)ACL(pen) (pu)behavior(pen)
-(pen)o (g)SOHO(pen) (g)edge(pen) (g)and(pen) (g)traffic(pen) (g)controls(pen)
+(pen)-> (g)SOHO edge and traffic controls(pen)
+(pen)-> (li)Firewall rules and ACL behavior(pen)
+(pen)o (g)SOHO edge and traffic controls(pen)
 (pen)-> A modem terminates an ISP access link; an ONT serves fiber.
-(pen)-> A router forwards IP packets between distinct networks.
-(pen)-> A switch forwards LAN frames using learned MAC addresses.
-(pen)-> A (g)SOHO(pen) gateway may combine router, switch, AP and (pu)firewall(pen).
-(pen)-> DHCP leases addresses and options such as gateway and DNS.
+(pen)-> A router forwards (db)IP(pen) packets between distinct networks.
+(pen)-> A switch forwards (r)LAN(pen) frames using learned MAC addresses.
+(pen)-> A (g)SOHO(pen) gateway may combine router, switch, AP and (li)firewall(pen).
+(pen)-> (y)DHCP(pen) leases addresses and options such as gateway and DNS.
 (pen)-> DNS resolves names; it does not assign a host its address.
 (pen)-> NAT rewrites address or port fields between address realms.
-(pen)-> NAT is not a (pu)firewall(pen) rule or a security guarantee.
-(pen)-> Place an (g)edge(pen) (pu)firewall(pen) to enforce permitted traffic flows.
-(pen)o (pu)Firewall(pen) (pu)rules(pen) (pu)and(pen) (pu)ACL(pen) (pu)behavior(pen)
-(pen)-> A hardware (pu)firewall(pen) is a dedicated appliance or function.
-(pen)-> A software (pu)firewall(pen) filters (g)traffic(pen) on a host or gateway.
-(pen)-> An (pu)ACL(pen) matches fields such as direction, IP, protocol, port.
-(pen)-> Ordered (pu)rules(pen) evaluate until a match; order changes outcome.
+(pen)-> NAT is not a (li)firewall(pen) rule or a security guarantee.
+(pen)-> Place an (g)edge(pen) (li)firewall(pen) to enforce permitted (g)traffic(pen) flows.
+(pen)o (li)Firewall rules and ACL behavior(pen)
+(pen)-> A hardware (li)firewall(pen) is a dedicated appliance or function.
+(pen)-> A software (li)firewall(pen) filters (g)traffic(pen) on a host or gateway.
+(pen)-> An (li)ACL(pen) matches fields such as direction, (db)IP(pen), protocol, port.
+(pen)-> Ordered (li)rules(pen) evaluate until a match; order changes outcome.
 (pen)-> Cisco IOS ACLs have implicit deny after listed entries.
 (pen)-> A rule has no effect until applied at an interface or policy.
 (pen)-> Stateful inspection tracks sessions for return (g)traffic(pen).
 (pen)-> Allow only required flows; close unused services and ports.
-(pen)-> Test intended and denied (g)traffic(pen); narrow (pu)rules(pen) limit exposure.
-(pen)-> (pu)ACL(pen) syntax and default (pu)behavior(pen) vary by product and context.
+(pen)-> Test intended and denied (g)traffic(pen); narrow (li)rules(pen) limit exposure.
+(pen)-> (li)ACL(pen) syntax and default (li)behavior(pen) vary by product and context.
 (pen)o Overview
-(pen)-> (br)Wireless(pen) (br)setup(pen) (br)and(pen) (br)physical(pen) (br)media(pen)
-(pen)-> (or)Subnet(pen) (or)masks(pen) (or)and(pen) (or)loopback(pen)
-(pen)o (br)Wireless(pen) (br)setup(pen) (br)and(pen) (br)physical(pen) (br)media(pen)
-(pen)-> An AP bridges 802.11 clients to a LAN; a router routes.
+(pen)-> (p)Wireless setup and physical media(pen)
+(pen)-> (hp)Subnet masks and loopback(pen)
+(pen)o (p)Wireless setup and physical media(pen)
+(pen)-> An AP bridges 802.11 clients to a (r)LAN(pen); a router routes.
 (pen)-> A gateway joins networks; default gateway is off-subnet hop.
 (pen)-> Twisted pairs reduce interference; shielding adds protection.
 (pen)-> Ethernet rate and reach depend on specified PHY and cable.
@@ -35,14 +35,14 @@
 (pen)-> 802.11ax/be are WLAN amendments; bands vary.
 (pen)-> RF range varies with walls, interference, band and antennas.
 (pen)-> PHY headline rate is not application throughput or a promise.
-(pen)o (or)Subnet(pen) (or)masks(pen) (or)and(pen) (or)loopback(pen)
+(pen)o (hp)Subnet masks and loopback(pen)
 (pen)-> IPv4 prefix counts contiguous network bits in the mask.
 (pen)-> A /24 mask is 255.255.255.0; do not infer from old classes.
 (pen)-> Address AND mask yields network; aligned blocks avoid overlap.
 (pen)-> In 192.168.8.34/24, network is 192.168.8.0/24.
-(pen)-> Ordinary LAN (or)subnet(pen) reserves network and broadcast addresses.
+(pen)-> Ordinary (r)LAN(pen) (hp)subnet(pen) reserves network and broadcast addresses.
 (pen)-> RFC 3021 uses both /31 addresses as point-to-point hosts.
 (pen)-> Both ends must support /31; not a usual multi-host LAN.
-(pen)-> IPv4 127.0.0.1 (or)loopback(pen) tests this host, not a remote path.
-(pen)-> Connect modem/ONT to WAN; set LAN, DHCP, unique admin secret.
+(pen)-> IPv4 127.0.0.1 (hp)loopback(pen) tests this host, not a remote path.
+(pen)-> Connect modem/ONT to WAN; set LAN, (y)DHCP(pen), unique admin secret.
 (pen)-> Use WPA3 or WPA2-AES; avoid WEP and weak passphrases.

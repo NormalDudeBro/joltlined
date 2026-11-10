@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)Segmentation(pen) (g)and(pen) (g)trust(pen) (g)boundaries(pen)
-(pen)-> (pu)Test(pen) (pu)segment(pen) (pu)policy(pen) (pu)and(pen) (pu)verify(pen) (pu)boundaries(pen)
-(pen)o (g)Segmentation(pen) (g)and(pen) (g)trust(pen) (g)boundaries(pen)
+(pen)-> (g)Segmentation and trust boundaries(pen)
+(pen)-> (li)Test segment policy and verify boundaries(pen)
+(pen)o (g)Segmentation and trust boundaries(pen)
 (pen)-> Physical (g)segmentation(pen) separates equipment, cabling, or sites.
 (pen)-> Logical (g)segmentation(pen) partitions shared gear with rules.
-(pen)-> VLANs separate layer-two broadcast domains on shared switches.
-(pen)-> ACLs and firewalls govern traffic across (pu)segment(pen) (g)boundaries(pen).
+(pen)-> (db)VLANs(pen) separate layer-two broadcast domains on shared switches.
+(pen)-> ACLs and firewalls govern traffic across (li)segment(pen) (li)boundaries(pen).
 (pen)-> (g)Segmentation(pen) can limit lateral movement after compromise.
-(pen)-> A VLAN alone is not encryption or identity authentication.
+(pen)-> A (db)VLAN(pen) alone is not encryption or identity authentication.
 (pen)-> Rules must allow required paths and block unauthorized paths.
-(pen)-> NIST zero (g)trust(pen) rejects (g)trust(pen) based only on network location.
+(pen)-> (r)NIST(pen) zero (g)trust(pen) rejects (g)trust(pen) based only on network location.
 (pen)-> (g)Segmentation(pen) complements, not replaces, access checks.
-(pen)o (pu)Test(pen) (pu)segment(pen) (pu)policy(pen) (pu)and(pen) (pu)verify(pen) (pu)boundaries(pen)
-(pen)-> Identify assets, owners, data flows, (g)boundaries(pen) first.
+(pen)o (li)Test segment policy and verify boundaries(pen)
+(pen)-> Identify assets, owners, data flows, (li)boundaries(pen) first.
 (pen)-> Permit only needed source, destination, protocol, service.
-(pen)-> (pu)Test(pen) intended communication after (pu)policy(pen) changes.
-(pen)-> (pu)Test(pen) forbidden communication from each relevant (pu)segment(pen).
+(pen)-> (li)Test(pen) intended communication after (li)policy(pen) changes.
+(pen)-> (li)Test(pen) forbidden communication from each relevant (li)segment(pen).
 (pen)-> Monitor boundary traffic for unexpected communication.
 (pen)-> Physical separation may share unsafe administration.
 (pen)-> Logical separation may fail through bad rules or trunking.
 (pen)-> Document exceptions, owners, and review dates.
 (pen)-> Choose controls from threat and cost needs.
-(pen)-> A subnet or VLAN is not a complete security boundary.
+(pen)-> A subnet or (db)VLAN(pen) is not a complete security boundary.
 (pen)o Overview
-(pen)-> (br)Virtual(pen) (br)machines(pen) (br)and(pen) (br)containers(pen)
-(pen)-> (or)IoT(pen) (or)risks(pen) (or)and(pen) (or)safer(pen) (or)deployment(pen)
-(pen)o (br)Virtual(pen) (br)machines(pen) (br)and(pen) (br)containers(pen)
-(pen)-> A hypervisor allocates host resources to (br)virtual(pen) (br)machines(pen).
-(pen)-> A VM typically runs a guest OS with its own kernel.
-(pen)-> (br)Containers(pen) isolate processes and package dependencies.
-(pen)-> (br)Containers(pen) commonly share the host operating-system kernel.
-(pen)-> VMs add guest OS overhead; (br)containers(pen) can be lighter.
+(pen)-> (p)Virtual machines and containers(pen)
+(pen)-> (hp)IoT risks and safer deployment(pen)
+(pen)o (p)Virtual machines and containers(pen)
+(pen)-> A hypervisor allocates host resources to (p)virtual(pen) (p)machines(pen).
+(pen)-> A (y)VM(pen) typically runs a guest OS with its own kernel.
+(pen)-> (p)Containers(pen) isolate processes and package dependencies.
+(pen)-> (p)Containers(pen) commonly share the host operating-system kernel.
+(pen)-> (y)VMs(pen) add guest OS overhead; (p)containers(pen) can be lighter.
 (pen)-> VM isolation can fail through hypervisor flaws or settings.
-(pen)-> A container kernel escape may threaten other host (br)containers(pen).
+(pen)-> A container kernel escape may threaten other host (p)containers(pen).
 (pen)-> Patch hosts, hypervisors, guest systems, images, libraries.
 (pen)-> Limit privileges, mounts, capabilities, and network access.
-(pen)o (or)IoT(pen) (or)risks(pen) (or)and(pen) (or)safer(pen) (or)deployment(pen)
-(pen)-> VMs and (br)containers(pen) may be combined on one host.
-(pen)-> Isolation reduces some (or)risks(pen); it is not an absolute guarantee.
-(pen)-> IoT means networked sensors, cameras, appliances, and devices.
-(pen)-> Default passwords and open services expose IoT devices.
+(pen)o (hp)IoT risks and safer deployment(pen)
+(pen)-> VMs and (p)containers(pen) may be combined on one host.
+(pen)-> Isolation reduces some (hp)risks(pen); it is not an absolute guarantee.
+(pen)-> (hp)IoT(pen) means networked sensors, cameras, appliances, and devices.
+(pen)-> Default passwords and open services expose (hp)IoT(pen) devices.
 (pen)-> Old firmware and weak updates leave known flaws unpatched.
 (pen)-> Constrained power or memory can limit security monitoring.
 (pen)-> Excess device data collection creates privacy risk.
 (pen)-> Inventory device, owner, firmware, network, support end date.
 (pen)-> Change defaults; disable unused features; patch and isolate.
-(pen)-> NIST baseline groups device capabilities supporting controls.
+(pen)-> (r)NIST(pen) baseline groups device capabilities supporting controls.

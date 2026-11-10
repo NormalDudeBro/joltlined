@@ -10,6 +10,43 @@ Each structured course sheet renders to 48 ASCII lines in two 24-line pages. The
 
 FBLA event pages use the same `.notes-site`, `.pages` and `.sheet` presentation as AP World, AP Lang and Algebra: warm-white paper, ruled rows, 9px line numbers, Georgia notes, shared captions and responsive spacing. Maintain the common component in `website/public/styles/site.css`, not a separate set of FBLA typography rules. The shared named print page preserves A4 sheets while keeping pagination rules away from the other site sections.
 
+## Note-coloring contract
+
+FBLA keeps the AP World-style section/Overview hierarchy, but uses its own
+palette overrides: `(db)` dark blue `#173f88`, `(r)` red `#df3034`, and `(y)`
+true yellow `#ebc600`. The shared `(y)` remains medium blue for other subjects.
+These are foreground inks, not background highlights; the documented pastel
+contrast limitation and plain-text alternatives still apply.
+
+`website/scripts/fbla-colors.mjs` assigns section colors in header order
+`g, li, p, hp, r, pu, db, br, y`. A section's full title and Overview listing
+match, with neutral prefixes, punctuation, and digits. Body accents follow
+exact whole title words/identifiers across both pages, not inferred semantic
+categories. Shared words belong to the title with the most distinct
+non-stopword tokens, then the longest title, then the first header. Stopwords
+do not create body matches. Hyphenated names are matched as complete tokens;
+no substring matching or automatic inflection/alias expansion is performed.
+
+`website/scripts/fbla-color-plan.json` records reviewed optional named families
+and their selected 1-based source lines for all 44 sheets. Their inks are
+unreserved within that sheet. Required title-family matches take precedence;
+body lines use at most two distinct highlight colors. Omitted matches remain
+pencil rather than receiving another family's color. The reviewed composite
+sheet subjects have no separately approved body light-blue aliases; page
+captions retain their usual topic styling.
+
+The plan fingerprints each plain 48-line sheet with SHA-256. When changing
+note content, review its headings, global family ownership, optional anchors,
+and page boundaries before updating the fingerprint; a changed source fails
+the build rather than silently moving line-specific accents. Rebuild both
+the event HTML (including embedded downloads) and colored text files. Do not
+edit generated colored files alone. No personal study or deck audit data is
+part of this configuration.
+
+Run `npm run check:fbla-colors` for the focused regression checks; the normal
+`npm run validate` includes them. Browser checks cover displayed ink colors,
+offline downloads, mobile layout, clipping, and the four event PDF page totals.
+
 ## How the curriculum works
 
 The hub leads with a repeatable study loop: choose an event and sheet, open its **Sources, practice, lab and scope notes**, attempt practice before revealing answers, use the matching event subdeck for recall, then apply the idea in a lab or spoken rehearsal. Card order is not a lesson sequence. The same module lab can appear under several sheets; it is not a new assignment each time. The IPv4 example is an optional demonstration, not the mandatory starting lesson. Experienced students can attempt practice first and use the notes to close gaps.

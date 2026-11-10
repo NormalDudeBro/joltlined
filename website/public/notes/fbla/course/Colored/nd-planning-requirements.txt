@@ -1,44 +1,44 @@
 (pen)o Overview
-(pen)-> (g)Translate(pen) (g)business(pen) (g)requirements(pen)
-(pen)-> (pu)Network(pen) (pu)scope(pen) (pu)and(pen) (pu)physical(pen) (pu)scale(pen)
-(pen)o (g)Translate(pen) (g)business(pen) (g)requirements(pen)
+(pen)-> (g)Translate business requirements(pen)
+(pen)-> (li)Network scope and physical scale(pen)
+(pen)o (g)Translate business requirements(pen)
 (pen)-> Start with workflows, sites, users, services, and devices.
 (pen)-> Estimate concurrent users and peak traffic, not headcount.
-(pen)-> Map apps needing low delay, steady rates, or reliable access.
-(pen)-> (pu)Physical(pen) size sets cable paths, closets, links, and coverage.
+(pen)-> Map apps needing low delay, steady rates, (hp)or(pen) reliable access.
+(pen)-> (li)Physical(pen) size sets cable paths, closets, links, and coverage.
 (pen)-> Growth affects port, address, capacity, and space needs.
 (pen)-> Throughput is delivered rate, not the PHY link rate.
 (pen)-> Contention, signal, servers, and uplinks affect throughput.
 (pen)-> Availability needs set acceptable outage and recovery targets.
 (pen)-> Budget includes licenses, staff, support, and replacement.
-(pen)o (pu)Network(pen) (pu)scope(pen) (pu)and(pen) (pu)physical(pen) (pu)scale(pen)
-(pen)-> A local area (pu)network(pen) (LAN) connects devices in a limited site.
-(pen)-> A wide area (pu)network(pen) (WAN) links networks across distance.
-(pen)-> LAN and WAN name (pu)scope(pen), not speed or technology.
-(pen)-> A WAN often depends on carrier links and service contracts.
+(pen)o (li)Network scope and physical scale(pen)
+(pen)-> A local area (li)network(pen) ((db)LAN(pen)) connects devices in a limited site.
+(pen)-> A wide area (li)network(pen) ((r)WAN(pen)) links networks across distance.
+(pen)-> LAN and WAN name (li)scope(pen), not speed (hp)or(pen) technology.
+(pen)-> A (r)WAN(pen) often depends on carrier links and service contracts.
 (pen)-> Long links may add latency, cost, and provider dependence.
 (pen)-> Geography shapes routing, addressing, and support needs.
-(pen)-> Separate user, (or)server(pen), guest needs before choosing equipment.
+(pen)-> Separate user, (hp)server(pen), guest needs before choosing equipment.
 (pen)-> Redundancy improves resilience but adds links and operations.
-(pen)-> Measure workload; labels alone do not size a (pu)network(pen).
+(pen)-> Measure workload; labels alone do not size a (li)network(pen).
 (pen)-> Carrier diversity helps only if routes avoid shared risks.
 (pen)o Overview
-(pen)-> (br)Topology(pen) (br)and(pen) (br)failure(pen) (br)domains(pen)
-(pen)-> (or)Windows(pen) (or)Server(pen) (or)or(pen) (or)Linux(pen)
-(pen)o (br)Topology(pen) (br)and(pen) (br)failure(pen) (br)domains(pen)
-(pen)-> Star connects endpoints to a central switch or access point.
-(pen)-> Edge link (br)failure(pen) affects one; central (br)failure(pen) affects many.
+(pen)-> (p)Topology and failure domains(pen)
+(pen)-> (hp)Windows Server or Linux(pen)
+(pen)o (p)Topology and failure domains(pen)
+(pen)-> Star connects endpoints to a central switch (hp)or(pen) access point.
+(pen)-> Edge link (p)failure(pen) affects one; central (p)failure(pen) affects many.
 (pen)-> Mesh adds alternate paths but increases link cost.
 (pen)-> Full mesh of n nodes needs n(n-1)/2 point-to-point links.
 (pen)-> Bus attaches devices along a shared backbone cable.
 (pen)-> A bus backbone break can disrupt service and hinder diagnosis.
-(pen)-> (pu)Physical(pen) (br)topology(pen) maps cables; logical topology maps paths.
-(pen)-> (br)Topology(pen) weighs fault impact, (pu)scale(pen), cost, and staff skills.
-(pen)-> Redundancy helps when (br)failure(pen) (br)domains(pen) are independent.
-(pen)o (or)Windows(pen) (or)Server(pen) (or)or(pen) (or)Linux(pen)
-(pen)-> A (pu)network(pen) operating system (NOS) runs shared (pu)network(pen) services.
-(pen)-> (or)Windows(pen) (or)Server(pen) provides roles for Microsoft environments.
-(pen)-> (or)Linux(pen) (or)server(pen) features vary by distribution and packages.
+(pen)-> (li)Physical(pen) (p)topology(pen) maps cables; logical (p)topology(pen) maps paths.
+(pen)-> (p)Topology(pen) weighs fault impact, (li)scale(pen), cost, and staff skills.
+(pen)-> Redundancy helps when (p)failure(pen) (p)domains(pen) are independent.
+(pen)o (hp)Windows Server or Linux(pen)
+(pen)-> A (li)network(pen) operating system (NOS) runs shared (li)network(pen) services.
+(pen)-> (hp)Windows(pen) (hp)Server(pen) provides roles for Microsoft environments.
+(pen)-> (hp)Linux(pen) (hp)server(pen) features vary by distribution and packages.
 (pen)-> Check applications, drivers, identity, and hardware support.
 (pen)-> Check staff expertise, training, and vendor support coverage.
 (pen)-> Include licensing, subscriptions, upkeep, and migration costs.

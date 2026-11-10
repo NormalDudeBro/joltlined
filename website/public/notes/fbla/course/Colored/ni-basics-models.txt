@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)LAN(pen) (g)scale(pen) (g)and(pen) (g)purpose(pen)
-(pen)-> (pu)SOHO(pen), (pu)enterprise(pen) (pu)and(pen) (pu)datacenter(pen)
-(pen)o (g)LAN(pen) (g)scale(pen) (g)and(pen) (g)purpose(pen)
+(pen)-> (g)LAN scale and purpose(pen)
+(pen)-> (li)SOHO(pen), (li)enterprise and datacenter(pen)
+(pen)o (g)LAN scale and purpose(pen)
 (pen)-> A (g)LAN(pen) connects devices within a limited local site.
 (pen)-> It lets endpoints share links, services and local resources.
-(pen)-> A (or)switch(pen) forwards Ethernet frames using learned MAC locations.
-(pen)-> A (or)router(pen) forwards IP packets between separate IP networks.
-(pen)-> Layer 2 means link-local framing; Layer 3 means IP routing.
-(pen)-> An ordinary Layer 2 (or)switch(pen) forwards within its VLAN.
-(pen)-> A Layer 3 (or)switch(pen) can also route between configured networks.
-(pen)-> VLANs do not encrypt traffic or prevent all access.
+(pen)-> A (hp)switch(pen) forwards Ethernet frames using learned (db)MAC(pen) locations.
+(pen)-> A (hp)router(pen) forwards (r)IP(pen) packets between separate (r)IP(pen) networks.
+(pen)-> Layer 2 means link-local framing; Layer 3 means (r)IP(pen) routing.
+(pen)-> An ordinary Layer 2 (hp)switch(pen) forwards within its (y)VLAN(pen).
+(pen)-> A Layer 3 (hp)switch(pen) can also route between configured networks.
+(pen)-> (y)VLANs(pen) do not encrypt traffic or prevent all access.
 (pen)-> (g)LAN(pen) ownership and management depend on the organization.
-(pen)o (pu)SOHO(pen), (pu)enterprise(pen) (pu)and(pen) (pu)datacenter(pen)
-(pen)-> (pu)SOHO(pen) means small office/home office, usually few users.
-(pen)-> An integrated gateway may combine (or)router(pen), Wi-Fi and switching.
+(pen)o (li)SOHO(pen), (li)enterprise and datacenter(pen)
+(pen)-> (li)SOHO(pen) means small office/home office, usually few users.
+(pen)-> An integrated gateway may combine (hp)router(pen), Wi-Fi and switching.
 (pen)-> Integration saves cost but limits capacity and redundancy.
-(pen)-> (pu)Enterprise(pen) LANs use managed access (br)across(pen) campuses.
+(pen)-> (li)Enterprise(pen) LANs use managed access (p)across(pen) campuses.
 (pen)-> VLANs and routed boundaries organize traffic and policy.
 (pen)-> Central management spreads both settings and errors.
-(pen)-> (pu)Datacenter(pen) LANs connect dense server and storage systems.
+(pen)-> (li)Datacenter(pen) LANs connect dense server and storage systems.
 (pen)-> Redundant links can improve availability but add complexity.
 (pen)-> No (g)LAN(pen) guarantees speed, security or uninterrupted service.
 (pen)-> Select (g)scale(pen) by users, traffic, growth, support and budget.
 (pen)o Overview
-(pen)-> (br)Encapsulation(pen) (br)across(pen) (br)a(pen) (br)connection(pen)
-(pen)-> (or)Switch(pen) (or)and(pen) (or)router(pen) (or)forwarding(pen)
-(pen)o (br)Encapsulation(pen) (br)across(pen) (br)a(pen) (br)connection(pen)
+(pen)-> (p)Encapsulation across a connection(pen)
+(pen)-> (hp)Switch and router forwarding(pen)
+(pen)o (p)Encapsulation across a connection(pen)
 (pen)-> An application creates data for another host or service.
 (pen)-> Transport adds headers to form segments or datagrams.
-(pen)-> IP adds source and destination addresses in a packet.
+(pen)-> (r)IP(pen) adds source and destination addresses in a packet.
 (pen)-> The link layer wraps that packet in a local-link frame.
 (pen)-> The physical layer transmits frame bits as signals.
 (pen)-> The receiver processes headers in reverse order.
 (pen)-> Each hop uses link delivery for the next local destination.
-(pen)-> A (or)router(pen) removes incoming frame and forwards the IP packet.
+(pen)-> A (hp)router(pen) removes incoming frame and forwards the IP packet.
 (pen)-> It builds a new frame appropriate to the outgoing link.
-(pen)o (or)Switch(pen) (or)and(pen) (or)router(pen) (or)forwarding(pen)
-(pen)-> A Layer 2 (or)switch(pen) consults its MAC (or)forwarding(pen) table.
+(pen)o (hp)Switch and router forwarding(pen)
+(pen)-> A Layer 2 (hp)switch(pen) consults its (db)MAC(pen) (hp)forwarding(pen) table.
 (pen)-> Unknown unicast may be flooded within the eligible VLAN.
-(pen)-> A (or)router(pen) examines IP destination and selects a next hop.
+(pen)-> A (hp)router(pen) examines IP destination and selects a next hop.
 (pen)-> Routers separate broadcast domains by default.
-(pen)-> A Layer 3 (or)switch(pen) can perform routing when configured to do so.
-(pen)-> Only ordinary Layer 2 (or)switch(pen) operation does not route.
-(pen)-> A next hop may be another (or)router(pen), not the destination.
+(pen)-> A Layer 3 (hp)switch(pen) can perform routing when configured to do so.
+(pen)-> Only ordinary Layer 2 (hp)switch(pen) operation does not route.
+(pen)-> A next hop may be another (hp)router(pen), not the destination.
 (pen)-> Link rate is not payload throughput because of overhead.
-(pen)-> Filtering policy is separate from basic (or)forwarding(pen).
+(pen)-> Filtering policy is separate from basic (hp)forwarding(pen).
 (pen)-> Congestion, link failures and bad routes can cause loss.

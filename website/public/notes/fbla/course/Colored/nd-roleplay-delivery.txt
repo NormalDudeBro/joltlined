@@ -1,9 +1,9 @@
 (pen)o Overview
-(pen)-> (g)Organize(pen) (g)a(pen) (g)Decision(pen) (g)Briefing(pen)
-(pen)-> (pu)Communicate(pen) (pu)with(pen) (pu)Confidence(pen)
-(pen)o (g)Organize(pen) (g)a(pen) (g)Decision(pen) (g)Briefing(pen)
+(pen)-> (g)Organize a Decision Briefing(pen)
+(pen)-> (li)Communicate with Confidence(pen)
+(pen)o (g)Organize a Decision Briefing(pen)
 (pen)-> National format: 20 minutes prep, 7 minutes delivery.
-(pen)-> No separate Q&A; (br)judges(pen) may interrupt during delivery.
+(pen)-> No separate Q&A; (p)judges(pen) may interrupt during delivery.
 (pen)-> Sequence: problem, criteria, options, choice, implementation.
 (pen)-> Summarize facts and prioritized problems before solutions.
 (pen)-> Compare options' pros and cons against common criteria.
@@ -11,7 +11,7 @@
 (pen)-> State phases, resources, owners, tests, and rollback triggers.
 (pen)-> Use signposts and transitions to clarify the reasoning.
 (pen)-> Close with success measure, requested (g)decision(pen), and next step.
-(pen)o (pu)Communicate(pen) (pu)with(pen) (pu)Confidence(pen)
+(pen)o (li)Communicate with Confidence(pen)
 (pen)-> Project voice at a measured pace; pause after key decisions.
 (pen)-> Use poised posture, purposeful gestures, and eye contact.
 (pen)-> Define acronyms; connect technical terms to business impact.
@@ -23,26 +23,26 @@
 (pen)-> Keep material explanations usable without visual aids.
 (pen)-> Pause after key points; do not rush the conclusion.
 (pen)o Overview
-(pen)-> (br)Answer(pen) (br)Judges(pen) (br)Completely(pen)
-(pen)-> (or)Rubric(pen) (or)and(pen) (or)Practice(pen) (or)Boundaries(pen)
-(pen)o (br)Answer(pen) (br)Judges(pen) (br)Completely(pen)
+(pen)-> (p)Answer Judges Completely(pen)
+(pen)-> (hp)Rubric and Practice Boundaries(pen)
+(pen)o (p)Answer Judges Completely(pen)
 (pen)-> Listen through the full question before answering.
-(pen)-> Clarify scope if needed, then (br)answer(pen) the question directly.
-(pen)-> Support the (br)answer(pen) with reasoning and scenario evidence.
+(pen)-> Clarify scope if needed, then (p)answer(pen) the question directly.
+(pen)-> Support the (p)answer(pen) with reasoning and scenario evidence.
 (pen)-> Address each part; state limits and residual risk honestly.
 (pen)-> For unknown facts, name what to verify and how to verify it.
 (pen)-> If a judge challenges an assumption, reassess it calmly.
 (pen)-> Correct factual errors plainly; return to (g)decision(pen) logic.
 (pen)-> Acknowledge interruption; return to your planned sequence.
 (pen)-> Complete interaction requires reasoning, not memorized lines.
-(pen)o (or)Rubric(pen) (or)and(pen) (or)Practice(pen) (or)Boundaries(pen)
+(pen)o (hp)Rubric and Practice Boundaries(pen)
 (pen)-> Maxima: problem 10; alternatives 20; solution 20.
 (pen)-> Knowledge 20; organization, delivery, answers 10 each.
-(pen)-> Spoken (or)rubric(pen) totals 100 points before penalties.
-(pen)-> (br)Judges(pen) ask during presentation; no separate Q&A is scheduled.
+(pen)-> Spoken (hp)rubric(pen) totals 100 points before penalties.
+(pen)-> (p)Judges(pen) ask during presentation; no separate Q&A is scheduled.
 (pen)-> Guide p.2 lists easel; p.4 prohibits visuals and props.
 (pen)-> Conflict unresolved; ask adviser for clarification.
 (pen)-> Do not assume permission; prepare a verbal explanation.
-(pen)-> (or)Practice(pen) cases are hypothetical, not official prompts.
+(pen)-> (hp)Practice(pen) cases are hypothetical, not official prompts.
 (pen)-> Competitors author their own competition response.
 (pen)-> Score rehearsal against each criterion's actual point maximum.

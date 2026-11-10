@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)From(pen) (g)device(pen) (g)to(pen) (g)ISP(pen)
-(pen)-> (pu)ISP(pen) (pu)chain(pen) (pu)and(pen) (pu)local(pen) (pu)limits(pen)
-(pen)o (g)From(pen) (g)device(pen) (g)to(pen) (g)ISP(pen)
+(pen)-> (g)From device to ISP(pen)
+(pen)-> (li)ISP chain and local limits(pen)
+(pen)o (g)From device to ISP(pen)
 (pen)-> A network adapter connects a (g)device(pen) to a wired or radio link.
-(pen)-> A switch or access point joins devices to the (pu)local(pen) LAN.
-(pen)-> A router joins IP networks and selects a route toward the (g)ISP(pen).
+(pen)-> A switch or access point joins devices to the (li)local(pen) (db)LAN(pen).
+(pen)-> A router joins IP networks and selects a route toward the (li)ISP(pen).
 (pen)-> A modem adapts signaling for a provider medium such as coax.
 (pen)-> An optical network terminal adapts a fiber access connection.
 (pen)-> A gateway may combine modem, routing, switching and Wi-Fi.
-(pen)-> The (g)ISP(pen) aggregates access and routes to other networks.
+(pen)-> The (li)ISP(pen) aggregates access and routes to other networks.
 (pen)-> Operators interconnect through peering or paid transit.
-(pen)-> Available access media depend on the (pu)local(pen) provider.
-(pen)o (pu)ISP(pen) (pu)chain(pen) (pu)and(pen) (pu)local(pen) (pu)limits(pen)
+(pen)-> Available access media depend on the (li)local(pen) provider.
+(pen)o (li)ISP chain and local limits(pen)
 (pen)-> A home link does not directly cable to every Internet host.
-(pen)-> Traffic crosses (pu)local(pen) gear, then provider networks.
+(pen)-> Traffic crosses (li)local(pen) gear, then provider networks.
 (pen)-> Fiber, coax, DSL and cellular differ in signaling and reach.
 (pen)-> The provider medium and plan constrain the access link rate.
-(pen)-> A live physical link does not prove DNS or routing is working.
+(pen)-> A live physical link does not prove (r)DNS(pen) or routing is working.
 (pen)-> A reachable router does not prove remote service works.
-(pen)-> Power or (g)ISP(pen) faults can interrupt a correctly addressed LAN.
+(pen)-> Power or (li)ISP(pen) faults can interrupt a correctly addressed (db)LAN(pen).
 (pen)-> Speed tests include remote path and server limitations.
-(pen)-> Check link, route, DNS and remote service separately.
+(pen)-> Check link, route, (r)DNS(pen) and remote service separately.
 (pen)-> One (g)device(pen) may combine modem and router functions.
 (pen)o Overview
-(pen)-> (br)IPv(pen)4 (br)and(pen) (br)IPv(pen)6 (br)formats(pen)
-(pen)-> (or)Subnet(pen) (or)calculation(pen) (or)example(pen)
-(pen)o (br)IPv(pen)4 (br)and(pen) (br)IPv(pen)6 (br)formats(pen)
-(pen)-> IPv4 addresses are 32 bits, commonly shown as four octets.
-(pen)-> Each dotted-decimal octet ranges from 0 through 255.
-(pen)-> IPv6 addresses are 128 bits, written as hexadecimal groups.
-(pen)-> IPv6 uses colons; :: can compress one run of zero groups.
-(pen)-> IPv6 greatly expands available address space over IPv4.
-(pen)-> IPv6 has a different header and uses Neighbor Discovery.
-(pen)-> IPv4 commonly uses ARP on Ethernet links for (pu)local(pen) resolution.
-(pen)-> Dual stack runs IPv4 and IPv6 together during transition.
-(pen)-> IPv6 still needs suitable access policy and configuration.
-(pen)o (or)Subnet(pen) (or)calculation(pen) (or)example(pen)
+(pen)-> (p)IPv(pen)4 (p)and IPv(pen)6 (p)formats(pen)
+(pen)-> (hp)Subnet calculation example(pen)
+(pen)o (p)IPv(pen)4 (p)and IPv(pen)6 (p)formats(pen)
+(pen)-> (p)IPv(pen)4 addresses are 32 bits, commonly shown as four octets.
+(pen)-> Each dotted-decimal octet ranges (g)from(pen) 0 through 255.
+(pen)-> (p)IPv(pen)6 addresses are 128 bits, written as hexadecimal groups.
+(pen)-> (p)IPv(pen)6 uses colons; :: can compress one run of zero groups.
+(pen)-> (p)IPv(pen)6 greatly expands available address space over (p)IPv(pen)4.
+(pen)-> (p)IPv(pen)6 has a different header and uses Neighbor Discovery.
+(pen)-> (p)IPv(pen)4 commonly uses ARP on Ethernet links for (li)local(pen) resolution.
+(pen)-> Dual stack runs (p)IPv(pen)4 and (p)IPv(pen)6 together during transition.
+(pen)-> (p)IPv(pen)6 still needs suitable access policy and configuration.
+(pen)o (hp)Subnet calculation example(pen)
 (pen)-> For 192.0.2.70/26, six bits remain for host positions.
 (pen)-> A /26 block has 64 total addresses.
 (pen)-> The aligned block containing .70 starts at 192.0.2.64.
 (pen)-> The dotted mask is 255.255.255.192.
-(pen)-> Under ordinary LAN convention, .64 is the network address.
+(pen)-> Under ordinary (db)LAN(pen) convention, .64 is the network address.
 (pen)-> The corresponding broadcast address is 192.0.2.127.
 (pen)-> Ordinary assignable range is 192.0.2.65 through .126.
 (pen)-> State the address-use convention when describing host range.
-(pen)-> A /32 denotes one IPv4 address route, not a LAN (or)subnet(pen).
+(pen)-> A /32 denotes one (p)IPv(pen)4 address route, not a LAN (hp)subnet(pen).
 (pen)-> A /31 is a point-to-point exception to ordinary host rules.

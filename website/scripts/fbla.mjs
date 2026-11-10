@@ -1,6 +1,9 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { colorSheet, fblaInks } from './fbla-colors.mjs';
+
+export { colorSheet } from './fbla-colors.mjs';
 
 const escapeHTML = text => text.replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 const source = fileURLToPath(new URL('../public/notes/fbla/ipv4-subnetting.txt', import.meta.url));
@@ -112,43 +115,8 @@ export function renderCourseSheets(modules = fblaModules, palette = {}) {
   return { sheets, objectiveList, sourceIds: [...sourceIds].sort() };
 }
 
-export function colorSheet(plain, palette, sheetId) {
-  assert.ok(palette && palette.pen && Object.keys(palette).length >= 10, 'complete supplied color palette required');
-  const colors = ['g', 'pu', 'br', 'or', 'y', 'hp', 'p', 'li'];
-  const rows = plain.split('\n');
-  const titles = new Map();
-  const keywords = new Map();
-  const generic = new Set(['a', 'an', 'the', 'and', 'or', 'to', 'of', 'in', 'for', 'with', 'from', 'on', 'by', 'how', 'what', 'using']);
-  for (const row of rows) {
-    if (!row.startsWith('o ') || row === 'o Overview') continue;
-    const title = row.slice(2);
-    const ink = titles.get(title) ?? colors[titles.size % colors.length];
-    titles.set(title, ink);
-    for (const [word] of title.matchAll(/[A-Za-z]+(?:['-][A-Za-z]+)*/g)) {
-      const key = word.toLowerCase();
-      if (!generic.has(key) && (word.length > 3 || /^[A-Z]{2,}$/.test(word)) && !keywords.has(key)) keywords.set(key, ink);
-    }
-  }
-  const paint = (text, ink) => text.replace(/[A-Za-z]+/g, word => `(${ink})${word}(pen)`);
-  return rows.map(line => {
-    if (!line) return '';
-    if (line === 'o Overview') return `(pen)${line}`;
-    const prefix = line.startsWith('o ') ? 2 : 3;
-    const title = line.slice(prefix);
-    if (titles.has(title)) return `(pen)${line.slice(0, prefix)}${paint(title, titles.get(title))}`;
-    const chosen = [...line.matchAll(/[A-Za-z]+(?:['-][A-Za-z]+)*/g)]
-      .filter(match => match.index >= prefix && keywords.has(match[0].toLowerCase())).slice(0, 2);
-    let output = '(pen)';
-    let cursor = 0;
-    chosen.forEach(match => {
-      output += `${line.slice(cursor, match.index)}${paint(match[0], keywords.get(match[0].toLowerCase()))}`;
-      cursor = match.index + match[0].length;
-    });
-    return output + line.slice(cursor);
-  }).join('\n');
-}
-
 export function renderEvent(event, rendered, palette) {
+  const inks = { ...palette, ...fblaInks };
   const info = eventInfo[event];
   const list = rendered.sheets.filter(item => item.module.event === event);
   assert.ok(info && list.length, `no sheets for event ${event}`);
@@ -169,8 +137,8 @@ export function renderEvent(event, rendered, palette) {
   <title>${info.name} 2026–27 | FBLA</title>
   <link rel="stylesheet" href="styles/site.css">
   <style>
-    :root { ${Object.entries(palette).map(([key,value])=>`--${key}:${value}`).join(';')} }
-    ${Object.keys(palette).map(key=>`.ink-${key}{color:var(--${key})}`).join('')}
+    :root { ${Object.entries(inks).map(([key,value])=>`--${key}:${value}`).join(';')} }
+    ${Object.keys(inks).map(key=>`.ink-${key}{color:var(--${key})}`).join('')}
     #notes { padding-block: 6px 40px; }
     #notes:focus { outline: none; }
     .course-domain { margin-block: 0 12px; color: var(--muted); font: 11px/1.5 system-ui, sans-serif; }
@@ -199,7 +167,7 @@ export function renderEvent(event, rendered, palette) {
       <h2 class="course-contents">Course contents</h2><ol class="course-toc contents">${toc}</ol>
       ${sections}
     </main>
-    <footer><p>The approved note inks match the other subjects. Some colors do not meet text-contrast requirements; plain-text downloads are available for every sheet.</p><a href="fbla.html">Back to FBLA study plan</a></footer>
+    <footer><p>Section colors connect headings with their repeated words. Selected named terms use dark blue, red, or yellow accents; explanatory text stays pencil. These added inks apply only to FBLA. Some colors do not meet text-contrast requirements; plain-text downloads are available for every sheet.</p><a href="fbla.html">Back to FBLA study plan</a></footer>
   </div>
 </body></html>`;
 }
@@ -220,8 +188,8 @@ export function renderCourseHub(rendered) {
 
 function renderCourseLine(line) {
   let ink = 'pen';
-  return line.split(/(\((?:pen|g|li|pu|br|or|y|p|lb|hp)\))/).map(part => {
-    const marker = part.match(/^\((pen|g|li|pu|br|or|y|p|lb|hp)\)$/);
+  return line.split(/(\((?:pen|g|li|pu|br|or|y|r|db|p|lb|hp)\))/).map(part => {
+    const marker = part.match(/^\((pen|g|li|pu|br|or|y|r|db|p|lb|hp)\)$/);
     if (!marker) return ink === 'pen' ? escapeHTML(part) : `<span class="ink-${ink}">${escapeHTML(part)}</span>`;
     ink = marker[1];
     return '';

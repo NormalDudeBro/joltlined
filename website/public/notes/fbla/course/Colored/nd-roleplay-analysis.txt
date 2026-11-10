@@ -1,32 +1,32 @@
 (pen)o Overview
-(pen)-> (g)Define(pen) (g)the(pen) (g)Problem(pen) (g)and(pen) (g)Criteria(pen)
-(pen)-> (pu)Compare(pen) (pu)Real(pen) (pu)Alternatives(pen)
-(pen)o (g)Define(pen) (g)the(pen) (g)Problem(pen) (g)and(pen) (g)Criteria(pen)
+(pen)-> (g)Define the Problem and Criteria(pen)
+(pen)-> (li)Compare Real Alternatives(pen)
+(pen)o (g)Define the Problem and Criteria(pen)
 (pen)-> Restate the scenario accurately before proposing technology.
-(pen)-> Separate observed symptoms from (or)business(pen) problems and impact.
+(pen)-> Separate observed symptoms from (hp)business(pen) problems and impact.
 (pen)-> Identify stakeholders, sites, users, data, and deadlines.
 (pen)-> Separate stated facts, assumptions, unknowns, and risks.
 (pen)-> Measure goals: uptime, latency, cost, or security.
 (pen)-> Rank mandatory constraints above preferences and explain why.
-(pen)-> Map clients, switches, servers, gateways, and WAN links.
+(pen)-> Map clients, switches, servers, gateways, and (db)WAN(pen) links.
 (pen)-> Identify trust boundaries and single points of failure.
 (pen)-> Use network knowledge to explain impact and constraints.
-(pen)o (pu)Compare(pen) (pu)Real(pen) (pu)Alternatives(pen)
+(pen)o (li)Compare Real Alternatives(pen)
 (pen)-> Offer at least two credible options that meet the stated need.
-(pen)-> (pu)Compare(pen) options against the same weighted decision (g)criteria(pen).
+(pen)-> (li)Compare(pen) options against the same weighted decision (g)criteria(pen).
 (pen)-> Assess capital, recurring cost, labor, and support effort.
 (pen)-> Assess speed, resilience, security, complexity, and growth.
 (pen)-> Name each option's concrete advantage and material drawback.
-(pen)-> VPN offers control; managed WAN may simplify support.
+(pen)-> VPN offers control; managed (db)WAN(pen) may simplify support.
 (pen)-> VPN also needs endpoint, identity, and failover management.
 (pen)-> Reject options against constraints, not straw-man comparisons.
 (pen)-> Label estimates; avoid invented vendor guarantees.
 (pen)-> Choose an option and acknowledge its residual risks.
 (pen)o Overview
-(pen)-> (br)Plan(pen) (br)Feasible(pen) (br)Implementation(pen)
-(pen)-> (or)Connect(pen) (or)Design(pen) (or)to(pen) (or)Business(pen) (or)Value(pen)
-(pen)o (br)Plan(pen) (br)Feasible(pen) (br)Implementation(pen)
-(pen)-> Phase work: discover, (or)design(pen), pilot, migrate, verify, review.
+(pen)-> (p)Plan Feasible Implementation(pen)
+(pen)-> (hp)Connect Design to Business Value(pen)
+(pen)o (p)Plan Feasible Implementation(pen)
+(pen)-> Phase work: discover, (hp)design(pen), pilot, migrate, verify, review.
 (pen)-> Name owner, sequence, dependencies, and approval path.
 (pen)-> List labor, equipment, licenses, circuits, and training.
 (pen)-> Schedule maintenance and notify affected stakeholders.
@@ -34,8 +34,8 @@
 (pen)-> Set rollback trigger, owner, and tested recovery procedure.
 (pen)-> Use least privilege, authentication, updates, and encryption.
 (pen)-> Test access, service performance, recovery, and failover.
-(pen)-> (pu)Compare(pen) test results with scenario success (g)criteria(pen).
-(pen)o (or)Connect(pen) (or)Design(pen) (or)to(pen) (or)Business(pen) (or)Value(pen)
+(pen)-> (li)Compare(pen) test results with scenario success (g)criteria(pen).
+(pen)o (hp)Connect Design to Business Value(pen)
 (pen)-> VLANs separate teams; verify routing and access rules.
 (pen)-> Switch ACLs limit flows; test allowed and denied paths.
 (pen)-> A second link helps only with sufficiently independent paths.
@@ -44,5 +44,5 @@
 (pen)-> Monitoring checks health; assign a response owner.
 (pen)-> Document topology, configs, dependencies, and support handoff.
 (pen)-> State decision, next action, owner, and review date.
-(pen)-> Tie technical choices to (or)business(pen) needs or constraints.
+(pen)-> Tie technical choices to (hp)business(pen) needs or constraints.
 (pen)-> If key facts are unknown, propose discovery before commitment.

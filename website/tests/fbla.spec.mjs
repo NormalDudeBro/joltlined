@@ -73,6 +73,24 @@ test('FBLA hub prints answers and rehearsal skills without opening disclosures f
 });
 
 const courses = [['networking', 14], ['cybersecurity', 13], ['network-design', 12], ['sales', 5]];
+test('FBLA added inks render online and offline without remapping World History blue', async ({ page }) => {
+  for (const [event] of courses) {
+    for (const url of [`/fbla-${event}.html`, `file://${process.cwd().replaceAll('\\', '/')}/public/fbla-${event}.html`]) {
+      await page.goto(url);
+      for (const [ink, color] of [['db', 'rgb(23, 63, 136)'], ['r', 'rgb(223, 48, 52)'], ['y', 'rgb(235, 198, 0)']]) {
+        const spans = page.locator(`.course-pages .ink-${ink}`);
+        expect(await spans.count()).toBeGreaterThan(0);
+        await expect(spans.first()).toHaveCSS('color', color);
+      }
+      await expect(page.locator('#notes')).not.toContainText(/\((?:pen|g|li|p|hp|r|db|y)\)/);
+    }
+  }
+  await page.goto('/fbla-networking.html');
+  await expect(page.locator('#ni-basics-models .sheet').first().locator('.line').nth(3).locator('.ink-g')).toHaveText('LAN scale and purpose');
+  await page.goto('/ap-world.html');
+  expect(await page.evaluate(() => getComputedStyle(document.documentElement).getPropertyValue('--y').trim())).toBe('#287db3');
+});
+
 for (const [event, sheetCount] of courses) {
   test(`FBLA ${event} course is accessible, offline-ready, and prints ${sheetCount * 2} pages`, async ({ page, browser }) => {
     test.setTimeout(90000);

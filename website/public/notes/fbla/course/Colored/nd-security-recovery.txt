@@ -1,7 +1,7 @@
 (pen)o Overview
-(pen)-> (g)Disaster(pen) (g)recovery(pen) (g)planning(pen)
-(pen)-> (pu)Backup(pen) (pu)types(pen) (pu)and(pen) (pu)restore(pen) (pu)assurance(pen)
-(pen)o (g)Disaster(pen) (g)recovery(pen) (g)planning(pen)
+(pen)-> (g)Disaster recovery planning(pen)
+(pen)-> (li)Backup types and restore assurance(pen)
+(pen)o (g)Disaster recovery planning(pen)
 (pen)-> (g)Disaster(pen) (g)recovery(pen) restores systems and data after disruption.
 (pen)-> Business continuity sustains priority work during disruption.
 (pen)-> A plan defines scope, roles, contacts and dependencies.
@@ -11,38 +11,38 @@
 (pen)-> (g)Recovery(pen) point objective (RPO) is tolerable data-loss time.
 (pen)-> Select controls to meet business targets and resource limits.
 (pen)-> Test plans; revise after exercises, incidents or changes.
-(pen)o (pu)Backup(pen) (pu)types(pen) (pu)and(pen) (pu)restore(pen) (pu)assurance(pen)
-(pen)-> Cloud (pu)backup(pen) is offsite but depends on provider and account.
-(pen)-> NAS (pu)backup(pen) is convenient but shares site and access risks.
+(pen)o (li)Backup types and restore assurance(pen)
+(pen)-> Cloud (li)backup(pen) is offsite but depends on provider and account.
+(pen)-> NAS (li)backup(pen) is convenient but shares site and access risks.
 (pen)-> External drives can be disconnected; rotate them securely.
 (pen)-> Use 3-2-1: three copies, two media, one copy offsite.
 (pen)-> Keep an offline or immutable copy to resist ransomware.
-(pen)-> Versioned copies allow selection of an earlier (pu)restore(pen) point.
-(pen)-> Separate (pu)backup(pen) credentials from admin accounts.
-(pen)-> RAID may sustain disk failure, not deletion or corruption.
-(pen)-> A (pu)backup(pen) is an independent copy; RAID is not a (pu)backup(pen).
+(pen)-> Versioned copies allow selection of an earlier (li)restore(pen) point.
+(pen)-> Separate (li)backup(pen) credentials from admin accounts.
+(pen)-> (db)RAID(pen) may sustain disk failure, not deletion or corruption.
+(pen)-> A (li)backup(pen) is an independent copy; (db)RAID(pen) is not a (li)backup(pen).
 (pen)-> Test isolated restores; validate data, rights and service.
 (pen)o Overview
-(pen)-> (br)IDS(pen), (br)IPS(pen), (br)updates(pen), (br)and(pen) (br)response(pen)
-(pen)-> (or)Wireless(pen) (or)authentication(pen) (or)and(pen) (or)ACLs(pen)
-(pen)o (br)IDS(pen), (br)IPS(pen), (br)updates(pen), (br)and(pen) (br)response(pen)
-(pen)-> An (br)IDS(pen) observes host or network activity and raises alerts.
-(pen)-> An (br)IPS(pen) can block or drop traffic inline when policy triggers.
+(pen)-> (p)IDS(pen), (p)IPS(pen), (p)updates(pen), (p)and response(pen)
+(pen)-> (hp)Wireless authentication and ACLs(pen)
+(pen)o (p)IDS(pen), (p)IPS(pen), (p)updates(pen), (p)and response(pen)
+(pen)-> An (p)IDS(pen) observes host or network activity and raises alerts.
+(pen)-> An (p)IPS(pen) can block or drop traffic inline when policy triggers.
 (pen)-> Inline false positives may disrupt legitimate service.
 (pen)-> Detection depends on visibility, tuning and known indicators.
 (pen)-> An alert is a lead to investigate, not proof of compromise.
 (pen)-> Preserve evidence, contain, remediate, then validate (g)recovery(pen).
 (pen)-> Patch supported systems and apps to fix known flaws.
-(pen)-> Test (br)updates(pen) and plan rollback; delay prolongs exposure.
+(pen)-> Test (p)updates(pen) and plan rollback; delay prolongs exposure.
 (pen)-> Firewalls and endpoint protection work at different points.
-(pen)o (or)Wireless(pen) (or)authentication(pen) (or)and(pen) (or)ACLs(pen)
-(pen)-> WPA2/WPA3 protect Wi-Fi links; choose supported secure modes.
+(pen)o (hp)Wireless authentication and ACLs(pen)
+(pen)-> WPA2/(y)WPA(pen)3 protect (r)Wi(pen)-(r)Fi(pen) links; choose supported secure modes.
 (pen)-> WPA2-Personal uses shared passphrase; protect it if exposed.
-(pen)-> Enterprise Wi-Fi can use 802.1X/EAP user or device identity.
+(pen)-> Enterprise (r)Wi(pen)-(r)Fi(pen) can use 802.1X/EAP user or device identity.
 (pen)-> A backend validates credentials; protect its server and keys.
 (pen)-> Use a unique secret, current firmware and secure admin access.
-(pen)-> WPA3 compatibility depends on AP and client support.
-(pen)-> (or)Wireless(pen) (or)ACLs(pen) filter traffic by rules and attributes.
-(pen)-> MAC addresses can be spoofed; (or)ACLs(pen) are not identity proof.
+(pen)-> (y)WPA(pen)3 compatibility depends on AP and client support.
+(pen)-> (hp)Wireless(pen) (hp)ACLs(pen) filter traffic by rules and attributes.
+(pen)-> MAC addresses can be spoofed; (hp)ACLs(pen) are not identity proof.
 (pen)-> Isolate guest clients and restrict paths with network policy.
 (pen)-> Revoke lost credentials; hidden SSID is not security.

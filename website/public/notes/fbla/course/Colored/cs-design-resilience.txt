@@ -1,7 +1,7 @@
 (pen)o Overview
-(pen)-> (g)Backup(pen) (g)methods(pen) (g)and(pen) (g)recovery(pen)
-(pen)-> (pu)RAID(pen), (pu)UPS(pen), (pu)and(pen) (pu)CIA(pen) (pu)design(pen) (pu)cases(pen)
-(pen)o (g)Backup(pen) (g)methods(pen) (g)and(pen) (g)recovery(pen)
+(pen)-> (g)Backup methods and recovery(pen)
+(pen)-> (li)RAID(pen), (li)UPS(pen), (li)and CIA design cases(pen)
+(pen)o (g)Backup methods and recovery(pen)
 (pen)-> A (g)backup(pen) is a separate recoverable copy of selected data.
 (pen)-> Full copies selected data; restore is straightforward.
 (pen)-> Incremental copies changes since the most recent (g)backup(pen).
@@ -11,23 +11,23 @@
 (pen)-> Differentials grow until another full (g)backup(pen) is made.
 (pen)-> Test restores; unreadable copies do not protect.
 (pen)-> Keep isolated or offline copies to resist ransomware.
-(pen)o (pu)RAID(pen), (pu)UPS(pen), (pu)and(pen) (pu)CIA(pen) (pu)design(pen) (pu)cases(pen)
-(pen)-> (pu)RAID(pen) combines disks for performance or fault tolerance.
-(pen)-> (pu)RAID(pen) 1 mirrors; (pu)RAID(pen) 5 tolerates one disk failure.
-(pen)-> (pu)RAID(pen) 6 tolerates two disk failures; (pu)RAID(pen) 0 has no redundancy.
-(pen)-> (pu)RAID(pen) cannot protect from deletion, malware, theft, or fire.
-(pen)-> (pu)RAID(pen) is not (g)backup(pen); keep independent, versioned copies.
-(pen)-> (pu)UPS(pen) battery bridges brief outages and enables safe shutdown.
+(pen)o (li)RAID(pen), (li)UPS(pen), (li)and CIA design cases(pen)
+(pen)-> (li)RAID(pen) combines disks for performance or fault tolerance.
+(pen)-> (li)RAID(pen) 1 mirrors; (li)RAID(pen) 5 tolerates one disk failure.
+(pen)-> (li)RAID(pen) 6 tolerates two disk failures; (li)RAID(pen) 0 has no redundancy.
+(pen)-> (li)RAID(pen) cannot protect from deletion, malware, theft, or fire.
+(pen)-> (li)RAID(pen) is not (g)backup(pen); keep independent, versioned copies.
+(pen)-> (li)UPS(pen) battery bridges brief outages and enables safe shutdown.
 (pen)-> Confidentiality: encrypt backups and restrict key access.
 (pen)-> Integrity: detect changes with trusted hashes or signatures.
-(pen)-> Availability: (pu)UPS(pen) and restores limit outage impact.
-(pen)-> No single safeguard guarantees all three (pu)CIA(pen) goals.
+(pen)-> Availability: (li)UPS(pen) and restores limit outage impact.
+(pen)-> No single safeguard guarantees all three (li)CIA(pen) goals.
 (pen)o Overview
-(pen)-> (br)Security(pen) (br)testing(pen) (br)and(pen) (br)architecture(pen)
-(pen)-> (or)Evidence(pen), (or)remediation(pen), (or)and(pen) (or)retesting(pen)
-(pen)o (br)Security(pen) (br)testing(pen) (br)and(pen) (br)architecture(pen)
-(pen)-> (br)Testing(pen) checks controls against stated needs and threats.
-(pen)-> (pu)Design(pen) review traces assets, identities, flows, boundaries.
+(pen)-> (p)Security testing and architecture(pen)
+(pen)-> (hp)Evidence(pen), (hp)remediation(pen), (hp)and retesting(pen)
+(pen)o (p)Security testing and architecture(pen)
+(pen)-> (p)Testing(pen) checks controls against stated needs and threats.
+(pen)-> (li)Design(pen) review traces assets, identities, flows, boundaries.
 (pen)-> Configuration review finds excess access and weak settings.
 (pen)-> Scanners find known issues; validate findings and rank risk.
 (pen)-> Static analysis examines code without executing it.
@@ -35,8 +35,8 @@
 (pen)-> Pen tests simulate scoped attacks with authorization.
 (pen)-> (g)Methods(pen) have blind spots; combine them according to risk.
 (pen)-> Test staging systems with written scope and stop conditions.
-(pen)o (or)Evidence(pen), (or)remediation(pen), (or)and(pen) (or)retesting(pen)
-(pen)-> Record affected asset, (or)evidence(pen), impact, owner, priority.
+(pen)o (hp)Evidence(pen), (hp)remediation(pen), (hp)and retesting(pen)
+(pen)-> Record affected asset, (hp)evidence(pen), impact, owner, priority.
 (pen)-> Fix underlying cause rather than only hiding an alert.
 (pen)-> Retest the original path and nearby paths after a fix.
 (pen)-> Track exceptions, residual risk, deadlines, and approvals.
@@ -45,4 +45,4 @@
 (pen)-> Exercise (g)recovery(pen) without risking live data or systems.
 (pen)-> Use fictional scenario; check (g)backup(pen) chain completeness.
 (pen)-> Expected: team identifies restore order, keys, dependencies.
-(pen)-> A passed scan or tabletop is not proof of total (br)security(pen).
+(pen)-> A passed scan or tabletop is not proof of total (p)security(pen).

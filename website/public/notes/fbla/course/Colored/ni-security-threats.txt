@@ -1,7 +1,7 @@
 (pen)o Overview
-(pen)-> (g)Malware(pen) (g)and(pen) (g)Social(pen) (g)Engineering(pen)
-(pen)-> (pu)Resilient(pen) (pu)Defensive(pen) (pu)Layers(pen)
-(pen)o (g)Malware(pen) (g)and(pen) (g)Social(pen) (g)Engineering(pen)
+(pen)-> (g)Malware and Social Engineering(pen)
+(pen)-> (li)Resilient Defensive Layers(pen)
+(pen)o (g)Malware and Social Engineering(pen)
 (pen)-> Virus attaches to host content and runs when executed.
 (pen)-> Worm self-propagates; it need not attach to a host file.
 (pen)-> Trojan disguises harmful code as useful software.
@@ -11,7 +11,7 @@
 (pen)-> Urgency and unexpected credential requests are warning signs.
 (pen)-> Spoofing falsifies identity; verify sender independently.
 (pen)-> Poisoning alters trusted data so later lookups mislead users.
-(pen)o (pu)Resilient(pen) (pu)Defensive(pen) (pu)Layers(pen)
+(pen)o (li)Resilient Defensive Layers(pen)
 (pen)-> Filter risky links/files; scanners cannot catch every sample.
 (pen)-> Verify payment or password requests through known channels.
 (pen)-> Patch exposed systems and retire unsupported software.
@@ -23,9 +23,9 @@
 (pen)-> Firewall rules filter traffic; they cannot stop all attacks.
 (pen)-> Monitor logs and alerts; sensors require review and response.
 (pen)o Overview
-(pen)-> (br)DoS(pen) (br)Mechanics(pen)
-(pen)-> (or)Mitigation(pen) (or)and(pen) (or)Residual(pen) (or)Risk(pen)
-(pen)o (br)DoS(pen) (br)Mechanics(pen)
+(pen)-> (p)DoS Mechanics(pen)
+(pen)-> (hp)Mitigation and Residual Risk(pen)
+(pen)o (p)DoS Mechanics(pen)
 (pen)-> A volumetric flood consumes available link bandwidth.
 (pen)-> A protocol flood consumes connection or device state.
 (pen)-> An application flood forces costly valid-looking work.
@@ -35,7 +35,7 @@
 (pen)-> Botnet DDoS adds traffic from many compromised endpoints.
 (pen)-> A firewall cannot restore a saturated upstream link.
 (pen)-> Outages deny service to legitimate users.
-(pen)o (or)Mitigation(pen) (or)and(pen) (or)Residual(pen) (or)Risk(pen)
+(pen)o (hp)Mitigation and Residual Risk(pen)
 (pen)-> Upstream filtering or scrubbing can remove attack traffic.
 (pen)-> Rate limits reduce abusive request rates but need tuning.
 (pen)-> Redundancy and capacity help only within design limits.
@@ -45,4 +45,4 @@
 (pen)-> Antivirus and filters complement user verification.
 (pen)-> Preserve logs and follow incident response procedures.
 (pen)-> No single control guarantees service or prevents compromise.
-(pen)-> Review (or)residual(pen) (or)risk(pen) as systems and attacker methods change.
+(pen)-> Review (hp)residual(pen) (hp)risk(pen) as systems and attacker methods change.

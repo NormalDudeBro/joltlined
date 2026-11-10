@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)Peer(pen)-(g)to(pen)-(g)peer(pen) (g)or(pen) (g)client(pen)-(g)server(pen)
-(pen)-> (pu)Cloud(pen) (pu)service(pen) (pu)benefits(pen) (pu)and(pen) (pu)costs(pen)
-(pen)o (g)Peer(pen)-(g)to(pen)-(g)peer(pen) (g)or(pen) (g)client(pen)-(g)server(pen)
-(pen)-> (g)Peer(pen)-(g)to(pen)-(g)peer(pen) (P2P) lets endpoints share resources directly.
-(pen)-> P2P avoids dedicated server (br)cost(pen) for small, simple groups.
+(pen)-> (g)Peer(pen)-(g)to(pen)-(g)peer or client(pen)-(g)server(pen)
+(pen)-> (li)Cloud service benefits and costs(pen)
+(pen)o (g)Peer(pen)-(g)to(pen)-(g)peer or client(pen)-(g)server(pen)
+(pen)-> (g)Peer(pen)-(g)to(pen)-(g)peer(pen) ((db)P(pen)2(db)P(pen)) lets endpoints share resources directly.
+(pen)-> (db)P(pen)2(db)P(pen) avoids dedicated server (p)cost(pen) for small, simple groups.
 (pen)-> Each peer may manage users, rights, and copies separately.
-(pen)-> Shared resource (br)availability(pen) depends on its host being online.
+(pen)-> Shared resource (p)availability(pen) depends on its host being online.
 (pen)-> Decentralized rights and backups hinder oversight and restore.
-(pen)-> Compromised peer or account can expose shared resources.
+(pen)-> Compromised peer (g)or(pen) account can expose shared resources.
 (pen)-> (g)Client(pen)-(g)server(pen) centralizes shared services and administration.
 (pen)-> Central policy is consistent but adds server dependencies.
 (pen)-> Size capacity, backup, and failover for critical server roles.
-(pen)o (pu)Cloud(pen) (pu)service(pen) (pu)benefits(pen) (pu)and(pen) (pu)costs(pen)
-(pen)-> (pu)Cloud(pen) services provide computing or management over a network.
+(pen)o (li)Cloud service benefits and costs(pen)
+(pen)-> (li)Cloud(pen) services provide computing (g)or(pen) management over a network.
 (pen)-> Elastic capacity meets demand without local hardware buying.
 (pen)-> IaaS leaves OS to customer; PaaS and SaaS shift more layers.
 (pen)-> Customer owns data and identities; contract terms govern.
-(pen)-> Usage, storage, support, and transfer create recurring (pu)costs(pen).
+(pen)-> Usage, storage, support, and transfer create recurring (li)costs(pen).
 (pen)-> Connectivity failure interrupts dependent workflows.
 (pen)-> Review identity, access, data protection, recovery, export.
 (pen)-> Local systems need staff and facilities but may work offline.
-(pen)-> Compare lifecycle (pu)costs(pen) and ownership, not hardware price.
+(pen)-> Compare lifecycle (li)costs(pen) and ownership, not hardware price.
 (pen)-> Portability depends on formats, contracts, and dependencies.
 (pen)o Overview
-(pen)-> (br)Cost(pen), (br)throughput(pen), (br)and(pen) (br)availability(pen)
-(pen)-> (or)Service(pen) (or)targets(pen) (or)and(pen) (or)design(pen) (or)choice(pen)
-(pen)o (br)Cost(pen), (br)throughput(pen), (br)and(pen) (br)availability(pen)
+(pen)-> (p)Cost(pen), (p)throughput(pen), (p)and availability(pen)
+(pen)-> (hp)Service targets and design choice(pen)
+(pen)o (p)Cost(pen), (p)throughput(pen), (p)and availability(pen)
 (pen)-> Constraints include budget, space, and compatibility.
 (pen)-> Business drivers include capacity, growth, and recovery.
-(pen)-> Measure busy-hour (br)throughput(pen) and identify bottlenecks.
-(pen)-> Bandwidth (pu)costs(pen) money and may not fix server or app delay.
-(pen)-> Independent redundant links and devices improve (br)availability(pen).
+(pen)-> Measure busy-hour (p)throughput(pen) and identify bottlenecks.
+(pen)-> Bandwidth (li)costs(pen) money and may not fix server (g)or(pen) app delay.
+(pen)-> Independent redundant links and devices improve (p)availability(pen).
 (pen)-> Extra paths need routes, tests, monitoring, and skilled staff.
 (pen)-> Star's central device can fail without redundancy.
 (pen)-> Mesh increases path choices and cabling/management complexity.
-(pen)-> Topology labels alone do not guarantee performance or uptime.
-(pen)o (or)Service(pen) (or)targets(pen) (or)and(pen) (or)design(pen) (or)choice(pen)
-(pen)-> A (pu)service(pen) level agreement (SLA) states measurable promises.
-(pen)-> Define (pu)service(pen), measurement window, exclusions, and reporting.
+(pen)-> Topology labels alone do not guarantee performance (g)or(pen) uptime.
+(pen)o (hp)Service targets and design choice(pen)
+(pen)-> A (hp)service(pen) level agreement (SLA) states measurable promises.
+(pen)-> Define (hp)service(pen), measurement window, exclusions, and reporting.
 (pen)-> Provider uptime is not end-to-end application uptime.
 (pen)-> Map power, DNS, identity, carrier, and storage dependencies.
 (pen)-> Health probes can remove unhealthy backends from flows.
 (pen)-> A probe may miss an untested dependency failure.
 (pen)-> Session persistence keeps client affinity but can skew load.
-(pen)-> Model options against (br)cost(pen), (br)throughput(pen), recovery, and staff.
+(pen)-> Model options against (p)cost(pen), (p)throughput(pen), recovery, and staff.
 (pen)-> Record assumptions, options, owners, and review triggers.
-(pen)-> Review (or)targets(pen) when business impact or dependencies change.
+(pen)-> Review (hp)targets(pen) when business impact (g)or(pen) dependencies change.

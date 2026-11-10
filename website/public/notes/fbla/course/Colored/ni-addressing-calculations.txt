@@ -1,48 +1,48 @@
 (pen)o Overview
-(pen)-> (g)IP(pen) (g)and(pen) (g)MAC(pen) (g)addressing(pen)
-(pen)-> (pu)Subnet(pen) (pu)purpose(pen) (pu)and(pen) (pu)CIDR(pen)
-(pen)o (g)IP(pen) (g)and(pen) (g)MAC(pen) (g)addressing(pen)
+(pen)-> (g)IP and MAC addressing(pen)
+(pen)-> (li)Subnet purpose and CIDR(pen)
+(pen)o (g)IP and MAC addressing(pen)
 (pen)-> (g)IP(pen) addresses identify interfaces for logical packet delivery.
 (pen)-> Routers compare destination (g)IP(pen) with network prefixes to route.
 (pen)-> (g)MAC(pen) addresses identify link-layer interfaces on a local link.
 (pen)-> Switches learn source (g)MAC(pen) locations to forward local frames.
 (pen)-> A router uses a new link frame at each routed hop.
-(pen)-> (g)MAC(pen) is not the end-to-end Internet destination (br)address(pen).
-(pen)-> (br)Address(pen) resolution finds a local link (br)address(pen) for a next hop.
+(pen)-> (g)MAC(pen) is not the end-to-end Internet destination (p)address(pen).
+(pen)-> (p)Address(pen) resolution finds a local link (p)address(pen) for a next hop.
 (pen)-> (g)IP(pen) and (g)MAC(pen) values alone do not prove identity or permission.
 (pen)-> Addresses may be assigned manually or by network services.
-(pen)o (pu)Subnet(pen) (pu)purpose(pen) (pu)and(pen) (pu)CIDR(pen)
-(pen)-> A (pu)subnet(pen) groups addresses sharing a common network prefix.
+(pen)o (li)Subnet purpose and CIDR(pen)
+(pen)-> A (li)subnet(pen) groups addresses sharing a common network prefix.
 (pen)-> Subnetting divides blocks for routing and administration.
-(pen)-> (pu)CIDR(pen) writes a prefix length, such as IPv4 /24.
-(pen)-> A /24 means 24 leading bits identify the IPv4 prefix.
+(pen)-> (li)CIDR(pen) writes a prefix length, such as (p)IPv(pen)4 /24.
+(pen)-> A /24 means 24 leading bits identify the (p)IPv(pen)4 prefix.
 (pen)-> Its dotted mask is 255.255.255.0; mask bits are contiguous.
-(pen)-> IPv4 block size is 2^(32 minus prefix length) addresses.
+(pen)-> (p)IPv(pen)4 block size is 2^(32 minus prefix length) addresses.
 (pen)-> Network boundaries align to the block size.
-(pen)-> (pu)CIDR(pen) uses explicit prefixes, not inferred (br)address(pen) classes.
-(pen)-> (pu)Subnet(pen) design balances growth, (br)address(pen) use and broadcasts.
+(pen)-> (li)CIDR(pen) uses explicit prefixes, not inferred (p)address(pen) (p)classes(pen).
+(pen)-> (li)Subnet(pen) design balances growth, (p)address(pen) use and broadcasts.
 (pen)-> A /31 can assign both addresses on a point-to-point link.
 (pen)o Overview
-(pen)-> (br)Historical(pen) (br)IPv(pen)4 (br)address(pen) (br)classes(pen)
-(pen)-> (or)Addressing(pen) (or)and(pen) (or)planning(pen) (or)limits(pen)
-(pen)o (br)Historical(pen) (br)IPv(pen)4 (br)address(pen) (br)classes(pen)
+(pen)-> (p)Historical IPv(pen)4 (p)address classes(pen)
+(pen)-> (hp)Addressing and planning limits(pen)
+(pen)o (p)Historical IPv(pen)4 (p)address classes(pen)
 (pen)-> Class A historically had first octet 1 through 126.
 (pen)-> Class B historically had first octet 128 through 191.
 (pen)-> Class C historically had first octet 192 through 223.
 (pen)-> Class D: first octet 224-239; multicast addresses.
 (pen)-> Class E: first octet 240-255; historically experimental.
-(pen)-> Special-use values limit these simplified (br)historical(pen) ranges.
+(pen)-> Special-use values limit these simplified (p)historical(pen) ranges.
 (pen)-> Classful networks once implied default network masks.
-(pen)-> Classless (pu)CIDR(pen) replaced class-based routing and allocation.
+(pen)-> Classless (li)CIDR(pen) replaced class-based routing and allocation.
 (pen)-> Modern configuration specifies a prefix or mask explicitly.
-(pen)o (or)Addressing(pen) (or)and(pen) (or)planning(pen) (or)limits(pen)
+(pen)o (hp)Addressing and planning limits(pen)
 (pen)-> Size subnets for planned growth without needless waste.
 (pen)-> Separate prefixes can simplify routing and management.
 (pen)-> Subnetting alone does not block all inter-host traffic.
 (pen)-> Routing policy determines which networks can exchange packets.
-(pen)-> Plan IPv4 and IPv6 addresses and firewall rules separately.
+(pen)-> Plan (p)IPv(pen)4 and IPv6 addresses and firewall rules separately.
 (pen)-> Special-use ranges are not ordinary public host allocations.
 (pen)-> Allocation and reachability depend on provider and setup.
-(pen)-> Do not infer a modern prefix from (br)historical(pen) class labels.
+(pen)-> Do not infer a modern prefix from (p)historical(pen) class labels.
 (pen)-> Verify mask, boundary and host rules for the specific link.
-(pen)-> Legacy (pu)subnet(pen) tutorials may use simplified classful examples.
+(pen)-> Legacy (li)subnet(pen) tutorials may use simplified classful examples.

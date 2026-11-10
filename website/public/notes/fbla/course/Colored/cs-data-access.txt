@@ -1,7 +1,7 @@
 (pen)o Overview
-(pen)-> (g)Three(pen) (g)states(pen) (g)of(pen) (g)data(pen)
-(pen)-> (pu)MAC(pen), (pu)DAC(pen), (pu)and(pen) (pu)RBAC(pen) (pu)models(pen)
-(pen)o (g)Three(pen) (g)states(pen) (g)of(pen) (g)data(pen)
+(pen)-> (g)Three states of data(pen)
+(pen)-> (li)MAC(pen), (li)DAC(pen), (li)and RBAC models(pen)
+(pen)o (g)Three states of data(pen)
 (pen)-> (g)Data(pen) at rest is stored on disk, device, backup, or database.
 (pen)-> Protect stored (g)data(pen) with encryption and account permissions.
 (pen)-> (g)Data(pen) in transit moves between devices or services.
@@ -11,34 +11,34 @@
 (pen)-> Encryption at rest may not protect (g)data(pen) after unlock.
 (pen)-> Transit encryption does not protect a compromised endpoint.
 (pen)-> Select controls based on sensitivity and threat model.
-(pen)o (pu)MAC(pen), (pu)DAC(pen), (pu)and(pen) (pu)RBAC(pen) (pu)models(pen)
-(pen)-> (pu)MAC(pen) means mandatory access control under central (or)policy(pen).
+(pen)o (li)MAC(pen), (li)DAC(pen), (li)and RBAC models(pen)
+(pen)-> (li)MAC(pen) means mandatory access control under central (hp)policy(pen).
 (pen)-> Labels and clearance can govern classified document access.
-(pen)-> Ordinary users cannot freely override mandatory (or)policy(pen).
-(pen)-> (pu)DAC(pen) means discretionary access control assigned by owner.
+(pen)-> Ordinary users cannot freely override mandatory (hp)policy(pen).
+(pen)-> (li)DAC(pen) means discretionary access control assigned by owner.
 (pen)-> Example: file owner shares a document with colleagues.
 (pen)-> Sharing can propagate access; review inherited permissions.
-(pen)-> (pu)RBAC(pen) means role-based access control tied to job duties.
+(pen)-> (li)RBAC(pen) means role-based access control tied to job duties.
 (pen)-> Payroll role reads pay (g)data(pen); approver role authorizes pay.
 (pen)-> Assign needed roles; remove stale role membership.
-(pen)-> (pu)Models(pen) can coexist; choose for risk and workflow.
+(pen)-> (li)Models(pen) can coexist; choose for risk and workflow.
 (pen)o Overview
-(pen)-> (br)Authentication(pen) (br)and(pen) (br)MFA(pen)
-(pen)-> (or)Certificates(pen), (or)tokens(pen), (or)and(pen) (or)policy(pen)
-(pen)o (br)Authentication(pen) (br)and(pen) (br)MFA(pen)
-(pen)-> (br)Authentication(pen) checks control of an identity's authenticator.
+(pen)-> (p)Authentication and MFA(pen)
+(pen)-> (hp)Certificates(pen), (hp)tokens(pen), (hp)and policy(pen)
+(pen)o (p)Authentication and MFA(pen)
+(pen)-> (p)Authentication(pen) checks control of an identity's authenticator.
 (pen)-> Authorization decides which resource action is permitted.
 (pen)-> Accounting records access and actions for review.
-(pen)-> (br)MFA(pen) combines distinct types: know, have, or are.
+(pen)-> (p)MFA(pen) combines distinct types: know, have, or are.
 (pen)-> Two passwords are both knowledge, not two factors.
 (pen)-> A password plus authenticator token is two different factors.
-(pen)-> (br)MFA(pen) reduces password-only risk but does not stop every attack.
+(pen)-> (p)MFA(pen) reduces password-only risk but does not stop every attack.
 (pen)-> Phishing-resistant authenticators reduce credential relay.
 (pen)-> Protect enrollment, recovery, and authenticator revocation.
-(pen)o (or)Certificates(pen), (or)tokens(pen), (or)and(pen) (or)policy(pen)
+(pen)o (hp)Certificates(pen), (hp)tokens(pen), (hp)and policy(pen)
 (pen)-> Certificate binds a public key to an identity under CA trust.
 (pen)-> Validate chain, service name, dates, and certificate purpose.
-(pen)-> Certificate (br)authentication(pen) does not authorize every action.
+(pen)-> Certificate (p)authentication(pen) does not authorize every action.
 (pen)-> Token carries an assertion or credential to a resource.
 (pen)-> Check token issuer, signature, audience, expiry, and scope.
 (pen)-> Bearer token may be used by whoever steals it; protect it.
