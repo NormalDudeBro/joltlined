@@ -2,47 +2,47 @@
 (pen)-> (hp)From provider to host(pen)
 (pen)-> (r)Network adapters and local traffic(pen)
 (pen)o (hp)From provider to host(pen)
-(pen)-> An ISP supplies service over a (hp)provider(pen) (r)network(pen).
+(pen)-> An ISP supplies service over a provider network.
 (pen)-> A modem terminates a provider-specific signal.
-(pen)-> An ONT terminates a (db)fiber(pen) access service handoff.
-(pen)-> Either handoff can present Ethernet to a router.
-(pen)-> Some gateways combine modem or ONT and router.
-(pen)-> A router forwards IP packets between networks.
-(pen)-> Its WAN side faces service; (y)LAN(pen) serves (r)local(pen) hosts.
-(pen)-> A Layer 2 switch forwards (y)LAN(pen) frames using MACs.
-(pen)-> A switch does not replace the (mb)WAN(pen) router function.
+(pen)-> An ONT terminates a fiber access service handoff.
+(pen)-> Either handoff can present (or)Ethernet(pen) to a (or)router(pen).
+(pen)-> Some gateways combine modem or ONT and (or)router(pen).
+(pen)-> A (or)router(pen) forwards (mb)IP(pen) (mb)packets(pen) between networks.
+(pen)-> Its (or)WAN(pen) side faces service; (db)LAN(pen) serves local hosts.
+(pen)-> A Layer 2 (li)switch(pen) forwards (db)LAN(pen) (li)frames(pen) using (db)MACs(pen).
+(pen)-> A (li)switch(pen) does not replace the (or)WAN(pen) (or)router(pen) function.
 (pen)o (r)Network adapters and local traffic(pen)
-(pen)-> A NIC joins a (hp)host(pen) to a wired or wireless (db)link(pen).
-(pen)-> It sends and receives link-layer frames.
+(pen)-> A NIC joins a host to a wired or wireless link.
+(pen)-> It sends and receives link-layer (li)frames(pen).
 (pen)-> A PCIe NIC is a physical card fitted to a slot.
-(pen)-> A virtual NIC is a software interface for a VM.
-(pen)-> The host's virtual switch can connect virtual NICs.
-(pen)-> Path: (hp)provider(pen), modem/ONT, router, (y)LAN(pen) switch, (hp)host(pen).
+(pen)-> A virtual NIC is a software interface for a (pu)VM(pen).
+(pen)-> The host's virtual (li)switch(pen) can connect virtual NICs.
+(pen)-> Path: provider, modem/ONT, (or)router(pen), (db)LAN(pen) (li)switch(pen), host.
 (pen)-> One appliance may implement several path functions.
-(pen)-> The ISP service and working (hp)provider(pen) (r)network(pen) are also needed.
-(pen)-> Without Internet, (r)local(pen) switched communication may still work.
-(pen)-> Ethernet frames use MAC addressing on the (r)local(pen) (db)link(pen).
+(pen)-> The ISP service and working provider network are also needed.
+(pen)-> Without Internet, local switched communication may still work.
+(pen)-> (or)Ethernet(pen) (li)frames(pen) use (db)MAC(pen) addressing on the local link.
 (pen)o Overview
 (pen)-> (pu)Copper media(pen)
 (pen)-> (db)Fiber and link compatibility(pen)
 (pen)o (pu)Copper media(pen)
-(pen)-> Twisted-pair (pu)copper(pen) carries signals on paired conductors.
+(pen)-> Twisted-pair copper carries signals on paired conductors.
 (pen)-> Twisting helps reduce crosstalk between wire pairs.
 (pen)-> UTP means unshielded twisted pair; it lacks cable shielding.
 (pen)-> STP means shielded twisted pair; foil or braid screens pairs.
-(pen)-> Shield benefit depends on correct bonding and installation.
+(pen)-> Shield (g)benefit(pen) depends on correct bonding and installation.
 (pen)-> Coax has a central conductor, dielectric and outer shield.
-(pen)-> Coax carries cable broadband and some legacy Ethernet.
+(pen)-> Coax carries cable broadband and some legacy (or)Ethernet(pen).
 (pen)-> Twisted pair often uses an 8P8C modular plug.
 (pen)-> Coax commonly uses F-type or BNC connectors.
 (pen)o (db)Fiber and link compatibility(pen)
-(pen)-> Single-mode (db)fiber(pen) has a small core for one light mode.
-(pen)-> Multimode (db)fiber(pen) has a larger core carrying multiple modes.
-(pen)-> LC and SC name connector form factors, not (db)fiber(pen) modes.
-(pen)-> Corning lists LC products for both single and multimode (db)fiber(pen).
+(pen)-> Single-mode fiber has a small core for one light mode.
+(pen)-> Multimode fiber has a larger core carrying multiple modes.
+(pen)-> LC and SC name connector form factors, not fiber modes.
+(pen)-> Corning lists LC products for both single and multimode fiber.
 (pen)-> Connector fit alone does not make transceivers compatible.
-(pen)-> Match mode, wavelength, optics, connector and Ethernet PHY.
+(pen)-> Match mode, wavelength, optics, connector and (or)Ethernet(pen) PHY.
 (pen)-> Check both endpoint datasheets and the optical loss budget.
-(pen)-> (db)Fiber(pen) reach depends on PHY, optics, (db)fiber(pen) grade and loss.
-(pen)-> 100 m (pu)copper(pen) channels are common, not a universal PHY limit.
-(pen)-> Never look into (db)fiber(pen) ends; use disconnected samples only.
+(pen)-> Fiber reach depends on PHY, optics, fiber grade and loss.
+(pen)-> 100 m copper channels are common, not a universal PHY limit.
+(pen)-> Never look into fiber ends; use disconnected samples only.

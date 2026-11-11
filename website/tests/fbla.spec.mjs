@@ -73,6 +73,25 @@ test('FBLA hub prints answers and rehearsal skills without opening disclosures f
 });
 
 const courses = [['networking', 14], ['cybersecurity', 13], ['network-design', 12], ['sales', 5]];
+test('LAN body occurrences have one color across every event, sheet, and page', async ({ page }) => {
+  let count = 0;
+  for (const [event] of courses) {
+    await page.goto(`/fbla-${event}.html`);
+    const occurrences = await page.locator('.course-pages .line').evaluateAll(lines => lines.flatMap(line => {
+      const number = Number(line.querySelector('.number').textContent);
+      if ([2, 3].includes((number - 1) % 24 + 1)) return [];
+      const note = line.querySelector('.note');
+      if (note.textContent.startsWith('o ')) return [];
+      const words = [...note.textContent.matchAll(/(?<![A-Za-z0-9'-])LANs?(?![A-Za-z0-9'-])/gi)];
+      const spans = [...note.querySelectorAll('[class^="ink-"]')].filter(span => /^LANs?$/i.test(span.textContent));
+      return words.map((word, index) => ({ word: word[0], color: spans[index] ? getComputedStyle(spans[index]).color : 'uncolored', line: number }));
+    }));
+    for (const occurrence of occurrences) expect(occurrence.color, `${event}:${occurrence.line} ${occurrence.word}`).toBe('rgb(23, 63, 136)');
+    count += occurrences.length;
+  }
+  expect(count).toBeGreaterThan(10);
+});
+
 test('FBLA heading palettes vary between sheets instead of resetting on each two-page sheet', async ({ page }) => {
   for (const [event, count] of courses) {
     await page.goto(`/fbla-${event}.html`);

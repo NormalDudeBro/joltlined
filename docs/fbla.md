@@ -25,29 +25,32 @@ contrast limitation and plain-text alternatives still apply.
 four-heading palettes to each sheet. Palette selection spans the collection,
 rather than resetting every sheet to green/lime and pink/hot pink. All ten
 section inks appear as heading colors in each event; light blue identifies
-the overall sheet titles. Adjacent sheets have distinct
-heading sequences. A section's full title and Overview listing match, with
-neutral prefixes, punctuation, and digits. Body accents follow
-exact whole title words/identifiers across both pages, not inferred semantic
-categories. Shared words belong to the title with the most distinct
-non-stopword tokens, then the longest title, then the first header. Stopwords
-do not create body matches. Hyphenated names are matched as complete tokens;
-no substring matching or automatic inflection/alias expansion is performed.
+the overall sheet titles. Adjacent sheets have distinct heading sequences. A
+section's full title and Overview listing match, with neutral prefixes,
+punctuation, and digits. Heading colors are independent of body-term colors:
+body terms never inherit a heading's color.
 
-`website/scripts/fbla-color-plan.json` records reviewed optional named families
-and their selected 1-based source lines for all 44 sheets. The heading palette
-maps their preferred inks to unreserved colors, keeping optional named
-families separate from title families when headings use red, dark blue, or
-yellow. Required title-family matches take precedence;
-body lines use at most two distinct highlight colors. Omitted matches remain
-pencil rather than receiving another family's color. The reviewed composite
-sheet subjects have no separately approved body light-blue aliases; page
-captions retain their usual topic styling.
+`website/scripts/fbla-term-colors.json` is the sole body-term color registry
+across every sheet, page, and event. It maps color markers to exact,
+case-insensitive terms and explicitly listed plural/name aliases; do not infer
+aliases or assign per-sheet alternatives. Every occurrence of a registered
+term uses its centrally assigned color, regardless of heading palettes. For
+example LAN is `(db)`, WAN `(or)`, MAC `(db)`, switch `(li)`, IP `(mb)`, and
+OSI `(p)`. Prose, punctuation, and digits remain neutral. Registered terms
+always retain their assigned colors, even when registered terms co-occur on
+one line: the former two-body-colors cap does not apply to them.
+
+`website/scripts/fbla-color-plan.json` retains reviewed source fingerprints
+for all 44 sheets, but no longer assigns
+body accents or ownership. All eleven palette inks remain in use across each
+event. Light blue colors overall sheet display titles, but does not
+automatically color body mentions unless the central registry assigns it.
+Page captions retain their usual topic styling.
 
 The plan fingerprints each plain 48-line sheet with SHA-256. When changing
-note content, review its headings, global family ownership, optional anchors,
-and page boundaries before updating the fingerprint; a changed source fails
-the build rather than silently moving line-specific accents. Rebuild both
+note content, review its headings, registered body-term matches, and page
+boundaries before updating the fingerprint; a changed source fails
+the build rather than silently accepting an unreviewed source change. Rebuild both
 the event HTML (including embedded downloads) and colored text files. Do not
 edit generated colored files alone. No personal study or deck audit data is
 part of this configuration.

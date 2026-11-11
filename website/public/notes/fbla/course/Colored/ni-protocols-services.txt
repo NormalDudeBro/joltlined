@@ -2,47 +2,47 @@
 (pen)-> (r)File and Mail Protocols(pen)
 (pen)-> (pu)DNS(pen), (pu)DHCP(pen), (pu)and IP(pen)
 (pen)o (r)File and Mail Protocols(pen)
-(pen)-> FTP transfers files through control and data connections.
-(pen)-> FTP control commonly listens on (y)TCP(pen) (db)port(pen) 21 by default.
-(pen)-> FTP active/passive modes change data connection ports.
-(pen)-> Plain FTP does not protect credentials or contents in transit.
-(pen)-> FTPS adds TLS to FTP; SFTP is (r)file(pen) transfer over (li)SSH(pen).
-(pen)-> SFTP commonly uses (y)TCP(pen) (db)port(pen) 22, the SSH default.
-(pen)-> SMTP transfers (r)mail(pen) between systems and supports submission.
-(pen)-> SMTP relay commonly uses (y)TCP(pen) 25; submission often uses 587.
-(pen)-> TCP 465 often means implicit-TLS submission; configs vary.
+(pen)-> (p)FTP(pen) transfers files through control and data connections.
+(pen)-> (p)FTP(pen) control commonly listens on (p)TCP(pen) port 21 by default.
+(pen)-> (p)FTP(pen) active/passive modes change data connection ports.
+(pen)-> Plain (p)FTP(pen) does not protect credentials or contents in transit.
+(pen)-> (p)FTPS(pen) adds (hp)TLS(pen) to (p)FTP(pen); (p)SFTP(pen) is file transfer over (hp)SSH(pen).
+(pen)-> (p)SFTP(pen) commonly uses (p)TCP(pen) port 22, the (hp)SSH(pen) default.
+(pen)-> (p)SMTP(pen) transfers mail between systems and supports submission.
+(pen)-> (p)SMTP(pen) relay commonly uses (p)TCP(pen) 25; submission often uses 587.
+(pen)-> (p)TCP(pen) 465 often means implicit-TLS submission; configs vary.
 (pen)o (pu)DNS(pen), (pu)DHCP(pen), (pu)and IP(pen)
-(pen)-> (pu)DNS(pen) answers name queries with records such as (pu)IP(pen) addresses.
-(pen)-> (pu)DNS(pen) commonly uses UDP 53; TCP 53 is also required.
-(pen)-> (pu)DHCP(pen) supplies leases and network settings to hosts.
-(pen)-> DHCPv4 commonly uses UDP 67 server and 68 client.
-(pen)-> A lease may include address, mask, router, and (pu)DNS(pen) server.
-(pen)-> (pu)DHCP(pen) relay can carry client requests across routed subnets.
-(pen)-> (pu)DHCP(pen) address is host configuration, not permanent identity.
-(pen)-> (pu)DNS(pen) name resolution does not itself route packets to a host.
-(pen)-> Gateway forwards traffic beyond the local (pu)IP(pen) subnet.
-(pen)-> Stale or poisoned (pu)DNS(pen) data can direct clients incorrectly.
+(pen)-> DNS answers name queries with records such as (mb)IP(pen) addresses.
+(pen)-> DNS commonly uses (hp)UDP(pen) 53; (p)TCP(pen) 53 is also required.
+(pen)-> (li)DHCP(pen) supplies leases and network settings to hosts.
+(pen)-> DHCPv4 commonly uses (hp)UDP(pen) 67 server and 68 client.
+(pen)-> A lease may include address, mask, (or)router(pen), and DNS server.
+(pen)-> (li)DHCP(pen) relay can carry client requests across routed (mb)subnets(pen).
+(pen)-> (li)DHCP(pen) address is host configuration, not permanent identity.
+(pen)-> DNS name resolution does not itself route (mb)packets(pen) to a host.
+(pen)-> Gateway forwards traffic beyond the local (mb)IP(pen) (mb)subnet(pen).
+(pen)-> Stale or poisoned DNS data can direct clients incorrectly.
 (pen)o Overview
 (pen)-> (db)Transport and Port Defaults(pen)
 (pen)-> (mb)NAT and Secure Service Use(pen)
 (pen)o (db)Transport and Port Defaults(pen)
-(pen)-> TCP provides an ordered byte stream with retransmission.
-(pen)-> TCP setup and recovery add overhead; delivery is not instant.
-(pen)-> UDP sends datagrams without TCP delivery/order guarantees.
-(pen)-> Applications may add reliability above UDP when needed.
-(pen)-> (pu)IP(pen) carries packets; TCP/UDP ports identify endpoints.
-(pen)-> HTTP commonly uses TCP 80; HTTPS commonly TCP 443.
-(pen)-> (li)SSH(pen) commonly uses TCP 22; (mb)service(pen) ports can be changed.
-(pen)-> (pu)DNS(pen) uses UDP or TCP 53; blocking TCP can break functions.
-(pen)-> NTP commonly uses UDP 123; (db)defaults(pen) are not exclusive rules.
+(pen)-> (p)TCP(pen) provides an ordered byte stream with retransmission.
+(pen)-> (p)TCP(pen) setup and recovery add overhead; delivery is not instant.
+(pen)-> (hp)UDP(pen) sends datagrams without (p)TCP(pen) delivery/order guarantees.
+(pen)-> Applications may add reliability above (hp)UDP(pen) when needed.
+(pen)-> (mb)IP(pen) carries (mb)packets(pen); (p)TCP(pen)/(hp)UDP(pen) ports identify endpoints.
+(pen)-> (p)HTTP(pen) commonly uses (p)TCP(pen) 80; (p)HTTPS(pen) commonly (p)TCP(pen) 443.
+(pen)-> (hp)SSH(pen) commonly uses (p)TCP(pen) 22; service ports can be changed.
+(pen)-> DNS uses (hp)UDP(pen) or (p)TCP(pen) 53; blocking (p)TCP(pen) can break functions.
+(pen)-> NTP commonly uses (hp)UDP(pen) 123; defaults are not exclusive rules.
 (pen)o (mb)NAT and Secure Service Use(pen)
-(pen)-> (mb)NAT(pen) maps (pu)IP(pen) addresses between address realms.
-(pen)-> NAPT also maps (db)transport(pen) ports for multiple inside hosts.
-(pen)-> Home gateways commonly share one public IPv4 address.
-(pen)-> Translation conserves addresses; it does not encrypt packets.
-(pen)-> (mb)NAT(pen) is not a firewall policy or authentication mechanism.
-(pen)-> A stateful firewall separately permits or denies flows.
+(pen)-> (or)NAT(pen) maps (mb)IP(pen) addresses between address realms.
+(pen)-> NAPT also maps transport ports for multiple inside hosts.
+(pen)-> Home gateways commonly share one public (mb)IPv(pen)4 address.
+(pen)-> Translation conserves addresses; it does not encrypt (mb)packets(pen).
+(pen)-> (or)NAT(pen) is not a (r)firewall(pen) policy or (hp)authentication(pen) mechanism.
+(pen)-> A stateful (r)firewall(pen) separately permits or denies flows.
 (pen)-> Inbound reachability may need mapping and explicit policy.
-(pen)-> (g)TLS(pen) aims to protect channels from eavesdropping and tampering.
-(pen)-> (mb)Use(pen) (mb)secure(pen) transfer; configure (g)TLS(pen) and verify peer identity.
-(pen)-> (mb)Service(pen) configuration, not (db)port(pen) number, determines exposure.
+(pen)-> (hp)TLS(pen) aims to protect channels from eavesdropping and tampering.
+(pen)-> Use secure transfer; configure (hp)TLS(pen) and verify peer identity.
+(pen)-> Service configuration, not port number, determines exposure.

@@ -8,9 +8,12 @@ import { colorSheet, fblaInks } from '../scripts/fbla-colors.mjs';
 import { palette } from '../scripts/build.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const root = resolve(here, '..', 'public');
 const config = JSON.parse(readFileSync(resolve(here, '../scripts/fbla-color-plan.json'), 'utf8'));
-const headingPlan = JSON.parse(readFileSync(resolve(here, '../scripts/fbla-heading-palettes.json'), 'utf8'));
+const termPlan = JSON.parse(readFileSync(resolve(here, '../scripts/fbla-term-colors.json'), 'utf8'));
+const registered = Object.entries(termPlan).flatMap(([color, terms]) => terms.map(term => ({ term, color })));
+const termExpression = new RegExp(`(?<![A-Za-z0-9'-])(?:${registered.map(item => item.term).sort((a, b) => b.length - a.length).map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})(?![A-Za-z0-9'-])`, 'gi');
+const termColors = new Map(registered.map(item => [item.term.toLowerCase(), item.color]));
+assert.equal(termColors.size, registered.length, 'each global term has exactly one color');
 const sheets = renderCourseSheets();
 const marker = /\((pen|g|li|pu|br|or|y|r|db|mb|p|lb|hp)\)/g;
 const strip = value => value.replace(marker, '');
@@ -38,6 +41,20 @@ assert.deepEqual(fblaInks, { r: '#df3034', db: '#173f88', mb: '#287db3', y: '#eb
 assert.equal(Object.keys(config.sheets).length, 44);
 assert.equal(Object.keys(config.sheets).length * 2, 88, 'local source plan covers both pages of all 44 sheets');
 
+let lanOccurrences = 0;
+let crowdedLines = 0;
+for (const item of sheets.sheets) {
+  const lines = parse(colorSheet(item.plain, palette, item.sheet.id));
+  for (const [index, line] of lines.entries()) {
+    if (line.text.startsWith('o ') || [1, 2].includes(index % 24)) continue;
+    for (const match of line.text.matchAll(/(?<![A-Za-z0-9'-])LANs?(?![A-Za-z0-9'-])/gi)) {
+      assert.equal(colorAt(line, match.index), 'db', `${item.sheet.id}:${index + 1}: every body LAN occurrence must be dark blue, independent of heading palette`);
+      lanOccurrences++;
+    }
+  }
+}
+assert.ok(lanOccurrences > 10, 'cross-sheet LAN regression covers the actual course, not one fixture');
+
 for (const event of ['networking', 'cybersecurity', 'network-design', 'sales']) {
   const eventSheets = sheets.sheets.filter(item => item.module.event === event);
   const sequences = eventSheets.map(item => parse(colorSheet(item.plain, palette, item.sheet.id))
@@ -64,7 +81,7 @@ for (const item of sheets.sheets) {
     const rendered = lines[index];
     assert.ok(colored.split('\n')[index].startsWith('(pen)'), `${item.sheet.id}:${index + 1}: line begins pencil`);
     const accents = new Set(rendered.spans.filter(span => span.ink !== 'pen' && span.text).map(span => span.ink));
-    assert.ok(accents.size <= 2, `${item.sheet.id}:${index + 1}: at most two distinct colors`);
+    if (accents.size > 2) crowdedLines++;
     assert.equal(rendered.text, plainLine);
 
     const title = plainLine.startsWith('o ') && plainLine !== 'o Overview';
@@ -83,6 +100,15 @@ for (const item of sheets.sheets) {
       assert.match(part.text, /^[A-Za-z]+(?: [A-Za-z]+)*$/, `${item.sheet.id}:${index + 1}: color spans contain only whole alphabetic words and internal spaces`);
     }
     if (!title && !overviewEntry && plainLine !== 'o Overview') {
+      const expected = Array(plainLine.length).fill('pen');
+      for (const match of plainLine.matchAll(termExpression)) {
+        for (let offset = 0; offset < match[0].length; offset++) {
+          if (/[A-Za-z]/.test(match[0][offset])) expected[match.index + offset] = termColors.get(match[0].toLowerCase());
+        }
+      }
+      for (const word of plainLine.matchAll(/[A-Za-z]/g)) {
+        assert.equal(colorAt(rendered, word.index), expected[word.index], `${item.sheet.id}:${index + 1}: body letters follow only the global term registry`);
+      }
       for (const word of plainLine.matchAll(/(?<![A-Za-z0-9'-])[A-Za-z0-9]+(?:['-][A-Za-z0-9]+)*(?![A-Za-z0-9'-])/g)) {
         const ink = colorAt(rendered, word.index);
         if (/^(overview|need|to|know|understand|do|identify|takeaway|developments|and|of|in|the|a|an|for|with)$/i.test(word[0])) {
@@ -98,34 +124,13 @@ for (const item of sheets.sheets) {
     }
   }
 
-  for (const accent of sheetPlan.accents ?? []) {
-    assert.ok(['r', 'db', 'y'].includes(accent.color), `${item.sheet.id}: optional accents use approved optional inks`);
-    const headingPalette = headingPlan.palettes[headingPlan.sheets[item.sheet.id]];
-    const color = headingPalette.accents[accent.color];
-    assert.ok(!headingPalette.titles.includes(color), `${item.sheet.id}: optional family never borrows a reserved heading color`);
-    for (const lineNo of accent.lines) {
-      const line = lines[lineNo - 1];
-      assert.ok(line, `${item.sheet.id}:${lineNo}: configured anchor is within source`);
-      assert.ok(Array.isArray(accent.terms) && accent.terms.length, `${item.sheet.id}:${lineNo}: anchor has at least one term alternative`);
-      assert.ok(accent.terms.some(term => {
-        const expression = new RegExp(`(?<![A-Za-z0-9'-])${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![A-Za-z0-9'-])`, 'i');
-        const match = expression.exec(line.text);
-        if (!match) return false;
-        const firstLetter = match[0].search(/[A-Za-z]/);
-        return firstLetter >= 0 && colorAt(line, match.index + firstLetter) === color;
-      }), `${item.sheet.id}:${lineNo}: one configured accent alternative is present and uses ${color}`);
-    }
-  }
+  assert.ok(!Object.hasOwn(sheetPlan, 'accents'), 'per-sheet body exceptions have been removed');
 }
+assert.ok(crowdedLines > 0, 'registered terms are retained even when more than two body colors co-occur');
 
 assert.throws(() => colorSheet(sheets.sheets[0].plain, palette, 'unknown-sheet-id'), /unknown sheet/i);
 assert.throws(() => colorSheet(`${sheets.sheets[0].plain}drift`, palette, sheets.sheets[0].sheet.id), /source|fingerprint|hash/i);
 
-const at = (lines, term, label) => {
-  const index = lines.findIndex(line => line.text.toLowerCase().includes(term.toLowerCase()));
-  assert.notEqual(index, -1, `${label}: worked-example term occurs in the actual source`);
-  return colorAt(lines[index], lines[index].text.toLowerCase().indexOf(term.toLowerCase()));
-};
 const atLine = (line, term, label) => {
   const index = line.text.toLowerCase().indexOf(term.toLowerCase());
   assert.notEqual(index, -1, `${label}: worked-example term occurs on the expected source line`);
@@ -134,22 +139,25 @@ const atLine = (line, term, label) => {
 
 const example = sheets.sheets.find(item => item.sheet.id === 'ni-basics-models');
 const exampleLines = parse(colorSheet(example.plain, palette, example.sheet.id));
-assert.equal(atLine(exampleLines[6], 'switch', 'cross-page switch ownership'), 'hp', 'shared switch ownership resolves consistently to its owning title');
-assert.equal(at(exampleLines, 'enterprise', 'sheet-wide title ownership'), 'li');
-assert.equal(atLine(exampleLines[6], 'MAC', 'optional MAC accent'), 'db');
+assert.equal(atLine(exampleLines[4], 'LAN', 'global LAN ink'), 'db');
+assert.equal(atLine(exampleLines[6], 'switch', 'global switch ink'), 'li');
+assert.equal(atLine(exampleLines[6], 'Ethernet', 'global Ethernet ink'), 'or');
+assert.equal(atLine(exampleLines[6], 'MAC', 'global MAC ink'), 'db');
+assert.equal(atLine(exampleLines[17], 'enterprise', 'unregistered prose'), 'pen');
+assert.ok(new Set(exampleLines[6].spans.filter(span => span.ink !== 'pen').map(span => span.ink)).size > 2, 'all three registered colors survive on the same line');
 
 const cloud = sheets.sheets.find(item => item.sheet.id === 'ni-wireless-cloud');
 const cloudLines = parse(colorSheet(cloud.plain, palette, cloud.sheet.id));
-assert.equal(atLine(cloudLines[12], 'service', 'cloud second-title ownership'), 'mb');
-assert.equal(atLine(cloudLines[22], 'cloud', 'cloud cross-page ownership'), 'db');
+assert.equal(atLine(cloudLines[12], 'service', 'unregistered heading word in body'), 'pen');
+assert.equal(atLine(cloudLines[22], 'cloud', 'global cloud ink'), 'mb');
 assert.equal(colorAt(cloudLines[12], cloudLines[12].text.lastIndexOf('and')), 'pen', 'title connective stopword does not create a body family');
 
 const password = sheets.sheets.find(item => item.sheet.id === 'cs-mitigation-practice');
 const passwordLines = parse(colorSheet(password.plain, palette, password.sheet.id));
-assert.equal(atLine(passwordLines[17], 'password', 'longest-title password ownership'), 'pu', 'equal-specificity password titles resolve to the longer title');
+assert.equal(atLine(passwordLines[17], 'password', 'global password ink'), 'hp');
 
 const priorities = sheets.sheets.find(item => item.sheet.id === 'sp-discovery-opening');
 const prioritiesLines = parse(colorSheet(priorities.plain, palette, priorities.sheet.id));
 assert.equal(atLine(prioritiesLines[39], 'priorities', 'priorities title ownership'), 'pu');
 
-console.log('PASS: FBLA lexical title ownership, exact line preservation, optional anchor plan, neutral syntax, two-color limit and drift guards.');
+console.log(`PASS: ${registered.length} centrally registered body terms, ${lanOccurrences} consistent LAN occurrences, independent varied heading palettes, exact preservation and drift guards.`);

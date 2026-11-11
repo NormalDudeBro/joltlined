@@ -2,47 +2,47 @@
 (pen)-> (y)Threat defenses and least privilege(pen)
 (pen)-> (or)Zero Trust and network admission(pen)
 (pen)o (y)Threat defenses and least privilege(pen)
-(pen)-> DoS exhausts a service resource; DDoS distributes that load.
-(pen)-> Capacity, filtering and provider aid may mitigate DoS.
-(pen)-> Phishing deceives users into disclosing data or taking action.
+(pen)-> (r)DoS(pen) exhausts a service resource; (r)DDoS(pen) distributes that load.
+(pen)-> Capacity, filtering and provider aid may mitigate (r)DoS(pen).
+(pen)-> (r)Phishing(pen) deceives users into disclosing data or taking action.
 (pen)-> Verify requests via known channels; report suspicious mail.
 (pen)-> Insider risk may be intentional or accidental.
-(pen)-> (y)Least(pen) (y)privilege(pen) limits (p)access(pen) to needed tasks and time.
-(pen)-> Remove unused services; close ports and patch systems.
+(pen)-> (db)Least privilege(pen) limits access to needed tasks and time.
+(pen)-> Remove unused services; (hp)close(pen) ports and patch systems.
 (pen)-> Antivirus detects some threats; it cannot assure safety.
-(pen)-> Third-party (p)access(pen) needs scope, oversight and revocation.
+(pen)-> Third-party access needs scope, oversight and revocation.
 (pen)o (or)Zero Trust and network admission(pen)
-(pen)-> (or)Zero(pen) (or)Trust(pen) grants no automatic (or)trust(pen) merely from LAN location.
-(pen)-> Evaluate each (p)access(pen) request using (li)identity(pen) and context.
-(pen)-> Grant granular least-privilege (p)access(pen) to data and services.
+(pen)-> (db)Zero Trust(pen) grants no automatic trust merely from (db)LAN(pen) location.
+(pen)-> Evaluate each access request using identity and context.
+(pen)-> Grant granular least-privilege access to data and services.
 (pen)-> Reassess decisions as users, devices and risk context change.
-(pen)-> MFA combines factor types; two passwords are one type.
-(pen)-> Authentication checks (li)identity(pen); authorization grants actions.
-(pen)-> NAC checks device or (li)identity(pen) at (or)network(pen) (or)admission(pen).
-(pen)-> NAC may quarantine a device pending remediation or compliance.
-(pen)-> VLAN segmentation needs policy controls on inter-VLAN traffic.
-(pen)-> NAC complements endpoint, (li)identity(pen) controls and monitoring.
+(pen)-> (hp)MFA(pen) combines factor types; two (hp)passwords(pen) are one type.
+(pen)-> (hp)Authentication(pen) checks identity; (pu)authorization(pen) grants actions.
+(pen)-> (hp)NAC(pen) checks device or identity at network admission.
+(pen)-> (hp)NAC(pen) may quarantine a device pending remediation or compliance.
+(pen)-> (pu)VLAN(pen) (pu)segmentation(pen) needs policy controls on inter-VLAN traffic.
+(pen)-> (hp)NAC(pen) complements endpoint, identity controls and monitoring.
 (pen)o Overview
 (pen)-> (li)BitLocker and directory identity(pen)
 (pen)-> (p)SELinux mandatory access control(pen)
 (pen)o (li)BitLocker and directory identity(pen)
-(pen)-> (li)BitLocker(pen) encrypts Windows volumes against offline exposure.
-(pen)-> TPM can protect startup keys and check offline integrity.
-(pen)-> Startup PIN or key can add preboot (p)access(pen) protection.
-(pen)-> Encryption does not protect data in an open session.
+(pen)-> (y)BitLocker(pen) encrypts (hp)Windows(pen) volumes against offline exposure.
+(pen)-> TPM can protect startup keys and check offline (g)integrity(pen).
+(pen)-> Startup PIN or key can add preboot access protection.
+(pen)-> (g)Encryption(pen) does not protect data in an open session.
 (pen)-> Protect and back up recovery keys for legitimate recovery.
-(pen)-> AD DS stores (li)directory(pen) objects such as accounts and groups.
-(pen)-> Domain (li)identity(pen) centralizes authentication and (p)access(pen) (p)control(pen).
+(pen)-> AD DS stores directory objects such as accounts and groups.
+(pen)-> Domain identity centralizes (hp)authentication(pen) and access control.
 (pen)-> Policy-based administration manages settings across systems.
-(pen)-> DNS locates services; a DNS name is not AD (li)identity(pen).
+(pen)-> DNS locates services; a DNS name is not AD identity.
 (pen)o (p)SELinux mandatory access control(pen)
-(pen)-> (p)SELinux(pen) is Linux Security-Enhanced Linux (p)access(pen) (p)control(pen).
-(pen)-> It implements (p)mandatory(pen) (p)access(pen) (p)control(pen) ((db)MAC(pen)) through policy.
+(pen)-> (r)SELinux(pen) is (g)Linux(pen) Security-Enhanced (g)Linux(pen) access control.
+(pen)-> It implements (r)mandatory access control(pen) ((db)MAC(pen)) through policy.
 (pen)-> Policy constrains user and process interaction with objects.
 (pen)-> File and process labels provide context for policy decisions.
 (pen)-> Rules can restrict services beyond ordinary file permissions.
 (pen)-> This can limit damage if a process is compromised.
 (pen)-> Investigate denials; fix policy, do not blindly disable it.
-(pen)-> (p)SELinux(pen) is not antivirus; updates and backups still matter.
+(pen)-> (r)SELinux(pen) is not antivirus; updates and (g)backups(pen) still matter.
 (pen)-> (db)MAC(pen) policy differs from discretionary owner/group permissions.
 (pen)-> Use platform docs for modes and safe policy administration.

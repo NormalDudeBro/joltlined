@@ -2,8 +2,8 @@
 (pen)-> (db)Build a reliable relationship(pen)
 (pen)-> (mb)Organize buyer(pen)-(mb)centered content(pen)
 (pen)o (db)Build a reliable relationship(pen)
-(pen)-> Relevant, dependable service can (db)build(pen) customer trust.
-(pen)-> Agree on follow-up purpose, channel, and timing with consent.
+(pen)-> Relevant, dependable service can build customer trust.
+(pen)-> Agree on follow-up purpose, channel, and timing with (p)consent(pen).
 (pen)-> Record only needed contact details and protect them.
 (pen)-> Confirm owner, date, and promised deliverable.
 (pen)-> Keep promises or notify buyer and reset expectations.
@@ -15,28 +15,28 @@
 (pen)-> A coherent sequence helps listeners follow the decision.
 (pen)-> Useful order: greet, discover, confirm, recommend, respond.
 (pen)-> Then suggest fit, decide next step, and follow up.
-(pen)-> (y)Transitions(pen) explain why the next point matters.
+(pen)-> Transitions explain why the next point matters.
 (pen)-> Example: connect a stated delay to the relevant workflow.
-(pen)-> Keep sections tied to confirmed buyer priorities.
-(pen)-> Avoid feature dumps and repeated claims.
+(pen)-> Keep sections tied to confirmed buyer (pu)priorities(pen).
+(pen)-> Avoid (li)feature(pen) dumps and repeated (or)claims(pen).
 (pen)-> Clear organization aids recovery after a question.
 (pen)-> Separate verified facts, examples, and recommendations.
-(pen)-> Adapt order when buyer information changes priorities.
+(pen)-> Adapt order when buyer information changes (pu)priorities(pen).
 (pen)o Overview
 (pen)-> (y)Manage time and transitions(pen)
 (pen)-> (g)Coordinate team handoffs(pen)
 (pen)o (y)Manage time and transitions(pen)
-(pen)-> (r)FBLA(pen) gives 3 minutes for setup, then 7 for presentation.
-(pen)-> (y)Time(pen) segments are exclusive; setup (y)time(pen) cannot extend pitch.
+(pen)-> (hp)FBLA(pen) gives 3 minutes for setup, then 7 for presentation.
+(pen)-> Time segments are exclusive; setup time cannot extend pitch.
 (pen)-> There is no separate question-and-answer segment.
 (pen)-> Judges may ask during presentation; reserve room to respond.
 (pen)-> Answer, then use a short transition back to the thread.
 (pen)-> Practice aloud and rehearse recovering from a missed point.
 (pen)-> Clear organization helps restore the thread after a mistake.
 (pen)-> A brief outline supports flow without a rigid script.
-(pen)-> Check (y)time(pen) by rehearsal; do not rush a buyer's question.
+(pen)-> Check time by rehearsal; do not rush a buyer's question.
 (pen)o (g)Coordinate team handoffs(pen)
-(pen)-> All (g)team(pen) members must actively participate in delivery.
+(pen)-> All team members must actively participate in delivery.
 (pen)-> Assign section ownership and agree on handoff cues.
 (pen)-> A handoff links the prior point to the next speaker's role.
 (pen)-> Share verified facts so offer descriptions stay consistent.
@@ -44,5 +44,5 @@
 (pen)-> Practice missed-cue recovery without blaming a teammate.
 (pen)-> Do not speak over a teammate answering a judge.
 (pen)-> A teammate may clarify; keep one coherent answer.
-(pen)-> Rehearse (y)transitions(pen) under the actual seven-minute limit.
+(pen)-> Rehearse transitions under the actual seven-minute limit.
 (pen)-> Registered competitors prepare their own real event entry.

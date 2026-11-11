@@ -2,47 +2,47 @@
 (pen)-> (y)Backup methods and recovery(pen)
 (pen)-> (or)RAID(pen), (or)UPS(pen), (or)and CIA design cases(pen)
 (pen)o (y)Backup methods and recovery(pen)
-(pen)-> A (y)backup(pen) is a separate recoverable copy of selected data.
+(pen)-> A (g)backup(pen) is a separate recoverable copy of selected data.
 (pen)-> Full copies selected data; restore is straightforward.
-(pen)-> Incremental copies changes since the most recent (y)backup(pen).
-(pen)-> Restore a full (y)backup(pen), then each incremental in sequence.
-(pen)-> Differential copies changes since the last full (y)backup(pen).
-(pen)-> Restore a full (y)backup(pen) and the latest differential copy.
-(pen)-> Differentials grow until another full (y)backup(pen) is made.
+(pen)-> Incremental copies changes since the most recent (g)backup(pen).
+(pen)-> Restore a full (g)backup(pen), then each incremental in sequence.
+(pen)-> Differential copies changes since the last full (g)backup(pen).
+(pen)-> Restore a full (g)backup(pen) and the latest differential copy.
+(pen)-> Differentials grow until another full (g)backup(pen) is made.
 (pen)-> Test restores; unreadable copies do not protect.
-(pen)-> Keep isolated or offline copies to resist ransomware.
+(pen)-> Keep isolated or offline copies to resist (r)ransomware(pen).
 (pen)o (or)RAID(pen), (or)UPS(pen), (or)and CIA design cases(pen)
-(pen)-> (or)RAID(pen) combines disks for performance or fault tolerance.
-(pen)-> (or)RAID(pen) 1 mirrors; (or)RAID(pen) 5 tolerates one disk failure.
-(pen)-> (or)RAID(pen) 6 tolerates two disk failures; (or)RAID(pen) 0 has no redundancy.
-(pen)-> (or)RAID(pen) cannot protect from deletion, malware, theft, or fire.
-(pen)-> (or)RAID(pen) is not (y)backup(pen); keep independent, versioned copies.
-(pen)-> (or)UPS(pen) battery bridges brief outages and enables safe shutdown.
-(pen)-> Confidentiality: encrypt backups and restrict key access.
-(pen)-> Integrity: detect changes with trusted hashes or signatures.
-(pen)-> Availability: (or)UPS(pen) and restores limit outage impact.
-(pen)-> No single safeguard guarantees all three (or)CIA(pen) goals.
+(pen)-> (g)RAID(pen) combines disks for performance or fault tolerance.
+(pen)-> (g)RAID(pen) 1 mirrors; (g)RAID(pen) 5 tolerates one disk failure.
+(pen)-> (g)RAID(pen) 6 tolerates two disk failures; (g)RAID(pen) 0 has no redundancy.
+(pen)-> (g)RAID(pen) cannot protect from deletion, (r)malware(pen), theft, or fire.
+(pen)-> (g)RAID(pen) is not (g)backup(pen); keep independent, versioned copies.
+(pen)-> (g)UPS(pen) battery bridges brief outages and enables safe shutdown.
+(pen)-> (g)Confidentiality(pen): encrypt (g)backups(pen) and restrict key access.
+(pen)-> (g)Integrity(pen): detect changes with trusted (g)hashes(pen) or signatures.
+(pen)-> (g)Availability(pen): (g)UPS(pen) and restores limit outage impact.
+(pen)-> No single safeguard guarantees all three CIA goals.
 (pen)o Overview
 (pen)-> (li)Security testing and architecture(pen)
 (pen)-> (p)Evidence(pen), (p)remediation(pen), (p)and retesting(pen)
 (pen)o (li)Security testing and architecture(pen)
-(pen)-> (li)Testing(pen) checks controls against stated needs and threats.
-(pen)-> (or)Design(pen) review traces assets, identities, flows, boundaries.
+(pen)-> Testing checks controls against stated needs and threats.
+(pen)-> Design review traces assets, identities, flows, boundaries.
 (pen)-> Configuration review finds excess access and weak settings.
 (pen)-> Scanners find known issues; validate findings and rank risk.
 (pen)-> Static analysis examines code without executing it.
 (pen)-> Dynamic tests exercise a running application or service.
-(pen)-> Pen tests simulate scoped attacks with authorization.
-(pen)-> (y)Methods(pen) have blind spots; combine them according to risk.
+(pen)-> Pen tests simulate scoped attacks with (pu)authorization(pen).
+(pen)-> Methods have blind spots; combine them according to risk.
 (pen)-> Test staging systems with written scope and stop conditions.
 (pen)o (p)Evidence(pen), (p)remediation(pen), (p)and retesting(pen)
-(pen)-> Record affected asset, (p)evidence(pen), impact, owner, priority.
+(pen)-> Record affected asset, evidence, impact, owner, (pu)priority(pen).
 (pen)-> Fix underlying cause rather than only hiding an alert.
 (pen)-> Retest the original path and nearby paths after a fix.
 (pen)-> Track exceptions, residual risk, deadlines, and approvals.
-(pen)-> (y)Recovery(pen) plans assign roles, priorities, and restore order.
-(pen)-> Set (y)recovery(pen) time and acceptable data-loss targets.
-(pen)-> Exercise (y)recovery(pen) without risking live data or systems.
-(pen)-> Use fictional scenario; check (y)backup(pen) chain completeness.
+(pen)-> Recovery plans assign roles, (pu)priorities(pen), and restore order.
+(pen)-> Set recovery time and acceptable data-loss targets.
+(pen)-> Exercise recovery without risking live data or systems.
+(pen)-> Use fictional scenario; check (g)backup(pen) chain completeness.
 (pen)-> Expected: team identifies restore order, keys, dependencies.
-(pen)-> A passed scan or tabletop is not proof of total (li)security(pen).
+(pen)-> A passed scan or tabletop is not proof of total security.

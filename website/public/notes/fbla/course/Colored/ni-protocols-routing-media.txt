@@ -2,22 +2,22 @@
 (pen)-> (y)Wireless Generations and Bands(pen)
 (pen)-> (or)Wireless Range and Throughput(pen)
 (pen)o (y)Wireless Generations and Bands(pen)
-(pen)-> 802.11b uses 2.4 GHz DSSS; max (li)PHY(pen) rate is 11 Mb/s.
-(pen)-> 802.11a uses 5 GHz (db)OFDM(pen); max (li)PHY(pen) rate is 54 Mb/s.
-(pen)-> 802.11g uses 2.4 GHz (db)OFDM(pen); max (li)PHY(pen) rate is 54 Mb/s.
-(pen)-> 802.11n ((r)Wi(pen)-(r)Fi(pen) 4) supports 2.4/5 GHz and MIMO.
-(pen)-> 802.11ac ((r)Wi(pen)-(r)Fi(pen) 5) operates in 5 GHz (y)bands(pen).
-(pen)-> 802.11ax ((r)Wi(pen)-(r)Fi(pen) 6) supports 2.4 and 5 GHz operation.
-(pen)-> Wi-Fi 6E adds 6 GHz where permitted and supported.
-(pen)-> 802.11be (Wi-Fi 7) adds multi-link in capable devices.
-(pen)-> Max (li)PHY(pen) rates require matching channel and radio capability.
+(pen)-> 802.11b uses 2.4 GHz DSSS; max PHY rate is 11 Mb/s.
+(pen)-> 802.11a uses 5 GHz (y)OFDM(pen); max PHY rate is 54 Mb/s.
+(pen)-> 802.11g uses 2.4 GHz (y)OFDM(pen); max PHY rate is 54 Mb/s.
+(pen)-> 802.11n ((y)Wi(pen)-(y)Fi(pen) 4) supports 2.4/5 GHz and (y)MIMO(pen).
+(pen)-> 802.11ac ((y)Wi(pen)-(y)Fi(pen) 5) operates in 5 GHz bands.
+(pen)-> 802.11ax ((y)Wi(pen)-(y)Fi(pen) 6) supports 2.4 and 5 GHz operation.
+(pen)-> (y)Wi(pen)-(y)Fi(pen) 6E adds 6 GHz where permitted and supported.
+(pen)-> 802.11be ((y)Wi(pen)-(y)Fi(pen) 7) adds multi-link in capable devices.
+(pen)-> Max PHY rates require matching channel and radio capability.
 (pen)o (or)Wireless Range and Throughput(pen)
-(pen)-> There is no single universal indoor Wi-Fi (or)range(pen) figure.
+(pen)-> There is no single universal indoor (y)Wi(pen)-(y)Fi(pen) range figure.
 (pen)-> Band, walls, antennas, power, and receivers affect reach.
 (pen)-> 2.4 GHz often travels farther through walls than 5/6 GHz.
 (pen)-> 2.4 GHz is often more congested; local spectrum matters.
-(pen)-> Channel width, streams, and interference affect (li)PHY(pen) rate.
-(pen)-> App (or)throughput(pen) is below (li)PHY(pen) rate due to overhead/contention.
+(pen)-> Channel width, streams, and interference affect PHY rate.
+(pen)-> App throughput is below PHY rate due to overhead/contention.
 (pen)-> Clients share airtime; slow stations reduce capacity.
 (pen)-> Regulatory domain limits channels and transmit power.
 (pen)-> Survey user locations and load before estimating coverage.
@@ -34,15 +34,15 @@
 (pen)-> 1000BASE-SX uses multimode fiber; reach varies by grade.
 (pen)-> 1000BASE-LX reach depends on optics and fiber type.
 (pen)-> 10GBASE-SR uses multimode fiber; distance depends on fiber.
-(pen)-> IEEE (li)PHY(pen), optics, connectors, and loss set fiber reach.
+(pen)-> (y)IEEE(pen) PHY, optics, connectors, and loss set fiber reach.
 (pen)o (p)Routing and Wireless Protection(pen)
-(pen)-> (pu)OSPF(pen) is link-state (p)routing(pen) within an autonomous system.
-(pen)-> (pu)OSPF(pen) routers build topology databases and calculate paths.
-(pen)-> BGP exchanges inter-AS prefixes and paths for policy.
-(pen)-> BGP is an IETF Standards Track protocol.
-(pen)-> EIGRP uses DUAL, a distance-vector-based (p)routing(pen) algorithm.
+(pen)-> OSPF is link-state (or)routing(pen) within an autonomous system.
+(pen)-> OSPF (or)routers(pen) build topology databases and calculate paths.
+(pen)-> (or)BGP(pen) exchanges inter-AS prefixes and paths for policy.
+(pen)-> (or)BGP(pen) is an IETF Standards Track protocol.
+(pen)-> EIGRP uses DUAL, a distance-vector-based (or)routing(pen) algorithm.
 (pen)-> RFC 7868 is Informational, not an IETF Standards Track spec.
-(pen)-> WPA2 deployments can use AES-CCMP; avoid legacy TKIP.
+(pen)-> (y)WPA(pen)2 deployments can use AES-CCMP; avoid legacy TKIP.
 (pen)-> WPA3-Personal SAE strengthens resistance to offline guessing.
-(pen)-> WPA3 connections require Protected Management Frames.
+(pen)-> (y)WPA(pen)3 connections require Protected Management (li)Frames(pen).
 (pen)-> Negotiated security depends on AP/client configuration.

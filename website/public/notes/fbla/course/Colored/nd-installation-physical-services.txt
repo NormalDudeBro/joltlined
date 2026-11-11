@@ -2,23 +2,23 @@
 (pen)-> (r)Fiber and copper selection(pen)
 (pen)-> (pu)Rack and blade installation(pen)
 (pen)o (r)Fiber and copper selection(pen)
-(pen)-> (r)Copper(pen) Ethernet sends signals over twisted pairs.
+(pen)-> Copper (or)Ethernet(pen) sends signals over twisted pairs.
 (pen)-> UTP lacks metallic shielding; STP includes shielding.
-(pen)-> Shield (pu)installation(pen) and grounding must follow cable design.
+(pen)-> Shield installation and grounding must follow cable design.
 (pen)-> Cable category, endpoints and PHY constrain rate and channel.
 (pen)-> Coax has a central conductor and shield; some ISPs use it.
-(pen)-> (r)Fiber(pen) carries light and resists electromagnetic interference.
+(pen)-> Fiber carries light and resists electromagnetic interference.
 (pen)-> Multimode commonly serves shorter links with matching optics.
 (pen)-> Single-mode with compatible optics can serve longer links.
 (pen)-> Reach depends on PHY, optics, wavelength, loss and connectors.
 (pen)o (pu)Rack and blade installation(pen)
-(pen)-> (pu)Rack(pen) servers mount as units in a cabinet with service access.
-(pen)-> Check rail fit, equipment depth, weight and (pu)rack(pen) capacity.
-(pen)-> Plan labeled (db)power(pen), network ports, cable paths and airflow.
-(pen)-> (pu)Blade(pen) servers fit a (mb)shared(pen) chassis with common interconnects.
+(pen)-> Rack servers mount as units in a cabinet with service access.
+(pen)-> Check rail fit, equipment depth, weight and rack capacity.
+(pen)-> Plan labeled power, network ports, cable paths and airflow.
+(pen)-> Blade servers fit a shared chassis with common interconnects.
 (pen)-> Chassis can improve density and centralized management.
-(pen)-> Chassis adds cost and (mb)shared(pen) failure dependencies.
-(pen)-> Inventory assets, firmware, NICs, storage and switch ports.
+(pen)-> Chassis adds cost and shared failure dependencies.
+(pen)-> Inventory assets, firmware, NICs, storage and (li)switch(pen) ports.
 (pen)-> Follow vendor install, grounding and safety procedures.
 (pen)-> After install, verify links, management, alarms and logs.
 (pen)-> Redundant PSUs help only with adequate independent feeds.
@@ -27,22 +27,22 @@
 (pen)-> (mb)Direct(pen), (mb)shared(pen), (mb)and server printing(pen)
 (pen)o (db)Power(pen), (db)temperature(pen), (db)and UPS(pen)
 (pen)-> Excess heat can throttle equipment, age it or shut it down.
-(pen)-> Keep vents clear; monitor inlet (db)temperature(pen) and airflow.
+(pen)-> Keep vents clear; monitor inlet temperature and airflow.
 (pen)-> Cooling capacity and airflow must suit the installed load.
-(pen)-> A (db)UPS(pen) supplies temporary battery (db)power(pen) during an interruption.
+(pen)-> A (g)UPS(pen) supplies temporary battery power during an interruption.
 (pen)-> Size runtime to load; test batteries and controlled shutdown.
-(pen)-> A (db)UPS(pen) is not a generator, backup, or independent (db)power(pen) feed.
-(pen)-> (db)Power(pen) redundancy fails if upstream circuits share one failure.
-(pen)-> Define recovery priorities and dependencies before controls.
-(pen)-> Tabletop (db)power(pen) loss; predict effects; do not unplug live gear.
+(pen)-> A (g)UPS(pen) is not a generator, (g)backup(pen), or independent power feed.
+(pen)-> Power redundancy fails if upstream circuits share one failure.
+(pen)-> Define recovery (pu)priorities(pen) and dependencies before controls.
+(pen)-> Tabletop power loss; predict effects; do not unplug live gear.
 (pen)o (mb)Direct(pen), (mb)shared(pen), (mb)and server printing(pen)
-(pen)-> (mb)Direct(pen) USB (mb)printing(pen) connects a client to one printer.
-(pen)-> A network printer can accept jobs directly over the LAN.
-(pen)-> Host-shared (mb)printing(pen) exposes a host queue to other clients.
+(pen)-> Direct USB printing connects a client to one printer.
+(pen)-> A network printer can accept jobs directly over the (db)LAN(pen).
+(pen)-> Host-shared printing exposes a host queue to other clients.
 (pen)-> The host and its print service must stay available for jobs.
-(pen)-> A print (mb)server(pen) centralizes queues and printer administration.
+(pen)-> A print server centralizes queues and printer administration.
 (pen)-> Clients submit jobs to a queue; spooler manages pending work.
-(pen)-> A (mb)server(pen) outage or queue fault can interrupt (mb)shared(pen) (mb)printing(pen).
-(pen)-> Restrict queue management and (mb)printing(pen) to authorized users.
+(pen)-> A server outage or queue fault can interrupt shared printing.
+(pen)-> Restrict queue management and printing to authorized users.
 (pen)-> Keep printer firmware and drivers supported and maintained.
 (pen)-> Protect confidential output; use secure release if available.

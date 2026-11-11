@@ -1,14 +1,14 @@
 {
   "palettes": {
-    "A": {"titles":["g","li","p","hp"],"accents":{"db":"db","r":"r","y":"y"}},
-    "B": {"titles":["r","pu","db","mb"],"accents":{"db":"y","r":"li","y":"g"}},
-    "C": {"titles":["y","or","li","p"],"accents":{"db":"db","r":"r","y":"pu"}},
-    "D": {"titles":["hp","r","pu","db"],"accents":{"db":"y","r":"mb","y":"li"}},
-    "E": {"titles":["mb","y","g","or"],"accents":{"db":"db","r":"r","y":"pu"}},
-    "F": {"titles":["p","hp","or","pu"],"accents":{"db":"db","r":"y","y":"mb"}},
-    "G": {"titles":["db","mb","y","g"],"accents":{"db":"r","r":"pu","y":"li"}},
-    "H": {"titles":["li","p","hp","r"],"accents":{"db":"db","r":"y","y":"pu"}},
-    "I": {"titles":["pu","db","mb","y"],"accents":{"db":"r","r":"li","y":"g"}}
+    "A": {"titles":["g","li","p","hp"]},
+    "B": {"titles":["r","pu","db","mb"]},
+    "C": {"titles":["y","or","li","p"]},
+    "D": {"titles":["hp","r","pu","db"]},
+    "E": {"titles":["mb","y","g","or"]},
+    "F": {"titles":["p","hp","or","pu"]},
+    "G": {"titles":["db","mb","y","g"]},
+    "H": {"titles":["li","p","hp","r"]},
+    "I": {"titles":["pu","db","mb","y"]}
   },
   "sheets": {
     "ni-basics-models":"A",

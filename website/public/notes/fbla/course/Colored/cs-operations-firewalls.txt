@@ -2,39 +2,39 @@
 (pen)-> (db)Firewall inspection models(pen)
 (pen)-> (mb)NGFW(pen), (mb)WAF(pen), (mb)and limits(pen)
 (pen)o (db)Firewall inspection models(pen)
-(pen)-> A (db)firewall(pen) controls flows across different security postures.
-(pen)-> Network (db)firewall(pen) filters traffic crossing network boundaries.
-(pen)-> Host (db)firewall(pen) filters traffic to and from its endpoint.
-(pen)-> Stateless filter checks each packet without session tracking.
+(pen)-> A (r)firewall(pen) controls flows across different security postures.
+(pen)-> Network (r)firewall(pen) filters traffic crossing network boundaries.
+(pen)-> Host (r)firewall(pen) filters traffic to and from its endpoint.
+(pen)-> Stateless filter checks each (mb)packet(pen) without session tracking.
 (pen)-> Fields include addresses, protocol, ports, and direction.
-(pen)-> Stateful (db)inspection(pen) tracks flows in a connection state table.
-(pen)-> Stateful filters compare packets with expected session state.
+(pen)-> Stateful inspection tracks flows in a connection state table.
+(pen)-> Stateful filters compare (mb)packets(pen) with expected session state.
 (pen)-> Return traffic may pass when linked to an allowed session.
 (pen)-> State tracking does not inspect all application meaning.
 (pen)o (mb)NGFW(pen), (mb)WAF(pen), (mb)and limits(pen)
-(pen)-> Application (db)firewall(pen) inspects protocol content and behavior.
-(pen)-> (mb)NGFW(pen) commonly combines network controls and added (db)inspection(pen).
-(pen)-> (mb)NGFW(pen) capabilities differ across vendors and configurations.
-(pen)-> (mb)WAF(pen) focuses on HTTP requests to web applications.
-(pen)-> (mb)WAF(pen) can filter web-specific inputs and request patterns.
-(pen)-> (mb)WAF(pen) supplements; it does not replace network firewalls.
-(pen)-> Encrypted traffic can limit (db)inspection(pen) without termination.
-(pen)-> NAT translates addresses; translation alone is not a (db)firewall(pen).
-(pen)-> Firewalls cannot stop every attack or internal misuse.
+(pen)-> Application (r)firewall(pen) inspects protocol content and behavior.
+(pen)-> (r)NGFW(pen) commonly combines network controls and added inspection.
+(pen)-> (r)NGFW(pen) capabilities differ across vendors and configurations.
+(pen)-> (r)WAF(pen) focuses on (p)HTTP(pen) requests to web applications.
+(pen)-> (r)WAF(pen) can filter web-specific inputs and request patterns.
+(pen)-> (r)WAF(pen) supplements; it does not replace network (r)firewalls(pen).
+(pen)-> Encrypted traffic can limit inspection without termination.
+(pen)-> (or)NAT(pen) translates addresses; translation alone is not a (r)firewall(pen).
+(pen)-> (r)Firewalls(pen) cannot stop every attack or internal misuse.
 (pen)-> Use endpoint, identity, and monitoring controls in depth.
 (pen)o Overview
 (pen)-> (y)ACL rules and least privilege(pen)
 (pen)-> (g)Segmentation(pen), (g)tests(pen), (g)and operation(pen)
 (pen)o (y)ACL rules and least privilege(pen)
-(pen)-> (y)ACL(pen) is an ordered set of permit and deny conditions.
-(pen)-> (y)Rules(pen) match source, destination, protocol, port, direction.
+(pen)-> (hp)ACL(pen) is an ordered set of permit and deny conditions.
+(pen)-> Rules match source, destination, protocol, port, direction.
 (pen)-> Permit only traffic required by documented business need.
-(pen)-> Narrow addresses and services rather than broad any-any (y)rules(pen).
+(pen)-> Narrow addresses and services rather than broad any-any rules.
 (pen)-> Rule order matters when the first matching rule decides.
 (pen)-> Default-deny blocks traffic not explicitly permitted.
 (pen)-> Apply policy to both inbound and outbound flows.
 (pen)-> Use logs and alerts to observe rule effects and threats.
-(pen)-> Review stale (y)rules(pen) and exceptions through change control.
+(pen)-> Review stale rules and exceptions through change control.
 (pen)o (g)Segmentation(pen), (g)tests(pen), (g)and operation(pen)
 (pen)-> Separate public web, application, and data trust zones.
 (pen)-> Allow web tier to reach only required database service.
@@ -42,7 +42,7 @@
 (pen)-> Restrict administration to approved hosts and accounts.
 (pen)-> Test permitted flows and expected denials before rollout.
 (pen)-> Deploy changes in stages and monitor service impact.
-(pen)-> Rollback plan reduces outage risk from incorrect (y)rules(pen).
-(pen)-> Broad (y)rules(pen) permit excess access and lateral movement.
-(pen)-> Overly strict (y)rules(pen) can block legitimate business traffic.
-(pen)-> Review (y)rules(pen) periodically and after topology changes.
+(pen)-> Rollback plan reduces outage risk from incorrect rules.
+(pen)-> Broad rules permit excess access and lateral movement.
+(pen)-> Overly strict rules can block legitimate business traffic.
+(pen)-> Review rules periodically and after topology changes.

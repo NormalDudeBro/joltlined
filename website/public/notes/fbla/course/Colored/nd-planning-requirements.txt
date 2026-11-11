@@ -4,45 +4,45 @@
 (pen)o (db)Translate business requirements(pen)
 (pen)-> Start with workflows, sites, users, services, and devices.
 (pen)-> Estimate concurrent users and peak traffic, not headcount.
-(pen)-> Map apps needing low delay, steady rates, (g)or(pen) reliable access.
-(pen)-> (mb)Physical(pen) size sets cable paths, closets, links, and coverage.
+(pen)-> Map apps needing low delay, steady rates, or reliable access.
+(pen)-> Physical size sets cable paths, closets, links, and coverage.
 (pen)-> Growth affects port, address, capacity, and space needs.
 (pen)-> Throughput is delivered rate, not the PHY link rate.
 (pen)-> Contention, signal, servers, and uplinks affect throughput.
-(pen)-> Availability needs set acceptable outage and recovery targets.
+(pen)-> (g)Availability(pen) needs set acceptable outage and recovery targets.
 (pen)-> Budget includes licenses, staff, support, and replacement.
 (pen)o (mb)Network scope and physical scale(pen)
-(pen)-> A local area (mb)network(pen) ((r)LAN(pen)) connects devices in a limited site.
-(pen)-> A wide area (mb)network(pen) ((pu)WAN(pen)) links networks across distance.
-(pen)-> LAN and WAN name (mb)scope(pen), not speed (g)or(pen) technology.
-(pen)-> A (pu)WAN(pen) often depends on carrier links and service contracts.
+(pen)-> A local area network ((db)LAN(pen)) connects devices in a limited site.
+(pen)-> A wide area network ((or)WAN(pen)) links networks across distance.
+(pen)-> (db)LAN(pen) and (or)WAN(pen) name scope, not speed or technology.
+(pen)-> A (or)WAN(pen) often depends on carrier links and service contracts.
 (pen)-> Long links may add latency, cost, and provider dependence.
-(pen)-> Geography shapes routing, addressing, and support needs.
-(pen)-> Separate user, (g)server(pen), guest needs before choosing equipment.
+(pen)-> Geography shapes (or)routing(pen), addressing, and support needs.
+(pen)-> Separate user, server, guest needs before choosing equipment.
 (pen)-> Redundancy improves resilience but adds links and operations.
-(pen)-> Measure workload; labels alone do not size a (mb)network(pen).
+(pen)-> Measure workload; labels alone do not size a network.
 (pen)-> Carrier diversity helps only if routes avoid shared risks.
 (pen)o Overview
 (pen)-> (y)Topology and failure domains(pen)
 (pen)-> (g)Windows Server or Linux(pen)
 (pen)o (y)Topology and failure domains(pen)
-(pen)-> Star connects endpoints to a central switch (g)or(pen) access point.
-(pen)-> Edge link (y)failure(pen) affects one; central (y)failure(pen) affects many.
+(pen)-> Star connects endpoints to a central (li)switch(pen) or (y)access point(pen).
+(pen)-> Edge link failure affects one; central failure affects many.
 (pen)-> Mesh adds alternate paths but increases link cost.
 (pen)-> Full mesh of n nodes needs n(n-1)/2 point-to-point links.
 (pen)-> Bus attaches devices along a shared backbone cable.
 (pen)-> A bus backbone break can disrupt service and hinder diagnosis.
-(pen)-> (mb)Physical(pen) (y)topology(pen) maps cables; logical (y)topology(pen) maps paths.
-(pen)-> (y)Topology(pen) weighs fault impact, (mb)scale(pen), cost, and staff skills.
-(pen)-> Redundancy helps when (y)failure(pen) (y)domains(pen) are independent.
+(pen)-> Physical topology maps cables; logical topology maps paths.
+(pen)-> Topology weighs fault impact, scale, cost, and staff skills.
+(pen)-> Redundancy helps when failure domains are independent.
 (pen)o (g)Windows Server or Linux(pen)
-(pen)-> A (mb)network(pen) operating system (NOS) runs shared (mb)network(pen) services.
-(pen)-> (g)Windows(pen) (g)Server(pen) provides roles for Microsoft environments.
-(pen)-> (g)Linux(pen) (g)server(pen) features vary by distribution and packages.
+(pen)-> A network operating system (NOS) runs shared network services.
+(pen)-> (hp)Windows Server(pen) provides roles for Microsoft environments.
+(pen)-> (g)Linux(pen) server (li)features(pen) vary by distribution and packages.
 (pen)-> Check applications, drivers, identity, and hardware support.
 (pen)-> Check staff expertise, training, and vendor support coverage.
 (pen)-> Include licensing, subscriptions, upkeep, and migration costs.
 (pen)-> Compare security controls and patching for this configuration.
-(pen)-> Pilot service, access, backup, monitoring, and recovery needs.
+(pen)-> Pilot service, access, (g)backup(pen), monitoring, and recovery needs.
 (pen)-> Choose for compatibility and support, not stereotypes.
 (pen)-> Licensing varies by edition, cores, and deployment terms.

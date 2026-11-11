@@ -2,47 +2,47 @@
 (pen)-> (r)OSI(pen): (r)physical and data link(pen)
 (pen)-> (pu)OSI(pen): (pu)network through application(pen)
 (pen)o (r)OSI(pen): (r)physical and data link(pen)
-(pen)-> (pu)OSI(pen) is a seven-layer (db)model(pen), not a product blueprint.
+(pen)-> (p)OSI(pen) is a seven-layer model, not a product blueprint.
 (pen)-> Layer 1 sends bits as electrical, optical or radio signals.
 (pen)-> It defines media, signaling and connection properties.
 (pen)-> Copper, fiber and radio differ in reach and noise limits.
-(pen)-> Layer 2 (r)data(pen) (r)link(pen) groups bits into frames on a local (r)link(pen).
-(pen)-> Ethernet and (y)Wi(pen)-(y)Fi(pen) (r)link(pen) delivery use link-layer addressing.
-(pen)-> Switches learn source MAC locations and forward frames.
-(pen)-> Frames are link-local; routers reframe packets for each (r)link(pen).
+(pen)-> Layer 2 data link groups bits into (li)frames(pen) on a local link.
+(pen)-> (or)Ethernet(pen) and (y)Wi(pen)-(y)Fi(pen) link delivery use link-layer addressing.
+(pen)-> (li)Switches(pen) learn source (db)MAC(pen) locations and forward (li)frames(pen).
+(pen)-> (li)Frames(pen) are link-local; (or)routers(pen) reframe (mb)packets(pen) for each link.
 (pen)-> Errors, shared-media collisions or loops disrupt delivery.
 (pen)o (pu)OSI(pen): (pu)network through application(pen)
-(pen)-> Layer 3 (pu)network(pen) moves packets between networks using (li)IP(pen).
-(pen)-> Routers choose next hops using destination and routing (r)data(pen).
+(pen)-> Layer 3 network moves (mb)packets(pen) between networks using (mb)IP(pen).
+(pen)-> (or)Routers(pen) choose next hops using destination and (or)routing(pen) data.
 (pen)-> Layer 4 carries process traffic using ports and protocols.
-(pen)-> TCP offers ordered delivery and retransmits lost (r)data(pen).
-(pen)-> UDP provides datagrams without TCP's delivery guarantees.
+(pen)-> (p)TCP(pen) offers ordered delivery and retransmits lost data.
+(pen)-> (hp)UDP(pen) provides datagrams without TCP's delivery guarantees.
 (pen)-> Layer 5 organizes dialogs between communicating systems.
-(pen)-> Layer 6 presentation represents, encodes or transforms (r)data(pen).
+(pen)-> Layer 6 presentation represents, encodes or transforms data.
 (pen)-> Layer 7 protocols support tasks such as web requests.
-(pen)-> Internet protocols do not always fit one (pu)OSI(pen) layer exactly.
-(pen)-> (pu)OSI(pen) aids (db)troubleshooting(pen); it is not a wire-level recipe.
+(pen)-> Internet protocols do not always fit one (p)OSI(pen) layer exactly.
+(pen)-> (p)OSI(pen) aids troubleshooting; it is not a wire-level recipe.
 (pen)o Overview
 (pen)-> (db)Network troubleshooting model(pen)
 (pen)-> (mb)LAN design in context(pen)
 (pen)o (db)Network troubleshooting model(pen)
-(pen)-> (pu)OSI(pen) layers provide a shared vocabulary for fault isolation.
-(pen)-> No (r)link(pen) signal suggests checking power, cable or interface.
-(pen)-> A local (r)link(pen) can work while (li)IP(pen) addressing or routing is wrong.
+(pen)-> (p)OSI(pen) layers provide a shared vocabulary for fault isolation.
+(pen)-> No link signal suggests checking power, cable or interface.
+(pen)-> A local link can work while (mb)IP(pen) addressing or (or)routing(pen) is wrong.
 (pen)-> Transport failure may affect a particular service or port.
-(pen)-> (pu)Application(pen) failure may persist despite working lower layers.
+(pen)-> Application failure may persist despite working lower layers.
 (pen)-> Layer symptoms are clues, not proof of a single cause.
-(pen)-> Modern protocol stacks combine functions differently from (pu)OSI(pen).
+(pen)-> Modern protocol stacks combine functions differently from (p)OSI(pen).
 (pen)-> Check end-to-end behavior after repairing a local symptom.
-(pen)-> Do not infer security from a device's (pu)OSI(pen) layer alone.
+(pen)-> Do not infer security from a device's (p)OSI(pen) layer alone.
 (pen)o (mb)LAN design in context(pen)
-(pen)-> A small shop may use a compact gateway and switched (mb)LAN(pen).
+(pen)-> A small shop may use a compact gateway and switched (db)LAN(pen).
 (pen)-> A campus commonly uses managed access and routed boundaries.
-(pen)-> Datacenter (mb)design(pen) focuses on server and storage traffic paths.
+(pen)-> Datacenter design focuses on server and storage traffic paths.
 (pen)-> Capacity planning considers concurrent users and traffic.
 (pen)-> Redundant equipment may share power or cable risks.
-(pen)-> Segmentation constrains traffic only with correct policy.
+(pen)-> (pu)Segmentation(pen) constrains traffic only with correct policy.
 (pen)-> More bandwidth cannot fix a wrong route or weak (y)Wi(pen)-(y)Fi(pen).
 (pen)-> Skills and maintenance matter alongside equipment cost.
-(pen)-> Choose components for the site's actual availability needs.
+(pen)-> Choose components for the site's actual (g)availability(pen) needs.
 (pen)-> Document dependencies so outages can be diagnosed efficiently.

@@ -12,37 +12,37 @@
 (pen)-> Motive is a hypothesis, not proof of actor identity.
 (pen)-> Controls should address behavior and access, not stereotypes.
 (pen)o (p)Virus Varieties and Other Malware(pen)
-(pen)-> (p)Malware(pen) is software used to harm, spy, extort, or control.
-(pen)-> A (p)virus(pen) attaches to a host file or boot area to spread.
-(pen)-> File (p)virus(pen) infects executable files when they run.
-(pen)-> Boot-sector (p)virus(pen) targets startup records or boot media.
-(pen)-> Polymorphic viruses vary code/signature during replication.
+(pen)-> (r)Malware(pen) is software used to harm, spy, extort, or control.
+(pen)-> A (r)virus(pen) attaches to a host file or boot area to spread.
+(pen)-> File (r)virus(pen) infects executable files when they run.
+(pen)-> Boot-sector (r)virus(pen) targets startup records or boot media.
+(pen)-> Polymorphic (r)viruses(pen) vary code/signature during replication.
 (pen)-> Variation may evade simple signatures; behavior checks help.
-(pen)-> Trojan masquerades as benign software to induce execution.
-(pen)-> A worm self-propagates across systems or networks.
+(pen)-> (r)Trojan(pen) masquerades as benign software to induce execution.
+(pen)-> A (r)worm(pen) self-propagates across systems or networks.
 (pen)-> Logic bomb activates when a time/event condition is met.
-(pen)-> One (p)malware(pen) sample may combine more than one behavior.
+(pen)-> One (r)malware(pen) sample may combine more than one behavior.
 (pen)o Overview
 (pen)-> (hp)Vulnerabilities and Exploit Classes(pen)
 (pen)-> (r)Reduce Exposure(pen)
 (pen)o (hp)Vulnerabilities and Exploit Classes(pen)
-(pen)-> Vulnerability is a weakness; (hp)exploit(pen) is a way to use it.
-(pen)-> Injection treats input as command/query syntax, not data.
+(pen)-> (r)Vulnerability(pen) is a weakness; (r)exploit(pen) is a way to use it.
+(pen)-> (r)Injection(pen) treats input as command/query syntax, not data.
 (pen)-> Parameterized (db)SQL(pen) separates values from query structure.
-(pen)-> Buffer overflow writes beyond allocated memory bounds.
+(pen)-> (r)Buffer overflow(pen) writes beyond allocated memory bounds.
 (pen)-> Race occurs when timing changes shared state unexpectedly.
 (pen)-> Atomic operations/locks can prevent unsafe check-use races.
 (pen)-> Jailbreaking weakens platform restrictions or sandboxing.
-(pen)-> Backdoor is hidden access; zero-day has no effective fix yet.
+(pen)-> Backdoor is hidden access; (r)zero(pen)-(r)day(pen) has no effective fix yet.
 (pen)-> Known unpatched flaws may have fixes; test and apply patches.
 (pen)o (r)Reduce Exposure(pen)
 (pen)-> Bind untrusted data; do not concatenate into (db)SQL(pen) syntax.
 (pen)-> Allowlist identifiers and sort choices from fixed options.
-(pen)-> Least database privilege limits damage, not injection itself.
+(pen)-> Least database privilege limits damage, not (r)injection(pen) itself.
 (pen)-> Use bounds-safe code and safe shared-state access.
 (pen)-> Apply security updates after risk-appropriate testing.
-(pen)-> Remove unused services and (r)reduce(pen) exposed attack surface.
-(pen)-> Limit user/service rights to (r)reduce(pen) (p)malware(pen) blast radius.
-(pen)-> Backups support recovery but do not prevent infection.
-(pen)-> Signatures can miss new or altered (p)malware(pen).
+(pen)-> Remove unused services and reduce exposed attack surface.
+(pen)-> Limit user/service rights to reduce (r)malware(pen) blast (hp)radius(pen).
+(pen)-> (g)Backups(pen) support recovery but do not prevent infection.
+(pen)-> Signatures can miss new or altered (r)malware(pen).
 (pen)-> Use layered controls; no single tool guarantees prevention.

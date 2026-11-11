@@ -2,21 +2,21 @@
 (pen)-> (mb)Maintenance and recovery(pen)
 (pen)-> (y)Accounts and permissions(pen)
 (pen)o (mb)Maintenance and recovery(pen)
-(pen)-> (mb)Maintenance(pen) keeps services supported, secure, and recoverable.
+(pen)-> Maintenance keeps services supported, secure, and recoverable.
 (pen)-> An audit compares actual assets and settings with policy.
 (pen)-> Record audit scope, evidence, owner, risk, and due action.
-(pen)-> Updates add fixes or features; patches address known defects.
+(pen)-> Updates add fixes or (li)features(pen); patches address known defects.
 (pen)-> Test compatibility, stage deployment, then verify outcomes.
 (pen)-> A rollback plan limits harm if an update breaks a service.
-(pen)-> A backup is a separate copy intended for later (mb)recovery(pen).
-(pen)-> RAID may tolerate disk failure; it does not replace backup.
-(pen)-> A restore test checks usable (g)data(pen) and (mb)recovery(pen) procedure.
+(pen)-> A (g)backup(pen) is a separate copy intended for later recovery.
+(pen)-> (g)RAID(pen) may tolerate disk failure; it does not replace (g)backup(pen).
+(pen)-> A restore test checks usable data and recovery procedure.
 (pen)o (y)Accounts and permissions(pen)
 (pen)-> An account identifies a user or service to a system.
-(pen)-> Authentication checks identity; authorization grants actions.
-(pen)-> Groups collect (y)accounts(pen) with similar job-based access needs.
+(pen)-> (hp)Authentication(pen) checks identity; (pu)authorization(pen) grants actions.
+(pen)-> Groups collect accounts with similar job-based access needs.
 (pen)-> Grant needed rights; avoid routine shared administrator use.
-(pen)-> Review rights after role changes; disable (y)accounts(pen) at exit.
+(pen)-> Review rights after role changes; disable accounts at exit.
 (pen)-> Transfer ownership of files, queues, and scheduled work.
 (pen)-> An asset record links item, owner, site, and support contact.
 (pen)-> Track printer model, address, queue, host, and team.
@@ -26,23 +26,23 @@
 (pen)-> (g)SNMP and management data(pen)
 (pen)-> (or)Traffic baselines and alerts(pen)
 (pen)o (g)SNMP and management data(pen)
-(pen)-> Simple Network (g)Management(pen) Protocol ((g)SNMP(pen)) exchanges status.
+(pen)-> Simple Network Management Protocol (SNMP) exchanges status.
 (pen)-> Managers query agents that expose managed device objects.
-(pen)-> A (g)Management(pen) Information Base ((db)MIB(pen)) names managed objects.
+(pen)-> A Management Information Base (MIB) names managed objects.
 (pen)-> Poll counters; notifications report events but may be lost.
 (pen)-> Counters need time intervals to show rates or changing errors.
-(pen)-> SNMPv2c names are unencrypted; (or)traffic(pen) can expose them.
-(pen)-> SNMPv3 USM supports authentication and optional privacy.
-(pen)-> Auth checks integrity and user; privacy encrypts (g)data(pen).
-(pen)-> Use authPriv; limit (db)MIB(pen) views and manager ACLs.
+(pen)-> SNMPv2c names are unencrypted; traffic can expose them.
+(pen)-> SNMPv3 USM supports (hp)authentication(pen) and optional privacy.
+(pen)-> Auth checks (g)integrity(pen) and user; privacy encrypts data.
+(pen)-> Use authPriv; limit MIB views and manager (hp)ACLs(pen).
 (pen)o (or)Traffic baselines and alerts(pen)
 (pen)-> Time counters; baseline latency, loss, errors, and demand.
 (pen)-> Compare like periods; peak and average load differ.
 (pen)-> An alert triggers investigation, not proof of cause.
-(pen)-> A load balancer distributes eligible (or)traffic(pen) across backends.
-(pen)-> Azure defaults to hashing five flow fields for backend choice.
+(pen)-> A load balancer distributes eligible traffic across backends.
+(pen)-> (or)Azure(pen) defaults to (g)hashing(pen) five flow fields for backend choice.
 (pen)-> Client-IP affinity sends that client to the same backend.
 (pen)-> Affinity may skew load when few distinct client flows exist.
 (pen)-> Configured probes can stop new flows to unhealthy backends.
-(pen)-> Map links, gateways, dependencies; log checks and (mb)recovery(pen).
-(pen)-> Restrict log access and retention to protect sensitive (g)data(pen).
+(pen)-> Map links, gateways, dependencies; log checks and recovery.
+(pen)-> Restrict log access and retention to protect sensitive data.

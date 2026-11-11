@@ -2,26 +2,26 @@
 (pen)-> (db)Proofing(pen), (db)Factors(pen), (db)and Device Trust(pen)
 (pen)-> (mb)AAA(pen), (mb)MFA(pen), (mb)and Zero Trust(pen)
 (pen)o (db)Proofing(pen), (db)Factors(pen), (db)and Device Trust(pen)
-(pen)-> (db)Proofing(pen) links a person identity at stated assurance.
+(pen)-> Proofing links a person identity at stated assurance.
 (pen)-> It resolves, validates evidence, then verifies owner.
-(pen)-> Authentication checks control of an account authenticator.
-(pen)-> A (db)device(pen) report is not user proof; login is not (db)device(pen) proof.
-(pen)-> Attestation signs hardware-secured measurements for review.
+(pen)-> (hp)Authentication(pen) checks control of an account (hp)authenticator(pen).
+(pen)-> A device report is not user proof; login is not device proof.
+(pen)-> (hp)Attestation(pen) signs hardware-secured measurements for review.
 (pen)-> It depends on trusted measurement, signing key, and verifier.
-(pen)-> Authentication shows account control, not real-world identity.
+(pen)-> (hp)Authentication(pen) shows account control, not real-world identity.
 (pen)-> Assurance reduces risk; it does not promise certainty.
-(pen)-> Enrollment and recovery also need secure (db)proofing(pen) controls.
+(pen)-> Enrollment and recovery also need secure proofing controls.
 (pen)o (mb)AAA(pen), (mb)MFA(pen), (mb)and Zero Trust(pen)
-(pen)-> Authentication verifies control; authorization permits use.
-(pen)-> Accounting: record relevant use for review and investigation.
-(pen)-> (mb)MFA(pen) uses distinct types: know, have, or are.
-(pen)-> Two passwords are both know (db)factors(pen), not (mb)MFA(pen) by themselves.
-(pen)-> Password plus registered security key combines know and have.
+(pen)-> (hp)Authentication(pen) verifies control; (pu)authorization(pen) permits use.
+(pen)-> (mb)Accounting(pen): record relevant use for review and investigation.
+(pen)-> (hp)MFA(pen) uses distinct types: know, have, or are.
+(pen)-> Two (hp)passwords(pen) are both know factors, not (hp)MFA(pen) by themselves.
+(pen)-> (hp)Password(pen) plus registered security key combines know and have.
 (pen)-> SMS codes can be intercepted/phished; not phishing-resistant.
-(pen)-> (mb)Zero(pen) (db)Trust(pen) checks identity/context for each resource request.
-(pen)-> Managed (db)device(pen) and verified worker get payroll read access.
-(pen)-> Network location or VPN alone does not grant implicit (db)trust(pen).
-(pen)-> (db)Device(pen) posture is a signal; it does not identify the user.
+(pen)-> (db)Zero Trust(pen) checks identity/context for each resource request.
+(pen)-> Managed device and verified worker get payroll read access.
+(pen)-> Network location or (hp)VPN(pen) alone does not grant implicit trust.
+(pen)-> Device posture is a signal; it does not identify the user.
 (pen)o Overview
 (pen)-> (y)Least Privilege(pen)
 (pen)-> (g)Honeypots(pen), (g)Honeynets(pen), (g)and Honeyfiles(pen)
@@ -32,15 +32,15 @@
 (pen)-> Use role scopes and expire temporary permissions.
 (pen)-> Review access after job, project, or status changes.
 (pen)-> Remove stale rights; protect service/database accounts too.
-(pen)-> (y)Least(pen) (y)privilege(pen) limits harm from bugs or stolen accounts.
+(pen)-> (db)Least privilege(pen) limits harm from bugs or stolen accounts.
 (pen)-> It does not stop every authorized misuse or compromise.
-(pen)-> (r)OWASP(pen) treats it as damage reduction, not injection prevention.
+(pen)-> (or)OWASP(pen) treats it as damage reduction, not (r)injection(pen) prevention.
 (pen)o (g)Honeypots(pen), (g)Honeynets(pen), (g)and Honeyfiles(pen)
-(pen)-> (pu)NIST(pen) calls honeypot an attractive resource for intruders.
+(pen)-> (mb)NIST(pen) calls honeypot an attractive resource for intruders.
 (pen)-> A decoy service/file can make unexpected access observable.
 (pen)-> Honeynet commonly means connected decoy systems.
 (pen)-> Honeyfile commonly means monitored decoy document/artifact.
-(pen)-> No separate (pu)NIST(pen) glossary entries for these labels were found.
+(pen)-> No separate (mb)NIST(pen) glossary entries for these labels were found.
 (pen)-> Access can alert defenders; decoys do not block attacks.
 (pen)-> Isolate decoys from production; restrict outbound connections.
 (pen)-> Use synthetic content, monitor alerts, assign response owner.

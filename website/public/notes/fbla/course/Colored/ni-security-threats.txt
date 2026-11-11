@@ -2,25 +2,25 @@
 (pen)-> (g)Malware and Social Engineering(pen)
 (pen)-> (li)Resilient Defensive Layers(pen)
 (pen)o (g)Malware and Social Engineering(pen)
-(pen)-> Virus attaches to host content and runs when executed.
-(pen)-> Worm self-propagates; it need not attach to a host file.
-(pen)-> Trojan disguises harmful code as useful software.
+(pen)-> (r)Virus(pen) attaches to host content and runs when executed.
+(pen)-> (r)Worm(pen) self-propagates; it need not attach to a host file.
+(pen)-> (r)Trojan(pen) disguises harmful code as useful software.
 (pen)-> Logic bomb triggers when a time or condition is met.
-(pen)-> Ransomware blocks or encrypts data for extortion.
-(pen)-> Phishing arrives through email, text, call, or fake site.
+(pen)-> (r)Ransomware(pen) blocks or encrypts data for extortion.
+(pen)-> (r)Phishing(pen) arrives through email, text, call, or fake site.
 (pen)-> Urgency and unexpected credential requests are warning signs.
 (pen)-> Spoofing falsifies identity; verify sender independently.
 (pen)-> Poisoning alters trusted data so later lookups mislead users.
 (pen)o (li)Resilient Defensive Layers(pen)
 (pen)-> Filter risky links/files; scanners cannot catch every sample.
-(pen)-> Verify payment or password requests through known channels.
+(pen)-> Verify payment or (hp)password(pen) requests through known channels.
 (pen)-> Patch exposed systems and retire unsupported software.
-(pen)-> Least privilege limits damage from stolen accounts or (g)malware(pen).
-(pen)-> Segmentation restricts paths to critical systems.
-(pen)-> Backups aid recovery; isolate copies from normal admin access.
+(pen)-> (db)Least privilege(pen) limits damage from stolen accounts or (r)malware(pen).
+(pen)-> (pu)Segmentation(pen) restricts paths to critical systems.
+(pen)-> (g)Backups(pen) aid recovery; isolate copies from normal admin access.
 (pen)-> Test restores because untested copies may be incomplete.
-(pen)-> Close unused ports only after checking service dependencies.
-(pen)-> Firewall rules filter traffic; they cannot stop all attacks.
+(pen)-> (hp)Close(pen) unused ports only after checking service dependencies.
+(pen)-> (r)Firewall(pen) rules filter traffic; they cannot stop all attacks.
 (pen)-> Monitor logs and alerts; sensors require review and response.
 (pen)o Overview
 (pen)-> (p)DoS Mechanics(pen)
@@ -32,8 +32,8 @@
 (pen)-> Reflection sends third-party replies to a victim.
 (pen)-> Amplification makes replies larger than triggering requests.
 (pen)-> Forged source addresses can obscure origins in some floods.
-(pen)-> Botnet DDoS adds traffic from many compromised endpoints.
-(pen)-> A firewall cannot restore a saturated upstream link.
+(pen)-> Botnet (r)DDoS(pen) adds traffic from many compromised endpoints.
+(pen)-> A (r)firewall(pen) cannot restore a saturated upstream link.
 (pen)-> Outages deny service to legitimate users.
 (pen)o (hp)Mitigation and Residual Risk(pen)
 (pen)-> Upstream filtering or scrubbing can remove attack traffic.
@@ -41,8 +41,8 @@
 (pen)-> Redundancy and capacity help only within design limits.
 (pen)-> Broad filters may block legitimate clients too.
 (pen)-> Coordinate with providers when circuit capacity is exceeded.
-(pen)-> Report phishing; do not click, reply, or share approval codes.
+(pen)-> Report (r)phishing(pen); do not click, reply, or share approval codes.
 (pen)-> Antivirus and filters complement user verification.
 (pen)-> Preserve logs and follow incident response procedures.
 (pen)-> No single control guarantees service or prevents compromise.
-(pen)-> Review (hp)residual(pen) (hp)risk(pen) as systems and attacker methods change.
+(pen)-> Review residual risk as systems and attacker methods change.

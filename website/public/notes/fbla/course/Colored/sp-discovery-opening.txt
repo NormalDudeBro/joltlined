@@ -8,16 +8,16 @@
 (pen)-> Example: ask what a new-hire welcome must accomplish.
 (pen)-> The example is a prompt, not a memorized contest script.
 (pen)-> Match formality to setting; do not presume familiarity.
-(pen)-> A greeting is not a feature list or forced joke.
+(pen)-> A greeting is not a (li)feature(pen) list or forced joke.
 (pen)-> Then invite the customer's perspective and listen.
-(pen)-> (y)FBLA(pen) top band rewards an original smooth transition.
+(pen)-> (hp)FBLA(pen) top band rewards an original smooth transition.
 (pen)o (r)Find the need(pen)
 (pen)-> Need: outcome, task, or constraint the buyer must address.
 (pen)-> Want: preferred attribute; it may matter, but verify why.
-(pen)-> Ask (hp)open(pen) questions about goals and current process.
+(pen)-> Ask open questions about goals and current process.
 (pen)-> Probe frequency, friction, impact, and desired outcome.
 (pen)-> Follow up: what happens when the step is delayed?
-(pen)-> Closed questions (db)confirm(pen) facts; they rarely reveal context.
+(pen)-> Closed questions confirm facts; they rarely reveal context.
 (pen)-> Listen fully; paraphrase and invite correction.
 (pen)-> Separate what was said from your interpretation.
 (pen)-> Do not manufacture needs or lead the buyer to agree.
@@ -30,14 +30,14 @@
 (pen)-> Ask who uses, funds, approves, or checks compatibility.
 (pen)-> One stakeholder's preference may not represent the group.
 (pen)-> Discover budget, timing, workflow, and decision process.
-(pen)-> Ask permission (db)before(pen) recording contact preferences.
+(pen)-> Ask permission before recording contact preferences.
 (pen)-> Example: manager funds; staff use; IT checks access.
-(pen)-> (db)Confirm(pen) each role's relevant outcome and constraint.
+(pen)-> Confirm each role's relevant outcome and constraint.
 (pen)-> Do not collect unrelated personal information.
-(pen)-> Stakeholder (pu)map(pen) helps test fit, not force consensus.
+(pen)-> Stakeholder map helps test fit, not force consensus.
 (pen)o (db)Confirm before advising(pen)
-(pen)-> Summarize the priority and ask if you understood correctly.
-(pen)-> Resolve conflicting (pu)priorities(pen) (db)before(pen) recommending.
+(pen)-> Summarize the (pu)priority(pen) and ask if you understood correctly.
+(pen)-> Resolve conflicting (pu)priorities(pen) before recommending.
 (pen)-> Connect a recommendation only to a confirmed need.
 (pen)-> A colorful dashboard is a want until purpose is clear.
 (pen)-> It may become relevant if it improves needed readability.
@@ -45,4 +45,4 @@
 (pen)-> If the offer mismatches, qualify or recommend no sale.
 (pen)-> Ask permission to move from discovery to recommendation.
 (pen)-> An accurate summary reduces mistaken assumptions.
-(pen)-> (db)Confirm(pen) buyer context again if new facts change the fit.
+(pen)-> Confirm buyer context again if new facts change the fit.

@@ -57,7 +57,7 @@ for (const item of course.sheets) {
     const markers = [...line.matchAll(/\((pen|g|li|pu|br|or|y|r|db|mb|p|lb|hp)\)/g)];
     const spans = markers.map((marker, position) => [marker[0], marker[1], line.slice(marker.index + marker[0].length, markers[position + 1]?.index ?? line.length)]);
     const inks = new Set(spans.filter(([, ink]) => ink !== 'pen').map(([, ink]) => ink));
-    assert.ok(inks.size <= 2);
+    assert.ok([...inks].every(ink => ['g', 'li', 'or', 'r', 'p', 'hp', 'db', 'mb', 'pu', 'y'].includes(ink)), 'valid requested highlight inks');
     for (const [spanIndex, [, ink, text]] of spans.entries()) {
       if (ink === 'pen' || !text) continue;
       assert.match(text, /^[A-Za-z]+(?: [A-Za-z]+)*$/);
@@ -79,7 +79,6 @@ for (const item of course.sheets) {
       if (titleStyles.has(title)) assert.equal(style, titleStyles.get(title), 'Overview/header style equality');
       titleStyles.set(title, style);
     } else {
-      assert.ok(inks.size <= 2, 'at most two distinct highlight colors per support note');
       const stopwords = new Set(['overview', 'need', 'to', 'know', 'understand', 'do', 'identify', 'takeaway', 'developments', 'and', 'of', 'in', 'the', 'a', 'an', 'for', 'with']);
       const words = [...plainLines[index].matchAll(/(?<![A-Za-z0-9'-])[A-Za-z0-9]+(?:['-][A-Za-z0-9]+)*(?![A-Za-z0-9'-])/g)];
       assert.ok(words.every(word => !stopwords.has(word[0].toLowerCase()) || colors.slice(word.index, word.index + word[0].length).every(ink => ink === 'pen')), 'body does not color exact title stopwords');

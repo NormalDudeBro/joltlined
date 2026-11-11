@@ -4,45 +4,45 @@
 (pen)o (li)Cloud benefits and operating costs(pen)
 (pen)-> On-demand provisioning can shorten deployment time.
 (pen)-> Elastic resources can scale with changing workload demand.
-(pen)-> Measured (r)service(pen) ties some (li)costs(pen) to consumption.
+(pen)-> Measured service ties some costs to consumption.
 (pen)-> Less local hardware can reduce some maintenance work.
-(pen)-> Usage charges, licenses and support create ongoing (li)costs(pen).
+(pen)-> Usage charges, licenses and support create ongoing costs.
 (pen)-> Data transfer and storage can add to monthly bills.
 (pen)-> Migration and staff learning require time and resources.
-(pen)-> Variable demand can make (li)costs(pen) difficult to forecast.
-(pen)-> (li)Cloud(pen) is not automatically cheaper than local infrastructure.
+(pen)-> Variable demand can make costs difficult to forecast.
+(pen)-> (mb)Cloud(pen) is not automatically cheaper than local infrastructure.
 (pen)o (p)Cloud risks and planning(pen)
 (pen)-> Provider outages can make hosted services unavailable.
 (pen)-> Misconfigured permissions can expose data or resources.
 (pen)-> Provider dependence can make migration or exit difficult.
 (pen)-> Location and retention of data affect compliance obligations.
 (pen)-> Plan access controls and recovery responsibilities in advance.
-(pen)-> Assess portability and export (hp)options(pen) before committing.
+(pen)-> Assess portability and export options before committing.
 (pen)-> Use budgets and alerts to monitor measured consumption.
 (pen)-> Provider safeguards do not replace correct customer setup.
-(pen)-> Availability depends on app, network and provider systems.
-(pen)-> Compare (p)risks(pen) and (li)costs(pen) with the business continuity need.
+(pen)-> (g)Availability(pen) depends on app, network and provider systems.
+(pen)-> Compare risks and costs with the business continuity need.
 (pen)o Overview
 (pen)-> (hp)Wireless LAN and cellular options(pen)
 (pen)-> 5(r)G system and service families(pen)
 (pen)o (hp)Wireless LAN and cellular options(pen)
-(pen)-> IEEE 802.11 defines WLAN medium access and physical layers.
-(pen)-> (db)Wi(pen)-(db)Fi(pen) commonly links local devices through access points.
-(pen)-> (hp)Cellular(pen) networks provide operator-managed wide-area mobility.
-(pen)-> (db)Wi(pen)-(db)Fi(pen) generally uses local access points and backhaul.
-(pen)-> Unlicensed (db)Wi(pen)-(db)Fi(pen) bands can be crowded by neighboring networks.
-(pen)-> (hp)Cellular(pen) coverage depends on operator deployment and spectrum.
-(pen)-> Large campus Wi-Fi requires placement and capacity (p)planning(pen).
-(pen)-> Small networks may use a single integrated (hp)wireless(pen) gateway.
-(pen)-> Neither Wi-Fi nor (hp)cellular(pen) has one universal speed or range.
+(pen)-> (y)IEEE(pen) 802.11 defines (y)WLAN(pen) medium access and physical layers.
+(pen)-> (y)Wi(pen)-(y)Fi(pen) commonly links local devices through (y)access points(pen).
+(pen)-> Cellular networks provide operator-managed wide-area mobility.
+(pen)-> (y)Wi(pen)-(y)Fi(pen) generally uses local (y)access points(pen) and backhaul.
+(pen)-> Unlicensed (y)Wi(pen)-(y)Fi(pen) bands can be crowded by neighboring networks.
+(pen)-> Cellular coverage depends on operator deployment and spectrum.
+(pen)-> Large campus (y)Wi(pen)-(y)Fi(pen) requires placement and capacity planning.
+(pen)-> Small networks may use a single integrated wireless gateway.
+(pen)-> Neither (y)Wi(pen)-(y)Fi(pen) nor cellular has one universal speed or range.
 (pen)o 5(r)G system and service families(pen)
-(pen)-> 5(r)G(pen) is a 3GPP mobile (r)system(pen), not a single radio frequency.
-(pen)-> A 5(r)G(pen) (r)system(pen) includes user equipment, radio access and core.
-(pen)-> 5(r)G(pen) New Radio (NR) is the radio interface family.
+(pen)-> 5(y)G(pen) is a 3GPP mobile system, not a single radio frequency.
+(pen)-> A 5(y)G(pen) system includes user equipment, radio access and core.
+(pen)-> 5(y)G(pen) New Radio (NR) is the radio interface family.
 (pen)-> Enhanced mobile broadband targets high data-rate services.
-(pen)-> Massive IoT targets communication for many connected devices.
+(pen)-> Massive (pu)IoT(pen) targets communication for many connected devices.
 (pen)-> Critical communications target reliability and low latency.
 (pen)-> Network slicing can tailor logical network capabilities.
-(pen)-> (r)Service(pen) goals depend on deployment and end-to-end path.
-(pen)-> Low latency is not guaranteed for every 5(r)G(pen) application.
+(pen)-> Service goals depend on deployment and end-to-end path.
+(pen)-> Low latency is not guaranteed for every 5(y)G(pen) application.
 (pen)-> Spectrum, obstacles and distance affect coverage and capacity.

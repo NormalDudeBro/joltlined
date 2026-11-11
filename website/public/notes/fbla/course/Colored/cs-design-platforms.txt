@@ -2,47 +2,47 @@
 (pen)-> (g)Cloud responsibility and service models(pen)
 (pen)-> (li)Cloud choices(pen), (li)effects(pen), (li)and shared duties(pen)
 (pen)o (g)Cloud responsibility and service models(pen)
-(pen)-> (li)Cloud(pen) moves workloads; it does not remove customer (li)duties(pen).
-(pen)-> Provider secures (li)cloud(pen) facilities, hardware, managed layers.
+(pen)-> (mb)Cloud(pen) moves workloads; it does not remove customer duties.
+(pen)-> Provider secures (mb)cloud(pen) facilities, hardware, managed layers.
 (pen)-> Customer secures data, identities, settings, and lawful use.
-(pen)-> Exact (g)responsibility(pen) depends on (g)service(pen) and configuration.
+(pen)-> Exact responsibility depends on service and configuration.
 (pen)-> (db)IaaS(pen) rents compute, storage, and network infrastructure.
 (pen)-> (db)IaaS(pen) customer normally manages guest OS and applications.
-(pen)-> PaaS provider manages platform/runtime; customer manages app.
-(pen)-> (r)SaaS(pen) vendor runs app; customer manages users and data.
+(pen)-> (or)PaaS(pen) provider manages platform/runtime; customer manages app.
+(pen)-> (p)SaaS(pen) vendor runs app; customer manages users and data.
 (pen)-> More abstraction reduces customer control and admin work.
 (pen)o (li)Cloud choices(pen), (li)effects(pen), (li)and shared duties(pen)
 (pen)-> Example: (db)IaaS(pen) customer patches guest; provider patches host.
-(pen)-> (r)SaaS(pen) customer controls account access and sharing settings.
+(pen)-> (p)SaaS(pen) customer controls account access and sharing settings.
 (pen)-> Provider controls do not correct customer misconfiguration.
-(pen)-> Public (li)cloud(pen) can scale quickly without owning facilities.
+(pen)-> Public (mb)cloud(pen) can scale quickly without owning facilities.
 (pen)-> Costs shift toward usage; careless usage can raise bills.
-(pen)-> (li)Cloud(pen) dependence adds provider, network, and outage risks.
-(pen)-> Classify data before selecting (li)cloud(pen) storage or region.
-(pen)-> Review contract, (li)duties(pen), audit, and recovery options.
-(pen)-> AWS calls this (p)security(pen) of the (li)cloud(pen) versus in the (li)cloud(pen).
-(pen)-> A (li)cloud(pen) (g)service(pen) is not automatically safer than local hosting.
+(pen)-> (mb)Cloud(pen) dependence adds provider, network, and outage risks.
+(pen)-> Classify data before selecting (mb)cloud(pen) storage or region.
+(pen)-> Review contract, duties, audit, and recovery options.
+(pen)-> (db)AWS(pen) calls this security of the (mb)cloud(pen) versus in the (mb)cloud(pen).
+(pen)-> A (mb)cloud(pen) service is not automatically safer than local hosting.
 (pen)o Overview
 (pen)-> (p)Microservices and API security(pen)
 (pen)-> (hp)Distributed policy and complexity(pen)
 (pen)o (p)Microservices and API security(pen)
-(pen)-> (p)Microservices(pen) are small components communicating over APIs.
-(pen)-> An (p)API(pen) endpoint accepts requests for a defined operation.
+(pen)-> Microservices are small components communicating over APIs.
+(pen)-> An API endpoint accepts requests for a defined operation.
 (pen)-> Each reachable endpoint adds code and attack surface.
 (pen)-> Authenticate the caller; separately authorize each action.
 (pen)-> A valid login does not grant every endpoint permission.
 (pen)-> Service-to-service calls also need identity and access rules.
-(pen)-> NIST lists authentication and access management as core needs.
-(pen)-> Secure channels help protect (g)service(pen) communications.
-(pen)-> Mutually authenticate services; authorize each (p)API(pen) operation.
+(pen)-> (mb)NIST(pen) lists (hp)authentication(pen) and access management as core needs.
+(pen)-> Secure channels help protect service communications.
+(pen)-> Mutually authenticate services; authorize each API operation.
 (pen)o (hp)Distributed policy and complexity(pen)
 (pen)-> Many services multiply routes, keys, versions, and policies.
-(pen)-> (g)Service(pen) discovery locates changing (g)service(pen) instances.
+(pen)-> Service discovery locates changing service instances.
 (pen)-> Incorrect discovery can direct requests to hostile endpoints.
 (pen)-> Gateways centralize some edge checks and traffic controls.
-(pen)-> Internal services still require correct authorization checks.
-(pen)-> A (g)service(pen) mesh can package communication/(p)security(pen) functions.
-(pen)-> Frameworks reduce repetition but add configuration (hp)complexity(pen).
+(pen)-> Internal services still require correct (pu)authorization(pen) checks.
+(pen)-> A service mesh can package communication/security functions.
+(pen)-> Frameworks reduce repetition but add configuration complexity.
 (pen)-> Monitoring and rate limits help detect or constrain abuse.
-(pen)-> (p)Microservices(pen) scale independently, not securely by default.
-(pen)-> Review boundaries; test denied and allowed (p)API(pen) calls.
+(pen)-> Microservices scale independently, not securely by default.
+(pen)-> Review boundaries; test denied and allowed API calls.

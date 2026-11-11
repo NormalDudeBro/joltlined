@@ -1,0 +1,55 @@
+{
+  "db": [
+    "LAN", "LANs", "MAC", "MACs", "Zero Trust", "least privilege",
+    "SQL", "IaaS", "AWS", "ipconfig", "tracert", "traceroute", "ping", "nslookup"
+  ],
+  "mb": [
+    "IP", "IPv4", "CIDR", "subnet", "subnets", "subnetting", "cloud",
+    "packet", "packets", "NIST", "accounting"
+  ],
+  "li": [
+    "IPv6", "DHCP", "DHCPv6", "switch", "switches", "switching",
+    "frame", "frames", "feature", "features"
+  ],
+  "or": [
+    "WAN", "WANs", "router", "routers", "routing", "NAT", "PAT", "BGP",
+    "Ethernet", "PaaS", "Azure", "OWASP", "claim", "claims"
+  ],
+  "pu": [
+    "MAN", "MANs", "VLAN", "VLANs", "VM", "VMs", "virtual machine",
+    "virtual machines", "hypervisor", "hypervisors", "container", "containers",
+    "IoT", "segmentation", "RBAC", "role-based access control", "DAC",
+    "discretionary access control", "authorization", "Active Directory",
+    "priority", "priorities"
+  ],
+  "p": [
+    "OSI", "TCP", "HTTP", "HTTPS", "SMTP", "POP3", "IMAP", "FTP", "FTPS",
+    "SFTP", "TCO", "SaaS", "FTC", "consent"
+  ],
+  "hp": [
+    "UDP", "SSH", "TLS", "VPN", "NAC", "MFA", "RADIUS", "ACL", "ACLs",
+    "certificate", "certificates", "authentication", "authenticator",
+    "authenticators", "attestation", "password", "passwords", "FBLA",
+    "Windows", "Windows Server", "close", "closing"
+  ],
+  "g": [
+    "RAID", "UPS", "backup", "backups", "BCP", "DRP", "RTO", "RPO",
+    "confidentiality", "integrity", "availability", "nonrepudiation",
+    "encryption", "decryption", "cryptography", "AES", "SHA-256", "SHA-512",
+    "hash", "hashes", "hashing", "blockchain", "Merkle", "public key",
+    "public-key", "private key", "Linux", "benefit", "benefits"
+  ],
+  "y": [
+    "Wi-Fi", "WLAN", "WLANs", "WPA2", "WPA3", "WEP", "SSID", "SSIDs",
+    "OFDM", "MIMO", "5G", "IEEE", "Cisco", "BitLocker", "ROI",
+    "access point", "access points"
+  ],
+  "r": [
+    "DoS", "DDoS", "malware", "virus", "viruses", "worm", "worms",
+    "Trojan", "Trojans", "ransomware", "phishing", "smishing", "vishing",
+    "exploit", "exploits", "vulnerability", "vulnerabilities", "injection",
+    "buffer overflow", "race condition", "zero-day", "threat actor",
+    "threat actors", "firewall", "firewalls", "NGFW", "WAF", "SELinux",
+    "mandatory access control", "objection", "objections"
+  ]
+}

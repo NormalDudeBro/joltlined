@@ -167,7 +167,7 @@ export function renderEvent(event, rendered, palette) {
       <h2 class="course-contents">Course contents</h2><ol class="course-toc contents">${toc}</ol>
       ${sections}
     </main>
-    <footer><p>Section colors connect headings with their repeated words. The course uses purple, light green, orange, red, light pink, dark pink, dark blue, medium blue, light blue, dark green, and yellow. Light blue identifies sheet titles; other inks vary across section headings and selected named terms. Explanatory text stays pencil. Some colors do not meet text-contrast requirements; plain-text downloads are available for every sheet.</p><a href="fbla.html">Back to FBLA study plan</a></footer>
+    <footer><p>Heading colors vary independently from body-term colors. One central registry assigns fixed colors to exact, case-insensitive body terms and their explicitly listed aliases across every sheet, page, and event; registered terms always keep that color, including when several occur together. Prose, punctuation, and digits stay pencil. All eleven colors appear across each event; light blue identifies overall sheet display titles but does not automatically color body mentions. Some colors do not meet text-contrast requirements; plain-text downloads are available for every sheet.</p><a href="fbla.html">Back to FBLA study plan</a></footer>
   </div>
 </body></html>`;
 }

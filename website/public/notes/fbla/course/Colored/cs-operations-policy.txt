@@ -5,44 +5,44 @@
 (pen)-> AUP states permitted use of organizational systems.
 (pen)-> InfoSec policy sets security duties and requirements.
 (pen)-> Policy sets what; procedures describe how to do it.
-(pen)-> (db)BCP(pen) sustains priority business processes through disruption.
-(pen)-> (y)DRP(pen) restores systems and (pu)data(pen) after a disaster.
-(pen)-> (y)DRP(pen) supports (db)BCP(pen); neither plan is itself a backup.
-(pen)-> BIA ranks processes, systems, and dependency priorities.
+(pen)-> (g)BCP(pen) sustains (pu)priority(pen) business processes through disruption.
+(pen)-> (g)DRP(pen) restores systems and data after a disaster.
+(pen)-> (g)DRP(pen) supports (g)BCP(pen); neither plan is itself a (g)backup(pen).
+(pen)-> BIA ranks processes, systems, and dependency (pu)priorities(pen).
 (pen)-> Preventive controls reduce likelihood or disruption impact.
-(pen)-> (p)Plans(pen) name activation triggers, teams, contacts, and roles.
+(pen)-> Plans name activation triggers, teams, contacts, and roles.
 (pen)o (hp)Recovery targets and exercise(pen)
-(pen)-> (mb)RTO(pen) is the target time to restore a service.
-(pen)-> RPO is the acceptable age of restored (pu)data(pen).
-(pen)-> (mb)RTO(pen) limits outage duration; RPO limits (pu)data(pen) loss.
-(pen)-> (hp)Recovery(pen) strategy follows impact and criticality analysis.
-(pen)-> Define (hp)recovery(pen) sequence, resources, locations, and contacts.
-(pen)-> Test, train, and (hp)exercise(pen); testing validates (hp)recovery(pen) ability.
-(pen)-> Tabletops test decisions; restores test usable recovered (pu)data(pen).
-(pen)-> Compare actual restore time and (pu)data(pen) age with (hp)targets(pen).
+(pen)-> (g)RTO(pen) is the target time to restore a service.
+(pen)-> (g)RPO(pen) is the acceptable age of restored data.
+(pen)-> (g)RTO(pen) limits outage duration; (g)RPO(pen) limits data loss.
+(pen)-> Recovery strategy follows impact and criticality analysis.
+(pen)-> Define recovery sequence, resources, locations, and contacts.
+(pen)-> Test, train, and exercise; testing validates recovery ability.
+(pen)-> Tabletops test decisions; restores test usable recovered data.
+(pen)-> Compare actual restore time and data age with targets.
 (pen)-> Record gaps, corrective owners, and retest evidence.
-(pen)-> Update (p)plans(pen) when systems, risks, or roles (pu)change(pen).
+(pen)-> Update plans when systems, risks, or roles change.
 (pen)o Overview
 (pen)-> (or)Secure messaging and email(pen)
 (pen)-> (pu)Data minimization and change control(pen)
 (pen)o (or)Secure messaging and email(pen)
-(pen)-> Verify recipients and addresses before sending sensitive (pu)data(pen).
+(pen)-> Verify recipients and addresses before sending sensitive data.
 (pen)-> Use approved protected channels for sensitive communications.
-(pen)-> TLS protects a connection; it does not protect every copy.
-(pen)-> HTTPS is HTTP protected by TLS, not a separate cipher.
-(pen)-> Certificate validation helps authenticate the server endpoint.
-(pen)-> (or)Email(pen) encryption depends on keys and recipient configuration.
-(pen)-> Unexpected urgency, links, or files can signal phishing.
+(pen)-> (hp)TLS(pen) protects a connection; it does not protect every copy.
+(pen)-> (p)HTTPS(pen) is (p)HTTP(pen) protected by (hp)TLS(pen), not a separate cipher.
+(pen)-> (hp)Certificate(pen) validation helps authenticate the server endpoint.
+(pen)-> Email (g)encryption(pen) depends on keys and recipient configuration.
+(pen)-> Unexpected urgency, links, or files can signal (r)phishing(pen).
 (pen)-> Verify unusual payment requests on a separate known channel.
 (pen)-> Report suspicious messages through approved response channels.
 (pen)o (pu)Data minimization and change control(pen)
-(pen)-> Collect only (pu)data(pen) needed for a defined business purpose.
-(pen)-> Less stored (pu)data(pen) reduces exposure after unauthorized access.
-(pen)-> Classify (pu)data(pen); follow access, retention, and disposal rules.
+(pen)-> Collect only data needed for a defined business purpose.
+(pen)-> Less stored data reduces exposure after unauthorized access.
+(pen)-> Classify data; follow access, retention, and disposal rules.
 (pen)-> Share only necessary fields with authorized recipients.
 (pen)-> Masking replaces or removes fields, reducing analytic utility.
-(pen)-> Masked (pu)data(pen) can still identify via other attributes.
-(pen)-> Tokens substitute values; (or)secure(pen) any identity mapping.
-(pen)-> (pu)Change(pen) requests need recording and security impact review.
+(pen)-> Masked data can still identify via other attributes.
+(pen)-> Tokens substitute values; secure any identity mapping.
+(pen)-> Change requests need recording and security impact review.
 (pen)-> Test and approve changes before deployment; then verify them.
 (pen)-> Archive prior baselines for traceability and rollback.

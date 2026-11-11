@@ -2,22 +2,22 @@
 (pen)-> (pu)Risk and Security Goals(pen)
 (pen)-> (db)Controls and Malware Defense(pen)
 (pen)o (pu)Risk and Security Goals(pen)
-(pen)-> Asset value and exposure shape (pu)security(pen) (pu)risk(pen).
+(pen)-> Asset value and exposure shape security risk.
 (pen)-> Threat is a possible harmful actor or event.
-(pen)-> Vulnerability is a weakness that can be exploited.
-(pen)-> Exploit is a method or code using that weakness.
-(pen)-> (pu)Risk(pen) combines likelihood and impact in context.
+(pen)-> (r)Vulnerability(pen) is a weakness that can be exploited.
+(pen)-> (r)Exploit(pen) is a method or code using that weakness.
+(pen)-> Risk combines likelihood and impact in context.
 (pen)-> Unpatched public software raises exposure, not certainty.
-(pen)-> Insiders, mistakes, suppliers, and outsiders create (pu)risk(pen).
-(pen)-> Zero-day is unknown to responsible defenders or vendors.
-(pen)-> Confidentiality limits disclosure to authorized parties.
+(pen)-> Insiders, mistakes, suppliers, and outsiders create risk.
+(pen)-> (r)Zero(pen)-(r)day(pen) is unknown to responsible defenders or vendors.
+(pen)-> (g)Confidentiality(pen) limits disclosure to authorized parties.
 (pen)o (db)Controls and Malware Defense(pen)
-(pen)-> (y)Integrity(pen) means preserving data accuracy and completeness.
-(pen)-> (mb)Availability(pen) means timely access to authorized users.
+(pen)-> (g)Integrity(pen) means preserving data accuracy and completeness.
+(pen)-> (g)Availability(pen) means timely access to authorized users.
 (pen)-> Account lifecycle removes stale users and excess access.
-(pen)-> Authentication verifies a claimed (y)identity(pen) or authenticator.
-(pen)-> Authorization decides allowed actions; permissions enforce it.
-(pen)-> Encryption obscures content without the required key.
+(pen)-> (hp)Authentication(pen) verifies a claimed identity or (hp)authenticator(pen).
+(pen)-> (pu)Authorization(pen) decides allowed actions; permissions enforce it.
+(pen)-> (g)Encryption(pen) obscures content without the required key.
 (pen)-> Antivirus detects known or suspicious patterns; misses occur.
 (pen)-> Mail and web filters reduce risky links and attachments.
 (pen)-> Patching removes known flaws after suitable testing.
@@ -26,23 +26,23 @@
 (pen)-> (mb)Availability and Attack Paths(pen)
 (pen)-> (y)Integrity(pen), (y)Identity(pen), (y)and Recovery(pen)
 (pen)o (mb)Availability and Attack Paths(pen)
-(pen)-> DoS denies service by exhausting a constrained resource.
+(pen)-> (r)DoS(pen) denies service by exhausting a constrained resource.
 (pen)-> Floods may saturate links or consume server request capacity.
 (pen)-> Protocol attacks can exhaust connection or state tables.
 (pen)-> Application floods consume workers, memory, or CPU.
-(pen)-> DDoS distributes traffic across many compromised devices.
+(pen)-> (r)DDoS(pen) distributes traffic across many compromised devices.
 (pen)-> Botnets coordinate infected devices for distributed attacks.
 (pen)-> Distributed sources complicate filtering and attribution.
-(pen)-> Phishing impersonates trusted senders to prompt unsafe action.
-(pen)-> Spoofing forges apparent sender, address, or device (y)identity(pen).
+(pen)-> (r)Phishing(pen) impersonates trusted senders to prompt unsafe action.
+(pen)-> Spoofing forges apparent sender, address, or device identity.
 (pen)o (y)Integrity(pen), (y)Identity(pen), (y)and Recovery(pen)
 (pen)-> Poisoning corrupts trusted lookup data, such as DNS cache.
-(pen)-> Hash maps data to a fixed-size digest; it is not encryption.
+(pen)-> (g)Hash(pen) maps data to a fixed-size digest; it is not (g)encryption(pen).
 (pen)-> A trusted digest comparison can reveal changed file contents.
-(pen)-> An unauthenticated hash does not prove who supplied the file.
-(pen)-> Digital signature uses private key; public key verifies it.
-(pen)-> Signatures prove (y)integrity(pen)/key origin, not secrecy.
-(pen)-> Certificate binds (y)identity(pen) and public key under issuer policy.
-(pen)-> Validate certificate chain, name, validity, and trust.
-(pen)-> MFA uses distinct factors; RADIUS supports remote access.
+(pen)-> An unauthenticated (g)hash(pen) does not prove who supplied the file.
+(pen)-> Digital signature uses (g)private key(pen); (g)public key(pen) verifies it.
+(pen)-> Signatures prove (g)integrity(pen)/key origin, not secrecy.
+(pen)-> (hp)Certificate(pen) binds identity and (g)public key(pen) under issuer policy.
+(pen)-> Validate (hp)certificate(pen) chain, name, validity, and trust.
+(pen)-> (hp)MFA(pen) uses distinct factors; (hp)RADIUS(pen) supports remote access.
 (pen)-> SSO reuses login; TACACS+ separates device AAA functions.

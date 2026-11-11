@@ -2,26 +2,26 @@
 (pen)-> (g)Layers and Addressing Roles(pen)
 (pen)-> (li)TCP(pen), (li)UDP(pen), (li)DHCP(pen), (li)and Printed SMP(pen)
 (pen)o (g)Layers and Addressing Roles(pen)
-(pen)-> (db)OSI(pen) 1 (hp)physical(pen): signaling, media, connectors, and bits.
-(pen)-> (db)OSI(pen) 2 data link: local frames and link-layer (g)addressing(pen).
-(pen)-> (db)OSI(pen) 3 network: IP (g)addressing(pen) and routing between networks.
-(pen)-> OSI 4 transport: process delivery, ports, and (li)TCP(pen) or (li)UDP(pen).
-(pen)-> OSI 5 session: coordinates dialogues between apps.
-(pen)-> OSI 6 presentation: data representation and transformations.
-(pen)-> OSI 7 application: network services used by applications.
-(pen)-> OSI is a learning model; implementations may span (g)layers(pen).
-(pen)-> (li)TCP(pen)/(r)IP(pen) names a protocol suite, not one individual protocol.
+(pen)-> (p)OSI(pen) 1 physical: signaling, media, connectors, and bits.
+(pen)-> (p)OSI(pen) 2 data link: local (li)frames(pen) and link-layer addressing.
+(pen)-> (p)OSI(pen) 3 network: (mb)IP(pen) addressing and (or)routing(pen) between networks.
+(pen)-> (p)OSI(pen) 4 transport: process delivery, ports, and (p)TCP(pen) or (hp)UDP(pen).
+(pen)-> (p)OSI(pen) 5 session: coordinates dialogues between apps.
+(pen)-> (p)OSI(pen) 6 presentation: data representation and transformations.
+(pen)-> (p)OSI(pen) 7 application: network services used by applications.
+(pen)-> (p)OSI(pen) is a learning model; implementations may span layers.
+(pen)-> (p)TCP(pen)/(mb)IP(pen) names a protocol suite, not one individual protocol.
 (pen)o (li)TCP(pen), (li)UDP(pen), (li)DHCP(pen), (li)and Printed SMP(pen)
-(pen)-> (li)TCP(pen) provides reliable, ordered byte-stream service.
-(pen)-> (li)TCP(pen) sequence numbers and ACKs support ordered recovery.
-(pen)-> (li)UDP(pen) has no (li)TCP(pen) delivery or ordering guarantees.
+(pen)-> (p)TCP(pen) provides reliable, ordered byte-stream service.
+(pen)-> (p)TCP(pen) sequence numbers and ACKs support ordered recovery.
+(pen)-> (hp)UDP(pen) has no (p)TCP(pen) delivery or ordering guarantees.
 (pen)-> Applications select transport to fit their requirements.
 (pen)-> (li)DHCP(pen) client-server exchanges configure hosts.
 (pen)-> (li)DHCP(pen) leases assign addresses temporarily; clients renew them.
-(pen)-> (li)DHCP(pen) relays pass requests to servers on other subnets.
+(pen)-> (li)DHCP(pen) relays pass requests to servers on other (mb)subnets(pen).
 (pen)-> (li)DHCP(pen) does not establish that a device is trusted.
-(pen)-> The guide prints (li)SMP(pen) but leaves its meaning undefined.
-(pen)-> Keep (li)SMP(pen) unresolved; do not silently replace the term.
+(pen)-> The guide prints SMP but leaves its meaning undefined.
+(pen)-> Keep SMP unresolved; do not silently replace the term.
 (pen)o Overview
 (pen)-> (p)Topology and Reachability Tests(pen)
 (pen)-> (hp)Layered Physical Diagnosis(pen)
@@ -30,18 +30,18 @@
 (pen)-> A star cable fault usually isolates its attached endpoint.
 (pen)-> Bus shares a backbone; a break may affect many devices.
 (pen)-> Ring forwards around a loop; recovery depends on protection.
-(pen)-> (hp)Physical(pen) cabling shape may differ from logical (p)topology(pen).
-(pen)-> Ping (p)tests(pen) ICMP echo; loss is evidence, not a cause.
-(pen)-> Firewalls may block echo even when application service works.
-(pen)-> Tracert shows responding hops; filtering can hide responses.
+(pen)-> Physical cabling shape may differ from logical topology.
+(pen)-> (db)Ping(pen) tests ICMP echo; loss is evidence, not a cause.
+(pen)-> (r)Firewalls(pen) may block echo even when application service works.
+(pen)-> (db)Tracert(pen) shows responding hops; filtering can hide responses.
 (pen)-> A hop timeout alone does not prove destination failure.
 (pen)o (hp)Layered Physical Diagnosis(pen)
 (pen)-> First scope impact: one device, site, service, or all users?
-(pen)-> Check power, cables, link lights, and Wi-Fi association.
-(pen)-> Confirm correct SSID, enabled adapter, signal, and wired port.
-(pen)-> Check VLAN, (r)IP(pen) address, mask, gateway, and (y)DNS(pen) next.
-(pen)-> Compare gateway, permitted remote (r)IP(pen), then a (y)DNS(pen) name.
-(pen)-> IP works but names fail? Check the resolver path.
+(pen)-> Check power, cables, link lights, and (y)Wi(pen)-(y)Fi(pen) association.
+(pen)-> Confirm correct (y)SSID(pen), enabled adapter, signal, and wired port.
+(pen)-> Check (pu)VLAN(pen), (mb)IP(pen) address, mask, gateway, and DNS next.
+(pen)-> Compare gateway, permitted remote (mb)IP(pen), then a DNS name.
+(pen)-> (mb)IP(pen) works but names fail? Check the resolver path.
 (pen)-> No lease suggests (li)DHCP(pen) checks, not a proven cause.
 (pen)-> Change one safe variable; preserve before/after evidence.
 (pen)-> Repeat the test; document cause and outcome.
