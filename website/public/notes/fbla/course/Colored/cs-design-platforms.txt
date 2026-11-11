@@ -39,7 +39,7 @@
 (pen)-> Many services multiply routes, keys, versions, and policies.
 (pen)-> Service discovery locates changing service instances.
 (pen)-> Incorrect discovery can direct requests to hostile (pu)endpoints(pen).
-(pen)-> Gateways centralize some edge checks and traffic controls.
+(pen)-> (db)Gateways(pen) centralize some edge checks and traffic controls.
 (pen)-> Internal services still require correct (pu)authorization(pen) checks.
 (pen)-> A service mesh can package communication/security functions.
 (pen)-> Frameworks reduce repetition but add configuration complexity.

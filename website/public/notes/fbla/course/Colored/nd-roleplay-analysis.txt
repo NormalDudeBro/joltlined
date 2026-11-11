@@ -8,7 +8,7 @@
 (pen)-> Separate stated facts, assumptions, unknowns, and risks.
 (pen)-> Measure goals: uptime, (li)latency(pen), (or)cost(pen), or security.
 (pen)-> Rank mandatory constraints above preferences and explain why.
-(pen)-> Map clients, (li)switches(pen), servers, gateways, and (or)WAN(pen) links.
+(pen)-> Map clients, (li)switches(pen), servers, (db)gateways(pen), and (or)WAN(pen) links.
 (pen)-> Identify trust boundaries and single points of failure.
 (pen)-> Use network knowledge to explain impact and constraints.
 (pen)o (pu)Compare Real Alternatives(pen)

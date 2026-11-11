@@ -19,7 +19,7 @@
 (pen)-> (db)LAN(pen) typically supports local (li)switching(pen) and local services.
 (pen)-> (or)WAN(pen) agreements specify (li)capacity(pen) and (g)availability(pen) terms.
 (pen)-> (g)Backup(pen) circuits help only if routes and infrastructure differ.
-(pen)-> A remote site still relies on its local (db)LAN(pen) and gateway.
+(pen)-> A remote site still relies on its local (db)LAN(pen) and (db)gateway(pen).
 (pen)-> Choose scope from users, geography and application needs.
 (pen)-> No topology name guarantees a particular reliability level.
 (pen)o Overview

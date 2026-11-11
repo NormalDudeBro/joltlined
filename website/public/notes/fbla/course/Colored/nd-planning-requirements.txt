@@ -29,7 +29,7 @@
 (pen)-> Star connects (pu)endpoints(pen) to a central (li)switch(pen) or (y)access point(pen).
 (pen)-> Edge link failure affects one; central failure affects many.
 (pen)-> Mesh adds alternate paths but increases link (or)cost(pen).
-(pen)-> Full mesh of n nodes needs n(n-1)/2 point-to-point links.
+(pen)-> Full mesh of n nodes needs n(n-1)/2 (or)point(pen)-(or)to(pen)-(or)point(pen) links.
 (pen)-> Bus attaches devices along a shared backbone cable.
 (pen)-> A bus backbone break can disrupt service and hinder diagnosis.
 (pen)-> Physical topology maps cables; logical topology maps paths.

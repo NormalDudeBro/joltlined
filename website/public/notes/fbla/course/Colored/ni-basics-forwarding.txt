@@ -36,7 +36,7 @@
 (pen)-> Check end-to-end behavior after repairing a local symptom.
 (pen)-> Do not infer security from a device's (p)OSI(pen) layer alone.
 (pen)o (mb)LAN design in context(pen)
-(pen)-> A small shop may use a compact gateway and switched (db)LAN(pen).
+(pen)-> A small shop may use a compact (db)gateway(pen) and switched (db)LAN(pen).
 (pen)-> A campus commonly uses managed access and routed boundaries.
 (pen)-> Datacenter design focuses on server and storage traffic paths.
 (pen)-> (li)Capacity(pen) planning considers concurrent users and traffic.

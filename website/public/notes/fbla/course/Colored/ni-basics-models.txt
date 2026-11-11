@@ -13,7 +13,7 @@
 (pen)-> (db)LAN(pen) ownership and management depend on the organization.
 (pen)o (li)SOHO(pen), (li)enterprise and datacenter(pen)
 (pen)-> SOHO means small office/home office, usually few users.
-(pen)-> An integrated gateway may combine (or)router(pen), (y)Wi(pen)-(y)Fi(pen) and (li)switching(pen).
+(pen)-> An integrated (db)gateway(pen) may combine (or)router(pen), (y)Wi(pen)-(y)Fi(pen) and (li)switching(pen).
 (pen)-> Integration saves (or)cost(pen) but limits (li)capacity(pen) and redundancy.
 (pen)-> Enterprise (db)LANs(pen) use managed access across campuses.
 (pen)-> (pu)VLANs(pen) and routed boundaries organize traffic and policy.
@@ -39,7 +39,7 @@
 (pen)-> A Layer 2 (li)switch(pen) consults its (db)MAC(pen) forwarding table.
 (pen)-> Unknown unicast may be flooded within the eligible (pu)VLAN(pen).
 (pen)-> A (or)router(pen) examines (mb)IP(pen) destination and selects a next hop.
-(pen)-> (or)Routers(pen) separate broadcast domains by default.
+(pen)-> (or)Routers(pen) separate (mb)broadcast(pen) domains by default.
 (pen)-> A Layer 3 (li)switch(pen) can perform (or)routing(pen) when configured to do so.
 (pen)-> Only ordinary Layer 2 (li)switch(pen) operation does not route.
 (pen)-> A next hop may be another (or)router(pen), not the destination.

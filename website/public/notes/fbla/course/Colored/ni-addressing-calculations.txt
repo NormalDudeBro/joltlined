@@ -16,25 +16,25 @@
 (pen)-> (mb)Subnetting(pen) divides blocks for (or)routing(pen) and administration.
 (pen)-> (mb)CIDR(pen) writes a prefix length, such as (mb)IPv(pen)4 /24.
 (pen)-> A /24 means 24 leading bits identify the (mb)IPv(pen)4 prefix.
-(pen)-> Its dotted mask is 255.255.255.0; mask bits are contiguous.
+(pen)-> Its dotted (mb)mask(pen) is 255.255.255.0; (mb)mask(pen) bits are contiguous.
 (pen)-> (mb)IPv(pen)4 block size is 2^(32 minus prefix length) addresses.
 (pen)-> Network boundaries align to the block size.
 (pen)-> (mb)CIDR(pen) uses explicit prefixes, not inferred address classes.
 (pen)-> (mb)Subnet(pen) design balances growth, address use and broadcasts.
-(pen)-> A /31 can assign both addresses on a point-to-point link.
+(pen)-> A /31 can assign both addresses on a (or)point(pen)-(or)to(pen)-(or)point(pen) link.
 (pen)o Overview
 (pen)-> (pu)Historical IPv(pen)4 (pu)address classes(pen)
 (pen)-> (db)Addressing and planning limits(pen)
 (pen)o (pu)Historical IPv(pen)4 (pu)address classes(pen)
-(pen)-> Class A historically had first octet 1 through 126.
-(pen)-> Class B historically had first octet 128 through 191.
-(pen)-> Class C historically had first octet 192 through 223.
-(pen)-> Class D: first octet 224-239; multicast addresses.
-(pen)-> Class E: first octet 240-255; historically experimental.
+(pen)-> Class A historically had first (mb)octet(pen) 1 through 126.
+(pen)-> Class B historically had first (mb)octet(pen) 128 through 191.
+(pen)-> Class C historically had first (mb)octet(pen) 192 through 223.
+(pen)-> Class D: first (mb)octet(pen) 224-239; multicast addresses.
+(pen)-> Class E: first (mb)octet(pen) 240-255; historically experimental.
 (pen)-> Special-use values limit these simplified historical ranges.
 (pen)-> Classful networks once implied default network masks.
 (pen)-> Classless (mb)CIDR(pen) replaced class-based (or)routing(pen) and allocation.
-(pen)-> Modern configuration specifies a prefix or mask explicitly.
+(pen)-> Modern configuration specifies a prefix or (mb)mask(pen) explicitly.
 (pen)o (db)Addressing and planning limits(pen)
 (pen)-> Size (mb)subnets(pen) for planned growth without needless waste.
 (pen)-> Separate prefixes can simplify (or)routing(pen) and management.
@@ -44,5 +44,5 @@
 (pen)-> Special-use ranges are not ordinary public host allocations.
 (pen)-> Allocation and reachability depend on provider and setup.
 (pen)-> Do not infer a modern prefix from historical class labels.
-(pen)-> Verify mask, boundary and host rules for the specific link.
+(pen)-> Verify (mb)mask(pen), boundary and host rules for the specific link.
 (pen)-> Legacy (mb)subnet(pen) tutorials may use simplified classful examples.

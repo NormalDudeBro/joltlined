@@ -198,12 +198,12 @@ function renderCourseLine(line) {
 
 function renderColorReference(palette) {
   const colors = [
-    { ink: 'db', name: 'Dark blue', group: 'Selected network identifiers, trust principles, and tools', examples: ['LAN', 'MAC', 'Zero Trust', 'DNS', 'PoE', 'ping'] },
-    { ink: 'mb', name: 'Medium blue', group: 'IP addressing, hardware forms, and selected infrastructure terms', examples: ['IP', 'IPv4', 'subnet', 'rack', 'blade', 'copper'] },
-    { ink: 'li', name: 'Light green', group: 'Switching, recovery, and selected performance vocabulary', examples: ['IPv6', 'DHCP', 'switch', 'fiber', 'capacity', 'latency'] },
-    { ink: 'or', name: 'Orange', group: 'Routing, cost, and permission vocabulary', examples: ['WAN', 'routers', 'NAT', 'BGP', 'cost', 'cellular'] },
+    { ink: 'db', name: 'Dark blue', group: 'Selected network identifiers, trust principles, and tools', examples: ['LAN', 'MAC', 'Zero Trust', 'DNS', 'gateway', 'ping'] },
+    { ink: 'mb', name: 'Medium blue', group: 'IP addressing, hardware forms, and selected infrastructure terms', examples: ['IP', 'IPv4', 'subnet', 'mask', 'octet', 'DSL'] },
+    { ink: 'li', name: 'Light green', group: 'Switching, recovery, and selected performance vocabulary', examples: ['IPv6', 'DHCP', 'switch', 'fiber', 'latency', 'dual stack'] },
+    { ink: 'or', name: 'Orange', group: 'Routing, provider access, and permission vocabulary', examples: ['WAN', 'routers', 'NAT', 'ISP', 'modem', 'cellular'] },
     { ink: 'pu', name: 'Purple', group: 'Segmentation, endpoints, and presentation criteria', examples: ['VLAN', 'VMs', 'endpoint', 'rubric', 'eye contact', 'criteria'] },
-    { ink: 'p', name: 'Light pink', group: 'Selected networking/application protocols and business terms', examples: ['OSI', 'TCP', 'HTTPS', 'SaaS', 'TCO', 'consent'] },
+    { ink: 'p', name: 'Light pink', group: 'Selected networking/application protocols and business terms', examples: ['OSI', 'TCP', 'HTTPS', 'ARP', 'SaaS', 'consent'] },
     { ink: 'hp', name: 'Dark pink', group: 'Authentication, secure-access vocabulary, and selected names', examples: ['TLS', 'VPN', 'MFA', 'certificates', 'passwords', 'Windows'] },
     { ink: 'g', name: 'Dark green', group: 'Recovery, cryptography, and measured performance', examples: ['RAID', 'backups', 'encryption', 'patching', 'throughput', 'hashes'] },
     { ink: 'y', name: 'Yellow', group: 'Wireless vocabulary and selected names', examples: ['Wi-Fi', 'WPA3', 'SSID', '5G', 'BitLocker', 'ROI'] },

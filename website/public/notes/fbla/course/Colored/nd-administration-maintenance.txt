@@ -44,5 +44,5 @@
 (pen)-> Client-IP affinity sends that client to the same backend.
 (pen)-> Affinity may skew load when few distinct client flows exist.
 (pen)-> Configured probes can stop new flows to unhealthy backends.
-(pen)-> Map links, gateways, dependencies; log checks and (li)recovery(pen).
+(pen)-> Map links, (db)gateways(pen), dependencies; log checks and (li)recovery(pen).
 (pen)-> Restrict log access and retention to protect sensitive data.

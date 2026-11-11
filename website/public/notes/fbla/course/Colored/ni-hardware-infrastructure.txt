@@ -21,7 +21,7 @@
 (pen)-> (db)PoE(pen) supplies data and power over supported (or)Ethernet(pen) links.
 (pen)-> Check the (li)switch(pen)'s total (db)PoE(pen) budget and each port limit.
 (pen)-> Also verify device demand and the exact equipment datasheet.
-(pen)-> Internet needs ISP, handoff hardware, (or)router(pen) and host link.
+(pen)-> Internet needs (or)ISP(pen), handoff hardware, (or)router(pen) and host link.
 (pen)o Overview
 (pen)-> (g)File and block storage(pen)
 (pen)-> (or)RAID and fault tolerance(pen)

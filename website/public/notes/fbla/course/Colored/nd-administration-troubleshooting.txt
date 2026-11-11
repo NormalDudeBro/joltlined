@@ -12,14 +12,14 @@
 (pen)-> An (mb)IP(pen) conflict means devices share one address on a link.
 (pen)-> Check (li)DHCP(pen) leases and static assignments against plan.
 (pen)o (hp)Read local configuration(pen)
-(pen)-> (hp)Windows(pen) `(db)ipconfig(pen) /all` shows adapter and gateway settings.
-(pen)-> Compare (mb)IP(pen), mask, gateway, (db)DNS(pen) with network records.
+(pen)-> (hp)Windows(pen) `(db)ipconfig(pen) /all` shows adapter and (db)gateway(pen) settings.
+(pen)-> Compare (mb)IP(pen), (mb)mask(pen), (db)gateway(pen), (db)DNS(pen) with network records.
 (pen)-> `(db)ipconfig(pen) /renew` requests (li)DHCP(pen) renewal on auto adapters.
 (pen)-> Renewal does not fix a manually configured static address.
 (pen)-> `(db)ipconfig(pen) /flushdns` clears the local resolver cache only.
 (pen)-> (db)Ping(pen) an address and then its name to distinguish (db)DNS(pen) symptoms.
 (pen)-> (mb)IP(pen) reply but name failure suggests a name lookup problem.
-(pen)-> A wrong mask or duplicate address disrupts local delivery.
+(pen)-> A wrong (mb)mask(pen) or duplicate address disrupts local delivery.
 (pen)-> Verify command clues against server logs and another host.
 (pen)-> A (li)DHCP(pen) lease shows assignment, not connectivity.
 (pen)o Overview

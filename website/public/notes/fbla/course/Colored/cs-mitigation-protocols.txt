@@ -36,7 +36,7 @@
 (pen)-> False negatives fail to detect a real incident.
 (pen)-> Tune detections and validate alerts using event context.
 (pen)o (r)Malware(pen), (r)phishing(pen), (r)and data transformation(pen)
-(pen)-> Filter risky links and attachments at email gateways.
+(pen)-> Filter risky links and attachments at email (db)gateways(pen).
 (pen)-> (db)Least privilege(pen) limits (r)malware(pen) damage after execution.
 (pen)-> Check unexpected sender, destination, and request context.
 (pen)-> Report suspicious email; avoid opening unexpected attachments.

@@ -2,23 +2,25 @@
   "db": [
     "LAN", "LANs", "MAC", "MACs", "Zero Trust", "least privilege",
     "least-privilege", "SQL", "IaaS", "AWS", "ipconfig", "tracert",
-    "traceroute", "ping", "nslookup",     "DNS", "MIB", "NAS", "OSPF", "P2P",
-    "PoE", "SAN", "spectrum"
+    "traceroute", "ping", "nslookup", "DNS", "MIB", "NAS", "OSPF", "P2P",
+    "PoE", "SAN", "spectrum", "gateway", "gateways"
   ],
   "mb": [
     "IP", "IPv4", "CIDR", "subnet", "subnets", "subnetting", "cloud",
     "packet", "packets", "NIST", "accounting", "rack", "blade", "blades",
-    "chassis", "copper", "coax", "single-mode", "multimode", "backhaul"
+    "chassis", "copper", "coax", "single-mode", "multimode", "backhaul",
+    "mask", "octet", "octets", "DSL", "broadcast", "network adapter"
   ],
   "li": [
     "IPv6", "DHCP", "DHCPv6", "switch", "switches", "switching",
-    "frame", "frames", "feature", "features",     "recovery", "PHY", "fiber",
-    "capacity", "latency"
+    "frame", "frames", "feature", "features", "recovery", "PHY", "fiber",
+    "capacity", "latency", "Neighbor Discovery", "dual stack"
   ],
   "or": [
     "WAN", "WANs", "router", "routers", "routing", "NAT", "PAT", "BGP",
     "Ethernet", "PaaS", "Azure", "OWASP", "claim", "claims", "cost",
-    "costs", "permission", "permissions", "cellular"
+    "costs", "permission", "permissions", "cellular", "ISP", "modem",
+    "ONT", "optical network terminal", "peering", "point-to-point"
   ],
   "pu": [
     "MAN", "MANs", "VLAN", "VLANs", "VM", "VMs", "virtual machine",
@@ -30,7 +32,7 @@
   ],
   "p": [
     "OSI", "TCP", "HTTP", "HTTPS", "SMTP", "POP3", "IMAP", "FTP", "FTPS",
-    "SFTP", "TCO", "SaaS", "FTC", "consent"
+    "SFTP", "TCO", "SaaS", "FTC", "consent", "ARP"
   ],
   "hp": [
     "UDP", "SSH", "TLS", "VPN", "NAC", "MFA", "RADIUS", "ACL", "ACLs",
@@ -59,6 +61,7 @@
     "zero-day", "threat actor", "threat actors", "firewall", "firewalls",
     "NGFW", "WAF", "SELinux", "mandatory access control", "objection",
     "objections", "IDS", "IPS", "Caesar", "cipher", "ciphers",
-    "substitution", "binary", "decimal", "hex"
+    "substitution", "binary", "decimal", "hex", "hexadecimal",
+    "dotted-decimal"
   ]
 }

@@ -189,5 +189,17 @@ const measured = bodyLine('nd-administration-troubleshooting', 'Measure latency 
 assert.equal(atLine(measured, 'latency', 'latency versus throughput'), 'li');
 assert.equal(atLine(measured, 'throughput', 'latency versus throughput'), 'g');
 assert.notEqual(atLine(measured, 'latency', 'latency versus throughput'), atLine(measured, 'throughput', 'latency versus throughput'));
+const access = bodyLine('ni-basics-addressing', 'Fiber, coax, DSL and cellular');
+assert.equal(atLine(access, 'Fiber', 'access media'), 'li');
+assert.equal(atLine(access, 'coax', 'access media'), 'mb');
+assert.equal(atLine(access, 'DSL', 'access media'), 'mb');
+assert.equal(atLine(access, 'cellular', 'access media'), 'or');
+assert.equal(atLine(bodyLine('ni-basics-addressing', 'route toward the ISP'), 'ISP', 'ISP body term'), 'or');
+assert.equal(atLine(bodyLine('ni-basics-addressing', 'uses ARP on Ethernet'), 'ARP', 'ARP protocol'), 'p');
+assert.equal(atLine(bodyLine('ni-basics-addressing', 'dotted-decimal octet'), 'octet', 'IPv4 octet'), 'mb');
+assert.equal(atLine(bodyLine('ni-basics-addressing', 'dotted-decimal octet'), 'decimal', 'dotted-decimal notation'), 'r');
+assert.equal(atLine(bodyLine('ni-basics-addressing', 'written as hexadecimal'), 'hexadecimal', 'hexadecimal alias'), 'r');
+assert.equal(atLine(bodyLine('nd-administration-troubleshooting', 'mask, gateway, DNS'), 'gateway', 'gateway next hop'), 'db');
+assert.equal(atLine(bodyLine('nd-administration-troubleshooting', 'mask, gateway, DNS'), 'mask', 'subnet mask'), 'mb');
 
 console.log(`PASS: ${registered.length} centrally registered body terms, ${lanOccurrences} consistent LAN occurrences, independent varied heading palettes, exact preservation and drift guards.`);

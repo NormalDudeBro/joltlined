@@ -2,11 +2,11 @@
 (pen)-> (hp)From provider to host(pen)
 (pen)-> (r)Network adapters and local traffic(pen)
 (pen)o (hp)From provider to host(pen)
-(pen)-> An ISP supplies service over a provider network.
-(pen)-> A modem terminates a provider-specific signal.
-(pen)-> An ONT terminates a (li)fiber(pen) access service handoff.
+(pen)-> An (or)ISP(pen) supplies service over a provider network.
+(pen)-> A (or)modem(pen) terminates a provider-specific signal.
+(pen)-> An (or)ONT(pen) terminates a (li)fiber(pen) access service handoff.
 (pen)-> Either handoff can present (or)Ethernet(pen) to a (or)router(pen).
-(pen)-> Some gateways combine modem or ONT and (or)router(pen).
+(pen)-> Some (db)gateways(pen) combine (or)modem(pen) or (or)ONT(pen) and (or)router(pen).
 (pen)-> A (or)router(pen) forwards (mb)IP(pen) (mb)packets(pen) between networks.
 (pen)-> Its (or)WAN(pen) side faces service; (db)LAN(pen) serves local hosts.
 (pen)-> A Layer 2 (li)switch(pen) forwards (db)LAN(pen) (li)frames(pen) using (db)MACs(pen).
@@ -17,9 +17,9 @@
 (pen)-> A PCIe NIC is a physical card fitted to a slot.
 (pen)-> A virtual NIC is a software interface for a (pu)VM(pen).
 (pen)-> The host's virtual (li)switch(pen) can connect virtual NICs.
-(pen)-> Path: provider, modem/ONT, (or)router(pen), (db)LAN(pen) (li)switch(pen), host.
+(pen)-> Path: provider, (or)modem(pen)/(or)ONT(pen), (or)router(pen), (db)LAN(pen) (li)switch(pen), host.
 (pen)-> One appliance may implement several path functions.
-(pen)-> The ISP service and working provider network are also needed.
+(pen)-> The (or)ISP(pen) service and working provider network are also needed.
 (pen)-> Without Internet, local switched communication may still work.
 (pen)-> (or)Ethernet(pen) (li)frames(pen) use (db)MAC(pen) addressing on the local link.
 (pen)o Overview

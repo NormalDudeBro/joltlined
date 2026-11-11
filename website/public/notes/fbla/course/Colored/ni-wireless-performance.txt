@@ -33,7 +33,7 @@
 (pen)-> Unlicensed (y)Wi(pen)-(y)Fi(pen) bands can be crowded by neighboring networks.
 (pen)-> (or)Cellular(pen) coverage depends on operator deployment and (db)spectrum(pen).
 (pen)-> Large campus (y)Wi(pen)-(y)Fi(pen) requires placement and (li)capacity(pen) planning.
-(pen)-> Small networks may use a single integrated wireless gateway.
+(pen)-> Small networks may use a single integrated wireless (db)gateway(pen).
 (pen)-> Neither (y)Wi(pen)-(y)Fi(pen) nor (or)cellular(pen) has one universal speed or range.
 (pen)o 5(r)G system and service families(pen)
 (pen)-> 5(y)G(pen) is a 3GPP mobile system, not a single radio frequency.

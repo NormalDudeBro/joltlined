@@ -39,8 +39,8 @@
 (pen)-> First scope impact: one device, site, service, or all users?
 (pen)-> Check power, cables, link lights, and (y)Wi(pen)-(y)Fi(pen) association.
 (pen)-> Confirm correct (y)SSID(pen), enabled adapter, signal, and wired port.
-(pen)-> Check (pu)VLAN(pen), (mb)IP(pen) address, mask, gateway, and (db)DNS(pen) next.
-(pen)-> Compare gateway, permitted remote (mb)IP(pen), then a (db)DNS(pen) name.
+(pen)-> Check (pu)VLAN(pen), (mb)IP(pen) address, (mb)mask(pen), (db)gateway(pen), and (db)DNS(pen) next.
+(pen)-> Compare (db)gateway(pen), permitted remote (mb)IP(pen), then a (db)DNS(pen) name.
 (pen)-> (mb)IP(pen) works but names fail? Check the resolver path.
 (pen)-> No lease suggests (li)DHCP(pen) checks, not a proven cause.
 (pen)-> Change one safe variable; preserve before/after evidence.

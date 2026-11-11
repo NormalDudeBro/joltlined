@@ -4,7 +4,7 @@
 (pen)o (r)Segmentation and trust boundaries(pen)
 (pen)-> Physical (pu)segmentation(pen) separates equipment, cabling, or sites.
 (pen)-> Logical (pu)segmentation(pen) partitions shared gear with rules.
-(pen)-> (pu)VLANs(pen) separate layer-two broadcast domains on shared (li)switches(pen).
+(pen)-> (pu)VLANs(pen) separate layer-two (mb)broadcast(pen) domains on shared (li)switches(pen).
 (pen)-> (hp)ACLs(pen) and (r)firewalls(pen) govern traffic across segment boundaries.
 (pen)-> (pu)Segmentation(pen) can limit lateral movement after compromise.
 (pen)-> A (pu)VLAN(pen) alone is not (g)encryption(pen) or identity (hp)authentication(pen).
