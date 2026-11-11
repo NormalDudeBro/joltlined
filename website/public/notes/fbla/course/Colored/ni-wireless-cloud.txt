@@ -1,6 +1,6 @@
 (pen)o Overview
 (pen)-> (db)Cloud definition and service models(pen)
-(pen)-> (br)Service model use and responsibility(pen)
+(pen)-> (mb)Service model use and responsibility(pen)
 (pen)o (db)Cloud definition and service models(pen)
 (pen)-> (db)Cloud(pen) offers on-demand access to shared computing resources.
 (pen)-> Resources include networks, servers, storage and applications.
@@ -10,18 +10,18 @@
 (pen)-> (pu)PaaS(pen) supplies a platform for customers to deploy applications.
 (pen)-> (pu)PaaS(pen) provider manages more underlying runtime infrastructure.
 (pen)-> (li)SaaS(pen) delivers a provider-operated application to its users.
-(pen)-> (br)Service(pen) (db)models(pen) distinguish provider and customer control.
-(pen)o (br)Service model use and responsibility(pen)
+(pen)-> (mb)Service(pen) (db)models(pen) distinguish provider and customer control.
+(pen)o (mb)Service model use and responsibility(pen)
 (pen)-> (r)IaaS(pen) suits teams needing control of virtual machines.
 (pen)-> (pu)PaaS(pen) runs customer code on a provider-managed platform.
 (pen)-> (li)SaaS(pen) suits organizations using a finished hosted application.
-(pen)-> Provider duties differ by (br)service(pen) and contract.
-(pen)-> Customers still manage identities, access and data (br)use(pen).
-(pen)-> Shared (br)responsibility(pen) does not remove customer duties.
-(pen)-> A hosted (br)service(pen) depends on its provider and network path.
+(pen)-> Provider duties differ by (mb)service(pen) and contract.
+(pen)-> Customers still manage identities, access and data (mb)use(pen).
+(pen)-> Shared (mb)responsibility(pen) does not remove customer duties.
+(pen)-> A hosted (mb)service(pen) depends on its provider and network path.
 (pen)-> Clarify backup, retention and recovery terms before adoption.
-(pen)-> (db)Cloud(pen) describes a delivery (br)model(pen), not one physical location.
-(pen)-> (br)Service(pen) boundaries vary, so verify the actual offer terms.
+(pen)-> (db)Cloud(pen) describes a delivery (mb)model(pen), not one physical location.
+(pen)-> (mb)Service(pen) boundaries vary, so verify the actual offer terms.
 (pen)o Overview
 (pen)-> (y)Radio frequency and attenuation(pen)
 (pen)-> (g)Wireless speed and reliability(pen)

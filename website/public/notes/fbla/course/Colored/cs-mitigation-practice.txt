@@ -10,7 +10,7 @@
 (pen)-> Allow (pu)password(pen) managers, autofill, and paste functionality.
 (pen)-> Rate limiting helps reduce online guessing attempts.
 (pen)-> Do not require arbitrary periodic changes absent compromise.
-(pen)-> (br)Change(pen) passwords promptly when compromise evidence exists.
+(pen)-> (mb)Change(pen) passwords promptly when compromise evidence exists.
 (pen)o (db)Password use and protection(pen)
 (pen)-> (db)Use(pen) a unique (pu)password(pen) for each account or service.
 (pen)-> Long unique secrets reduce reuse and guessing risks.
@@ -23,12 +23,12 @@
 (pen)-> A salt is not secret; it prevents identical hash reuse.
 (pen)-> Account recovery needs (db)protection(pen) too.
 (pen)o Overview
-(pen)-> (br)Patches and secure change(pen)
+(pen)-> (mb)Patches and secure change(pen)
 (pen)-> (y)Version control and pen testing(pen)
-(pen)o (br)Patches and secure change(pen)
-(pen)-> Updates repair flaws and may (br)change(pen) software behavior.
+(pen)o (mb)Patches and secure change(pen)
+(pen)-> Updates repair flaws and may (mb)change(pen) software behavior.
 (pen)-> Inventory systems to identify exposed, affected versions.
-(pen)-> Prioritize (br)patches(pen) by risk, exposure, and business impact.
+(pen)-> Prioritize (mb)patches(pen) by risk, exposure, and business impact.
 (pen)-> Obtain updates through authenticated vendor distribution.
 (pen)-> Test security and function before production deployment.
 (pen)-> Approve changes after security-impact assessment and (y)testing(pen).
@@ -36,7 +36,7 @@
 (pen)-> Emergency changes still need later documented review.
 (pen)-> Patch firewall software to address vendor security flaws.
 (pen)o (y)Version control and pen testing(pen)
-(pen)-> (y)Version(pen) (y)control(pen) tracks (br)change(pen) history and prior baselines.
+(pen)-> (y)Version(pen) (y)control(pen) tracks (mb)change(pen) history and prior baselines.
 (pen)-> Review diffs to find unexpected or unsafe configuration edits.
 (pen)-> Keep passwords, tokens, keys, and private data out of commits.
 (pen)-> Retain prior known-good versions for tested rollback.

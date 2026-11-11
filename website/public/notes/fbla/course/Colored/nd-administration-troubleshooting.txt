@@ -17,15 +17,15 @@
 (pen)-> `ipconfig /renew` requests (y)DHCP(pen) renewal on auto adapters.
 (pen)-> Renewal does not fix a manually configured static address.
 (pen)-> `ipconfig /flushdns` clears the (hp)local(pen) resolver cache only.
-(pen)-> Ping an address and then its name to distinguish (br)DNS(pen) (p)symptoms(pen).
+(pen)-> Ping an address and then its name to distinguish (mb)DNS(pen) (p)symptoms(pen).
 (pen)-> (db)IP(pen) reply but name failure suggests a name lookup problem.
 (pen)-> A wrong mask or duplicate address disrupts (hp)local(pen) delivery.
 (pen)-> Verify command clues against server logs and another host.
 (pen)-> A (y)DHCP(pen) lease shows assignment, not connectivity.
 (pen)o Overview
-(pen)-> (r)Path tools and limits(pen)
+(pen)-> (or)Path tools and limits(pen)
 (pen)-> (pu)Evidence and asset records(pen)
-(pen)o (r)Path tools and limits(pen)
+(pen)o (or)Path tools and limits(pen)
 (pen)-> Ping sends Internet Control Message Protocol (ICMP) probes.
 (pen)-> Reply shows ICMP worked then; it does not test app ports.
 (pen)-> No reply may mean filtering, loss, routing, or host policy.
@@ -34,7 +34,7 @@
 (pen)-> Routers may omit TTL replies; asterisks do not prove failure.
 (pen)-> Paths may be asymmetric; traces show only responding hops.
 (pen)-> Unix `traceroute` may use UDP, ICMP, or TCP by implementation.
-(pen)-> Use approved probes; firewalls and rate (r)limits(pen) shape results.
+(pen)-> Use approved probes; firewalls and rate (or)limits(pen) shape results.
 (pen)o (pu)Evidence and asset records(pen)
 (pen)-> Counters expose errors, discards, and traffic volume.
 (pen)-> Packet captures show timing, retransmits, and resets.

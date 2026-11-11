@@ -1,18 +1,18 @@
 (pen)o Overview
-(pen)-> (br)Rack and blade server forms(pen)
+(pen)-> (mb)Rack and blade server forms(pen)
 (pen)-> (y)Chassis power and connectivity(pen)
-(pen)o (br)Rack and blade server forms(pen)
-(pen)-> A (br)rack(pen) (br)server(pen) is an individual (br)server(pen) mounted in a (br)rack(pen).
+(pen)o (mb)Rack and blade server forms(pen)
+(pen)-> A (mb)rack(pen) (mb)server(pen) is an individual (mb)server(pen) mounted in a (mb)rack(pen).
 (pen)-> It generally has its own (y)power(pen) and cooling components.
 (pen)-> Racks allow mixed systems and incremental installation.
-(pen)-> They require (br)rack(pen) space, cabling and room-level cooling.
-(pen)-> A (br)blade(pen) is a (br)server(pen) module fitted into a shared (y)chassis(pen).
+(pen)-> They require (mb)rack(pen) space, cabling and room-level cooling.
+(pen)-> A (mb)blade(pen) is a (mb)server(pen) module fitted into a shared (y)chassis(pen).
 (pen)-> The (y)chassis(pen) can provide (y)power(pen), fans, fabric and management.
 (pen)-> Shared infrastructure can reduce cabling and increase density.
-(pen)-> (y)Chassis(pen) cost and (br)blade(pen) compatibility constrain choice.
+(pen)-> (y)Chassis(pen) cost and (mb)blade(pen) compatibility constrain choice.
 (pen)-> Shared (y)power(pen), cooling or midplane can form failure domains.
 (pen)o (y)Chassis power and connectivity(pen)
-(pen)-> Cisco UCS 5108 holds up to eight half-width (br)blade(pen) servers.
+(pen)-> Cisco UCS 5108 holds up to eight half-width (mb)blade(pen) servers.
 (pen)-> Its (y)chassis(pen) has hot-swappable (y)power(pen) supplies and fans.
 (pen)-> Its fabric connects blades to network interfaces and uplinks.
 (pen)-> That design reduces separate (y)chassis(pen) switches and cabling.
@@ -24,7 +24,7 @@
 (pen)-> Internet needs ISP, handoff hardware, router and host link.
 (pen)o Overview
 (pen)-> (g)File and block storage(pen)
-(pen)-> (li)RAID and fault tolerance(pen)
+(pen)-> (or)RAID and fault tolerance(pen)
 (pen)o (g)File and block storage(pen)
 (pen)-> (r)NAS(pen) means network-attached (g)storage(pen), typically shared files.
 (pen)-> Clients request named files and folders over LAN protocols.
@@ -35,14 +35,14 @@
 (pen)-> Neither guarantees a particular speed or availability.
 (pen)-> A (g)storage(pen) network does not itself provide backup copies.
 (pen)-> Protect data separately against deletion and site loss.
-(pen)o (li)RAID and fault tolerance(pen)
-(pen)-> (li)RAID(pen) combines disks for speed, redundancy, or both.
-(pen)-> (li)RAID(pen) 0 stripes data; 2+ disks, no disk-failure (li)tolerance(pen).
-(pen)-> Two-disk (li)RAID(pen) 1 mirrors data; survives one member failure.
-(pen)-> (li)RAID(pen) 5 uses single parity; 3+ disks, tolerates one disk loss.
-(pen)-> (li)RAID(pen) 6 uses dual parity; 4+ disks, tolerates two disk losses.
-(pen)-> Conventional (li)RAID(pen) 10 stripes mirrored pairs; minimum 4 disks.
-(pen)-> (li)RAID(pen) 10 tolerates one loss per pair, not both in one pair.
-(pen)-> (li)RAID(pen) limits assume supported layouts and healthy members.
+(pen)o (or)RAID and fault tolerance(pen)
+(pen)-> (or)RAID(pen) combines disks for speed, redundancy, or both.
+(pen)-> (or)RAID(pen) 0 stripes data; 2+ disks, no disk-failure (or)tolerance(pen).
+(pen)-> Two-disk (or)RAID(pen) 1 mirrors data; survives one member failure.
+(pen)-> (or)RAID(pen) 5 uses single parity; 3+ disks, tolerates one disk loss.
+(pen)-> (or)RAID(pen) 6 uses dual parity; 4+ disks, tolerates two disk losses.
+(pen)-> Conventional (or)RAID(pen) 10 stripes mirrored pairs; minimum 4 disks.
+(pen)-> (or)RAID(pen) 10 tolerates one loss per pair, not both in one pair.
+(pen)-> (or)RAID(pen) limits assume supported layouts and healthy members.
 (pen)-> Rebuilds take time; extra failures can exceed level limits.
-(pen)-> (li)RAID(pen) is not backup; keep separate copies and test restores.
+(pen)-> (or)RAID(pen) is not backup; keep separate copies and test restores.

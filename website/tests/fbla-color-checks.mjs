@@ -12,7 +12,7 @@ const root = resolve(here, '..', 'public');
 const config = JSON.parse(readFileSync(resolve(here, '../scripts/fbla-color-plan.json'), 'utf8'));
 const headingPlan = JSON.parse(readFileSync(resolve(here, '../scripts/fbla-heading-palettes.json'), 'utf8'));
 const sheets = renderCourseSheets();
-const marker = /\((pen|g|li|pu|br|or|y|r|db|p|lb|hp)\)/g;
+const marker = /\((pen|g|li|pu|br|or|y|r|db|mb|p|lb|hp)\)/g;
 const strip = value => value.replace(marker, '');
 const parse = colored => colored.split('\n').map(line => {
   const markers = [...line.matchAll(marker)];
@@ -33,8 +33,8 @@ const colorAt = (line, offset) => {
   return 'pen';
 };
 
-assert.deepEqual(Object.keys(fblaInks).sort(), ['db', 'r', 'y']);
-assert.deepEqual(fblaInks, { r: '#df3034', db: '#173f88', y: '#ebc600' });
+assert.deepEqual(Object.keys(fblaInks).sort(), ['db', 'mb', 'r', 'y']);
+assert.deepEqual(fblaInks, { r: '#df3034', db: '#173f88', mb: '#287db3', y: '#ebc600' });
 assert.equal(Object.keys(config.sheets).length, 44);
 assert.equal(Object.keys(config.sheets).length * 2, 88, 'local source plan covers both pages of all 44 sheets');
 
@@ -44,7 +44,7 @@ for (const event of ['networking', 'cybersecurity', 'network-design', 'sales']) 
     .filter(line => line.text.startsWith('o ') && line.text !== 'o Overview')
     .map(line => line.spans.find(span => span.ink !== 'pen' && span.text)?.ink).join(','));
   assert.ok(new Set(sequences).size >= Math.min(9, eventSheets.length), `${event}: heading palettes must vary across sheets; got ${[...new Set(sequences)]}`);
-  assert.equal(new Set(sequences.flatMap(sequence => sequence.split(','))).size, 9, `${event}: headings use the full nine-ink palette across the course`);
+  assert.deepEqual([...new Set(sequences.flatMap(sequence => sequence.split(',')))].sort(), ['g', 'li', 'or', 'r', 'p', 'hp', 'db', 'mb', 'pu', 'y'].sort(), `${event}: headings use all ten section inks, including orange and medium blue; light blue remains the sheet-title ink`);
 }
 
 for (const item of sheets.sheets) {
@@ -140,7 +140,7 @@ assert.equal(atLine(exampleLines[6], 'MAC', 'optional MAC accent'), 'db');
 
 const cloud = sheets.sheets.find(item => item.sheet.id === 'ni-wireless-cloud');
 const cloudLines = parse(colorSheet(cloud.plain, palette, cloud.sheet.id));
-assert.equal(atLine(cloudLines[12], 'service', 'cloud second-title ownership'), 'br');
+assert.equal(atLine(cloudLines[12], 'service', 'cloud second-title ownership'), 'mb');
 assert.equal(atLine(cloudLines[22], 'cloud', 'cloud cross-page ownership'), 'db');
 assert.equal(colorAt(cloudLines[12], cloudLines[12].text.lastIndexOf('and')), 'pen', 'title connective stopword does not create a body family');
 

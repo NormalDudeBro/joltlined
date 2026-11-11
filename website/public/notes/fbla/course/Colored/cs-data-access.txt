@@ -1,30 +1,30 @@
 (pen)o Overview
-(pen)-> (br)Three states of data(pen)
+(pen)-> (mb)Three states of data(pen)
 (pen)-> (y)MAC(pen), (y)DAC(pen), (y)and RBAC models(pen)
-(pen)o (br)Three states of data(pen)
-(pen)-> (br)Data(pen) at rest is stored on disk, device, backup, or database.
-(pen)-> Protect stored (br)data(pen) with encryption and account permissions.
-(pen)-> (br)Data(pen) in transit moves between devices or services.
+(pen)o (mb)Three states of data(pen)
+(pen)-> (mb)Data(pen) at rest is stored on disk, device, backup, or database.
+(pen)-> Protect stored (mb)data(pen) with encryption and account permissions.
+(pen)-> (mb)Data(pen) in transit moves between devices or services.
 (pen)-> Use protected channels and verify communicating endpoints.
-(pen)-> (br)Data(pen) in use is actively processed by an application.
+(pen)-> (mb)Data(pen) in use is actively processed by an application.
 (pen)-> Limit process, memory, screen, and log exposure.
-(pen)-> Encryption at rest may not protect (br)data(pen) after unlock.
+(pen)-> Encryption at rest may not protect (mb)data(pen) after unlock.
 (pen)-> Transit encryption does not protect a compromised endpoint.
 (pen)-> Select controls based on sensitivity and threat model.
 (pen)o (y)MAC(pen), (y)DAC(pen), (y)and RBAC models(pen)
-(pen)-> (y)MAC(pen) means mandatory access control under central (li)policy(pen).
+(pen)-> (y)MAC(pen) means mandatory access control under central (or)policy(pen).
 (pen)-> Labels and clearance can govern classified document access.
-(pen)-> Ordinary users cannot freely override mandatory (li)policy(pen).
+(pen)-> Ordinary users cannot freely override mandatory (or)policy(pen).
 (pen)-> (y)DAC(pen) means discretionary access control assigned by owner.
 (pen)-> Example: file owner shares a document with colleagues.
 (pen)-> Sharing can propagate access; review inherited permissions.
 (pen)-> (y)RBAC(pen) means role-based access control tied to job duties.
-(pen)-> Payroll role reads pay (br)data(pen); approver role authorizes pay.
+(pen)-> Payroll role reads pay (mb)data(pen); approver role authorizes pay.
 (pen)-> Assign needed roles; remove stale role membership.
 (pen)-> (y)Models(pen) can coexist; choose for risk and workflow.
 (pen)o Overview
 (pen)-> (g)Authentication and MFA(pen)
-(pen)-> (li)Certificates(pen), (li)tokens(pen), (li)and policy(pen)
+(pen)-> (or)Certificates(pen), (or)tokens(pen), (or)and policy(pen)
 (pen)o (g)Authentication and MFA(pen)
 (pen)-> (g)Authentication(pen) checks control of an identity's authenticator.
 (pen)-> Authorization decides which resource action is permitted.
@@ -35,7 +35,7 @@
 (pen)-> (g)MFA(pen) reduces password-only risk but does not stop every attack.
 (pen)-> Phishing-resistant authenticators reduce credential relay.
 (pen)-> Protect enrollment, recovery, and authenticator revocation.
-(pen)o (li)Certificates(pen), (li)tokens(pen), (li)and policy(pen)
+(pen)o (or)Certificates(pen), (or)tokens(pen), (or)and policy(pen)
 (pen)-> Certificate binds a public key to an identity under CA trust.
 (pen)-> Validate chain, service name, dates, and certificate purpose.
 (pen)-> Certificate (g)authentication(pen) does not authorize every action.

@@ -167,7 +167,7 @@ export function renderEvent(event, rendered, palette) {
       <h2 class="course-contents">Course contents</h2><ol class="course-toc contents">${toc}</ol>
       ${sections}
     </main>
-    <footer><p>Section colors connect headings with their repeated words. Selected named terms use dark blue, red, or yellow accents; explanatory text stays pencil. These added inks apply only to FBLA. Some colors do not meet text-contrast requirements; plain-text downloads are available for every sheet.</p><a href="fbla.html">Back to FBLA study plan</a></footer>
+    <footer><p>Section colors connect headings with their repeated words. The course uses purple, light green, orange, red, light pink, dark pink, dark blue, medium blue, light blue, dark green, and yellow. Light blue identifies sheet titles; other inks vary across section headings and selected named terms. Explanatory text stays pencil. Some colors do not meet text-contrast requirements; plain-text downloads are available for every sheet.</p><a href="fbla.html">Back to FBLA study plan</a></footer>
   </div>
 </body></html>`;
 }
@@ -188,8 +188,8 @@ export function renderCourseHub(rendered) {
 
 function renderCourseLine(line) {
   let ink = 'pen';
-  return line.split(/(\((?:pen|g|li|pu|br|or|y|r|db|p|lb|hp)\))/).map(part => {
-    const marker = part.match(/^\((pen|g|li|pu|br|or|y|r|db|p|lb|hp)\)$/);
+  return line.split(/(\((?:pen|g|li|pu|br|or|y|r|db|mb|p|lb|hp)\))/).map(part => {
+    const marker = part.match(/^\((pen|g|li|pu|br|or|y|r|db|mb|p|lb|hp)\)$/);
     if (!marker) return ink === 'pen' ? escapeHTML(part) : `<span class="ink-${ink}">${escapeHTML(part)}</span>`;
     ink = marker[1];
     return '';

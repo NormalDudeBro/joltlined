@@ -24,7 +24,7 @@
 (pen)-> (pu)OSI(pen) aids (db)troubleshooting(pen); it is not a wire-level recipe.
 (pen)o Overview
 (pen)-> (db)Network troubleshooting model(pen)
-(pen)-> (br)LAN design in context(pen)
+(pen)-> (mb)LAN design in context(pen)
 (pen)o (db)Network troubleshooting model(pen)
 (pen)-> (pu)OSI(pen) layers provide a shared vocabulary for fault isolation.
 (pen)-> No (r)link(pen) signal suggests checking power, cable or interface.
@@ -35,10 +35,10 @@
 (pen)-> Modern protocol stacks combine functions differently from (pu)OSI(pen).
 (pen)-> Check end-to-end behavior after repairing a local symptom.
 (pen)-> Do not infer security from a device's (pu)OSI(pen) layer alone.
-(pen)o (br)LAN design in context(pen)
-(pen)-> A small shop may use a compact gateway and switched (br)LAN(pen).
+(pen)o (mb)LAN design in context(pen)
+(pen)-> A small shop may use a compact gateway and switched (mb)LAN(pen).
 (pen)-> A campus commonly uses managed access and routed boundaries.
-(pen)-> Datacenter (br)design(pen) focuses on server and storage traffic paths.
+(pen)-> Datacenter (mb)design(pen) focuses on server and storage traffic paths.
 (pen)-> Capacity planning considers concurrent users and traffic.
 (pen)-> Redundant equipment may share power or cable risks.
 (pen)-> Segmentation constrains traffic only with correct policy.

@@ -1,6 +1,6 @@
 (pen)o Overview
 (pen)-> (y)Organize a Decision Briefing(pen)
-(pen)-> (g)Communicate with Confidence(pen)
+(pen)-> (or)Communicate with Confidence(pen)
 (pen)o (y)Organize a Decision Briefing(pen)
 (pen)-> National format: 20 minutes prep, 7 minutes delivery.
 (pen)-> No separate Q&A; (li)judges(pen) may interrupt during delivery.
@@ -11,7 +11,7 @@
 (pen)-> State phases, resources, owners, tests, and rollback triggers.
 (pen)-> Use signposts and transitions to clarify the reasoning.
 (pen)-> Close with success measure, requested (y)decision(pen), and next step.
-(pen)o (g)Communicate with Confidence(pen)
+(pen)o (or)Communicate with Confidence(pen)
 (pen)-> Project voice at a measured pace; pause after key decisions.
 (pen)-> Use poised posture, purposeful gestures, and eye contact.
 (pen)-> Define acronyms; connect technical terms to business impact.

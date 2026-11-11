@@ -1,6 +1,6 @@
 (pen)o Overview
 (pen)-> (db)Proofing(pen), (db)Factors(pen), (db)and Device Trust(pen)
-(pen)-> (br)AAA(pen), (br)MFA(pen), (br)and Zero Trust(pen)
+(pen)-> (mb)AAA(pen), (mb)MFA(pen), (mb)and Zero Trust(pen)
 (pen)o (db)Proofing(pen), (db)Factors(pen), (db)and Device Trust(pen)
 (pen)-> (db)Proofing(pen) links a person identity at stated assurance.
 (pen)-> It resolves, validates evidence, then verifies owner.
@@ -11,14 +11,14 @@
 (pen)-> Authentication shows account control, not real-world identity.
 (pen)-> Assurance reduces risk; it does not promise certainty.
 (pen)-> Enrollment and recovery also need secure (db)proofing(pen) controls.
-(pen)o (br)AAA(pen), (br)MFA(pen), (br)and Zero Trust(pen)
+(pen)o (mb)AAA(pen), (mb)MFA(pen), (mb)and Zero Trust(pen)
 (pen)-> Authentication verifies control; authorization permits use.
 (pen)-> Accounting: record relevant use for review and investigation.
-(pen)-> (br)MFA(pen) uses distinct types: know, have, or are.
-(pen)-> Two passwords are both know (db)factors(pen), not (br)MFA(pen) by themselves.
+(pen)-> (mb)MFA(pen) uses distinct types: know, have, or are.
+(pen)-> Two passwords are both know (db)factors(pen), not (mb)MFA(pen) by themselves.
 (pen)-> Password plus registered security key combines know and have.
 (pen)-> SMS codes can be intercepted/phished; not phishing-resistant.
-(pen)-> (br)Zero(pen) (db)Trust(pen) checks identity/context for each resource request.
+(pen)-> (mb)Zero(pen) (db)Trust(pen) checks identity/context for each resource request.
 (pen)-> Managed (db)device(pen) and verified worker get payroll read access.
 (pen)-> Network location or VPN alone does not grant implicit (db)trust(pen).
 (pen)-> (db)Device(pen) posture is a signal; it does not identify the user.

@@ -1,20 +1,20 @@
 (pen)o Overview
-(pen)-> (br)Explain product fit(pen)
+(pen)-> (mb)Explain product fit(pen)
 (pen)-> (y)Demonstrate accurately(pen)
-(pen)o (br)Explain product fit(pen)
+(pen)o (mb)Explain product fit(pen)
 (pen)-> Define offer, intended user, included scope, and conditions.
-(pen)-> Feature describes what a (br)product(pen) has or does.
+(pen)-> Feature describes what a (mb)product(pen) has or does.
 (pen)-> Benefit describes why that feature may help a buyer.
 (pen)-> Link each feature-benefit claim to discovered need.
 (pen)-> Example: reminders may help users remember appointments.
 (pen)-> Benefit depends on delivery, access, and user response.
 (pen)-> Separate included functions from optional paid services.
 (pen)-> Check workflow, accessibility, compatibility, and capacity.
-(pen)-> A mismatch limits (br)fit(pen); (br)product(pen) knowledge includes limits.
+(pen)-> A mismatch limits (mb)fit(pen); (mb)product(pen) knowledge includes limits.
 (pen)o (y)Demonstrate accurately(pen)
 (pen)-> (y)Demonstrate(pen) a representative workflow, not every outcome.
 (pen)-> Use fictional sample data; protect real customer information.
-(pen)-> (br)Explain(pen) what is shown and what is only illustrative.
+(pen)-> (mb)Explain(pen) what is shown and what is only illustrative.
 (pen)-> Use offline-ready materials; internet is not provided.
 (pen)-> Preliminary device use has no electricity or projector.
 (pen)-> A demo cannot prove broad performance or savings (g)claims(pen).
@@ -24,24 +24,24 @@
 (pen)-> Use a pretested demo that does not expose live customer data.
 (pen)o Overview
 (pen)-> (g)Substantiate claims(pen)
-(pen)-> (li)Calculate cost and return(pen)
+(pen)-> (or)Calculate cost and return(pen)
 (pen)o (g)Substantiate claims(pen)
 (pen)-> (db)FTC(pen) says express and implied ad (g)claims(pen) need evidence.
 (pen)-> Assess the full impression, including omitted material facts.
 (pen)-> Performance, price, safety, and effectiveness can be material.
 (pen)-> Have a reasonable basis before making objective (g)claims(pen).
-(pen)-> Evidence strength should (br)fit(pen) claim and circumstances.
+(pen)-> Evidence strength should (mb)fit(pen) claim and circumstances.
 (pen)-> A testimonial alone does not prove typical objective results.
 (pen)-> A guarantee does not replace evidence for the claim.
 (pen)-> Disclose important conditions clearly near the claim.
 (pen)-> Label verified facts, estimates, and hypothetical examples.
-(pen)o (li)Calculate cost and return(pen)
-(pen)-> Total (li)cost(pen) of ownership ((r)TCO(pen)) totals costs over a stated term.
+(pen)o (or)Calculate cost and return(pen)
+(pen)-> Total (or)cost(pen) of ownership ((r)TCO(pen)) totals costs over a stated term.
 (pen)-> Count setup, purchase, subscription, labor, upkeep, exit fees.
 (pen)-> Example assumption: $120 setup plus $20 monthly for 12 months.
 (pen)-> (r)TCO(pen) = $120 + ($20 x 12) = $360 before excluded costs.
 (pen)-> (pu)ROI(pen) = net gain divided by investment, times 100 percent.
-(pen)-> Assume $500 measured benefit less $200 (li)cost(pen) = $300 net.
+(pen)-> Assume $500 measured benefit less $200 (or)cost(pen) = $300 net.
 (pen)-> (pu)ROI(pen) = $300 / $200 x 100% = 150%, if realized.
 (pen)-> Illustrative inputs are not a quote or guaranteed forecast.
 (pen)-> State term, baseline, exclusions; avoid double counting.

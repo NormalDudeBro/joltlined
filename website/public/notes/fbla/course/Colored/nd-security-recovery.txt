@@ -36,9 +36,9 @@
 (pen)-> Test (pu)updates(pen) and plan rollback; delay prolongs exposure.
 (pen)-> Firewalls and endpoint protection work at different points.
 (pen)o (db)Wireless authentication and ACLs(pen)
-(pen)-> WPA2/(li)WPA(pen)3 protect (br)Wi(pen)-(br)Fi(pen) links; choose supported secure modes.
+(pen)-> WPA2/(li)WPA(pen)3 protect (mb)Wi(pen)-(mb)Fi(pen) links; choose supported secure modes.
 (pen)-> WPA2-Personal uses shared passphrase; protect it if exposed.
-(pen)-> Enterprise (br)Wi(pen)-(br)Fi(pen) can use 802.1X/EAP user or device identity.
+(pen)-> Enterprise (mb)Wi(pen)-(mb)Fi(pen) can use 802.1X/EAP user or device identity.
 (pen)-> A backend validates credentials; protect its server and keys.
 (pen)-> Use a unique secret, current firmware and secure admin access.
 (pen)-> (li)WPA(pen)3 compatibility depends on AP and client support.

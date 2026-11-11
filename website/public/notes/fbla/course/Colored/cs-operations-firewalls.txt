@@ -1,6 +1,6 @@
 (pen)o Overview
 (pen)-> (db)Firewall inspection models(pen)
-(pen)-> (br)NGFW(pen), (br)WAF(pen), (br)and limits(pen)
+(pen)-> (mb)NGFW(pen), (mb)WAF(pen), (mb)and limits(pen)
 (pen)o (db)Firewall inspection models(pen)
 (pen)-> A (db)firewall(pen) controls flows across different security postures.
 (pen)-> Network (db)firewall(pen) filters traffic crossing network boundaries.
@@ -11,13 +11,13 @@
 (pen)-> Stateful filters compare packets with expected session state.
 (pen)-> Return traffic may pass when linked to an allowed session.
 (pen)-> State tracking does not inspect all application meaning.
-(pen)o (br)NGFW(pen), (br)WAF(pen), (br)and limits(pen)
+(pen)o (mb)NGFW(pen), (mb)WAF(pen), (mb)and limits(pen)
 (pen)-> Application (db)firewall(pen) inspects protocol content and behavior.
-(pen)-> (br)NGFW(pen) commonly combines network controls and added (db)inspection(pen).
-(pen)-> (br)NGFW(pen) capabilities differ across vendors and configurations.
-(pen)-> (br)WAF(pen) focuses on HTTP requests to web applications.
-(pen)-> (br)WAF(pen) can filter web-specific inputs and request patterns.
-(pen)-> (br)WAF(pen) supplements; it does not replace network firewalls.
+(pen)-> (mb)NGFW(pen) commonly combines network controls and added (db)inspection(pen).
+(pen)-> (mb)NGFW(pen) capabilities differ across vendors and configurations.
+(pen)-> (mb)WAF(pen) focuses on HTTP requests to web applications.
+(pen)-> (mb)WAF(pen) can filter web-specific inputs and request patterns.
+(pen)-> (mb)WAF(pen) supplements; it does not replace network firewalls.
 (pen)-> Encrypted traffic can limit (db)inspection(pen) without termination.
 (pen)-> NAT translates addresses; translation alone is not a (db)firewall(pen).
 (pen)-> Firewalls cannot stop every attack or internal misuse.

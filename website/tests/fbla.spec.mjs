@@ -80,7 +80,8 @@ test('FBLA heading palettes vary between sheets instead of resetting on each two
       .filter(note => note.textContent.startsWith('o ') && note.textContent !== 'o Overview')
       .map(note => getComputedStyle(note.querySelector('[class^="ink-"]')).color)));
     expect(new Set(palettes.map(colors => colors.join('|'))).size).toBe(Math.min(9, count));
-    expect(new Set(palettes.flat()).size).toBe(9);
+    expect(new Set(palettes.flat()).size).toBe(10);
+    await expect(page.locator('.course-sheet > h2').first()).toHaveCSS('color', 'rgb(89, 184, 231)');
     palettes.slice(1).forEach((colors, index) => expect(colors).not.toEqual(palettes[index]));
   }
 });
@@ -89,12 +90,13 @@ test('FBLA added inks render online and offline without remapping World History 
   for (const [event] of courses) {
     for (const url of [`/fbla-${event}.html`, `file://${process.cwd().replaceAll('\\', '/')}/public/fbla-${event}.html`]) {
       await page.goto(url);
-      for (const [ink, color] of [['db', 'rgb(23, 63, 136)'], ['r', 'rgb(223, 48, 52)'], ['y', 'rgb(235, 198, 0)']]) {
+      for (const [ink, color] of [['pu', 'rgb(136, 58, 194)'], ['li', 'rgb(121, 201, 0)'], ['or', 'rgb(230, 126, 34)'], ['r', 'rgb(223, 48, 52)'], ['p', 'rgb(237, 142, 180)'], ['hp', 'rgb(236, 34, 140)'], ['db', 'rgb(23, 63, 136)'], ['mb', 'rgb(40, 125, 179)'], ['g', 'rgb(22, 132, 56)'], ['y', 'rgb(235, 198, 0)']]) {
         const spans = page.locator(`.course-pages .ink-${ink}`);
         expect(await spans.count()).toBeGreaterThan(0);
         await expect(spans.first()).toHaveCSS('color', color);
       }
-      await expect(page.locator('#notes')).not.toContainText(/\((?:pen|g|li|p|hp|r|db|y)\)/);
+      await expect(page.locator('.course-sheet > h2').first()).toHaveCSS('color', 'rgb(89, 184, 231)');
+      await expect(page.locator('#notes')).not.toContainText(/\((?:pen|g|li|or|pu|p|hp|r|db|mb|y)\)/);
     }
   }
   await page.goto('/fbla-networking.html');

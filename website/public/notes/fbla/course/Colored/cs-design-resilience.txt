@@ -1,6 +1,6 @@
 (pen)o Overview
 (pen)-> (y)Backup methods and recovery(pen)
-(pen)-> (g)RAID(pen), (g)UPS(pen), (g)and CIA design cases(pen)
+(pen)-> (or)RAID(pen), (or)UPS(pen), (or)and CIA design cases(pen)
 (pen)o (y)Backup methods and recovery(pen)
 (pen)-> A (y)backup(pen) is a separate recoverable copy of selected data.
 (pen)-> Full copies selected data; restore is straightforward.
@@ -11,23 +11,23 @@
 (pen)-> Differentials grow until another full (y)backup(pen) is made.
 (pen)-> Test restores; unreadable copies do not protect.
 (pen)-> Keep isolated or offline copies to resist ransomware.
-(pen)o (g)RAID(pen), (g)UPS(pen), (g)and CIA design cases(pen)
-(pen)-> (g)RAID(pen) combines disks for performance or fault tolerance.
-(pen)-> (g)RAID(pen) 1 mirrors; (g)RAID(pen) 5 tolerates one disk failure.
-(pen)-> (g)RAID(pen) 6 tolerates two disk failures; (g)RAID(pen) 0 has no redundancy.
-(pen)-> (g)RAID(pen) cannot protect from deletion, malware, theft, or fire.
-(pen)-> (g)RAID(pen) is not (y)backup(pen); keep independent, versioned copies.
-(pen)-> (g)UPS(pen) battery bridges brief outages and enables safe shutdown.
+(pen)o (or)RAID(pen), (or)UPS(pen), (or)and CIA design cases(pen)
+(pen)-> (or)RAID(pen) combines disks for performance or fault tolerance.
+(pen)-> (or)RAID(pen) 1 mirrors; (or)RAID(pen) 5 tolerates one disk failure.
+(pen)-> (or)RAID(pen) 6 tolerates two disk failures; (or)RAID(pen) 0 has no redundancy.
+(pen)-> (or)RAID(pen) cannot protect from deletion, malware, theft, or fire.
+(pen)-> (or)RAID(pen) is not (y)backup(pen); keep independent, versioned copies.
+(pen)-> (or)UPS(pen) battery bridges brief outages and enables safe shutdown.
 (pen)-> Confidentiality: encrypt backups and restrict key access.
 (pen)-> Integrity: detect changes with trusted hashes or signatures.
-(pen)-> Availability: (g)UPS(pen) and restores limit outage impact.
-(pen)-> No single safeguard guarantees all three (g)CIA(pen) goals.
+(pen)-> Availability: (or)UPS(pen) and restores limit outage impact.
+(pen)-> No single safeguard guarantees all three (or)CIA(pen) goals.
 (pen)o Overview
 (pen)-> (li)Security testing and architecture(pen)
 (pen)-> (p)Evidence(pen), (p)remediation(pen), (p)and retesting(pen)
 (pen)o (li)Security testing and architecture(pen)
 (pen)-> (li)Testing(pen) checks controls against stated needs and threats.
-(pen)-> (g)Design(pen) review traces assets, identities, flows, boundaries.
+(pen)-> (or)Design(pen) review traces assets, identities, flows, boundaries.
 (pen)-> Configuration review finds excess access and weak settings.
 (pen)-> Scanners find known issues; validate findings and rank risk.
 (pen)-> Static analysis examines code without executing it.

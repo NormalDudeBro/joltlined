@@ -23,9 +23,9 @@
 (pen)-> Authorization decides permitted actions after identity checks.
 (pen)-> Encryption protects confidentiality when keys are secure.
 (pen)o Overview
-(pen)-> (br)Connectivity and Attack Patterns(pen)
+(pen)-> (mb)Connectivity and Attack Patterns(pen)
 (pen)-> (y)VPN and Authorized Capture(pen)
-(pen)o (br)Connectivity and Attack Patterns(pen)
+(pen)o (mb)Connectivity and Attack Patterns(pen)
 (pen)-> Ethernet (IEEE 802.3) commonly carries wired (r)LAN(pen) frames.
 (pen)-> (g)Wi(pen)-(g)Fi(pen) (802.11) uses radio; walls and noise affect links.
 (pen)-> Wi-Fi reach and rate depend on band, load, and equipment.
@@ -33,7 +33,7 @@
 (pen)-> Phishing tricks people into unsafe disclosure or actions.
 (pen)-> Spoofing falsifies an address or identity signal to mislead.
 (pen)-> Poisoning corrupts trusted data, e.g. name-resolution answers.
-(pen)-> (br)Attack(pen) labels overlap; identify the mechanism and target.
+(pen)-> (mb)Attack(pen) labels overlap; identify the mechanism and target.
 (pen)-> Verify requests; use MFA, filtering, and updates.
 (pen)o (y)VPN and Authorized Capture(pen)
 (pen)-> A (y)VPN(pen) creates a logical tunnel across an underlying (pu)network(pen).

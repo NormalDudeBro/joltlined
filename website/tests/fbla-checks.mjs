@@ -45,7 +45,7 @@ assert.ok(ledger.sources.every(source => source.url.startsWith('https://')));
 assert.equal(new Set(ledger.sources.map(source => `${source.module}:${source.id}`)).size, ledger.sources.length, 'source records are unique by module and ID');
 for (const item of course.sheets) {
   const colored = colorSheet(item.plain, palette, item.sheet.id);
-  assert.equal(colored.replace(/\((?:g|li|pu|br|or|y|r|db|p|lb|hp|pen)\)/g, ''), item.plain);
+  assert.equal(colored.replace(/\((?:g|li|pu|br|or|y|r|db|mb|p|lb|hp|pen)\)/g, ''), item.plain);
   const plainLines = item.plain.trimEnd().split('\n');
   const coloredLines = colored.trimEnd().split('\n');
   const titles = new Set(plainLines.filter(line => line.startsWith('o ') && line !== 'o Overview').map(line => line.slice(2)));
@@ -54,7 +54,7 @@ for (const item of course.sheets) {
   assert.ok(plainLines.every(line => line.length <= 65 && /^[\x20-\x7e]+$/.test(line)), `${item.sheet.id}: actual final decoded lines are ASCII <=65 characters`);
   for (const [index, line] of coloredLines.entries()) {
     assert.ok(line.startsWith('(pen)'), `${item.sheet.id} line ${index + 1} starts pencil`);
-    const markers = [...line.matchAll(/\((pen|g|li|pu|br|or|y|r|db|p|lb|hp)\)/g)];
+    const markers = [...line.matchAll(/\((pen|g|li|pu|br|or|y|r|db|mb|p|lb|hp)\)/g)];
     const spans = markers.map((marker, position) => [marker[0], marker[1], line.slice(marker.index + marker[0].length, markers[position + 1]?.index ?? line.length)]);
     const inks = new Set(spans.filter(([, ink]) => ink !== 'pen').map(([, ink]) => ink));
     assert.ok(inks.size <= 2);

@@ -23,14 +23,14 @@
 (pen)-> Traffic spikes and maintenance can mimic attack symptoms.
 (pen)-> Monitor traffic; coordinate with admin and provider.
 (pen)o Overview
-(pen)-> (br)Hash Collisions and Birthday Effect(pen)
+(pen)-> (mb)Hash Collisions and Birthday Effect(pen)
 (pen)-> (y)Downgrades and Wireless Weaknesses(pen)
-(pen)o (br)Hash Collisions and Birthday Effect(pen)
-(pen)-> A (br)hash(pen) maps input data to a fixed-length digest.
+(pen)o (mb)Hash Collisions and Birthday Effect(pen)
+(pen)-> A (mb)hash(pen) maps input data to a fixed-length digest.
 (pen)-> Collision means distinct inputs share a finite digest.
 (pen)-> Preimage seeks input for a chosen digest: a different goal.
-(pen)-> For ideal n-bit (br)hash(pen), generic collision work is about 2^(n/2).
-(pen)-> (br)Birthday(pen) (br)effect(pen) finds any pair sooner than target preimage.
+(pen)-> For ideal n-bit (mb)hash(pen), generic collision work is about 2^(n/2).
+(pen)-> (mb)Birthday(pen) (mb)effect(pen) finds any pair sooner than target preimage.
 (pen)-> This is a probability/work estimate, not an exact threshold.
 (pen)-> Collision is not decryption or original-message recovery.
 (pen)-> Hashing differs from reversible, key-based encryption.

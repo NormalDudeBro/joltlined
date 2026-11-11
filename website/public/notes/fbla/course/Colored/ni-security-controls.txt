@@ -13,7 +13,7 @@
 (pen)-> Confidentiality limits disclosure to authorized parties.
 (pen)o (db)Controls and Malware Defense(pen)
 (pen)-> (y)Integrity(pen) means preserving data accuracy and completeness.
-(pen)-> (br)Availability(pen) means timely access to authorized users.
+(pen)-> (mb)Availability(pen) means timely access to authorized users.
 (pen)-> Account lifecycle removes stale users and excess access.
 (pen)-> Authentication verifies a claimed (y)identity(pen) or authenticator.
 (pen)-> Authorization decides allowed actions; permissions enforce it.
@@ -23,9 +23,9 @@
 (pen)-> Patching removes known flaws after suitable testing.
 (pen)-> Disable unused services; verify needed network flows first.
 (pen)o Overview
-(pen)-> (br)Availability and Attack Paths(pen)
+(pen)-> (mb)Availability and Attack Paths(pen)
 (pen)-> (y)Integrity(pen), (y)Identity(pen), (y)and Recovery(pen)
-(pen)o (br)Availability and Attack Paths(pen)
+(pen)o (mb)Availability and Attack Paths(pen)
 (pen)-> DoS denies service by exhausting a constrained resource.
 (pen)-> Floods may saturate links or consume server request capacity.
 (pen)-> Protocol attacks can exhaust connection or state tables.

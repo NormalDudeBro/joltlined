@@ -1,16 +1,16 @@
 (pen)o Overview
-(pen)-> (br)Maintenance and recovery(pen)
+(pen)-> (mb)Maintenance and recovery(pen)
 (pen)-> (y)Accounts and permissions(pen)
-(pen)o (br)Maintenance and recovery(pen)
-(pen)-> (br)Maintenance(pen) keeps services supported, secure, and recoverable.
+(pen)o (mb)Maintenance and recovery(pen)
+(pen)-> (mb)Maintenance(pen) keeps services supported, secure, and recoverable.
 (pen)-> An audit compares actual assets and settings with policy.
 (pen)-> Record audit scope, evidence, owner, risk, and due action.
 (pen)-> Updates add fixes or features; patches address known defects.
 (pen)-> Test compatibility, stage deployment, then verify outcomes.
 (pen)-> A rollback plan limits harm if an update breaks a service.
-(pen)-> A backup is a separate copy intended for later (br)recovery(pen).
+(pen)-> A backup is a separate copy intended for later (mb)recovery(pen).
 (pen)-> RAID may tolerate disk failure; it does not replace backup.
-(pen)-> A restore test checks usable (g)data(pen) and (br)recovery(pen) procedure.
+(pen)-> A restore test checks usable (g)data(pen) and (mb)recovery(pen) procedure.
 (pen)o (y)Accounts and permissions(pen)
 (pen)-> An account identifies a user or service to a system.
 (pen)-> Authentication checks identity; authorization grants actions.
@@ -24,25 +24,25 @@
 (pen)-> Remove obsolete group membership when duties end.
 (pen)o Overview
 (pen)-> (g)SNMP and management data(pen)
-(pen)-> (li)Traffic baselines and alerts(pen)
+(pen)-> (or)Traffic baselines and alerts(pen)
 (pen)o (g)SNMP and management data(pen)
 (pen)-> Simple Network (g)Management(pen) Protocol ((g)SNMP(pen)) exchanges status.
 (pen)-> Managers query agents that expose managed device objects.
 (pen)-> A (g)Management(pen) Information Base ((db)MIB(pen)) names managed objects.
 (pen)-> Poll counters; notifications report events but may be lost.
 (pen)-> Counters need time intervals to show rates or changing errors.
-(pen)-> SNMPv2c names are unencrypted; (li)traffic(pen) can expose them.
+(pen)-> SNMPv2c names are unencrypted; (or)traffic(pen) can expose them.
 (pen)-> SNMPv3 USM supports authentication and optional privacy.
 (pen)-> Auth checks integrity and user; privacy encrypts (g)data(pen).
 (pen)-> Use authPriv; limit (db)MIB(pen) views and manager ACLs.
-(pen)o (li)Traffic baselines and alerts(pen)
+(pen)o (or)Traffic baselines and alerts(pen)
 (pen)-> Time counters; baseline latency, loss, errors, and demand.
 (pen)-> Compare like periods; peak and average load differ.
 (pen)-> An alert triggers investigation, not proof of cause.
-(pen)-> A load balancer distributes eligible (li)traffic(pen) across backends.
+(pen)-> A load balancer distributes eligible (or)traffic(pen) across backends.
 (pen)-> Azure defaults to hashing five flow fields for backend choice.
 (pen)-> Client-IP affinity sends that client to the same backend.
 (pen)-> Affinity may skew load when few distinct client flows exist.
 (pen)-> Configured probes can stop new flows to unhealthy backends.
-(pen)-> Map links, gateways, dependencies; log checks and (br)recovery(pen).
+(pen)-> Map links, gateways, dependencies; log checks and (mb)recovery(pen).
 (pen)-> Restrict log access and retention to protect sensitive (g)data(pen).

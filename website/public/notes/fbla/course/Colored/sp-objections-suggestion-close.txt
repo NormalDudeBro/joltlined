@@ -23,10 +23,10 @@
 (pen)-> A concession changes terms; disclose its real conditions.
 (pen)-> Do not hide terms or make unsupported counterclaims.
 (pen)o Overview
-(pen)-> (r)Suggest related value(pen)
+(pen)-> (or)Suggest related value(pen)
 (pen)-> (pu)Close as a clear choice(pen)
-(pen)o (r)Suggest related value(pen)
-(pen)-> Suggestion selling offers an additional (r)related(pen) item/service.
+(pen)o (or)Suggest related value(pen)
+(pen)-> Suggestion selling offers an additional (or)related(pen) item/service.
 (pen)-> Offer only when it supports a confirmed customer need.
 (pen)-> Example: training may help a team new to the workflow.
 (pen)-> Explain distinct scope, price, and optional status.

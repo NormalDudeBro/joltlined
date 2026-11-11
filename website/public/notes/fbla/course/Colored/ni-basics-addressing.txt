@@ -1,24 +1,24 @@
 (pen)o Overview
 (pen)-> (y)From device to ISP(pen)
-(pen)-> (g)ISP chain and local limits(pen)
+(pen)-> (or)ISP chain and local limits(pen)
 (pen)o (y)From device to ISP(pen)
 (pen)-> A network adapter connects a (y)device(pen) to a wired or radio link.
-(pen)-> A switch or access point joins devices to the (g)local(pen) (db)LAN(pen).
-(pen)-> A router joins IP networks and selects a route toward the (g)ISP(pen).
+(pen)-> A switch or access point joins devices to the (or)local(pen) (db)LAN(pen).
+(pen)-> A router joins IP networks and selects a route toward the (or)ISP(pen).
 (pen)-> A modem adapts signaling for a provider medium such as coax.
 (pen)-> An optical network terminal adapts a fiber access connection.
 (pen)-> A gateway may combine modem, routing, switching and Wi-Fi.
-(pen)-> The (g)ISP(pen) aggregates access and routes to other networks.
+(pen)-> The (or)ISP(pen) aggregates access and routes to other networks.
 (pen)-> Operators interconnect through peering or paid transit.
-(pen)-> Available access media depend on the (g)local(pen) provider.
-(pen)o (g)ISP chain and local limits(pen)
+(pen)-> Available access media depend on the (or)local(pen) provider.
+(pen)o (or)ISP chain and local limits(pen)
 (pen)-> A home link does not directly cable to every Internet host.
-(pen)-> Traffic crosses (g)local(pen) gear, then provider networks.
+(pen)-> Traffic crosses (or)local(pen) gear, then provider networks.
 (pen)-> Fiber, coax, DSL and cellular differ in signaling and reach.
 (pen)-> The provider medium and plan constrain the access link rate.
 (pen)-> A live physical link does not prove (r)DNS(pen) or routing is working.
 (pen)-> A reachable router does not prove remote service works.
-(pen)-> Power or (g)ISP(pen) faults can interrupt a correctly addressed (db)LAN(pen).
+(pen)-> Power or (or)ISP(pen) faults can interrupt a correctly addressed (db)LAN(pen).
 (pen)-> Speed tests include remote path and server limitations.
 (pen)-> Check link, route, (r)DNS(pen) and remote service separately.
 (pen)-> One (y)device(pen) may combine modem and router functions.
@@ -32,7 +32,7 @@
 (pen)-> (li)IPv(pen)6 uses colons; :: can compress one run of zero groups.
 (pen)-> (li)IPv(pen)6 greatly expands available address space over (li)IPv(pen)4.
 (pen)-> (li)IPv(pen)6 has a different header and uses Neighbor Discovery.
-(pen)-> (li)IPv(pen)4 commonly uses ARP on Ethernet links for (g)local(pen) resolution.
+(pen)-> (li)IPv(pen)4 commonly uses ARP on Ethernet links for (or)local(pen) resolution.
 (pen)-> Dual stack runs (li)IPv(pen)4 and (li)IPv(pen)6 together during transition.
 (pen)-> (li)IPv(pen)6 still needs suitable access policy and configuration.
 (pen)o (p)Subnet calculation example(pen)

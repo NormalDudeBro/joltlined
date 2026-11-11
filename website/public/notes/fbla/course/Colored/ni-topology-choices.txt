@@ -20,12 +20,12 @@
 (pen)-> (p)WAN(pen) agreements specify capacity and availability terms.
 (pen)-> Backup circuits help only if routes and infrastructure differ.
 (pen)-> A remote site still relies on its local (p)LAN(pen) and gateway.
-(pen)-> (r)Choose(pen) (p)scope(pen) from users, geography and application needs.
-(pen)-> No (r)topology(pen) name guarantees a particular reliability level.
+(pen)-> (or)Choose(pen) (p)scope(pen) from users, geography and application needs.
+(pen)-> No (or)topology(pen) name guarantees a particular reliability level.
 (pen)o Overview
-(pen)-> (r)Choose topology for requirements(pen)
+(pen)-> (or)Choose topology for requirements(pen)
 (pen)-> (pu)Wireless network size options(pen)
-(pen)o (r)Choose topology for requirements(pen)
+(pen)o (or)Choose topology for requirements(pen)
 (pen)-> A small office often uses a switched star for easy management.
 (pen)-> A critical site may add diverse uplinks for availability.
 (pen)-> A partial mesh trades extra paths against cost and complexity.
@@ -33,7 +33,7 @@
 (pen)-> Compare failure impact, growth, traffic and operator skills.
 (pen)-> A central star switch is a possible single point of failure.
 (pen)-> Separate power and physical routes improve path independence.
-(pen)-> No (r)topology(pen) is best for every business requirement.
+(pen)-> No (or)topology(pen) is best for every business requirement.
 (pen)-> Physical cabling choices also constrain speed and distance.
 (pen)o (pu)Wireless network size options(pen)
 (pen)-> A small (p)LAN(pen) may use an integrated Wi-Fi router or one AP.

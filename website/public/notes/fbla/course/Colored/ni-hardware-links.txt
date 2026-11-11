@@ -10,7 +10,7 @@
 (pen)-> A router forwards IP packets between networks.
 (pen)-> Its WAN side faces service; (y)LAN(pen) serves (r)local(pen) hosts.
 (pen)-> A Layer 2 switch forwards (y)LAN(pen) frames using MACs.
-(pen)-> A switch does not replace the (br)WAN(pen) router function.
+(pen)-> A switch does not replace the (mb)WAN(pen) router function.
 (pen)o (r)Network adapters and local traffic(pen)
 (pen)-> A NIC joins a (hp)host(pen) to a wired or wireless (db)link(pen).
 (pen)-> It sends and receives link-layer frames.

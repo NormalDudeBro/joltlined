@@ -1,6 +1,6 @@
 (pen)o Overview
 (pen)-> (db)Build a reliable relationship(pen)
-(pen)-> (br)Organize buyer(pen)-(br)centered content(pen)
+(pen)-> (mb)Organize buyer(pen)-(mb)centered content(pen)
 (pen)o (db)Build a reliable relationship(pen)
 (pen)-> Relevant, dependable service can (db)build(pen) customer trust.
 (pen)-> Agree on follow-up purpose, channel, and timing with consent.
@@ -11,7 +11,7 @@
 (pen)-> Resolve issues or route them to someone who can help.
 (pen)-> Honor opt-out and communication preferences promptly.
 (pen)-> Do not guarantee loyalty or outcomes beyond your control.
-(pen)o (br)Organize buyer(pen)-(br)centered content(pen)
+(pen)o (mb)Organize buyer(pen)-(mb)centered content(pen)
 (pen)-> A coherent sequence helps listeners follow the decision.
 (pen)-> Useful order: greet, discover, confirm, recommend, respond.
 (pen)-> Then suggest fit, decide next step, and follow up.

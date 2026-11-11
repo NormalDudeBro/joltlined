@@ -23,18 +23,18 @@
 (pen)-> (hp)AAA(pen): authentication, authorization, and accounting.
 (pen)-> Authorization permits actions; accounting records activity.
 (pen)o Overview
-(pen)-> (r)Nonrepudiation and Least Privilege(pen)
+(pen)-> (or)Nonrepudiation and Least Privilege(pen)
 (pen)-> (pu)Binary(pen), (pu)Decimal(pen), (pu)and Hex(pen)
-(pen)o (r)Nonrepudiation and Least Privilege(pen)
-(pen)-> (r)Nonrepudiation(pen) seeks evidence resisting denial of an action.
+(pen)o (or)Nonrepudiation and Least Privilege(pen)
+(pen)-> (or)Nonrepudiation(pen) seeks evidence resisting denial of an action.
 (pen)-> A signature alone cannot prove who controlled its key.
 (pen)-> (hp)Identity(pen) binding, key custody, intent, and time matter.
 (pen)-> Legal and system assumptions bound attribution claims.
-(pen)-> (r)Least(pen) (r)privilege(pen) grants only necessary resource/action rights.
+(pen)-> (or)Least(pen) (or)privilege(pen) grants only necessary resource/action rights.
 (pen)-> Use narrow roles and time-bound elevation where feasible.
 (pen)-> Review grants; revoke access when duties or roles change.
 (pen)-> It limits blast radius, not all misuse or compromise.
-(pen)-> (db)OWASP(pen) says (r)least(pen) DB (r)privilege(pen) limits injection damage.
+(pen)-> (db)OWASP(pen) says (or)least(pen) DB (or)privilege(pen) limits injection damage.
 (pen)o (pu)Binary(pen), (pu)Decimal(pen), (pu)and Hex(pen)
 (pen)-> (pu)Binary(pen) is base 2; (pu)decimal(pen) is base 10; (pu)hex(pen) is base 16.
 (pen)-> (pu)Hex(pen) digits are 0-9 and A-F; A-F represent values 10-15.

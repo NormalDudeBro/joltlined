@@ -1,6 +1,6 @@
 (pen)o Overview
 (pen)-> (y)Threat defenses and least privilege(pen)
-(pen)-> (g)Zero Trust and network admission(pen)
+(pen)-> (or)Zero Trust and network admission(pen)
 (pen)o (y)Threat defenses and least privilege(pen)
 (pen)-> DoS exhausts a service resource; DDoS distributes that load.
 (pen)-> Capacity, filtering and provider aid may mitigate DoS.
@@ -11,14 +11,14 @@
 (pen)-> Remove unused services; close ports and patch systems.
 (pen)-> Antivirus detects some threats; it cannot assure safety.
 (pen)-> Third-party (p)access(pen) needs scope, oversight and revocation.
-(pen)o (g)Zero Trust and network admission(pen)
-(pen)-> (g)Zero(pen) (g)Trust(pen) grants no automatic (g)trust(pen) merely from LAN location.
+(pen)o (or)Zero Trust and network admission(pen)
+(pen)-> (or)Zero(pen) (or)Trust(pen) grants no automatic (or)trust(pen) merely from LAN location.
 (pen)-> Evaluate each (p)access(pen) request using (li)identity(pen) and context.
 (pen)-> Grant granular least-privilege (p)access(pen) to data and services.
 (pen)-> Reassess decisions as users, devices and risk context change.
 (pen)-> MFA combines factor types; two passwords are one type.
 (pen)-> Authentication checks (li)identity(pen); authorization grants actions.
-(pen)-> NAC checks device or (li)identity(pen) at (g)network(pen) (g)admission(pen).
+(pen)-> NAC checks device or (li)identity(pen) at (or)network(pen) (or)admission(pen).
 (pen)-> NAC may quarantine a device pending remediation or compliance.
 (pen)-> VLAN segmentation needs policy controls on inter-VLAN traffic.
 (pen)-> NAC complements endpoint, (li)identity(pen) controls and monitoring.

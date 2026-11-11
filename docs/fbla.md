@@ -12,16 +12,20 @@ FBLA event pages use the same `.notes-site`, `.pages` and `.sheet` presentation 
 
 ## Note-coloring contract
 
-FBLA keeps the AP World-style section/Overview hierarchy, but uses its own
-palette overrides: `(db)` dark blue `#173f88`, `(r)` red `#df3034`, and `(y)`
-true yellow `#ebc600`. The shared `(y)` remains medium blue for other subjects.
+FBLA keeps the AP World-style section/Overview hierarchy and uses the full
+eleven-color palette: purple, light green, orange, red, light pink, dark pink,
+dark blue, medium blue, light blue, dark green, and yellow. Its scoped inks
+include `(db)` dark blue `#173f88`, `(mb)` medium blue `#287db3`, `(r)` red
+`#df3034`, and `(y)` true yellow `#ebc600`; `(or)` is orange `#e67e22`.
+The shared `(y)` remains medium blue for other subjects.
 These are foreground inks, not background highlights; the documented pastel
 contrast limitation and plain-text alternatives still apply.
 
 `website/scripts/fbla-heading-palettes.json` explicitly assigns one of nine
 four-heading palettes to each sheet. Palette selection spans the collection,
-rather than resetting every sheet to green/lime and pink/hot pink. All nine
-inks appear as heading colors in each event, and adjacent sheets have distinct
+rather than resetting every sheet to green/lime and pink/hot pink. All ten
+section inks appear as heading colors in each event; light blue identifies
+the overall sheet titles. Adjacent sheets have distinct
 heading sequences. A section's full title and Overview listing match, with
 neutral prefixes, punctuation, and digits. Body accents follow
 exact whole title words/identifiers across both pages, not inferred semantic

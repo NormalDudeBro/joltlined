@@ -24,7 +24,7 @@
 (pen)-> A subnet or (y)VLAN(pen) is not a complete security boundary.
 (pen)o Overview
 (pen)-> (db)Virtual machines and containers(pen)
-(pen)-> (br)IoT risks and safer deployment(pen)
+(pen)-> (mb)IoT risks and safer deployment(pen)
 (pen)o (db)Virtual machines and containers(pen)
 (pen)-> A hypervisor allocates host resources to (db)virtual(pen) (db)machines(pen).
 (pen)-> A (g)VM(pen) typically runs a guest OS with its own kernel.
@@ -35,11 +35,11 @@
 (pen)-> A container kernel escape may threaten other host (db)containers(pen).
 (pen)-> Patch hosts, hypervisors, guest systems, images, libraries.
 (pen)-> Limit privileges, mounts, capabilities, and network access.
-(pen)o (br)IoT risks and safer deployment(pen)
+(pen)o (mb)IoT risks and safer deployment(pen)
 (pen)-> VMs and (db)containers(pen) may be combined on one host.
-(pen)-> Isolation reduces some (br)risks(pen); it is not an absolute guarantee.
-(pen)-> (br)IoT(pen) means networked sensors, cameras, appliances, and devices.
-(pen)-> Default passwords and open services expose (br)IoT(pen) devices.
+(pen)-> Isolation reduces some (mb)risks(pen); it is not an absolute guarantee.
+(pen)-> (mb)IoT(pen) means networked sensors, cameras, appliances, and devices.
+(pen)-> Default passwords and open services expose (mb)IoT(pen) devices.
 (pen)-> Old firmware and weak updates leave known flaws unpatched.
 (pen)-> Constrained power or memory can limit security monitoring.
 (pen)-> Excess device data collection creates privacy risk.

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 
-export const fblaInks = Object.freeze({ r: '#df3034', db: '#173f88', y: '#ebc600' });
+export const fblaInks = Object.freeze({ r: '#df3034', db: '#173f88', mb: '#287db3', y: '#ebc600' });
 const plan = JSON.parse(readFileSync(new URL('./fbla-color-plan.json', import.meta.url), 'utf8'));
 const headingPlan = JSON.parse(readFileSync(new URL('./fbla-heading-palettes.json', import.meta.url), 'utf8'));
 assert.equal(plan.version, 1, 'supported FBLA color-plan version');

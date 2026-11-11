@@ -24,7 +24,7 @@
 (pen)-> Stale or poisoned (pu)DNS(pen) data can direct clients incorrectly.
 (pen)o Overview
 (pen)-> (db)Transport and Port Defaults(pen)
-(pen)-> (br)NAT and Secure Service Use(pen)
+(pen)-> (mb)NAT and Secure Service Use(pen)
 (pen)o (db)Transport and Port Defaults(pen)
 (pen)-> TCP provides an ordered byte stream with retransmission.
 (pen)-> TCP setup and recovery add overhead; delivery is not instant.
@@ -32,17 +32,17 @@
 (pen)-> Applications may add reliability above UDP when needed.
 (pen)-> (pu)IP(pen) carries packets; TCP/UDP ports identify endpoints.
 (pen)-> HTTP commonly uses TCP 80; HTTPS commonly TCP 443.
-(pen)-> (li)SSH(pen) commonly uses TCP 22; (br)service(pen) ports can be changed.
+(pen)-> (li)SSH(pen) commonly uses TCP 22; (mb)service(pen) ports can be changed.
 (pen)-> (pu)DNS(pen) uses UDP or TCP 53; blocking TCP can break functions.
 (pen)-> NTP commonly uses UDP 123; (db)defaults(pen) are not exclusive rules.
-(pen)o (br)NAT and Secure Service Use(pen)
-(pen)-> (br)NAT(pen) maps (pu)IP(pen) addresses between address realms.
+(pen)o (mb)NAT and Secure Service Use(pen)
+(pen)-> (mb)NAT(pen) maps (pu)IP(pen) addresses between address realms.
 (pen)-> NAPT also maps (db)transport(pen) ports for multiple inside hosts.
 (pen)-> Home gateways commonly share one public IPv4 address.
 (pen)-> Translation conserves addresses; it does not encrypt packets.
-(pen)-> (br)NAT(pen) is not a firewall policy or authentication mechanism.
+(pen)-> (mb)NAT(pen) is not a firewall policy or authentication mechanism.
 (pen)-> A stateful firewall separately permits or denies flows.
 (pen)-> Inbound reachability may need mapping and explicit policy.
 (pen)-> (g)TLS(pen) aims to protect channels from eavesdropping and tampering.
-(pen)-> (br)Use(pen) (br)secure(pen) transfer; configure (g)TLS(pen) and verify peer identity.
-(pen)-> (br)Service(pen) configuration, not (db)port(pen) number, determines exposure.
+(pen)-> (mb)Use(pen) (mb)secure(pen) transfer; configure (g)TLS(pen) and verify peer identity.
+(pen)-> (mb)Service(pen) configuration, not (db)port(pen) number, determines exposure.

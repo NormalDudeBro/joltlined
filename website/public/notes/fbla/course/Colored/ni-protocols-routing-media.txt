@@ -1,6 +1,6 @@
 (pen)o Overview
 (pen)-> (y)Wireless Generations and Bands(pen)
-(pen)-> (g)Wireless Range and Throughput(pen)
+(pen)-> (or)Wireless Range and Throughput(pen)
 (pen)o (y)Wireless Generations and Bands(pen)
 (pen)-> 802.11b uses 2.4 GHz DSSS; max (li)PHY(pen) rate is 11 Mb/s.
 (pen)-> 802.11a uses 5 GHz (db)OFDM(pen); max (li)PHY(pen) rate is 54 Mb/s.
@@ -11,13 +11,13 @@
 (pen)-> Wi-Fi 6E adds 6 GHz where permitted and supported.
 (pen)-> 802.11be (Wi-Fi 7) adds multi-link in capable devices.
 (pen)-> Max (li)PHY(pen) rates require matching channel and radio capability.
-(pen)o (g)Wireless Range and Throughput(pen)
-(pen)-> There is no single universal indoor Wi-Fi (g)range(pen) figure.
+(pen)o (or)Wireless Range and Throughput(pen)
+(pen)-> There is no single universal indoor Wi-Fi (or)range(pen) figure.
 (pen)-> Band, walls, antennas, power, and receivers affect reach.
 (pen)-> 2.4 GHz often travels farther through walls than 5/6 GHz.
 (pen)-> 2.4 GHz is often more congested; local spectrum matters.
 (pen)-> Channel width, streams, and interference affect (li)PHY(pen) rate.
-(pen)-> App (g)throughput(pen) is below (li)PHY(pen) rate due to overhead/contention.
+(pen)-> App (or)throughput(pen) is below (li)PHY(pen) rate due to overhead/contention.
 (pen)-> Clients share airtime; slow stations reduce capacity.
 (pen)-> Regulatory domain limits channels and transmit power.
 (pen)-> Survey user locations and load before estimating coverage.

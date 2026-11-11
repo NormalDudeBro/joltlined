@@ -12,9 +12,9 @@
 (pen)-> Preventive controls reduce likelihood or disruption impact.
 (pen)-> (p)Plans(pen) name activation triggers, teams, contacts, and roles.
 (pen)o (hp)Recovery targets and exercise(pen)
-(pen)-> (br)RTO(pen) is the target time to restore a service.
+(pen)-> (mb)RTO(pen) is the target time to restore a service.
 (pen)-> RPO is the acceptable age of restored (pu)data(pen).
-(pen)-> (br)RTO(pen) limits outage duration; RPO limits (pu)data(pen) loss.
+(pen)-> (mb)RTO(pen) limits outage duration; RPO limits (pu)data(pen) loss.
 (pen)-> (hp)Recovery(pen) strategy follows impact and criticality analysis.
 (pen)-> Define (hp)recovery(pen) sequence, resources, locations, and contacts.
 (pen)-> Test, train, and (hp)exercise(pen); testing validates (hp)recovery(pen) ability.
@@ -23,15 +23,15 @@
 (pen)-> Record gaps, corrective owners, and retest evidence.
 (pen)-> Update (p)plans(pen) when systems, risks, or roles (pu)change(pen).
 (pen)o Overview
-(pen)-> (r)Secure messaging and email(pen)
+(pen)-> (or)Secure messaging and email(pen)
 (pen)-> (pu)Data minimization and change control(pen)
-(pen)o (r)Secure messaging and email(pen)
+(pen)o (or)Secure messaging and email(pen)
 (pen)-> Verify recipients and addresses before sending sensitive (pu)data(pen).
 (pen)-> Use approved protected channels for sensitive communications.
 (pen)-> TLS protects a connection; it does not protect every copy.
 (pen)-> HTTPS is HTTP protected by TLS, not a separate cipher.
 (pen)-> Certificate validation helps authenticate the server endpoint.
-(pen)-> (r)Email(pen) encryption depends on keys and recipient configuration.
+(pen)-> (or)Email(pen) encryption depends on keys and recipient configuration.
 (pen)-> Unexpected urgency, links, or files can signal phishing.
 (pen)-> Verify unusual payment requests on a separate known channel.
 (pen)-> Report suspicious messages through approved response channels.
@@ -42,7 +42,7 @@
 (pen)-> Share only necessary fields with authorized recipients.
 (pen)-> Masking replaces or removes fields, reducing analytic utility.
 (pen)-> Masked (pu)data(pen) can still identify via other attributes.
-(pen)-> Tokens substitute values; (r)secure(pen) any identity mapping.
+(pen)-> Tokens substitute values; (or)secure(pen) any identity mapping.
 (pen)-> (pu)Change(pen) requests need recording and security impact review.
 (pen)-> Test and approve changes before deployment; then verify them.
 (pen)-> Archive prior baselines for traceability and rollback.
