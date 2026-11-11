@@ -17,7 +17,7 @@
 (pen)-> For price, explain included scope and actual alternatives.
 (pen)-> Offer a smaller option only if it truly exists and fits.
 (pen)-> For timing, discuss feasible start dates or no purchase.
-(pen)-> Admit unknowns; seek permission to verify and follow up.
+(pen)-> Admit unknowns; seek (or)permission(pen) to verify and follow up.
 (pen)-> Ask whether the answer addressed the concern.
 (pen)-> If unresolved, summarize the gap and accept it.
 (pen)-> A concession changes terms; disclose its real conditions.
@@ -30,16 +30,16 @@
 (pen)-> Offer only when it supports a confirmed customer need.
 (pen)-> Example: training may help a team new to the workflow.
 (pen)-> Explain distinct scope, price, and optional status.
-(pen)-> Ask permission; accept refusal without changing core terms.
+(pen)-> Ask (or)permission(pen); accept refusal without changing core terms.
 (pen)-> An add-on should strengthen use or outcome, not ticket size.
 (pen)-> Do not bundle unrelated goods or obscure material conditions.
-(pen)-> Check added cost against buyer's (pu)priorities(pen) and constraints.
+(pen)-> Check added (or)cost(pen) against buyer's (pu)priorities(pen) and constraints.
 (pen)-> More products are not automatically better fit.
 (pen)o (pu)Close as a clear choice(pen)
 (pen)-> A (hp)close(pen) requests a decision or concrete next action.
 (pen)-> Confirm fit, terms, unresolved (r)objections(pen), and authority.
 (pen)-> If ready, ask for the stated plan and quantity.
-(pen)-> If not ready, agree on information or follow-up by (p)consent(pen).
+(pen)-> If not ready, agree on information or (pu)follow(pen)-(pu)up(pen) by (p)consent(pen).
 (pen)-> Name owner, action, and date for a service next step.
 (pen)-> Clear intent comes from buyer's stated choice, not guesswork.
 (pen)-> Silence or hesitation is not (p)consent(pen) to buy.

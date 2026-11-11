@@ -26,15 +26,15 @@
 (pen)-> (pu)Caesar and substitution ciphers(pen)
 (pen)-> (db)Hashing(pen), (db)blockchain(pen), (db)and trust limits(pen)
 (pen)o (pu)Caesar and substitution ciphers(pen)
-(pen)-> A shift cipher moves each alphabet letter by a fixed amount.
-(pen)-> Caesar is a shift cipher, often shown with shift three.
+(pen)-> A shift (r)cipher(pen) moves each alphabet letter by a fixed amount.
+(pen)-> (r)Caesar(pen) is a shift (r)cipher(pen), often shown with shift three.
 (pen)-> Using +3: A becomes D, B becomes E, and X becomes A.
 (pen)-> Wrap after Z: Y becomes B and Z becomes C.
 (pen)-> ATTACK with +3 becomes DWWDFN; reverse shift recovers it.
-(pen)-> Substitution replaces letters using a fixed alphabet mapping.
-(pen)-> Caesar is one simple special case of substitution.
-(pen)-> Repeated patterns and frequencies reveal toy ciphers.
-(pen)-> Small keyspaces are searchable; these ciphers are not secure.
+(pen)-> (r)Substitution(pen) replaces letters using a fixed alphabet mapping.
+(pen)-> (r)Caesar(pen) is one simple special case of (r)substitution(pen).
+(pen)-> Repeated patterns and frequencies reveal toy (r)ciphers(pen).
+(pen)-> Small keyspaces are searchable; these (r)ciphers(pen) are not secure.
 (pen)o (db)Hashing(pen), (db)blockchain(pen), (db)and trust limits(pen)
 (pen)-> (g)Hash(pen) maps arbitrary-length input to a fixed-length digest.
 (pen)-> (g)Hashing(pen) is not (g)encryption(pen); there is no (g)decryption(pen) key.

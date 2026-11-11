@@ -3,13 +3,13 @@
 (pen)-> (y)MAC(pen), (y)DAC(pen), (y)and RBAC models(pen)
 (pen)o (mb)Three states of data(pen)
 (pen)-> Data at rest is stored on disk, device, (g)backup(pen), or database.
-(pen)-> Protect stored data with (g)encryption(pen) and account permissions.
+(pen)-> Protect stored data with (g)encryption(pen) and account (or)permissions(pen).
 (pen)-> Data in transit moves between devices or services.
-(pen)-> Use protected channels and verify communicating endpoints.
+(pen)-> Use protected channels and verify communicating (pu)endpoints(pen).
 (pen)-> Data in use is actively processed by an application.
 (pen)-> Limit process, memory, screen, and log exposure.
 (pen)-> (g)Encryption(pen) at rest may not protect data after unlock.
-(pen)-> Transit (g)encryption(pen) does not protect a compromised endpoint.
+(pen)-> Transit (g)encryption(pen) does not protect a compromised (pu)endpoint(pen).
 (pen)-> Select controls based on sensitivity and threat model.
 (pen)o (y)MAC(pen), (y)DAC(pen), (y)and RBAC models(pen)
 (pen)-> (db)MAC(pen) means (r)mandatory access control(pen) under central policy.
@@ -17,7 +17,7 @@
 (pen)-> Ordinary users cannot freely override mandatory policy.
 (pen)-> (pu)DAC(pen) means (pu)discretionary access control(pen) assigned by owner.
 (pen)-> Example: file owner shares a document with colleagues.
-(pen)-> Sharing can propagate access; review inherited permissions.
+(pen)-> Sharing can propagate access; review inherited (or)permissions(pen).
 (pen)-> (pu)RBAC(pen) means (pu)role(pen)-(pu)based access control(pen) tied to job duties.
 (pen)-> Payroll role reads pay data; approver role authorizes pay.
 (pen)-> Assign needed roles; remove stale role membership.
@@ -33,8 +33,8 @@
 (pen)-> Two (hp)passwords(pen) are both knowledge, not two factors.
 (pen)-> A (hp)password(pen) plus (hp)authenticator(pen) token is two different factors.
 (pen)-> (hp)MFA(pen) reduces password-only risk but does not stop every attack.
-(pen)-> Phishing-resistant (hp)authenticators(pen) reduce credential relay.
-(pen)-> Protect enrollment, recovery, and (hp)authenticator(pen) revocation.
+(pen)-> (r)Phishing(pen)-(r)resistant(pen) (hp)authenticators(pen) reduce credential relay.
+(pen)-> Protect enrollment, (li)recovery(pen), and (hp)authenticator(pen) revocation.
 (pen)o (or)Certificates(pen), (or)tokens(pen), (or)and policy(pen)
 (pen)-> (hp)Certificate(pen) binds a (g)public key(pen) to an identity under CA trust.
 (pen)-> Validate chain, service name, dates, and (hp)certificate(pen) purpose.

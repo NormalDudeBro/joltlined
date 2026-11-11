@@ -2,18 +2,18 @@
 (pen)-> (hp)Disaster recovery planning(pen)
 (pen)-> (r)Backup types and restore assurance(pen)
 (pen)o (hp)Disaster recovery planning(pen)
-(pen)-> Disaster recovery restores systems and data after disruption.
+(pen)-> Disaster (li)recovery(pen) restores systems and data after disruption.
 (pen)-> Business continuity sustains (pu)priority(pen) work during disruption.
 (pen)-> A plan defines scope, roles, contacts and dependencies.
-(pen)-> Include recovery order, communication, resources and checks.
+(pen)-> Include (li)recovery(pen) order, communication, resources and checks.
 (pen)-> Risk assessment compares events and business impacts.
-(pen)-> Recovery time objective ((g)RTO(pen)) is target restoration time.
-(pen)-> Recovery point objective ((g)RPO(pen)) is tolerable data-loss time.
+(pen)-> (li)Recovery(pen) time objective ((g)RTO(pen)) is target restoration time.
+(pen)-> (li)Recovery(pen) point objective ((g)RPO(pen)) is tolerable data-loss time.
 (pen)-> Select controls to meet business targets and resource limits.
 (pen)-> Test plans; revise after exercises, incidents or changes.
 (pen)o (r)Backup types and restore assurance(pen)
 (pen)-> (mb)Cloud(pen) (g)backup(pen) is offsite but depends on provider and account.
-(pen)-> NAS (g)backup(pen) is convenient but shares site and access risks.
+(pen)-> (db)NAS(pen) (g)backup(pen) is convenient but shares site and access risks.
 (pen)-> External drives can be disconnected; rotate them securely.
 (pen)-> Use 3-2-1: three copies, two media, one copy offsite.
 (pen)-> Keep an offline or immutable copy to resist (r)ransomware(pen).
@@ -26,15 +26,15 @@
 (pen)-> (pu)IDS(pen), (pu)IPS(pen), (pu)updates(pen), (pu)and response(pen)
 (pen)-> (db)Wireless authentication and ACLs(pen)
 (pen)o (pu)IDS(pen), (pu)IPS(pen), (pu)updates(pen), (pu)and response(pen)
-(pen)-> An IDS observes host or network activity and raises alerts.
-(pen)-> An IPS can block or drop traffic inline when policy triggers.
+(pen)-> An (r)IDS(pen) observes host or network activity and raises alerts.
+(pen)-> An (r)IPS(pen) can block or drop traffic inline when policy triggers.
 (pen)-> Inline false positives may disrupt legitimate service.
 (pen)-> Detection depends on visibility, tuning and known indicators.
 (pen)-> An alert is a lead to investigate, not proof of compromise.
-(pen)-> Preserve evidence, contain, remediate, then validate recovery.
-(pen)-> Patch supported systems and apps to fix known flaws.
+(pen)-> Preserve evidence, contain, remediate, then validate (li)recovery(pen).
+(pen)-> (g)Patch(pen) supported systems and apps to fix known flaws.
 (pen)-> Test updates and plan rollback; delay prolongs exposure.
-(pen)-> (r)Firewalls(pen) and endpoint protection work at different points.
+(pen)-> (r)Firewalls(pen) and (pu)endpoint(pen) protection work at different points.
 (pen)o (db)Wireless authentication and ACLs(pen)
 (pen)-> (y)WPA(pen)2/(y)WPA(pen)3 protect (y)Wi(pen)-(y)Fi(pen) links; choose supported secure modes.
 (pen)-> WPA2-Personal uses shared passphrase; protect it if exposed.

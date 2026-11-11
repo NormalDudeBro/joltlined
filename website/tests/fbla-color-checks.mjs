@@ -11,7 +11,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const config = JSON.parse(readFileSync(resolve(here, '../scripts/fbla-color-plan.json'), 'utf8'));
 const termPlan = JSON.parse(readFileSync(resolve(here, '../scripts/fbla-term-colors.json'), 'utf8'));
 const registered = Object.entries(termPlan).flatMap(([color, terms]) => terms.map(term => ({ term, color })));
-const termExpression = new RegExp(`(?<![A-Za-z0-9'-])(?:${registered.map(item => item.term).sort((a, b) => b.length - a.length).map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})(?![A-Za-z0-9'-])`, 'gi');
+const termExpression = new RegExp(`(?<![A-Za-z0-9'-])(?:${registered.map(item => item.term).sort((a, b) => b.length - a.length).map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})(?=(?:'s|')?(?![A-Za-z0-9'-]))`, 'gi');
 const termColors = new Map(registered.map(item => [item.term.toLowerCase(), item.color]));
 assert.equal(termColors.size, registered.length, 'each global term has exactly one color');
 const sheets = renderCourseSheets();
@@ -159,5 +159,35 @@ assert.equal(atLine(passwordLines[17], 'password', 'global password ink'), 'hp')
 const priorities = sheets.sheets.find(item => item.sheet.id === 'sp-discovery-opening');
 const prioritiesLines = parse(colorSheet(priorities.plain, palette, priorities.sheet.id));
 assert.equal(atLine(prioritiesLines[39], 'priorities', 'priorities title ownership'), 'pu');
+
+const bodyLine = (sheetId, snippet) => {
+  const item = sheets.sheets.find(entry => entry.sheet.id === sheetId);
+  const line = parse(colorSheet(item.plain, palette, item.sheet.id)).find(entry => entry.text.includes(snippet));
+  assert.ok(line, `${sheetId}: missing ${snippet}`);
+  return line;
+};
+const possessive = bodyLine('ni-hardware-infrastructure', "switch's total PoE");
+assert.equal(colorAt(possessive, possessive.text.indexOf('switch')), 'li', 'possessive switch inherits its base color');
+assert.equal(colorAt(possessive, possessive.text.indexOf("'")), 'pen', 'possessive apostrophe stays pencil');
+assert.equal(colorAt(possessive, possessive.text.indexOf("'") + 1), 'pen', 'possessive suffix stays pencil');
+assert.equal(atLine(possessive, 'PoE', 'restored PoE'), 'db');
+const tcp = bodyLine('ni-basics-forwarding', "TCP's delivery");
+assert.equal(colorAt(tcp, tcp.text.toLowerCase().indexOf('tcp')), 'p', 'possessive TCP inherits its base color');
+assert.equal(colorAt(tcp, tcp.text.indexOf("'") + 1), 'pen');
+const privilege = bodyLine('nd-security-access-platforms', 'least-privilege');
+assert.equal(atLine(privilege, 'least', 'hyphenated least-privilege'), 'db');
+assert.equal(atLine(privilege, 'privilege', 'hyphenated least-privilege'), 'db');
+assert.equal(colorAt(privilege, privilege.text.indexOf('-')), 'pen', 'hyphen in an explicit alias stays pencil');
+assert.equal(atLine(bodyLine('cs-mitigation-practice', 'phishing-resistant'), 'phishing', 'phishing-resistant alias'), 'r');
+assert.equal(atLine(bodyLine('cs-mitigation-protocols', 'IDS monitors'), 'IDS', 'IDS body term'), 'r');
+assert.equal(atLine(bodyLine('cs-data-cryptography', 'Caesar is a shift'), 'Caesar', 'Caesar body term'), 'r');
+assert.equal(atLine(bodyLine('ni-hardware-infrastructure', 'mounted in a rack'), 'rack', 'rack body term'), 'mb');
+const wireless = bodyLine('ni-wireless-performance', 'Neither Wi-Fi nor cellular');
+assert.equal(atLine(wireless, 'Wi-Fi', 'Wi-Fi versus cellular'), 'y');
+assert.equal(atLine(wireless, 'cellular', 'Wi-Fi versus cellular'), 'or');
+const measured = bodyLine('nd-administration-troubleshooting', 'Measure latency and throughput');
+assert.equal(atLine(measured, 'latency', 'latency versus throughput'), 'li');
+assert.equal(atLine(measured, 'throughput', 'latency versus throughput'), 'g');
+assert.notEqual(atLine(measured, 'latency', 'latency versus throughput'), atLine(measured, 'throughput', 'latency versus throughput'));
 
 console.log(`PASS: ${registered.length} centrally registered body terms, ${lanOccurrences} consistent LAN occurrences, independent varied heading palettes, exact preservation and drift guards.`);

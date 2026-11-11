@@ -5,12 +5,12 @@
 (pen)-> Maintenance keeps services supported, secure, and recoverable.
 (pen)-> An audit compares actual assets and settings with policy.
 (pen)-> Record audit scope, evidence, owner, risk, and due action.
-(pen)-> Updates add fixes or (li)features(pen); patches address known defects.
+(pen)-> Updates add fixes or (li)features(pen); (g)patches(pen) address known defects.
 (pen)-> Test compatibility, stage deployment, then verify outcomes.
 (pen)-> A rollback plan limits harm if an update breaks a service.
-(pen)-> A (g)backup(pen) is a separate copy intended for later recovery.
+(pen)-> A (g)backup(pen) is a separate copy intended for later (li)recovery(pen).
 (pen)-> (g)RAID(pen) may tolerate disk failure; it does not replace (g)backup(pen).
-(pen)-> A restore test checks usable data and recovery procedure.
+(pen)-> A restore test checks usable data and (li)recovery(pen) procedure.
 (pen)o (y)Accounts and permissions(pen)
 (pen)-> An account identifies a user or service to a system.
 (pen)-> (hp)Authentication(pen) checks identity; (pu)authorization(pen) grants actions.
@@ -28,15 +28,15 @@
 (pen)o (g)SNMP and management data(pen)
 (pen)-> Simple Network Management Protocol (SNMP) exchanges status.
 (pen)-> Managers query agents that expose managed device objects.
-(pen)-> A Management Information Base (MIB) names managed objects.
+(pen)-> A Management Information Base ((db)MIB(pen)) names managed objects.
 (pen)-> Poll counters; notifications report events but may be lost.
 (pen)-> Counters need time intervals to show rates or changing errors.
 (pen)-> SNMPv2c names are unencrypted; traffic can expose them.
 (pen)-> SNMPv3 USM supports (hp)authentication(pen) and optional privacy.
 (pen)-> Auth checks (g)integrity(pen) and user; privacy encrypts data.
-(pen)-> Use authPriv; limit MIB views and manager (hp)ACLs(pen).
+(pen)-> Use authPriv; limit (db)MIB(pen) views and manager (hp)ACLs(pen).
 (pen)o (or)Traffic baselines and alerts(pen)
-(pen)-> Time counters; baseline latency, loss, errors, and demand.
+(pen)-> Time counters; baseline (li)latency(pen), loss, errors, and demand.
 (pen)-> Compare like periods; peak and average load differ.
 (pen)-> An alert triggers investigation, not proof of cause.
 (pen)-> A load balancer distributes eligible traffic across backends.
@@ -44,5 +44,5 @@
 (pen)-> Client-IP affinity sends that client to the same backend.
 (pen)-> Affinity may skew load when few distinct client flows exist.
 (pen)-> Configured probes can stop new flows to unhealthy backends.
-(pen)-> Map links, gateways, dependencies; log checks and recovery.
+(pen)-> Map links, gateways, dependencies; log checks and (li)recovery(pen).
 (pen)-> Restrict log access and retention to protect sensitive data.

@@ -3,7 +3,7 @@
 (pen)-> (mb)Organize buyer(pen)-(mb)centered content(pen)
 (pen)o (db)Build a reliable relationship(pen)
 (pen)-> Relevant, dependable service can build customer trust.
-(pen)-> Agree on follow-up purpose, channel, and timing with (p)consent(pen).
+(pen)-> Agree on (pu)follow(pen)-(pu)up(pen) purpose, channel, and timing with (p)consent(pen).
 (pen)-> Record only needed contact details and protect them.
 (pen)-> Confirm owner, date, and promised deliverable.
 (pen)-> Keep promises or notify buyer and reset expectations.
@@ -19,7 +19,7 @@
 (pen)-> Example: connect a stated delay to the relevant workflow.
 (pen)-> Keep sections tied to confirmed buyer (pu)priorities(pen).
 (pen)-> Avoid (li)feature(pen) dumps and repeated (or)claims(pen).
-(pen)-> Clear organization aids recovery after a question.
+(pen)-> Clear organization aids (li)recovery(pen) after a question.
 (pen)-> Separate verified facts, examples, and recommendations.
 (pen)-> Adapt order when buyer information changes (pu)priorities(pen).
 (pen)o Overview
@@ -41,7 +41,7 @@
 (pen)-> A handoff links the prior point to the next speaker's role.
 (pen)-> Share verified facts so offer descriptions stay consistent.
 (pen)-> Face the audience and allow each speaker to be heard.
-(pen)-> Practice missed-cue recovery without blaming a teammate.
+(pen)-> Practice missed-cue (li)recovery(pen) without blaming a teammate.
 (pen)-> Do not speak over a teammate answering a judge.
 (pen)-> A teammate may clarify; keep one coherent answer.
 (pen)-> Rehearse transitions under the actual seven-minute limit.

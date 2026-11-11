@@ -198,16 +198,16 @@ function renderCourseLine(line) {
 
 function renderColorReference(palette) {
   const colors = [
-    { ink: 'db', name: 'Dark blue', group: 'Selected network identifiers, trust principles, and tools', examples: ['LAN', 'MAC', 'Zero Trust', 'SQL', 'ping'] },
-    { ink: 'mb', name: 'Medium blue', group: 'IP addressing and selected infrastructure terms', examples: ['IP', 'IPv4', 'CIDR', 'subnet', 'cloud', 'NIST'] },
-    { ink: 'li', name: 'Light green', group: 'Selected configuration, switching, and frame vocabulary', examples: ['IPv6', 'DHCP', 'switch', 'frames', 'features'] },
-    { ink: 'or', name: 'Orange', group: 'Routing/WAN vocabulary and selected names', examples: ['WAN', 'routers', 'NAT', 'BGP', 'Ethernet', 'Azure'] },
-    { ink: 'pu', name: 'Purple', group: 'Segmentation, virtualization, and authorization', examples: ['VLAN', 'VMs', 'containers', 'IoT', 'RBAC', 'authorization'] },
+    { ink: 'db', name: 'Dark blue', group: 'Selected network identifiers, trust principles, and tools', examples: ['LAN', 'MAC', 'Zero Trust', 'DNS', 'PoE', 'ping'] },
+    { ink: 'mb', name: 'Medium blue', group: 'IP addressing, hardware forms, and selected infrastructure terms', examples: ['IP', 'IPv4', 'subnet', 'rack', 'blade', 'copper'] },
+    { ink: 'li', name: 'Light green', group: 'Switching, recovery, and selected performance vocabulary', examples: ['IPv6', 'DHCP', 'switch', 'fiber', 'capacity', 'latency'] },
+    { ink: 'or', name: 'Orange', group: 'Routing, cost, and permission vocabulary', examples: ['WAN', 'routers', 'NAT', 'BGP', 'cost', 'cellular'] },
+    { ink: 'pu', name: 'Purple', group: 'Segmentation, endpoints, and presentation criteria', examples: ['VLAN', 'VMs', 'endpoint', 'rubric', 'eye contact', 'criteria'] },
     { ink: 'p', name: 'Light pink', group: 'Selected networking/application protocols and business terms', examples: ['OSI', 'TCP', 'HTTPS', 'SaaS', 'TCO', 'consent'] },
     { ink: 'hp', name: 'Dark pink', group: 'Authentication, secure-access vocabulary, and selected names', examples: ['TLS', 'VPN', 'MFA', 'certificates', 'passwords', 'Windows'] },
-    { ink: 'g', name: 'Dark green', group: 'Recovery, security properties, and cryptography', examples: ['RAID', 'backups', 'RTO', 'encryption', 'hashes', 'public key'] },
+    { ink: 'g', name: 'Dark green', group: 'Recovery, cryptography, and measured performance', examples: ['RAID', 'backups', 'encryption', 'patching', 'throughput', 'hashes'] },
     { ink: 'y', name: 'Yellow', group: 'Wireless vocabulary and selected names', examples: ['Wi-Fi', 'WPA3', 'SSID', '5G', 'BitLocker', 'ROI'] },
-    { ink: 'r', name: 'Red', group: 'Attacks, weaknesses, and selected defensive controls', examples: ['DoS', 'malware', 'phishing', 'vulnerabilities', 'firewalls', 'WAF'] },
+    { ink: 'r', name: 'Red', group: 'Attacks, weaknesses, ciphers, and selected controls', examples: ['DoS', 'phishing', 'IDS', 'IPS', 'cipher', 'firewalls'] },
     { ink: 'lb', name: 'Light blue', group: 'Overall sheet titles', examples: [] },
   ];
   const inks = { ...palette, ...fblaInks };

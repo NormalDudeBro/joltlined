@@ -5,7 +5,7 @@
 (pen)-> (p)OSI(pen) is a seven-layer model, not a product blueprint.
 (pen)-> Layer 1 sends bits as electrical, optical or radio signals.
 (pen)-> It defines media, signaling and connection properties.
-(pen)-> Copper, fiber and radio differ in reach and noise limits.
+(pen)-> (mb)Copper(pen), (li)fiber(pen) and radio differ in reach and noise limits.
 (pen)-> Layer 2 data link groups bits into (li)frames(pen) on a local link.
 (pen)-> (or)Ethernet(pen) and (y)Wi(pen)-(y)Fi(pen) link delivery use link-layer addressing.
 (pen)-> (li)Switches(pen) learn source (db)MAC(pen) locations and forward (li)frames(pen).
@@ -16,7 +16,7 @@
 (pen)-> (or)Routers(pen) choose next hops using destination and (or)routing(pen) data.
 (pen)-> Layer 4 carries process traffic using ports and protocols.
 (pen)-> (p)TCP(pen) offers ordered delivery and retransmits lost data.
-(pen)-> (hp)UDP(pen) provides datagrams without TCP's delivery guarantees.
+(pen)-> (hp)UDP(pen) provides datagrams without (p)TCP(pen)'s delivery guarantees.
 (pen)-> Layer 5 organizes dialogs between communicating systems.
 (pen)-> Layer 6 presentation represents, encodes or transforms data.
 (pen)-> Layer 7 protocols support tasks such as web requests.
@@ -39,10 +39,10 @@
 (pen)-> A small shop may use a compact gateway and switched (db)LAN(pen).
 (pen)-> A campus commonly uses managed access and routed boundaries.
 (pen)-> Datacenter design focuses on server and storage traffic paths.
-(pen)-> Capacity planning considers concurrent users and traffic.
+(pen)-> (li)Capacity(pen) planning considers concurrent users and traffic.
 (pen)-> Redundant equipment may share power or cable risks.
 (pen)-> (pu)Segmentation(pen) constrains traffic only with correct policy.
 (pen)-> More bandwidth cannot fix a wrong route or weak (y)Wi(pen)-(y)Fi(pen).
-(pen)-> Skills and maintenance matter alongside equipment cost.
+(pen)-> Skills and maintenance matter alongside equipment (or)cost(pen).
 (pen)-> Choose components for the site's actual (g)availability(pen) needs.
 (pen)-> Document dependencies so outages can be diagnosed efficiently.

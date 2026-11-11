@@ -4,9 +4,9 @@
 (pen)o (pu)Network Scale and Work Models(pen)
 (pen)-> A (db)LAN(pen) links devices within a limited local site.
 (pen)-> A (or)WAN(pen) connects distant (db)LANs(pen) over carrier or private links.
-(pen)-> (or)WAN(pen) reach adds provider, latency, recurring-cost tradeoffs.
+(pen)-> (or)WAN(pen) reach adds provider, (li)latency(pen), recurring-cost tradeoffs.
 (pen)-> Peer-to-peer hosts share directly; control is distributed.
-(pen)-> P2P can suit small groups but complicates consistent policy.
+(pen)-> (db)P(pen)2(db)P(pen) can suit small groups but complicates consistent policy.
 (pen)-> Client-server centralizes services, identity, administration.
 (pen)-> Central services simplify control but become dependencies.
 (pen)-> Thin clients rely on remote compute/apps; outages impair use.
@@ -38,11 +38,11 @@
 (pen)o (y)VPN and Authorized Capture(pen)
 (pen)-> A (hp)VPN(pen) creates a logical tunnel across an underlying network.
 (pen)-> Configured VPNs can authenticate peers and encrypt traffic.
-(pen)-> Tunneling does not secure endpoints or grant user permissions.
+(pen)-> Tunneling does not secure (pu)endpoints(pen) or grant user (or)permissions(pen).
 (pen)-> (mb)Packet(pen) capture records traffic visible at the capture point.
 (pen)-> (g)Encryption(pen) hides payload; metadata may remain visible.
 (pen)-> Capture only with explicit (pu)authorization(pen) and approved scope.
 (pen)-> Minimize collection; protect files; follow retention policy.
 (pen)-> (hp)Authentication(pen) checks identity; (pu)authorization(pen) grants access.
-(pen)-> VPNs do not replace endpoint, account, or network controls.
+(pen)-> VPNs do not replace (pu)endpoint(pen), account, or network controls.
 (pen)-> Never inspect others' traffic without (pu)authorization(pen).

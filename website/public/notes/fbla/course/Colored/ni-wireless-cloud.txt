@@ -19,7 +19,7 @@
 (pen)-> Customers still manage identities, access and data use.
 (pen)-> Shared responsibility does not remove customer duties.
 (pen)-> A hosted service depends on its provider and network path.
-(pen)-> Clarify (g)backup(pen), retention and recovery terms before adoption.
+(pen)-> Clarify (g)backup(pen), retention and (li)recovery(pen) terms before adoption.
 (pen)-> (mb)Cloud(pen) describes a delivery model, not one physical location.
 (pen)-> Service boundaries vary, so verify the actual offer terms.
 (pen)o Overview
@@ -30,18 +30,18 @@
 (pen)-> Distance generally weakens received signal strength.
 (pen)-> Walls and building materials absorb or reflect radio energy.
 (pen)-> Metal and reinforced concrete can obstruct or reflect signals.
-(pen)-> Interference and noise can corrupt reception or cut capacity.
+(pen)-> Interference and noise can corrupt reception or cut (li)capacity(pen).
 (pen)-> A client and (y)access point(pen) both need adequate signal quality.
 (pen)-> A strong signal does not guarantee a fast Internet connection.
 (pen)-> Range depends on frequency, antenna, power and environment.
 (pen)-> No single indoor (y)Wi(pen)-(y)Fi(pen) range applies to every building.
 (pen)o (g)Wireless speed and reliability(pen)
-(pen)-> (y)Wi(pen)-(y)Fi(pen) PHY rate is a signaling maximum, not app throughput.
-(pen)-> Overhead and retransmissions reduce usable throughput.
+(pen)-> (y)Wi(pen)-(y)Fi(pen) (li)PHY(pen) rate is a signaling maximum, not app (g)throughput(pen).
+(pen)-> Overhead and retransmissions reduce usable (g)throughput(pen).
 (pen)-> Congestion shares airtime among nearby clients.
-(pen)-> Channel width and modulation affect capacity and reach.
+(pen)-> Channel width and modulation affect (li)capacity(pen) and reach.
 (pen)-> Client capability can limit an AP's advertised link rate.
-(pen)-> Backhaul capacity can bottleneck otherwise strong (y)Wi(pen)-(y)Fi(pen).
+(pen)-> (mb)Backhaul(pen) (li)capacity(pen) can bottleneck otherwise strong (y)Wi(pen)-(y)Fi(pen).
 (pen)-> Roaming, power and configuration affect reliability.
 (pen)-> Survey at actual user locations and test representative load.
 (pen)-> Higher AP power may not strengthen a client's return signal.

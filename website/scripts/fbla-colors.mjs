@@ -17,7 +17,9 @@ for (const [color, names] of Object.entries(fblaTermColors)) {
   }
 }
 // Longest names win (e.g. Windows Server); compounds never match substrings.
-const bodyTerms = new RegExp(`(?<![A-Za-z0-9'-])(?:${[...terms.keys()].sort((a, b) => b.length - a.length).map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})(?![A-Za-z0-9'-])`, 'gi');
+// A terminal possessive does not block the base term, but the apostrophe and
+// suffix stay pencil. Hyphenated printed forms must be explicit aliases.
+const bodyTerms = new RegExp(`(?<![A-Za-z0-9'-])(?:${[...terms.keys()].sort((a, b) => b.length - a.length).map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})(?=(?:'s|')?(?![A-Za-z0-9'-]))`, 'gi');
 // Match complete identifiers, but keep their punctuation and digits in pencil.
 const paint = (text, ink) => text.replace(/[A-Za-z]+(?: [A-Za-z]+)*/g, words => `(${ink})${words}(pen)`);
 

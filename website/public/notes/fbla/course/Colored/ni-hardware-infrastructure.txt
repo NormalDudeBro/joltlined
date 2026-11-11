@@ -2,36 +2,36 @@
 (pen)-> (mb)Rack and blade server forms(pen)
 (pen)-> (y)Chassis power and connectivity(pen)
 (pen)o (mb)Rack and blade server forms(pen)
-(pen)-> A rack server is an individual server mounted in a rack.
+(pen)-> A (mb)rack(pen) server is an individual server mounted in a (mb)rack(pen).
 (pen)-> It generally has its own power and cooling components.
 (pen)-> Racks allow mixed systems and incremental installation.
-(pen)-> They require rack space, cabling and room-level cooling.
-(pen)-> A blade is a server module fitted into a shared chassis.
-(pen)-> The chassis can provide power, fans, fabric and management.
+(pen)-> They require (mb)rack(pen) space, cabling and room-level cooling.
+(pen)-> A (mb)blade(pen) is a server module fitted into a shared (mb)chassis(pen).
+(pen)-> The (mb)chassis(pen) can provide power, fans, fabric and management.
 (pen)-> Shared infrastructure can reduce cabling and increase density.
-(pen)-> Chassis cost and blade compatibility constrain choice.
+(pen)-> (mb)Chassis(pen) (or)cost(pen) and (mb)blade(pen) compatibility constrain choice.
 (pen)-> Shared power, cooling or midplane can form failure domains.
 (pen)o (y)Chassis power and connectivity(pen)
-(pen)-> (y)Cisco(pen) UCS 5108 holds up to eight half-width blade servers.
-(pen)-> Its chassis has hot-swappable power supplies and fans.
-(pen)-> Its fabric connects blades to network interfaces and uplinks.
-(pen)-> That design reduces separate chassis (li)switches(pen) and cabling.
+(pen)-> (y)Cisco(pen) UCS 5108 holds up to eight half-width (mb)blade(pen) servers.
+(pen)-> Its (mb)chassis(pen) has hot-swappable power supplies and fans.
+(pen)-> Its fabric connects (mb)blades(pen) to network interfaces and uplinks.
+(pen)-> That design reduces separate (mb)chassis(pen) (li)switches(pen) and cabling.
 (pen)-> Redundant supplies or fans reduce, but do not erase, risk.
 (pen)-> Power redundancy mode determines tolerated supply loss.
-(pen)-> PoE supplies data and power over supported (or)Ethernet(pen) links.
-(pen)-> Check the switch's total PoE budget and each port limit.
+(pen)-> (db)PoE(pen) supplies data and power over supported (or)Ethernet(pen) links.
+(pen)-> Check the (li)switch(pen)'s total (db)PoE(pen) budget and each port limit.
 (pen)-> Also verify device demand and the exact equipment datasheet.
 (pen)-> Internet needs ISP, handoff hardware, (or)router(pen) and host link.
 (pen)o Overview
 (pen)-> (g)File and block storage(pen)
 (pen)-> (or)RAID and fault tolerance(pen)
 (pen)o (g)File and block storage(pen)
-(pen)-> NAS means network-attached storage, typically shared files.
+(pen)-> (db)NAS(pen) means network-attached storage, typically shared files.
 (pen)-> Clients request named files and folders over (db)LAN(pen) protocols.
-(pen)-> SAN commonly presents block volumes to connected hosts.
+(pen)-> (db)SAN(pen) commonly presents block volumes to connected hosts.
 (pen)-> A host formats and manages a block volume as a disk.
-(pen)-> NAS suits shared files; SAN can serve host-managed blocks.
-(pen)-> Choice depends on workload, protocol, administration and cost.
+(pen)-> (db)NAS(pen) suits shared files; (db)SAN(pen) can serve host-managed blocks.
+(pen)-> Choice depends on workload, protocol, administration and (or)cost(pen).
 (pen)-> Neither guarantees a particular speed or (g)availability(pen).
 (pen)-> A storage network does not itself provide (g)backup(pen) copies.
 (pen)-> Protect data separately against deletion and site loss.

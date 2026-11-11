@@ -6,17 +6,17 @@
 (pen)-> Estimate concurrent users and peak traffic, not headcount.
 (pen)-> Map apps needing low delay, steady rates, or reliable access.
 (pen)-> Physical size sets cable paths, closets, links, and coverage.
-(pen)-> Growth affects port, address, capacity, and space needs.
-(pen)-> Throughput is delivered rate, not the PHY link rate.
-(pen)-> Contention, signal, servers, and uplinks affect throughput.
-(pen)-> (g)Availability(pen) needs set acceptable outage and recovery targets.
+(pen)-> Growth affects port, address, (li)capacity(pen), and space needs.
+(pen)-> (g)Throughput(pen) is delivered rate, not the (li)PHY(pen) link rate.
+(pen)-> Contention, signal, servers, and uplinks affect (g)throughput(pen).
+(pen)-> (g)Availability(pen) needs set acceptable outage and (li)recovery(pen) targets.
 (pen)-> Budget includes licenses, staff, support, and replacement.
 (pen)o (mb)Network scope and physical scale(pen)
 (pen)-> A local area network ((db)LAN(pen)) connects devices in a limited site.
 (pen)-> A wide area network ((or)WAN(pen)) links networks across distance.
 (pen)-> (db)LAN(pen) and (or)WAN(pen) name scope, not speed or technology.
 (pen)-> A (or)WAN(pen) often depends on carrier links and service contracts.
-(pen)-> Long links may add latency, cost, and provider dependence.
+(pen)-> Long links may add (li)latency(pen), (or)cost(pen), and provider dependence.
 (pen)-> Geography shapes (or)routing(pen), addressing, and support needs.
 (pen)-> Separate user, server, guest needs before choosing equipment.
 (pen)-> Redundancy improves resilience but adds links and operations.
@@ -26,14 +26,14 @@
 (pen)-> (y)Topology and failure domains(pen)
 (pen)-> (g)Windows Server or Linux(pen)
 (pen)o (y)Topology and failure domains(pen)
-(pen)-> Star connects endpoints to a central (li)switch(pen) or (y)access point(pen).
+(pen)-> Star connects (pu)endpoints(pen) to a central (li)switch(pen) or (y)access point(pen).
 (pen)-> Edge link failure affects one; central failure affects many.
-(pen)-> Mesh adds alternate paths but increases link cost.
+(pen)-> Mesh adds alternate paths but increases link (or)cost(pen).
 (pen)-> Full mesh of n nodes needs n(n-1)/2 point-to-point links.
 (pen)-> Bus attaches devices along a shared backbone cable.
 (pen)-> A bus backbone break can disrupt service and hinder diagnosis.
 (pen)-> Physical topology maps cables; logical topology maps paths.
-(pen)-> Topology weighs fault impact, scale, cost, and staff skills.
+(pen)-> Topology weighs fault impact, scale, (or)cost(pen), and staff skills.
 (pen)-> Redundancy helps when failure domains are independent.
 (pen)o (g)Windows Server or Linux(pen)
 (pen)-> A network operating system (NOS) runs shared network services.
@@ -41,8 +41,8 @@
 (pen)-> (g)Linux(pen) server (li)features(pen) vary by distribution and packages.
 (pen)-> Check applications, drivers, identity, and hardware support.
 (pen)-> Check staff expertise, training, and vendor support coverage.
-(pen)-> Include licensing, subscriptions, upkeep, and migration costs.
-(pen)-> Compare security controls and patching for this configuration.
-(pen)-> Pilot service, access, (g)backup(pen), monitoring, and recovery needs.
+(pen)-> Include licensing, subscriptions, upkeep, and migration (or)costs(pen).
+(pen)-> Compare security controls and (g)patching(pen) for this configuration.
+(pen)-> Pilot service, access, (g)backup(pen), monitoring, and (li)recovery(pen) needs.
 (pen)-> Choose for compatibility and support, not stereotypes.
 (pen)-> Licensing varies by edition, cores, and deployment terms.

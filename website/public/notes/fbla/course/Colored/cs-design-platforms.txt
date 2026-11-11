@@ -12,14 +12,14 @@
 (pen)-> (p)SaaS(pen) vendor runs app; customer manages users and data.
 (pen)-> More abstraction reduces customer control and admin work.
 (pen)o (li)Cloud choices(pen), (li)effects(pen), (li)and shared duties(pen)
-(pen)-> Example: (db)IaaS(pen) customer patches guest; provider patches host.
+(pen)-> Example: (db)IaaS(pen) customer (g)patches(pen) guest; provider (g)patches(pen) host.
 (pen)-> (p)SaaS(pen) customer controls account access and sharing settings.
 (pen)-> Provider controls do not correct customer misconfiguration.
 (pen)-> Public (mb)cloud(pen) can scale quickly without owning facilities.
-(pen)-> Costs shift toward usage; careless usage can raise bills.
+(pen)-> (or)Costs(pen) shift toward usage; careless usage can raise bills.
 (pen)-> (mb)Cloud(pen) dependence adds provider, network, and outage risks.
 (pen)-> Classify data before selecting (mb)cloud(pen) storage or region.
-(pen)-> Review contract, duties, audit, and recovery options.
+(pen)-> Review contract, duties, audit, and (li)recovery(pen) options.
 (pen)-> (db)AWS(pen) calls this security of the (mb)cloud(pen) versus in the (mb)cloud(pen).
 (pen)-> A (mb)cloud(pen) service is not automatically safer than local hosting.
 (pen)o Overview
@@ -27,10 +27,10 @@
 (pen)-> (hp)Distributed policy and complexity(pen)
 (pen)o (p)Microservices and API security(pen)
 (pen)-> Microservices are small components communicating over APIs.
-(pen)-> An API endpoint accepts requests for a defined operation.
-(pen)-> Each reachable endpoint adds code and attack surface.
+(pen)-> An API (pu)endpoint(pen) accepts requests for a defined operation.
+(pen)-> Each reachable (pu)endpoint(pen) adds code and attack surface.
 (pen)-> Authenticate the caller; separately authorize each action.
-(pen)-> A valid login does not grant every endpoint permission.
+(pen)-> A valid login does not grant every (pu)endpoint(pen) (or)permission(pen).
 (pen)-> Service-to-service calls also need identity and access rules.
 (pen)-> (mb)NIST(pen) lists (hp)authentication(pen) and access management as core needs.
 (pen)-> Secure channels help protect service communications.
@@ -38,7 +38,7 @@
 (pen)o (hp)Distributed policy and complexity(pen)
 (pen)-> Many services multiply routes, keys, versions, and policies.
 (pen)-> Service discovery locates changing service instances.
-(pen)-> Incorrect discovery can direct requests to hostile endpoints.
+(pen)-> Incorrect discovery can direct requests to hostile (pu)endpoints(pen).
 (pen)-> Gateways centralize some edge checks and traffic controls.
 (pen)-> Internal services still require correct (pu)authorization(pen) checks.
 (pen)-> A service mesh can package communication/security functions.

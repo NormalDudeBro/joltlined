@@ -16,18 +16,18 @@
 (pen)-> (g)Availability(pen) means timely access to authorized users.
 (pen)-> Account lifecycle removes stale users and excess access.
 (pen)-> (hp)Authentication(pen) verifies a claimed identity or (hp)authenticator(pen).
-(pen)-> (pu)Authorization(pen) decides allowed actions; permissions enforce it.
+(pen)-> (pu)Authorization(pen) decides allowed actions; (or)permissions(pen) enforce it.
 (pen)-> (g)Encryption(pen) obscures content without the required key.
 (pen)-> Antivirus detects known or suspicious patterns; misses occur.
 (pen)-> Mail and web filters reduce risky links and attachments.
-(pen)-> Patching removes known flaws after suitable testing.
+(pen)-> (g)Patching(pen) removes known flaws after suitable testing.
 (pen)-> Disable unused services; verify needed network flows first.
 (pen)o Overview
 (pen)-> (mb)Availability and Attack Paths(pen)
 (pen)-> (y)Integrity(pen), (y)Identity(pen), (y)and Recovery(pen)
 (pen)o (mb)Availability and Attack Paths(pen)
 (pen)-> (r)DoS(pen) denies service by exhausting a constrained resource.
-(pen)-> Floods may saturate links or consume server request capacity.
+(pen)-> Floods may saturate links or consume server request (li)capacity(pen).
 (pen)-> Protocol attacks can exhaust connection or state tables.
 (pen)-> Application floods consume workers, memory, or CPU.
 (pen)-> (r)DDoS(pen) distributes traffic across many compromised devices.
@@ -36,7 +36,7 @@
 (pen)-> (r)Phishing(pen) impersonates trusted senders to prompt unsafe action.
 (pen)-> Spoofing forges apparent sender, address, or device identity.
 (pen)o (y)Integrity(pen), (y)Identity(pen), (y)and Recovery(pen)
-(pen)-> Poisoning corrupts trusted lookup data, such as DNS cache.
+(pen)-> Poisoning corrupts trusted lookup data, such as (db)DNS(pen) cache.
 (pen)-> (g)Hash(pen) maps data to a fixed-size digest; it is not (g)encryption(pen).
 (pen)-> A trusted digest comparison can reveal changed file contents.
 (pen)-> An unauthenticated (g)hash(pen) does not prove who supplied the file.

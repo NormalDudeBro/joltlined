@@ -7,7 +7,7 @@
 (pen)-> (g)Availability(pen) gives authorized users timely access.
 (pen)-> (g)Encryption(pen) supports (g)confidentiality(pen), not data truth.
 (pen)-> Audit controls can expose changes; logs need protection.
-(pen)-> Tested (g)backups(pen) support recovery and (g)availability(pen).
+(pen)-> Tested (g)backups(pen) support (li)recovery(pen) and (g)availability(pen).
 (pen)-> (db)Zero Trust(pen) gives no trust from location alone.
 (pen)-> Evaluate user, device, resource, and context per request.
 (pen)-> Example: verify worker and device before payroll access.
@@ -36,13 +36,13 @@
 (pen)-> It limits blast (hp)radius(pen), not all misuse or compromise.
 (pen)-> (or)OWASP(pen) says least DB privilege limits (r)injection(pen) damage.
 (pen)o (pu)Binary(pen), (pu)Decimal(pen), (pu)and Hex(pen)
-(pen)-> Binary is base 2; decimal is base 10; hex is base 16.
-(pen)-> Hex digits are 0-9 and A-F; A-F represent values 10-15.
+(pen)-> (r)Binary(pen) is base 2; (r)decimal(pen) is base 10; (r)hex(pen) is base 16.
+(pen)-> (r)Hex(pen) digits are 0-9 and A-F; A-F represent values 10-15.
 (pen)-> Place values are powers of the base, right to left.
-(pen)-> Binary 1011 equals decimal 8+2+1, or 11.
-(pen)-> Hex 2F equals decimal 2*16+15, or 47.
-(pen)-> Four binary bits form one hex digit: 1011 becomes B.
-(pen)-> Pad on left: 11010 becomes 0001 1010, or hex 1A.
-(pen)-> A byte is 8 bits; two hex digits display one byte.
-(pen)-> Hex displays bits compactly; it does not encrypt them.
+(pen)-> (r)Binary(pen) 1011 equals (r)decimal(pen) 8+2+1, or 11.
+(pen)-> (r)Hex(pen) 2F equals (r)decimal(pen) 2*16+15, or 47.
+(pen)-> Four (r)binary(pen) bits form one (r)hex(pen) digit: 1011 becomes B.
+(pen)-> Pad on left: 11010 becomes 0001 1010, or (r)hex(pen) 1A.
+(pen)-> A byte is 8 bits; two (r)hex(pen) digits display one byte.
+(pen)-> (r)Hex(pen) displays bits compactly; it does not encrypt them.
 (pen)-> (g)Hashes(pen) output fixed-length digests; encoding adds no strength.

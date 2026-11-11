@@ -5,8 +5,8 @@
 (pen)-> A network adapter connects a device to a wired or radio link.
 (pen)-> A (li)switch(pen) or (y)access point(pen) joins devices to the local (db)LAN(pen).
 (pen)-> A (or)router(pen) joins (mb)IP(pen) networks and selects a route toward the ISP.
-(pen)-> A modem adapts signaling for a provider medium such as coax.
-(pen)-> An optical network terminal adapts a fiber access connection.
+(pen)-> A modem adapts signaling for a provider medium such as (mb)coax(pen).
+(pen)-> An optical network terminal adapts a (li)fiber(pen) access connection.
 (pen)-> A gateway may combine modem, (or)routing(pen), (li)switching(pen) and (y)Wi(pen)-(y)Fi(pen).
 (pen)-> The ISP aggregates access and routes to other networks.
 (pen)-> Operators interconnect through peering or paid transit.
@@ -14,13 +14,13 @@
 (pen)o (or)ISP chain and local limits(pen)
 (pen)-> A home link does not directly cable to every Internet host.
 (pen)-> Traffic crosses local gear, then provider networks.
-(pen)-> Fiber, coax, DSL and cellular differ in signaling and reach.
+(pen)-> (li)Fiber(pen), (mb)coax(pen), DSL and (or)cellular(pen) differ in signaling and reach.
 (pen)-> The provider medium and plan constrain the access link rate.
-(pen)-> A live physical link does not prove DNS or (or)routing(pen) is working.
+(pen)-> A live physical link does not prove (db)DNS(pen) or (or)routing(pen) is working.
 (pen)-> A reachable (or)router(pen) does not prove remote service works.
 (pen)-> Power or ISP faults can interrupt a correctly addressed (db)LAN(pen).
 (pen)-> Speed tests include remote path and server limitations.
-(pen)-> Check link, route, DNS and remote service separately.
+(pen)-> Check link, route, (db)DNS(pen) and remote service separately.
 (pen)-> One device may combine modem and (or)router(pen) functions.
 (pen)o Overview
 (pen)-> (li)IPv(pen)4 (li)and IPv(pen)6 (li)formats(pen)

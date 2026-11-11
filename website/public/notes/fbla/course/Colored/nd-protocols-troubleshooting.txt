@@ -13,7 +13,7 @@
 (pen)-> (p)TCP(pen)/(mb)IP(pen) names a protocol suite, not one individual protocol.
 (pen)o (li)TCP(pen), (li)UDP(pen), (li)DHCP(pen), (li)and Printed SMP(pen)
 (pen)-> (p)TCP(pen) provides reliable, ordered byte-stream service.
-(pen)-> (p)TCP(pen) sequence numbers and ACKs support ordered recovery.
+(pen)-> (p)TCP(pen) sequence numbers and ACKs support ordered (li)recovery(pen).
 (pen)-> (hp)UDP(pen) has no (p)TCP(pen) delivery or ordering guarantees.
 (pen)-> Applications select transport to fit their requirements.
 (pen)-> (li)DHCP(pen) client-server exchanges configure hosts.
@@ -27,9 +27,9 @@
 (pen)-> (hp)Layered Physical Diagnosis(pen)
 (pen)o (p)Topology and Reachability Tests(pen)
 (pen)-> Star links devices through a center; its failure affects many.
-(pen)-> A star cable fault usually isolates its attached endpoint.
+(pen)-> A star cable fault usually isolates its attached (pu)endpoint(pen).
 (pen)-> Bus shares a backbone; a break may affect many devices.
-(pen)-> Ring forwards around a loop; recovery depends on protection.
+(pen)-> Ring forwards around a loop; (li)recovery(pen) depends on protection.
 (pen)-> Physical cabling shape may differ from logical topology.
 (pen)-> (db)Ping(pen) tests ICMP echo; loss is evidence, not a cause.
 (pen)-> (r)Firewalls(pen) may block echo even when application service works.
@@ -39,8 +39,8 @@
 (pen)-> First scope impact: one device, site, service, or all users?
 (pen)-> Check power, cables, link lights, and (y)Wi(pen)-(y)Fi(pen) association.
 (pen)-> Confirm correct (y)SSID(pen), enabled adapter, signal, and wired port.
-(pen)-> Check (pu)VLAN(pen), (mb)IP(pen) address, mask, gateway, and DNS next.
-(pen)-> Compare gateway, permitted remote (mb)IP(pen), then a DNS name.
+(pen)-> Check (pu)VLAN(pen), (mb)IP(pen) address, mask, gateway, and (db)DNS(pen) next.
+(pen)-> Compare gateway, permitted remote (mb)IP(pen), then a (db)DNS(pen) name.
 (pen)-> (mb)IP(pen) works but names fail? Check the resolver path.
 (pen)-> No lease suggests (li)DHCP(pen) checks, not a proven cause.
 (pen)-> Change one safe variable; preserve before/after evidence.

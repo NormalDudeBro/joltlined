@@ -9,7 +9,7 @@
 (pen)-> A (or)router(pen) uses a new link (li)frame(pen) at each routed hop.
 (pen)-> (db)MAC(pen) is not the end-to-end Internet destination address.
 (pen)-> Address resolution finds a local link address for a next hop.
-(pen)-> (mb)IP(pen) and (db)MAC(pen) values alone do not prove identity or permission.
+(pen)-> (mb)IP(pen) and (db)MAC(pen) values alone do not prove identity or (or)permission(pen).
 (pen)-> Addresses may be assigned manually or by network services.
 (pen)o (r)Subnet purpose and CIDR(pen)
 (pen)-> A (mb)subnet(pen) groups addresses sharing a common network prefix.

@@ -3,7 +3,7 @@
 (pen)-> (r)Find the need(pen)
 (pen)o (hp)Open with relevance(pen)
 (pen)-> A greeting starts a buyer conversation respectfully.
-(pen)-> Use context, introduce yourself, and ask permission.
+(pen)-> Use context, introduce yourself, and ask (or)permission(pen).
 (pen)-> A relevant opener leads naturally to a discovery question.
 (pen)-> Example: ask what a new-hire welcome must accomplish.
 (pen)-> The example is a prompt, not a memorized contest script.
@@ -21,7 +21,7 @@
 (pen)-> Listen fully; paraphrase and invite correction.
 (pen)-> Separate what was said from your interpretation.
 (pen)-> Do not manufacture needs or lead the buyer to agree.
-(pen)-> Follow-up questions test context, not just product interest.
+(pen)-> (pu)Follow(pen)-(pu)up(pen) questions test context, not just product interest.
 (pen)o Overview
 (pen)-> (pu)Map people and priorities(pen)
 (pen)-> (db)Confirm before advising(pen)
@@ -30,7 +30,7 @@
 (pen)-> Ask who uses, funds, approves, or checks compatibility.
 (pen)-> One stakeholder's preference may not represent the group.
 (pen)-> Discover budget, timing, workflow, and decision process.
-(pen)-> Ask permission before recording contact preferences.
+(pen)-> Ask (or)permission(pen) before recording contact preferences.
 (pen)-> Example: manager funds; staff use; IT checks access.
 (pen)-> Confirm each role's relevant outcome and constraint.
 (pen)-> Do not collect unrelated personal information.
@@ -43,6 +43,6 @@
 (pen)-> It may become relevant if it improves needed readability.
 (pen)-> Stop discovery when enough is known to assess fit.
 (pen)-> If the offer mismatches, qualify or recommend no sale.
-(pen)-> Ask permission to move from discovery to recommendation.
+(pen)-> Ask (or)permission(pen) to move from discovery to recommendation.
 (pen)-> An accurate summary reduces mistaken assumptions.
 (pen)-> Confirm buyer context again if new facts change the fit.

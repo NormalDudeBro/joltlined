@@ -12,28 +12,28 @@
 (pen)-> (p)SMTP(pen) relay commonly uses (p)TCP(pen) 25; submission often uses 587.
 (pen)-> (p)TCP(pen) 465 often means implicit-TLS submission; configs vary.
 (pen)o (pu)DNS(pen), (pu)DHCP(pen), (pu)and IP(pen)
-(pen)-> DNS answers name queries with records such as (mb)IP(pen) addresses.
-(pen)-> DNS commonly uses (hp)UDP(pen) 53; (p)TCP(pen) 53 is also required.
+(pen)-> (db)DNS(pen) answers name queries with records such as (mb)IP(pen) addresses.
+(pen)-> (db)DNS(pen) commonly uses (hp)UDP(pen) 53; (p)TCP(pen) 53 is also required.
 (pen)-> (li)DHCP(pen) supplies leases and network settings to hosts.
 (pen)-> DHCPv4 commonly uses (hp)UDP(pen) 67 server and 68 client.
-(pen)-> A lease may include address, mask, (or)router(pen), and DNS server.
+(pen)-> A lease may include address, mask, (or)router(pen), and (db)DNS(pen) server.
 (pen)-> (li)DHCP(pen) relay can carry client requests across routed (mb)subnets(pen).
 (pen)-> (li)DHCP(pen) address is host configuration, not permanent identity.
-(pen)-> DNS name resolution does not itself route (mb)packets(pen) to a host.
+(pen)-> (db)DNS(pen) name resolution does not itself route (mb)packets(pen) to a host.
 (pen)-> Gateway forwards traffic beyond the local (mb)IP(pen) (mb)subnet(pen).
-(pen)-> Stale or poisoned DNS data can direct clients incorrectly.
+(pen)-> Stale or poisoned (db)DNS(pen) data can direct clients incorrectly.
 (pen)o Overview
 (pen)-> (db)Transport and Port Defaults(pen)
 (pen)-> (mb)NAT and Secure Service Use(pen)
 (pen)o (db)Transport and Port Defaults(pen)
 (pen)-> (p)TCP(pen) provides an ordered byte stream with retransmission.
-(pen)-> (p)TCP(pen) setup and recovery add overhead; delivery is not instant.
+(pen)-> (p)TCP(pen) setup and (li)recovery(pen) add overhead; delivery is not instant.
 (pen)-> (hp)UDP(pen) sends datagrams without (p)TCP(pen) delivery/order guarantees.
 (pen)-> Applications may add reliability above (hp)UDP(pen) when needed.
-(pen)-> (mb)IP(pen) carries (mb)packets(pen); (p)TCP(pen)/(hp)UDP(pen) ports identify endpoints.
+(pen)-> (mb)IP(pen) carries (mb)packets(pen); (p)TCP(pen)/(hp)UDP(pen) ports identify (pu)endpoints(pen).
 (pen)-> (p)HTTP(pen) commonly uses (p)TCP(pen) 80; (p)HTTPS(pen) commonly (p)TCP(pen) 443.
 (pen)-> (hp)SSH(pen) commonly uses (p)TCP(pen) 22; service ports can be changed.
-(pen)-> DNS uses (hp)UDP(pen) or (p)TCP(pen) 53; blocking (p)TCP(pen) can break functions.
+(pen)-> (db)DNS(pen) uses (hp)UDP(pen) or (p)TCP(pen) 53; blocking (p)TCP(pen) can break functions.
 (pen)-> NTP commonly uses (hp)UDP(pen) 123; defaults are not exclusive rules.
 (pen)o (mb)NAT and Secure Service Use(pen)
 (pen)-> (or)NAT(pen) maps (mb)IP(pen) addresses between address realms.

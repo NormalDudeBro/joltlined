@@ -14,10 +14,10 @@
 (pen)o (li)Resilient Defensive Layers(pen)
 (pen)-> Filter risky links/files; scanners cannot catch every sample.
 (pen)-> Verify payment or (hp)password(pen) requests through known channels.
-(pen)-> Patch exposed systems and retire unsupported software.
+(pen)-> (g)Patch(pen) exposed systems and retire unsupported software.
 (pen)-> (db)Least privilege(pen) limits damage from stolen accounts or (r)malware(pen).
 (pen)-> (pu)Segmentation(pen) restricts paths to critical systems.
-(pen)-> (g)Backups(pen) aid recovery; isolate copies from normal admin access.
+(pen)-> (g)Backups(pen) aid (li)recovery(pen); isolate copies from normal admin access.
 (pen)-> Test restores because untested copies may be incomplete.
 (pen)-> (hp)Close(pen) unused ports only after checking service dependencies.
 (pen)-> (r)Firewall(pen) rules filter traffic; they cannot stop all attacks.
@@ -32,15 +32,15 @@
 (pen)-> Reflection sends third-party replies to a victim.
 (pen)-> Amplification makes replies larger than triggering requests.
 (pen)-> Forged source addresses can obscure origins in some floods.
-(pen)-> Botnet (r)DDoS(pen) adds traffic from many compromised endpoints.
+(pen)-> Botnet (r)DDoS(pen) adds traffic from many compromised (pu)endpoints(pen).
 (pen)-> A (r)firewall(pen) cannot restore a saturated upstream link.
 (pen)-> Outages deny service to legitimate users.
 (pen)o (hp)Mitigation and Residual Risk(pen)
 (pen)-> Upstream filtering or scrubbing can remove attack traffic.
 (pen)-> Rate limits reduce abusive request rates but need tuning.
-(pen)-> Redundancy and capacity help only within design limits.
+(pen)-> Redundancy and (li)capacity(pen) help only within design limits.
 (pen)-> Broad filters may block legitimate clients too.
-(pen)-> Coordinate with providers when circuit capacity is exceeded.
+(pen)-> Coordinate with providers when circuit (li)capacity(pen) is exceeded.
 (pen)-> Report (r)phishing(pen); do not click, reply, or share approval codes.
 (pen)-> Antivirus and filters complement user verification.
 (pen)-> Preserve logs and follow incident response procedures.

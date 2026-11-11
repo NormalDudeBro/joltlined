@@ -10,7 +10,7 @@
 (pen)-> (hp)TLS(pen) server identity is checked against its (hp)certificate(pen).
 (pen)-> (hp)TLS(pen) record layer protects application data in transit.
 (pen)-> (y)WPA(pen)2 protects a wireless link; use secure configuration.
-(pen)-> Secure protocol use does not secure a compromised endpoint.
+(pen)-> Secure protocol use does not secure a compromised (pu)endpoint(pen).
 (pen)o (p)Certificates and trust(pen)
 (pen)-> (hp)Certificate(pen) binds a (g)public key(pen) to a named subject.
 (pen)-> A trusted CA signs the binding under its issuance policy.
@@ -26,9 +26,9 @@
 (pen)-> (hp)IDS and IPS mechanisms(pen)
 (pen)-> (r)Malware(pen), (r)phishing(pen), (r)and data transformation(pen)
 (pen)o (hp)IDS and IPS mechanisms(pen)
-(pen)-> IDS monitors events and analyzes them for possible incidents.
-(pen)-> IPS detects and attempts to stop possible incidents.
-(pen)-> An IPS can block traffic or change a security control.
+(pen)-> (r)IDS(pen) monitors events and analyzes them for possible incidents.
+(pen)-> (r)IPS(pen) detects and attempts to stop possible incidents.
+(pen)-> An (r)IPS(pen) can block traffic or change a security control.
 (pen)-> Signature detection compares events with known patterns.
 (pen)-> Anomaly detection compares activity with expected behavior.
 (pen)-> Stateful analysis checks protocol activity against profiles.

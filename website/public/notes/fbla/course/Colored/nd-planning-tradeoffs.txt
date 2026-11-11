@@ -2,34 +2,34 @@
 (pen)-> (li)Peer(pen)-(li)to(pen)-(li)peer or client(pen)-(li)server(pen)
 (pen)-> (p)Cloud service benefits and costs(pen)
 (pen)o (li)Peer(pen)-(li)to(pen)-(li)peer or client(pen)-(li)server(pen)
-(pen)-> Peer-to-peer (P2P) lets endpoints share resources directly.
-(pen)-> P2P avoids dedicated server cost for small, simple groups.
+(pen)-> Peer-to-peer ((db)P(pen)2(db)P(pen)) lets (pu)endpoints(pen) share resources directly.
+(pen)-> (db)P(pen)2(db)P(pen) avoids dedicated server (or)cost(pen) for small, simple groups.
 (pen)-> Each peer may manage users, rights, and copies separately.
 (pen)-> Shared resource (g)availability(pen) depends on its host being online.
 (pen)-> Decentralized rights and (g)backups(pen) hinder oversight and restore.
 (pen)-> Compromised peer or account can expose shared resources.
 (pen)-> Client-server centralizes shared services and administration.
 (pen)-> Central policy is consistent but adds server dependencies.
-(pen)-> Size capacity, (g)backup(pen), and failover for critical server roles.
+(pen)-> Size (li)capacity(pen), (g)backup(pen), and failover for critical server roles.
 (pen)o (p)Cloud service benefits and costs(pen)
 (pen)-> (mb)Cloud(pen) services provide computing or management over a network.
-(pen)-> Elastic capacity meets demand without local hardware buying.
+(pen)-> Elastic (li)capacity(pen) meets demand without local hardware buying.
 (pen)-> (db)IaaS(pen) leaves OS to customer; (or)PaaS(pen) and (p)SaaS(pen) shift more layers.
 (pen)-> Customer owns data and identities; contract terms govern.
-(pen)-> Usage, storage, support, and transfer create recurring costs.
+(pen)-> Usage, storage, support, and transfer create recurring (or)costs(pen).
 (pen)-> Connectivity failure interrupts dependent workflows.
-(pen)-> Review identity, access, data protection, recovery, export.
+(pen)-> Review identity, access, data protection, (li)recovery(pen), export.
 (pen)-> Local systems need staff and facilities but may work offline.
-(pen)-> Compare lifecycle costs and ownership, not hardware price.
+(pen)-> Compare lifecycle (or)costs(pen) and ownership, not hardware price.
 (pen)-> Portability depends on formats, contracts, and dependencies.
 (pen)o Overview
 (pen)-> (hp)Cost(pen), (hp)throughput(pen), (hp)and availability(pen)
 (pen)-> (r)Service targets and design choice(pen)
 (pen)o (hp)Cost(pen), (hp)throughput(pen), (hp)and availability(pen)
 (pen)-> Constraints include budget, space, and compatibility.
-(pen)-> Business drivers include capacity, growth, and recovery.
-(pen)-> Measure busy-hour throughput and identify bottlenecks.
-(pen)-> Bandwidth costs money and may not fix server or app delay.
+(pen)-> Business drivers include (li)capacity(pen), growth, and (li)recovery(pen).
+(pen)-> Measure busy-hour (g)throughput(pen) and identify bottlenecks.
+(pen)-> Bandwidth (or)costs(pen) money and may not fix server or app delay.
 (pen)-> Independent redundant links and devices improve (g)availability(pen).
 (pen)-> Extra paths need routes, tests, monitoring, and skilled staff.
 (pen)-> Star's central device can fail without redundancy.
@@ -39,10 +39,10 @@
 (pen)-> A service level agreement (SLA) states measurable promises.
 (pen)-> Define service, measurement window, exclusions, and reporting.
 (pen)-> Provider uptime is not end-to-end application uptime.
-(pen)-> Map power, DNS, identity, carrier, and storage dependencies.
+(pen)-> Map power, (db)DNS(pen), identity, carrier, and storage dependencies.
 (pen)-> Health probes can remove unhealthy backends from flows.
 (pen)-> A probe may miss an untested dependency failure.
 (pen)-> Session persistence keeps client affinity but can skew load.
-(pen)-> Model options against cost, throughput, recovery, and staff.
+(pen)-> Model options against (or)cost(pen), (g)throughput(pen), (li)recovery(pen), and staff.
 (pen)-> Record assumptions, options, owners, and review triggers.
 (pen)-> Review targets when business impact or dependencies change.

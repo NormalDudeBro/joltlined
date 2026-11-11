@@ -2,13 +2,13 @@
 (pen)-> (li)Deliver clearly and responsively(pen)
 (pen)-> (p)Answer questions completely(pen)
 (pen)o (li)Deliver clearly and responsively(pen)
-(pen)-> Poise is attentive, prepared recovery, not forceful bravado.
-(pen)-> Use natural eye contact; avoid staring or looking away.
-(pen)-> Projection means clear audible speech, not shouting.
+(pen)-> (pu)Poise(pen) is attentive, prepared (li)recovery(pen), not forceful bravado.
+(pen)-> Use natural (pu)eye contact(pen); avoid staring or looking away.
+(pen)-> (pu)Projection(pen) means clear audible speech, not shouting.
 (pen)-> Pace and pauses make important distinctions easier to follow.
 (pen)-> Open posture and purposeful gestures support spoken meaning.
-(pen)-> Practice aloud; familiarity helps manage nerves and fluency.
-(pen)-> Rehearsal supports fluency and audience-focused attention.
+(pen)-> Practice aloud; familiarity helps manage nerves and (pu)fluency(pen).
+(pen)-> Rehearsal supports (pu)fluency(pen) and audience-focused attention.
 (pen)-> Pause briefly after a stumble, then recover the thread.
 (pen)-> Delivery skill never substitutes for truthful content or fit.
 (pen)o (p)Answer questions completely(pen)
@@ -17,7 +17,7 @@
 (pen)-> Restate the issue briefly and answer every part.
 (pen)-> Use verified product scope, evidence, and limitations.
 (pen)-> Say honestly when a fact is unknown.
-(pen)-> Agree on a realistic follow-up date only with permission.
+(pen)-> Agree on a realistic (pu)follow(pen)-(pu)up(pen) date only with (or)permission(pen).
 (pen)-> Do not improvise specifications or guarantees.
 (pen)-> Separate confirmed facts from estimates in every answer.
 (pen)-> Engage the judge while answering, not with a canned dodge.
@@ -26,14 +26,14 @@
 (pen)-> (hp)Know the spoken rating sheet(pen)
 (pen)-> (r)Follow event rules and ownership(pen)
 (pen)o (hp)Know the spoken rating sheet(pen)
-(pen)-> Current rubric scores ten spoken criteria separately.
-(pen)-> Each spoken criterion bands: 0, 1-6, 7-8, or 9-10.
-(pen)-> Protocol criterion scores 0 or 1-10, not binary 0/10.
+(pen)-> Current (pu)rubric(pen) scores ten spoken (pu)criteria(pen) separately.
+(pen)-> Each spoken (pu)criterion(pen) bands: 0, 1-6, 7-8, or 9-10.
+(pen)-> Protocol (pu)criterion(pen) scores 0 or 1-10, not (r)binary(pen) 0/10.
 (pen)-> Maximum: 10 x 10 + 10 protocol = 110 points.
 (pen)-> Protocol zero means guidelines were not followed.
 (pen)-> Protocol performance includes permitted devices and conduct.
 (pen)-> Questions are part of interactive delivery, not extra Q&A.
-(pen)-> Use this current rubric, not obsolete all-binary guidance.
+(pen)-> Use this current (pu)rubric(pen), not obsolete all-binary guidance.
 (pen)-> Judge scoring is distinct from event penalties.
 (pen)o (r)Follow event rules and ownership(pen)
 (pen)-> Preliminary: one or two laptop-sized devices maximum.

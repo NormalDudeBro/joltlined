@@ -2,12 +2,12 @@
 (pen)-> (g)SOHO edge and traffic controls(pen)
 (pen)-> (li)Firewall rules and ACL behavior(pen)
 (pen)o (g)SOHO edge and traffic controls(pen)
-(pen)-> A modem terminates an ISP access link; an ONT serves fiber.
+(pen)-> A modem terminates an ISP access link; an ONT serves (li)fiber(pen).
 (pen)-> A (or)router(pen) forwards (mb)IP(pen) (mb)packets(pen) between distinct networks.
 (pen)-> A (li)switch(pen) forwards (db)LAN(pen) (li)frames(pen) using learned (db)MAC(pen) addresses.
 (pen)-> A SOHO gateway may combine (or)router(pen), (li)switch(pen), AP and (r)firewall(pen).
-(pen)-> (li)DHCP(pen) leases addresses and options such as gateway and DNS.
-(pen)-> DNS resolves names; it does not assign a host its address.
+(pen)-> (li)DHCP(pen) leases addresses and options such as gateway and (db)DNS(pen).
+(pen)-> (db)DNS(pen) resolves names; it does not assign a host its address.
 (pen)-> (or)NAT(pen) rewrites address or port fields between address realms.
 (pen)-> (or)NAT(pen) is not a (r)firewall(pen) rule or a security guarantee.
 (pen)-> Place an edge (r)firewall(pen) to enforce permitted traffic flows.
@@ -29,12 +29,12 @@
 (pen)-> An AP bridges 802.11 clients to a (db)LAN(pen); a (or)router(pen) routes.
 (pen)-> A gateway joins networks; default gateway is off-subnet hop.
 (pen)-> Twisted pairs reduce interference; shielding adds protection.
-(pen)-> (or)Ethernet(pen) rate and reach depend on specified PHY and cable.
-(pen)-> Fiber uses light; mode, optics, wavelength and loss set reach.
-(pen)-> LC connector shape alone cannot establish fiber compatibility.
+(pen)-> (or)Ethernet(pen) rate and reach depend on specified (li)PHY(pen) and cable.
+(pen)-> (li)Fiber(pen) uses light; mode, optics, wavelength and loss set reach.
+(pen)-> LC connector shape alone cannot establish (li)fiber(pen) compatibility.
 (pen)-> 802.11ax/be are (y)WLAN(pen) amendments; bands vary.
 (pen)-> RF range varies with walls, interference, band and antennas.
-(pen)-> PHY headline rate is not application throughput or a promise.
+(pen)-> (li)PHY(pen) headline rate is not application (g)throughput(pen) or a promise.
 (pen)o (hp)Subnet masks and loopback(pen)
 (pen)-> (mb)IPv(pen)4 prefix counts contiguous network bits in the mask.
 (pen)-> A /24 mask is 255.255.255.0; do not infer from old classes.

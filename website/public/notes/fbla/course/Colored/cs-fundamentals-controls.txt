@@ -10,14 +10,14 @@
 (pen)-> It depends on trusted measurement, signing key, and verifier.
 (pen)-> (hp)Authentication(pen) shows account control, not real-world identity.
 (pen)-> Assurance reduces risk; it does not promise certainty.
-(pen)-> Enrollment and recovery also need secure proofing controls.
+(pen)-> Enrollment and (li)recovery(pen) also need secure proofing controls.
 (pen)o (mb)AAA(pen), (mb)MFA(pen), (mb)and Zero Trust(pen)
 (pen)-> (hp)Authentication(pen) verifies control; (pu)authorization(pen) permits use.
 (pen)-> (mb)Accounting(pen): record relevant use for review and investigation.
 (pen)-> (hp)MFA(pen) uses distinct types: know, have, or are.
 (pen)-> Two (hp)passwords(pen) are both know factors, not (hp)MFA(pen) by themselves.
 (pen)-> (hp)Password(pen) plus registered security key combines know and have.
-(pen)-> SMS codes can be intercepted/phished; not phishing-resistant.
+(pen)-> SMS codes can be intercepted/phished; not (r)phishing(pen)-(r)resistant(pen).
 (pen)-> (db)Zero Trust(pen) checks identity/context for each resource request.
 (pen)-> Managed device and verified worker get payroll read access.
 (pen)-> Network location or (hp)VPN(pen) alone does not grant implicit trust.
@@ -29,7 +29,7 @@
 (pen)-> Grant only resources/actions needed for assigned work.
 (pen)-> Separate routine accounts from administrative elevation.
 (pen)-> A reporting service may read a view, not own the database.
-(pen)-> Use role scopes and expire temporary permissions.
+(pen)-> Use role scopes and expire temporary (or)permissions(pen).
 (pen)-> Review access after job, project, or status changes.
 (pen)-> Remove stale rights; protect service/database accounts too.
 (pen)-> (db)Least privilege(pen) limits harm from bugs or stolen accounts.

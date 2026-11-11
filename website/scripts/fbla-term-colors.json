@@ -1,26 +1,32 @@
 {
   "db": [
     "LAN", "LANs", "MAC", "MACs", "Zero Trust", "least privilege",
-    "SQL", "IaaS", "AWS", "ipconfig", "tracert", "traceroute", "ping", "nslookup"
+    "least-privilege", "SQL", "IaaS", "AWS", "ipconfig", "tracert",
+    "traceroute", "ping", "nslookup",     "DNS", "MIB", "NAS", "OSPF", "P2P",
+    "PoE", "SAN", "spectrum"
   ],
   "mb": [
     "IP", "IPv4", "CIDR", "subnet", "subnets", "subnetting", "cloud",
-    "packet", "packets", "NIST", "accounting"
+    "packet", "packets", "NIST", "accounting", "rack", "blade", "blades",
+    "chassis", "copper", "coax", "single-mode", "multimode", "backhaul"
   ],
   "li": [
     "IPv6", "DHCP", "DHCPv6", "switch", "switches", "switching",
-    "frame", "frames", "feature", "features"
+    "frame", "frames", "feature", "features",     "recovery", "PHY", "fiber",
+    "capacity", "latency"
   ],
   "or": [
     "WAN", "WANs", "router", "routers", "routing", "NAT", "PAT", "BGP",
-    "Ethernet", "PaaS", "Azure", "OWASP", "claim", "claims"
+    "Ethernet", "PaaS", "Azure", "OWASP", "claim", "claims", "cost",
+    "costs", "permission", "permissions", "cellular"
   ],
   "pu": [
     "MAN", "MANs", "VLAN", "VLANs", "VM", "VMs", "virtual machine",
     "virtual machines", "hypervisor", "hypervisors", "container", "containers",
     "IoT", "segmentation", "RBAC", "role-based access control", "DAC",
     "discretionary access control", "authorization", "Active Directory",
-    "priority", "priorities"
+    "priority", "priorities", "endpoint", "endpoints", "follow-up", "rubric",
+    "eye contact", "projection", "poise", "fluency", "criterion", "criteria"
   ],
   "p": [
     "OSI", "TCP", "HTTP", "HTTPS", "SMTP", "POP3", "IMAP", "FTP", "FTPS",
@@ -37,7 +43,8 @@
     "confidentiality", "integrity", "availability", "nonrepudiation",
     "encryption", "decryption", "cryptography", "AES", "SHA-256", "SHA-512",
     "hash", "hashes", "hashing", "blockchain", "Merkle", "public key",
-    "public-key", "private key", "Linux", "benefit", "benefits"
+    "public-key", "private key", "Linux", "benefit", "benefits", "patch",
+    "patches", "patching", "throughput"
   ],
   "y": [
     "Wi-Fi", "WLAN", "WLANs", "WPA2", "WPA3", "WEP", "SSID", "SSIDs",
@@ -46,10 +53,12 @@
   ],
   "r": [
     "DoS", "DDoS", "malware", "virus", "viruses", "worm", "worms",
-    "Trojan", "Trojans", "ransomware", "phishing", "smishing", "vishing",
-    "exploit", "exploits", "vulnerability", "vulnerabilities", "injection",
-    "buffer overflow", "race condition", "zero-day", "threat actor",
-    "threat actors", "firewall", "firewalls", "NGFW", "WAF", "SELinux",
-    "mandatory access control", "objection", "objections"
+    "Trojan", "Trojans", "ransomware", "phishing", "phishing-resistant",
+    "smishing", "vishing", "exploit", "exploits", "vulnerability",
+    "vulnerabilities", "injection", "buffer overflow", "race condition",
+    "zero-day", "threat actor", "threat actors", "firewall", "firewalls",
+    "NGFW", "WAF", "SELinux", "mandatory access control", "objection",
+    "objections", "IDS", "IPS", "Caesar", "cipher", "ciphers",
+    "substitution", "binary", "decimal", "hex"
   ]
 }

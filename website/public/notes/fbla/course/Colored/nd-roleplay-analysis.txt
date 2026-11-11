@@ -6,19 +6,19 @@
 (pen)-> Separate observed symptoms from business problems and impact.
 (pen)-> Identify stakeholders, sites, users, data, and deadlines.
 (pen)-> Separate stated facts, assumptions, unknowns, and risks.
-(pen)-> Measure goals: uptime, latency, cost, or security.
+(pen)-> Measure goals: uptime, (li)latency(pen), (or)cost(pen), or security.
 (pen)-> Rank mandatory constraints above preferences and explain why.
 (pen)-> Map clients, (li)switches(pen), servers, gateways, and (or)WAN(pen) links.
 (pen)-> Identify trust boundaries and single points of failure.
 (pen)-> Use network knowledge to explain impact and constraints.
 (pen)o (pu)Compare Real Alternatives(pen)
 (pen)-> Offer at least two credible options that meet the stated need.
-(pen)-> Compare options against the same weighted decision criteria.
-(pen)-> Assess capital, recurring cost, labor, and support effort.
+(pen)-> Compare options against the same weighted decision (pu)criteria(pen).
+(pen)-> Assess capital, recurring (or)cost(pen), labor, and support effort.
 (pen)-> Assess speed, resilience, security, complexity, and growth.
 (pen)-> Name each option's concrete advantage and material drawback.
 (pen)-> (hp)VPN(pen) offers control; managed (or)WAN(pen) may simplify support.
-(pen)-> (hp)VPN(pen) also needs endpoint, identity, and failover management.
+(pen)-> (hp)VPN(pen) also needs (pu)endpoint(pen), identity, and failover management.
 (pen)-> Reject options against constraints, not straw-man comparisons.
 (pen)-> Label estimates; avoid invented vendor guarantees.
 (pen)-> Choose an option and acknowledge its residual risks.
@@ -31,15 +31,15 @@
 (pen)-> List labor, equipment, licenses, circuits, and training.
 (pen)-> Schedule maintenance and notify affected stakeholders.
 (pen)-> Export configs and protect (g)backups(pen) before production changes.
-(pen)-> Set rollback trigger, owner, and tested recovery procedure.
+(pen)-> Set rollback trigger, owner, and tested (li)recovery(pen) procedure.
 (pen)-> Use (db)least privilege(pen), (hp)authentication(pen), updates, and (g)encryption(pen).
-(pen)-> Test access, service performance, recovery, and failover.
-(pen)-> Compare test results with scenario success criteria.
+(pen)-> Test access, service performance, (li)recovery(pen), and failover.
+(pen)-> Compare test results with scenario success (pu)criteria(pen).
 (pen)o (mb)Connect Design to Business Value(pen)
 (pen)-> (pu)VLANs(pen) separate teams; verify (or)routing(pen) and access rules.
 (pen)-> (li)Switch(pen) (hp)ACLs(pen) limit flows; test allowed and denied paths.
 (pen)-> A second link helps only with sufficiently independent paths.
-(pen)-> Redundancy costs more and cannot ensure app recovery.
+(pen)-> Redundancy (or)costs(pen) more and cannot ensure app (li)recovery(pen).
 (pen)-> A pilot limits impact and reveals compatibility problems.
 (pen)-> Monitoring checks health; assign a response owner.
 (pen)-> Document topology, configs, dependencies, and support handoff.

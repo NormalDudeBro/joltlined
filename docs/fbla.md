@@ -32,8 +32,10 @@ body terms never inherit a heading's color.
 
 `website/scripts/fbla-term-colors.json` is the sole body-term color registry
 across every sheet, page, and event. It maps color markers to exact,
-case-insensitive terms and explicitly listed plural/name aliases; do not infer
-aliases or assign per-sheet alternatives. Every occurrence of a registered
+case-insensitive terms and explicitly listed plural, hyphenated, or name
+aliases; do not infer unlisted aliases or assign per-sheet alternatives. A
+terminal `'s` or apostrophe does not block a registered base term, but the
+apostrophe and possessive suffix stay pencil. Every occurrence of a registered
 term uses its centrally assigned color, regardless of heading palettes. For
 example LAN is `(db)`, WAN `(or)`, MAC `(db)`, switch `(li)`, IP `(mb)`, and
 OSI `(p)`. Prose, punctuation, and digits remain neutral. Registered terms

@@ -40,9 +40,9 @@
 (pen)-> Fix underlying cause rather than only hiding an alert.
 (pen)-> Retest the original path and nearby paths after a fix.
 (pen)-> Track exceptions, residual risk, deadlines, and approvals.
-(pen)-> Recovery plans assign roles, (pu)priorities(pen), and restore order.
-(pen)-> Set recovery time and acceptable data-loss targets.
-(pen)-> Exercise recovery without risking live data or systems.
+(pen)-> (li)Recovery(pen) plans assign roles, (pu)priorities(pen), and restore order.
+(pen)-> Set (li)recovery(pen) time and acceptable data-loss targets.
+(pen)-> Exercise (li)recovery(pen) without risking live data or systems.
 (pen)-> Use fictional scenario; check (g)backup(pen) chain completeness.
 (pen)-> Expected: team identifies restore order, keys, dependencies.
 (pen)-> A passed scan or tabletop is not proof of total security.

@@ -17,24 +17,24 @@
 (pen)-> A manager can generate and store distinct (hp)passwords(pen).
 (pen)-> (hp)MFA(pen) adds a separate factor beyond the (hp)password(pen).
 (pen)-> (hp)Password(pen) plus another (hp)password(pen) is not two factor types.
-(pen)-> (hp)Passwords(pen) alone are not phishing-resistant (hp)authentication(pen).
+(pen)-> (hp)Passwords(pen) alone are not (r)phishing(pen)-(r)resistant(pen) (hp)authentication(pen).
 (pen)-> (mb)NIST(pen) recommends blocklisting weak or breached candidates.
 (pen)-> Verifiers (g)hash(pen) (hp)passwords(pen) with salt and high work factor.
 (pen)-> A salt is not secret; it prevents identical (g)hash(pen) reuse.
-(pen)-> Account recovery needs protection too.
+(pen)-> Account (li)recovery(pen) needs protection too.
 (pen)o Overview
 (pen)-> (mb)Patches and secure change(pen)
 (pen)-> (y)Version control and pen testing(pen)
 (pen)o (mb)Patches and secure change(pen)
 (pen)-> Updates repair flaws and may change software behavior.
 (pen)-> Inventory systems to identify exposed, affected versions.
-(pen)-> Prioritize patches by risk, exposure, and business impact.
+(pen)-> Prioritize (g)patches(pen) by risk, exposure, and business impact.
 (pen)-> Obtain updates through authenticated vendor distribution.
 (pen)-> Test security and function before production deployment.
 (pen)-> Approve changes after security-impact assessment and testing.
 (pen)-> Verify deployment and update affected system documentation.
 (pen)-> Emergency changes still need later documented review.
-(pen)-> Patch (r)firewall(pen) software to address vendor security flaws.
+(pen)-> (g)Patch(pen) (r)firewall(pen) software to address vendor security flaws.
 (pen)o (y)Version control and pen testing(pen)
 (pen)-> Version control tracks change history and prior baselines.
 (pen)-> Review diffs to find unexpected or unsafe configuration edits.

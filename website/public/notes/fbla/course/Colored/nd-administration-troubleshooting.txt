@@ -7,17 +7,17 @@
 (pen)-> Compare symptoms with baseline, peers, logs, and changes.
 (pen)-> Check power, cable, link, adapter, and (y)Wi(pen)-(y)Fi(pen) association.
 (pen)-> Slow service may reflect congestion, loss, or host load.
-(pen)-> Measure latency and throughput at the same place and time.
+(pen)-> Measure (li)latency(pen) and (g)throughput(pen) at the same place and time.
 (pen)-> Connection faults occur at link, address, route, or service.
 (pen)-> An (mb)IP(pen) conflict means devices share one address on a link.
 (pen)-> Check (li)DHCP(pen) leases and static assignments against plan.
 (pen)o (hp)Read local configuration(pen)
 (pen)-> (hp)Windows(pen) `(db)ipconfig(pen) /all` shows adapter and gateway settings.
-(pen)-> Compare (mb)IP(pen), mask, gateway, DNS with network records.
+(pen)-> Compare (mb)IP(pen), mask, gateway, (db)DNS(pen) with network records.
 (pen)-> `(db)ipconfig(pen) /renew` requests (li)DHCP(pen) renewal on auto adapters.
 (pen)-> Renewal does not fix a manually configured static address.
 (pen)-> `(db)ipconfig(pen) /flushdns` clears the local resolver cache only.
-(pen)-> (db)Ping(pen) an address and then its name to distinguish DNS symptoms.
+(pen)-> (db)Ping(pen) an address and then its name to distinguish (db)DNS(pen) symptoms.
 (pen)-> (mb)IP(pen) reply but name failure suggests a name lookup problem.
 (pen)-> A wrong mask or duplicate address disrupts local delivery.
 (pen)-> Verify command clues against server logs and another host.

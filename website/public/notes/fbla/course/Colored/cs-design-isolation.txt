@@ -20,7 +20,7 @@
 (pen)-> Physical separation may share unsafe administration.
 (pen)-> Logical separation may fail through bad rules or trunking.
 (pen)-> Document exceptions, owners, and review dates.
-(pen)-> Choose controls from threat and cost needs.
+(pen)-> Choose controls from threat and (or)cost(pen) needs.
 (pen)-> A (mb)subnet(pen) or (pu)VLAN(pen) is not a complete security boundary.
 (pen)o Overview
 (pen)-> (db)Virtual machines and containers(pen)
@@ -33,7 +33,7 @@
 (pen)-> (pu)VMs(pen) add guest OS overhead; (pu)containers(pen) can be lighter.
 (pen)-> (pu)VM(pen) isolation can fail through (pu)hypervisor(pen) flaws or settings.
 (pen)-> A (pu)container(pen) kernel escape may threaten other host (pu)containers(pen).
-(pen)-> Patch hosts, (pu)hypervisors(pen), guest systems, images, libraries.
+(pen)-> (g)Patch(pen) hosts, (pu)hypervisors(pen), guest systems, images, libraries.
 (pen)-> Limit privileges, mounts, capabilities, and network access.
 (pen)o (mb)IoT risks and safer deployment(pen)
 (pen)-> (pu)VMs(pen) and (pu)containers(pen) may be combined on one host.
@@ -44,5 +44,5 @@
 (pen)-> Constrained power or memory can limit security monitoring.
 (pen)-> Excess device data collection creates privacy risk.
 (pen)-> Inventory device, owner, firmware, network, support end date.
-(pen)-> Change defaults; disable unused (li)features(pen); patch and isolate.
+(pen)-> Change defaults; disable unused (li)features(pen); (g)patch(pen) and isolate.
 (pen)-> (mb)NIST(pen) baseline groups device capabilities supporting controls.

@@ -4,7 +4,7 @@
 (pen)o (db)Firewall inspection models(pen)
 (pen)-> A (r)firewall(pen) controls flows across different security postures.
 (pen)-> Network (r)firewall(pen) filters traffic crossing network boundaries.
-(pen)-> Host (r)firewall(pen) filters traffic to and from its endpoint.
+(pen)-> Host (r)firewall(pen) filters traffic to and from its (pu)endpoint(pen).
 (pen)-> Stateless filter checks each (mb)packet(pen) without session tracking.
 (pen)-> Fields include addresses, protocol, ports, and direction.
 (pen)-> Stateful inspection tracks flows in a connection state table.
@@ -21,7 +21,7 @@
 (pen)-> Encrypted traffic can limit inspection without termination.
 (pen)-> (or)NAT(pen) translates addresses; translation alone is not a (r)firewall(pen).
 (pen)-> (r)Firewalls(pen) cannot stop every attack or internal misuse.
-(pen)-> Use endpoint, identity, and monitoring controls in depth.
+(pen)-> Use (pu)endpoint(pen), identity, and monitoring controls in depth.
 (pen)o Overview
 (pen)-> (y)ACL rules and least privilege(pen)
 (pen)-> (g)Segmentation(pen), (g)tests(pen), (g)and operation(pen)

@@ -8,16 +8,16 @@
 (pen)-> (or)WAN(pen) links often depend on telecom or Internet providers.
 (pen)-> (or)Routers(pen) connect local networks across inter-site links.
 (pen)-> Geographic scope does not specify ownership or a fixed speed.
-(pen)-> (or)WAN(pen) distance often increases latency and service cost.
+(pen)-> (or)WAN(pen) distance often increases (li)latency(pen) and service (or)cost(pen).
 (pen)-> Provider outages can affect several connected locations.
 (pen)-> A (hp)VPN(pen) protects a path; it cannot prevent provider outages.
 (pen)o (hp)WAN implications and scale(pen)
 (pen)-> A company (or)WAN(pen) may link branches, headquarters and datacenters.
 (pen)-> Applications sensitive to delay need realistic (or)WAN(pen) testing.
-(pen)-> Bandwidth and latency are distinct performance properties.
+(pen)-> Bandwidth and (li)latency(pen) are distinct performance properties.
 (pen)-> A (pu)MAN(pen) may be provider-operated or organization-managed.
 (pen)-> (db)LAN(pen) typically supports local (li)switching(pen) and local services.
-(pen)-> (or)WAN(pen) agreements specify capacity and (g)availability(pen) terms.
+(pen)-> (or)WAN(pen) agreements specify (li)capacity(pen) and (g)availability(pen) terms.
 (pen)-> (g)Backup(pen) circuits help only if routes and infrastructure differ.
 (pen)-> A remote site still relies on its local (db)LAN(pen) and gateway.
 (pen)-> Choose scope from users, geography and application needs.
@@ -28,7 +28,7 @@
 (pen)o (or)Choose topology for requirements(pen)
 (pen)-> A small office often uses a switched star for easy management.
 (pen)-> A critical site may add diverse uplinks for (g)availability(pen).
-(pen)-> A partial mesh trades extra paths against cost and complexity.
+(pen)-> A partial mesh trades extra paths against (or)cost(pen) and complexity.
 (pen)-> Legacy bus is rarely a new (or)Ethernet(pen) installation choice.
 (pen)-> Compare failure impact, growth, traffic and operator skills.
 (pen)-> A central star (li)switch(pen) is a possible single point of failure.
@@ -40,7 +40,7 @@
 (pen)-> An (y)access point(pen) bridges wireless clients to a wired (db)LAN(pen).
 (pen)-> Large campuses deploy multiple managed (y)access points(pen).
 (pen)-> AP placement should account for coverage and client density.
-(pen)-> Wired backhaul avoids radio retransmission at every hop.
+(pen)-> Wired (mb)backhaul(pen) avoids radio retransmission at every hop.
 (pen)-> Managed systems coordinate settings and may support roaming.
 (pen)-> (mb)Cloud(pen) management adds provider and Internet dependencies.
 (pen)-> Survey results vary with walls, interference and location.

@@ -13,7 +13,7 @@
 (pen)-> Report suspicious messages through the approved route.
 (pen)o (db)DoS and DDoS Mechanics(pen)
 (pen)-> (r)DoS(pen) makes a service unavailable to legitimate users.
-(pen)-> Flooding can exhaust link capacity or server request handling.
+(pen)-> Flooding can exhaust link (li)capacity(pen) or server request handling.
 (pen)-> SYN flood leaves (p)TCP(pen) handshakes incomplete, holding state.
 (pen)-> Application requests consume CPU, memory, or worker slots.
 (pen)-> (r)DDoS(pen) coordinates many machines against one target.
@@ -32,7 +32,7 @@
 (pen)-> For ideal n-bit (g)hash(pen), generic collision work is about 2^(n/2).
 (pen)-> Birthday effect finds any pair sooner than target preimage.
 (pen)-> This is a probability/work estimate, not an exact threshold.
-(pen)-> Collision is not (g)decryption(pen) or original-message recovery.
+(pen)-> Collision is not (g)decryption(pen) or original-message (li)recovery(pen).
 (pen)-> (g)Hashing(pen) differs from reversible, key-based (g)encryption(pen).
 (pen)-> RFC 6962 uses domain-separated (g)SHA(pen)-256 Merkle-tree (g)hashes(pen).
 (pen)o (y)Downgrades and Wireless Weaknesses(pen)
@@ -42,7 +42,7 @@
 (pen)-> Use maintained protocols; compatibility can limit versions.
 (pen)-> Evil twin imitates a trusted (y)Wi(pen)-(y)Fi(pen) name to lure users.
 (pen)-> (y)SSID(pen) display alone does not authenticate the (y)access point(pen).
-(pen)-> WEP's weak IV/key design lets traffic aid key recovery.
+(pen)-> (y)WEP(pen)'s weak IV/key design lets traffic aid key (li)recovery(pen).
 (pen)-> (y)WEP(pen) is obsolete; use modern (y)WPA(pen)2/(y)WPA(pen)3 configuration instead.
 (pen)-> Hidden (y)SSID(pen) and (db)MAC(pen) filtering do not replace (g)encryption(pen).
 (pen)-> (p)HTTPS(pen)/(hp)VPN(pen) have limits; rogue access-point risk remains.

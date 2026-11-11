@@ -15,9 +15,9 @@
 (pen)-> (g)RTO(pen) is the target time to restore a service.
 (pen)-> (g)RPO(pen) is the acceptable age of restored data.
 (pen)-> (g)RTO(pen) limits outage duration; (g)RPO(pen) limits data loss.
-(pen)-> Recovery strategy follows impact and criticality analysis.
-(pen)-> Define recovery sequence, resources, locations, and contacts.
-(pen)-> Test, train, and exercise; testing validates recovery ability.
+(pen)-> (li)Recovery(pen) strategy follows impact and criticality analysis.
+(pen)-> Define (li)recovery(pen) sequence, resources, locations, and contacts.
+(pen)-> Test, train, and exercise; testing validates (li)recovery(pen) ability.
 (pen)-> Tabletops test decisions; restores test usable recovered data.
 (pen)-> Compare actual restore time and data age with targets.
 (pen)-> Record gaps, corrective owners, and retest evidence.
@@ -29,8 +29,8 @@
 (pen)-> Verify recipients and addresses before sending sensitive data.
 (pen)-> Use approved protected channels for sensitive communications.
 (pen)-> (hp)TLS(pen) protects a connection; it does not protect every copy.
-(pen)-> (p)HTTPS(pen) is (p)HTTP(pen) protected by (hp)TLS(pen), not a separate cipher.
-(pen)-> (hp)Certificate(pen) validation helps authenticate the server endpoint.
+(pen)-> (p)HTTPS(pen) is (p)HTTP(pen) protected by (hp)TLS(pen), not a separate (r)cipher(pen).
+(pen)-> (hp)Certificate(pen) validation helps authenticate the server (pu)endpoint(pen).
 (pen)-> Email (g)encryption(pen) depends on keys and recipient configuration.
 (pen)-> Unexpected urgency, links, or files can signal (r)phishing(pen).
 (pen)-> Verify unusual payment requests on a separate known channel.

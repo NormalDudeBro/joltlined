@@ -3,7 +3,7 @@
 (pen)-> (li)SOHO(pen), (li)enterprise and datacenter(pen)
 (pen)o (g)LAN scale and purpose(pen)
 (pen)-> A (db)LAN(pen) connects devices within a limited local site.
-(pen)-> It lets endpoints share links, services and local resources.
+(pen)-> It lets (pu)endpoints(pen) share links, services and local resources.
 (pen)-> A (li)switch(pen) forwards (or)Ethernet(pen) (li)frames(pen) using learned (db)MAC(pen) locations.
 (pen)-> A (or)router(pen) forwards (mb)IP(pen) (mb)packets(pen) between separate (mb)IP(pen) networks.
 (pen)-> Layer 2 means link-local framing; Layer 3 means (mb)IP(pen) (or)routing(pen).
@@ -14,7 +14,7 @@
 (pen)o (li)SOHO(pen), (li)enterprise and datacenter(pen)
 (pen)-> SOHO means small office/home office, usually few users.
 (pen)-> An integrated gateway may combine (or)router(pen), (y)Wi(pen)-(y)Fi(pen) and (li)switching(pen).
-(pen)-> Integration saves cost but limits capacity and redundancy.
+(pen)-> Integration saves (or)cost(pen) but limits (li)capacity(pen) and redundancy.
 (pen)-> Enterprise (db)LANs(pen) use managed access across campuses.
 (pen)-> (pu)VLANs(pen) and routed boundaries organize traffic and policy.
 (pen)-> Central management spreads both settings and errors.
@@ -43,6 +43,6 @@
 (pen)-> A Layer 3 (li)switch(pen) can perform (or)routing(pen) when configured to do so.
 (pen)-> Only ordinary Layer 2 (li)switch(pen) operation does not route.
 (pen)-> A next hop may be another (or)router(pen), not the destination.
-(pen)-> Link rate is not payload throughput because of overhead.
+(pen)-> Link rate is not payload (g)throughput(pen) because of overhead.
 (pen)-> Filtering policy is separate from basic forwarding.
 (pen)-> Congestion, link failures and bad routes can cause loss.
