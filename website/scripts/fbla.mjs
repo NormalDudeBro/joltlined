@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { colorSheet, fblaInks } from './fbla-colors.mjs';
+import { colorSheet, fblaInks, fblaTermColors } from './fbla-colors.mjs';
 
 export { colorSheet } from './fbla-colors.mjs';
 
@@ -196,7 +196,45 @@ function renderCourseLine(line) {
   }).join('');
 }
 
-export function renderFbla(note = readFileSync(source, 'utf8'), courseHTML = '') {
+function renderColorReference(palette) {
+  const colors = [
+    { ink: 'db', name: 'Dark blue', group: 'Selected network identifiers, trust principles, and tools', examples: ['LAN', 'MAC', 'Zero Trust', 'SQL', 'ping'] },
+    { ink: 'mb', name: 'Medium blue', group: 'IP addressing and selected infrastructure terms', examples: ['IP', 'IPv4', 'CIDR', 'subnet', 'cloud', 'NIST'] },
+    { ink: 'li', name: 'Light green', group: 'Selected configuration, switching, and frame vocabulary', examples: ['IPv6', 'DHCP', 'switch', 'frames', 'features'] },
+    { ink: 'or', name: 'Orange', group: 'Routing/WAN vocabulary and selected names', examples: ['WAN', 'routers', 'NAT', 'BGP', 'Ethernet', 'Azure'] },
+    { ink: 'pu', name: 'Purple', group: 'Segmentation, virtualization, and authorization', examples: ['VLAN', 'VMs', 'containers', 'IoT', 'RBAC', 'authorization'] },
+    { ink: 'p', name: 'Light pink', group: 'Selected networking/application protocols and business terms', examples: ['OSI', 'TCP', 'HTTPS', 'SaaS', 'TCO', 'consent'] },
+    { ink: 'hp', name: 'Dark pink', group: 'Authentication, secure-access vocabulary, and selected names', examples: ['TLS', 'VPN', 'MFA', 'certificates', 'passwords', 'Windows'] },
+    { ink: 'g', name: 'Dark green', group: 'Recovery, security properties, and cryptography', examples: ['RAID', 'backups', 'RTO', 'encryption', 'hashes', 'public key'] },
+    { ink: 'y', name: 'Yellow', group: 'Wireless vocabulary and selected names', examples: ['Wi-Fi', 'WPA3', 'SSID', '5G', 'BitLocker', 'ROI'] },
+    { ink: 'r', name: 'Red', group: 'Attacks, weaknesses, and selected defensive controls', examples: ['DoS', 'malware', 'phishing', 'vulnerabilities', 'firewalls', 'WAF'] },
+    { ink: 'lb', name: 'Light blue', group: 'Overall sheet titles', examples: [] },
+  ];
+  const inks = { ...palette, ...fblaInks };
+  for (const color of colors) {
+    assert.match(inks[color.ink] ?? '', /^#[a-f0-9]{6}$/i, `color reference needs the actual ${color.ink} ink`);
+    assert.ok(color.examples.every(term => fblaTermColors[color.ink]?.includes(term)), `${color.name}: reference examples must match the shared registry`);
+  }
+  const names = terms => terms.map(term => `<bdi dir="ltr">${escapeHTML(term)}</bdi>`).join(', ');
+  return `<section class="fbla-section" id="color-reference" aria-labelledby="color-reference-title">
+        <p class="eyebrow">Reading the notes</p>
+        <h2 id="color-reference-title">Color reference</h2>
+        <p><strong>Two independent layers:</strong> section headings and their matching Overview entries use varied palettes for navigation. Body terms keep one fixed color across every sheet, page, and event: LAN is always dark blue in the body, even under a differently colored heading. Light blue identifies the overall sheet title.</p>
+        <p id="color-reference-scope">The groupings below describe the current organization, not a universal conceptual taxonomy. Red includes both attacks and defensive controls; yellow includes both wireless terms and ROI. Learn the named term, rather than assuming that a color alone defines its meaning.</p>
+        <p class="fbla-color-scroll-note">Scroll the table horizontally to see all columns on a narrow screen.</p>
+        <section class="fbla-color-table" aria-label="Scrollable color reference table" tabindex="0">
+          <table aria-describedby="color-reference-scope">
+            <caption>Current organization of the FBLA note colors</caption>
+            <thead><tr><th scope="col">Color / ink</th><th scope="col">Main groupings</th><th scope="col">Examples in the notes</th></tr></thead>
+            <tbody>${colors.map(color => `<tr data-color="${color.ink}"><th scope="row"><span class="fbla-color-name"><span class="fbla-color-swatch fbla-swatch-${color.ink}" aria-hidden="true"></span>${color.name}</span><code dir="ltr">${inks[color.ink]}</code></th><td>${escapeHTML(color.group)}</td><td>${color.examples.length ? names(color.examples) : 'Overall sheet display titles; not assigned to body terms.'}</td></tr>`).join('')}</tbody>
+          </table>
+        </section>
+        <p>Unregistered prose stays pencil. Every registered body term retains its assigned ink, including when several differently colored terms occur on the same line. Color supplements the wording; plain-text downloads are available on every event page.</p>
+        <details class="fbla-color-index"><summary>Full body-term index (${Object.values(fblaTermColors).flat().length} registered forms)</summary><dl>${colors.filter(color => color.ink !== 'lb').map(color => `<dt>${color.name}</dt><dd>${names(fblaTermColors[color.ink])}</dd>`).join('')}</dl></details>
+      </section>`;
+}
+
+export function renderFbla(note = readFileSync(source, 'utf8'), courseHTML = '', palette) {
   const sections = note.trim().split(/\r?\n\r?\n+/);
   assert.ok(sections[0].startsWith('# '), 'FBLA source begins with a title');
   const article = sections.map(block => {
@@ -263,7 +301,23 @@ export function renderFbla(note = readFileSync(source, 'utf8'), courseHTML = '')
     .rehearsal-group li { margin-block: 18px; }
     .rehearsal-group p { margin-block: 4px; }
     .fbla-local-id { font: 12px/1.6 system-ui, sans-serif; color: var(--muted); }
-    @media (max-width: 650px) { .fbla-grid, .fbla-materials { grid-template-columns: minmax(0, 1fr); } }
+    .fbla-color-table { max-inline-size: 100%; overflow-x: auto; margin-block: 24px; }
+    .fbla-color-table:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .fbla-color-table table { inline-size: 100%; min-inline-size: 620px; border-collapse: collapse; table-layout: fixed; font-size: 14px; line-height: 1.6; }
+    .fbla-color-table caption { padding-block-end: 12px; text-align: start; font-style: italic; }
+    .fbla-color-table th, .fbla-color-table td { padding-block: 14px; padding-inline: 12px; text-align: start; vertical-align: top; border-block-end: 1px solid var(--rule); overflow-wrap: anywhere; }
+    .fbla-color-table thead th { border-block: 1px solid var(--ink); font: 600 11px/1.6 system-ui, sans-serif; letter-spacing: 0.06em; text-transform: uppercase; }
+    .fbla-color-table th:first-child { inline-size: 23%; }
+    .fbla-color-table thead th:nth-child(2) { inline-size: 35%; }
+    .fbla-color-table tbody th { font-weight: normal; }
+    .fbla-color-name { display: flex; align-items: center; gap: 10px; }
+    .fbla-color-swatch { display: inline-block; inline-size: 12px; block-size: 12px; flex: 0 0 12px; border: 1px solid var(--muted); print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    ${Object.entries({ ...palette, ...fblaInks }).filter(([ink]) => !['pen', 'br'].includes(ink)).map(([ink, hex]) => `.fbla-swatch-${ink} { background-color: ${hex}; }`).join('\n    ')}
+    .fbla-color-table code { display: block; margin-block-start: 6px; color: var(--muted); font-size: 11px; }
+    .fbla-color-index dt { font-weight: bold; margin-block-start: 18px; }
+    .fbla-color-index dd { margin-inline: 0; margin-block: 4px 16px; font-size: 14px; }
+    .fbla-color-scroll-note { display: none; font: 12px/1.6 system-ui, sans-serif; color: var(--muted); }
+    @media (max-width: 650px) { .fbla-grid, .fbla-materials { grid-template-columns: minmax(0, 1fr); } .fbla-color-scroll-note { display: block; } }
     @media (max-width: 480px) { .fbla-intro { padding-block: 32px 24px; } }
     @media print {
       .subjects, .skip, .fbla-download, .fbla-jumps { display: none; }
@@ -272,6 +326,10 @@ export function renderFbla(note = readFileSync(source, 'utf8'), courseHTML = '')
       .answer-key::details-content, .rehearsal-group::details-content { content-visibility: visible; }
       .answer-key:not([open]) > :not(summary), .rehearsal-group:not([open]) > :not(summary) { display: block !important; }
       .fbla-note h3 { break-after: avoid; }
+      .fbla-color-table { overflow: visible; }
+      .fbla-color-table table { min-inline-size: 0; }
+      .fbla-color-table tr { break-inside: avoid; }
+      .fbla-color-scroll-note { display: none; }
     }
   </style>
 </head>
@@ -288,7 +346,7 @@ export function renderFbla(note = readFileSync(source, 'utf8'), courseHTML = '')
         <h1>FBLA Study Plan</h1>
         <p>One study system, four events. Use explanations to understand a topic, recall practice to remember it, and applied tasks to use it without help. Start with one topic and a practice attempt; explore the source references when more detail is needed.</p>
         <p><strong>Study resources:</strong> 44 two-page reference sheets with practice questions and labs. The website can be used on its own; an optional 654-card Anki package supports additional recall practice. Use practice results to decide what to study next.</p>
-        <nav class="fbla-jumps" aria-label="FBLA study sections"><a href="#start-here">Start here</a><a href="#event-courses">Choose an event</a><a href="#practice-plan">Plan a study schedule</a><a href="#rehearsal">Skills to rehearse</a><a href="#source-ledger">Sources and limits</a></nav>
+        <nav class="fbla-jumps" aria-label="FBLA study sections"><a href="#start-here">Start here</a><a href="#event-courses">Choose an event</a><a href="#color-reference">Color reference</a><a href="#practice-plan">Plan a study schedule</a><a href="#rehearsal">Skills to rehearse</a><a href="#source-ledger">Sources and limits</a></nav>
       </section>
       <section class="fbla-section fbla-start" id="start-here">
         <h2>Start here: one topic, one practice attempt</h2>
@@ -313,6 +371,7 @@ export function renderFbla(note = readFileSync(source, 'utf8'), courseHTML = '')
           ${events.map(event => `<section class="fbla-card" id="${event.id}"><h3>${event.name}</h3><p><strong>${fblaModules.filter(module => module.event === event.id).reduce((count, module) => count + module.sheets.length, 0)} two-page sheets · ${event.cards} Anki cards.</strong></p><p><a href="fbla-${event.id}.html">Open ${event.name} course</a></p><p>${event.action}</p><details><summary>National 2026–27 format and test weighting</summary><p><a href="${eventInfo[event.id].url}">Official CONNECT guideline PDF</a></p>${event.domains.length ? `<p>Test items by knowledge area in that document:</p><ul>${event.domains.map(([name, count]) => `<li>${name}: ${count} of 100</li>`).join('')}</ul>` : '<p>Interactive presentation: discovery, product knowledge, objections, related offerings, closing, follow-up, organization, delivery and interaction.</p>'}</details></section>`).join('\n          ')}
         </div>
       </section>
+      ${renderColorReference(palette)}
       <section class="fbla-section" id="practice-plan">
         <h2>Build a study schedule</h2>
         <p>Adapt these stages to the time available, current knowledge and chosen events. They can span weeks or months; they are not an official schedule. Check regional competition, registration and submission deadlines before planning backward from a target event.</p>

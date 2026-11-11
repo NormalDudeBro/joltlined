@@ -40,6 +40,12 @@ OSI `(p)`. Prose, punctuation, and digits remain neutral. Registered terms
 always retain their assigned colors, even when registered terms co-occur on
 one line: the former two-body-colors cap does not apply to them.
 
+The FBLA hub's **Color reference** table shows all eleven actual ink swatches,
+descriptive groupings, and representative registry-checked examples. An
+expandable full term index is generated directly from the same registry.
+The reference distinguishes heading palettes from body-term assignments and
+does not present the mixed groupings as a universal conceptual taxonomy.
+
 `website/scripts/fbla-color-plan.json` retains reviewed source fingerprints
 for all 44 sheets, but no longer assigns
 body accents or ownership. All eleven palette inks remain in use across each

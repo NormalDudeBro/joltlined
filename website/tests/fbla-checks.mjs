@@ -4,6 +4,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fblaModules, rehearsalItems, renderFbla, renderCourseSheets, renderCourseHub, renderEvent, colorSheet } from '../scripts/fbla.mjs';
 import { palette } from '../scripts/build.mjs';
+import { fblaTermColors, fblaInks } from '../scripts/fbla-colors.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
 const source = readFileSync(resolve(root, 'notes/fbla/ipv4-subnetting.txt'), 'utf8');
@@ -29,7 +30,20 @@ assert.throws(() => renderCourseSheets(inventedObjective, palette), /unknown loc
 const truncated = structuredClone(fblaModules);
 truncated[0].sheets[0].pages[0][0].notes[0] = 'An endpoint depends on';
 assert.throws(() => renderCourseSheets(truncated, palette), /complete note/);
-assert.equal(html, renderFbla(source, renderCourseHub(course)), 'FBLA page is reproducible from its source');
+assert.equal(html, renderFbla(source, renderCourseHub(course), palette), 'FBLA page is reproducible from its source');
+const reference = html.match(/<section class="fbla-section" id="color-reference"[\s\S]*?(?=<section class="fbla-section" id="practice-plan")/)?.[0];
+assert.ok(reference, 'FBLA hub includes the color reference');
+assert.equal([...reference.matchAll(/<tr data-color=/g)].length, 11, 'all eleven requested colors have rows');
+assert.match(reference, /not a universal conceptual taxonomy/);
+assert.match(reference, /LAN is always dark blue/);
+assert.match(html, /href="#color-reference">Color reference/);
+for (const [ink, hex] of Object.entries({ ...palette, ...fblaInks }).filter(([ink]) => !['pen', 'br'].includes(ink))) {
+  assert.ok(reference.includes(`data-color="${ink}"`), `${ink}: color reference row`);
+  assert.ok(reference.includes(`fbla-swatch-${ink}`) && html.includes(`.fbla-swatch-${ink} { background-color: ${hex}; }`), `${ink}: swatch matches the actual rendered ink`);
+}
+for (const terms of Object.values(fblaTermColors)) {
+  for (const term of terms) assert.ok(reference.includes(`<bdi dir="ltr">${term}</bdi>`), `${term}: full index stays synchronized with the body registry`);
+}
 assert.equal(course.sheets.length, 44);
 assert.equal(course.objectiveList.length, 160);
 assert.ok(course.objectiveList.includes('ND-RP-07'));
@@ -162,7 +176,7 @@ assert.match(source, /one PC and switch per LAN/);
 assert.match(source, /Companion Anki prompts/);
 assert.match(source, /How many conventional usable host addresses are in 192\.0\.2\.0\/26/);
 assert.match(source, /Why put largest subnets first when planning a VLSM allocation/);
-const hostile = renderFbla(source.replace('## IPv4 foundations', '## <img src=x onerror=alert(1)>'));
+const hostile = renderFbla(source.replace('## IPv4 foundations', '## <img src=x onerror=alert(1)>'), '', palette);
 assert.doesNotMatch(hostile, /<img\s|onerror="/);
 assert.match(hostile, /&lt;img/);
 console.log('PASS: FBLA edition caveats, named test-item counts, original source-driven notes, safe rendering, separate answer disclosure and offline links.');

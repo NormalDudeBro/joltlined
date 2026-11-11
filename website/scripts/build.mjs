@@ -279,7 +279,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
     writeFileSync(resolve(target, 'ap-lang.html'), renderSite([], lang));
     writeFileSync(resolve(target, 'algebra-2.html'), renderSite([], undefined, algebra));
     writeFileSync(resolve(target, 'algebra-2-flashcards.html'), renderFlashcards(escapeHTML, loadAlgebraNotes));
-    writeFileSync(resolve(target, 'fbla.html'), renderFbla(undefined, renderCourseHub(course)));
+    writeFileSync(resolve(target, 'fbla.html'), renderFbla(undefined, renderCourseHub(course), palette));
     for (const event of ['networking', 'cybersecurity', 'network-design', 'sales']) writeFileSync(resolve(target, `fbla-${event}.html`), renderEvent(event, course, palette));
     const coverage = course.sheets.flatMap(({ module, sheet }) => sheet.pages.flatMap((page, pageIndex) => page.map((section, sectionIndex) => {
       const start = pageIndex * 24 + (sectionIndex === 0 ? 5 : 15);

@@ -5,11 +5,11 @@ import { readFileSync } from 'node:fs';
 export const fblaInks = Object.freeze({ r: '#df3034', db: '#173f88', mb: '#287db3', y: '#ebc600' });
 const plan = JSON.parse(readFileSync(new URL('./fbla-color-plan.json', import.meta.url), 'utf8'));
 const headingPlan = JSON.parse(readFileSync(new URL('./fbla-heading-palettes.json', import.meta.url), 'utf8'));
-const termPlan = JSON.parse(readFileSync(new URL('./fbla-term-colors.json', import.meta.url), 'utf8'));
+export const fblaTermColors = JSON.parse(readFileSync(new URL('./fbla-term-colors.json', import.meta.url), 'utf8'));
 assert.equal(plan.version, 2, 'supported FBLA color-plan version');
 assert.deepEqual(Object.keys(headingPlan.sheets).sort(), Object.keys(plan.sheets).sort(), 'every sheet needs an explicit heading palette');
 const terms = new Map();
-for (const [color, names] of Object.entries(termPlan)) {
+for (const [color, names] of Object.entries(fblaTermColors)) {
   for (const name of names) {
     assert.ok(/[A-Za-z]/.test(name) && name.trim() === name, 'registered terms need letters and no edge whitespace');
     assert.ok(!terms.has(name.toLowerCase()), `duplicate global body term: ${name}`);
@@ -36,7 +36,7 @@ export function colorSheet(plain, palette, sheetId) {
   const titles = [...new Set(rows.filter(row => row.startsWith('o ') && row !== 'o Overview').map(row => row.slice(2)))];
   assert.ok(titles.length <= titleInks.length, `${sheetId}: insufficient title palette`);
   const headers = titles.map((title, index) => ({ title, color: titleInks[index] }));
-  for (const color of Object.keys(termPlan)) {
+  for (const color of Object.keys(fblaTermColors)) {
     assert.ok(inks[color] && !['pen', 'lb', 'br'].includes(color), `${sheetId}: invalid global body ink`);
   }
   return rows.map((row, index) => {

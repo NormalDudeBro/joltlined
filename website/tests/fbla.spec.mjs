@@ -1,6 +1,47 @@
 import { expect, test } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
+test('FBLA color reference is readable, registry-backed, accessible, and available offline', async ({ page }) => {
+  for (const url of ['/fbla.html', `file://${process.cwd().replaceAll('\\', '/')}/public/fbla.html`]) {
+    await page.goto(url);
+    const reference = page.locator('#color-reference');
+    await expect(page.getByRole('link', { name: 'Color reference', exact: true })).toHaveAttribute('href', '#color-reference');
+    await expect(reference.getByRole('table', { name: 'Current organization of the FBLA note colors' })).toBeVisible();
+    await expect(reference.locator('tbody tr')).toHaveCount(11);
+    await expect(reference.locator('[data-color="db"]')).toContainText('LAN');
+    await expect(reference.locator('[data-color="or"]')).toContainText('WAN');
+    await expect(reference.locator('[data-color="mb"]')).toContainText('IPv4');
+    await expect(reference.locator('[data-color="lb"]')).toContainText('not assigned to body terms');
+    await expect(reference).toContainText('not a universal conceptual taxonomy');
+    await expect(reference.locator('[data-color="y"] .fbla-color-swatch')).toHaveCSS('background-color', 'rgb(235, 198, 0)');
+    await expect(reference.locator('[data-color="mb"] .fbla-color-swatch')).toHaveCSS('background-color', 'rgb(40, 125, 179)');
+    await reference.locator('summary').focus();
+    await page.keyboard.press('Enter');
+    await expect(reference.locator('details')).toHaveAttribute('open', '');
+    await expect(reference.locator('dd')).toHaveCount(10);
+    await expect(reference.locator('dd')).toContainText(['LAN', 'IPv4', 'DHCP', 'WAN', 'VLAN', 'TCP', 'MFA', 'RAID', 'Wi-Fi', 'DoS']);
+    for (const direction of ['ltr', 'rtl']) {
+      for (const width of [320, 1280]) {
+        await page.setViewportSize({ width, height: 900 });
+        await page.locator('html').evaluate((element, value) => element.dir = value, direction);
+        expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+        const scroll = reference.getByRole('region', { name: 'Scrollable color reference table' });
+        await expect(scroll).toHaveAttribute('tabindex', '0');
+        if (width === 320) {
+          await scroll.focus();
+          const before = await scroll.evaluate(element => element.scrollLeft);
+          await page.keyboard.press(direction === 'rtl' ? 'ArrowLeft' : 'ArrowRight');
+          await expect.poll(async () => Math.abs(await scroll.evaluate(element => element.scrollLeft) - before)).toBeGreaterThan(0);
+        }
+      }
+    }
+    expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+    await page.emulateMedia({ media: 'print' });
+    await expect(reference.getByRole('table')).toBeVisible();
+    await page.emulateMedia({ media: 'screen' });
+  }
+});
+
 test('FBLA pilot supports keyboard retrieval, offline loading, and a narrow mobile viewport', async ({ page, browser }) => {
   await page.setViewportSize({ width: 375, height: 812 });
   await page.goto('/fbla.html');
