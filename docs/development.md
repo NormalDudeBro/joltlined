@@ -16,7 +16,7 @@ npm run test:e2e -- --workers=1
 
 | Command | Purpose |
 | --- | --- |
-| `npm run build` | Validate note sources and regenerate Home, subject pages, flashcards, and the FBLA reference page |
+| `npm run build` | Validate note sources and regenerate Home, subject pages, flashcards, and the FBLA reference page; accepts `--unit4 <directory>` for an explicit Unit 4 source directory |
 | `npm run validate` | Run HTML validation (`public/*.html`) and static/content checks without launching a browser |
 | `npm run test:e2e -- --workers=1` | Run the Playwright suite with one browser worker |
 | `npm test` | Run static validation, then the browser suite |
@@ -52,10 +52,12 @@ To include an exported preview in browser checks, set `PREVIEW_PATH` to its HTML
 Normal builds use the checked-in notes and need no external files. If importing independently reviewed originals and their marked counterparts, point the importer to the source directories:
 
 ```sh
-node scripts/build.mjs --unit1 "../source-notes/unit-1" --unit2 "../source-notes/unit-2" --unit3 "../source-notes/unit-3"
+node scripts/build.mjs --unit1 "../source-notes/unit-1" --unit2 "../source-notes/unit-2" --unit3 "../source-notes/unit-3" --unit4 "../source-notes/unit-4"
 ```
 
 Relative paths resolve from your current working directory; quote paths containing spaces. The importer validates the expected topics and copies the original and marked text; it does not author or recolor notes. Review imported source changes and generated output before committing.
+
+Unit 4 can be supplied independently with `--unit4 "../source-notes/unit-4"`. Its eight official topic sources are `4.1-technological-innovations.txt` through `4.8-continuity-change.txt` (see the [Unit 4 source guide](unit-4-sources.md)). Unit 4 coloring is intentionally separate from the legacy Unit 1–3 palette; do not recolor older notes to match it. The complete World set is 28 sheets (26 official topics plus two Unit 3 supplements), 56 pages, and 1,344 note lines; Unit 4 contributes eight sheets, 16 pages, and 384 lines.
 
 ## Hosting and repository hygiene
 

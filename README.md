@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/NormalDudeBro/outofmymind/actions/workflows/quality.yml"><img src="https://github.com/NormalDudeBro/outofmymind/actions/workflows/quality.yml/badge.svg" alt="Quality workflow status"></a>
+  <a href="https://github.com/NormalDudeBro/joltlined/actions/workflows/quality.yml"><img src="https://github.com/NormalDudeBro/joltlined/actions/workflows/quality.yml/badge.svg" alt="Quality workflow status"></a>
   <img src="https://img.shields.io/badge/site-static_HTML-213749" alt="Static HTML site">
   <img src="https://img.shields.io/badge/reading-offline_ready-168438" alt="Offline-ready reading">
 </p>
@@ -29,14 +29,14 @@
 | Collection | Contents | Print notes |
 | --- | --- | --- |
 | [AP English Language](website/public/ap-lang.html) | Unit 1: rhetorical situation, a writer’s choices, evidence, and audience | 4 pages |
-| [AP World History](website/public/ap-world.html) | Units 1–3: The Global Tapestry, Networks of Exchange, and Land-Based Empires | 40 pages · 18 official topics + 2 supplements |
+| [AP World History](website/public/ap-world.html) | Units 1–4: The Global Tapestry, Networks of Exchange, Land-Based Empires, and Transoceanic Interconnections | 56 pages · 26 official topics + 2 Unit 3 supplements |
 | [Algebra 2](website/public/algebra-2.html) | Modules 1B and 2A: functions, transformations, linear systems, and optimization | 26 pages · 13 lessons |
 | [FBLA Study Hub](website/public/fbla.html) | National 2026–27 event study courses, linked source ledger, and retained IPv4 pilot | 44 sheets · 88 pages |
 | [Out of My Mind](website/public/out-of-my-mind.html) | A reading companion to Sharon M. Draper’s novel | — |
 | [Of Mice and Men](website/public/of-mice-and-men.html) | A reading companion to John Steinbeck’s novella | — |
 | [Fahrenheit 451](website/public/fahrenheit-451.html) | A reading companion to Ray Bradbury’s novel | — |
 
-The collection is designed for independent study: native links and complete HTML documents work over HTTP or directly from files; original and marked plaintext sources are available from notes pages; and print layouts are designed for A4. Unit 3's supplements are keyword-colored using the shared nine-ink palette. The 3.4 comparison sheet introduces orange for revenue and local elites; the earlier topic colors are unchanged. Some approved pastel highlight colors and light-blue headings do not meet WCAG text-contrast requirements. This is a known limitation, not a claim of full WCAG compliance. Original pencil-text plaintext downloads offer an alternative for every notes topic or lesson.
+The AP World collection spans c. 1200–1750 overall and contains 28 sheets, 56 pages, and 1,344 note lines: 26 official topics across Units 1–4 plus two Unit 3 supplements. Unit 4 adds eight sheets, 16 pages, and 384 lines. The collection is designed for independent study: native links and complete HTML documents work over HTTP or directly from files; original and marked plaintext sources are available from notes pages; and print layouts are designed for A4. Unit 3's supplements use its established palette, while Unit 4 has a distinct palette documented in the [Unit 4 source guide](docs/unit-4-sources.md). Some approved pastel highlight colors and light-blue headings do not meet WCAG text-contrast requirements. This is a known limitation, not a claim of full WCAG compliance. Original pencil-text plaintext downloads offer an alternative for every notes topic or lesson.
 
 ## Getting started
 
@@ -45,8 +45,8 @@ To read locally, download or clone the repository and open [`website/public/inde
 To work on the collection, use Node.js 24 and npm (the validation tools require Node.js 22.16 or newer). Run all npm commands from `website/`:
 
 ```sh
-git clone https://github.com/NormalDudeBro/outofmymind.git
-cd outofmymind/website
+git clone https://github.com/NormalDudeBro/joltlined.git
+cd joltlined/website
 npm ci
 npm run build
 npm run validate
@@ -81,6 +81,6 @@ The [FBLA study hub](website/public/fbla.html) links [Networking Infrastructures
 
 These are independent study resources, not official College Board or FBLA materials or an official answer key. Literary interpretations and practice examples are starting points for your own evidence and reasoning. Check quotations and page references against your edition. See the [technical reference](docs/technical-reference.md) for provenance and verification limits.
 
-Found a broken link, confusing explanation, or content error? [Open an issue](https://github.com/NormalDudeBro/outofmymind/issues) with the page, section, and a source or example where helpful.
+Found a broken link, confusing explanation, or content error? [Open an issue](https://github.com/NormalDudeBro/joltlined/issues) with the page, section, and a source or example where helpful.
 
 No reuse license is currently declared. Do not assume the repository’s text or third-party images are freely licensed; confirm permission before redistributing them.

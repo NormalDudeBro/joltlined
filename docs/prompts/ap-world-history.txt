@@ -16,7 +16,7 @@ Revision cutoff: optional last completed page, line, or phrase.
 Delivery: chat notes by default; files or website integration only when requested.
 Color coding: ON after content validation; OFF for an explicitly plain or uncolored draft. An explicit request to color an existing draft authorizes the color-only pass, not a historical rewrite.
 Chat encoding: marked text when color coding is ON; plain text when OFF, unless the user selects another encoding.
-Color substitutions and starting point: optional user-defined continuity rules; apply them forward only and preserve completed material.
+Color substitutions and starting point: optional user-defined continuity rules; apply them forward only and preserve completed material. Unit 4 has an explicitly scoped palette override; do not apply it to other units or subjects.
 
 SCOPE RESOLUTION
 - A request for a UNIT means ALL its official numbered topics, unless the user selects a subset. Verify the current topic list in the College Board framework.
@@ -232,12 +232,13 @@ def validate_bundle(sheets, expected_topic_ids):
     assert sum(len(rows) for rows in checked) == 48 * len(expected_topic_ids)
     return checked
 
-def validate_coloring(original, marked):
+def validate_coloring(original, marked, unit4=False):
     import re
     rows = validate_sheet(original)
     original = original.replace("\r\n", "\n")
     marked = marked.replace("\r\n", "\n")
-    token = re.compile(r"\((g|li|pu|br|y|p|lb|hp|or|pen)\)")
+    token = re.compile(r"\((g|li|pu|br|y|p|lb|hp|or|r|db|mb|pen)\)")
+    allowed = set(("g li pu or y p lb hp r db mb pen" if unit4 else "g li pu br y p lb hp or pen").split())
     assert token.search(original) is None, "plain original contains no color markers"
     assert token.sub("", marked) == original, "exact stripped equality"
     encoded = marked[:-1] if marked.endswith("\n") else marked
@@ -249,6 +250,7 @@ def validate_coloring(original, marked):
         assert line.startswith("(pen)"), "initial neutral marker"
         matches = list(token.finditer(line))
         parts = [(match.group(1), line[match.end():matches[i + 1].start() if i + 1 < len(matches) else len(line)]) for i, match in enumerate(matches)]
+        assert all(color in allowed for color, value in parts), "markers belong to the selected palette"
         colors = [color for color, value in parts for char in value]
         assert "".join(value for color, value in parts) == text
         highlights = {color for color, value in parts if color != "pen" and value}
@@ -290,7 +292,7 @@ COLOR PHASE - AFTER CONTENT IS FROZEN, EXCEPT WHEN EXPLICITLY DEFERRED
 Keep a plain, validated original. Coloring inserts markers only: preserve every other character, heading, prefix, word, space, punctuation mark, order, line ending, and page boundary. Fix invalid source text before the color-only phase, not by silently rewriting during it.
 Inspect the user's actual reference notes; when they cite existing Units 1-2, inspect those rather than substituting your earlier drafts. The target is restrained recurring keywords connected to the Overview, not colored sentences or a new universal semantic taxonomy.
 
-AUTHORIZED PALETTE: NINE HIGHLIGHT INKS PLUS NEUTRAL PENCIL
+AUTHORIZED PALETTE: LEGACY NINE-INK PALETTE PLUS UNIT 4 OVERRIDE
 (g) dark green #168438
 (li) lime green #79c900
 (pu) purple #883ac2
@@ -301,7 +303,7 @@ AUTHORIZED PALETTE: NINE HIGHLIGHT INKS PLUS NEUTRAL PENCIL
 (hp) hot pink #ec228c
 (or) orange #e67e22
 (pen) neutral pencil #62615e
-Use these values for website rendering unless the user updates the palette. Red and dark-blue markers from older references are retired. Treat older palette lists as outdated rather than silently restoring unavailable inks. Brown and orange are distinct available inks; a forward substitution does not redefine brown globally.
+For Units 1–3, AP Lang, and Algebra use the legacy palette above unchanged. Unit 4 alone explicitly uses eleven highlight inks plus neutral pencil: (g) #168438, (li) #79c900, (pu) #883ac2, (or) #e67e22, (y) #ebc600, (p) #ed8eb4, (lb) #59b8e7, (hp) #ec228c, (r) #df3034, (db) #173f88, and (mb) #287db3; (pen) remains neutral pencil #62615e. The Unit 4 palette is selected only for Unit 4 and does not redefine legacy (y) #287db3 or make (r)/(db) available in legacy subjects. Do not remap old notes or claim all subjects use the eleven inks. Brown and orange remain distinct in the legacy palette.
 
 MARKERS AND WORD SELECTION
 - Begin every marked line with (pen). Insert a marker immediately before selected words and reset (pen) immediately after each colored span, even at line end.
@@ -319,7 +321,7 @@ Respect the user's starting point. If an existing section's brown ink is changed
 When coloring a new continuation, honor an explicitly requested forward substitution in its new assignments. Keep unused palette inks available rather than removing them globally.
 
 COLOR VALIDATION
-Validate both encodings: the plain original with validate_sheet, and the marked copy with validate_coloring. Stripping only authorized markers must reproduce the approved original exactly. Check palette membership, neutral prefixes/punctuation/numbers, immediate resets, at most two highlighted words and two inks per support line, full uniform section titles, exact matching Overview/header rendering, and consistent selected-word ownership. A partial revision must also preserve the protected range exactly. Count the 65-character limit only on decoded note text.
+Validate both encodings: the plain original with validate_sheet, and the marked copy with validate_coloring (unit4=True only for Unit 4). Stripping only authorized markers must reproduce the approved original exactly. Check palette membership, neutral prefixes/punctuation/numbers, immediate resets, at most two highlighted words and two inks per support line, full uniform section titles, exact matching Overview/header rendering, and consistent selected-word ownership. A partial revision must also preserve the protected range exactly. Count the 65-character limit only on decoded note text. Across the Unit 4 collection, use all eleven inks including light-blue external topic titles, with varied neighboring heading palettes; preserve legacy colors in other units.
 
 DELIVERY CONTRACT
 AUDIT MODE: output the requested evidence-based report, not automatically a 48-line sheet. Summarize coverage for every requested topic and identify confirmed discrepancies, missing explanations, useful omitted cases, and optional enrichment with note locations and sources. Keep detailed source/coverage records available; provide the full ledger when requested or save it separately when file delivery is authorized. The sheet-format rules govern note bodies, not this audit report.

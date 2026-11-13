@@ -7,7 +7,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "check:fbla-colors": "node tests/fbla-color-checks.mjs",
-    "validate": "html-validate public/index.html public/ap-world.html public/ap-lang.html public/algebra-2.html public/algebra-2-flashcards.html public/fbla.html public/fbla-networking.html public/fbla-cybersecurity.html public/fbla-network-design.html public/fbla-sales.html public/out-of-my-mind.html public/of-mice-and-men.html public/fahrenheit-451.html && node tests/static-checks.mjs && node tests/unit3-checks.mjs && node tests/algebra-checks.mjs && node tests/flashcards-checks.mjs && node tests/home-checks.mjs && node tests/fbla-color-checks.mjs && node tests/fbla-checks.mjs && node tests/assets-checks.mjs && node tests/structure-checks.mjs",
+    "validate": "html-validate public/index.html public/ap-world.html public/ap-lang.html public/algebra-2.html public/algebra-2-flashcards.html public/fbla.html public/fbla-networking.html public/fbla-cybersecurity.html public/fbla-network-design.html public/fbla-sales.html public/out-of-my-mind.html public/of-mice-and-men.html public/fahrenheit-451.html && node tests/static-checks.mjs && node tests/unit3-checks.mjs && node tests/unit4-checks.mjs && node tests/algebra-checks.mjs && node tests/flashcards-checks.mjs && node tests/home-checks.mjs && node tests/fbla-color-checks.mjs && node tests/fbla-checks.mjs && node tests/assets-checks.mjs && node tests/structure-checks.mjs",
     "test:e2e": "playwright test",
     "test": "npm run validate && npm run test:e2e"
   },
