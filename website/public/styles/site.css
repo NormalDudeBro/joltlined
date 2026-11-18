@@ -64,8 +64,38 @@ footer a { color: var(--accent); font: 12px/1.6 system-ui, sans-serif; }
 .notes-site .line { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; min-height: 37px; }
 .notes-site .number { padding-block-start: 7px; color: var(--muted); font: 9px/1.5 system-ui, sans-serif; text-align: end; user-select: none; }
 .notes-site .note { white-space: pre-wrap; overflow-wrap: anywhere; color: var(--pen); border-block-end: 1px solid #efede7; padding-block: 5px; font-size: 14px; line-height: 26px; }
-@media (max-width: 960px) {
+.notes-layout { display: none; }
+/* Page zoom can make an ultrawide viewport short before it becomes narrow. */
+@media screen and (max-width: 960px), screen and (max-height: 30rem) {
   .notes-site .pages { grid-template-columns: minmax(0, 1fr); }
+}
+@media screen and (max-height: 30rem) {
+  .notes-site .pages { max-inline-size: 48rem; margin-inline: auto; }
+}
+@media screen and (min-width: 128rem) and (min-height: 40rem) {
+  .notes-site .wrap { max-width: 94rem; }
+  .notes-site .note { font-size: 1.125rem; line-height: 1.6; }
+  .notes-site .number { font-size: 0.75rem; }
+}
+@supports selector(:has(*)) {
+  @media screen and (width > 960px) and (height > 30rem) {
+    .notes-layout {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      min-block-size: 44px;
+      margin-block-end: 12px;
+      font: 0.875rem/1.4 system-ui, sans-serif;
+      cursor: pointer;
+    }
+    .notes-layout input { margin: 0; accent-color: var(--accent); }
+    .notes-layout input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    #notes:has(> .notes-layout > input:checked) .pages {
+      grid-template-columns: minmax(0, 1fr);
+      max-inline-size: 48rem;
+      margin-inline: auto;
+    }
+  }
 }
 @media (max-width: 480px) {
   .notes-site .notes-intro { padding-block: 32px 24px; }

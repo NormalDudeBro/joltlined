@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { colorSheet, fblaInks, fblaTermColors } from './fbla-colors.mjs';
+import { notesLayoutControl } from './notes-layout.mjs';
 
 export { colorSheet } from './fbla-colors.mjs';
 
@@ -164,6 +165,7 @@ export function renderEvent(event, rendered, palette) {
         <p>Confirm qualification, entry limits and conference-specific rules with your adviser. Studying all four events does not establish eligibility to enter all four.</p>${ambiguous}
         <nav aria-label="FBLA course navigation"><a href="fbla.html">FBLA course hub</a><a href="fbla.html#start-here">How to study</a><a href="fbla.html#rehearsal">Rehearsal guidance</a></nav>
       </section>
+      ${notesLayoutControl}
       <h2 class="course-contents">Course contents</h2><ol class="course-toc contents">${toc}</ol>
       ${sections}
     </main>

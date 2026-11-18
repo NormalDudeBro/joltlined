@@ -6,6 +6,7 @@ import { parseArgs } from 'node:util';
 import { renderHome } from './home.mjs';
 import { renderFlashcards } from './flashcards.mjs';
 import { renderFbla, renderCourseSheets, renderEvent, renderCourseHub, colorSheet } from './fbla.mjs';
+import { notesLayoutControl } from './notes-layout.mjs';
 
 export const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
 export const palette = { g: '#168438', li: '#79c900', pu: '#883ac2', br: '#92552f', or: '#e67e22', y: '#287db3', p: '#ed8eb4', lb: '#59b8e7', hp: '#ec228c', pen: '#62615e' };
@@ -247,13 +248,15 @@ export function renderSite(data, lang, algebra) {
     <div class="legend" role="group" aria-label="Token color legend">${Object.keys(palette).map(token => `<span><i class="swatch ${token}" aria-hidden="true"></i>${token} ${({ g: 'dark green', li: 'lime green', pu: 'purple', br: 'brown', or: 'orange', y: 'medium blue', p: 'pink', lb: 'light blue', hp: 'hot pink', pen: 'pencil' })[token]}</span>`).join('')}</div>
     </div>
   </header>
-  <main id="notes" tabindex="-1"${study.length ? ' class="study"' : ''}>${study.length ? study.map(topic => `<section class="topic" id="topic-${escapeHTML(topic.file.replaceAll('.', '-'))}" aria-labelledby="topic-${escapeHTML(topic.file.replaceAll('.', '-'))}-title">
+  <main id="notes" tabindex="-1"${study.length ? ' class="study"' : ''}>
+    ${notesLayoutControl}${study.length ? study.map(topic => `
+    <section class="topic" id="topic-${escapeHTML(topic.file.replaceAll('.', '-'))}" aria-labelledby="topic-${escapeHTML(topic.file.replaceAll('.', '-'))}-title">
     <h2 class="topic-title" id="topic-${escapeHTML(topic.file.replaceAll('.', '-'))}-title">${algebra ? `${escapeHTML(topic.label)} ` : ''}${escapeHTML(topic.title)}</h2>
     ${algebra ? `<p class="downloads"><a href="data:text/plain;charset=utf-8;base64,${Buffer.from(topic.source).toString('base64')}" download="${escapeHTML(topic.file)}.txt">Download ${escapeHTML(topic.label)} original</a> · <a href="data:text/plain;charset=utf-8;base64,${Buffer.from(topic.colored).toString('base64')}" download="${escapeHTML(topic.file)}-colored.txt">Download ${escapeHTML(topic.label)} colored</a> · <a href="notes/algebra-2/${escapeHTML(topic.file)}.txt">Open original file</a> · <a href="notes/algebra-2/Colored/${escapeHTML(topic.file)}.txt">Open colored file</a></p>` : ''}<div class="pages">${Array.from({ length: lines(topic.colored).length / pageSize }, (_, page) => `<article aria-label="${escapeHTML(topic.label)} page ${page + 1}">
     <h3 class="page-title">${algebra ? `${escapeHTML(topic.label)} ` : ''}${escapeHTML(topic.title)}</h3>
     <p class="caption">Page ${page + 1}${algebra ? '' : ` · ${page < 2 ? 'Building commentary' : 'Deepening analysis'}`} · Lines ${page * pageSize + 1}–${page * pageSize + pageSize}</p>
     <div class="sheet">${lines(topic.colored).slice(page * pageSize, page * pageSize + pageSize).map((line, index) => `<div class="line"><span class="number" aria-hidden="true">${page * pageSize + index + 1}</span><span class="note">${renderLine(line)}</span></div>`).join('\n')}</div>
-  </article>`).join('\n')}</div></section>`).join('\n') : data.map((unit, index) => `
+  </article>`).join('\n')}</div></section>`).join('') : data.map((unit, index) => `
     <section class="unit${unit.inks ? ' unit-4-palette' : ''}" id="unit-${index + 1}" aria-labelledby="unit-${index + 1}-title">
       <h2 class="unit-title" id="unit-${index + 1}-title">Unit ${index + 1}: ${escapeHTML(unit.name)}${unit.period ? `, ${escapeHTML(unit.period)}` : ''}</h2>${unit.inks ? `
       <div class="unit-palette"><p>Eight official topics · 16 note pages · 384 note lines. Unit 4 inks are scoped here without recoloring earlier units. Light blue identifies topic titles; other inks identify sections and selected keywords.</p><div class="legend" role="group" aria-label="Unit 4 token color legend">${Object.keys(unit.inks).map(token => `<span><i class="swatch ${token}" aria-hidden="true"></i>${token} ${({ g: 'dark green', li: 'lime green', pu: 'purple', or: 'orange', y: 'yellow', p: 'pink', lb: 'light blue', hp: 'hot pink', r: 'red', db: 'dark blue', mb: 'medium blue', pen: 'pencil' })[token]}</span>`).join('')}</div></div>` : ''}
