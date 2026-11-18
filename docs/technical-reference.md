@@ -47,6 +47,8 @@ Preview export copies `notes/unit-1` through `notes/unit-4` beside the exported 
 
 ## Presentation
 
+The **Theme** selector follows the device by default. Light or Dark overrides apply to the current page and work offline without JavaScript. Dark note inks use a separate screen palette with matching named swatches; marker assignments, downloadable sources, and A4 print colors remain unchanged. The FBLA hub’s hex-code table stays a reference for the original light/print inks.
+
 Numbered note pages use a centered two-page spread when the browser has room. Wide, tall viewports get larger sheets, type, and line numbers for reading while writing on paper. Short viewports also trigger vertical stacking: on a 5120×1440 display at 500% browser zoom, the effective viewport can still be wider than the original 960px breakpoint. Where a spread would otherwise appear, **Stack note pages** switches to one centered column without JavaScript or a zoom change. These screen layouts do not affect A4 pagination.
 
 All three literary companions use identical twelve-section headings, section containers, and a title/author/cover/introduction/action hero. The cover sits alongside the title on larger screens and uses the same compact mobile layout for each book. Novel vocabulary uses `dl.definition-list` with term/definition pairs; book-specific supplementary handout material remains separate. Shared pamphlet-map, setting, vocabulary, and theme subsection labels are consistent without requiring identical book-specific analysis. `tests/literature.spec.mjs` checks these shared structures, intrinsic cover dimensions, and undistorted responsive covers at 375px, 760px, and 1280px in LTR and forced RTL.

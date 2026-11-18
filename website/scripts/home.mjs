@@ -1,3 +1,5 @@
+import { themePicker } from './theme.mjs';
+
 export function renderHome() {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -24,7 +26,7 @@ export function renderHome() {
     .arrow { display: block; padding-block-start: 5px; font-size: 20px; }
     [dir="rtl"] .arrow { transform: scaleX(-1); }
     .note-entry:hover .entry-title, .reading-link:hover .reading-title { text-decoration: underline; text-decoration-thickness: 1px; }
-    .reading-link { display: block; text-decoration: none; margin-block-start: 12px; background: #e8ebe5; padding: 24px; border: 1px solid #d3dad2; }
+    .reading-link { display: block; text-decoration: none; margin-block-start: 12px; background: var(--reading-card); padding: 24px; border: 1px solid var(--reading-border); }
     .book-image { display: block; width: 140px; height: auto; margin-inline: auto; margin-block: 3px 26px; box-shadow: 6px 8px 0 #d5dbd2, 0 3px 9px #21374925; }
     .reading-meta { margin: 0 0 8px; color: var(--accent); font: 10px/1.5 system-ui, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
     .reading-title { margin: 0 0 12px; font-size: 28px; font-weight: normal; line-height: 1.15; }
@@ -57,6 +59,7 @@ export function renderHome() {
     <header>
       <div class="masthead"><p class="wordmark">Joltlined</p><p class="masthead-note">Notes &amp; literary analysis</p></div>
       <nav class="subjects" aria-label="Subjects"><a href="index.html" aria-current="page">Home</a><a href="ap-lang.html">AP Lang Notes</a><a href="ap-world.html">AP World History Notes</a><a href="algebra-2.html">Algebra 2 Notes</a><a href="fbla.html">FBLA Study Plan</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav>
+      ${themePicker}
     </header>
     <main id="collection" tabindex="-1">
       <div class="introduction">

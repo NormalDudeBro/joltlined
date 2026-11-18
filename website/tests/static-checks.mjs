@@ -16,7 +16,7 @@ assert.deepEqual(data[2].topics.slice(0, 4).map(topic => [topic.file, topic.titl
 const comparison = data[2].topics[3];
 assert.match(comparison.colored, /\(pen\)-> \(or\)Revenue and local elites\(pen\)/, '3.4 page-two Overview introduces orange');
 assert.match(comparison.colored, /\(pen\)o \(or\)Revenue and local elites\(pen\)/, '3.4 section header matches orange Overview');
-assert.match(html, /\.ink\.or \{ color: var\(--or\); \}/, 'orange has a generated ink rule');
+assert.match(html, /\.ink\.or \{ color: var\(--view-or, var\(--or\)\); \}/, 'orange has a themed ink rule');
 assert.deepEqual(data[2].topics.slice(4).map(topic => [topic.file, topic.title, topic.label]), [['3-supplement', 'Military and Imperial Government', 'Unit 3 Supplement 1'], ['3-supplement-2', 'Beliefs, Legitimacy, and Comparison', 'Unit 3 Supplement 2']]);
 data[2].topics.slice(4).forEach(topic => assert.doesNotMatch(topic.heading, /3\.[56]/, 'supplement is not presented as official topic 3.5 or 3.6'));
 data[2].topics.slice(4).forEach(topic => {
@@ -126,7 +126,7 @@ assert.equal((langHTML.match(/class="note"/g) ?? []).length, 96);
 assert.deepEqual([...langHTML.matchAll(/<span class="note">([\s\S]*?)<\/span><\/div>/g)].map(match => match[1]), langColoredLines.map(renderLine), 'all 96 note innerHTML renderings exactly match shared renderLine');
 Object.entries(palette).forEach(([token, hex]) => {
   assert.ok(langHTML.includes(`--${token}: ${hex};`), 'AP Lang shares World History palette variables');
-  const rule = `.ink.${token} { color: var(--${token}); }`;
+  const rule = `.ink.${token} { color: var(--view-${token}, var(--${token})); }`;
   assert.ok(html.includes(rule) && langHTML.includes(rule), 'shared ink token rules');
 });
 assert.doesNotMatch(langHTML, /\.lang-[a-z]+|class="[^"]*\blang-[a-z]+|section-heading|\.lang\s+\.(?:ink|note|topic-title|page-title)\s*\{[^}]*\b(?:color|font-weight)\s*:/, 'no legacy coloring or bold section overrides');

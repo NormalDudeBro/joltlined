@@ -52,7 +52,7 @@ algebra.forEach(lesson => {
 assert.deepEqual([...html.matchAll(/<span class="note">([\s\S]*?)<\/span><\/div>/g)].map(match => match[1]), algebra.flatMap(lesson => lesson.colored.replace(/\n$/, '').split('\n').map(renderLine)), 'all 754 notes use shared renderLine in source order');
 Object.entries(palette).forEach(([token, hex]) => {
   assert.ok(html.includes(`--${token}: ${hex};`), 'shared palette declaration');
-  assert.ok(html.includes(`.ink.${token} { color: var(--${token}); }`), 'shared ink rule');
+  assert.ok(html.includes(`.ink.${token} { color: var(--view-${token}, var(--${token})); }`), 'shared ink rule with original ink as fallback');
 });
 assert.doesNotMatch(html, /\.algebra\s+\.(?:ink|note|topic-title|page-title)\s*\{[^}]*\b(?:color|font-weight)\s*:/, 'no Algebra color or bold overrides');
 assert.deepEqual(html.match(/<link\b[^>]*>/gi) ?? [], ['<link rel="stylesheet" href="styles/site.css">'], 'exactly one local stylesheet link');

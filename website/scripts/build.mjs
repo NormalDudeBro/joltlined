@@ -7,6 +7,7 @@ import { renderHome } from './home.mjs';
 import { renderFlashcards } from './flashcards.mjs';
 import { renderFbla, renderCourseSheets, renderEvent, renderCourseHub, colorSheet } from './fbla.mjs';
 import { notesLayoutControl } from './notes-layout.mjs';
+import { inkLegend, themePicker } from './theme.mjs';
 
 export const root = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'public');
 export const palette = { g: '#168438', li: '#79c900', pu: '#883ac2', br: '#92552f', or: '#e67e22', y: '#287db3', p: '#ed8eb4', lb: '#59b8e7', hp: '#ec228c', pen: '#62615e' };
@@ -207,13 +208,10 @@ export function renderSite(data, lang, algebra) {
     :root { ${Object.entries(palette).map(([token, hex]) => `--${token}: ${hex};`).join(' ')} --note-row-height: ${algebra ? '8mm' : '8.8mm'}; }
     #notes { padding-block: 6px 40px; }
     #notes:focus { outline: none; }
-    .legend { display: flex; flex-wrap: wrap; gap: 7px 15px; font: 12px/1.5 system-ui, sans-serif; }
-    .legend span { display: inline-flex; align-items: center; gap: 5px; }
-    .swatch { width: 9px; height: 9px; border-radius: 50%; }
     .unit-title { font-size: 30px; font-weight: normal; border-block-start: 1px solid var(--ink); padding-block-start: 22px; }
-    ${Object.keys(palette).map(token => `.ink.${token} { color: var(--${token}); } .swatch.${token} { background: var(--${token}); }`).join('\n    ')}${data.some(unit => unit.inks) ? `
+    ${Object.keys(palette).map(token => `.ink.${token} { color: var(--view-${token}, var(--${token})); } .swatch.${token} { background: var(--view-${token}, var(--${token})); }`).join('\n    ')}${data.some(unit => unit.inks) ? `
     .unit-4-palette { ${Object.entries(unit4Palette).map(([token, hex]) => `--${token}: ${hex};`).join(' ')} }
-    ${Object.keys(unit4Palette).map(token => `.unit-4-palette .ink.${token} { color: var(--${token}); } .unit-4-palette .swatch.${token} { background: var(--${token}); }`).join('\n    ')}` : ''}
+    ${Object.keys(unit4Palette).map(token => `.unit-4-palette .ink.${token} { color: var(--view-${token}, var(--${token})); } .unit-4-palette .swatch.${token} { background: var(--view-${token}, var(--${token})); }`).join('\n    ')}` : ''}
     @media print {
       #notes { padding: 0; }
       .unit-title { display: none; }${data.some(unit => unit.inks) ? '\n      .unit-palette { display: none; }' : ''}
@@ -228,6 +226,7 @@ export function renderSite(data, lang, algebra) {
   <header>
     <div class="masthead"><p class="wordmark">Joltlined</p><p class="masthead-note">Notes &amp; literary analysis</p></div>
      <nav class="subjects" aria-label="Subjects"><a href="index.html">Home</a><a href="ap-lang.html"${lang ? ' aria-current="page"' : ''}>AP Lang Notes</a><a href="ap-world.html"${study.length ? '' : ' aria-current="page"'}>AP World History Notes</a><a href="algebra-2.html"${algebra ? ' aria-current="page"' : ''}>Algebra 2 Notes</a><a href="fbla.html">FBLA Study Plan</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav>
+    ${themePicker}
     <div class="notes-intro">
     <p class="eyebrow">${algebra ? 'Algebra 2 / Modules 1B &amp; 2A' : lang ? 'AP English Language / Unit 1' : 'AP World History / Units 1–4'}</p>
     <h1>${title}</h1>
@@ -245,7 +244,7 @@ export function renderSite(data, lang, algebra) {
     <ol class="contents">${data.flatMap(unit => unit.topics.map(topic => `<li><a href="#topic-${escapeHTML(topic.file.replaceAll('.', '-'))}">${escapeHTML(topic.heading)}</a></li>`)).join('')}</ol>
     <p>All notes are visible below. Use your browser’s Print command for one note page per printed page. Marked text downloads retain the source markers.</p>
     <p>Units 1–3 retain the legacy inks below. Unit 4 uses all eleven FBLA inks, with its own legend: y is yellow there, while mb is medium blue. These concise content-review sheets complement source analysis and AP writing practice.</p>`}
-    <div class="legend" role="group" aria-label="Token color legend">${Object.keys(palette).map(token => `<span><i class="swatch ${token}" aria-hidden="true"></i>${token} ${({ g: 'dark green', li: 'lime green', pu: 'purple', br: 'brown', or: 'orange', y: 'medium blue', p: 'pink', lb: 'light blue', hp: 'hot pink', pen: 'pencil' })[token]}</span>`).join('')}</div>
+    ${inkLegend(palette)}
     </div>
   </header>
   <main id="notes" tabindex="-1"${study.length ? ' class="study"' : ''}>
@@ -259,7 +258,7 @@ export function renderSite(data, lang, algebra) {
   </article>`).join('\n')}</div></section>`).join('') : data.map((unit, index) => `
     <section class="unit${unit.inks ? ' unit-4-palette' : ''}" id="unit-${index + 1}" aria-labelledby="unit-${index + 1}-title">
       <h2 class="unit-title" id="unit-${index + 1}-title">Unit ${index + 1}: ${escapeHTML(unit.name)}${unit.period ? `, ${escapeHTML(unit.period)}` : ''}</h2>${unit.inks ? `
-      <div class="unit-palette"><p>Eight official topics · 16 note pages · 384 note lines. Unit 4 inks are scoped here without recoloring earlier units. Light blue identifies topic titles; other inks identify sections and selected keywords.</p><div class="legend" role="group" aria-label="Unit 4 token color legend">${Object.keys(unit.inks).map(token => `<span><i class="swatch ${token}" aria-hidden="true"></i>${token} ${({ g: 'dark green', li: 'lime green', pu: 'purple', or: 'orange', y: 'yellow', p: 'pink', lb: 'light blue', hp: 'hot pink', r: 'red', db: 'dark blue', mb: 'medium blue', pen: 'pencil' })[token]}</span>`).join('')}</div></div>` : ''}
+      <div class="unit-palette"><p>Eight official topics · 16 note pages · 384 note lines. Unit 4 inks are scoped here without recoloring earlier units. Light blue identifies topic titles; other inks identify sections and selected keywords.</p>${inkLegend(unit.inks, 'Unit 4 token color legend')}</div>` : ''}
       ${unit.topics.map(topic => `<section class="topic" id="topic-${escapeHTML(topic.file.replaceAll('.', '-'))}" aria-labelledby="topic-${escapeHTML(topic.file.replaceAll('.', '-'))}-title">
         <h3 class="topic-title" id="topic-${escapeHTML(topic.file.replaceAll('.', '-'))}-title">${escapeHTML(topic.heading)}</h3>
         <p class="downloads"><a href="data:text/plain;charset=utf-8;base64,${Buffer.from(topic.original).toString('base64')}" download="${escapeHTML(topic.file)}.txt">Download ${escapeHTML(topic.label)} original</a> · <a href="data:text/plain;charset=utf-8;base64,${Buffer.from(topic.colored).toString('base64')}" download="${escapeHTML(topic.file)}${topic.pencil ? '-pencil' : index >= 2 ? '-colored' : ''}.txt">Download ${escapeHTML(topic.label)} ${topic.pencil ? 'pencil' : 'colored'}</a> · <a href="notes/unit-${index + 1}/${escapeHTML(topic.file)}.txt">Open original file</a> · <a href="notes/unit-${index + 1}/Colored/${escapeHTML(topic.file)}.txt">Open ${topic.pencil ? 'pencil' : 'colored'} file</a>${topic.pencil ? ' · Color coding pending' : ''}</p>

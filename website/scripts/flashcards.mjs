@@ -1,3 +1,5 @@
+import { themePicker } from './theme.mjs';
+
 const topics = [
   ['1.5 Linear Functions', [
     ['01. Explain Slope', `Teach: What does slope tell us?\nSlope describes a line's steepness.\nIt is change in y over change in x.\nThink: rise divided by run.\nIn y = 2x + 3, the slope is 2.\nMove right 1, then move up 2.\nA positive slope rises to the right.\nA negative slope falls to the right.\nA horizontal line has slope zero.\nTry: Describe a slope of -3.`],
@@ -66,7 +68,7 @@ export function renderFlashcards(escapeHTML, loadAlgebraNotes) {
     .flash-topic h2 { font-size: 24px; font-weight: normal; }
     .topic-nav { display: flex; flex-wrap: wrap; gap: 8px 18px; font: 12px/1.6 system-ui, sans-serif; }
     .flash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-    .flash-card { min-width: 0; border: 1px solid var(--rule); background: #fffefb; padding: 14px; }
+    .flash-card { min-width: 0; border: 1px solid var(--rule); background: var(--sheet); padding: 14px; }
     .flash-card h3 { font-size: 18px; font-weight: normal; margin: 0 0 12px; }
     .flash-card details { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; direction: ltr; text-align: left; }
     .flash-card summary { cursor: pointer; white-space: nowrap; font-size: 14px; line-height: 1.6; list-style-position: inside; }
@@ -133,6 +135,7 @@ export function renderFlashcards(escapeHTML, loadAlgebraNotes) {
         <p><a href="algebra-2.html">Back to Algebra 2 notes</a></p>
         <nav class="topic-nav" aria-label="Flashcard topics">${topics.map(([topic], index) => `<a href="#flash-topic-${index}">${escapeHTML(topic)}</a>`).join('')}</nav>
       </div>
+      ${themePicker}
     </header>
     <main class="flash-topics" id="cards">${cards}
     </main>

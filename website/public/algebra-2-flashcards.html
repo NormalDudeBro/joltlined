@@ -15,7 +15,7 @@
     .flash-topic h2 { font-size: 24px; font-weight: normal; }
     .topic-nav { display: flex; flex-wrap: wrap; gap: 8px 18px; font: 12px/1.6 system-ui, sans-serif; }
     .flash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-    .flash-card { min-width: 0; border: 1px solid var(--rule); background: #fffefb; padding: 14px; }
+    .flash-card { min-width: 0; border: 1px solid var(--rule); background: var(--sheet); padding: 14px; }
     .flash-card h3 { font-size: 18px; font-weight: normal; margin: 0 0 12px; }
     .flash-card details { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; direction: ltr; text-align: left; }
     .flash-card summary { cursor: pointer; white-space: nowrap; font-size: 14px; line-height: 1.6; list-style-position: inside; }
@@ -51,6 +51,7 @@
         <p><a href="algebra-2.html">Back to Algebra 2 notes</a></p>
         <nav class="topic-nav" aria-label="Flashcard topics"><a href="#flash-topic-0">1.5 Linear Functions</a><a href="#flash-topic-1">1.6.1 Piecewise Functions</a><a href="#flash-topic-2">1.6.2 Step Functions</a><a href="#flash-topic-3">1.6.3 Absolute Value</a><a href="#flash-topic-4">1.7.1 Parent Functions</a><a href="#flash-topic-5">1.7.2 Translations</a><a href="#flash-topic-6">1.7.3 Dilations</a><a href="#flash-topic-7">1.7.3 Combined Transformations</a><a href="#flash-topic-8">2.3 Linear Equations</a><a href="#flash-topic-9">2.4 Graphing Systems</a><a href="#flash-topic-10">2.5 Algebraic Systems</a><a href="#flash-topic-11">2.6 Inequality Systems</a><a href="#flash-topic-12">2.7 Linear Programming</a></nav>
       </div>
+      <label class="theme-picker">Theme <select><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
     </header>
     <main class="flash-topics" id="cards">
       <section class="flash-topic" id="flash-topic-0" aria-labelledby="flash-topic-0-title">

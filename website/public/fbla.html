@@ -25,7 +25,7 @@
     .fbla-materials h3 { margin-block-end: 8px; }
     .fbla-materials p { margin-block-start: 0; }
     .fbla-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-block: 24px 38px; }
-    .fbla-card { min-width: 0; border: 1px solid var(--rule); padding: 20px; background: #fffefb; }
+    .fbla-card { min-width: 0; border: 1px solid var(--rule); padding: 20px; background: var(--sheet); }
     .fbla-card h3 { font-size: 22px; font-weight: normal; margin: 0 0 10px; }
     .fbla-card p, .fbla-card li { line-height: 1.65; }
     .fbla-card ul { padding-inline-start: 20px; }
@@ -92,6 +92,7 @@
     <header>
       <div class="masthead"><p class="wordmark">Joltlined</p><p class="masthead-note">Notes &amp; literary analysis</p></div>
       <nav class="subjects" aria-label="Subjects"><a href="index.html">Home</a><a href="ap-lang.html">AP Lang Notes</a><a href="ap-world.html">AP World History Notes</a><a href="algebra-2.html">Algebra 2 Notes</a><a href="fbla.html" aria-current="page">FBLA Study Plan</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav>
+      <label class="theme-picker">Theme <select><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
     </header>
     <main id="fbla-main" tabindex="-1">
       <section class="fbla-intro">
@@ -131,7 +132,7 @@
         <p class="eyebrow">Reading the notes</p>
         <h2 id="color-reference-title">Color reference</h2>
         <p><strong>Two independent layers:</strong> section headings and their matching Overview entries use varied palettes for navigation. Body terms keep one fixed color across every sheet, page, and event: LAN is always dark blue in the body, even under a differently colored heading. Light blue identifies the overall sheet title.</p>
-        <p id="color-reference-scope">The groupings below describe the current organization, not a universal conceptual taxonomy. Red includes both attacks and defensive controls; yellow includes both wireless terms and ROI. Learn the named term, rather than assuming that a color alone defines its meaning.</p>
+        <p id="color-reference-scope">These swatches and hex codes show the original light and print inks. Each course legend shows the inks in the current theme. The groupings below describe the current organization, not a universal conceptual taxonomy. Red includes both attacks and defensive controls; yellow includes both wireless terms and ROI. Learn the named term, rather than assuming that a color alone defines its meaning.</p>
         <p class="fbla-color-scroll-note">Scroll the table horizontally to see all columns on a narrow screen.</p>
         <section class="fbla-color-table" aria-label="Scrollable color reference table" tabindex="0">
           <table aria-describedby="color-reference-scope">

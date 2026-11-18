@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="styles/site.css">
   <style>
     :root { --g:#168438;--li:#79c900;--pu:#883ac2;--br:#92552f;--or:#e67e22;--y:#ebc600;--p:#ed8eb4;--lb:#59b8e7;--hp:#ec228c;--pen:#62615e;--r:#df3034;--db:#173f88;--mb:#287db3 }
-    .ink-g{color:var(--g)}.ink-li{color:var(--li)}.ink-pu{color:var(--pu)}.ink-br{color:var(--br)}.ink-or{color:var(--or)}.ink-y{color:var(--y)}.ink-p{color:var(--p)}.ink-lb{color:var(--lb)}.ink-hp{color:var(--hp)}.ink-pen{color:var(--pen)}.ink-r{color:var(--r)}.ink-db{color:var(--db)}.ink-mb{color:var(--mb)}
+    .ink-g{color:var(--view-g,var(--g))}.swatch.g{background:var(--view-g,var(--g))}.ink-li{color:var(--view-li,var(--li))}.swatch.li{background:var(--view-li,var(--li))}.ink-pu{color:var(--view-pu,var(--pu))}.swatch.pu{background:var(--view-pu,var(--pu))}.ink-br{color:var(--view-br,var(--br))}.swatch.br{background:var(--view-br,var(--br))}.ink-or{color:var(--view-or,var(--or))}.swatch.or{background:var(--view-or,var(--or))}.ink-y{color:var(--view-y,var(--y))}.swatch.y{background:var(--view-y,var(--y))}.ink-p{color:var(--view-p,var(--p))}.swatch.p{background:var(--view-p,var(--p))}.ink-lb{color:var(--view-lb,var(--lb))}.swatch.lb{background:var(--view-lb,var(--lb))}.ink-hp{color:var(--view-hp,var(--hp))}.swatch.hp{background:var(--view-hp,var(--hp))}.ink-pen{color:var(--view-pen,var(--pen))}.swatch.pen{background:var(--view-pen,var(--pen))}.ink-r{color:var(--view-r,var(--r))}.swatch.r{background:var(--view-r,var(--r))}.ink-db{color:var(--view-db,var(--db))}.swatch.db{background:var(--view-db,var(--db))}.ink-mb{color:var(--view-mb,var(--mb))}.swatch.mb{background:var(--view-mb,var(--mb))}
     #notes { padding-block: 6px 40px; }
     #notes:focus { outline: none; }
     .course-domain { margin-block: 0 12px; color: var(--muted); font: 11px/1.5 system-ui, sans-serif; }
@@ -16,10 +16,12 @@
       .course-intro, .course-contents, .course-toc, .course-domain, .course-sheet > details { display: none !important; }
     }
   </style>
-</head><body class="notes-site">
+</head><body class="notes-site event-notes">
   <a class="skip" href="#notes">Skip to notes</a>
   <div class="wrap">
-    <header><div class="masthead"><p class="wordmark">Joltlined</p><p class="masthead-note">Notes &amp; literary analysis</p></div><nav class="subjects" aria-label="Subjects"><a href="index.html">Home</a><a href="ap-lang.html">AP Lang Notes</a><a href="ap-world.html">AP World History Notes</a><a href="algebra-2.html">Algebra 2 Notes</a><a href="fbla.html" aria-current="page">FBLA Study Plan</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav></header>
+    <header><div class="masthead"><p class="wordmark">Joltlined</p><p class="masthead-note">Notes &amp; literary analysis</p></div><nav class="subjects" aria-label="Subjects"><a href="index.html">Home</a><a href="ap-lang.html">AP Lang Notes</a><a href="ap-world.html">AP World History Notes</a><a href="algebra-2.html">Algebra 2 Notes</a><a href="fbla.html" aria-current="page">FBLA Study Plan</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav>
+      <label class="theme-picker">Theme <select><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+    </header>
     <main id="notes" tabindex="-1">
       <section class="course-intro notes-intro">
         <p class="eyebrow">FBLA · National 2026–27</p>
@@ -29,6 +31,7 @@
         <p>Official scope: <a href="https://connect.fbla.org/headquarters/files/High%20School%20Competitive%20Events%20Resources/Individual%20Guidelines/Presentation%20Events/Sales-Presentation.pdf">2026–27 CONNECT guideline</a>. The notes and companion deck have been reviewed; neither certifies your mastery or a competition result. Objective IDs are local study labels, and source-reading limits are recorded in the <a href="fbla.html#source-ledger">source ledger</a>.</p>
         <p>Confirm qualification, entry limits and conference-specific rules with your adviser. Studying all four events does not establish eligibility to enter all four.</p><p>Guideline ambiguity: final electricity requirement is unclear. Confirm with adviser. Competitors must prepare their own actual entry; these materials are not a ready-to-submit pitch.</p>
         <nav aria-label="FBLA course navigation"><a href="fbla.html">FBLA course hub</a><a href="fbla.html#start-here">How to study</a><a href="fbla.html#rehearsal">Rehearsal guidance</a></nav>
+        <div class="legend" role="group" aria-label="FBLA ink legend"><span><i class="swatch g" aria-hidden="true"></i>g dark green</span><span><i class="swatch li" aria-hidden="true"></i>li lime green</span><span><i class="swatch pu" aria-hidden="true"></i>pu purple</span><span><i class="swatch br" aria-hidden="true"></i>br brown</span><span><i class="swatch or" aria-hidden="true"></i>or orange</span><span><i class="swatch y" aria-hidden="true"></i>y yellow</span><span><i class="swatch p" aria-hidden="true"></i>p light pink</span><span><i class="swatch lb" aria-hidden="true"></i>lb light blue</span><span><i class="swatch hp" aria-hidden="true"></i>hp hot pink</span><span><i class="swatch pen" aria-hidden="true"></i>pen pencil</span><span><i class="swatch r" aria-hidden="true"></i>r red</span><span><i class="swatch db" aria-hidden="true"></i>db dark blue</span><span><i class="swatch mb" aria-hidden="true"></i>mb medium blue</span></div>
       </section>
       <label class="notes-layout"><input type="checkbox"> Stack note pages</label>
       <h2 class="course-contents">Course contents</h2><ol class="course-toc contents"><li><a href="#sp-discovery-opening">Opening and Customer Discovery</a></li><li><a href="#sp-product-value-evidence">Product Value and Evidence</a></li><li><a href="#sp-objections-suggestion-close">Objections, Related Suggestions, and Close</a></li><li><a href="#sp-relationships-organization">Relationships and Organized Conversation</a></li><li><a href="#sp-delivery-protocols">Delivery, Questions, and Event Protocols</a></li></ol>

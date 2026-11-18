@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { colorSheet, fblaInks, fblaTermColors } from './fbla-colors.mjs';
 import { notesLayoutControl } from './notes-layout.mjs';
+import { inkLegend, themePicker } from './theme.mjs';
 
 export { colorSheet } from './fbla-colors.mjs';
 
@@ -139,7 +140,7 @@ export function renderEvent(event, rendered, palette) {
   <link rel="stylesheet" href="styles/site.css">
   <style>
     :root { ${Object.entries(inks).map(([key,value])=>`--${key}:${value}`).join(';')} }
-    ${Object.keys(inks).map(key=>`.ink-${key}{color:var(--${key})}`).join('')}
+    ${Object.keys(inks).map(key=>`.ink-${key}{color:var(--view-${key},var(--${key}))}.swatch.${key}{background:var(--view-${key},var(--${key}))}`).join('')}
     #notes { padding-block: 6px 40px; }
     #notes:focus { outline: none; }
     .course-domain { margin-block: 0 12px; color: var(--muted); font: 11px/1.5 system-ui, sans-serif; }
@@ -151,10 +152,12 @@ export function renderEvent(event, rendered, palette) {
       .course-intro, .course-contents, .course-toc, .course-domain, .course-sheet > details { display: none !important; }
     }
   </style>
-</head><body class="notes-site">
+</head><body class="notes-site event-notes">
   <a class="skip" href="#notes">Skip to notes</a>
   <div class="wrap">
-    <header><div class="masthead"><p class="wordmark">Joltlined</p><p class="masthead-note">Notes &amp; literary analysis</p></div><nav class="subjects" aria-label="Subjects"><a href="index.html">Home</a><a href="ap-lang.html">AP Lang Notes</a><a href="ap-world.html">AP World History Notes</a><a href="algebra-2.html">Algebra 2 Notes</a><a href="fbla.html" aria-current="page">FBLA Study Plan</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav></header>
+    <header><div class="masthead"><p class="wordmark">Joltlined</p><p class="masthead-note">Notes &amp; literary analysis</p></div><nav class="subjects" aria-label="Subjects"><a href="index.html">Home</a><a href="ap-lang.html">AP Lang Notes</a><a href="ap-world.html">AP World History Notes</a><a href="algebra-2.html">Algebra 2 Notes</a><a href="fbla.html" aria-current="page">FBLA Study Plan</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav>
+      ${themePicker}
+    </header>
     <main id="notes" tabindex="-1">
       <section class="course-intro notes-intro">
         <p class="eyebrow">FBLA · National 2026–27</p>
@@ -164,6 +167,7 @@ export function renderEvent(event, rendered, palette) {
         <p>Official scope: <a href="${escapeHTML(info.url)}">2026–27 CONNECT guideline</a>. The notes and companion deck have been reviewed; neither certifies your mastery or a competition result. Objective IDs are local study labels, and source-reading limits are recorded in the <a href="fbla.html#source-ledger">source ledger</a>.</p>
         <p>Confirm qualification, entry limits and conference-specific rules with your adviser. Studying all four events does not establish eligibility to enter all four.</p>${ambiguous}
         <nav aria-label="FBLA course navigation"><a href="fbla.html">FBLA course hub</a><a href="fbla.html#start-here">How to study</a><a href="fbla.html#rehearsal">Rehearsal guidance</a></nav>
+        ${inkLegend(inks, 'FBLA ink legend')}
       </section>
       ${notesLayoutControl}
       <h2 class="course-contents">Course contents</h2><ol class="course-toc contents">${toc}</ol>
@@ -222,7 +226,7 @@ function renderColorReference(palette) {
         <p class="eyebrow">Reading the notes</p>
         <h2 id="color-reference-title">Color reference</h2>
         <p><strong>Two independent layers:</strong> section headings and their matching Overview entries use varied palettes for navigation. Body terms keep one fixed color across every sheet, page, and event: LAN is always dark blue in the body, even under a differently colored heading. Light blue identifies the overall sheet title.</p>
-        <p id="color-reference-scope">The groupings below describe the current organization, not a universal conceptual taxonomy. Red includes both attacks and defensive controls; yellow includes both wireless terms and ROI. Learn the named term, rather than assuming that a color alone defines its meaning.</p>
+        <p id="color-reference-scope">These swatches and hex codes show the original light and print inks. Each course legend shows the inks in the current theme. The groupings below describe the current organization, not a universal conceptual taxonomy. Red includes both attacks and defensive controls; yellow includes both wireless terms and ROI. Learn the named term, rather than assuming that a color alone defines its meaning.</p>
         <p class="fbla-color-scroll-note">Scroll the table horizontally to see all columns on a narrow screen.</p>
         <section class="fbla-color-table" aria-label="Scrollable color reference table" tabindex="0">
           <table aria-describedby="color-reference-scope">
@@ -284,7 +288,7 @@ export function renderFbla(note = readFileSync(source, 'utf8'), courseHTML = '',
     .fbla-materials h3 { margin-block-end: 8px; }
     .fbla-materials p { margin-block-start: 0; }
     .fbla-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-block: 24px 38px; }
-    .fbla-card { min-width: 0; border: 1px solid var(--rule); padding: 20px; background: #fffefb; }
+    .fbla-card { min-width: 0; border: 1px solid var(--rule); padding: 20px; background: var(--sheet); }
     .fbla-card h3 { font-size: 22px; font-weight: normal; margin: 0 0 10px; }
     .fbla-card p, .fbla-card li { line-height: 1.65; }
     .fbla-card ul { padding-inline-start: 20px; }
@@ -341,6 +345,7 @@ export function renderFbla(note = readFileSync(source, 'utf8'), courseHTML = '',
     <header>
       <div class="masthead"><p class="wordmark">Joltlined</p><p class="masthead-note">Notes &amp; literary analysis</p></div>
       <nav class="subjects" aria-label="Subjects"><a href="index.html">Home</a><a href="ap-lang.html">AP Lang Notes</a><a href="ap-world.html">AP World History Notes</a><a href="algebra-2.html">Algebra 2 Notes</a><a href="fbla.html" aria-current="page">FBLA Study Plan</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav>
+      ${themePicker}
     </header>
     <main id="fbla-main" tabindex="-1">
       <section class="fbla-intro">

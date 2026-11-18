@@ -158,7 +158,7 @@ for (const event of ['networking', 'cybersecurity', 'network-design', 'sales']) 
   assert.match(page, /National 2026–27/);
   assert.match(page, /aria-label="Subjects"/);
   assert.match(page, /Source/);
-  assert.match(page, /class="notes-site"/);
+  assert.match(page, /<body class="notes-site(?: [^"]+)?">/);
   assert.match(page, /class="course-pages pages"/);
   assert.match(page, /class="sheet"/);
   assert.doesNotMatch(page, /audit remains pending/i);

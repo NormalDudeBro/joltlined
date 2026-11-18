@@ -24,8 +24,15 @@ async function shell(page) {
     const currentStyle = styles(current, linkProperties);
     // Remove current-state weight only while measuring, so its different position cannot shift wrapping.
     current.removeAttribute('aria-current');
+    const probe = document.createElement('span');
+    document.body.append(probe);
+    const palette = Object.fromEntries(['--paper', '--ink', '--muted', '--rule', '--accent'].map(token => {
+      probe.style.color = `var(${token})`;
+      return [token, getComputedStyle(probe).color];
+    }));
+    probe.remove();
     const result = {
-      palette: styles(document.documentElement, ['--paper', '--ink', '--muted', '--rule', '--accent', 'background-color', 'color']),
+      palette,
       body: styles(document.body, ['font-family', 'color']),
       paper: getComputedStyle(document.body).backgroundColor === 'rgba(0, 0, 0, 0)' ? getComputedStyle(document.documentElement).backgroundColor : getComputedStyle(document.body).backgroundColor,
       wrap: styles(document.querySelector('.wrap'), ['max-width', 'padding-inline-start', 'padding-inline-end']),
@@ -51,7 +58,7 @@ for (const width of [375, 1280]) {
     page.on('request', request => requests.push(request.url()));
     await page.goto('/');
     const home = await shell(page);
-    expect(home.palette).toMatchObject({ '--paper': '#f6f3eb', '--ink': '#213749', '--muted': '#586467', '--rule': '#d5cfc2', '--accent': '#83523b' });
+    expect(home.palette).toMatchObject({ '--paper': 'rgb(246, 243, 235)', '--ink': 'rgb(33, 55, 73)', '--muted': 'rgb(88, 100, 103)', '--rule': 'rgb(213, 207, 194)', '--accent': 'rgb(131, 82, 59)' });
     expect(home.paper).toBe('rgb(246, 243, 235)');
     expect(home.body.color).toBe('rgb(33, 55, 73)');
     expect(home.body['font-family']).toMatch(/^Georgia\b/);

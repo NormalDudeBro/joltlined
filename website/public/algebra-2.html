@@ -10,20 +10,17 @@
     :root { --g: #168438; --li: #79c900; --pu: #883ac2; --br: #92552f; --or: #e67e22; --y: #287db3; --p: #ed8eb4; --lb: #59b8e7; --hp: #ec228c; --pen: #62615e; --note-row-height: 8mm; }
     #notes { padding-block: 6px 40px; }
     #notes:focus { outline: none; }
-    .legend { display: flex; flex-wrap: wrap; gap: 7px 15px; font: 12px/1.5 system-ui, sans-serif; }
-    .legend span { display: inline-flex; align-items: center; gap: 5px; }
-    .swatch { width: 9px; height: 9px; border-radius: 50%; }
     .unit-title { font-size: 30px; font-weight: normal; border-block-start: 1px solid var(--ink); padding-block-start: 22px; }
-    .ink.g { color: var(--g); } .swatch.g { background: var(--g); }
-    .ink.li { color: var(--li); } .swatch.li { background: var(--li); }
-    .ink.pu { color: var(--pu); } .swatch.pu { background: var(--pu); }
-    .ink.br { color: var(--br); } .swatch.br { background: var(--br); }
-    .ink.or { color: var(--or); } .swatch.or { background: var(--or); }
-    .ink.y { color: var(--y); } .swatch.y { background: var(--y); }
-    .ink.p { color: var(--p); } .swatch.p { background: var(--p); }
-    .ink.lb { color: var(--lb); } .swatch.lb { background: var(--lb); }
-    .ink.hp { color: var(--hp); } .swatch.hp { background: var(--hp); }
-    .ink.pen { color: var(--pen); } .swatch.pen { background: var(--pen); }
+    .ink.g { color: var(--view-g, var(--g)); } .swatch.g { background: var(--view-g, var(--g)); }
+    .ink.li { color: var(--view-li, var(--li)); } .swatch.li { background: var(--view-li, var(--li)); }
+    .ink.pu { color: var(--view-pu, var(--pu)); } .swatch.pu { background: var(--view-pu, var(--pu)); }
+    .ink.br { color: var(--view-br, var(--br)); } .swatch.br { background: var(--view-br, var(--br)); }
+    .ink.or { color: var(--view-or, var(--or)); } .swatch.or { background: var(--view-or, var(--or)); }
+    .ink.y { color: var(--view-y, var(--y)); } .swatch.y { background: var(--view-y, var(--y)); }
+    .ink.p { color: var(--view-p, var(--p)); } .swatch.p { background: var(--view-p, var(--p)); }
+    .ink.lb { color: var(--view-lb, var(--lb)); } .swatch.lb { background: var(--view-lb, var(--lb)); }
+    .ink.hp { color: var(--view-hp, var(--hp)); } .swatch.hp { background: var(--view-hp, var(--hp)); }
+    .ink.pen { color: var(--view-pen, var(--pen)); } .swatch.pen { background: var(--view-pen, var(--pen)); }
     @media print {
       #notes { padding: 0; }
       .unit-title { display: none; }
@@ -38,6 +35,7 @@
   <header>
     <div class="masthead"><p class="wordmark">Joltlined</p><p class="masthead-note">Notes &amp; literary analysis</p></div>
      <nav class="subjects" aria-label="Subjects"><a href="index.html">Home</a><a href="ap-lang.html">AP Lang Notes</a><a href="ap-world.html">AP World History Notes</a><a href="algebra-2.html" aria-current="page">Algebra 2 Notes</a><a href="fbla.html">FBLA Study Plan</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav>
+    <label class="theme-picker">Theme <select><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
     <div class="notes-intro">
     <p class="eyebrow">Algebra 2 / Modules 1B &amp; 2A</p>
     <h1>Algebra 2: Functions and Linear Systems</h1>
@@ -47,7 +45,7 @@
     <p>Notation: R means real numbers; inf means infinity; ^ denotes a power; floor(x) is the greatest integer at most x. Math symbols remain pencil.</p>
     <p class="flashcard-link"><a href="algebra-2-flashcards.html">Study the Algebra 2 teaching flashcards →</a></p>
     <ol class="contents"><li><a href="#topic-1-5-linear">1.5 Graphing Linear Functions and Inequalities</a></li><li><a href="#topic-1-6-1-piecewise">1.6.1 Piecewise Functions</a></li><li><a href="#topic-1-6-2-step">1.6.2 Step Functions</a></li><li><a href="#topic-1-6-3-absolute-value">1.6.3 Absolute Value Functions</a></li><li><a href="#topic-1-7-1-parents">1.7.1 Parent Functions</a></li><li><a href="#topic-1-7-2-translations">1.7.2 Translations of Functions</a></li><li><a href="#topic-1-7-3-dilations">1.7.3 Dilations and Reflections</a></li><li><a href="#topic-1-7-3-combined">1.7.3 Combined Transformations</a></li><li><a href="#topic-2-3-linear-equations">2.3 Equations of Linear Functions</a></li><li><a href="#topic-2-4-graphing-systems">2.4 Solving Systems of Equations Graphically</a></li><li><a href="#topic-2-5-algebraic-systems">2.5 Solving Systems of Equations Algebraically</a></li><li><a href="#topic-2-6-inequality-systems">2.6 Solving Systems of Inequalities</a></li><li><a href="#topic-2-7-linear-programming">2.7 Optimization with Linear Programming</a></li></ol>
-    <div class="legend" role="group" aria-label="Token color legend"><span><i class="swatch g" aria-hidden="true"></i>g dark green</span><span><i class="swatch li" aria-hidden="true"></i>li lime green</span><span><i class="swatch pu" aria-hidden="true"></i>pu purple</span><span><i class="swatch br" aria-hidden="true"></i>br brown</span><span><i class="swatch or" aria-hidden="true"></i>or orange</span><span><i class="swatch y" aria-hidden="true"></i>y medium blue</span><span><i class="swatch p" aria-hidden="true"></i>p pink</span><span><i class="swatch lb" aria-hidden="true"></i>lb light blue</span><span><i class="swatch hp" aria-hidden="true"></i>hp hot pink</span><span><i class="swatch pen" aria-hidden="true"></i>pen pencil</span></div>
+    <div class="legend" role="group" aria-label="Token color legend"><span><i class="swatch g" aria-hidden="true"></i>g dark green</span><span><i class="swatch li" aria-hidden="true"></i>li lime green</span><span><i class="swatch pu" aria-hidden="true"></i>pu purple</span><span><i class="swatch br" aria-hidden="true"></i>br brown</span><span><i class="swatch or" aria-hidden="true"></i>or orange</span><span><i class="swatch y" aria-hidden="true"></i>y medium blue</span><span><i class="swatch p" aria-hidden="true"></i>p light pink</span><span><i class="swatch lb" aria-hidden="true"></i>lb light blue</span><span><i class="swatch hp" aria-hidden="true"></i>hp hot pink</span><span><i class="swatch pen" aria-hidden="true"></i>pen pencil</span></div>
     </div>
   </header>
   <main id="notes" tabindex="-1" class="study">
