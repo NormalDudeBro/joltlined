@@ -24,6 +24,32 @@ test('AP World stacks the note pages at the effective viewport of a 5120×1440 d
   await expectSpread(page, true);
 });
 
+test('5120×1440 zoom matrix: enlarged spread at low zoom, auto-stack once the effective height drops below 30rem', async ({ page }) => {
+  // Desktop page zoom shrinks the CSS layout viewport: 5120×1440 at zoom z is 5120/z × usableHeight/z.
+  // Browser chrome (~120 device px) is not zoomed, so 280% with chrome is 1829×471 and stacks.
+  await page.goto('/ap-world.html');
+  const cases = [
+    // [zoom, usable device height, expected viewport, stacked, enlarged type]
+    [100, 1440, { width: 5120, height: 1440 }, false, true],
+    [200, 1320, { width: 2560, height: 660 }, false, true],
+    [250, 1440, { width: 2048, height: 576 }, false, false],
+    [280, 1440, { width: 1829, height: 514 }, false, false],
+    [280, 1320, { width: 1829, height: 471 }, true, false],
+    [300, 1440, { width: 1707, height: 480 }, true, false],
+    [500, 1440, { width: 1024, height: 288 }, true, false],
+  ];
+  for (const [zoom, deviceHeight, viewport, stacked, enlarged] of cases) {
+    await page.setViewportSize(viewport);
+    await expectSpread(page, stacked);
+    const note = firstSpread(page).first().locator('.note').first();
+    await expect(note).toHaveCSS('font-size', enlarged ? '18px' : '14px');
+    const stack = page.getByRole('checkbox', { name: 'Stack note pages' });
+    if (stacked) await expect(stack).toBeHidden();
+    else await expect(stack).toBeVisible();
+    test.info().annotations.push({ type: 'zoom', description: `${zoom}% on 5120×1440 (${deviceHeight}px usable) -> ${viewport.width}×${viewport.height} CSS px` });
+  }
+});
+
 for (const path of ['ap-world', 'ap-lang', 'algebra-2', 'fbla-networking']) {
   test(`${path} keeps a readable ultrawide spread and reflows for zoom, tablet and phone`, async ({ page }) => {
     await page.setViewportSize({ width: 5120, height: 1440 });

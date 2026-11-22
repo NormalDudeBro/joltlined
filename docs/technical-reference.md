@@ -51,6 +51,18 @@ The **Theme** selector follows the device by default. Light or Dark overrides ap
 
 Numbered note pages use a centered two-page spread when the browser has room. Wide, tall viewports get larger sheets, type, and line numbers for reading while writing on paper. Short viewports also trigger vertical stacking: on a 5120×1440 display at 500% browser zoom, the effective viewport can still be wider than the original 960px breakpoint. Where a spread would otherwise appear, **Stack note pages** switches to one centered column without JavaScript or a zoom change. These screen layouts do not affect A4 pagination.
 
+On a 5120×1440 (32:9) display, desktop page zoom divides the CSS viewport by the zoom factor while browser chrome keeps its physical size, so the effective *height* is what flips the layout. With ~120 px of browser chrome (1320 usable px), the breakpoints resolve as follows:
+
+| Browser zoom | Effective viewport | Layout | Note type |
+| --- | --- | --- | --- |
+| 100–200% | 5120×1440 down to 2560×660 | two-page spread, enlarged (94rem wrap) | 18px |
+| 225–280% | 2276×640 down to 1829×514 | two-page spread; enlarged only while height ≥ 40rem (640px) | 18px, else 14px |
+| 280% with chrome | 1829×471 | auto-stacked single centered column (max 48rem) | 14px |
+| ≥300% full height | 1707×480 and below | auto-stacked (height < 30rem = 480px) | 14px |
+| ≥534% | width < 960px | stacked via the width breakpoint | 14px |
+
+Single-page display at 280% on 5120×1440 is therefore expected: 1320/2.8 ≈ 471 CSS px is under the 30rem height breakpoint even though the width (1829px) is far above 960px. While a spread is showing, **Stack note pages** offers the same single column without a zoom change; it hides once the layout has already stacked. For studying alongside paper, 100–200% gives the enlarged spread designed for reading while writing, and printing stays A4 portrait with headers/footers off and background graphics on, independent of screen zoom. `tests/notes-layout.spec.mjs` pins this matrix.
+
 All three literary companions use identical twelve-section headings, section containers, and a title/author/cover/introduction/action hero. The cover sits alongside the title on larger screens and uses the same compact mobile layout for each book. Novel vocabulary uses `dl.definition-list` with term/definition pairs; book-specific supplementary handout material remains separate. Shared pamphlet-map, setting, vocabulary, and theme subsection labels are consistent without requiring identical book-specific analysis. `tests/literature.spec.mjs` checks these shared structures, intrinsic cover dimensions, and undistorted responsive covers at 375px, 760px, and 1280px in LTR and forced RTL.
 
 `styles/site.css` supplies the academic shell: paper `#f6f3eb`, ink `#213749`, Georgia body text, responsive wrapper, masthead, navigation, visible focus and footer. Each page links it once via `styles/site.css`. Existing literary controls and subject content are preserved. Approved inks and light-blue topic headings retain the documented contrast exception, with original plaintext alternatives. World History prints 56 pages and AP Lang four, at 24 notes per page; Algebra 2 prints 26 at 29 notes per page. The four FBLA courses print 28/26/24/10 pages with 24 numbered lines each. Their hub and retained pilot are flowing references outside that sheet count.
