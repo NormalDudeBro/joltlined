@@ -1,27 +1,27 @@
 {
   "master": {
     "file": "fbla.apkg",
-    "notes": 770,
-    "cards": 870
+    "notes": 748,
+    "cards": 848
   },
   "events": {
     "networking": {
       "name": "Networking Infrastructures",
       "file": "networking.apkg",
-      "notes": 368,
-      "cards": 414
+      "notes": 364,
+      "cards": 410
     },
     "cybersecurity": {
       "name": "Cybersecurity",
       "file": "cybersecurity.apkg",
-      "notes": 269,
-      "cards": 311
+      "notes": 252,
+      "cards": 294
     },
     "network-design": {
       "name": "Network Design",
       "file": "network-design.apkg",
-      "notes": 101,
-      "cards": 110
+      "notes": 100,
+      "cards": 109
     },
     "sales": {
       "name": "Sales Presentation",
@@ -42,15 +42,15 @@
       "title": "Segmentation, Isolation, and IoT",
       "event": "cybersecurity",
       "file": "cs-design-isolation.apkg",
-      "notes": 11,
-      "cards": 11
+      "notes": 10,
+      "cards": 10
     },
     "cs-design-resilience": {
       "title": "Resilience and Security Testing",
       "event": "cybersecurity",
       "file": "cs-design-resilience.apkg",
-      "notes": 20,
-      "cards": 24
+      "notes": 19,
+      "cards": 23
     },
     "cs-data-cryptography": {
       "title": "Cryptography and Data Protection",
@@ -70,8 +70,8 @@
       "title": "Security Goals, Trust, and Number Bases",
       "event": "cybersecurity",
       "file": "cs-fundamentals-trust.apkg",
-      "notes": 33,
-      "cards": 39
+      "notes": 27,
+      "cards": 33
     },
     "cs-fundamentals-controls": {
       "title": "Access, Factors, and Defensive Decoys",
@@ -84,22 +84,22 @@
       "title": "Actors, Malware, and Software Weaknesses",
       "event": "cybersecurity",
       "file": "cs-threats-software.apkg",
-      "notes": 26,
-      "cards": 30
+      "notes": 24,
+      "cards": 28
     },
     "cs-threats-human-crypto": {
       "title": "Social, Service, Cryptographic, and Wireless Threats",
       "event": "cybersecurity",
       "file": "cs-threats-human-crypto.apkg",
-      "notes": 27,
-      "cards": 28
+      "notes": 23,
+      "cards": 24
     },
     "cs-operations-policy": {
       "title": "Policies, Continuity, and Secure Communication",
       "event": "cybersecurity",
       "file": "cs-operations-policy.apkg",
-      "notes": 21,
-      "cards": 22
+      "notes": 18,
+      "cards": 19
     },
     "cs-operations-firewalls": {
       "title": "Firewall Types and Least-Privilege ACLs",
@@ -175,8 +175,8 @@
       "title": "Recovery, Monitoring, and Wireless Security",
       "event": "network-design",
       "file": "nd-security-recovery.apkg",
-      "notes": 11,
-      "cards": 11
+      "notes": 10,
+      "cards": 10
     },
     "nd-protocols-environments": {
       "title": "Network Environments and Security",
@@ -210,8 +210,8 @@
       "title": "Network models and LANs",
       "event": "networking",
       "file": "ni-basics-models.apkg",
-      "notes": 24,
-      "cards": 24
+      "notes": 22,
+      "cards": 22
     },
     "ni-basics-forwarding": {
       "title": "OSI layers and packet forwarding",
@@ -252,8 +252,8 @@
       "title": "Cloud models and trade-offs",
       "event": "networking",
       "file": "ni-wireless-cloud.apkg",
-      "notes": 17,
-      "cards": 19
+      "notes": 15,
+      "cards": 17
     },
     "ni-wireless-performance": {
       "title": "Wireless performance and 5G",
