@@ -105,7 +105,9 @@ assert.match(html, /Complete event study courses/);
 assert.match(html, /Start here: one topic, one practice attempt/);
 assert.match(html, /Sources, practice, lab and scope notes/);
 assert.match(html, /card order is not a lesson sequence/);
-assert.match(html, /optional 654-card Anki package/);
+assert.match(html, /href="fbla-flashcards\.html">Flashcards/);
+assert.match(html, /href="notes\/fbla\/cards\/fbla\.apkg" download/);
+assert.match(html, /870 cards/);
 assert.match(html, /not 17 additional official requirements or 17 separate assignments/);
 assert.match(html, /8 Network Design skills and 9 Sales Presentation skills/);
 assert.match(html, /not the required first lesson/);
@@ -127,10 +129,11 @@ for (const item of rehearsalItems) {
   assert.ok(html.includes(`href="fbla-${item.event}.html#${item.sheet}"`));
   assert.ok(item.title && item.practice);
 }
-assert.match(html, /192 Anki cards/);
-assert.match(html, /194 Anki cards/);
-assert.match(html, /180 Anki cards/);
-assert.match(html, /88 Anki cards/);
+assert.match(html, /414 Anki cards/);
+assert.match(html, /Open Networking Infrastructures course<\/a> · <a href="notes\/fbla\/cards\/networking\.apkg" download>Download cards/);
+assert.match(html, /311 Anki cards/);
+assert.match(html, /110 Anki cards/);
+assert.match(html, /35 Anki cards/);
 assert.match(html, /Networking Infrastructures/);
 assert.match(html, /Protocols and threat mitigation: 20 of 100/);
 assert.match(html, /Installation and configuration: 25 of 100/);
@@ -161,6 +164,7 @@ for (const event of ['networking', 'cybersecurity', 'network-design', 'sales']) 
   assert.match(page, /<body class="notes-site(?: [^"]+)?">/);
   assert.match(page, /class="course-pages pages"/);
   assert.match(page, /class="sheet"/);
+  assert.match(page, /class="sheet-card-download"/);
   assert.doesNotMatch(page, /audit remains pending/i);
   assert.doesNotMatch(page, /<script\b/i);
 }

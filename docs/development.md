@@ -16,7 +16,7 @@ npm run test:e2e -- --workers=1
 
 | Command | Purpose |
 | --- | --- |
-| `npm run build` | Validate note sources and regenerate Home, subject pages, flashcards, and the FBLA reference page; accepts `--unit4 <directory>` for an explicit Unit 4 source directory |
+| `npm run build` | Validate note sources and regenerate Home, subject pages, Algebra flashcards, the FBLA hub, four event courses, and the FBLA flashcards page; accepts `--unit4 <directory>` for an explicit Unit 4 source directory |
 | `npm run validate` | Run HTML validation (`public/*.html`) and static/content checks without launching a browser |
 | `npm run test:e2e -- --workers=1` | Run the Playwright suite with one browser worker |
 | `npm test` | Run static validation, then the browser suite |
@@ -28,7 +28,7 @@ The **Quality** GitHub Actions workflow runs on pushes to `main` and on pull req
 - **Course content:** edit original and corresponding `Colored/` sources in `website/public/notes/`, preserving the marker rules and subject-specific line counts. Then, from `website/`, run `npm run build`.
 - **Generated layout:** edit the appropriate generator in `website/scripts/`, not just its generated HTML output.
 - **Literary companions:** edit `website/public/out-of-my-mind.html`, `website/public/of-mice-and-men.html`, and `website/public/fahrenheit-451.html` directly. They are maintained separately, not regenerated from note sources.
-- **FBLA:** edit structured modules in `website/scripts/fbla-content/` and the generator `website/scripts/fbla.mjs`; the build produces 44 fixed 48-line original/colored sheets and four event pages. The retained IPv4 pilot at `website/public/notes/fbla/ipv4-subnetting.txt` is a separate flowing reference. See the [FBLA content and scope guide](fbla.md).
+- **FBLA:** edit structured modules in `website/scripts/fbla-content/` and the generator `website/scripts/fbla.mjs`; the build produces 44 fixed 48-line original/colored sheets, four event pages, and `fbla-flashcards.html`. Replace `website/public/notes/fbla/cards/` and its manifest together when the decks change; the generator links those files and does not export them. The retained IPv4 pilot at `website/public/notes/fbla/ipv4-subnetting.txt` is a separate flowing reference. See the [FBLA content and scope guide](fbla.md).
 - **Shared presentation:** edit `website/public/styles/site.css`, and check every subject and all three companions.
 
 Commit regenerated pages alongside the source changes. Keep source text files in LF format as defined in `.gitattributes`; embedded downloads must preserve the source bytes.

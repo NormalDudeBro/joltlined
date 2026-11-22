@@ -1,0 +1,343 @@
+{
+  "master": {
+    "file": "fbla.apkg",
+    "notes": 770,
+    "cards": 870
+  },
+  "events": {
+    "networking": {
+      "name": "Networking Infrastructures",
+      "file": "networking.apkg",
+      "notes": 368,
+      "cards": 414
+    },
+    "cybersecurity": {
+      "name": "Cybersecurity",
+      "file": "cybersecurity.apkg",
+      "notes": 269,
+      "cards": 311
+    },
+    "network-design": {
+      "name": "Network Design",
+      "file": "network-design.apkg",
+      "notes": 101,
+      "cards": 110
+    },
+    "sales": {
+      "name": "Sales Presentation",
+      "file": "sales.apkg",
+      "notes": 32,
+      "cards": 35
+    }
+  },
+  "sheets": {
+    "cs-design-platforms": {
+      "title": "Secure Platforms and Architecture",
+      "event": "cybersecurity",
+      "file": "cs-design-platforms.apkg",
+      "notes": 9,
+      "cards": 10
+    },
+    "cs-design-isolation": {
+      "title": "Segmentation, Isolation, and IoT",
+      "event": "cybersecurity",
+      "file": "cs-design-isolation.apkg",
+      "notes": 11,
+      "cards": 11
+    },
+    "cs-design-resilience": {
+      "title": "Resilience and Security Testing",
+      "event": "cybersecurity",
+      "file": "cs-design-resilience.apkg",
+      "notes": 20,
+      "cards": 24
+    },
+    "cs-data-cryptography": {
+      "title": "Cryptography and Data Protection",
+      "event": "cybersecurity",
+      "file": "cs-data-cryptography.apkg",
+      "notes": 20,
+      "cards": 22
+    },
+    "cs-data-access": {
+      "title": "Data States and Access Control",
+      "event": "cybersecurity",
+      "file": "cs-data-access.apkg",
+      "notes": 17,
+      "cards": 18
+    },
+    "cs-fundamentals-trust": {
+      "title": "Security Goals, Trust, and Number Bases",
+      "event": "cybersecurity",
+      "file": "cs-fundamentals-trust.apkg",
+      "notes": 33,
+      "cards": 39
+    },
+    "cs-fundamentals-controls": {
+      "title": "Access, Factors, and Defensive Decoys",
+      "event": "cybersecurity",
+      "file": "cs-fundamentals-controls.apkg",
+      "notes": 20,
+      "cards": 28
+    },
+    "cs-threats-software": {
+      "title": "Actors, Malware, and Software Weaknesses",
+      "event": "cybersecurity",
+      "file": "cs-threats-software.apkg",
+      "notes": 26,
+      "cards": 30
+    },
+    "cs-threats-human-crypto": {
+      "title": "Social, Service, Cryptographic, and Wireless Threats",
+      "event": "cybersecurity",
+      "file": "cs-threats-human-crypto.apkg",
+      "notes": 27,
+      "cards": 28
+    },
+    "cs-operations-policy": {
+      "title": "Policies, Continuity, and Secure Communication",
+      "event": "cybersecurity",
+      "file": "cs-operations-policy.apkg",
+      "notes": 21,
+      "cards": 22
+    },
+    "cs-operations-firewalls": {
+      "title": "Firewall Types and Least-Privilege ACLs",
+      "event": "cybersecurity",
+      "file": "cs-operations-firewalls.apkg",
+      "notes": 14,
+      "cards": 15
+    },
+    "cs-mitigation-protocols": {
+      "title": "Secure Protocols, Detection, and Data Methods",
+      "event": "cybersecurity",
+      "file": "cs-mitigation-protocols.apkg",
+      "notes": 39,
+      "cards": 52
+    },
+    "cs-mitigation-practice": {
+      "title": "Password Security, Patching, and Authorized Testing",
+      "event": "cybersecurity",
+      "file": "cs-mitigation-practice.apkg",
+      "notes": 12,
+      "cards": 12
+    },
+    "nd-administration-maintenance": {
+      "title": "Network administration: maintenance and monitoring",
+      "event": "network-design",
+      "file": "nd-administration-maintenance.apkg",
+      "notes": 11,
+      "cards": 12
+    },
+    "nd-administration-troubleshooting": {
+      "title": "Network administration: diagnostics and assets",
+      "event": "network-design",
+      "file": "nd-administration-troubleshooting.apkg",
+      "notes": 6,
+      "cards": 6
+    },
+    "nd-planning-requirements": {
+      "title": "Network planning: requirements and scale",
+      "event": "network-design",
+      "file": "nd-planning-requirements.apkg",
+      "notes": 4,
+      "cards": 4
+    },
+    "nd-planning-tradeoffs": {
+      "title": "Network planning: tradeoffs and services",
+      "event": "network-design",
+      "file": "nd-planning-tradeoffs.apkg",
+      "notes": 6,
+      "cards": 6
+    },
+    "nd-installation-soho-links": {
+      "title": "SOHO Links, Wireless, and Addressing",
+      "event": "network-design",
+      "file": "nd-installation-soho-links.apkg",
+      "notes": 10,
+      "cards": 14
+    },
+    "nd-installation-physical-services": {
+      "title": "Physical Infrastructure and Printing",
+      "event": "network-design",
+      "file": "nd-installation-physical-services.apkg",
+      "notes": 8,
+      "cards": 9
+    },
+    "nd-security-access-platforms": {
+      "title": "Security, Access, and Platform Controls",
+      "event": "network-design",
+      "file": "nd-security-access-platforms.apkg",
+      "notes": 15,
+      "cards": 15
+    },
+    "nd-security-recovery": {
+      "title": "Recovery, Monitoring, and Wireless Security",
+      "event": "network-design",
+      "file": "nd-security-recovery.apkg",
+      "notes": 11,
+      "cards": 11
+    },
+    "nd-protocols-environments": {
+      "title": "Network Environments and Security",
+      "event": "network-design",
+      "file": "nd-protocols-environments.apkg",
+      "notes": 11,
+      "cards": 13
+    },
+    "nd-protocols-troubleshooting": {
+      "title": "Protocols and Troubleshooting",
+      "event": "network-design",
+      "file": "nd-protocols-troubleshooting.apkg",
+      "notes": 8,
+      "cards": 8
+    },
+    "nd-roleplay-analysis": {
+      "title": "Analyze and Recommend a Network Design",
+      "event": "network-design",
+      "file": "nd-roleplay-analysis.apkg",
+      "notes": 5,
+      "cards": 5
+    },
+    "nd-roleplay-delivery": {
+      "title": "Deliver and Defend the Recommendation",
+      "event": "network-design",
+      "file": "nd-roleplay-delivery.apkg",
+      "notes": 6,
+      "cards": 7
+    },
+    "ni-basics-models": {
+      "title": "Network models and LANs",
+      "event": "networking",
+      "file": "ni-basics-models.apkg",
+      "notes": 24,
+      "cards": 24
+    },
+    "ni-basics-forwarding": {
+      "title": "OSI layers and packet forwarding",
+      "event": "networking",
+      "file": "ni-basics-forwarding.apkg",
+      "notes": 26,
+      "cards": 31
+    },
+    "ni-basics-addressing": {
+      "title": "Internet access and addressing",
+      "event": "networking",
+      "file": "ni-basics-addressing.apkg",
+      "notes": 31,
+      "cards": 35
+    },
+    "ni-addressing-calculations": {
+      "title": "IP formats, CIDR and subnet calculation",
+      "event": "networking",
+      "file": "ni-addressing-calculations.apkg",
+      "notes": 32,
+      "cards": 44
+    },
+    "ni-topologies": {
+      "title": "Network scope and topologies",
+      "event": "networking",
+      "file": "ni-topologies.apkg",
+      "notes": 18,
+      "cards": 21
+    },
+    "ni-topology-choices": {
+      "title": "Topology selection and wireless LANs",
+      "event": "networking",
+      "file": "ni-topology-choices.apkg",
+      "notes": 11,
+      "cards": 11
+    },
+    "ni-wireless-cloud": {
+      "title": "Cloud models and trade-offs",
+      "event": "networking",
+      "file": "ni-wireless-cloud.apkg",
+      "notes": 17,
+      "cards": 19
+    },
+    "ni-wireless-performance": {
+      "title": "Wireless performance and 5G",
+      "event": "networking",
+      "file": "ni-wireless-performance.apkg",
+      "notes": 17,
+      "cards": 19
+    },
+    "ni-hardware-links": {
+      "title": "Network Hardware Links and Media",
+      "event": "networking",
+      "file": "ni-hardware-links.apkg",
+      "notes": 21,
+      "cards": 21
+    },
+    "ni-hardware-infrastructure": {
+      "title": "Server and Storage Infrastructure",
+      "event": "networking",
+      "file": "ni-hardware-infrastructure.apkg",
+      "notes": 20,
+      "cards": 22
+    },
+    "ni-security-controls": {
+      "title": "Network Security Controls",
+      "event": "networking",
+      "file": "ni-security-controls.apkg",
+      "notes": 53,
+      "cards": 55
+    },
+    "ni-security-threats": {
+      "title": "Network Threats and Mitigation",
+      "event": "networking",
+      "file": "ni-security-threats.apkg",
+      "notes": 27,
+      "cards": 28
+    },
+    "ni-protocols-services": {
+      "title": "Network Protocols and Services",
+      "event": "networking",
+      "file": "ni-protocols-services.apkg",
+      "notes": 43,
+      "cards": 51
+    },
+    "ni-protocols-routing-media": {
+      "title": "Routing, Ethernet, and Wireless",
+      "event": "networking",
+      "file": "ni-protocols-routing-media.apkg",
+      "notes": 28,
+      "cards": 33
+    },
+    "sp-discovery-opening": {
+      "title": "Opening and Customer Discovery",
+      "event": "sales",
+      "file": "sp-discovery-opening.apkg",
+      "notes": 5,
+      "cards": 5
+    },
+    "sp-product-value-evidence": {
+      "title": "Product Value and Evidence",
+      "event": "sales",
+      "file": "sp-product-value-evidence.apkg",
+      "notes": 7,
+      "cards": 7
+    },
+    "sp-objections-suggestion-close": {
+      "title": "Objections, Related Suggestions, and Close",
+      "event": "sales",
+      "file": "sp-objections-suggestion-close.apkg",
+      "notes": 6,
+      "cards": 6
+    },
+    "sp-relationships-organization": {
+      "title": "Relationships and Organized Conversation",
+      "event": "sales",
+      "file": "sp-relationships-organization.apkg",
+      "notes": 5,
+      "cards": 5
+    },
+    "sp-delivery-protocols": {
+      "title": "Delivery, Questions, and Event Protocols",
+      "event": "sales",
+      "file": "sp-delivery-protocols.apkg",
+      "notes": 9,
+      "cards": 12
+    }
+  }
+}

@@ -5,7 +5,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { parseArgs } from 'node:util';
 import { renderHome } from './home.mjs';
 import { renderFlashcards } from './flashcards.mjs';
-import { renderFbla, renderCourseSheets, renderEvent, renderCourseHub, colorSheet } from './fbla.mjs';
+import { renderFbla, renderCourseSheets, renderEvent, renderCourseHub, renderFlashcardPage, colorSheet } from './fbla.mjs';
 import { notesLayoutControl } from './notes-layout.mjs';
 import { inkLegend, themePicker } from './theme.mjs';
 
@@ -306,6 +306,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
     writeFileSync(resolve(target, 'algebra-2.html'), renderSite([], undefined, algebra));
     writeFileSync(resolve(target, 'algebra-2-flashcards.html'), renderFlashcards(escapeHTML, loadAlgebraNotes));
     writeFileSync(resolve(target, 'fbla.html'), renderFbla(undefined, renderCourseHub(course), palette));
+    writeFileSync(resolve(target, 'fbla-flashcards.html'), renderFlashcardPage());
     for (const event of ['networking', 'cybersecurity', 'network-design', 'sales']) writeFileSync(resolve(target, `fbla-${event}.html`), renderEvent(event, course, palette));
     const coverage = course.sheets.flatMap(({ module, sheet }) => sheet.pages.flatMap((page, pageIndex) => page.map((section, sectionIndex) => {
       const start = pageIndex * 24 + (sectionIndex === 0 ? 5 : 15);

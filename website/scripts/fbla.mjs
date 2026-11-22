@@ -10,6 +10,8 @@ export { colorSheet } from './fbla-colors.mjs';
 const escapeHTML = text => text.replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 const source = fileURLToPath(new URL('../public/notes/fbla/ipv4-subnetting.txt', import.meta.url));
 export const rehearsalItems = JSON.parse(readFileSync(new URL('./fbla-rehearsal.json', import.meta.url), 'utf8'));
+const flashcards = JSON.parse(readFileSync(new URL('../public/notes/fbla/cards/manifest.json', import.meta.url), 'utf8'));
+const cardHref = file => `notes/fbla/cards/${file}`;
 const events = [
   {
     name: 'Networking Infrastructures', file: 'Networking-Infrastructures', id: 'networking', edition: 'National 2026–27', cards: 192,
@@ -130,7 +132,7 @@ export function renderEvent(event, rendered, palette) {
       <p class="course-domain">${escapeHTML(sheet.domain)}</p>
       <div class="course-download downloads"><a download="${escapeHTML(sheet.id)}.txt" href="data:text/plain;charset=utf-8;base64,${Buffer.from(plain).toString('base64')}">Download plain</a> · <a download="${escapeHTML(sheet.id)}-colored.txt" href="data:text/plain;charset=utf-8;base64,${Buffer.from(colored).toString('base64')}">Download colored</a></div>
       <div class="course-pages pages">${[0,1].map(page => `<article aria-label="${escapeHTML(sheet.title)} page ${page+1}"><h3 class="page-title">${escapeHTML(sheet.title)}</h3><p class="course-page-label caption">Page ${page+1} · Lines ${page*24+1}–${page*24+24}</p><div class="sheet">${colored.split('\n').slice(page*24,page*24+24).map((line,index) => `<div class="line"><span class="number" aria-hidden="true">${page*24+index+1}</span><span class="note">${renderCourseLine(line)}</span></div>`).join('')}</div></article>`).join('')}</div>
-      <details><summary>Sources, practice, lab and scope notes</summary><h3>Objectives</h3><ul>${[...new Set(sheet.pages.flatMap(page=>page.flatMap(section=>section.objectives)))].map(id=>`<li>${escapeHTML(id)}</li>`).join('')}</ul><h3>Sources</h3><ul>${module.sources.map(source=>`<li><a href="${escapeHTML(source.url)}">${escapeHTML(source.title)}</a> — ${escapeHTML(source.reading)}; ${escapeHTML(source.scope)}</li>`).join('')}</ul><h3>Practice (answers below)</h3>${sheet.practice.map((item,index)=>`<details><summary>${index+1}. ${escapeHTML(item.prompt)}</summary><p>${escapeHTML(item.answer)}</p></details>`).join('')}<h3>${escapeHTML(module.lab.title)}</h3><ol>${module.lab.steps.map(step=>`<li>${escapeHTML(step)}</li>`).join('')}</ol><p>Expected: ${module.lab.expected.map(escapeHTML).join(' ')}</p><p>Limitations: ${module.limitations.map(escapeHTML).join(' ')}</p></details>
+      <div class="sheet-tools"><a class="sheet-card-download" href="${cardHref(flashcards.sheets[sheet.id].file)}" download>Download cards</a><details><summary>Sources, practice, lab and scope notes</summary><h3>Objectives</h3><ul>${[...new Set(sheet.pages.flatMap(page=>page.flatMap(section=>section.objectives)))].map(id=>`<li>${escapeHTML(id)}</li>`).join('')}</ul><h3>Sources</h3><ul>${module.sources.map(source=>`<li><a href="${escapeHTML(source.url)}">${escapeHTML(source.title)}</a> — ${escapeHTML(source.reading)}; ${escapeHTML(source.scope)}</li>`).join('')}</ul><h3>Practice (answers below)</h3>${sheet.practice.map((item,index)=>`<details><summary>${index+1}. ${escapeHTML(item.prompt)}</summary><p>${escapeHTML(item.answer)}</p></details>`).join('')}<h3>${escapeHTML(module.lab.title)}</h3><ol>${module.lab.steps.map(step=>`<li>${escapeHTML(step)}</li>`).join('')}</ol><p>Expected: ${module.lab.expected.map(escapeHTML).join(' ')}</p><p>Limitations: ${module.limitations.map(escapeHTML).join(' ')}</p></details></div>
     </section>`;
   }).join('');
   const ambiguous = event === 'network-design' ? '<p>Guideline ambiguity: flipchart/visual-aid language conflicts with no-visuals direction; SMP is undefined. Confirm with adviser; no resolution inferred.</p>' : event === 'sales' ? '<p>Guideline ambiguity: final electricity requirement is unclear. Confirm with adviser. Competitors must prepare their own actual entry; these materials are not a ready-to-submit pitch.</p>' : '';
@@ -145,11 +147,15 @@ export function renderEvent(event, rendered, palette) {
     #notes:focus { outline: none; }
     .course-domain { margin-block: 0 12px; color: var(--muted); font: 11px/1.5 system-ui, sans-serif; }
     .course-sheet details { margin-block: 18px; overflow-wrap: anywhere; }
+    .sheet-tools { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 18px; align-items: start; }
+    .sheet-card-download { grid-column: 2; grid-row: 1; margin-block-start: 8px; font: 13px/1.6 system-ui, sans-serif; white-space: nowrap; }
+    .sheet-tools > details { grid-column: 1; grid-row: 1; }
     .course-sheet summary { cursor: pointer; padding-block: 8px; }
     .course-sheet summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    @media (max-width: 640px) { .sheet-tools { grid-template-columns: 1fr; } .sheet-card-download { grid-column: 1; grid-row: 2; margin-block-start: 0; } }
     @media print {
       #notes { padding: 0; }
-      .course-intro, .course-contents, .course-toc, .course-domain, .course-sheet > details { display: none !important; }
+      .course-intro, .course-contents, .course-toc, .course-domain, .sheet-card-download, .sheet-tools > details { display: none !important; }
     }
   </style>
 </head><body class="notes-site event-notes">
@@ -352,22 +358,22 @@ export function renderFbla(note = readFileSync(source, 'utf8'), courseHTML = '',
         <p class="eyebrow">Business &amp; technology competitions</p>
         <h1>FBLA Study Plan</h1>
         <p>One study system, four events. Use explanations to understand a topic, recall practice to remember it, and applied tasks to use it without help. Start with one topic and a practice attempt; explore the source references when more detail is needed.</p>
-        <p><strong>Study resources:</strong> 44 two-page reference sheets with practice questions and labs. The website can be used on its own; an optional 654-card Anki package supports additional recall practice. Use practice results to decide what to study next.</p>
-        <nav class="fbla-jumps" aria-label="FBLA study sections"><a href="#start-here">Start here</a><a href="#event-courses">Choose an event</a><a href="#color-reference">Color reference</a><a href="#practice-plan">Plan a study schedule</a><a href="#rehearsal">Skills to rehearse</a><a href="#source-ledger">Sources and limits</a></nav>
+        <p><strong>Study resources:</strong> 44 two-page reference sheets with practice questions and labs. Short recall cards for those sheets are on the <a href="fbla-flashcards.html">flashcards page</a>. Use practice results to decide what to study next.</p>
+        <nav class="fbla-jumps" aria-label="FBLA study sections"><a href="#start-here">Start here</a><a href="#event-courses">Choose an event</a><a href="#color-reference">Color reference</a><a href="#practice-plan">Plan a study schedule</a><a href="#rehearsal">Skills to rehearse</a><a href="fbla-flashcards.html">Flashcards</a><a href="#source-ledger">Sources and limits</a></nav>
       </section>
       <section class="fbla-section fbla-start" id="start-here">
         <h2>Start here: one topic, one practice attempt</h2>
         <ol>
           <li><strong>Choose an event below.</strong> On its course page, select one sheet from the contents. Read its two pages, or try the practice first if the topic is already familiar.</li>
           <li><strong>Open “Sources, practice, lab and scope notes” beneath that sheet.</strong> Attempt the questions before expanding their answers. The same module lab can appear under several related sheets; you do not need to repeat an identical lab for each sheet.</li>
-          <li><strong>Check recall without the notes.</strong> Explain the idea aloud or answer a practice question. If using the companion Anki package, select the matching event subdeck and use Browse to find topic words. The card order is not a lesson sequence, and cards are not mapped one-to-one to sheets.</li>
+          <li><strong>Check recall without the notes.</strong> Explain the idea aloud or answer a practice question. If using the companion Anki package, open the deck for the sheet you just read. The card order is not a lesson sequence.</li>
           <li><strong>Apply the idea without the answer in view.</strong> Complete the suggested lab or scenario. For Network Design and Sales, also practice aloud using the rehearsal guidance below.</li>
           <li><strong>Write down what went wrong privately.</strong> Revisit that explanation, then try a different question or scenario later. Remembering the original answer is not the same as solving a new problem.</li>
         </ol>
         <p><strong>New to a topic?</strong> Read the sheet and work through its examples before attempting practice. <strong>Already familiar with it?</strong> Try practice first, skim material you can explain and apply, and focus on gaps. Choose a starting point that fits current knowledge rather than a fixed order.</p>
         <div class="fbla-materials">
           <div><h3>Website: understand and apply</h3><p>The event pages contain concise reference sheets, expandable practice answers and lab instructions. Plain and colored downloads contain the same notes; choose whichever is easier to read.</p></div>
-          <div><h3>Optional Anki: remember</h3><p>If a copy of the companion <bdi dir="ltr"><code>FBLA.apkg</code></bdi> is available, import it into Anki. The 654 cards are not embedded in this website. Without the package, use the practice questions for recall. When updating an existing deck, preserve its learning progress.</p></div>
+          <div><h3>Optional Anki: remember</h3><p>Download <a href="${cardHref(flashcards.master.file)}" download><bdi dir="ltr"><code>FBLA.apkg</code></bdi></a> and import it into Anki. The ${flashcards.master.cards} cards are grouped by event, sheet, and page. The download does not include review history. Without the package, use the practice questions for recall. When updating an existing deck, preserve its learning progress.</p></div>
           <div><h3>Rehearsal: perform</h3><p>Use unfamiliar cases, your own presentation and audience feedback to practice decisions and delivery. The website does not track your scores or synchronize your Anki progress.</p></div>
         </div>
       </section>
@@ -375,7 +381,7 @@ export function renderFbla(note = readFileSync(source, 'utf8'), courseHTML = '',
         <h2>Complete event study courses</h2>
         <p>Choose the event you are working on today. Networking Infrastructures and Cybersecurity emphasize written knowledge; Network Design adds a spoken case response; Sales requires your own interactive presentation.</p>
         <div class="fbla-grid">
-          ${events.map(event => `<section class="fbla-card" id="${event.id}"><h3>${event.name}</h3><p><strong>${fblaModules.filter(module => module.event === event.id).reduce((count, module) => count + module.sheets.length, 0)} two-page sheets · ${event.cards} Anki cards.</strong></p><p><a href="fbla-${event.id}.html">Open ${event.name} course</a></p><p>${event.action}</p><details><summary>National 2026–27 format and test weighting</summary><p><a href="${eventInfo[event.id].url}">Official CONNECT guideline PDF</a></p>${event.domains.length ? `<p>Test items by knowledge area in that document:</p><ul>${event.domains.map(([name, count]) => `<li>${name}: ${count} of 100</li>`).join('')}</ul>` : '<p>Interactive presentation: discovery, product knowledge, objections, related offerings, closing, follow-up, organization, delivery and interaction.</p>'}</details></section>`).join('\n          ')}
+          ${events.map(event => `<section class="fbla-card" id="${event.id}"><h3>${event.name}</h3><p><strong>${fblaModules.filter(module => module.event === event.id).reduce((count, module) => count + module.sheets.length, 0)} two-page sheets · ${flashcards.events[event.id].cards} Anki cards.</strong></p><p><a href="fbla-${event.id}.html">Open ${event.name} course</a> · <a href="${cardHref(flashcards.events[event.id].file)}" download>Download cards</a></p><p>${event.action}</p><details><summary>National 2026–27 format and test weighting</summary><p><a href="${eventInfo[event.id].url}">Official CONNECT guideline PDF</a></p>${event.domains.length ? `<p>Test items by knowledge area in that document:</p><ul>${event.domains.map(([name, count]) => `<li>${name}: ${count} of 100</li>`).join('')}</ul>` : '<p>Interactive presentation: discovery, product knowledge, objections, related offerings, closing, follow-up, organization, delivery and interaction.</p>'}</details></section>`).join('\n          ')}
         </div>
       </section>
       ${renderColorReference(palette)}
@@ -412,6 +418,54 @@ export function renderFbla(note = readFileSync(source, 'utf8'), courseHTML = '',
         ${article.join('\n        ')}
        </section>
        ${courseHTML}
+    </main>
+    <footer><p>Joltlined · Original study explanations, not official FBLA questions or guaranteed results.</p><p>Keep personal scores and mistake logs private. No account or JavaScript is required to read these notes.</p></footer>
+  </div>
+</body>
+</html>
+`;
+}
+
+export function renderFlashcardPage() {
+  const groups = events.map(event => {
+    const sheets = fblaModules.filter(module => module.event === event.id).flatMap(module => module.sheets.map(sheet => [sheet.id, flashcards.sheets[sheet.id]]));
+    return `<section class="fbla-card" id="${event.id}"><h2>${escapeHTML(event.name)}</h2><p>${flashcards.events[event.id].cards} cards · <a href="fbla-${event.id}.html">Open ${escapeHTML(event.name)} course</a> · <a href="${cardHref(flashcards.events[event.id].file)}" download>Download topic cards</a></p><ul>${sheets.map(([id, sheet]) => `<li><a href="fbla-${event.id}.html#${escapeHTML(id)}">${escapeHTML(sheet.title)}</a> · <a href="${cardHref(sheet.file)}" download>Download cards</a></li>`).join('')}</ul></section>`;
+  }).join('\n        ');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FBLA Flashcards | Joltlined</title>
+  <link rel="stylesheet" href="styles/site.css">
+  <style>
+    .fbla-intro, .fbla-section { margin-block: 28px 36px; }
+    .fbla-card { border-block-start: 1px solid var(--rule); padding-block: 16px 8px; }
+    .fbla-card ul { padding-inline-start: 1.2em; }
+    .fbla-card li { margin-block: 6px; }
+    .fbla-download { font: 15px/1.6 system-ui, sans-serif; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#fbla-main">Skip to FBLA flashcards</a>
+  <div class="wrap">
+    <header>
+      <div class="masthead"><p class="wordmark">Joltlined</p><p class="masthead-note">Notes &amp; literary analysis</p></div>
+      <nav class="subjects" aria-label="Subjects"><a href="index.html">Home</a><a href="ap-lang.html">AP Lang Notes</a><a href="ap-world.html">AP World History Notes</a><a href="algebra-2.html">Algebra 2 Notes</a><a href="fbla.html" aria-current="page">FBLA Study Plan</a><a href="out-of-my-mind.html">Out Of My Mind Analysis</a><a href="of-mice-and-men.html">Of Mice And Men Analysis</a><a href="fahrenheit-451.html">Fahrenheit 451 Analysis</a></nav>
+      ${themePicker}
+    </header>
+    <main id="fbla-main" tabindex="-1">
+      <section class="fbla-intro">
+        <p class="eyebrow">Business &amp; technology competitions</p>
+        <h1>FBLA flashcards</h1>
+        <p>Short recall cards for the study sheets. Import a package into Anki after reading the matching sheet. These downloads do not include review history, and card order is not a lesson sequence.</p>
+        <p class="fbla-download"><a href="${cardHref(flashcards.master.file)}" download>Download all ${flashcards.master.cards} cards</a></p>
+        <nav class="fbla-jumps" aria-label="FBLA study sections"><a href="fbla.html">FBLA course hub</a><a href="fbla.html#source-ledger">Sources and limits</a></nav>
+      </section>
+      <section class="fbla-section" id="downloads">
+        <h2>Topic and sheet downloads</h2>
+        ${groups}
+      </section>
     </main>
     <footer><p>Joltlined · Original study explanations, not official FBLA questions or guaranteed results.</p><p>Keep personal scores and mistake logs private. No account or JavaScript is required to read these notes.</p></footer>
   </div>

@@ -66,7 +66,7 @@ The reusable [AP World History master prompt](docs/prompts/ap-world-history.txt)
 ├── docs/                 The reading room: guides, reference, and artwork
 ├── .github/              Quality checks and deployment workflow
 └── website/              Site and its tooling
-    ├── public/           Thirteen HTML pages, assets/images/, styles/, notes/, CNAME
+    ├── public/           Fourteen HTML pages, assets/images/, styles/, notes/, CNAME
     ├── scripts/          Page generators and note importers
     ├── tests/            Content, accessibility, and browser checks
     ├── package.json      Package scripts and dependencies
@@ -77,7 +77,7 @@ The reusable [AP World History master prompt](docs/prompts/ap-world-history.txt)
 
 Generated pages are checked in under `website/public/`. Edit note sources and generators, then rebuild; maintain the three literary-analysis pages directly. GitHub Pages is configured to use **GitHub Actions**, publishing only `website/public/` after quality checks pass. The custom domain and public page URLs are unchanged; no application backend or database is required.
 
-The [FBLA study hub](website/public/fbla.html) links [Networking Infrastructures](website/public/fbla-networking.html), [Cybersecurity](website/public/fbla-cybersecurity.html), [Network Design](website/public/fbla-network-design.html), and [Sales Presentation](website/public/fbla-sales.html), with an HTML objective/source ledger and a [JSON ledger](website/public/fbla-sources.json). The four courses provide 44 two-page sheets mapped to 160 local learning/rubric IDs. Content review and a separate companion-deck audit are complete; source-reading limits, official ambiguities, and rehearsal needs remain explicit rather than a readiness certification. The original IPv4 pilot is retained. Read the [FBLA content guide](docs/fbla.md) for scope and limits.
+The [FBLA study hub](website/public/fbla.html) links [Networking Infrastructures](website/public/fbla-networking.html), [Cybersecurity](website/public/fbla-cybersecurity.html), [Network Design](website/public/fbla-network-design.html), and [Sales Presentation](website/public/fbla-sales.html), with an HTML objective/source ledger and a [JSON ledger](website/public/fbla-sources.json). [FBLA flashcards](website/public/fbla-flashcards.html) provides the full deck, topic decks, and sheet decks. The four courses provide 44 two-page sheets mapped to 160 local learning/rubric IDs. The published packages contain 870 cards and omit review history; they are recall practice, not a readiness certification. Source-reading limits, official ambiguities, and rehearsal needs remain explicit. The original IPv4 pilot is retained. Read the [FBLA content guide](docs/fbla.md) for scope and limits.
 
 These are independent study resources, not official College Board or FBLA materials or an official answer key. Literary interpretations and practice examples are starting points for your own evidence and reasoning. Check quotations and page references against your edition. See the [technical reference](docs/technical-reference.md) for provenance and verification limits.
 

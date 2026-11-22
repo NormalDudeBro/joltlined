@@ -4,7 +4,7 @@
 
 ## Source and build
 
-`website/scripts/fbla.mjs` validates and renders the ten structured modules in `website/scripts/fbla-content/`, the hub, four event pages and the original plaintext pilot at `website/public/notes/fbla/ipv4-subnetting.txt`. Run the normal build from `website/`; edit source JSON and generators rather than generated course pages or downloads.
+`website/scripts/fbla.mjs` validates and renders the ten structured modules in `website/scripts/fbla-content/`, the hub, four event pages, the flashcards page, and the original plaintext pilot at `website/public/notes/fbla/ipv4-subnetting.txt`. Run the normal build from `website/`; edit source JSON and generators rather than generated course pages or downloads.
 
 Each structured course sheet renders to 48 ASCII lines in two 24-line pages. The plain and marked text files are generated from the same data; section sources, objective mappings, practice answers, lab instructions and limitations remain available outside the finite printable bodies. Downloads are embedded for offline use, and the preview build includes all four event pages and note encodings.
 
@@ -69,9 +69,21 @@ offline downloads, mobile layout, clipping, and the four event PDF page totals.
 
 ## How the curriculum works
 
-The hub leads with a repeatable study loop: choose an event and sheet, open its **Sources, practice, lab and scope notes**, attempt practice before revealing answers, use the matching event subdeck for recall, then apply the idea in a lab or spoken rehearsal. Card order is not a lesson sequence. The same module lab can appear under several sheets; it is not a new assignment each time. The IPv4 example is an optional demonstration, not the mandatory starting lesson. Experienced students can attempt practice first and use the notes to close gaps.
+The hub leads with a repeatable study loop: choose an event and sheet, open its **Sources, practice, lab and scope notes**, attempt practice before revealing answers, use the matching sheet deck for recall, then apply the idea in a lab or spoken rehearsal. Card order is not a lesson sequence. The same module lab can appear under several sheets; it is not a new assignment each time. The IPv4 example is an optional demonstration, not the mandatory starting lesson. Experienced students can attempt practice first and use the notes to close gaps.
 
-The scheduling guidance uses flexible stages rather than assuming a fixed preparation period, state or prior qualification. Regional deadlines and entry rules take priority. The website works without the optional Anki package and does not track personal scores or synchronize Anki. The 654-card package stays in the private delivery channel, not the public site; public copy must not imply that every visitor has received it.
+The scheduling guidance uses flexible stages rather than assuming a fixed preparation period, state or prior qualification. Regional deadlines and entry rules take priority. The website works without Anki and does not track personal scores or synchronize Anki. Practice questions remain on each sheet if the package is not imported.
+
+## Flashcard downloads
+
+Scheduling-free Anki packages are published under `website/public/notes/fbla/cards/`. `manifest.json` records the file names and card counts used by the generator. The current deck has 870 cards and 770 notes: Networking Infrastructures 414, Cybersecurity 311, Network Design 110, and Sales Presentation 35.
+
+- The hub places each event download beside its **Open … course** link.
+- Each course page places that sheet's download beside **Sources, practice, lab and scope notes**.
+- `fbla-flashcards.html`, linked beside **Sources and limits**, lists the full deck, the four topic decks, and all 44 sheet decks.
+
+Packages include media and omit review history and deck configs. They are grouped `FBLA::{event}::{sheet}::Page {n}`. Open the sheet deck after reading that sheet. Do not describe card order as a lesson sequence, or a download as personal progress, mastery, or exam readiness.
+
+Replace the `.apkg` files and `manifest.json` together when the deck changes. The build reads the manifest; it does not export Anki. Do not publish personal review history, audit records, or credentials with the packages.
 
 ### What the 17 rehearsal flags mean
 
@@ -95,7 +107,7 @@ Keep recall prompts distinct from the answer key. Do not replace the /31 excepti
 
 Only original instructional content and public references belong in the site. Keep personal mastery, scores, mistake logs, private classroom/test-bank material, laptop setup files, credentials, and local research drafts outside this public repository. A content candidate index is not proof of semantic coverage or personal mastery.
 
-The companion Anki deck was reviewed and revised in a separate private workstream after the website checks passed. Its package, individual-card audit records, source-health report, and personal logs are not public repository assets. Website mappings do not certify personal mastery, exhaustive independent verification, or performance on future questions.
+The published packages are the current recall decks. Individual-card audit records, source-health reports, and personal logs remain outside the public repository. Website mappings and downloads do not certify personal mastery, exhaustive independent verification, or performance on future questions.
 
 ## Checks
 
